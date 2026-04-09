@@ -98,6 +98,7 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn("data-search-input", html)
         self.assertIn("data-module-filter", html)
         self.assertIn("data-topic-results", html)
+        self.assertNotIn('<main class="page-shell">', html)
 
     def test_topic_template_exposes_print_trigger(self) -> None:
         html = self.env.get_template("topic.html").render(
@@ -113,6 +114,7 @@ class TemplateHookTests(unittest.TestCase):
         )
 
         self.assertIn("data-print-trigger", html)
+        self.assertNotIn('<main class="page-shell">', html)
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@
     {% set next_ref.item = item %}
   {% endif %}
 {% endfor %}
-<main class="page-shell">
+<section class="page-shell" aria-label="{{ topic.title }}">
   <section class="topic-actions" aria-label="{{ topic.title }}">
     <a class="site-nav-link" href="/">{{ ui.get("back_to_catalog", "Back to catalog") }}</a>
     <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "Print topic") }}</button>
@@ -31,5 +31,5 @@
     </a>
     {% endif %}
   </nav>
-</main>
+</section>
 {% endblock %}
