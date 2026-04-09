@@ -193,6 +193,18 @@ class LoaderTests(unittest.TestCase):
                         "items": [
                             {
                                 "id": "LAP-01-01",
+                                "lang": "hu",
+                                "title": "Missing canonical",
+                                "path": "01_A/01/README.md",
+                                "main_topic_number": "01",
+                                "main_topic_dir": "01_A",
+                                "subtopic_number": "01",
+                                "subtopic_dir": "01",
+                                "slug": "01-01-missing-canonical",
+                                "review_status": "draft",
+                                "translation_status": "not_started",
+                                "source_count": 1,
+                                "opened_at": None,
                             }
                         ]
                     }
@@ -200,7 +212,7 @@ class LoaderTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with self.assertRaisesRegex(ValueError, "missing required fields"):
+            with self.assertRaisesRegex(ValueError, "missing required fields: canonical"):
                 load_registry_items(registry_path)
 
     def test_load_registry_items_rejects_null_canonical(self) -> None:
@@ -271,6 +283,7 @@ class LoaderTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "must be a boolean"):
                 load_registry_items(registry_path)
 
+    def test_load_registry_items_rejects_missing_items_payload(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             registry_path = Path(tmpdir) / "registry.json"
             registry_path.write_text(json.dumps({"version": 1}), encoding="utf-8")
