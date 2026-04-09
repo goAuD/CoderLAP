@@ -225,20 +225,23 @@ The visual direction is restrained, modern, and professional.
 Design characteristics:
 
 - dark default interface
+- single-color dark graphite background
 - grey-based text instead of bright white
 - subtle dotted grid pattern in the background
 - inset panel shadows for surfaces
 - slightly raised button treatment for contrast
 - minimalistic spacing and clean composition
 - clear reading hierarchy for long-form text
+- decorative separator line treatment for headings and subheadings where it improves scanability
 
 Accent direction:
 
-- muted teal or desaturated cyan
+- muted, calming teal or desaturated cyan
 
 Avoid:
 
 - purple-heavy default AI aesthetics
+- background gradients behind the dotted grid pattern
 - glossy neon effects
 - oversized decorative motion
 - high-contrast pure white text blocks
