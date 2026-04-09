@@ -47,6 +47,7 @@ _ALLOWED_ATTRIBUTES = {
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _FENCED_CODE_BLOCK_RE = re.compile(r"^[ ]{0,3}(```+|~~~+)")
 _RAW_HTML_BLOCK_START_RE = re.compile(r"^[ ]{0,3}(</?[A-Za-z][^>]*|<![^>]*>|<\?[^>]*\?>)")
+_RAW_HTML_SELF_CONTAINED_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>.*</\1>[ ]*$")
 
 
 def _sanitize_url(value: str) -> str:
@@ -72,7 +73,7 @@ def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
     in_raw_html_block = False
     processed_lines: list[str] = []
 
-    for line in lines:
+    for index, line in enumerate(lines):
         if _FENCED_CODE_BLOCK_RE.match(line):
             in_fenced_code_block = not in_fenced_code_block
             in_raw_html_block = False
@@ -98,11 +99,31 @@ def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
             processed_lines.append(line)
             continue
 
-        in_raw_html_block = True
         trailing_newline = line[len(stripped_line) :]
         processed_lines.append(f"{escape(stripped_line)}{trailing_newline}")
+        if _is_self_contained_raw_html_line(stripped_line):
+            if (
+                trailing_newline
+                and index + 1 < len(lines)
+                and lines[index + 1].strip()
+            ):
+                processed_lines.append(trailing_newline)
+        else:
+            in_raw_html_block = True
 
     return "".join(processed_lines)
+
+
+def _is_self_contained_raw_html_line(line: str) -> bool:
+    stripped = line.strip()
+
+    if stripped.startswith(("<?", "<!")):
+        return True
+
+    if stripped.startswith("</"):
+        return True
+
+    return bool(_RAW_HTML_SELF_CONTAINED_RE.match(line))
 
 
 class _RenderedMarkdownSanitizer(HTMLParser):
