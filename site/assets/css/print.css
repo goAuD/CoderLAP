@@ -22,7 +22,12 @@
 
   body::before,
   .site-topbar,
-  .site-footer {
+  .site-footer,
+  .catalog-sidebar,
+  .catalog-sidebar__toggle,
+  .catalog-controls,
+  .topic-actions,
+  .topic-pagination {
     display: none !important;
   }
 
@@ -37,6 +42,8 @@
   .hero-panel,
   .topic-article,
   .legal-article,
+  .topic-card,
+  .catalog-results__empty,
   table,
   pre,
   blockquote {
