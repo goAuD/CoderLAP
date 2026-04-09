@@ -1,6 +1,35 @@
 {% extends "base.html" %}
 {% block body %}
+{% set topic_nav = navigation.get("topics", {}).get(topic.id, {}) %}
+{% set prev_ref = namespace(item=None) %}
+{% set next_ref = namespace(item=None) %}
+{% for item in topic_index %}
+  {% if item.id == topic_nav.get("previous_id") %}
+    {% set prev_ref.item = item %}
+  {% endif %}
+  {% if item.id == topic_nav.get("next_id") %}
+    {% set next_ref.item = item %}
+  {% endif %}
+{% endfor %}
 <main class="page-shell">
+  <section class="topic-actions" aria-label="{{ topic.title }}">
+    <a class="site-nav-link" href="/">{{ ui.get("back_to_catalog", "Back to catalog") }}</a>
+    <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "Print topic") }}</button>
+  </section>
+
   <article class="topic-article">{{ content_html | safe }}</article>
+
+  <nav class="topic-pagination" aria-label="{{ ui.get('sidebar_label', 'Navigation') }}">
+    {% if prev_ref.item %}
+    <a class="topic-pagination__link topic-pagination__link--prev" href="/topics/{{ prev_ref.item.slug }}/">
+      {{ ui.get("previous_label", "Previous") }}: {{ prev_ref.item.title }}
+    </a>
+    {% endif %}
+    {% if next_ref.item %}
+    <a class="topic-pagination__link topic-pagination__link--next" href="/topics/{{ next_ref.item.slug }}/">
+      {{ ui.get("next_label", "Next") }}: {{ next_ref.item.title }}
+    </a>
+    {% endif %}
+  </nav>
 </main>
 {% endblock %}

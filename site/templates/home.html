@@ -1,10 +1,81 @@
 {% extends "base.html" %}
 {% block body %}
+{% set safe_topic_index = topic_index | default([], true) %}
+{% set safe_navigation = navigation | default({}, true) %}
 <main class="page-shell">
-  <section class="hero-panel">
-    <p class="eyebrow">{{ ui.project_tagline }}</p>
-    <h1>{{ ui.home_title }}</h1>
-    <p class="hero-copy">{{ ui.home_intro }}</p>
+  <section class="hero-panel" aria-labelledby="home-hero-title">
+    <div class="hero-panel__content">
+      <p class="eyebrow">{{ ui.project_tagline }}</p>
+      <h1 id="home-hero-title">{{ ui.home_title }}</h1>
+      <p class="hero-copy">{{ ui.home_intro }}</p>
+    </div>
+  </section>
+
+  <section class="catalog-shell" aria-label="{{ ui.get('sidebar_label', 'Sidebar') }}">
+    <aside class="catalog-sidebar" data-sidebar-container data-sidebar-side="left">
+      <div class="catalog-sidebar__header">
+        <h2>{{ ui.get('sidebar_label', 'Sidebar') }}</h2>
+      </div>
+      <div data-sidebar-panel></div>
+    </aside>
+
+    <section class="catalog-main" aria-labelledby="catalog-title">
+      <header class="catalog-controls">
+        <div>
+          <p class="eyebrow">{{ ui.project_tagline }}</p>
+          <h2 id="catalog-title">{{ ui.get("search_label", "Search") }}</h2>
+        </div>
+        <div class="catalog-controls__fields">
+          <label class="catalog-field">
+            <span>{{ ui.get("search_label", "Search") }}</span>
+            <input
+              type="search"
+              data-search-input
+              placeholder="{{ ui.get('search_placeholder', 'Search topics') }}"
+              autocomplete="off"
+            >
+          </label>
+          <label class="catalog-field">
+            <span>{{ ui.get("filter_label", "Filter") }}</span>
+            <select data-module-filter>
+              <option value="">{{ ui.get("filter_label", "Filter") }}</option>
+            </select>
+          </label>
+        </div>
+      </header>
+
+      <div class="catalog-results" data-topic-results aria-live="polite">
+        <noscript>
+          {% for item in safe_topic_index %}
+          <article class="topic-card">
+            <p>{{ item.main_topic_number }} · {{ item.main_topic_label }}</p>
+            <h3><a href="/topics/{{ item.slug }}/">{{ item.title }}</a></h3>
+            <p>{{ item.subtopic_label }}</p>
+          </article>
+          {% endfor %}
+        </noscript>
+      </div>
+    </section>
+  </section>
+
+  <script type="application/json" data-topic-index-json>{{ safe_topic_index | tojson }}</script>
+  <script type="application/json" data-navigation-json>{{ safe_navigation | tojson }}</script>
+  <script type="application/json" data-ui-copy-json>
+    {{ {
+      "search_placeholder": ui.get("search_placeholder", "Search topics"),
+      "search_label": ui.get("search_label", "Search"),
+      "filter_label": ui.get("filter_label", "Filter"),
+      "sidebar_label": ui.get("sidebar_label", "Sidebar")
+    } | tojson }}
+  </script>
+  <section hidden aria-hidden="true">
+    <div id="topic-card-template">
+      <article class="topic-card">
+        <p class="topic-card__meta"></p>
+        <h3 class="topic-card__title"><a class="topic-card__link" href="/"></a></h3>
+        <p class="topic-card__subtopic"></p>
+      </article>
+    </div>
   </section>
 </main>
 {% endblock %}
