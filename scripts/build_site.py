@@ -14,11 +14,20 @@ def _ensure_repo_root_on_path() -> None:
 _ensure_repo_root_on_path()
 
 from scripts.site_builder.settings import BuildSettings
+from scripts.site_builder.build import build_site
+
+import json
 
 
 def main() -> None:
     settings = BuildSettings.from_repo_root(Path(__file__).resolve().parents[1])
-    print(settings.output_dir)
+    ui_strings = json.loads((settings.i18n_dir / "en.json").read_text(encoding="utf-8"))
+    legal_pages = {
+        "imprint": (settings.legal_content_dir / "imprint.md").read_text(encoding="utf-8"),
+        "privacy": (settings.legal_content_dir / "privacy.md").read_text(encoding="utf-8"),
+    }
+    output_dir = build_site(settings, ui_strings, legal_pages)
+    print(output_dir)
 
 
 if __name__ == "__main__":
