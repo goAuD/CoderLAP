@@ -24,6 +24,7 @@ class SiteCssAssetsTests(unittest.TestCase):
     def test_base_css_keeps_dotted_grid_background_above_canvas(self) -> None:
         self.assertIn("body::before {", self.base_css)
         self.assertIn("background-image: radial-gradient(", self.base_css)
+        self.assertIn("opacity: 0.6;", self.base_css)
         self.assertIn("z-index: 0;", self.base_css)
 
     def test_base_css_uses_local_font_faces(self) -> None:
@@ -37,6 +38,8 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn("color-scheme: light;", self.print_css)
         self.assertIn("--color-bg: #ffffff;", self.print_css)
         self.assertIn("--color-text: #1a1a1a;", self.print_css)
+        self.assertIn("orphans: 3;", self.print_css)
+        self.assertIn("page-break-inside: avoid;", self.print_css)
 
     def test_base_html_includes_skip_link_and_main_landmark(self) -> None:
         self.assertIn('<a class="skip-link" href="#main-content">Skip to content</a>', self.base_html)
@@ -89,6 +92,7 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".catalog-sidebar {", self.layout_css)
         self.assertIn(".catalog-main {", self.layout_css)
         self.assertIn("body.sidebar-open .catalog-sidebar {", self.layout_css)
+        self.assertIn("body.sidebar-collapsed .catalog-sidebar__header,", self.layout_css)
         self.assertIn("grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);", self.layout_css)
 
     def test_components_css_covers_task9_catalog_and_topic_surfaces(self) -> None:
@@ -108,6 +112,7 @@ class SiteCssAssetsTests(unittest.TestCase):
 
     def test_components_css_styles_sidebar_scroll_surface(self) -> None:
         self.assertIn(".catalog-sidebar [data-sidebar-panel] {", self.components_css)
+        self.assertIn("overflow-x: clip;", self.components_css)
         self.assertIn("scrollbar-gutter: stable;", self.components_css)
         self.assertIn("::-webkit-scrollbar-thumb {", self.components_css)
 

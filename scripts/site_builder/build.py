@@ -63,7 +63,10 @@ def build_site(
 
     for topic in topics:
         markdown_text = load_topic_markdown(topic.absolute_markdown_path(settings.repo_root))
-        content_html = render_markdown(markdown_text)
+        content_html = render_markdown(
+            markdown_text,
+            suppress_redundant_summary_heading=True,
+        )
         rendered = env.get_template("topic.html").render(
             ui_lang=ui_lang,
             page_lang=topic.lang,

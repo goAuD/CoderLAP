@@ -103,6 +103,11 @@
     width: 100%;
   }
 
+  body.sidebar-collapsed .catalog-sidebar__header,
+  body.sidebar-open .catalog-sidebar__header {
+    display: none;
+  }
+
   body.sidebar-open {
     overflow: hidden;
   }
