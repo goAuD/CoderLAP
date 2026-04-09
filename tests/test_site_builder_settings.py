@@ -21,6 +21,7 @@ class BuildSettingsTests(unittest.TestCase):
 
     def test_build_site_entrypoint_runs_from_repo_root(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
+        expected_output = f"Built site into {repo_root / 'dist'}"
         result = subprocess.run(
             [sys.executable, "scripts/build_site.py"],
             cwd=repo_root,
@@ -30,4 +31,4 @@ class BuildSettingsTests(unittest.TestCase):
         )
 
         self.assertEqual(result.returncode, 0, msg=result.stderr)
-        self.assertEqual(result.stdout.strip(), str(repo_root / "dist"))
+        self.assertEqual(result.stdout.strip(), expected_output)

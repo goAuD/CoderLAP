@@ -27,7 +27,7 @@ def main() -> None:
         "privacy": (settings.legal_content_dir / "privacy.md").read_text(encoding="utf-8"),
     }
     output_dir = build_site(settings, ui_strings, legal_pages)
-    print(output_dir)
+    print(f"Built site into {output_dir}")
 
 
 if __name__ == "__main__":
