@@ -22,6 +22,20 @@ REQUIRED_ITEM_FIELDS = {
     "canonical",
 }
 
+STRING_FIELDS = {
+    "id",
+    "lang",
+    "title",
+    "path",
+    "main_topic_number",
+    "main_topic_dir",
+    "subtopic_number",
+    "subtopic_dir",
+    "slug",
+    "review_status",
+    "translation_status",
+}
+
 
 def _load_registry_payload(registry_path: Path) -> dict:
     payload = json.loads(registry_path.read_text(encoding="utf-8"))
@@ -42,6 +56,13 @@ def _build_topic_record(item: dict) -> TopicRecord:
         raise ValueError(f"Registry item is missing required fields: {missing}")
     if not isinstance(item["canonical"], bool):
         raise ValueError("Registry item field 'canonical' must be a boolean.")
+    for field_name in STRING_FIELDS:
+        if not isinstance(item[field_name], str):
+            raise ValueError(f"Registry item field '{field_name}' must be a string.")
+    if not isinstance(item["source_count"], int) or isinstance(item["source_count"], bool):
+        raise ValueError("Registry item field 'source_count' must be an integer.")
+    if item["opened_at"] is not None and not isinstance(item["opened_at"], str):
+        raise ValueError("Registry item field 'opened_at' must be a string or null.")
     return TopicRecord(**item)
 
 
