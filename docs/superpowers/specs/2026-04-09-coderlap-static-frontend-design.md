@@ -428,3 +428,7 @@ This design prioritizes:
 - low runtime complexity
 - low attack surface
 - strong reading and study usability
+
+## Planning follow-through
+
+- Implementation plan: `docs/plans/2026-04-09-coderlap-static-frontend.md`

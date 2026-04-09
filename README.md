@@ -169,6 +169,22 @@ What was deliberately deferred:
 5. Build a simple HTML/CSS/JS frontend for browsing the full catalog.
 6. Deploy the static result later through Caddy with a single clean delivery path.
 
+## Static frontend build
+
+Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Build the site:
+
+```bash
+python scripts/build_site.py
+```
+
+The generated static frontend is written to `dist/`.
+
 ## Continuing work
 
 If you continue this project in a new Codex thread:

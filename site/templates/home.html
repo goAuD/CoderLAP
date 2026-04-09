@@ -14,7 +14,7 @@
   <section class="catalog-shell">
     <aside class="catalog-sidebar" data-sidebar-container data-sidebar-side="left" hidden>
       <div class="catalog-sidebar__header">
-        <h2>{{ ui.get('sidebar_label', 'Sidebar') }}</h2>
+        <h2>{{ ui.get('sidebar_label', '') }}</h2>
       </div>
       <div data-sidebar-panel></div>
     </aside>
@@ -23,23 +23,23 @@
       <header class="catalog-controls" data-catalog-controls hidden>
         <div>
           <p class="eyebrow">{{ ui.project_tagline }}</p>
-          <h2 id="catalog-title">{{ ui.get("search_label", "Search") }}</h2>
+          <h2 id="catalog-title">{{ ui.get("search_label", "") }}</h2>
         </div>
         <div class="catalog-controls__fields">
           <label class="catalog-field">
-            <span>{{ ui.get("search_label", "Search") }}</span>
+            <span>{{ ui.get("search_label", "") }}</span>
             <input
               type="search"
               data-search-input
               disabled
-              placeholder="{{ ui.get('search_placeholder', 'Search topics') }}"
+              placeholder="{{ ui.get('search_placeholder', '') }}"
               autocomplete="off"
             >
           </label>
           <label class="catalog-field">
-            <span>{{ ui.get("filter_label", "Filter") }}</span>
+            <span>{{ ui.get("filter_label", "") }}</span>
             <select data-module-filter disabled>
-              <option value="">{{ ui.get("filter_label", "Filter") }}</option>
+              <option value="">{{ ui.get("filter_label", "") }}</option>
             </select>
           </label>
         </div>
@@ -63,11 +63,11 @@
   <script type="application/json" data-navigation-json>{{ safe_navigation | tojson }}</script>
   <script type="application/json" data-ui-copy-json>
     {{ {
-      "empty_state_label": ui.get("empty_state_label", "No topics found."),
-      "search_placeholder": ui.get("search_placeholder", "Search topics"),
-      "search_label": ui.get("search_label", "Search"),
-      "filter_label": ui.get("filter_label", "Filter"),
-      "sidebar_label": ui.get("sidebar_label", "Sidebar")
+      "empty_state_label": ui.get("empty_state_label", ""),
+      "search_placeholder": ui.get("search_placeholder", ""),
+      "search_label": ui.get("search_label", ""),
+      "filter_label": ui.get("filter_label", ""),
+      "sidebar_label": ui.get("sidebar_label", "")
     } | tojson }}
   </script>
   <section hidden aria-hidden="true">
