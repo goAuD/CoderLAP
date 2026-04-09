@@ -184,7 +184,7 @@ class LoaderTests(unittest.TestCase):
 
         self.assertEqual([record.id for record in records], ["LAP-01-01"])
 
-    def test_load_registry_items_rejects_malformed_registry_payload(self) -> None:
+    def test_load_registry_items_rejects_missing_canonical(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             registry_path = Path(tmpdir) / "registry.json"
             registry_path.write_text(
@@ -193,7 +193,6 @@ class LoaderTests(unittest.TestCase):
                         "items": [
                             {
                                 "id": "LAP-01-01",
-                                "canonical": True,
                             }
                         ]
                     }
@@ -202,6 +201,74 @@ class LoaderTests(unittest.TestCase):
             )
 
             with self.assertRaisesRegex(ValueError, "missing required fields"):
+                load_registry_items(registry_path)
+
+    def test_load_registry_items_rejects_null_canonical(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(
+                json.dumps(
+                    {
+                        "items": [
+                            {
+                                "id": "LAP-01-01",
+                                "lang": "hu",
+                                "title": "Broken",
+                                "path": "01_A/01/README.md",
+                                "main_topic_number": "01",
+                                "main_topic_dir": "01_A",
+                                "subtopic_number": "01",
+                                "subtopic_dir": "01",
+                                "slug": "01-01-broken",
+                                "review_status": "draft",
+                                "translation_status": "not_started",
+                                "source_count": 1,
+                                "opened_at": None,
+                                "canonical": None,
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "must be a boolean"):
+                load_registry_items(registry_path)
+
+    def test_load_registry_items_rejects_string_canonical(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(
+                json.dumps(
+                    {
+                        "items": [
+                            {
+                                "id": "LAP-01-01",
+                                "lang": "hu",
+                                "title": "Broken",
+                                "path": "01_A/01/README.md",
+                                "main_topic_number": "01",
+                                "main_topic_dir": "01_A",
+                                "subtopic_number": "01",
+                                "subtopic_dir": "01",
+                                "slug": "01-01-broken",
+                                "review_status": "draft",
+                                "translation_status": "not_started",
+                                "source_count": 1,
+                                "opened_at": None,
+                                "canonical": "false",
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "must be a boolean"):
                 load_registry_items(registry_path)
 
         with tempfile.TemporaryDirectory() as tmpdir:
