@@ -1,0 +1,30 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.code-workspace
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node / frontend build output
+node_modules/
+dist/
+build/
+coverage/
+
+# Local deploy / secrets
+.env
+.env.*
+*.secret
+*.secrets
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
