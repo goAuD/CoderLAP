@@ -49,9 +49,12 @@ def load_registry_items(registry_path: Path) -> list[TopicRecord]:
     payload = _load_registry_payload(registry_path)
     records: list[TopicRecord] = []
     for item in payload["items"]:
+        if not isinstance(item, dict):
+            raise ValueError("Registry items must be JSON objects.")
+        if not item.get("canonical", False):
+            continue
         record = _build_topic_record(item)
-        if record.canonical:
-            records.append(record)
+        records.append(record)
     return sorted(records, key=lambda record: (int(record.main_topic_number), int(record.subtopic_number)))
 
 
