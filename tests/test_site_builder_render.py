@@ -7,6 +7,17 @@ from scripts.site_builder.render import build_template_environment, render_markd
 
 
 class RenderTests(unittest.TestCase):
+    def test_render_markdown_linkifies_standalone_plain_url_lines(self) -> None:
+        html = render_markdown("Source title\nhttps://example.com/path\nUsage note")
+
+        self.assertIn('<a href="https://example.com/path">https://example.com/path</a>', html)
+
+    def test_render_markdown_keeps_plain_urls_inside_fenced_code_unlinked(self) -> None:
+        html = render_markdown("```text\nhttps://example.com/path\n```")
+
+        self.assertIn("https://example.com/path", html)
+        self.assertNotIn('<a href="https://example.com/path">', html)
+
     def test_render_markdown_escapes_raw_script_content(self) -> None:
         html = render_markdown(
             "# Title\n\n<script>alert(1)</script>",
@@ -67,6 +78,7 @@ class RenderTests(unittest.TestCase):
         env = build_template_environment(templates)
         html = env.get_template("home.html").render(
             ui_lang="hu",
+            page_lang="hu",
             page_title="CoderLAP",
             asset_prefix="/assets",
             body_class="home-page",
@@ -81,6 +93,30 @@ class RenderTests(unittest.TestCase):
         self.assertIn('<link rel="stylesheet" href="/assets/css/print.css" media="print">', html)
         self.assertIn('<script src="/assets/js/site.js" defer></script>', html)
         self.assertIn("Kezdőlap", html)
+        self.assertIn('<html lang="hu">', html)
+
+    def test_legal_template_uses_shared_main_landmark_only(self) -> None:
+        repo_root = Path(__file__).resolve().parents[1]
+        templates = repo_root / "site" / "templates"
+
+        env = build_template_environment(templates)
+        html = env.get_template("legal.html").render(
+            ui_lang="en",
+            page_lang="en",
+            page_title="Imprint",
+            asset_prefix="/assets",
+            body_class="legal-page",
+            ui={
+                "project_tagline": "Austrian LAP study base",
+                "imprint_label": "Imprint",
+                "privacy_label": "Privacy",
+            },
+            content_html="<h1>Imprint</h1>",
+            navigation={},
+        )
+
+        self.assertEqual(html.count("<main"), 1)
+        self.assertIn('<section class="page-shell">', html)
 
     def test_real_templates_fail_when_required_context_is_missing(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]

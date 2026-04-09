@@ -41,7 +41,7 @@ def _write_registry(registry_path: Path) -> None:
 
 def _write_templates(template_dir: Path) -> None:
     (template_dir / "base.html").write_text(
-        "<!DOCTYPE html><html lang=\"{{ ui_lang }}\"><body>{% block body %}{% endblock %}</body></html>",
+        "<!DOCTYPE html><html lang=\"{{ page_lang | default(ui_lang, true) }}\"><body>{% block body %}{% endblock %}</body></html>",
         encoding="utf-8",
     )
     (template_dir / "home.html").write_text(
@@ -129,7 +129,9 @@ class BuildSiteTests(unittest.TestCase):
             privacy_html = (output_dir / "privacy" / "index.html").read_text(encoding="utf-8")
 
             self.assertIn('data-topic-id="LAP-01-01"', topic_html)
+            self.assertIn('<html lang="hu">', topic_html)
             self.assertIn("<h1>ASCII</h1>", topic_html)
+            self.assertIn('<html lang="en">', home_html)
             self.assertIn("CoderLAP", home_html)
             self.assertIn("<h1>Imprint</h1>", imprint_html)
             self.assertIn("<h1>Privacy</h1>", privacy_html)
