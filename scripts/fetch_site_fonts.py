@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
+import tempfile
 import shutil
 import urllib.request
 from pathlib import Path
@@ -17,6 +19,7 @@ USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
+NETWORK_TIMEOUT_SECONDS = 20.0
 
 FONT_URL_PATTERN = re.compile(r"url\((https://fonts\.gstatic\.com[^)]+)\)")
 
@@ -32,7 +35,7 @@ def build_output_path(output_dir: Path, family_slug: str, source_url: str) -> Pa
 
 def fetch_css(css_url: str) -> str:
     request = urllib.request.Request(css_url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request) as response:
+    with urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT_SECONDS) as response:
         return response.read().decode("utf-8")
 
 
@@ -45,6 +48,7 @@ def copy_local_fonts(source_dir: Path, output_dir: Path) -> list[Path]:
     if not source_dir.exists():
         return copied_files
 
+    output_dir.mkdir(parents=True, exist_ok=True)
     for source_path in sorted(source_dir.glob("*.woff2")):
         target_path = output_dir / source_path.name
         shutil.copy2(source_path, target_path)
@@ -54,8 +58,26 @@ def copy_local_fonts(source_dir: Path, output_dir: Path) -> list[Path]:
 
 def download_font(font_url: str, target_path: Path) -> None:
     request = urllib.request.Request(font_url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request) as response, target_path.open("wb") as target_file:
-        shutil.copyfileobj(response, target_file)
+    with urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT_SECONDS) as response:
+        with tempfile.NamedTemporaryFile(
+            dir=target_path.parent,
+            prefix=f"{target_path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as temp_file:
+            temp_path = Path(temp_file.name)
+            try:
+                shutil.copyfileobj(response, temp_file)
+            except Exception:
+                temp_file.close()
+                temp_path.unlink(missing_ok=True)
+                raise
+
+    try:
+        os.replace(temp_path, target_path)
+    except Exception:
+        temp_path.unlink(missing_ok=True)
+        raise
 
 
 def iter_target_fonts() -> Iterable[tuple[str, str, str]]:
