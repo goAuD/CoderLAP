@@ -48,6 +48,23 @@ _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _FENCED_CODE_BLOCK_RE = re.compile(r"^[ ]{0,3}(```+|~~~+)")
 _RAW_HTML_BLOCK_START_RE = re.compile(r"^[ ]{0,3}(</?[A-Za-z][^>]*|<![^>]*>|<\?[^>]*\?>)")
 _RAW_HTML_SELF_CONTAINED_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>.*</\1>[ ]*$")
+_RAW_HTML_START_TAG_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>[ ]*$")
+_VOID_HTML_TAGS = {
+    "area",
+    "base",
+    "br",
+    "col",
+    "embed",
+    "hr",
+    "img",
+    "input",
+    "link",
+    "meta",
+    "param",
+    "source",
+    "track",
+    "wbr",
+}
 
 
 def _sanitize_url(value: str) -> str:
@@ -121,6 +138,13 @@ def _is_self_contained_raw_html_line(line: str) -> bool:
         return True
 
     if stripped.startswith("</"):
+        return True
+
+    start_tag_match = _RAW_HTML_START_TAG_RE.match(line)
+    if start_tag_match and start_tag_match.group(1).lower() in _VOID_HTML_TAGS:
+        return True
+
+    if stripped.endswith("/>"):
         return True
 
     return bool(_RAW_HTML_SELF_CONTAINED_RE.match(line))
