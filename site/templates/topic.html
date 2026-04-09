@@ -13,21 +13,21 @@
 {% endfor %}
 <section class="page-shell" aria-label="{{ topic.title }}">
   <section class="topic-actions">
-    <a class="site-nav-link" href="/">{{ ui.get("back_to_catalog", "Back to catalog") }}</a>
-    <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "Print topic") }}</button>
+    <a class="site-nav-link" href="/">{{ ui.get("back_to_catalog", "") }}</a>
+    <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "") }}</button>
   </section>
 
   <article class="topic-article">{{ content_html | safe }}</article>
 
-  <nav class="topic-pagination" aria-label="{{ ui.get('topic_pagination_label', 'Topic pagination') }}">
+  <nav class="topic-pagination" aria-label="{{ ui.get('topic_pagination_label', '') }}">
     {% if prev_ref.item %}
     <a class="topic-pagination__link topic-pagination__link--prev" href="/topics/{{ prev_ref.item.slug }}/">
-      {{ ui.get("previous_label", "Previous") }}: {{ prev_ref.item.title }}
+      {{ ui.get("previous_label", "") }}: {{ prev_ref.item.title }}
     </a>
     {% endif %}
     {% if next_ref.item %}
     <a class="topic-pagination__link topic-pagination__link--next" href="/topics/{{ next_ref.item.slug }}/">
-      {{ ui.get("next_label", "Next") }}: {{ next_ref.item.title }}
+      {{ ui.get("next_label", "") }}: {{ next_ref.item.title }}
     </a>
     {% endif %}
   </nav>

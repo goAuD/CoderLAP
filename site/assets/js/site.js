@@ -92,10 +92,11 @@
       : null;
     var button = document.createElement("button");
     var isOpen = true;
+    var sidebarLabel = typeof label === "string" ? label : "";
 
     button.type = "button";
     button.className = "catalog-sidebar__toggle";
-    button.textContent = label || "Sidebar";
+    button.textContent = sidebarLabel;
     button.setAttribute("data-sidebar-toggle", "");
     button.setAttribute("aria-controls", "catalog-sidebar-panel");
     panel.id = panel.id || "catalog-sidebar-panel";
@@ -167,7 +168,7 @@
     var mainTopics = navigation.main_topics.slice();
     var cardTemplateRoot = document.querySelector("#topic-card-template");
 
-    searchInput.placeholder = uiCopy.search_placeholder || searchInput.placeholder || "Search topics";
+    searchInput.placeholder = uiCopy.search_placeholder || searchInput.placeholder;
     searchInput.removeAttribute("disabled");
     moduleFilter.removeAttribute("disabled");
     controlsContainer.hidden = false;
@@ -175,7 +176,7 @@
     clearChildren(moduleFilter);
     var allOption = document.createElement("option");
     allOption.value = "";
-    allOption.textContent = uiCopy.filter_label || "Filter";
+    allOption.textContent = uiCopy.filter_label || "";
     moduleFilter.appendChild(allOption);
 
     mainTopics.forEach(function (mainTopic) {
@@ -193,7 +194,7 @@
       if (sidebarContainer) {
         sidebarContainer.hidden = false;
       }
-      setupResponsiveSidebar(sidebarContainer, sidebarPanel, uiCopy.sidebar_label || "Sidebar");
+      setupResponsiveSidebar(sidebarContainer, sidebarPanel, uiCopy.sidebar_label || "");
     }
 
     function renderResults() {
@@ -224,7 +225,7 @@
       if (!filtered.length) {
         var emptyState = document.createElement("p");
         emptyState.className = "catalog-results__empty";
-        emptyState.textContent = uiCopy.empty_state_label || "No topics found.";
+        emptyState.textContent = uiCopy.empty_state_label || "";
         resultsContainer.appendChild(emptyState);
         return;
       }
