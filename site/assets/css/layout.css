@@ -68,6 +68,7 @@
 .catalog-results {
   display: grid;
   gap: var(--space-4);
+  grid-template-columns: 1fr;
 }
 
 .site-footer {
@@ -163,7 +164,11 @@
 }
 
 @media (min-width: 78rem) {
+  .catalog-shell {
+    grid-template-columns: minmax(18rem, 21rem) minmax(0, 1fr);
+  }
+
   .catalog-results {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
