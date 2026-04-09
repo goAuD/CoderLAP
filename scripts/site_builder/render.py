@@ -46,7 +46,7 @@ _ALLOWED_ATTRIBUTES = {
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _FENCED_CODE_BLOCK_RE = re.compile(r"^[ ]{0,3}(```+|~~~+)")
-_RAW_HTML_BLOCK_START_RE = re.compile(r"^[ ]{0,3}(</?[A-Za-z][^>]*|<![^>]*>|<\?[^>]*\?>)")
+_RAW_HTML_START_RE = re.compile(r"</?[A-Za-z][^>]*|<![^>]*>|<\?[^>]*\?>")
 _RAW_HTML_SELF_CONTAINED_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>.*</\1>[ ]*$")
 _RAW_HTML_START_TAG_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>[ ]*$")
 _VOID_HTML_TAGS = {
@@ -112,13 +112,16 @@ def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
                 processed_lines.append(f"{escape(stripped_line)}{trailing_newline}")
             continue
 
-        if not _RAW_HTML_BLOCK_START_RE.match(stripped_line):
+        raw_html_start_index = _find_raw_html_start_outside_inline_code(stripped_line)
+        if raw_html_start_index is None:
             processed_lines.append(line)
             continue
 
         trailing_newline = line[len(stripped_line) :]
-        processed_lines.append(f"{escape(stripped_line)}{trailing_newline}")
-        if _is_self_contained_raw_html_line(stripped_line):
+        prefix = stripped_line[:raw_html_start_index]
+        raw_fragment = stripped_line[raw_html_start_index:]
+        processed_lines.append(f"{prefix}{escape(raw_fragment)}{trailing_newline}")
+        if _is_self_contained_raw_html_line(raw_fragment):
             if (
                 trailing_newline
                 and index + 1 < len(lines)
@@ -148,6 +151,34 @@ def _is_self_contained_raw_html_line(line: str) -> bool:
         return True
 
     return bool(_RAW_HTML_SELF_CONTAINED_RE.match(line))
+
+
+def _find_raw_html_start_outside_inline_code(line: str) -> int | None:
+    index = 0
+    active_backtick_run: int | None = None
+
+    while index < len(line):
+        if line[index] == "`":
+            run_length = 1
+            while index + run_length < len(line) and line[index + run_length] == "`":
+                run_length += 1
+
+            if active_backtick_run is None:
+                active_backtick_run = run_length
+            elif active_backtick_run == run_length:
+                active_backtick_run = None
+
+            index += run_length
+            continue
+
+        if active_backtick_run is None and line[index] == "<":
+            match = _RAW_HTML_START_RE.match(line[index:])
+            if match:
+                return index
+
+        index += 1
+
+    return None
 
 
 class _RenderedMarkdownSanitizer(HTMLParser):

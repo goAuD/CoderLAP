@@ -70,6 +70,18 @@ class RenderTests(unittest.TestCase):
         self.assertIn("<ul>", html)
         self.assertIn("<li>item</li>", html)
 
+    def test_render_markdown_neutralizes_inline_raw_html_block_before_markdown(self) -> None:
+        html = render_markdown("prefix <div>oops\n\n# After")
+
+        self.assertIn("prefix &lt;div&gt;oops", html)
+        self.assertIn("<h1>After</h1>", html)
+
+    def test_render_markdown_neutralizes_inline_script_block_before_markdown(self) -> None:
+        html = render_markdown("prefix <script>alert(1)\n\n# After")
+
+        self.assertIn("prefix &lt;script&gt;alert(1)", html)
+        self.assertIn("<h1>After</h1>", html)
+
     def test_real_templates_render_with_required_context(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
         templates = repo_root / "site" / "templates"
