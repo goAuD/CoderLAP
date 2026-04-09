@@ -12,6 +12,16 @@ class RenderTests(unittest.TestCase):
 
         self.assertIn('<a href="https://example.com/path">https://example.com/path</a>', html)
 
+    def test_render_markdown_can_remove_redundant_summary_heading(self) -> None:
+        html = render_markdown(
+            "# Thema\n\n## Lényeg 30 másodpercben\n\nTartalom",
+            suppress_redundant_summary_heading=True,
+        )
+
+        self.assertIn("<h1>Thema</h1>", html)
+        self.assertNotIn("Lényeg 30 másodpercben", html)
+        self.assertIn("<p>Tartalom</p>", html)
+
     def test_render_markdown_keeps_plain_urls_inside_fenced_code_unlinked(self) -> None:
         html = render_markdown("```text\nhttps://example.com/path\n```")
 

@@ -17,7 +17,7 @@
     background: #ffffff;
     color: #1a1a1a;
     font-size: 11pt;
-    line-height: 1.45;
+    line-height: 1.55;
   }
 
   body::before,
@@ -75,6 +75,60 @@
   .decorated-separator::after {
     background: none;
     border-top: 1px solid rgba(0, 0, 0, 0.22);
+  }
+
+  .topic-article,
+  .legal-article,
+  .topic-article *,
+  .legal-article * {
+    overflow: visible !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transform: none !important;
+  }
+
+  .topic-article h1,
+  .topic-article h2,
+  .topic-article h3,
+  .topic-article h4,
+  .topic-article h5,
+  .topic-article h6,
+  .legal-article h1,
+  .legal-article h2,
+  .legal-article h3,
+  .legal-article h4,
+  .legal-article h5,
+  .legal-article h6 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .topic-article p,
+  .topic-article li,
+  .legal-article p,
+  .legal-article li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .topic-article p,
+  .topic-article ul,
+  .topic-article ol,
+  .topic-article table,
+  .topic-article pre,
+  .topic-article blockquote,
+  .legal-article p,
+  .legal-article ul,
+  .legal-article ol,
+  .legal-article table,
+  .legal-article pre,
+  .legal-article blockquote,
+  tr,
+  img {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
   }
 
   @page {

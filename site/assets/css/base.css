@@ -90,7 +90,7 @@ body::before {
   pointer-events: none;
   background-image: radial-gradient(circle at center, rgba(95, 167, 162, 0.18) 0.045rem, transparent 0.055rem);
   background-size: 1.25rem 1.25rem;
-  opacity: 0.48;
+  opacity: 0.6;
   z-index: 0;
 }
 

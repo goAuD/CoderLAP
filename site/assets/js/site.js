@@ -20,6 +20,13 @@
     }
   }
 
+  function formatMainTopicLabel(label) {
+    return String(label || "")
+      .replace(/^\d+_/, "")
+      .replace(/_/g, " ")
+      .trim();
+  }
+
   function createCard(item, templateRoot) {
     var article;
     var meta;
@@ -48,7 +55,7 @@
       article.appendChild(subtopic);
     }
 
-    meta.textContent = item.main_topic_number + " · " + item.main_topic_label;
+    meta.textContent = item.main_topic_number + " · " + formatMainTopicLabel(item.main_topic_label);
     titleLink.textContent = item.title;
     titleLink.setAttribute("href", "/topics/" + item.slug + "/");
     subtopic.textContent = item.subtopic_label;
@@ -62,7 +69,7 @@
 
     var heading = document.createElement("h3");
     heading.className = "sidebar-group__title";
-    heading.textContent = mainTopic.number + " · " + mainTopic.label;
+    heading.textContent = mainTopic.number + " · " + formatMainTopicLabel(mainTopic.label);
     section.appendChild(heading);
 
     var list = document.createElement("ul");
@@ -182,7 +189,7 @@
     mainTopics.forEach(function (mainTopic) {
       var option = document.createElement("option");
       option.value = mainTopic.number;
-      option.textContent = mainTopic.number + " · " + mainTopic.label;
+      option.textContent = mainTopic.number + " · " + formatMainTopicLabel(mainTopic.label);
       moduleFilter.appendChild(option);
     });
 

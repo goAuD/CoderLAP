@@ -215,6 +215,8 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn('[data-ui-copy-json]', self.site_js)
         self.assertIn('[data-sidebar-container]', self.site_js)
         self.assertIn('[data-sidebar-panel]', self.site_js)
+        self.assertIn('function formatMainTopicLabel(label)', self.site_js)
+        self.assertIn('.replace(/^\\d+_/, "")', self.site_js)
         self.assertIn('button.setAttribute("data-sidebar-toggle", "")', self.site_js)
         self.assertIn('button.textContent = sidebarLabel;', self.site_js)
         self.assertIn('searchInput.removeAttribute("disabled")', self.site_js)

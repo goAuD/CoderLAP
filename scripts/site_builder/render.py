@@ -46,6 +46,10 @@ _ALLOWED_ATTRIBUTES = {
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _STANDALONE_URL_PATTERN = re.compile(r"^(https?://[^\s<]+)$")
+_REDUNDANT_TOPIC_HEADING_PATTERN = re.compile(
+    r"<h2>\s*(?:Lényeg 30 másodpercben|Lenyeg 30 masodpercben)\s*</h2>",
+    re.IGNORECASE,
+)
 
 
 def _sanitize_url(value: str) -> str:
@@ -182,7 +186,11 @@ class _RenderedMarkdownSanitizer(HTMLParser):
         return f"<{tag}{suffix}"
 
 
-def render_markdown(markdown_text: str) -> str:
+def render_markdown(
+    markdown_text: str,
+    *,
+    suppress_redundant_summary_heading: bool = False,
+) -> str:
     normalized_markdown = _linkify_plain_url_lines(markdown_text)
     md = Markdown(
         extensions=["extra", "tables", "fenced_code", "sane_lists"],
@@ -194,7 +202,10 @@ def render_markdown(markdown_text: str) -> str:
     sanitizer = _RenderedMarkdownSanitizer()
     sanitizer.feed(rendered_html)
     sanitizer.close()
-    return sanitizer.render()
+    sanitized_html = sanitizer.render()
+    if suppress_redundant_summary_heading:
+        sanitized_html = _REDUNDANT_TOPIC_HEADING_PATTERN.sub("", sanitized_html, count=1)
+    return sanitized_html
 
 
 def build_template_environment(template_dir: Path) -> Environment:

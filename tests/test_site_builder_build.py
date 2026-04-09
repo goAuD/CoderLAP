@@ -88,7 +88,10 @@ class BuildSiteTests(unittest.TestCase):
 
             _write_registry(registry_path)
             _write_templates(template_dir)
-            markdown_path.write_text("# ASCII\n\nAz ASCII egy karakterkodolas.", encoding="utf-8")
+            markdown_path.write_text(
+                "# ASCII\n\n## Lényeg 30 másodpercben\n\nAz ASCII egy karakterkodolas.",
+                encoding="utf-8",
+            )
             (asset_dir / "site.css").write_text("body { color: black; }", encoding="utf-8")
             (output_dir / "stale.txt").write_text("remove me", encoding="utf-8")
 
@@ -131,6 +134,7 @@ class BuildSiteTests(unittest.TestCase):
             self.assertIn('data-topic-id="LAP-01-01"', topic_html)
             self.assertIn('<html lang="hu">', topic_html)
             self.assertIn("<h1>ASCII</h1>", topic_html)
+            self.assertNotIn("Lényeg 30 másodpercben", topic_html)
             self.assertIn('<html lang="en">', home_html)
             self.assertIn("CoderLAP", home_html)
             self.assertIn("<h1>Imprint</h1>", imprint_html)
