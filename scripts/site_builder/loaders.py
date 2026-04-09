@@ -40,8 +40,8 @@ def _build_topic_record(item: dict) -> TopicRecord:
     if missing_fields:
         missing = ", ".join(sorted(missing_fields))
         raise ValueError(f"Registry item is missing required fields: {missing}")
-    if item["canonical"] is None:
-        raise ValueError("Registry item is missing required field: canonical")
+    if not isinstance(item["canonical"], bool):
+        raise ValueError("Registry item field 'canonical' must be a boolean.")
     return TopicRecord(**item)
 
 
@@ -51,7 +51,7 @@ def load_registry_items(registry_path: Path) -> list[TopicRecord]:
     for item in payload["items"]:
         if not isinstance(item, dict):
             raise ValueError("Registry items must be JSON objects.")
-        if not item.get("canonical", False):
+        if item.get("canonical") is False:
             continue
         record = _build_topic_record(item)
         records.append(record)
