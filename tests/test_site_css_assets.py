@@ -8,6 +8,7 @@ class SiteCssAssetsTests(unittest.TestCase):
     def setUp(self) -> None:
         self.repo_root = Path(__file__).resolve().parents[1]
         self.base_css = (self.repo_root / "site" / "assets" / "css" / "base.css").read_text(encoding="utf-8")
+        self.layout_css = (self.repo_root / "site" / "assets" / "css" / "layout.css").read_text(encoding="utf-8")
         self.components_css = (self.repo_root / "site" / "assets" / "css" / "components.css").read_text(encoding="utf-8")
         self.print_css = (self.repo_root / "site" / "assets" / "css" / "print.css").read_text(encoding="utf-8")
         self.base_html = (self.repo_root / "site" / "templates" / "base.html").read_text(encoding="utf-8")
@@ -73,6 +74,22 @@ class SiteCssAssetsTests(unittest.TestCase):
             r"transform: none !important;\s*"
             r"\}\s*\}",
         )
+
+    def test_layout_css_covers_catalog_shell_and_responsive_sidebar(self) -> None:
+        self.assertIn(".catalog-shell {", self.layout_css)
+        self.assertIn(".catalog-sidebar {", self.layout_css)
+        self.assertIn(".catalog-main {", self.layout_css)
+        self.assertIn("body.sidebar-open .catalog-sidebar {", self.layout_css)
+        self.assertIn("grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);", self.layout_css)
+
+    def test_components_css_covers_task9_catalog_and_topic_surfaces(self) -> None:
+        self.assertIn(".catalog-controls {", self.components_css)
+        self.assertIn(".catalog-field {", self.components_css)
+        self.assertIn(".topic-card {", self.components_css)
+        self.assertIn(".topic-pagination {", self.components_css)
+        self.assertIn(".topic-pagination__link {", self.components_css)
+        self.assertIn(".catalog-results__empty {", self.components_css)
+        self.assertIn(".catalog-sidebar__toggle {", self.components_css)
 
 
 if __name__ == "__main__":
