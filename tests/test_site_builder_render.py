@@ -31,6 +31,12 @@ class RenderTests(unittest.TestCase):
         self.assertIn("&lt;div class=&quot;note&quot;&gt;Hello&lt;/div&gt;", fenced_html)
         self.assertNotIn("&amp;lt;", fenced_html)
 
+    def test_render_markdown_preserves_declarations_and_processing_instructions_as_text(self) -> None:
+        html = render_markdown("<!DOCTYPE html>\n\n<?xml version=\"1.0\"?>")
+
+        self.assertIn("&lt;!DOCTYPE html&gt;", html)
+        self.assertIn('&lt;?xml version=&quot;1.0&quot;?&gt;', html)
+
     def test_real_templates_render_with_required_context(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
         templates = repo_root / "site" / "templates"
