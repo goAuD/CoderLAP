@@ -107,6 +107,7 @@
       panel.hidden = matchesMobile;
       button.hidden = !matchesMobile;
       button.setAttribute("aria-expanded", String(!matchesMobile));
+      document.body.classList.remove("sidebar-open");
       document.body.classList.toggle("sidebar-collapsed", matchesMobile);
     }
 
@@ -223,7 +224,7 @@
       if (!filtered.length) {
         var emptyState = document.createElement("p");
         emptyState.className = "catalog-results__empty";
-        emptyState.textContent = "No topics found.";
+        emptyState.textContent = uiCopy.empty_state_label || "No topics found.";
         resultsContainer.appendChild(emptyState);
         return;
       }

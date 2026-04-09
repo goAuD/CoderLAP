@@ -63,6 +63,7 @@
   <script type="application/json" data-navigation-json>{{ safe_navigation | tojson }}</script>
   <script type="application/json" data-ui-copy-json>
     {{ {
+      "empty_state_label": ui.get("empty_state_label", "No topics found."),
       "search_placeholder": ui.get("search_placeholder", "Search topics"),
       "search_label": ui.get("search_label", "Search"),
       "filter_label": ui.get("filter_label", "Filter"),

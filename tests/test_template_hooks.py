@@ -36,6 +36,7 @@ class TemplateHookTests(unittest.TestCase):
             "project_tagline": "Austrian LAP study base",
             "home_title": "CoderLAP",
             "home_intro": "Browse and revise topics fast.",
+            "empty_state_label": "Nincs talalat.",
             "search_placeholder": "Search topics",
             "search_label": "Search",
             "filter_label": "Filter",
@@ -44,6 +45,7 @@ class TemplateHookTests(unittest.TestCase):
             "print_label": "Print topic",
             "previous_label": "Previous",
             "next_label": "Next",
+            "topic_pagination_label": "Temakorok lapozasa",
             "imprint_label": "Imprint",
             "privacy_label": "Privacy",
         }
@@ -106,6 +108,7 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn("data-topic-index-json", html)
         self.assertIn("data-navigation-json", html)
         self.assertIn("data-ui-copy-json", html)
+        self.assertIn("Nincs talalat.", html)
         self.assertRegex(html, r'data-catalog-controls[^>]*hidden')
         self.assertRegex(html, r'data-sidebar-container[^>]*hidden')
         self.assertRegex(html, r'data-search-input[^>]*disabled')
@@ -128,7 +131,7 @@ class TemplateHookTests(unittest.TestCase):
 
         self.assertIn("data-print-trigger", html)
         self.assertIn('href="/"', html)
-        self.assertIn('aria-label="Topic pagination"', html)
+        self.assertIn('aria-label="Temakorok lapozasa"', html)
         self.assertNotIn('<nav class="topic-pagination" aria-label="Sidebar">', html)
         self.assertNotIn('<main class="page-shell">', html)
 
@@ -139,10 +142,13 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn('[data-ui-copy-json]', self.site_js)
         self.assertIn('[data-sidebar-container]', self.site_js)
         self.assertIn('[data-sidebar-panel]', self.site_js)
+        self.assertIn('button.setAttribute("data-sidebar-toggle", "")', self.site_js)
         self.assertIn('searchInput.removeAttribute("disabled")', self.site_js)
         self.assertIn('moduleFilter.removeAttribute("disabled")', self.site_js)
         self.assertIn('controlsContainer.hidden = false', self.site_js)
         self.assertIn('sidebarContainer.hidden = false', self.site_js)
+        self.assertIn('document.body.classList.remove("sidebar-open")', self.site_js)
+        self.assertIn('uiCopy.empty_state_label || "No topics found."', self.site_js)
         self.assertIn("window.print", self.site_js)
 
 

@@ -19,7 +19,7 @@
 
   <article class="topic-article">{{ content_html | safe }}</article>
 
-  <nav class="topic-pagination" aria-label="Topic pagination">
+  <nav class="topic-pagination" aria-label="{{ ui.get('topic_pagination_label', 'Topic pagination') }}">
     {% if prev_ref.item %}
     <a class="topic-pagination__link topic-pagination__link--prev" href="/topics/{{ prev_ref.item.slug }}/">
       {{ ui.get("previous_label", "Previous") }}: {{ prev_ref.item.title }}
