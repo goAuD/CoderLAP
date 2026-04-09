@@ -1,5 +1,7 @@
 from pathlib import Path
 import unittest
+import subprocess
+import sys
 
 from scripts.site_builder.settings import BuildSettings
 
@@ -16,3 +18,16 @@ class BuildSettingsTests(unittest.TestCase):
         self.assertEqual(settings.output_dir, repo_root / "dist")
         self.assertEqual(settings.i18n_dir, repo_root / "site" / "i18n")
         self.assertEqual(settings.legal_content_dir, repo_root / "site" / "content" / "legal" / "en")
+
+    def test_build_site_entrypoint_runs_from_repo_root(self) -> None:
+        repo_root = Path(__file__).resolve().parents[1]
+        result = subprocess.run(
+            [sys.executable, "scripts/build_site.py"],
+            cwd=repo_root,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+
+        self.assertEqual(result.returncode, 0, msg=result.stderr)
+        self.assertEqual(result.stdout.strip(), str(repo_root / "dist"))
