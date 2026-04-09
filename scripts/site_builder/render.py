@@ -111,6 +111,12 @@ class _RenderedMarkdownSanitizer(HTMLParser):
     def handle_comment(self, data: str) -> None:
         self._parts.append(escape(f"<!--{data}-->"))
 
+    def handle_decl(self, decl: str) -> None:
+        self._parts.append(escape(f"<!{decl}>"))
+
+    def handle_pi(self, data: str) -> None:
+        self._parts.append(escape(f"<?{data}>"))
+
     def _build_tag(
         self,
         tag: str,
