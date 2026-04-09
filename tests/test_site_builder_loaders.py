@@ -33,6 +33,47 @@ class TopicRecordTests(unittest.TestCase):
             Path("C:/GitHub/CoderLAP/11_Informatik/02_Pelda/README.md"),
         )
 
+    def test_absolute_markdown_path_rejects_absolute_or_escaped_paths(self) -> None:
+        repo_root = Path("C:/GitHub/CoderLAP")
+        absolute_record = TopicRecord(
+            id="LAP-11-02",
+            lang="hu",
+            title="Példa",
+            path="C:/GitHub/Other/README.md",
+            main_topic_number="11",
+            main_topic_dir="11_Informatik",
+            subtopic_number="02",
+            subtopic_dir="02_Pelda",
+            slug="11-02-pelda",
+            review_status="draft",
+            translation_status="not_started",
+            source_count=3,
+            opened_at="2026-04-09",
+            canonical=True,
+        )
+        escaped_record = TopicRecord(
+            id="LAP-11-03",
+            lang="hu",
+            title="Másik",
+            path="../outside/README.md",
+            main_topic_number="11",
+            main_topic_dir="11_Informatik",
+            subtopic_number="03",
+            subtopic_dir="03_Masik",
+            slug="11-03-masik",
+            review_status="draft",
+            translation_status="not_started",
+            source_count=1,
+            opened_at="2026-04-09",
+            canonical=True,
+        )
+
+        with self.assertRaises(ValueError):
+            absolute_record.absolute_markdown_path(repo_root)
+
+        with self.assertRaises(ValueError):
+            escaped_record.absolute_markdown_path(repo_root)
+
 
 class LoaderTests(unittest.TestCase):
     def test_load_registry_items_returns_only_canonical_items_sorted(self) -> None:
@@ -103,6 +144,21 @@ class LoaderTests(unittest.TestCase):
         self.assertEqual([record.id for record in records], ["LAP-01-01", "LAP-02-10"])
         self.assertTrue(all(isinstance(record, TopicRecord) for record in records))
         self.assertTrue(all(record.canonical for record in records))
+
+    def test_load_registry_items_rejects_malformed_registry_payload(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(json.dumps({"items": [{"id": "LAP-01-01"}]}), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "missing required fields"):
+                load_registry_items(registry_path)
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(json.dumps({"version": 1}), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "items"):
+                load_registry_items(registry_path)
 
     def test_load_topic_markdown_reads_utf8_text(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

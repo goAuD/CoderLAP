@@ -22,4 +22,8 @@ class TopicRecord:
     canonical: bool
 
     def absolute_markdown_path(self, repo_root: Path) -> Path:
-        return repo_root / self.path
+        root = repo_root.resolve()
+        candidate = (root / self.path).resolve(strict=False)
+        if not candidate.is_relative_to(root):
+            raise ValueError(f"Markdown path escapes repository root: {self.path}")
+        return candidate
