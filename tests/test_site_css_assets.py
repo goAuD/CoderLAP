@@ -91,6 +91,12 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".catalog-results__empty {", self.components_css)
         self.assertIn(".catalog-sidebar__toggle {", self.components_css)
 
+    def test_components_css_prevents_catalog_text_overflow(self) -> None:
+        self.assertIn(".topic-card__meta,", self.components_css)
+        self.assertIn("overflow-wrap: anywhere;", self.components_css)
+        self.assertIn("word-break: break-word;", self.components_css)
+        self.assertIn(".sidebar-group__link {", self.components_css)
+
 
 if __name__ == "__main__":
     unittest.main()
