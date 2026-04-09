@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import re
 import unittest
 from pathlib import Path
 
@@ -41,33 +40,38 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn('<nav class="site-topbar__nav"', self.base_html)
 
     def test_components_css_reveals_skip_link_for_keyboard_focus(self) -> None:
-        self.assertIn(".skip-link {", self.components_css)
-        self.assertIn("transform: translateY(-140%);", self.components_css)
+        self.assertRegex(
+            self.components_css,
+            r"\.skip-link\s*\{\s*"
+            r"position: absolute;\s*"
+            r"top: var\(--space-3\);\s*"
+            r"left: var\(--space-4\);\s*"
+            r"z-index: 30;\s*"
+            r"padding: 0\.75rem 1rem;\s*"
+            r"border-radius: 999px;\s*"
+            r"background: var\(--color-surface-raised\);\s*"
+            r"box-shadow: var\(--shadow-button\);"
+            r"[^}]*transform: translateY\(-140%\);",
+        )
         self.assertRegex(
             self.components_css,
             r"\.skip-link:focus,\s*\.skip-link:focus-visible\s*\{\s*transform: translateY\(0\);",
         )
 
     def test_base_css_keeps_universal_reduced_motion_override_inside_media_block(self) -> None:
-        motion_block = re.search(
-            r"@media \(prefers-reduced-motion: reduce\)\s*\{(?P<body>.*)\}\s*$",
+        self.assertRegex(
             self.base_css,
-            re.DOTALL,
-        )
-
-        self.assertIsNotNone(motion_block)
-        assert motion_block is not None
-        motion_body = motion_block.group("body")
-
-        self.assertIn("html {", motion_body)
-        self.assertIn("scroll-behavior: auto;", motion_body)
-        self.assertRegex(
-            motion_body,
-            r"\*,\s*\*::before,\s*\*::after\s*\{[^}]*animation-duration: 0\.01ms !important;[^}]*transition-duration: 0\.01ms !important;",
-        )
-        self.assertRegex(
-            motion_body,
-            r"button,\s*\.button,\s*\[role=\"button\"\]\s*\{[^}]*transform: none !important;",
+            r"(?s)@media \(prefers-reduced-motion: reduce\)\s*\{\s*"
+            r"html\s*\{\s*scroll-behavior: auto;\s*\}\s*"
+            r"\*,\s*\*::before,\s*\*::after\s*\{\s*"
+            r"animation-duration: 0\.01ms !important;\s*"
+            r"animation-iteration-count: 1 !important;\s*"
+            r"scroll-behavior: auto !important;\s*"
+            r"transition-duration: 0\.01ms !important;\s*"
+            r"\}\s*"
+            r"button,\s*\.button,\s*\[role=\"button\"\]\s*\{\s*"
+            r"transform: none !important;\s*"
+            r"\}\s*\}",
         )
 
 
