@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ page_lang | default(ui_lang, true) }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset_prefix }}/favicon.svg">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/base.css">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/layout.css">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/components.css">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/print.css" media="print">
+  </head>
+  <body class="{{ body_class }}">
+    <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
+      <header class="site-topbar">
+        <div class="site-topbar__inner">
+          <a class="site-brand" href="/">
+            <span class="site-brand__row">
+              <svg class="site-brand__icon" width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect width="32" height="32" rx="6" fill="#1d2329"/>
+                <path d="M10 10L5 16l5 6" stroke="#5fa7a2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 10l5 6-5 6" stroke="#5fa7a2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 8l-4 16" stroke="#5fa7a2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+              <span class="site-brand__title">CoderLAP</span>
+            </span>
+          </a>
+          <nav class="site-topbar__nav" aria-label="{{ ui.get('primary_navigation_label', 'Primary navigation') }}">
+            <a class="site-nav-link"{% if body_class == "page-home" %} aria-current="page"{% endif %} href="/">{{ ui.get("home_label", "Home") }}</a>
+            <a class="site-nav-link" href="/#catalog-title" data-quick-view-link>{{ ui.get("quick_view_label", "Quick view") }}</a>
+          </nav>
+        </div>
+      </header>
+      <main id="main-content" class="site-main" tabindex="-1">
+        {% block body %}{% endblock %}
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p class="site-footer__meta">CoderLAP</p>
+          <div class="site-footer__links">
+            <a href="/imprint/">{{ ui.get("imprint_label", "Imprint") }}</a>
+            <a href="/privacy/">{{ ui.get("privacy_label", "Privacy") }}</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ asset_prefix }}/js/site.js" defer></script>
+  </body>
+</html>

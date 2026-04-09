@@ -1,0 +1,22 @@
+{
+  "lang": "en",
+  "project_tagline": "LAP · Software Development · Coding",
+  "home_label": "Home",
+  "home_title": "Austrian LAP study base · Software Development, Coding",
+  "home_intro": "A focused study hub for the Austrian LAP exam in Applikationsentwicklung - Coding, also known as Software Development - Coding. Browse all 233 topics, search quickly, and move through the material with a clear exam-first focus.",
+  "search_placeholder": "Search topics",
+  "search_label": "Search",
+  "filter_label": "Filter",
+  "empty_state_label": "No topics found.",
+  "sidebar_label": "Quick view",
+  "content_label": "Content",
+  "quick_view_label": "Quick view",
+  "primary_navigation_label": "Primary navigation",
+  "back_to_catalog": "Back to catalog",
+  "print_label": "Print topic",
+  "previous_label": "Previous",
+  "next_label": "Next",
+  "topic_pagination_label": "Topic pagination",
+  "imprint_label": "Imprint",
+  "privacy_label": "Privacy"
+}
