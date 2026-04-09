@@ -57,6 +57,12 @@ class RenderTests(unittest.TestCase):
         self.assertIn("&lt;/ul&gt;", html)
         self.assertIn("<h1>After</h1>", html)
 
+    def test_render_markdown_limits_single_line_html_block_neutralization(self) -> None:
+        html = render_markdown("<p>foo</p>\nNext")
+
+        self.assertIn("&lt;p&gt;foo&lt;/p&gt;", html)
+        self.assertIn("<p>Next</p>", html)
+
     def test_real_templates_render_with_required_context(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
         templates = repo_root / "site" / "templates"
