@@ -49,6 +49,7 @@ _FENCED_CODE_BLOCK_RE = re.compile(r"^[ ]{0,3}(```+|~~~+)")
 _RAW_HTML_START_RE = re.compile(r"</?[A-Za-z][^>]*|<![^>]*>|<\?[^>]*\?>")
 _RAW_HTML_SELF_CONTAINED_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>.*</\1>[ ]*$")
 _RAW_HTML_START_TAG_RE = re.compile(r"^[ ]{0,3}<([A-Za-z][A-Za-z0-9-]*)\b[^>]*>[ ]*$")
+_AUTOLINK_RE = re.compile(r"<((?:https?://|mailto:)[^<>\s]+)>", re.IGNORECASE)
 _VOID_HTML_TAGS = {
     "area",
     "base",
@@ -102,6 +103,11 @@ def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
             continue
 
         stripped_line = line.rstrip("\r\n")
+
+        if _is_indented_code_block_line(line):
+            in_raw_html_block = False
+            processed_lines.append(line)
+            continue
 
         if in_raw_html_block:
             if not stripped_line.strip():
@@ -172,6 +178,11 @@ def _find_raw_html_start_outside_inline_code(line: str) -> int | None:
             continue
 
         if active_backtick_run is None and line[index] == "<":
+            autolink_match = _AUTOLINK_RE.match(line[index:])
+            if autolink_match:
+                index += autolink_match.end()
+                continue
+
             match = _RAW_HTML_START_RE.match(line[index:])
             if match:
                 return index
@@ -179,6 +190,14 @@ def _find_raw_html_start_outside_inline_code(line: str) -> int | None:
         index += 1
 
     return None
+
+
+def _is_indented_code_block_line(line: str) -> bool:
+    if not line.strip():
+        return False
+
+    expanded = line.expandtabs(4)
+    return expanded.startswith("    ")
 
 
 class _RenderedMarkdownSanitizer(HTMLParser):
