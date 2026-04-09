@@ -44,9 +44,17 @@ class RenderTests(unittest.TestCase):
         self.assertIn("<h1>After</h1>", html)
 
     def test_render_markdown_neutralizes_unclosed_raw_html_block_before_markdown(self) -> None:
-        html = render_markdown("<div>\n\n# After")
+        html = render_markdown("<div>text\n\n# After")
 
-        self.assertIn("&lt;div&gt;", html)
+        self.assertIn("&lt;div&gt;text", html)
+        self.assertIn("<h1>After</h1>", html)
+
+    def test_render_markdown_neutralizes_multiline_raw_html_block_before_markdown(self) -> None:
+        html = render_markdown("<ul>\n<li>one</li>\n</ul>\n\n# After")
+
+        self.assertIn("&lt;ul&gt;", html)
+        self.assertIn("&lt;li&gt;one&lt;/li&gt;", html)
+        self.assertIn("&lt;/ul&gt;", html)
         self.assertIn("<h1>After</h1>", html)
 
     def test_real_templates_render_with_required_context(self) -> None:
