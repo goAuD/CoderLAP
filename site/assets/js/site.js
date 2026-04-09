@@ -144,24 +144,32 @@
   }
 
   function setupHomeCatalog() {
+    var controlsContainer = document.querySelector("[data-catalog-controls]");
     var searchInput = document.querySelector("[data-search-input]");
     var moduleFilter = document.querySelector("[data-module-filter]");
     var resultsContainer = document.querySelector("[data-topic-results]");
     var sidebarContainer = document.querySelector("[data-sidebar-container]");
     var sidebarPanel = document.querySelector("[data-sidebar-panel]");
 
-    if (!searchInput || !moduleFilter || !resultsContainer) {
+    if (!controlsContainer || !searchInput || !moduleFilter || !resultsContainer) {
       return;
     }
 
     var topicIndex = parseJsonScript("[data-topic-index-json]");
     var navigation = parseJsonScript("[data-navigation-json]");
     var uiCopy = parseJsonScript("[data-ui-copy-json]") || {};
+    if (!Array.isArray(topicIndex) || !navigation || !Array.isArray(navigation.main_topics)) {
+      return;
+    }
+
     var topics = Array.isArray(topicIndex) ? topicIndex.slice() : [];
-    var mainTopics = navigation && Array.isArray(navigation.main_topics) ? navigation.main_topics : [];
+    var mainTopics = navigation.main_topics.slice();
     var cardTemplateRoot = document.querySelector("#topic-card-template");
 
     searchInput.placeholder = uiCopy.search_placeholder || searchInput.placeholder || "Search topics";
+    searchInput.removeAttribute("disabled");
+    moduleFilter.removeAttribute("disabled");
+    controlsContainer.hidden = false;
 
     clearChildren(moduleFilter);
     var allOption = document.createElement("option");
@@ -181,6 +189,9 @@
       mainTopics.forEach(function (mainTopic) {
         sidebarPanel.appendChild(createSidebarSection(mainTopic));
       });
+      if (sidebarContainer) {
+        sidebarContainer.hidden = false;
+      }
       setupResponsiveSidebar(sidebarContainer, sidebarPanel, uiCopy.sidebar_label || "Sidebar");
     }
 

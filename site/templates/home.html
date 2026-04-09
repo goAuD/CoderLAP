@@ -11,8 +11,8 @@
     </div>
   </section>
 
-  <section class="catalog-shell" aria-label="{{ ui.get('sidebar_label', 'Sidebar') }}">
-    <aside class="catalog-sidebar" data-sidebar-container data-sidebar-side="left">
+  <section class="catalog-shell">
+    <aside class="catalog-sidebar" data-sidebar-container data-sidebar-side="left" hidden>
       <div class="catalog-sidebar__header">
         <h2>{{ ui.get('sidebar_label', 'Sidebar') }}</h2>
       </div>
@@ -20,7 +20,7 @@
     </aside>
 
     <section class="catalog-main" aria-labelledby="catalog-title">
-      <header class="catalog-controls">
+      <header class="catalog-controls" data-catalog-controls hidden>
         <div>
           <p class="eyebrow">{{ ui.project_tagline }}</p>
           <h2 id="catalog-title">{{ ui.get("search_label", "Search") }}</h2>
@@ -31,13 +31,14 @@
             <input
               type="search"
               data-search-input
+              disabled
               placeholder="{{ ui.get('search_placeholder', 'Search topics') }}"
               autocomplete="off"
             >
           </label>
           <label class="catalog-field">
             <span>{{ ui.get("filter_label", "Filter") }}</span>
-            <select data-module-filter>
+            <select data-module-filter disabled>
               <option value="">{{ ui.get("filter_label", "Filter") }}</option>
             </select>
           </label>

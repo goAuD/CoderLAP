@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from pathlib import Path
 import unittest
+from pathlib import Path
 
 from scripts.site_builder.models import TopicRecord
 from scripts.site_builder.render import build_template_environment
@@ -29,7 +29,9 @@ def make_topic(topic_id: str, slug: str, title: str) -> TopicRecord:
 class TemplateHookTests(unittest.TestCase):
     def setUp(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
+        self.repo_root = repo_root
         self.env = build_template_environment(repo_root / "site" / "templates")
+        self.site_js = (repo_root / "site" / "assets" / "js" / "site.js").read_text(encoding="utf-8")
         self.ui = {
             "project_tagline": "Austrian LAP study base",
             "home_title": "CoderLAP",
@@ -98,7 +100,18 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn("data-search-input", html)
         self.assertIn("data-module-filter", html)
         self.assertIn("data-topic-results", html)
+        self.assertIn("data-catalog-controls", html)
+        self.assertIn("data-sidebar-container", html)
+        self.assertIn("data-sidebar-panel", html)
+        self.assertIn("data-topic-index-json", html)
+        self.assertIn("data-navigation-json", html)
+        self.assertIn("data-ui-copy-json", html)
+        self.assertRegex(html, r'data-catalog-controls[^>]*hidden')
+        self.assertRegex(html, r'data-sidebar-container[^>]*hidden')
+        self.assertRegex(html, r'data-search-input[^>]*disabled')
+        self.assertRegex(html, r'data-module-filter[^>]*disabled')
         self.assertNotIn('<main class="page-shell">', html)
+        self.assertNotIn('<section class="catalog-shell" aria-label="Sidebar">', html)
 
     def test_topic_template_exposes_print_trigger(self) -> None:
         html = self.env.get_template("topic.html").render(
@@ -114,7 +127,23 @@ class TemplateHookTests(unittest.TestCase):
         )
 
         self.assertIn("data-print-trigger", html)
+        self.assertIn('href="/"', html)
+        self.assertIn('aria-label="Topic pagination"', html)
+        self.assertNotIn('<nav class="topic-pagination" aria-label="Sidebar">', html)
         self.assertNotIn('<main class="page-shell">', html)
+
+    def test_site_js_wires_progressive_enhancement_hooks(self) -> None:
+        self.assertIn('[data-catalog-controls]', self.site_js)
+        self.assertIn('[data-topic-index-json]', self.site_js)
+        self.assertIn('[data-navigation-json]', self.site_js)
+        self.assertIn('[data-ui-copy-json]', self.site_js)
+        self.assertIn('[data-sidebar-container]', self.site_js)
+        self.assertIn('[data-sidebar-panel]', self.site_js)
+        self.assertIn('searchInput.removeAttribute("disabled")', self.site_js)
+        self.assertIn('moduleFilter.removeAttribute("disabled")', self.site_js)
+        self.assertIn('controlsContainer.hidden = false', self.site_js)
+        self.assertIn('sidebarContainer.hidden = false', self.site_js)
+        self.assertIn("window.print", self.site_js)
 
 
 if __name__ == "__main__":
