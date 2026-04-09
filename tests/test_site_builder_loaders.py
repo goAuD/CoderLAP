@@ -283,7 +283,77 @@ class LoaderTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "must be a boolean"):
                 load_registry_items(registry_path)
 
-    def test_load_registry_items_rejects_wrong_type_source_count(self) -> None:
+    def test_load_registry_items_rejects_invalid_main_topic_number(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(
+                json.dumps(
+                    {
+                        "items": [
+                            {
+                                "id": "LAP-01-01",
+                                "lang": "hu",
+                                "title": "Broken",
+                                "path": "01_A/01/README.md",
+                                "main_topic_number": "XX",
+                                "main_topic_dir": "01_A",
+                                "subtopic_number": "01",
+                                "subtopic_dir": "01",
+                                "slug": "01-01-broken",
+                                "review_status": "draft",
+                                "translation_status": "not_started",
+                                "source_count": "1",
+                                "opened_at": None,
+                                "canonical": True,
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                    encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "main_topic_number"):
+                load_registry_items(registry_path)
+
+    def test_load_registry_items_rejects_boolean_source_count(self) -> None:
+        for source_count in (True, False):
+            with self.subTest(source_count=source_count):
+                with tempfile.TemporaryDirectory() as tmpdir:
+                    registry_path = Path(tmpdir) / "registry.json"
+                    registry_path.write_text(
+                        json.dumps(
+                            {
+                                "items": [
+                                    {
+                                        "id": "LAP-01-01",
+                                        "lang": "hu",
+                                        "title": "Broken",
+                                        "path": "01_A/01/README.md",
+                                        "main_topic_number": "01",
+                                        "main_topic_dir": "01_A",
+                                        "subtopic_number": "01",
+                                        "subtopic_dir": "01",
+                                        "slug": "01-01-broken",
+                                        "review_status": "draft",
+                                        "translation_status": "not_started",
+                                        "source_count": source_count,
+                                        "opened_at": None,
+                                        "canonical": True,
+                                    }
+                                ]
+                            },
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                        encoding="utf-8",
+                    )
+
+                    with self.assertRaisesRegex(ValueError, "source_count"):
+                        load_registry_items(registry_path)
+
+    def test_load_registry_items_rejects_wrong_type_opened_at(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             registry_path = Path(tmpdir) / "registry.json"
             registry_path.write_text(
@@ -302,7 +372,41 @@ class LoaderTests(unittest.TestCase):
                                 "slug": "01-01-broken",
                                 "review_status": "draft",
                                 "translation_status": "not_started",
-                                "source_count": "1",
+                                "source_count": 1,
+                                "opened_at": 20260409,
+                                "canonical": True,
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "opened_at"):
+                load_registry_items(registry_path)
+
+    def test_load_registry_items_rejects_wrong_type_required_string_field(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(
+                json.dumps(
+                    {
+                        "items": [
+                            {
+                                "id": "LAP-01-01",
+                                "lang": "hu",
+                                "title": 123,
+                                "path": "01_A/01/README.md",
+                                "main_topic_number": "01",
+                                "main_topic_dir": "01_A",
+                                "subtopic_number": "01",
+                                "subtopic_dir": "01",
+                                "slug": "01-01-broken",
+                                "review_status": "draft",
+                                "translation_status": "not_started",
+                                "source_count": 1,
                                 "opened_at": None,
                                 "canonical": True,
                             }
@@ -314,7 +418,7 @@ class LoaderTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with self.assertRaisesRegex(ValueError, "source_count"):
+            with self.assertRaisesRegex(ValueError, "title"):
                 load_registry_items(registry_path)
 
     def test_load_registry_items_rejects_missing_items_payload(self) -> None:
