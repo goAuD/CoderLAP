@@ -95,8 +95,11 @@ class _RenderedMarkdownSanitizer(HTMLParser):
     def handle_endtag(self, tag: str) -> None:
         if self._escaped_tag_stack:
             self._parts.append(escape(f"</{tag}>"))
-            if tag == self._escaped_tag_stack[-1]:
-                self._escaped_tag_stack.pop()
+            if tag in self._escaped_tag_stack:
+                while self._escaped_tag_stack:
+                    popped_tag = self._escaped_tag_stack.pop()
+                    if popped_tag == tag:
+                        break
             return
 
         if tag in _ALLOWED_TAGS:

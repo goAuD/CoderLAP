@@ -37,6 +37,12 @@ class RenderTests(unittest.TestCase):
         self.assertIn("&lt;!DOCTYPE html&gt;", html)
         self.assertIn('&lt;?xml version=&quot;1.0&quot;?&gt;', html)
 
+    def test_render_markdown_recovers_after_malformed_disallowed_html(self) -> None:
+        html = render_markdown("<div><span>oops</div>\n\n# After")
+
+        self.assertIn("&lt;div&gt;&lt;span&gt;oops&lt;/div&gt;", html)
+        self.assertIn("<h1>After</h1>", html)
+
     def test_real_templates_render_with_required_context(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
         templates = repo_root / "site" / "templates"
