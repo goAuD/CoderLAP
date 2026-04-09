@@ -22,6 +22,12 @@ class RenderTests(unittest.TestCase):
         self.assertIn('<a href="#">click me</a>', html)
         self.assertNotIn("javascript:alert(1)", html)
 
+    def test_render_markdown_preserves_angle_bracket_autolinks(self) -> None:
+        html = render_markdown("<https://example.com>\n\n<mailto:test@example.com>")
+
+        self.assertIn('<a href="https://example.com">https://example.com</a>', html)
+        self.assertIn('<a href="mailto:test@example.com">test@example.com</a>', html)
+
     def test_render_markdown_preserves_html_code_examples_without_double_escaping(self) -> None:
         inline_html = render_markdown("`<div class=\"note\">`")
         fenced_html = render_markdown("```html\n<div class=\"note\">Hello</div>\n```")
@@ -30,6 +36,12 @@ class RenderTests(unittest.TestCase):
         self.assertNotIn("&amp;lt;", inline_html)
         self.assertIn("&lt;div class=&quot;note&quot;&gt;Hello&lt;/div&gt;", fenced_html)
         self.assertNotIn("&amp;lt;", fenced_html)
+
+    def test_render_markdown_preserves_indented_html_code_without_double_escaping(self) -> None:
+        html = render_markdown("    <div class=\"note\">")
+
+        self.assertIn("&lt;div class=&quot;note&quot;&gt;", html)
+        self.assertNotIn("&amp;lt;", html)
 
     def test_render_markdown_preserves_declarations_and_processing_instructions_as_text(self) -> None:
         html = render_markdown("<!DOCTYPE html>\n\n<?xml version=\"1.0\"?>")
