@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ ui_lang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/base.css">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/layout.css">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/components.css">
+    <link rel="stylesheet" href="{{ asset_prefix }}/css/print.css" media="print">
+  </head>
+  <body class="{{ body_class }}">
+    {% block body %}{% endblock %}
+    <script src="{{ asset_prefix }}/js/site.js" defer></script>
+  </body>
+</html>
