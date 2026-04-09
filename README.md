@@ -171,10 +171,10 @@ What was deliberately deferred:
 
 ## Static frontend build
 
-Install dependencies:
+Install dependencies (once per machine):
 
 ```bash
-python -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Build the site:
@@ -183,7 +183,33 @@ Build the site:
 python scripts/build_site.py
 ```
 
-The generated static frontend is written to `dist/`.
+The generated static frontend is written to `dist/` (git-ignored).
+
+Start a local dev server:
+
+```bash
+python -m http.server 4173 --bind 0.0.0.0 --directory dist
+```
+
+Then open `http://localhost:4173` in a browser.  
+Use `--bind 0.0.0.0` to access the site from other devices on the same LAN.
+
+Run the test suite:
+
+```bash
+python -m pytest tests/ -v
+```
+
+### Quick start on a new machine
+
+```bash
+git clone https://github.com/goAuD/CoderLAP.git
+cd CoderLAP
+git checkout dev
+pip install -r requirements.txt
+python scripts/build_site.py
+python -m http.server 4173 --directory dist
+```
 
 ## Continuing work
 
