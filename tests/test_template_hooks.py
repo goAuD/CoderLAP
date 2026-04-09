@@ -42,6 +42,7 @@ class TemplateHookTests(unittest.TestCase):
             "search_label": "Kereses",
             "filter_label": "Modul szurese",
             "sidebar_label": "Temakorok",
+            "content_label": "Temakorok",
             "back_to_catalog": "Vissza a katalogushoz",
             "print_label": "Tema nyomtatasa",
             "previous_label": "Elozo",

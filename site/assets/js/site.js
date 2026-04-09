@@ -31,13 +31,11 @@
     var article;
     var meta;
     var titleLink;
-    var subtopic;
 
     if (templateRoot) {
       article = templateRoot.querySelector(".topic-card").cloneNode(true);
       meta = article.querySelector(".topic-card__meta");
       titleLink = article.querySelector(".topic-card__link");
-      subtopic = article.querySelector(".topic-card__subtopic");
     } else {
       article = document.createElement("article");
       article.className = "topic-card";
@@ -45,20 +43,16 @@
       meta.className = "topic-card__meta";
       titleLink = document.createElement("a");
       titleLink.className = "topic-card__link";
-      subtopic = document.createElement("p");
-      subtopic.className = "topic-card__subtopic";
       var heading = document.createElement("h3");
       heading.className = "topic-card__title";
       heading.appendChild(titleLink);
       article.appendChild(meta);
       article.appendChild(heading);
-      article.appendChild(subtopic);
     }
 
     meta.textContent = item.main_topic_number + " · " + formatMainTopicLabel(item.main_topic_label);
     titleLink.textContent = item.title;
     titleLink.setAttribute("href", "/topics/" + item.slug + "/");
-    subtopic.textContent = item.subtopic_label;
 
     return article;
   }
@@ -95,10 +89,9 @@
     }
 
     var mediaQuery = typeof window.matchMedia === "function"
-      ? window.matchMedia("(max-width: 900px)")
+      ? window.matchMedia("(max-width: 63.99rem)")
       : null;
     var button = document.createElement("button");
-    var isOpen = true;
     var sidebarLabel = typeof label === "string" ? label : "";
 
     button.type = "button";
@@ -110,13 +103,13 @@
     button.setAttribute("aria-expanded", "true");
     container.insertBefore(button, panel);
 
-    function applyState(matchesMobile) {
-      isOpen = !matchesMobile;
-      panel.hidden = matchesMobile;
-      button.hidden = !matchesMobile;
-      button.setAttribute("aria-expanded", String(!matchesMobile));
+    // Desktop: sidebar always visible, no toggle button
+    // Mobile (<64rem): sidebar collapsed by default, toggle button visible
+    function applyState() {
+      button.hidden = true;
+      panel.hidden = false;
       document.body.classList.remove("sidebar-open");
-      document.body.classList.toggle("sidebar-collapsed", matchesMobile);
+      document.body.classList.remove("sidebar-collapsed");
     }
 
     if (mediaQuery) {
@@ -132,24 +125,58 @@
       }
     }
 
+    // Toggle button — only relevant on mobile to show/hide Content panel inline
     button.addEventListener("click", function () {
-      isOpen = !isOpen;
-      panel.hidden = !isOpen;
-      button.setAttribute("aria-expanded", String(isOpen));
-      document.body.classList.toggle("sidebar-open", isOpen);
+      var wasCollapsed = document.body.classList.contains("sidebar-collapsed");
+      document.body.classList.toggle("sidebar-collapsed");
+      panel.hidden = !wasCollapsed;
+      button.setAttribute("aria-expanded", String(wasCollapsed));
     });
 
+    // Quick view overlay — opens on any viewport via navbar link
+    function openOverlay() {
+      panel.hidden = false;
+      document.body.classList.add("sidebar-open");
+    }
+
+    function closeOverlay() {
+      document.body.classList.remove("sidebar-open");
+    }
+
+    // Close overlay when clicking a link inside the panel
     panel.addEventListener("click", function (event) {
       var target = event.target;
-      if (!mediaQuery || !mediaQuery.matches || !target || target.tagName !== "A") {
+      if (!document.body.classList.contains("sidebar-open") || !target || target.tagName !== "A") {
         return;
       }
-
-      isOpen = false;
-      panel.hidden = true;
-      button.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("sidebar-open");
+      closeOverlay();
     });
+
+    // Close overlay when clicking the backdrop
+    document.addEventListener("click", function (event) {
+      if (!document.body.classList.contains("sidebar-open")) {
+        return;
+      }
+      // Check if click is on the backdrop (::after of .site-shell)
+      // The backdrop covers the whole screen, so if click target is outside the sidebar, close it
+      var sidebar = container;
+      if (!sidebar.contains(event.target) && !event.target.hasAttribute("data-quick-view-link")) {
+        closeOverlay();
+      }
+    });
+
+    // Navbar Quick view link toggles the overlay on any viewport
+    var quickViewLink = document.querySelector("[data-quick-view-link]");
+    if (quickViewLink) {
+      quickViewLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        if (document.body.classList.contains("sidebar-open")) {
+          closeOverlay();
+        } else {
+          openOverlay();
+        }
+      });
+    }
   }
 
   function setupHomeCatalog() {

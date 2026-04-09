@@ -14,7 +14,7 @@
   <section class="catalog-shell">
     <aside class="catalog-sidebar" data-sidebar-container data-sidebar-side="left" hidden>
       <div class="catalog-sidebar__header">
-        <h2>{{ ui.get('sidebar_label', '') }}</h2>
+        <h2>{{ ui.get('content_label', 'Content') }}</h2>
       </div>
       <div data-sidebar-panel></div>
     </aside>
@@ -51,7 +51,6 @@
           <article class="topic-card">
             <p>{{ item.main_topic_number }} · {{ item.main_topic_label }}</p>
             <h3><a href="/topics/{{ item.slug }}/">{{ item.title }}</a></h3>
-            <p>{{ item.subtopic_label }}</p>
           </article>
           {% endfor %}
         </noscript>
@@ -75,7 +74,6 @@
       <article class="topic-card">
         <p class="topic-card__meta"></p>
         <h3 class="topic-card__title"><a class="topic-card__link" href="/"></a></h3>
-        <p class="topic-card__subtopic"></p>
       </article>
     </div>
   </section>

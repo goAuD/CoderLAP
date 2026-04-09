@@ -14,13 +14,13 @@ class SiteContentAssetsTests(unittest.TestCase):
         privacy_path = repo_root / "site" / "content" / "legal" / "en" / "privacy.md"
 
         ui_strings = json.loads(ui_path.read_text(encoding="utf-8"))
-        self.assertEqual(ui_strings["project_tagline"], "Austrian LAP study base")
-        self.assertEqual(ui_strings["home_title"], "A focused study hub for the Austrian LAP exam")
+        self.assertEqual(ui_strings["project_tagline"], "LAP \u00b7 Software Development \u00b7 Coding")
+        self.assertEqual(ui_strings["home_title"], "Austrian LAP study base \u00b7 Software Development, Coding")
         self.assertIn("Search topics", ui_strings["search_placeholder"])
         self.assertEqual(ui_strings["search_label"], "Search")
         self.assertEqual(ui_strings["filter_label"], "Filter")
         self.assertEqual(ui_strings["empty_state_label"], "No topics found.")
-        self.assertEqual(ui_strings["sidebar_label"], "Sidebar")
+        self.assertEqual(ui_strings["sidebar_label"], "Quick view")
         self.assertEqual(ui_strings["primary_navigation_label"], "Primary navigation")
         self.assertEqual(ui_strings["back_to_catalog"], "Back to catalog")
         self.assertEqual(ui_strings["print_label"], "Print topic")

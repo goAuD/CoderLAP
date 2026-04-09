@@ -92,7 +92,6 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".catalog-sidebar {", self.layout_css)
         self.assertIn(".catalog-main {", self.layout_css)
         self.assertIn("body.sidebar-open .catalog-sidebar {", self.layout_css)
-        self.assertIn("body.sidebar-collapsed .catalog-sidebar__header,", self.layout_css)
         self.assertIn("grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);", self.layout_css)
 
     def test_components_css_covers_task9_catalog_and_topic_surfaces(self) -> None:
