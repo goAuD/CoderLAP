@@ -10,7 +10,32 @@
     <link rel="stylesheet" href="{{ asset_prefix }}/css/print.css" media="print">
   </head>
   <body class="{{ body_class }}">
-    {% block body %}{% endblock %}
+    <div class="site-shell">
+      <header class="site-topbar">
+        <div class="site-topbar__inner">
+          <a class="site-brand" href="/">
+            <span class="site-brand__title">CoderLAP</span>
+            <span class="site-brand__tagline">{{ ui.get("project_tagline", "Austrian LAP study base") }}</span>
+          </a>
+          <nav class="site-topbar__nav" aria-label="{{ ui.get('sidebar_label', 'Navigation') }}">
+            <a class="site-nav-link" href="/imprint/">{{ ui.get("imprint_label", "Imprint") }}</a>
+            <a class="site-nav-link" href="/privacy/">{{ ui.get("privacy_label", "Privacy") }}</a>
+          </nav>
+        </div>
+      </header>
+      <div class="site-main">
+        {% block body %}{% endblock %}
+      </div>
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <p class="site-footer__meta">CoderLAP</p>
+          <div class="site-footer__links">
+            <a href="/imprint/">{{ ui.get("imprint_label", "Imprint") }}</a>
+            <a href="/privacy/">{{ ui.get("privacy_label", "Privacy") }}</a>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="{{ asset_prefix }}/js/site.js" defer></script>
   </body>
 </html>
