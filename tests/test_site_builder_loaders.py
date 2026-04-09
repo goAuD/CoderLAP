@@ -145,10 +145,61 @@ class LoaderTests(unittest.TestCase):
         self.assertTrue(all(isinstance(record, TopicRecord) for record in records))
         self.assertTrue(all(record.canonical for record in records))
 
+    def test_load_registry_items_skips_malformed_noncanonical_items(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            registry_path = Path(tmpdir) / "registry.json"
+            registry_path.write_text(
+                json.dumps(
+                    {
+                        "items": [
+                            {
+                                "id": "LAP-01-99",
+                                "canonical": False,
+                            },
+                            {
+                                "id": "LAP-01-01",
+                                "lang": "hu",
+                                "title": "First",
+                                "path": "01_A/01/README.md",
+                                "main_topic_number": "01",
+                                "main_topic_dir": "01_A",
+                                "subtopic_number": "01",
+                                "subtopic_dir": "01",
+                                "slug": "01-01-first",
+                                "review_status": "draft",
+                                "translation_status": "not_started",
+                                "source_count": 2,
+                                "opened_at": "2026-04-09",
+                                "canonical": True,
+                            },
+                        ]
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
+
+            records = load_registry_items(registry_path)
+
+        self.assertEqual([record.id for record in records], ["LAP-01-01"])
+
     def test_load_registry_items_rejects_malformed_registry_payload(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             registry_path = Path(tmpdir) / "registry.json"
-            registry_path.write_text(json.dumps({"items": [{"id": "LAP-01-01"}]}), encoding="utf-8")
+            registry_path.write_text(
+                json.dumps(
+                    {
+                        "items": [
+                            {
+                                "id": "LAP-01-01",
+                                "canonical": True,
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
 
             with self.assertRaisesRegex(ValueError, "missing required fields"):
                 load_registry_items(registry_path)
