@@ -1,4 +1,6 @@
 .site-shell {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,6 +43,8 @@
 .page-shell {
   width: min(100%, var(--max-content-width));
   margin: 0 auto;
+  display: grid;
+  gap: var(--space-5);
 }
 
 .catalog-shell {

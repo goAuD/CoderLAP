@@ -18,6 +18,13 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn("--color-text: #c9d1d9;", self.base_css)
         self.assertIn("--color-accent: #5fa7a2;", self.base_css)
         self.assertIn("--divider-line:", self.base_css)
+        self.assertIn("--shadow-panel:", self.base_css)
+        self.assertIn("--radius-lg: 1rem;", self.base_css)
+
+    def test_base_css_keeps_dotted_grid_background_above_canvas(self) -> None:
+        self.assertIn("body::before {", self.base_css)
+        self.assertIn("background-image: radial-gradient(", self.base_css)
+        self.assertIn("z-index: 0;", self.base_css)
 
     def test_base_css_uses_local_font_faces(self) -> None:
         self.assertIn('font-family: "Manrope";', self.base_css)
@@ -49,7 +56,7 @@ class SiteCssAssetsTests(unittest.TestCase):
             r"left: var\(--space-4\);\s*"
             r"z-index: 30;\s*"
             r"padding: 0\.75rem 1rem;\s*"
-            r"border-radius: 999px;\s*"
+            r"border-radius: var\(--radius-md\);\s*"
             r"background: var\(--color-surface-raised\);\s*"
             r"box-shadow: var\(--shadow-button\);"
             r"[^}]*transform: translateY\(-140%\);",
@@ -76,6 +83,8 @@ class SiteCssAssetsTests(unittest.TestCase):
         )
 
     def test_layout_css_covers_catalog_shell_and_responsive_sidebar(self) -> None:
+        self.assertIn(".page-shell {", self.layout_css)
+        self.assertIn("gap: var(--space-5);", self.layout_css)
         self.assertIn(".catalog-shell {", self.layout_css)
         self.assertIn(".catalog-sidebar {", self.layout_css)
         self.assertIn(".catalog-main {", self.layout_css)
@@ -96,6 +105,11 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn("overflow-wrap: anywhere;", self.components_css)
         self.assertIn("word-break: break-word;", self.components_css)
         self.assertIn(".sidebar-group__link {", self.components_css)
+
+    def test_components_css_styles_sidebar_scroll_surface(self) -> None:
+        self.assertIn(".catalog-sidebar [data-sidebar-panel] {", self.components_css)
+        self.assertIn("scrollbar-gutter: stable;", self.components_css)
+        self.assertIn("::-webkit-scrollbar-thumb {", self.components_css)
 
 
 if __name__ == "__main__":
