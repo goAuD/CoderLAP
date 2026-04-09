@@ -9,6 +9,7 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.repo_root = Path(__file__).resolve().parents[1]
         self.base_css = (self.repo_root / "site" / "assets" / "css" / "base.css").read_text(encoding="utf-8")
         self.print_css = (self.repo_root / "site" / "assets" / "css" / "print.css").read_text(encoding="utf-8")
+        self.base_html = (self.repo_root / "site" / "templates" / "base.html").read_text(encoding="utf-8")
 
     def test_base_css_defines_required_dark_theme_tokens(self) -> None:
         self.assertIn("--color-bg: #15181c;", self.base_css)
@@ -27,6 +28,21 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn("color-scheme: light;", self.print_css)
         self.assertIn("--color-bg: #ffffff;", self.print_css)
         self.assertIn("--color-text: #1a1a1a;", self.print_css)
+
+    def test_base_html_includes_skip_link_and_main_landmark(self) -> None:
+        self.assertIn('<a class="skip-link" href="#main-content">Skip to content</a>', self.base_html)
+        self.assertLess(
+            self.base_html.index('<a class="skip-link" href="#main-content">Skip to content</a>'),
+            self.base_html.index('<header class="site-topbar">'),
+        )
+        self.assertIn('<main id="main-content" class="site-main" tabindex="-1">', self.base_html)
+        self.assertIn('<nav class="site-topbar__nav"', self.base_html)
+
+    def test_base_css_has_reduced_motion_handling(self) -> None:
+        self.assertIn("@media (prefers-reduced-motion: reduce)", self.base_css)
+        self.assertIn("scroll-behavior: auto;", self.base_css)
+        self.assertIn("transition-duration: 0.01ms !important;", self.base_css)
+        self.assertIn("transform: none !important;", self.base_css)
 
 
 if __name__ == "__main__":

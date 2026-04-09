@@ -13,6 +13,29 @@
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-4);
+  z-index: 30;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-button);
+  color: var(--color-heading);
+  text-decoration: none;
+  transform: translateY(-140%);
+  transition:
+    transform 140ms ease,
+    color 140ms ease,
+    background-color 140ms ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 .site-brand__title {
   color: var(--color-heading);
   font-family: var(--font-heading);
