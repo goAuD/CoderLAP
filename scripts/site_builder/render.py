@@ -3,6 +3,7 @@ from __future__ import annotations
 from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 from urllib.parse import urlsplit
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
@@ -44,6 +45,8 @@ _ALLOWED_ATTRIBUTES = {
 }
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
+_FENCED_CODE_BLOCK_RE = re.compile(r"^[ ]{0,3}(```+|~~~+)")
+_RAW_HTML_BLOCK_START_RE = re.compile(r"^([ ]{0,3})(</?[A-Za-z][^>]*>|<![^>]*>.*|<\?[^>]*\?>.*)$")
 
 
 def _sanitize_url(value: str) -> str:
@@ -61,6 +64,33 @@ def _sanitize_url(value: str) -> str:
         return "#"
 
     return candidate
+
+
+def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
+    lines = markdown_text.splitlines(keepends=True)
+    in_fenced_code_block = False
+    processed_lines: list[str] = []
+
+    for line in lines:
+        if _FENCED_CODE_BLOCK_RE.match(line):
+            in_fenced_code_block = not in_fenced_code_block
+            processed_lines.append(line)
+            continue
+
+        if in_fenced_code_block:
+            processed_lines.append(line)
+            continue
+
+        match = _RAW_HTML_BLOCK_START_RE.match(line.rstrip("\r\n"))
+        if not match:
+            processed_lines.append(line)
+            continue
+
+        leading_space, raw_markup = match.groups()
+        trailing_newline = line[len(line.rstrip("\r\n")) :]
+        processed_lines.append(f"{leading_space}{escape(raw_markup)}{trailing_newline}")
+
+    return "".join(processed_lines)
 
 
 class _RenderedMarkdownSanitizer(HTMLParser):
@@ -147,6 +177,7 @@ class _RenderedMarkdownSanitizer(HTMLParser):
 
 
 def render_markdown(markdown_text: str) -> str:
+    markdown_text = _neutralize_raw_html_block_starts(markdown_text)
     rendered_html = markdown(
         markdown_text,
         extensions=["extra", "tables", "fenced_code", "sane_lists"],
