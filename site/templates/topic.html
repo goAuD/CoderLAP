@@ -12,14 +12,14 @@
   {% endif %}
 {% endfor %}
 <section class="page-shell" aria-label="{{ topic.title }}">
-  <section class="topic-actions" aria-label="{{ topic.title }}">
+  <section class="topic-actions">
     <a class="site-nav-link" href="/">{{ ui.get("back_to_catalog", "Back to catalog") }}</a>
     <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "Print topic") }}</button>
   </section>
 
   <article class="topic-article">{{ content_html | safe }}</article>
 
-  <nav class="topic-pagination" aria-label="{{ ui.get('sidebar_label', 'Navigation') }}">
+  <nav class="topic-pagination" aria-label="Topic pagination">
     {% if prev_ref.item %}
     <a class="topic-pagination__link topic-pagination__link--prev" href="/topics/{{ prev_ref.item.slug }}/">
       {{ ui.get("previous_label", "Previous") }}: {{ prev_ref.item.title }}
