@@ -1,3 +1,4 @@
+from io import BytesIO
 from pathlib import Path
 import tempfile
 import unittest
@@ -85,6 +86,34 @@ class FetchSiteFontsTest(unittest.TestCase):
             self.assertEqual(target_path.read_bytes(), b"original-bytes")
             self.assertEqual([path.name for path in root.iterdir()], ["manrope-font.woff2"])
 
+    def test_download_font_reaches_os_replace_on_success(self) -> None:
+        class FakeResponse:
+            def __enter__(self) -> "FakeResponse":
+                return self
+
+            def __exit__(self, exc_type, exc, tb) -> None:
+                return None
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            target_path = root / "manrope-font.woff2"
+            urlopen_mock = MagicMock(return_value=FakeResponse())
+            replace_mock = MagicMock()
+
+            with patch("scripts.fetch_site_fonts.urllib.request.urlopen", urlopen_mock), patch(
+                "scripts.fetch_site_fonts.os.replace",
+                replace_mock,
+            ):
+                with patch("scripts.fetch_site_fonts.shutil.copyfileobj") as copyfileobj_mock:
+                    copyfileobj_mock.side_effect = lambda source, destination: destination.write(b"font-data")
+                    download_font("https://fonts.gstatic.com/font.woff2", target_path)
+
+            replace_mock.assert_called_once()
+            temp_path, replaced_target = replace_mock.call_args.args
+            self.assertEqual(replaced_target, target_path)
+            self.assertTrue(str(temp_path).startswith(str(target_path.parent)))
+            self.assertEqual(target_path.exists(), False)
+
     def test_fetch_css_passes_explicit_timeout(self) -> None:
         fake_response = MagicMock()
         fake_response.__enter__.return_value.read.return_value = b"@font-face {}"
@@ -92,6 +121,21 @@ class FetchSiteFontsTest(unittest.TestCase):
 
         with patch("scripts.fetch_site_fonts.urllib.request.urlopen", return_value=fake_response) as urlopen_mock:
             self.assertEqual(fetch_css("https://fonts.googleapis.com/css2?family=Manrope"), "@font-face {}")
+
+        _, kwargs = urlopen_mock.call_args
+        self.assertEqual(kwargs["timeout"], NETWORK_TIMEOUT_SECONDS)
+
+    def test_download_font_passes_explicit_timeout(self) -> None:
+        fake_response = MagicMock()
+        fake_response.__enter__.return_value = BytesIO(b"font-data")
+        fake_response.__exit__.return_value = None
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            target_path = root / "source-sans-3-font.woff2"
+            with patch("scripts.fetch_site_fonts.urllib.request.urlopen", return_value=fake_response) as urlopen_mock:
+                with patch("scripts.fetch_site_fonts.os.replace"):
+                    download_font("https://fonts.gstatic.com/font.woff2", target_path)
 
         _, kwargs = urlopen_mock.call_args
         self.assertEqual(kwargs["timeout"], NETWORK_TIMEOUT_SECONDS)
