@@ -12,10 +12,6 @@ Preferred working location going forward:
 
 - `C:\GitHub\CoderLAP`
 
-Legacy/original local source snapshot:
-
-- `C:\DEV_SCHOOL\LAP_THEMEN`
-
 Purpose:
 
 - Build a complete study knowledge base for the Austrian `LAP` exam in `Applikationsentwicklung - Coding`.
@@ -118,7 +114,7 @@ When continuing work in a new thread:
 
 - Check existing progress before creating new files.
 - Extend the existing structure instead of inventing a new one.
-- If both the `DEV_SCHOOL` and `GitHub` copies exist, prefer continuing from `C:\GitHub\CoderLAP` after verification.
+- Use `C:\GitHub\CoderLAP` as the only active working copy.
 
 ## Content Language Rules
 
@@ -300,6 +296,25 @@ When continuing this project:
 10. Keep Hungarian content and German file/folder names.
 11. Preserve consistency across all topics.
 
+## Fresh Thread Bootstrap
+
+For a completely new Codex thread on another machine, use this startup order:
+
+1. Open the repository root `C:\GitHub\CoderLAP`.
+2. Read `AGENTS.md` first.
+3. Read `README.md` for the high-level state.
+4. Read `LAP_DEPLOY_STRATEGY.md` if the task involves Git, GitHub, Caddy, SSH, Debian, or deployment.
+5. Read `NEXT_THREAD_HANDOFF.md` for the shortest practical continuation context.
+6. Only read `LAP_CONTENT_REGISTRY.json` when indexing, i18n mapping, or site-building logic is relevant.
+
+Deployment-oriented assumptions for a new thread:
+
+- the GitHub repository already exists as `goAuD/CoderLAP`
+- `main` and `dev` branches already exist
+- the normal working branch should usually be `dev`
+- the Debian server is reachable from the other PC via SSH
+- the intended hosting direction is still static output behind Caddy
+
 ## Roadmap
 
 Planned phases:
@@ -374,7 +389,7 @@ Current default metadata values in the registry:
 - `canonical = true`
 
 If content files are added, removed, or renamed, regenerate the registry.
-The generator script is repository-root relative, so it works from either the original copy or the GitHub copy.
+The generator script is repository-root relative.
 
 ## Repo And Deployment Notes
 
@@ -449,7 +464,7 @@ What has already been validated by the user:
 Unless the user says otherwise:
 
 - create or edit files under the current repository root
-- if both copies exist, prefer `C:\GitHub\CoderLAP`
+- treat `C:\GitHub\CoderLAP` as the canonical local working copy
 - use `README.md` inside each topic folder
 - write in Hungarian
 - keep directory/file names in German

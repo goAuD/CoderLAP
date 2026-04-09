@@ -175,11 +175,15 @@ If you continue this project in a new Codex thread:
 
 1. Read [AGENTS.md](./AGENTS.md).
 2. Check the registry and architecture notes in the root.
-3. Prefer the GitHub copy if both `C:\DEV_SCHOOL\LAP_THEMEN` and `C:\GitHub\CoderLAP` exist.
+3. Use `C:\GitHub\CoderLAP` as the active working copy.
 4. Check what topic folders already contain a `README.md`.
 5. Continue within the existing structure.
 6. Preserve the German naming + Hungarian content rule.
 7. Keep sources explicit in every topic document.
+
+Short cross-machine continuation note:
+
+- [NEXT_THREAD_HANDOFF.md](./NEXT_THREAD_HANDOFF.md)
 
 ## Notes
 

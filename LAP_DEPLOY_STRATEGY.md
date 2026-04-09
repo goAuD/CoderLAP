@@ -21,12 +21,6 @@ Canonical working source right now:
 C:\GitHub\CoderLAP
 ```
 
-Legacy/original source snapshot:
-
-```txt
-C:\DEV_SCHOOL\LAP_THEMEN
-```
-
 ## Recommended Repository Model
 
 Recommended repo shape:
