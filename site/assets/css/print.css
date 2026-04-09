@@ -1,0 +1,137 @@
+@media print {
+  :root {
+    color-scheme: light;
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-raised: #ffffff;
+    --color-surface-soft: #ffffff;
+    --color-text: #1a1a1a;
+    --color-text-muted: #4b5560;
+    --color-heading: #000000;
+    --color-accent: #2d6f6a;
+    --color-border: rgba(0, 0, 0, 0.16);
+    --divider-line: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 0.35) 80%, transparent 100%);
+  }
+
+  body {
+    background: #ffffff;
+    color: #1a1a1a;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+
+  body::before,
+  .site-topbar,
+  .site-footer,
+  .catalog-sidebar,
+  .catalog-sidebar__toggle,
+  .catalog-controls,
+  .topic-actions,
+  .topic-pagination {
+    display: none !important;
+  }
+
+  .site-main,
+  .page-shell {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .hero-panel,
+  .topic-article,
+  .legal-article,
+  .topic-card,
+  .catalog-results__empty,
+  table,
+  pre,
+  blockquote {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    border-color: rgba(0, 0, 0, 0.16) !important;
+    box-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    color: #000000 !important;
+    text-decoration: underline;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  th,
+  code {
+    color: #000000 !important;
+  }
+
+  h2::after,
+  h3::after,
+  .decorated-separator::after {
+    background: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.22);
+  }
+
+  .topic-article,
+  .legal-article,
+  .topic-article *,
+  .legal-article * {
+    overflow: visible !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transform: none !important;
+  }
+
+  .topic-article h1,
+  .topic-article h2,
+  .topic-article h3,
+  .topic-article h4,
+  .topic-article h5,
+  .topic-article h6,
+  .legal-article h1,
+  .legal-article h2,
+  .legal-article h3,
+  .legal-article h4,
+  .legal-article h5,
+  .legal-article h6 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .topic-article p,
+  .topic-article li,
+  .legal-article p,
+  .legal-article li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .topic-article p,
+  .topic-article ul,
+  .topic-article ol,
+  .topic-article table,
+  .topic-article pre,
+  .topic-article blockquote,
+  .legal-article p,
+  .legal-article ul,
+  .legal-article ol,
+  .legal-article table,
+  .legal-article pre,
+  .legal-article blockquote,
+  tr,
+  img {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}
