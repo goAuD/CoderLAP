@@ -6,64 +6,66 @@ from scripts.site_builder.models import TopicRecord
 from scripts.site_builder.navigation import build_navigation
 
 
+def make_topic(
+    topic_id: str,
+    main_topic_number: str,
+    subtopic_number: str,
+    title: str,
+    main_topic_dir: str,
+    subtopic_dir: str,
+    slug: str,
+) -> TopicRecord:
+    return TopicRecord(
+        topic_id,
+        "hu",
+        title,
+        f"{main_topic_number}/{subtopic_number}/README.md",
+        main_topic_number,
+        main_topic_dir,
+        subtopic_number,
+        subtopic_dir,
+        slug,
+        "draft",
+        "not_started",
+        1,
+        None,
+        True,
+    )
+
+
 class NavigationTests(unittest.TestCase):
-    def test_build_navigation_creates_prev_next_links(self) -> None:
+    def test_build_navigation_sorts_topics_and_links_boundaries(self) -> None:
         topics = [
-            TopicRecord(
-                "LAP-01-01",
-                "hu",
-                "ASCII",
-                "01/A/README.md",
-                "01",
-                "01_Grundlagen",
-                "01",
-                "01_ASCII",
-                "01-01-ascii",
-                "draft",
-                "not_started",
-                1,
-                None,
-                True,
-            ),
-            TopicRecord(
-                "LAP-01-02",
-                "hu",
-                "Bit",
-                "01/B/README.md",
-                "01",
-                "01_Grundlagen",
-                "02",
-                "02_Bit",
-                "01-02-bit",
-                "draft",
-                "not_started",
-                1,
-                None,
-                True,
-            ),
-            TopicRecord(
-                "LAP-02-01",
-                "hu",
-                "OS",
-                "02/A/README.md",
-                "02",
-                "02_Betriebssysteme",
-                "01",
-                "01_OS",
-                "02-01-os",
-                "draft",
-                "not_started",
-                1,
-                None,
-                True,
-            ),
+            make_topic("LAP-02-02", "02", "02", "Later", "02_Betriebssysteme", "02_Later", "02-02-later"),
+            make_topic("LAP-01-02", "01", "02", "Middle", "01_Grundlagen", "02_Middle", "01-02-middle"),
+            make_topic("LAP-01-01", "01", "01", "First", "01_Grundlagen", "01_First", "01-01-first"),
         ]
 
         navigation = build_navigation(topics)
 
+        self.assertEqual(
+            [main_topic["number"] for main_topic in navigation["main_topics"]],
+            ["01", "02"],
+        )
+        self.assertEqual(
+            [topic["id"] for topic in navigation["main_topics"][0]["topics"]],
+            ["LAP-01-01", "LAP-01-02"],
+        )
+        self.assertEqual(navigation["topics"]["LAP-01-01"]["previous_id"], None)
+        self.assertEqual(navigation["topics"]["LAP-01-01"]["next_id"], "LAP-01-02")
         self.assertEqual(navigation["topics"]["LAP-01-02"]["previous_id"], "LAP-01-01")
-        self.assertEqual(navigation["topics"]["LAP-01-02"]["next_id"], "LAP-02-01")
-        self.assertEqual(len(navigation["main_topics"]), 2)
+        self.assertEqual(navigation["topics"]["LAP-01-02"]["next_id"], "LAP-02-02")
+        self.assertEqual(navigation["topics"]["LAP-02-02"]["previous_id"], "LAP-01-02")
+        self.assertEqual(navigation["topics"]["LAP-02-02"]["next_id"], None)
+
+    def test_build_navigation_rejects_duplicate_topic_ids(self) -> None:
+        topics = [
+            make_topic("LAP-01-01", "01", "01", "First", "01_Grundlagen", "01_First", "01-01-first"),
+            make_topic("LAP-01-01", "01", "02", "Duplicate", "01_Grundlagen", "02_Duplicate", "01-02-duplicate"),
+        ]
+
+        with self.assertRaisesRegex(ValueError, "Duplicate topic ids are not allowed: LAP-01-01"):
+            build_navigation(topics)
 
 
 if __name__ == "__main__":

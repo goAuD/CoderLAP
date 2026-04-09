@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import OrderedDict
+from collections import Counter
 
 from .models import TopicRecord
 
@@ -9,7 +10,16 @@ def _sort_key(topic: TopicRecord) -> tuple[int, int, str]:
     return (int(topic.main_topic_number), int(topic.subtopic_number), topic.id)
 
 
+def _validate_unique_topic_ids(topics: list[TopicRecord]) -> None:
+    counts = Counter(topic.id for topic in topics)
+    duplicates = [topic_id for topic_id, count in counts.items() if count > 1]
+    if duplicates:
+        duplicate_list = ", ".join(sorted(duplicates))
+        raise ValueError(f"Duplicate topic ids are not allowed: {duplicate_list}")
+
+
 def build_navigation(topics: list[TopicRecord]) -> dict:
+    _validate_unique_topic_ids(topics)
     ordered_topics = sorted(topics, key=_sort_key)
 
     main_topics: OrderedDict[str, dict] = OrderedDict()
