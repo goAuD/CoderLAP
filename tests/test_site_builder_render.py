@@ -7,15 +7,29 @@ from scripts.site_builder.render import build_template_environment, render_markd
 
 
 class RenderTests(unittest.TestCase):
-    def test_render_markdown_escapes_raw_html_while_supporting_tables_and_code(self) -> None:
+    def test_render_markdown_escapes_raw_script_content(self) -> None:
         html = render_markdown(
-            "# Title\n\n<script>alert(1)</script>\n\n| A | B |\n| - | - |\n| 1 | 2 |\n\n`code`",
+            "# Title\n\n<script>alert(1)</script>\n\n| A | B |\n| - | - |\n| 1 | 2 |",
         )
 
         self.assertIn("<table>", html)
-        self.assertIn("<code>code</code>", html)
         self.assertNotIn("<script>", html)
         self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", html)
+
+    def test_render_markdown_neutralizes_javascript_links(self) -> None:
+        html = render_markdown("[click me](javascript:alert(1))")
+
+        self.assertIn('<a href="#">click me</a>', html)
+        self.assertNotIn("javascript:alert(1)", html)
+
+    def test_render_markdown_preserves_html_code_examples_without_double_escaping(self) -> None:
+        inline_html = render_markdown("`<div class=\"note\">`")
+        fenced_html = render_markdown("```html\n<div class=\"note\">Hello</div>\n```")
+
+        self.assertIn('<code>&lt;div class=&quot;note&quot;&gt;</code>', inline_html)
+        self.assertNotIn("&amp;lt;", inline_html)
+        self.assertIn("&lt;div class=&quot;note&quot;&gt;Hello&lt;/div&gt;", fenced_html)
+        self.assertNotIn("&amp;lt;", fenced_html)
 
     def test_real_templates_render_with_required_context(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
