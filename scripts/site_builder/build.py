@@ -66,6 +66,7 @@ def build_site(
         content_html = render_markdown(markdown_text)
         rendered = env.get_template("topic.html").render(
             ui_lang=ui_lang,
+            page_lang=topic.lang,
             page_title=topic.title,
             asset_prefix=asset_prefix,
             body_class="topic-page",
@@ -79,6 +80,7 @@ def build_site(
 
     home_html = env.get_template("home.html").render(
         ui_lang=ui_lang,
+        page_lang=ui_lang,
         page_title=ui_strings.get("home_title", "CoderLAP"),
         asset_prefix=asset_prefix,
         body_class="home-page",
@@ -91,6 +93,7 @@ def build_site(
     for slug, markdown_text in legal_pages.items():
         rendered = env.get_template("legal.html").render(
             ui_lang=ui_lang,
+            page_lang=ui_lang,
             page_title=slug.title(),
             asset_prefix=asset_prefix,
             body_class="legal-page",

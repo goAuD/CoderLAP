@@ -3,6 +3,7 @@ from __future__ import annotations
 from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 from urllib.parse import urlsplit
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
@@ -44,6 +45,7 @@ _ALLOWED_ATTRIBUTES = {
 }
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
+_STANDALONE_URL_PATTERN = re.compile(r"^(https?://[^\s<]+)$")
 
 
 def _sanitize_url(value: str) -> str:
@@ -61,6 +63,40 @@ def _sanitize_url(value: str) -> str:
         return "#"
 
     return candidate
+
+
+def _linkify_plain_url_lines(markdown_text: str) -> str:
+    transformed_lines: list[str] = []
+    in_fenced_block = False
+    fence_marker = ""
+
+    for line in markdown_text.splitlines():
+        stripped = line.strip()
+
+        if stripped.startswith(("```", "~~~")):
+            marker = stripped[:3]
+            if not in_fenced_block:
+                in_fenced_block = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fenced_block = False
+                fence_marker = ""
+            transformed_lines.append(line)
+            continue
+
+        if in_fenced_block or line.startswith("    ") or line.startswith("\t"):
+            transformed_lines.append(line)
+            continue
+
+        match = _STANDALONE_URL_PATTERN.fullmatch(stripped)
+        if match:
+            leading = line[: len(line) - len(line.lstrip())]
+            transformed_lines.append(f"{leading}<{match.group(1)}>")
+            continue
+
+        transformed_lines.append(line)
+
+    return "\n".join(transformed_lines)
 
 
 class _RenderedMarkdownSanitizer(HTMLParser):
@@ -147,13 +183,14 @@ class _RenderedMarkdownSanitizer(HTMLParser):
 
 
 def render_markdown(markdown_text: str) -> str:
+    normalized_markdown = _linkify_plain_url_lines(markdown_text)
     md = Markdown(
         extensions=["extra", "tables", "fenced_code", "sane_lists"],
         output_format="html5",
     )
     md.preprocessors.deregister("html_block")
     md.inlinePatterns.deregister("html")
-    rendered_html = md.convert(markdown_text)
+    rendered_html = md.convert(normalized_markdown)
     sanitizer = _RenderedMarkdownSanitizer()
     sanitizer.feed(rendered_html)
     sanitizer.close()
