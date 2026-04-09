@@ -11,6 +11,7 @@
   </head>
   <body class="{{ body_class }}">
     <div class="site-shell">
+      <a class="skip-link" href="#main-content">Skip to content</a>
       <header class="site-topbar">
         <div class="site-topbar__inner">
           <a class="site-brand" href="/">
@@ -23,9 +24,9 @@
           </nav>
         </div>
       </header>
-      <div class="site-main">
+      <main id="main-content" class="site-main" tabindex="-1">
         {% block body %}{% endblock %}
-      </div>
+      </main>
       <footer class="site-footer">
         <div class="site-footer__inner">
           <p class="site-footer__meta">CoderLAP</p>
