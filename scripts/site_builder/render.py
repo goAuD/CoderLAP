@@ -46,7 +46,7 @@ _ALLOWED_ATTRIBUTES = {
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _FENCED_CODE_BLOCK_RE = re.compile(r"^[ ]{0,3}(```+|~~~+)")
-_RAW_HTML_BLOCK_START_RE = re.compile(r"^([ ]{0,3})(</?[A-Za-z][^>]*>|<![^>]*>.*|<\?[^>]*\?>.*)$")
+_RAW_HTML_BLOCK_START_RE = re.compile(r"^[ ]{0,3}(</?[A-Za-z][^>]*|<![^>]*>|<\?[^>]*\?>)")
 
 
 def _sanitize_url(value: str) -> str:
@@ -69,11 +69,13 @@ def _sanitize_url(value: str) -> str:
 def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
     lines = markdown_text.splitlines(keepends=True)
     in_fenced_code_block = False
+    in_raw_html_block = False
     processed_lines: list[str] = []
 
     for line in lines:
         if _FENCED_CODE_BLOCK_RE.match(line):
             in_fenced_code_block = not in_fenced_code_block
+            in_raw_html_block = False
             processed_lines.append(line)
             continue
 
@@ -81,14 +83,24 @@ def _neutralize_raw_html_block_starts(markdown_text: str) -> str:
             processed_lines.append(line)
             continue
 
-        match = _RAW_HTML_BLOCK_START_RE.match(line.rstrip("\r\n"))
-        if not match:
+        stripped_line = line.rstrip("\r\n")
+
+        if in_raw_html_block:
+            if not stripped_line.strip():
+                in_raw_html_block = False
+                processed_lines.append(line)
+            else:
+                trailing_newline = line[len(stripped_line) :]
+                processed_lines.append(f"{escape(stripped_line)}{trailing_newline}")
+            continue
+
+        if not _RAW_HTML_BLOCK_START_RE.match(stripped_line):
             processed_lines.append(line)
             continue
 
-        leading_space, raw_markup = match.groups()
-        trailing_newline = line[len(line.rstrip("\r\n")) :]
-        processed_lines.append(f"{leading_space}{escape(raw_markup)}{trailing_newline}")
+        in_raw_html_block = True
+        trailing_newline = line[len(stripped_line) :]
+        processed_lines.append(f"{escape(stripped_line)}{trailing_newline}")
 
     return "".join(processed_lines)
 
