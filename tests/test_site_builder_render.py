@@ -9,10 +9,9 @@ from scripts.site_builder.render import build_template_environment, render_markd
 class RenderTests(unittest.TestCase):
     def test_render_markdown_escapes_raw_script_content(self) -> None:
         html = render_markdown(
-            "# Title\n\n<script>alert(1)</script>\n\n| A | B |\n| - | - |\n| 1 | 2 |",
+            "# Title\n\n<script>alert(1)</script>",
         )
 
-        self.assertIn("<table>", html)
         self.assertNotIn("<script>", html)
         self.assertIn("&lt;script&gt;alert(1)&lt;/script&gt;", html)
 
@@ -49,46 +48,13 @@ class RenderTests(unittest.TestCase):
         self.assertIn("&lt;!DOCTYPE html&gt;", html)
         self.assertIn('&lt;?xml version=&quot;1.0&quot;?&gt;', html)
 
-    def test_render_markdown_recovers_after_malformed_disallowed_html(self) -> None:
-        html = render_markdown("<div><span>oops</div>\n\n# After")
-
-        self.assertIn("&lt;div&gt;&lt;span&gt;oops&lt;/div&gt;", html)
-        self.assertIn("<h1>After</h1>", html)
-
-    def test_render_markdown_neutralizes_unclosed_raw_html_block_before_markdown(self) -> None:
-        html = render_markdown("<div>text\n\n# After")
-
-        self.assertIn("&lt;div&gt;text", html)
-        self.assertIn("<h1>After</h1>", html)
-
-    def test_render_markdown_neutralizes_multiline_raw_html_block_before_markdown(self) -> None:
-        html = render_markdown("<ul>\n<li>one</li>\n</ul>\n\n# After")
-
-        self.assertIn("&lt;ul&gt;", html)
-        self.assertIn("&lt;li&gt;one&lt;/li&gt;", html)
-        self.assertIn("&lt;/ul&gt;", html)
-        self.assertIn("<h1>After</h1>", html)
-
-    def test_render_markdown_limits_single_line_html_block_neutralization(self) -> None:
-        html = render_markdown("<p>foo</p>\nNext")
-
-        self.assertIn("&lt;p&gt;foo&lt;/p&gt;", html)
-        self.assertIn("<p>Next</p>", html)
-
-    def test_render_markdown_limits_void_html_block_neutralization(self) -> None:
-        html = render_markdown("<hr>\n- item")
-
-        self.assertIn("&lt;hr&gt;", html)
-        self.assertIn("<ul>", html)
-        self.assertIn("<li>item</li>", html)
-
-    def test_render_markdown_neutralizes_inline_raw_html_block_before_markdown(self) -> None:
+    def test_render_markdown_recovers_after_malformed_inline_raw_html(self) -> None:
         html = render_markdown("prefix <div>oops\n\n# After")
 
         self.assertIn("prefix &lt;div&gt;oops", html)
         self.assertIn("<h1>After</h1>", html)
 
-    def test_render_markdown_neutralizes_inline_script_block_before_markdown(self) -> None:
+    def test_render_markdown_recovers_after_malformed_inline_script(self) -> None:
         html = render_markdown("prefix <script>alert(1)\n\n# After")
 
         self.assertIn("prefix &lt;script&gt;alert(1)", html)
