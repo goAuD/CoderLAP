@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from .models import TopicRecord
@@ -36,6 +37,8 @@ STRING_FIELDS = {
     "translation_status",
 }
 
+TOPIC_NUMBER_PATTERN = re.compile(r"^\d{2}$")
+
 
 def _load_registry_payload(registry_path: Path) -> dict:
     payload = json.loads(registry_path.read_text(encoding="utf-8"))
@@ -56,6 +59,10 @@ def _build_topic_record(item: dict) -> TopicRecord:
         raise ValueError(f"Registry item is missing required fields: {missing}")
     if not isinstance(item["canonical"], bool):
         raise ValueError("Registry item field 'canonical' must be a boolean.")
+    if not isinstance(item["main_topic_number"], str) or not TOPIC_NUMBER_PATTERN.fullmatch(item["main_topic_number"]):
+        raise ValueError("Registry item field 'main_topic_number' must be a two-digit numeric string.")
+    if not isinstance(item["subtopic_number"], str) or not TOPIC_NUMBER_PATTERN.fullmatch(item["subtopic_number"]):
+        raise ValueError("Registry item field 'subtopic_number' must be a two-digit numeric string.")
     for field_name in STRING_FIELDS:
         if not isinstance(item[field_name], str):
             raise ValueError(f"Registry item field '{field_name}' must be a string.")
