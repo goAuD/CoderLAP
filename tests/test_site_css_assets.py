@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 
@@ -8,6 +9,7 @@ class SiteCssAssetsTests(unittest.TestCase):
     def setUp(self) -> None:
         self.repo_root = Path(__file__).resolve().parents[1]
         self.base_css = (self.repo_root / "site" / "assets" / "css" / "base.css").read_text(encoding="utf-8")
+        self.components_css = (self.repo_root / "site" / "assets" / "css" / "components.css").read_text(encoding="utf-8")
         self.print_css = (self.repo_root / "site" / "assets" / "css" / "print.css").read_text(encoding="utf-8")
         self.base_html = (self.repo_root / "site" / "templates" / "base.html").read_text(encoding="utf-8")
 
@@ -38,11 +40,35 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn('<main id="main-content" class="site-main" tabindex="-1">', self.base_html)
         self.assertIn('<nav class="site-topbar__nav"', self.base_html)
 
-    def test_base_css_has_reduced_motion_handling(self) -> None:
-        self.assertIn("@media (prefers-reduced-motion: reduce)", self.base_css)
-        self.assertIn("scroll-behavior: auto;", self.base_css)
-        self.assertIn("transition-duration: 0.01ms !important;", self.base_css)
-        self.assertIn("transform: none !important;", self.base_css)
+    def test_components_css_reveals_skip_link_for_keyboard_focus(self) -> None:
+        self.assertIn(".skip-link {", self.components_css)
+        self.assertIn("transform: translateY(-140%);", self.components_css)
+        self.assertRegex(
+            self.components_css,
+            r"\.skip-link:focus,\s*\.skip-link:focus-visible\s*\{\s*transform: translateY\(0\);",
+        )
+
+    def test_base_css_keeps_universal_reduced_motion_override_inside_media_block(self) -> None:
+        motion_block = re.search(
+            r"@media \(prefers-reduced-motion: reduce\)\s*\{(?P<body>.*)\}\s*$",
+            self.base_css,
+            re.DOTALL,
+        )
+
+        self.assertIsNotNone(motion_block)
+        assert motion_block is not None
+        motion_body = motion_block.group("body")
+
+        self.assertIn("html {", motion_body)
+        self.assertIn("scroll-behavior: auto;", motion_body)
+        self.assertRegex(
+            motion_body,
+            r"\*,\s*\*::before,\s*\*::after\s*\{[^}]*animation-duration: 0\.01ms !important;[^}]*transition-duration: 0\.01ms !important;",
+        )
+        self.assertRegex(
+            motion_body,
+            r"button,\s*\.button,\s*\[role=\"button\"\]\s*\{[^}]*transform: none !important;",
+        )
 
 
 if __name__ == "__main__":
