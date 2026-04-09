@@ -43,6 +43,12 @@ class RenderTests(unittest.TestCase):
         self.assertIn("&lt;div&gt;&lt;span&gt;oops&lt;/div&gt;", html)
         self.assertIn("<h1>After</h1>", html)
 
+    def test_render_markdown_neutralizes_unclosed_raw_html_block_before_markdown(self) -> None:
+        html = render_markdown("<div>\n\n# After")
+
+        self.assertIn("&lt;div&gt;", html)
+        self.assertIn("<h1>After</h1>", html)
+
     def test_real_templates_render_with_required_context(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
         templates = repo_root / "site" / "templates"
