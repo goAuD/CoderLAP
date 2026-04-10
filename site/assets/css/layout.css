@@ -119,6 +119,11 @@ body.sidebar-open .catalog-main {
   pointer-events: none;
 }
 
+body.sidebar-open:not(.home-page) .page-shell {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 body.sidebar-open .catalog-sidebar__toggle {
   display: none;
 }

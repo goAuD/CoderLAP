@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import time
 from pathlib import Path
 from typing import Any
 
@@ -58,6 +59,7 @@ def build_site(
 
     ui_lang = str(ui_strings.get("lang", "en"))
     asset_prefix = "/assets"
+    cache_bust = str(int(time.time()))
 
     topic_index = [_topic_index_entry(topic) for topic in topics]
 
@@ -78,6 +80,7 @@ def build_site(
             content_html=content_html,
             navigation=navigation,
             topic_index=topic_index,
+            cache_bust=cache_bust,
         )
         _write_text(settings.output_dir / "topics" / topic.slug / "index.html", rendered)
 
@@ -90,6 +93,7 @@ def build_site(
         ui=ui_strings,
         navigation=navigation,
         topic_index=topic_index,
+        cache_bust=cache_bust,
     )
     _write_text(settings.output_dir / "index.html", home_html)
 
@@ -104,6 +108,7 @@ def build_site(
             legal_slug=slug,
             content_html=render_markdown(markdown_text),
             navigation=navigation,
+            cache_bust=cache_bust,
         )
         _write_text(settings.output_dir / slug / "index.html", rendered)
 
