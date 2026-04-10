@@ -1,18 +1,5 @@
 # Assembler
 
-## Lényeg 30 másodpercben
-
-Az **assembler** két kapcsolódó dolgot jelenthet:
-
-- egy alacsony szintű programnyelvet, azaz az assembly nyelvet
-- vagy azt az eszközt, amely ezt gépközeli formára alakítja
-
-Röviden:
-
-- nagyon közel van a hardverhez
-- erősen processzorfüggő
-- nehezebb olvasni és írni, mint a magas szintű nyelveket
-
 ## Gyors vizuális kép
 
 | Szint | Példa |

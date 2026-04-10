@@ -1,24 +1,5 @@
 # Gestaltung und Vorbereitung von Präsentationen
 
-## Lényeg 30 másodpercben
-
-Egy jó prezentáció nem csak szép, hanem:
-
-- célhoz illeszkedik
-- a közönségnek szól
-- logikusan van felépítve
-- könnyen követhető
-- technikailag is elő van készítve
-
-A prezentáció előkészítése során fontos:
-
-- cél meghatározása
-- közönség elemzése
-- vázlat készítése
-- világos diaszerkezet
-- vizuális egyszerűség
-- próba és technikai ellenőrzés
-
 ## Gyors vizuális kép
 
 | Szempont | Mit jelent? |

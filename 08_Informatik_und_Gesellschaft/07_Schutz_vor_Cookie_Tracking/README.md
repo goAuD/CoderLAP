@@ -1,17 +1,5 @@
 # Schutz vor Cookie Tracking
 
-## Lényeg 30 másodpercben
-
-A **cookie tracking** azt jelenti, hogy weboldalak vagy harmadik felek sütik és hasonló technológiák segítségével követhetik a felhasználó tevékenységét.
-
-Védekezés:
-
-- tudatos hozzájárulás-kezelés
-- nem szükséges sütik elutasítása
-- böngészőbeállítások
-- privát mód vagy profilok
-- trackerblokkoló eszközök
-
 ## Gyors vizuális kép
 
 | Kockázat | Védekezés |

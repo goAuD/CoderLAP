@@ -1,15 +1,5 @@
 # Definition von Projekten
 
-## Lényeg 30 másodpercben
-
-A **projekt** olyan **időben korlátozott, egyszeri jellegű feladat vagy kezdeményezés**, amelynek meghatározott célja és eredménye van.
-
-Röviden:
-
-- van eleje és vége
-- nem rutinszerű napi működés
-- egy konkrét eredményre irányul
-
 ## Gyors vizuális kép
 
 | Jellemző | Projekt? |

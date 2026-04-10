@@ -205,6 +205,10 @@ def render_markdown(
     sanitized_html = sanitizer.render()
     if suppress_redundant_summary_heading:
         sanitized_html = _REDUNDANT_TOPIC_HEADING_PATTERN.sub("", sanitized_html, count=1)
+    # Wrap tables in a scrollable container so table keeps display:table
+    sanitized_html = sanitized_html.replace(
+        "<table>", '<div class="table-wrap"><table>'
+    ).replace("</table>", "</table></div>")
     return sanitized_html
 
 

@@ -1,15 +1,5 @@
 # Index: Vor- und Nachteile
 
-## Lényeg 30 másodpercben
-
-Az **index** olyan segédstruktúra, amely felgyorsíthatja az adatok keresését, de helyet foglal és lassíthat bizonyos írási műveleteket.
-
-Röviden:
-
-- gyorsabb lekérdezések
-- több tárhely
-- lassabb `INSERT`, `UPDATE`, `DELETE` bizonyos esetekben
-
 ## Gyors vizuális kép
 
 | Előny | Hátrány |

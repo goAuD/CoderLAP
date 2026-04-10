@@ -1,16 +1,5 @@
 # Arbeitspaket
 
-## Lényeg 30 másodpercben
-
-Az **Arbeitspaket** (`munkacsomag`) a projekt egy **konkrét, kezelhető és felelőshöz rendelhető** része.
-
-Röviden:
-
-- kisebb egység a projektstruktúrában
-- világos célja van
-- becsülhető
-- kiosztható
-
 ## Gyors vizuális kép
 
 | Kérdés | Munkacsomag válasza |

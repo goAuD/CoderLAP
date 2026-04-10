@@ -1,15 +1,5 @@
 # Impressumspflicht
 
-## Lényeg 30 másodpercben
-
-Az **Impressumspflicht** azt jelenti, hogy egy weboldalon vagy más elektronikus médiumnál bizonyos kötelező adatokat fel kell tüntetni.
-
-Ennek célja:
-
-- lehessen tudni, ki áll a tartalom vagy szolgáltatás mögött
-- legyen elérhető kapcsolattartási információ
-- átlátható legyen a felelősség
-
 ## Gyors vizuális kép
 
 | Kérdés | Rövid válasz |

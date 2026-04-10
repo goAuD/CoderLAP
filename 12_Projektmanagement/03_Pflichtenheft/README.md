@@ -1,15 +1,5 @@
 # Pflichtenheft
 
-## Lényeg 30 másodpercben
-
-A **Pflichtenheft** azt írja le, hogy a megrendelő igényeit **hogyan** fogják megvalósítani.
-
-Röviden:
-
-- a `Lastenheft` után készül
-- részletesebb és technikaibb
-- jellemzően a megvalósító oldal dolgozza ki
-
 ## Gyors vizuális kép
 
 | Dokumentum | Fő kérdése |

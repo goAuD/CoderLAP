@@ -1,15 +1,5 @@
 # Betriebliches Informationssystem (BIS)
 
-## Lényeg 30 másodpercben
-
-A **betriebliche Informationssystem** (`BIS`) olyan rendszer, amely egy vállalat működéséhez szükséges információkat gyűjti, tárolja, feldolgozza és elérhetővé teszi.
-
-Röviden:
-
-- üzleti döntéseket és folyamatokat támogat
-- emberekből, adatokból, szoftverekből és folyamatokból áll
-- gyűjtőfogalom, amely alá több konkrét rendszer is tartozhat
-
 ## Gyors vizuális kép
 
 | BIS eleme | Példa |

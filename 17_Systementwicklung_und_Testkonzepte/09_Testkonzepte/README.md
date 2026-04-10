@@ -1,15 +1,5 @@
 # Testkonzepte
 
-## Lényeg 30 másodpercben
-
-A **tesztkoncepció** vagy tesztelési koncepció azt írja le, hogyan akarjuk ellenőrizni a szoftver helyes működését.
-
-Röviden:
-
-- mit tesztelünk
-- hogyan tesztelünk
-- milyen mélységben és milyen eszközökkel
-
 ## Gyors vizuális kép
 
 | Tesztkoncepció eleme | Kérdés |

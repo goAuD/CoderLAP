@@ -1,25 +1,5 @@
 # Domain Subdomain Top Level Domain
 
-## Lényeg 30 másodpercben
-
-A domainnév az interneten használt emberbarát cím.
-
-Példa:
-
-- `developer.mozilla.org`
-
-Ebben:
-
-- `org` = **top-level domain** (`TLD`)
-- `mozilla` = fő domain / second-level domain
-- `developer` = **subdomain**
-
-Röviden:
-
-- a domainnév részekből áll
-- ezeket pont választja el
-- a DNS segítségével oldódnak IP-címre
-
 ## Gyors vizuális kép
 
 | Rész | Példa | Jelentés |

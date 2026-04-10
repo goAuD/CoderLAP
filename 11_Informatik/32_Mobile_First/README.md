@@ -1,15 +1,5 @@
 # Mobile First
 
-## Lényeg 30 másodpercben
-
-A **mobile first** olyan tervezési és fejlesztési stratégia, amelynél először a **mobil nézetet** készítjük el, és utána bővítjük nagyobb kijelzőkre.
-
-Röviden:
-
-- először a legkisebb képernyőre tervezünk
-- csak a szükséges elemekkel indulunk
-- majd fokozatosan bővítjük a felületet
-
 ## Gyors vizuális kép
 
 | Sorrend | Mit jelent? |

@@ -1,16 +1,5 @@
 # Webservices
 
-## Lényeg 30 másodpercben
-
-A **web service** olyan hálózaton elérhető szolgáltatás, amelyen keresztül rendszerek **gépi módon** kommunikálnak egymással.
-
-Röviden:
-
-- nem emberi felületre készül
-- programok használják programokkal
-- kérés és válasz alapján működik
-- tipikusan webes protokollokat használ
-
 ## Gyors vizuális kép
 
 | Szereplő | Feladat |

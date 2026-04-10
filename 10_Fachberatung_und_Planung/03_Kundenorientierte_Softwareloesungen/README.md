@@ -1,18 +1,5 @@
 # Kundenorientierte Softwareloesungen
 
-## Lényeg 30 másodpercben
-
-Ügyfélközpontú szoftvermegoldás az, amely:
-
-- valódi felhasználói problémát old meg
-- használható
-- érthető
-- megbízható
-
-Nem attól jó, hogy tele van funkcióval, hanem attól, hogy:
-
-- az ügyfél célját jól támogatja
-
 ## Gyors vizuális kép
 
 | Jó megoldás | Rossz megoldás |

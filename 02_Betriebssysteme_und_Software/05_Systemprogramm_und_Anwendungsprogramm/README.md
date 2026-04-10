@@ -1,15 +1,5 @@
 # Systemprogramm und Anwendungsprogramm
 
-## Lényeg 30 másodpercben
-
-A **rendszerprogram** (`Systemprogramm`) a számítógép alapműködését támogatja.  
-Az **alkalmazásprogram** (`Anwendungsprogramm`) konkrét felhasználói feladatot old meg.
-
-Egyszerű példa:
-
-- operációs rendszer = rendszerprogram
-- böngésző = alkalmazásprogram
-
 ## Gyors vizuális kép
 
 | Típus | Mire való? | Példa |

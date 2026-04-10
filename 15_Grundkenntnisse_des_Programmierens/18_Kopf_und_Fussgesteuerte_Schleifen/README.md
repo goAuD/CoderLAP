@@ -1,14 +1,5 @@
 # Kopf- und fussgesteuerte Schleifen
 
-## Lényeg 30 másodpercben
-
-A fejvezérelt ciklus a feltételt **a ciklus előtt**, a lábvezérelt ciklus pedig **a ciklus után** ellenőrzi.
-
-Röviden:
-
-- fejvezérelt: lehet, hogy egyszer sem fut
-- lábvezérelt: legalább egyszer lefut
-
 ## Gyors vizuális kép
 
 | Típus | Feltétel helye | Minimum futás |

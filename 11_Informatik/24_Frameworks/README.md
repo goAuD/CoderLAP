@@ -1,15 +1,5 @@
 # Frameworks
 
-## Lényeg 30 másodpercben
-
-A **framework** olyan szoftveres keretrendszer, amely előre kialakított struktúrát, szabályokat és eszközöket ad a fejlesztéshez.
-
-Röviden:
-
-- nem a nulláról kezdünk
-- kész mintákra építünk
-- gyorsabban, egységesebben lehet fejleszteni
-
 ## Gyors vizuális kép
 
 | Eszköz | Mit ad? |

@@ -1,14 +1,5 @@
 # Einsatzgebiet AngularJS
 
-## Lényeg 30 másodpercben
-
-Az **AngularJS** egy régebbi JavaScript-alapú frontend framework volt dinamikus egyoldalas webalkalmazásokhoz.
-
-Nagyon fontos mai pontosítás:
-
-- az AngularJS **hivatalos támogatása 2022 januárjában megszűnt**
-- új projekthez **nem ajánlott**
-
 ## Gyors vizuális kép
 
 | Kérdés | Válasz |

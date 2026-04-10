@@ -1,15 +1,5 @@
 # IaaS PaaS SaaS
 
-## Lényeg 30 másodpercben
-
-Az `IaaS`, `PaaS` és `SaaS` a cloud **szolgáltatási modelljei**.
-
-Röviden:
-
-- `IaaS` = infrastruktúrát kapsz
-- `PaaS` = platformot kapsz fejlesztéshez / futtatáshoz
-- `SaaS` = kész szoftvert használsz
-
 ## Gyors vizuális kép
 
 | Modell | Mit kapsz? | Mire van több saját felelősség? |

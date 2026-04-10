@@ -1,19 +1,5 @@
 # Zahlensysteme in der IT
 
-## Lényeg 30 másodpercben
-
-Az informatikában leggyakrabban használt számrendszerek:
-
-- **kettes számrendszer** (`bináris`, alap: `2`)
-- **nyolcas számrendszer** (`oktális`, alap: `8`)
-- **tízes számrendszer** (`decimális`, alap: `10`)
-- **tizenhatos számrendszer** (`hexadecimális`, alap: `16`)
-
-Egy számrendszer alapja azt mondja meg, hogy:
-
-- hány különböző számjegyet használ
-- a helyiértékek milyen hatványok szerint nőnek
-
 ## Gyors vizuális kép
 
 | Számrendszer | Alap | Használt számjegyek | Példa ugyanarra az értékre |

@@ -1,17 +1,5 @@
 # Test von Datenbankfeldern
 
-## Lényeg 30 másodpercben
-
-Az adatbázismezők tesztelése azt ellenőrzi, hogy a mezők helyesen fogadják, tárolják és korlátozzák az adatokat.
-
-Röviden:
-
-- adattípus helyessége
-- kötelezőség
-- hossz és formátum
-- egyediség és tartomány
-- hibás bemenetek kezelése
-
 ## Gyors vizuális kép
 
 | Mit tesztelünk? | Példa |

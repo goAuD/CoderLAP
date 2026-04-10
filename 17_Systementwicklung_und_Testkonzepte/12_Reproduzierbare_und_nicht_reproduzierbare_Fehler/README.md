@@ -1,15 +1,5 @@
 # Reproduzierbare und nicht reproduzierbare Fehler
 
-## Lényeg 30 másodpercben
-
-A reprodukálható hiba mindig vagy megbízhatóan újra előidézhető ugyanazokkal a lépésekkel, a nem reprodukálható hiba pedig nem jelentkezik kiszámíthatóan.
-
-Röviden:
-
-- reprodukálható hiba: stabilan újra előáll
-- nem reprodukálható / intermittáló hiba: hol jelentkezik, hol nem
-- a második általában nehezebben javítható
-
 ## Gyors vizuális kép
 
 | Hibatípus | Jellemző |

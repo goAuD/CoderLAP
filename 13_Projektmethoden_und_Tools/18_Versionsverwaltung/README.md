@@ -1,15 +1,5 @@
 # Versionsverwaltung
 
-## Lényeg 30 másodpercben
-
-A **versionsverwaltung** vagy verziókezelés azt jelenti, hogy a fájlok, főleg a forráskód változásait nyomon követjük és kezeljük.
-
-Röviden:
-
-- látszik, ki mit változtatott
-- vissza lehet térni korábbi állapothoz
-- több fejlesztő tud együtt dolgozni
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

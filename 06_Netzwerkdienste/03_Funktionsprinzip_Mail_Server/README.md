@@ -1,21 +1,5 @@
 # Funktionsprinzip Mail Server
 
-## Lényeg 30 másodpercben
-
-Az e-mail-rendszer nem egyetlen protokollból áll.
-
-Tipikus szereplők:
-
-- `MUA` = levelező kliens
-- `MSA` = beküldő szerver
-- `MTA` = továbbító szerver
-- `mailbox server` = ahol a levelek tárolódnak
-
-Protokollok:
-
-- küldéshez: `SMTP`
-- olvasáshoz: `IMAP` vagy `POP3`
-
 ## Gyors vizuális kép
 
 | Szereplő | Feladat |

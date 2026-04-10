@@ -1,15 +1,5 @@
 # Interpreter und Compiler
 
-## Lényeg 30 másodpercben
-
-Az interpreter és a compiler is a forráskód végrehajtásához kapcsolódik, de nem ugyanúgy dolgozik.
-
-Röviden:
-
-- az interpreter jellemzően futás közben értelmez
-- a compiler előre lefordít
-- a modern rendszerek gyakran hibrid megoldásokat használnak
-
 ## Gyors vizuális kép
 
 | Eszköz | Alapötlet |

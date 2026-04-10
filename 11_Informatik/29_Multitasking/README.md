@@ -1,15 +1,5 @@
 # Multitasking
 
-## Lényeg 30 másodpercben
-
-A **multitasking** azt jelenti, hogy egy rendszer több feladatot kezel úgy, hogy a felhasználó számára egyszerre futónak tűnnek.
-
-Röviden:
-
-- több folyamat vagy feladat párhuzamosnak látszik
-- ez lehet valódi párhuzamosság vagy gyors váltogatás
-- operációs rendszereknél alapfogalom
-
 ## Gyors vizuális kép
 
 | Helyzet | Mit lát a felhasználó? |

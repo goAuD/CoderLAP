@@ -1,16 +1,5 @@
 # Productowner
 
-## Lényeg 30 másodpercben
-
-A **Product Owner** az a szereplő, aki a termék értékéért és a backlog prioritásáért felel.
-
-Röviden:
-
-- képviseli a termékcélt
-- priorizálja a backlogot
-- egyeztet a stakeholderekkel
-- segít, hogy a csapat a legfontosabb dolgokon dolgozzon
-
 ## Gyors vizuális kép
 
 | Szerep | Fő fókusz |

@@ -1,11 +1,5 @@
 # Qualitätsmerkmale der Softwarefunktionalität
 
-## Lényeg 30 másodpercben
-
-A szoftver funkcionalitásának minősége azt jelenti, hogy a rendszer **a megfelelő funkciókat**, **helyesen**, és **a feladathoz jól illeszkedően** biztosítja.
-
-Az ISO `25010` alapján ez a **functional suitability** területéhez kapcsolható.
-
 ## Gyors vizuális kép
 
 | Részterület | Mit jelent? |

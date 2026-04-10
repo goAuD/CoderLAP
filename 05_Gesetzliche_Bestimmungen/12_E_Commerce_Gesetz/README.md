@@ -1,16 +1,5 @@
 # E_Commerce Gesetz
 
-## Lényeg 30 másodpercben
-
-Az osztrák **E-Commerce-Gesetz (ECG)** az online szolgáltatások és az információs társadalommal összefüggő egyes jogi kérdések egyik alapvető törvénye.
-
-Vizsgaszinten fontos belőle főleg:
-
-- ki számít szolgáltatónak
-- milyen tájékoztatási kötelezettségek vannak
-- milyen szabályok vonatkoznak az elektronikus kereskedelemre és bizonyos online szolgáltatásokra
-- mi az ECG-lista szerepe reklám e-maileknél
-
 ## Gyors vizuális kép
 
 | Terület | Mit szabályozhat? |

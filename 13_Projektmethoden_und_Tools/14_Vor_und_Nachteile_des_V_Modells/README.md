@@ -1,9 +1,5 @@
 # Vor- und Nachteile des V-Modells
 
-## Lényeg 30 másodpercben
-
-A V-modell nagy előnye a **struktúra és a tesztelés tudatos megtervezése**, hátránya pedig a **merevség és a nagyobb formalizmus**.
-
 ## Gyors vizuális kép
 
 | Előny | Hátrány |

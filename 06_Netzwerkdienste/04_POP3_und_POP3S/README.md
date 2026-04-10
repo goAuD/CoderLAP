@@ -1,18 +1,5 @@
 # POP3 und POP3S
 
-## Lényeg 30 másodpercben
-
-A `POP3` egy levelezési protokoll a bejövő levelek letöltésére.
-
-Jellemzően:
-
-- a kliens letölti a leveleket a szerverről
-- gyakran helyi tárolásra használják
-
-A `POP3S` ennek titkosított változata:
-
-- `POP3` TLS-sel védve
-
 ## Gyors vizuális kép
 
 | Protokoll | Tipikus port | Fő cél |

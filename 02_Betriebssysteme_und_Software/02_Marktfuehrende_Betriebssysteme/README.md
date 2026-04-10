@@ -1,18 +1,5 @@
 # Marktfuehrende Betriebssysteme
 
-## Lényeg 30 másodpercben
-
-A ma piacon vezető operációs rendszerek attól függenek, hogy melyik területet nézzük:
-
-- **desktop / laptop**: főleg **Windows**, utána **macOS**, majd **Linux**
-- **mobil**: főleg **Android** és **iOS**
-- **szerver / vállalati környezet**: nagy szerepe van a **Linuxnak** és a **Windows Servernek**
-
-Fontos:
-
-- a „vezető” mindig **időponthoz** és **piachoz** kötött
-- nem ugyanaz a desktop, mobil és szerver piac
-
 ## Gyors vizuális kép
 
 ### Világszintű desktop piac

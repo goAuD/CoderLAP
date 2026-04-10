@@ -1,15 +1,5 @@
 # Prozedurale und objektorientierte Programmierung
 
-## Lényeg 30 másodpercben
-
-A procedurális programozás főleg **eljárásokra és függvényekre**, az objektumorientált programozás pedig **objektumokra és osztályokra** épít.
-
-Röviden:
-
-- procedurális: lépések és műveletek központú
-- objektumorientált: állapot és viselkedés együtt kezelése
-- mindkettő használható, csak más erősségeik vannak
-
 ## Gyors vizuális kép
 
 | Szempont | Procedurális | Objektumorientált |

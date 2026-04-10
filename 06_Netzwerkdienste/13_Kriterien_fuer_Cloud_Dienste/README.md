@@ -1,21 +1,5 @@
 # Kriterien fuer Cloud Dienste
 
-## Lényeg 30 másodpercben
-
-Cloud szolgáltatót nem csak ár alapján választunk.
-
-Fontos szempontok például:
-
-- biztonság
-- adatvédelem / compliance
-- rendelkezésre állás
-- teljesítmény
-- költségmodell
-- skálázhatóság
-- adatlokáció
-- integrálhatóság
-- vendor lock-in kockázata
-
 ## Gyors vizuális kép
 
 | Szempont | Miért fontos? |

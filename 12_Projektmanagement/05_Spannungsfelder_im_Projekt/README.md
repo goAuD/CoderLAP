@@ -1,21 +1,5 @@
 # Spannungsfelder im Projekt
 
-## Lényeg 30 másodpercben
-
-A projektben több olyan tényező van, amelyek **egymásra hatnak és néha egymással feszültségben állnak**.
-
-A legismertebb ilyen feszültség:
-
-- idő
-- költség
-- terjedelem / eredmény
-
-Gyakran ehhez még hozzávesszük:
-
-- minőség
-- erőforrás
-- kockázat
-
 ## Gyors vizuális kép
 
 | Ha ez változik | Erre is hat |

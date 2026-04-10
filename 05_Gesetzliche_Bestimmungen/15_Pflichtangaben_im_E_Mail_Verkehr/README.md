@@ -1,19 +1,5 @@
 # Pflichtangaben im E_Mail_Verkehr
 
-## Lényeg 30 másodpercben
-
-Az üzleti e-maileknél Ausztriában bizonyos esetekben kötelező céges adatokat kell feltüntetni.
-
-Tipikus példák:
-
-- cégnév
-- jogi forma
-- székhely
-- Firmenbuchnummer
-- Firmenbuchgericht
-
-Ez főleg üzleti kommunikációnál fontos, nem egyszerű privát levelezésnél.
-
 ## Gyors vizuális kép
 
 | Kérdés | Rövid válasz |

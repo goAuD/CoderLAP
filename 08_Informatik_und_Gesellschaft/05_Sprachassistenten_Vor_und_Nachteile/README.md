@@ -1,25 +1,5 @@
 # Sprachassistenten Vor und Nachteile
 
-## Lényeg 30 másodpercben
-
-A **Sprachassistent** olyan digitális asszisztens, amely hangutasításokat értelmez és ezekre reagál.
-
-Példák:
-
-- Siri
-- Google Assistant
-- Alexa
-
-Előnye:
-
-- kényelmes
-- gyors
-- akadálymentesítést is segíthet
-
-Hátránya:
-
-- privacy és biztonsági kockázat
-
 ## Gyors vizuális kép
 
 | Előny | Hátrány |

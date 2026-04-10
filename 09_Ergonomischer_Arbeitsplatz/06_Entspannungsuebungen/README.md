@@ -1,17 +1,5 @@
 # Entspannungsuebungen
 
-## Lényeg 30 másodpercben
-
-Az irodai vagy képernyős munkánál a rövid mozgás- és lazítógyakorlatok segíthetnek:
-
-- csökkenteni a feszülést
-- megszakítani a statikus ülést
-- javítani a közérzetet és a figyelmet
-
-Nem sportteljesítmény kell, hanem:
-
-- rövid, rendszeres, egyszerű gyakorlatok
-
 ## Gyors vizuális kép
 
 | Gyakorlat célja | Példa |

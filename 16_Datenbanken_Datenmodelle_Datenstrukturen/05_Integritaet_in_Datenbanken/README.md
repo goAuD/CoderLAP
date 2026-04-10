@@ -1,15 +1,5 @@
 # Integritaet in Datenbanken
 
-## Lényeg 30 másodpercben
-
-Az **integritás** azt jelenti, hogy az adatbázisban tárolt adatok helyesek, következetesek és a megadott szabályoknak megfelelnek.
-
-Röviden:
-
-- ne legyenek ellentmondásos adatok
-- a kulcsok és kapcsolatok maradjanak érvényesek
-- a `DBMS` szabályokkal védi az adatminőséget
-
 ## Gyors vizuális kép
 
 | Integritástípus | Példa |

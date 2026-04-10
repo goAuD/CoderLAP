@@ -1,23 +1,5 @@
 # Urheberrecht Grundbegriffe
 
-## Lényeg 30 másodpercben
-
-A **szerzői jog** azt védi, amit egy szerző saját szellemi alkotásként létrehoz.
-
-Ez lehet például:
-
-- szöveg
-- kép
-- zene
-- videó
-- grafika
-- szoftver
-
-Fontos:
-
-- nem az ötlet önmagában védett
-- hanem a konkrét, egyéni formában megvalósított alkotás
-
 ## Gyors vizuális kép
 
 | Fogalom | Rövid jelentés |

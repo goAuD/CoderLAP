@@ -1,15 +1,5 @@
 # Daily Scrum / Standup
 
-## Lényeg 30 másodpercben
-
-A **Daily Scrum** vagy **standup** egy rövid, napi egyeztetés a csapat számára.
-
-Röviden:
-
-- általában naponta egyszer
-- rövid, fókuszált megbeszélés
-- célja az összehangolás és az akadályok láthatóvá tétele
-
 ## Gyors vizuális kép
 
 | Jellemző | Daily Scrum |

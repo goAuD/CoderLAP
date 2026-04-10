@@ -1,15 +1,5 @@
 # Sprint
 
-## Lényeg 30 másodpercben
-
-A **sprint** egy rövid, fix hosszúságú munkaciklus, amelyben a csapat meghatározott célt próbál elérni.
-
-Röviden:
-
-- időben behatárolt iteráció
-- általában `1-4 hét`
-- a végén kézzelfogható eredménynek kell lennie
-
 ## Gyors vizuális kép
 
 ```text

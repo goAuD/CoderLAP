@@ -1,16 +1,5 @@
 # Responsive Webdesign
 
-## Lényeg 30 másodpercben
-
-A **responsive webdesign** azt jelenti, hogy ugyanaz a weboldal különböző kijelzőméretekhez és eszközökhöz alkalmazkodik.
-
-Röviden:
-
-- egy oldal
-- több eszköz
-- rugalmas elrendezés
-- jobb használhatóság
-
 ## Gyors vizuális kép
 
 | Eszköz | Mit történik? |

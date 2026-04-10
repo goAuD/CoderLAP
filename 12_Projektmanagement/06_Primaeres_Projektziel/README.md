@@ -1,15 +1,5 @@
 # Primaeres Projektziel
 
-## Lényeg 30 másodpercben
-
-A projekt **elsődleges célja** az, hogy a meghatározott **eredményt vagy hasznot** elérje.
-
-Röviden:
-
-- a projekt nem önmagáért van
-- egy konkrét célt, eredményt vagy változást kell megvalósítania
-- idő, költség és erőforrás fontos, de ezek inkább korlátok
-
 ## Gyors vizuális kép
 
 | Elem | Szerepe |

@@ -1,22 +1,5 @@
 # Meta Elemente und Metadaten
 
-## Lényeg 30 másodpercben
-
-A **meta elemek** és a **metadatok** olyan háttér-információk, amelyek a dokumentumról szólnak, nem a látható tartalomról.
-
-Tipikus példák:
-
-- karakterkódolás: `charset="utf-8"`
-- leírás: `description`
-- mobilnézet: `viewport`
-- robotoknak szóló utasítás: `robots`
-
-Röviden:
-
-- a metaadat a tartalomról szóló adat
-- a HTML-ben ezt gyakran a `<meta>` elem hordozza
-- főleg böngésző, keresőmotor és más rendszerek használják
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés | Példa |

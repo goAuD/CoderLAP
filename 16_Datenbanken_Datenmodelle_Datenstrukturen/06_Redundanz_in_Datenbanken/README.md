@@ -1,15 +1,5 @@
 # Redundanz in Datenbanken
 
-## Lényeg 30 másodpercben
-
-Az **adatredundancia** azt jelenti, hogy ugyanaz az információ feleslegesen több helyen is szerepel az adatbázisban.
-
-Röviden:
-
-- néha szükséges lehet
-- de túl sok redundancia problémát okoz
-- a relációs tervezés egyik fő célja a fölösleges ismétlődés csökkentése
-
 ## Gyors vizuális kép
 
 | Helyzet | Következmény |

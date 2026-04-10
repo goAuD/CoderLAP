@@ -1,15 +1,5 @@
 # Klassen
 
-## Lényeg 30 másodpercben
-
-Az **osztály** egy terv vagy sablon, amely meghatározza, hogy az abból létrejövő objektumok milyen adatokat és műveleteket tartalmaznak.
-
-Röviden:
-
-- az osztály sablon
-- az objektum ennek példánya
-- az OOP egyik központi fogalma
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

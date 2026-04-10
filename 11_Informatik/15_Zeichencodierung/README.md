@@ -1,15 +1,5 @@
 # Zeichencodierung
 
-## Lényeg 30 másodpercben
-
-A **karakterkódolás** (`character encoding`) azt mondja meg, hogyan lesz a szövegből bájtsorozat, és fordítva.
-
-Röviden:
-
-- a számítógép nem "betűket", hanem biteket és bájtokat kezel
-- a kódolás szabályrendszer, amely megmondja, melyik bájt milyen karaktert jelent
-- a modern weben az ajánlott megoldás a `UTF-8`
-
 ## Gyors vizuális kép
 
 | Szint | Mit jelent? |

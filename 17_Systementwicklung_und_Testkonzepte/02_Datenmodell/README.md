@@ -1,15 +1,5 @@
 # Datenmodell
 
-## Lényeg 30 másodpercben
-
-Az **adatmodell** azt írja le, hogy milyen adatokat tárolunk, ezek hogyan kapcsolódnak egymáshoz, és milyen szabályok vonatkoznak rájuk.
-
-Röviden:
-
-- strukturálja az adatokat
-- kapcsolatokat mutat meg
-- alapja az adatbázis megvalósításának
-
 ## Gyors vizuális kép
 
 | Modell elem | Jelentés |

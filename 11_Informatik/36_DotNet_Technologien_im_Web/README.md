@@ -1,16 +1,5 @@
 # DotNet Technologien im Web
 
-## Lényeg 30 másodpercben
-
-A **.NET webes technológiák** a Microsoft ökoszisztémájához tartozó megoldások, amelyekkel backendeket, webalkalmazásokat és API-kat lehet fejleszteni.
-
-Fontos példák:
-
-- `ASP.NET Core`
-- Web API
-- `Blazor`
-- `SignalR`
-
 ## Gyors vizuális kép
 
 | Technológia | Szerep |

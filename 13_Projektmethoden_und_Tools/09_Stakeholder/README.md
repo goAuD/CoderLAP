@@ -1,15 +1,5 @@
 # Stakeholder
 
-## Lényeg 30 másodpercben
-
-A **stakeholder** minden olyan személy, csoport vagy szervezet, amely érintett a projektben, vagy hatással van rá, illetve rá is hat a projekt eredménye.
-
-Röviden:
-
-- nem csak a fejlesztőcsapat számít
-- az ügyfél, a megrendelő, a vezetőség és a felhasználó is stakeholder lehet
-- a stakeholdereket azonosítani és kezelni kell
-
 ## Gyors vizuális kép
 
 | Tipikus stakeholder | Miért fontos? |

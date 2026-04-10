@@ -1,15 +1,5 @@
 # Ideale Hoehe und Abstand
 
-## Lényeg 30 másodpercben
-
-A monitor ideális magassága és távolsága nem teljesen ugyanaz minden embernél, de vannak jó alapelvek.
-
-Fontos:
-
-- a tekintet enyhén lefelé irányuljon
-- a felső információs sor ne legyen a szemmagasság fölött
-- a monitor legyen inkább minél távolabb, amennyire még kényelmesen olvasható
-
 ## Gyors vizuális kép
 
 | Szempont | Jó irány |

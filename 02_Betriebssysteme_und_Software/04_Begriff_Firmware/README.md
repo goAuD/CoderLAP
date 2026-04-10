@@ -1,23 +1,5 @@
 # Begriff Firmware
 
-## Lényeg 30 másodpercben
-
-A **firmware** olyan szoftver, amely közvetlenül egy hardvereszközön van tárolva, és annak alapműködését vezérli.
-
-Tipikus példák:
-
-- `BIOS` / `UEFI`
-- router firmware
-- SSD firmware
-- nyomtató firmware
-- billentyűzet vagy egér belső vezérlőszoftvere
-
-Egyszerűen:
-
-- **hardver** = fizikai eszköz
-- **firmware** = az eszközbe beágyazott vezérlőszoftver
-- **alkalmazás** = a felhasználó által indított program
-
 ## Gyors vizuális kép
 
 | Fogalom | Mi ez? | Példa |

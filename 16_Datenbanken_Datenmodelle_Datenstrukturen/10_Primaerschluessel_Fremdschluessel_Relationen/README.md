@@ -1,15 +1,5 @@
 # Primaerschluessel, Fremdschluessel, Relationen
 
-## Lényeg 30 másodpercben
-
-Az elsődleges kulcs (`PRIMARY KEY`) egy rekord egyedi azonosítója, az idegen kulcs (`FOREIGN KEY`) pedig másik tábla rekordjához kapcsol.
-
-Röviden:
-
-- `PRIMARY KEY`: egyedi azonosítás
-- `FOREIGN KEY`: kapcsolatok létrehozása
-- reláció: táblák közti kapcsolat
-
 ## Gyors vizuális kép
 
 | Fogalom | Szerep |

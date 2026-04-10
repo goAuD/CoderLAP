@@ -1,15 +1,5 @@
 # QR-Code Pruefung und Tools
 
-## Lényeg 30 másodpercben
-
-A feladat utolsó része nem a QR generálása, hanem annak **ellenőrzése** is.
-
-Röviden:
-
-- a QR-t le kell tudni olvasni
-- ellenőrizni kell, hogy tényleg `Richtig` vagy `Falsch` van benne
-- a PDF ehhez konkrét desktop toolt is javasol
-
 ## Gyors vizuális kép
 
 ```text

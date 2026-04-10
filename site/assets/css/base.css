@@ -344,9 +344,7 @@ td {
 }
 
 /* ── Table horizontal scroll wrapper ── */
-.topic-article table,
-.legal-article table {
-  display: block;
+.table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
@@ -354,38 +352,16 @@ td {
   scrollbar-color: rgba(95, 167, 162, 0.35) transparent;
 }
 
-.topic-article table::-webkit-scrollbar,
-.legal-article table::-webkit-scrollbar {
+.table-wrap::-webkit-scrollbar {
   height: 0.45rem;
 }
 
-.topic-article table::-webkit-scrollbar-thumb,
-.legal-article table::-webkit-scrollbar-thumb {
+.table-wrap::-webkit-scrollbar-thumb {
   background: rgba(95, 167, 162, 0.35);
   border-radius: 999px;
 }
 
-/* Fade hint on right edge when table overflows */
-.topic-article .table-scroll-wrap,
-.legal-article .table-scroll-wrap {
+/* Fade hint on right edge when table overflows (future JS hook) */
+.table-wrap {
   position: relative;
-}
-
-.topic-article .table-scroll-wrap::after,
-.legal-article .table-scroll-wrap::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 2rem;
-  background: linear-gradient(to right, transparent, rgba(21, 24, 28, 0.6));
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.topic-article .table-scroll-wrap.has-overflow::after,
-.legal-article .table-scroll-wrap.has-overflow::after {
-  opacity: 1;
 }

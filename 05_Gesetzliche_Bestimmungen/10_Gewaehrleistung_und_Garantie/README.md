@@ -1,24 +1,5 @@
 # Gewaehrleistung und Garantie
 
-## Lényeg 30 másodpercben
-
-A **Gewährleistung** és a **Garantie** nem ugyanaz.
-
-### Gewährleistung
-
-- törvényen alapuló hibás teljesítési felelősség
-- a vevőnek jogai vannak, ha a teljesítés hibás
-
-### Garantie
-
-- önként vállalt pluszígéret
-- általában gyártó vagy eladó adja
-
-Röviden:
-
-- **Gewährleistung = jogszabályon alapul**
-- **Garantie = önkéntes pluszvállalás**
-
 ## Gyors vizuális kép
 
 | Fogalom | Kötelező? | Ki adja? | Mire vonatkozik? |

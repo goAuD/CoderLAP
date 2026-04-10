@@ -1,18 +1,5 @@
 # Grundlegende Datenbankoperationen
 
-## Lényeg 30 másodpercben
-
-Az alapvető adatbázis-műveletek a létrehozás, lekérdezés, módosítás és törlés köré épülnek.
-
-Röviden:
-
-- `SELECT`: lekérdezés
-- `INSERT`: beszúrás
-- `UPDATE`: módosítás
-- `DELETE`: törlés
-
-Sokszor ezt együtt `CRUD`-ként is emlegetik.
-
 ## Gyors vizuális kép
 
 | Művelet | Jelentés |

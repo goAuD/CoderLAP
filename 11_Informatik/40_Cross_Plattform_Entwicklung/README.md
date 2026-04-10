@@ -1,14 +1,5 @@
 # Cross Plattform Entwicklung
 
-## Lényeg 30 másodpercben
-
-A **cross-platform fejlesztés** azt jelenti, hogy ugyanazzal a kódbázissal vagy annak nagy részével több platformra készítünk alkalmazást.
-
-Példák:
-
-- Android + iOS
-- web + desktop + mobil
-
 ## Gyors vizuális kép
 
 | Megközelítés | Lényege |

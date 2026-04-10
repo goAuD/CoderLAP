@@ -1,19 +1,5 @@
 # Gigabyte, Terabyte, Petabyte, Exabyte
 
-## Lényeg 30 másodpercben
-
-A **gigabyte**, **terabyte**, **petabyte** és **exabyte** a **byte** nagyobb, **tízes alapú** mértékegységei.
-
-Ebben a témában:
-
-- `1 GB = 10^9 B = 1 000 000 000 byte`
-- `1 TB = 10^12 B = 1 000 000 000 000 byte`
-- `1 PB = 10^15 B = 1 000 000 000 000 000 byte`
-- `1 EB = 10^18 B = 1 000 000 000 000 000 000 byte`
-
-Ezek **SI-prefixekre** épülnek, tehát **decimális** egységek.  
-Nem ugyanazok, mint a **GiB**, **TiB**, **PiB**, **EiB** bináris egységek.
-
 ## Gyors vizuális kép
 
 | Egység | Jelölés | Szorzó | Byte-ban |

@@ -1,22 +1,5 @@
 # Standards ANSI ISO IEEE
 
-## Lényeg 30 másodpercben
-
-Az **ANSI**, **ISO** és **IEEE** nem konkrét technológiák, hanem szabványosítással kapcsolatos szervezetek vagy szabványosítási keretek.
-
-Röviden:
-
-- `ANSI` = amerikai szabványosítási koordináció
-- `ISO` = nemzetközi szabványosítás
-- `IEEE` = főleg műszaki, villamosmérnöki és informatikai szabványok
-
-A szabványok célja:
-
-- kompatibilitás
-- minőség
-- biztonság
-- egységes működés
-
 ## Gyors vizuális kép
 
 | Rövidítés | Név | Fő szerep |

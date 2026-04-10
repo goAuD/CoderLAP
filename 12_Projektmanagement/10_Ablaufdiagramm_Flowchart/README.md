@@ -1,15 +1,5 @@
 # Ablaufdiagramm Flowchart
 
-## Lényeg 30 másodpercben
-
-A **flowchart** vagy **folyamatábra** egy folyamat, algoritmus vagy munkamenet lépéseit mutatja meg **szimbólumokkal és nyilakkal**.
-
-Röviden:
-
-- megmutatja a folyamat sorrendjét
-- döntési pontokat is jelöl
-- könnyen áttekinthető vizuális forma
-
 ## Gyors vizuális kép
 
 | Szimbólum | Tipikus jelentés |

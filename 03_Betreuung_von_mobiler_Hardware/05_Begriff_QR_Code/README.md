@@ -1,25 +1,5 @@
 # Begriff QR-Code
 
-## Lényeg 30 másodpercben
-
-A **QR-kód** egy kétdimenziós (`2D`) vonalkód.
-
-Fő jellemzői:
-
-- sok adatot tud kis helyen tárolni
-- gyorsan olvasható
-- több irányból is beolvasható
-- bizonyos mértékű sérülést is tolerál
-
-A QR-kódot ma gyakran használják:
-
-- linkekhez
-- fizetéshez
-- jegyekhez
-- azonosításhoz
-- bejelentkezéshez
-- információmegosztáshoz
-
 ## Gyors vizuális kép
 
 | Jellemző | Mit jelent? |

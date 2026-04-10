@@ -1,15 +1,5 @@
 # Sperrtabelle und Sperrverhalten
 
-## Lényeg 30 másodpercben
-
-A zárolás (`locking`) célja, hogy több felhasználó egyidejű munkája mellett se sérüljön az adatkonzisztencia.
-
-Röviden:
-
-- bizonyos műveletek ideiglenesen zárolnak adatokat
-- így elkerülhető az ütközés
-- de túl sok vagy rossz zárolás várakozást és holtpontot okozhat
-
 ## Gyors vizuális kép
 
 | Jelenség | Mit jelent? |
