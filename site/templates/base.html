@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset_prefix }}/css/components.css">
     <link rel="stylesheet" href="{{ asset_prefix }}/css/print.css" media="print">
   </head>
-  <body class="{{ body_class }}">
+  <body class="{{ body_class }}"{% if topic is defined and topic %} data-topic-id="{{ topic.id }}"{% endif %}>
     <div class="site-shell">
       <a class="skip-link" href="#main-content">Skip to content</a>
       <header class="site-topbar">

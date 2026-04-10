@@ -465,3 +465,87 @@
     width: 100%;
   }
 }
+
+/* ── Progress indicators ─────────────────────────────────────────── */
+
+/* Card: viewed → dimmed text */
+.topic-card--viewed .topic-card__link {
+  color: var(--color-text-muted);
+}
+
+.topic-card--viewed .topic-card__meta {
+  color: var(--color-text-muted);
+}
+
+.topic-card--viewed {
+  border-left-color: rgba(201, 209, 217, 0.18);
+}
+
+/* Card: done → gold dot + dimmed text */
+.topic-card--done .topic-card__link {
+  color: var(--color-text-muted);
+}
+
+.topic-card--done .topic-card__meta {
+  color: var(--color-text-muted);
+}
+
+.topic-card--done {
+  border-left-color: var(--color-progress);
+}
+
+.topic-card--done .topic-card__meta::before {
+  content: "✓ ";
+  color: var(--color-progress);
+}
+
+/* Sidebar: viewed → dimmed */
+.sidebar-group__link--viewed {
+  color: var(--color-text-muted);
+}
+
+.sidebar-group__link--viewed::before {
+  color: var(--color-text-muted);
+}
+
+/* Sidebar: done → gold dot */
+.sidebar-group__link--done {
+  color: var(--color-text-muted);
+}
+
+.sidebar-group__link--done::before {
+  content: "✓";
+  color: var(--color-progress);
+}
+
+/* Topic done button */
+.topic-done-btn {
+  border-color: rgba(200, 180, 90, 0.25);
+}
+
+.topic-done-btn:hover,
+.topic-done-btn:focus-visible {
+  border-color: rgba(200, 180, 90, 0.5);
+  background: var(--color-progress-soft);
+}
+
+.topic-done-btn--active {
+  border-color: rgba(200, 180, 90, 0.4);
+  background: var(--color-progress-soft);
+  color: var(--color-progress);
+}
+
+.topic-done-btn--active:hover,
+.topic-done-btn--active:focus-visible {
+  border-color: rgba(200, 180, 90, 0.6);
+}
+
+/* Hero progress counter */
+.hero-progress {
+  margin: 0;
+  color: var(--color-progress);
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
