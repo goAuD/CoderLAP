@@ -113,6 +113,12 @@ body.sidebar-open {
   overflow: hidden;
 }
 
+body.sidebar-open .hero-panel,
+body.sidebar-open .catalog-main {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 body.sidebar-open .catalog-sidebar__toggle {
   display: none;
 }
