@@ -1,11 +1,5 @@
 # Projektauftrag
 
-## Lényeg 30 másodpercben
-
-A **Projektauftrag** az a dokumentum, amely hivatalosan rögzíti, hogy **miért indul a projekt, mi a célja, és milyen keretek között történik**.
-
-Nem teljes részletességű projektterv, hanem induló alapdokumentum.
-
 ## Gyors vizuális kép
 
 | Kérdés | Projektauftrag válasza |

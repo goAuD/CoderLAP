@@ -1,13 +1,5 @@
 # Weblog Webshop Webplattform
 
-## Lényeg 30 másodpercben
-
-Ez a három fogalom három különböző webes célterületet jelöl.
-
-- `Weblog` = rendszeresen frissülő bejegyzésalapú oldal
-- `Webshop` = online értékesítési felület
-- `Webplattform` = több szereplőt vagy funkciót összekapcsoló webes rendszer
-
 ## Gyors vizuális kép
 
 | Típus | Fő cél | Példa |

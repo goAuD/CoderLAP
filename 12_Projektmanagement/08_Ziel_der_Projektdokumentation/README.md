@@ -1,16 +1,5 @@
 # Ziel der Projektdokumentation
 
-## Lényeg 30 másodpercben
-
-A **projektdokumentáció** célja, hogy a projekt lényeges információi **érthetően, visszakereshetően és egységesen** rögzítve legyenek.
-
-Röviden:
-
-- átláthatóság
-- nyomon követhetőség
-- tudásmegőrzés
-- kommunikáció
-
 ## Gyors vizuális kép
 
 | Cél | Mit segít? |

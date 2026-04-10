@@ -1,22 +1,5 @@
 # Desktop Betriebssysteme
 
-## Lényeg 30 másodpercben
-
-A **desktop operációs rendszer** olyan operációs rendszer, amelyet elsősorban:
-
-- asztali gépekre
-- laptopokra
-- általános felhasználói munkára
-
-terveztek.
-
-Tipikus desktop operációs rendszerek:
-
-- **Windows**
-- **macOS**
-- **Linux desktop disztribúciók**
-- bizonyos helyzetekben **ChromeOS**
-
 ## Gyors vizuális kép
 
 | Rendszer | Tipikus környezet | Jellemző |

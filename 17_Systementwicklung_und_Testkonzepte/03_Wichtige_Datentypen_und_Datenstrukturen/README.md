@@ -1,15 +1,5 @@
 # Wichtige Datentypen und Datenstrukturen
 
-## Lényeg 30 másodpercben
-
-Az adattípus megmondja, milyen jellegű adatot kezelünk, az adatszerkezet pedig azt, hogyan rendezzük és tároljuk ezeket az adatokat.
-
-Röviden:
-
-- adattípus: az adat fajtája
-- adatszerkezet: az adatok szervezett formája
-- mindkettő fontos a jó programtervezéshez
-
 ## Gyors vizuális kép
 
 | Fogalom | Példa |

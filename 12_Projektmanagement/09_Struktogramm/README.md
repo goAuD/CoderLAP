@@ -1,18 +1,5 @@
 # Struktogramm
 
-## Lényeg 30 másodpercben
-
-A **struktogramm** egy algoritmus vagy folyamat **strukturált, dobozos ábrázolása**.
-
-Más néven:
-
-- `Nassi-Shneiderman diagram`
-
-Röviden:
-
-- egymás alá és egymásba rendezett blokkokkal mutatja a logikát
-- jól használható szekvencia, elágazás és ciklus megjelenítésére
-
 ## Gyors vizuális kép
 
 | Elem | Mit mutat? |

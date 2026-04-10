@@ -1,17 +1,5 @@
 # Datenschutzbeauftragter
 
-## Lényeg 30 másodpercben
-
-A **Datenschutzbeauftragter** magyarul adatvédelmi tisztviselő vagy adatvédelmi felelős.
-
-Feladata:
-
-- figyelni az adatvédelmi szabályok betartását
-- tanácsot adni
-- kapcsolattartóként működni a hatóság és a szervezet között
-
-Nem minden cégnek kötelező kijelölni, de bizonyos esetekben igen.
-
 ## Gyors vizuális kép
 
 | Kérdés | Rövid válasz |

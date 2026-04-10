@@ -1,18 +1,5 @@
 # Multitasking Betriebssystem
 
-## Lényeg 30 másodpercben
-
-A **multitasking operációs rendszer** képes több feladatot vagy folyamatot úgy kezelni, hogy a felhasználó számára azok egyszerre futónak tűnnek.
-
-Például egyszerre lehet:
-
-- böngészni
-- zenét hallgatni
-- fájlt másolni
-- üzenetet írni
-
-A modern operációs rendszerek tipikusan multitasking rendszerek.
-
 ## Gyors vizuális kép
 
 | Helyzet | Mit csinál a multitasking OS? |

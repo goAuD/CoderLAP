@@ -1,14 +1,5 @@
 # CI CD Vorgaben
 
-## Lényeg 30 másodpercben
-
-A **CI/CD Vorgaben** olyan szabályokat és elvárásokat jelentenek, amelyek meghatározzák, hogyan fusson biztonságosan és megbízhatóan a build, teszt, release és deployment folyamat.
-
-Röviden:
-
-- ne csak pipeline legyen
-- legyenek hozzá szabályok is
-
 ## Gyors vizuális kép
 
 | Elvárás | Miért kell? |

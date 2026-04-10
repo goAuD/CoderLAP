@@ -1,18 +1,5 @@
 # Bildschirmpausen
 
-## Lényeg 30 másodpercben
-
-Ausztriában a képernyős munkára külön szabályok vonatkoznak.
-
-Az egyik legismertebb szabály:
-
-- **50 perc megszakítás nélküli képernyőmunka után legalább 10 perc szünetet vagy tevékenységváltást kell biztosítani**
-
-Fontos:
-
-- nem csak "igazi szünet" lehet
-- megfelelő tevékenységváltás is elfogadható, ha csökkenti a képernyőterhelést
-
 ## Gyors vizuális kép
 
 | Helyzet | Mi kell? |

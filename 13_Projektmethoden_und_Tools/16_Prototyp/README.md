@@ -1,15 +1,5 @@
 # Prototyp
 
-## Lényeg 30 másodpercben
-
-A **prototípus** a rendszer vagy felület korai mintája, amellyel ötleteket, működést vagy felhasználói folyamatokat lehet kipróbálni.
-
-Röviden:
-
-- még nem a végleges termék
-- segít korán visszajelzést kapni
-- csökkentheti a félreértéseket
-
 ## Gyors vizuális kép
 
 | Típus | Jellemző |

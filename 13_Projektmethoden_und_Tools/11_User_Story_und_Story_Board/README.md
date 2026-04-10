@@ -1,16 +1,5 @@
 # User Story und Story Board
 
-## Lényeg 30 másodpercben
-
-A **user story** röviden leírja, hogy egy felhasználó mit szeretne és miért.  
-A **story board** ezt vizuálisan mutatja meg képekben, lépésekben vagy jelenetekben.
-
-Röviden:
-
-- a user story szöveges
-- a story board vizuális
-- együtt segítik a közös megértést
-
 ## Gyors vizuális kép
 
 | Eszköz | Mire jó? |

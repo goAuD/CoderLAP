@@ -1,15 +1,5 @@
 # Vererbungsprinzip
 
-## Lényeg 30 másodpercben
-
-Az **öröklés** (`inheritance`) azt jelenti, hogy egy osztály átvehet tulajdonságokat és viselkedést egy másik osztálytól.
-
-Röviden:
-
-- van szülő és leszármazott osztály
-- a közös részek újrafelhasználhatók
-- de túlhasználva bonyolulttá teheti a rendszert
-
 ## Gyors vizuális kép
 
 ```text

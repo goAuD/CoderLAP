@@ -1,25 +1,5 @@
 # Biometrische Daten Vor und Nachteile
 
-## Lényeg 30 másodpercben
-
-A **biometrikus adat** olyan személyes adat, amely fizikai vagy viselkedési jellemző alapján azonosít valakit.
-
-Példák:
-
-- ujjlenyomat
-- arckép / arcfelismerés
-- írisz
-- hangminta
-
-Előny:
-
-- kényelmes azonosítás
-
-Hátrány:
-
-- nagyon érzékeny adat
-- ha kompromittálódik, nem lehet úgy "lecserélni", mint egy jelszót
-
 ## Gyors vizuális kép
 
 | Előny | Hátrány |

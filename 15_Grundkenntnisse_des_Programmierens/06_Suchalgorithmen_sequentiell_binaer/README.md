@@ -1,14 +1,5 @@
 # Suchalgorithmen: sequentiell / binaer
 
-## Lényeg 30 másodpercben
-
-A szekvenciális keresés egyesével halad végig az elemeken, a bináris keresés pedig mindig megfelezi a keresési tartományt.
-
-Röviden:
-
-- szekvenciális keresés: egyszerű, de lassabb
-- bináris keresés: gyorsabb, de rendezett adatok kellenek hozzá
-
 ## Gyors vizuális kép
 
 | Algoritmus | Feltétel | Jellemző időigény |

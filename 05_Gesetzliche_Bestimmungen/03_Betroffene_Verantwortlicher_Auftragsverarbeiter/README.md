@@ -1,19 +1,5 @@
 # Betroffene Personen, Verantwortlicher, Auftragsverarbeiter
 
-## Lényeg 30 másodpercben
-
-Három alapfogalom a GDPR-ban:
-
-- **betroffene Person** = érintett
-- **Verantwortlicher** = adatkezelő
-- **Auftragsverarbeiter** = adatfeldolgozó
-
-Egyszerűen:
-
-- érintett: akinek az adatairól szó van
-- adatkezelő: aki eldönti, miért és hogyan kezelik az adatot
-- adatfeldolgozó: aki az adatkezelő nevében dolgozik az adatokkal
-
 ## Gyors vizuális kép
 
 | Fogalom | Kicsoda? |

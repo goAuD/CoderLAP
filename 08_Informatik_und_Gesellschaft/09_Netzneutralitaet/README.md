@@ -1,14 +1,5 @@
 # Netzneutralitaet
 
-## Lényeg 30 másodpercben
-
-A **net neutrality** azt jelenti, hogy az internetszolgáltató a forgalmat alapvetően egyenlően kezelje.
-
-Egyszerűen:
-
-- ne gyorsítson vagy lassítson önkényesen bizonyos tartalmat
-- ne részesítsen előnyben egyes szolgáltatásokat csak üzleti érdekből
-
 ## Gyors vizuális kép
 
 | Elv | Mit jelent? |

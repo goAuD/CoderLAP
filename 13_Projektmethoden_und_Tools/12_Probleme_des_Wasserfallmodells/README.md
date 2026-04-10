@@ -1,15 +1,5 @@
 # Probleme des Wasserfallmodells
 
-## Lényeg 30 másodpercben
-
-A vízesésmodell fő problémája, hogy **merev és nehezen reagál a változásokra**.
-
-Röviden:
-
-- a fázisok egymás után következnek
-- a visszalépés nehézkes
-- a hibák és félreértések sokszor későn derülnek ki
-
 ## Gyors vizuális kép
 
 | Tipikus probléma | Miért gond? |

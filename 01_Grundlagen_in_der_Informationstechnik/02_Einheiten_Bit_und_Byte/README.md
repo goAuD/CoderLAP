@@ -1,18 +1,5 @@
 # Einheiten Bit und Byte
 
-## Lényeg 30 másodpercben
-
-A **bit** a digitális információ legkisebb egysége.  
-Értéke csak kétféle lehet: **`0`** vagy **`1`**.
-
-A **byte** általában **8 bitből** áll.  
-Ez azt jelenti, hogy **1 byte = 8 bit**, és egy byte összesen **256 különböző értéket** tud felvenni (`2^8 = 256`).
-
-Gyakorlatban:
-
-- a **bit** gyakran adatátviteli sebességnél jelenik meg
-- a **byte** inkább fájlméretnél, memóriánál és tárhelynél
-
 ## Gyors vizuális kép
 
 | Egység | Jelölés | Mit jelent? | Lehetséges értékek |

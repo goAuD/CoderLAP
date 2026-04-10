@@ -1,17 +1,5 @@
 # PHP Zugriff auf MySQL
 
-## Lényeg 30 másodpercben
-
-A **PHP hozzáférés MySQL-hez** azt jelenti, hogy a PHP-kód adatbázis-kapcsolatot nyit, SQL-lekérdezéseket futtat, és az eredményt feldolgozza.
-
-Röviden:
-
-- kapcsolat létrehozása
-- lekérdezés futtatása
-- eredmény feldolgozása
-- hibakezelés
-- biztonságos paraméterezés
-
 ## Gyors vizuális kép
 
 | Lépés | Mit csinálunk? |

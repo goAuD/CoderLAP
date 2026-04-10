@@ -1,15 +1,5 @@
 # Gueltigkeitspruefung der SV-Nummer
 
-## Lényeg 30 másodpercben
-
-Itt az osztrák `SV`-szám (`Sozialversicherungsnummer`) helyességét kell ellenőrizni.
-
-Röviden:
-
-- `10` számjegy
-- a `4.` számjegy Prüfziffer
-- a többi rész alapján számolható és ellenőrizhető
-
 ## Gyors vizuális kép
 
 ```text

@@ -1,22 +1,5 @@
 # Umwandlung zwischen Binär-, Dezimal- und Hexadezimalzahlen
 
-## Lényeg 30 másodpercben
-
-Az informatikában nagyon fontos tudni átváltani:
-
-- **bináris** (`2-es alap`)
-- **decimális** (`10-es alap`)
-- **hexadecimális** (`16-os alap`)
-
-A legfontosabb szabályok:
-
-- bináris → decimális: `2` hatványok összege
-- decimális → bináris: folyamatos osztás `2`-vel
-- bináris → hexadecimális: csoportosítás `4` bitenként
-- hexadecimális → bináris: minden hexaszámjegyhez `4` bit
-- decimális → hexadecimális: folyamatos osztás `16`-tal
-- hexadecimális → decimális: `16` hatványok összege
-
 ## Gyors vizuális kép
 
 | Számrendszer | Alap | Jellegzetes jelek |

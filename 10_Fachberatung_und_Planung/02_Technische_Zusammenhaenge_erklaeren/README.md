@@ -1,17 +1,5 @@
 # Technische Zusammenhaenge erklaeren
 
-## Lényeg 30 másodpercben
-
-Technikai összefüggést jól elmagyarázni azt jelenti, hogy:
-
-- szakmailag pontos maradsz
-- de a hallgató szintjéhez igazítod a magyarázatot
-
-Röviden:
-
-- ne butítsd le hamisra
-- de ne is öntsd nyakon zsargonnal az ügyfelet
-
 ## Gyors vizuális kép
 
 | Jó magyarázat | Rossz magyarázat |

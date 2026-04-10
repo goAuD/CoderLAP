@@ -1,21 +1,5 @@
 # Inhalt einer technischen Dokumentation
 
-## Lényeg 30 másodpercben
-
-A **technikai dokumentáció** célja, hogy egy rendszerrel, alkalmazással vagy műszaki folyamattal kapcsolatos információkat érthetően és használhatóan rögzítsen.
-
-Egy jó technikai dokumentáció tipikusan tartalmazza:
-
-- célt és hatókört
-- célcsoportot
-- előfeltételeket
-- rendszerleírást
-- telepítési vagy használati lépéseket
-- konfigurációt
-- hibakezelést / troubleshootingot
-- változat- és verzióinformációt
-- kapcsolódó hivatkozásokat
-
 ## Gyors vizuális kép
 
 | Rész | Mire válaszol? |

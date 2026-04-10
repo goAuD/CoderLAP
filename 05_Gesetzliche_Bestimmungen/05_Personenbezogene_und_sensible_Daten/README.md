@@ -1,29 +1,5 @@
 # Personenbezogene und sensible Daten
 
-## Lényeg 30 másodpercben
-
-A **személyes adat** minden olyan információ, amely egy azonosított vagy azonosítható természetes személyre vonatkozik.
-
-Példák:
-
-- név
-- e-mail-cím
-- telefonszám
-- IP-cím
-- ügyfélszám
-- helyadat
-
-A hétköznapi "szenzitív" vagy "sensible" adat kifejezés helyett a GDPR pontosabban ezt használja:
-
-- **különleges kategóriájú személyes adatok**
-
-Ilyen például:
-
-- egészségügyi adat
-- biometrikus adat az egyedi azonosításhoz
-- vallási meggyőződés
-- politikai vélemény
-
 ## Gyors vizuális kép
 
 | Adattípus | Példa | Védelmi szint |

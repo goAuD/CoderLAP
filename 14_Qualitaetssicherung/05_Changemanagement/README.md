@@ -1,15 +1,5 @@
 # Changemanagement
 
-## Lényeg 30 másodpercben
-
-A **changemanagement** azt jelenti, hogy a rendszereket érintő változtatásokat **kontrollált módon** tervezzük, értékeljük, jóváhagyjuk és vezetjük be.
-
-Röviden:
-
-- ne történjen kaotikus változtatás
-- csökkenjen a kockázat
-- stabil maradjon a szolgáltatás
-
 ## Gyors vizuális kép
 
 ```text

@@ -1,16 +1,5 @@
 # Sicherungsmethoden
 
-## Lényeg 30 másodpercben
-
-Az adatbázisoknál a mentési módszerek célja, hogy adatvesztés vagy hiba után vissza lehessen állítani a rendszert.
-
-Röviden:
-
-- teljes mentés
-- inkrementális vagy differenciális mentés
-- logikai mentés és fizikai mentés
-- helyreállítási terv nélkül a backup önmagában kevés
-
 ## Gyors vizuális kép
 
 | Mentéstípus | Jellemző |

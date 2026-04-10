@@ -1,16 +1,5 @@
 # Reaktive Programmierung
 
-## Lényeg 30 másodpercben
-
-A **reaktív programozás** olyan megközelítés, ahol a rendszer **eseményekre, adatfolyamokra és változásokra reagál**.
-
-Röviden:
-
-- nem csak lépésről lépésre fut
-- eseményeket és adatfolyamokat kezel
-- jól illik aszinkron rendszerekhez
-- segít skálázhatóbb és rugalmasabb megoldásokat építeni
-
 ## Gyors vizuális kép
 
 | Klasszikus szemlélet | Reaktív szemlélet |

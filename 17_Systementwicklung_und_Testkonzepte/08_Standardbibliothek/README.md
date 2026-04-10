@@ -1,15 +1,5 @@
 # Standardbibliothek
 
-## Lényeg 30 másodpercben
-
-A **standard library** olyan előre elkészített, a nyelvhez vagy platformhoz tartozó függvények, osztályok és modulok gyűjteménye, amelyeket a fejlesztő újra felhasználhat.
-
-Röviden:
-
-- nem kell mindent nulláról megírni
-- közös, megbízható alapot ad
-- gyorsabbá teszi a fejlesztést
-
 ## Gyors vizuális kép
 
 | Standard library rész | Példa |

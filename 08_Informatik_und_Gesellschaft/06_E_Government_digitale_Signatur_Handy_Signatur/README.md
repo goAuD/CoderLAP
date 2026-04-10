@@ -1,17 +1,5 @@
 # E Government digitale Signatur Handy Signatur
 
-## Lényeg 30 másodpercben
-
-Az **e-government** azt jelenti, hogy állami vagy hatósági ügyeket digitálisan lehet intézni.
-
-A **digitale Signatur** pedig elektronikus aláírás, amellyel bizonyos esetekben joghatású módon lehet digitális dokumentumot aláírni.
-
-Fontos osztrák pontosítás:
-
-- a korábbi **Handy-Signatur** már nem az aktuális rendszer
-- **2023. december 5.** óta a **ID Austria** váltotta fel
-- ez a jelenlegi hivatalos állapot **2026. április 8-án**
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

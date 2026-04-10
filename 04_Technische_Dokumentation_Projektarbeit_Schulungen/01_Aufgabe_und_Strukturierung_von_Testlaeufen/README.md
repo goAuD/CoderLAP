@@ -1,19 +1,5 @@
 # Aufgabe und Strukturierung von Testläufen
 
-## Lényeg 30 másodpercben
-
-A **tesztfutás** (`Testlauf`, `test run`) célja annak ellenőrzése, hogy egy rendszer, funkció vagy komponens a várt módon működik-e.
-
-Egy jól strukturált tesztfutásnál tipikusan megvan:
-
-- mit tesztelünk
-- milyen környezetben
-- milyen tesztesetek alapján
-- milyen adatokkal
-- mi a várt eredmény
-- mi lett a tényleges eredmény
-- mi a státusz
-
 ## Gyors vizuális kép
 
 | Elem | Mit jelent? |

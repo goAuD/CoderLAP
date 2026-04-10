@@ -1,22 +1,5 @@
 # HTTP und HTTPS
 
-## Lényeg 30 másodpercben
-
-A `HTTP` a web alap protokollja.
-
-Feladata:
-
-- kliens és szerver közötti kérés-válasz kommunikáció
-
-A `HTTPS` nem külön "másik web", hanem:
-
-- **HTTP TLS-sel védve**
-
-Röviden:
-
-- `HTTP` = titkosítás nélkül
-- `HTTPS` = titkosított, hitelesített kapcsolat
-
 ## Gyors vizuális kép
 
 | Protokoll | Port | Védelem |

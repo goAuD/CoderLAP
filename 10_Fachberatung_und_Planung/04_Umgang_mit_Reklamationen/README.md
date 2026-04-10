@@ -1,21 +1,5 @@
 # Umgang mit Reklamationen
 
-## Lényeg 30 másodpercben
-
-A reklamáció kezelése nem vita, hanem:
-
-- problémafelvétel
-- tisztázás
-- megoldáskeresés
-
-Jó alapelv:
-
-- hallgasd meg
-- maradj nyugodt
-- fogalmazz tisztán
-- dokumentálj
-- ígérj csak olyat, amit tényleg be tudsz tartani
-
 ## Gyors vizuális kép
 
 | Jó reakció | Rossz reakció |

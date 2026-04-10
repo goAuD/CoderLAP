@@ -1,15 +1,5 @@
 # Mobile Webseiten
 
-## Lényeg 30 másodpercben
-
-A **mobile website** olyan weboldal, amelyet kifejezetten telefonon és kisebb kijelzőn is jól használhatóra készítenek.
-
-Röviden:
-
-- mobil böngészőben is jól működik
-- könnyen olvasható és kezelhető kis kijelzőn
-- gyors és érintésbarát
-
 ## Gyors vizuális kép
 
 | Fontos szempont | Példa |

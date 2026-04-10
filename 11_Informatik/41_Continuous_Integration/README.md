@@ -1,16 +1,5 @@
 # Continuous Integration
 
-## Lényeg 30 másodpercben
-
-A **Continuous Integration** (`CI`) azt jelenti, hogy a fejlesztők gyakran integrálják a kódjukat a közös ágba, és ezt automatikus ellenőrzések kísérik.
-
-Röviden:
-
-- gyakori merge vagy integration
-- automatikus build
-- automatikus teszt
-- gyors visszajelzés
-
 ## Gyors vizuális kép
 
 | Lépés | Mi történik? |

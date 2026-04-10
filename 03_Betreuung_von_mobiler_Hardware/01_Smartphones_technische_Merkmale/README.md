@@ -1,26 +1,5 @@
 # Smartphones technische Merkmale
 
-## Lényeg 30 másodpercben
-
-Egy **smartphone** olyan mobil eszköz, amely:
-
-- telefonálásra alkalmas
-- internetkapcsolattal rendelkezik
-- alkalmazásokat futtat
-- többféle szenzort és kommunikációs modult tartalmaz
-
-A legfontosabb technikai jellemzők:
-
-- kijelző
-- processzor / SoC
-- memória és tárhely
-- akkumulátor
-- kamera
-- mobil- és vezeték nélküli kapcsolatok
-- szenzorok
-- biometrikus azonosítás
-- operációs rendszer
-
 ## Gyors vizuális kép
 
 | Jellemző | Mit nézünk? |

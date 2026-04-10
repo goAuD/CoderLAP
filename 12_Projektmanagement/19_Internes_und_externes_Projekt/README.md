@@ -1,14 +1,5 @@
 # Internes und externes Projekt
 
-## Lényeg 30 másodpercben
-
-Az **internes Projekt** a szervezeten belüli célra készül, a **externes Projekt** pedig külső megrendelő, ügyfél vagy partner felé irányul.
-
-Röviden:
-
-- belső projekt: a saját szervezetért készül
-- külső projekt: külső fél számára készül
-
 ## Gyors vizuális kép
 
 | Típus | Kinek szól? | Példa |

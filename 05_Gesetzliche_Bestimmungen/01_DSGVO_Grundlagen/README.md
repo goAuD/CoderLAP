@@ -1,20 +1,5 @@
 # DSGVO Grundlagen
 
-## Lényeg 30 másodpercben
-
-A **DSGVO** a GDPR német neve: **Datenschutz-Grundverordnung**.
-
-Ez egy EU-rendelet, amely:
-
-- a személyes adatok kezelését szabályozza
-- közvetlenül alkalmazandó az EU-tagállamokban
-- Ausztriában is közvetlenül érvényes
-- az osztrák **DSG** (`Datenschutzgesetz`) egészíti ki nemzeti szinten
-
-Fontos dátum:
-
-- a GDPR **2018. május 25.** óta alkalmazandó
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

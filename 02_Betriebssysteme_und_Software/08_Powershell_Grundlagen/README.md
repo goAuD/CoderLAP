@@ -1,18 +1,5 @@
 # Powershell Grundlagen
 
-## Lényeg 30 másodpercben
-
-A **PowerShell** a Microsoft parancssori shellje és automatizálási környezete.
-
-Fő jellemzői:
-
-- parancssoros használat
-- objektum-alapú működés
-- adminisztrációra és automatizálásra is alkalmas
-- Windows mellett Linuxon és macOS-en is elérhető
-
-Vizsgán legalább az alapötletet és néhány egyszerű parancsot tudni kell.
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

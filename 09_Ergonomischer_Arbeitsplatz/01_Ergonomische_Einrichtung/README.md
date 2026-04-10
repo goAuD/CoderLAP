@@ -1,21 +1,5 @@
 # Ergonomische Einrichtung
 
-## Lényeg 30 másodpercben
-
-Az ergonomikus munkahely lényege:
-
-- a munkahely alkalmazkodjon az emberhez
-- ne az ember kényszerüljön rossz testtartásba a munkahely miatt
-
-Fő elemek:
-
-- megfelelő asztal
-- jó szék
-- jól elhelyezett monitor
-- külön billentyűzet és egér
-- elég hely a lábnak és a kéznek
-- megfelelő fényviszonyok
-
 ## Gyors vizuális kép
 
 | Elem | Mire figyelj? |

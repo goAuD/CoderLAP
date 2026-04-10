@@ -1,15 +1,5 @@
 # Programmspezifikation
 
-## Lényeg 30 másodpercben
-
-A **programspecifikáció** azt írja le, hogy a programnak **mit kell tudnia**, milyen szabályoknak kell megfelelnie, és milyen eredményt kell adnia.
-
-Röviden:
-
-- nem a konkrét kódot írja le
-- hanem az elvárt működést
-- közös alapot ad a fejlesztéshez és teszteléshez
-
 ## Gyors vizuális kép
 
 | Specifikáció része | Mit ír le? |

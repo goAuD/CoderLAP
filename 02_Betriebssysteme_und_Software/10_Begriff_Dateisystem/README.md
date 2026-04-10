@@ -1,19 +1,5 @@
 # Begriff Dateisystem
 
-## Lényeg 30 másodpercben
-
-A **fájlrendszer** (`Dateisystem`) az a mechanizmus vagy szabályrendszer, amely meghatározza, hogyan:
-
-- nevezzük el a fájlokat
-- tároljuk őket
-- rendezzük mappákba
-- érjük el őket
-
-Egyszerűen:
-
-- a háttértár önmagában csak nyers terület
-- a fájlrendszer teszi lehetővé, hogy azon értelmesen fájlokat és mappákat használjunk
-
 ## Gyors vizuális kép
 
 | Fogalom | Mit jelent? |

@@ -1,19 +1,5 @@
 # Dokumentationen eines Projektes
 
-## Lényeg 30 másodpercben
-
-Egy projektben többféle **dokumentum** keletkezik, nem csak egyetlen végső dokumentáció.
-
-Tipikus projekt-dokumentumok:
-
-- projektauftrag
-- követelménydokumentumok
-- projektterv
-- projektstrukturaterv
-- státuszriport
-- jegyzőkönyv
-- teszt- és átadási dokumentáció
-
 ## Gyors vizuális kép
 
 | Dokumentumtípus | Mire való? |

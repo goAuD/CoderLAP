@@ -1,15 +1,5 @@
 # Sortieralgorithmen: Bubblesort / Quicksort
 
-## Lényeg 30 másodpercben
-
-A `Bubble Sort` és a `Quick Sort` is rendezési algoritmus, de nagyon eltérő hatékonyságúak.
-
-Röviden:
-
-- `Bubble Sort`: egyszerű, de lassú
-- `Quick Sort`: általában sokkal gyorsabb
-- vizsgán fontos a működési elv és az alapvető összehasonlítás
-
 ## Gyors vizuális kép
 
 | Algoritmus | Alapelv | Tipikus teljesítmény |

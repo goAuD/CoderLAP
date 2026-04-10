@@ -1,17 +1,5 @@
 # Frame
 
-## Lényeg 30 másodpercben
-
-A **frame** fogalom a weben eredetileg olyan HTML-megoldást jelentett, ahol a böngészőablak több külön keretre oszlott.
-
-Ma viszont a gyakorlatban főleg az **`iframe`** fontos.
-
-Röviden:
-
-- a régi `frame` / `frameset` megoldás elavult
-- a modern weben inkább `iframe` használatos
-- az `iframe` egy másik HTML-oldalt ágyaz be az aktuális oldalba
-
 ## Gyors vizuális kép
 
 | Fogalom | Állapot | Mire való? |

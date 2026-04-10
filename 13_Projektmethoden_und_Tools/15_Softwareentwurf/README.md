@@ -1,15 +1,5 @@
 # Softwareentwurf
 
-## Lényeg 30 másodpercben
-
-A **szoftverterv** vagy **software design** azt írja le, hogyan fog megvalósulni a rendszer technikailag.
-
-Röviden:
-
-- a követelményekből technikai megoldás lesz
-- meg kell tervezni a felépítést, részeket és kapcsolódásokat
-- jó terv nélkül a fejlesztés nehezebben átlátható és karbantartható
-
 ## Gyors vizuális kép
 
 | Kérdés | Szoftverterv válasza |

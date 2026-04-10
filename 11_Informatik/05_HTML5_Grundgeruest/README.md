@@ -1,19 +1,5 @@
 # HTML5 Grundgeruest
 
-## Lényeg 30 másodpercben
-
-Az HTML5 alapváz az a minimális, helyes dokumentumszerkezet, amellyel egy modern weboldal indul.
-
-Tipikus elemei:
-
-- `<!doctype html>`
-- `<html>`
-- `<head>`
-- `<meta charset="utf-8">`
-- `<meta name="viewport" ...>`
-- `<title>`
-- `<body>`
-
 ## Gyors vizuális kép
 
 ```html

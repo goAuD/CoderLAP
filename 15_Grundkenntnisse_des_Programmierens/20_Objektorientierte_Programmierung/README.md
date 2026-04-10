@@ -1,15 +1,5 @@
 # Objektorientierte Programmierung
 
-## Lényeg 30 másodpercben
-
-Az objektumorientált programozás (`OOP`) olyan szemlélet, amelyben a rendszert objektumokkal modellezzük, amelyek állapotot és viselkedést is tartalmaznak.
-
-Röviden:
-
-- osztályok és objektumok köré épül
-- az adat és a művelet összetartozik
-- célja a jobb modellezhetőség és karbantarthatóság
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

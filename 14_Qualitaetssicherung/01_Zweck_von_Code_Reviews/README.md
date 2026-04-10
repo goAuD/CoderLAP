@@ -1,16 +1,5 @@
 # Zweck von Code Reviews
 
-## Lényeg 30 másodpercben
-
-A **code review** célja, hogy a kódot még beolvasztás vagy kiadás előtt egy másik ember is átnézze.
-
-Röviden:
-
-- hibákat lehet korán észrevenni
-- javítja a kód minőségét
-- segíti a tudásmegosztást a csapatban
-- csökkenti a rossz döntések vagy rejtett hibák esélyét
-
 ## Gyors vizuális kép
 
 | Cél | Mit ad? |

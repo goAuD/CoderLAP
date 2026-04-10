@@ -1,15 +1,5 @@
 # Variablenarten, Datentypen, Definitionen
 
-## Lényeg 30 másodpercben
-
-A változó egy névvel ellátott tároló vagy hivatkozás, az adattípus pedig megmondja, milyen jellegű adatot kezelünk és milyen műveletek értelmesek rajta.
-
-Röviden:
-
-- változó: hely / név egy értékhez
-- adattípus: az érték fajtája
-- definíciók: hogyan hozzuk létre és írjuk le ezeket
-
 ## Gyors vizuális kép
 
 | Fogalom | Jelentés |

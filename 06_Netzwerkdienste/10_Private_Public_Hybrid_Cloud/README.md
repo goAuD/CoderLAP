@@ -1,21 +1,5 @@
 # Private Public Hybrid Cloud
 
-## Lényeg 30 másodpercben
-
-A cloudnak több telepítési modellje van.
-
-Vizsgán a három legfontosabb:
-
-- `private cloud`
-- `public cloud`
-- `hybrid cloud`
-
-Röviden:
-
-- `private` = dedikáltabb, szervezeten belüli vagy dedikált környezet
-- `public` = nyilvános cloudszolgáltatónál igénybe vett erőforrás
-- `hybrid` = a kettő kombinációja
-
 ## Gyors vizuális kép
 
 | Modell | Lényeg |

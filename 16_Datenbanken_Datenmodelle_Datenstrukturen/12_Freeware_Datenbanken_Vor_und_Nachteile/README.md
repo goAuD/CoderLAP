@@ -1,15 +1,5 @@
 # Freeware-Datenbanken: Vor- und Nachteile
 
-## Lényeg 30 másodpercben
-
-A freeware vagy szabadon használható adatbázisok előnye, hogy olcsón vagy ingyenesen bevezethetők, de a választásnál figyelni kell a támogatásra, funkciókra és üzemeltetési igényre.
-
-Röviden:
-
-- alacsony belépési költség
-- sok jó technológia elérhető
-- de nem minden feladatra ugyanaz a legjobb
-
 ## Gyors vizuális kép
 
 | Példa | Jelleg |

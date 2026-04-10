@@ -1,15 +1,5 @@
 # Versionierung und Nutzen
 
-## Lényeg 30 másodpercben
-
-A **versionierung** itt nem a verziókezelő rendszert jelenti, hanem azt, hogy a szoftverkiadásoknak értelmes verziószámot adunk.
-
-Röviden:
-
-- látszik, melyik kiadásról van szó
-- követhető a változás mértéke
-- könnyebb a kompatibilitás és a hibakövetés
-
 ## Gyors vizuális kép
 
 | Verzió | Tipikus jelentés |
