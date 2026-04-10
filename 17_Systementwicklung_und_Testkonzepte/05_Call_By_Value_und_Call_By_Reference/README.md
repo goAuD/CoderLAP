@@ -1,15 +1,5 @@
 # Call By Value und Call By Reference
 
-## Lényeg 30 másodpercben
-
-A paraméterátadásnál az a kérdés, hogy a függvény **másolatot kap-e az értékről**, vagy **közvetlenebbül tudja módosítani az eredeti adatot**.
-
-Röviden:
-
-- `call by value`: másolatot kap
-- `call by reference`: hivatkozáson keresztül dolgozik
-- a pontos működés nyelvenként eltérhet
-
 ## Gyors vizuális kép
 
 | Mód | Mi történik? |

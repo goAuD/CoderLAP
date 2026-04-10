@@ -1,16 +1,5 @@
 # Coding Standards und Code Konventionen
 
-## Lényeg 30 másodpercben
-
-A **coding standard** és a **code convention** olyan szabályrendszer, amely egységesebbé teszi a kódot.
-
-Röviden:
-
-- hogyan nevezzünk el dolgokat
-- hogyan tördeljünk és formázzunk
-- milyen szerkezetet kövessünk
-- hogyan legyen olvasható és karbantartható a kód
-
 ## Gyors vizuális kép
 
 | Terület | Példa |

@@ -1,21 +1,5 @@
 # Aufstellungsort von Bildschirmen
 
-## Lényeg 30 másodpercben
-
-A monitor helye nem mindegy.
-
-A jó elhelyezés célja:
-
-- ne vakítson
-- ne tükröződjön
-- kényelmesen lehessen nézni
-- ne terhelje feleslegesen a szemet és a nyakat
-
-Fontos alapelv:
-
-- a monitor lehetőleg **blendfrei**, vagyis tükröződésmentes helyre kerüljön
-- gyakori ajánlás: a képernyő **90°-ban az ablakhoz** képest álljon
-
 ## Gyors vizuális kép
 
 | Rossz elhelyezés | Jó elhelyezés |

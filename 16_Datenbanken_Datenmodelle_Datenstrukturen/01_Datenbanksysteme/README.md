@@ -1,15 +1,5 @@
 # Datenbanksysteme
 
-## Lényeg 30 másodpercben
-
-Az **adatbázisrendszer** nem csak az adatokat jelenti, hanem az adatbázist, a kezelő szoftvert és a hozzá kapcsolódó alkalmazásokat együtt.
-
-Röviden:
-
-- adatbázis: maga a tárolt adat
-- `DBMS`: az a szoftver, ami kezeli
-- adatbázisrendszer: a teljes működő környezet
-
 ## Gyors vizuális kép
 
 | Elem | Szerep |

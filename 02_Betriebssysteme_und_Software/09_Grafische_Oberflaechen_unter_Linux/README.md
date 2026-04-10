@@ -1,21 +1,5 @@
 # Grafische Oberflaechen unter Linux
 
-## Lényeg 30 másodpercben
-
-Linux alatt a grafikus felületet általában **desktop environmentnek** vagy **asztali környezetnek** nevezzük.
-
-Gyakori példák:
-
-- **GNOME**
-- **KDE Plasma**
-- **Xfce**
-- **Cinnamon**
-
-Fontos:
-
-- a Linux nem egyetlen kötelező grafikus felületet használ
-- ugyanaz a Linux rendszer többféle felülettel is használható
-
 ## Gyors vizuális kép
 
 | Felület | Jellemző |

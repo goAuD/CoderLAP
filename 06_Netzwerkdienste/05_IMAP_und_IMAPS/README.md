@@ -1,19 +1,5 @@
 # IMAP und IMAPS
 
-## Lényeg 30 másodpercben
-
-Az `IMAP` egy levelezési protokoll a postafiók szerveroldali kezelésére és szinkronizálására.
-
-Ezért különösen jó:
-
-- több eszköz használatánál
-- szerveroldali mappáknál
-- olvasott / olvasatlan állapot szinkronjánál
-
-Az `IMAPS` ennek titkosított változata:
-
-- IMAP TLS-sel védve
-
 ## Gyors vizuális kép
 
 | Protokoll | Tipikus port | Fő cél |

@@ -1,15 +1,5 @@
 # Algorithmus
 
-## Lényeg 30 másodpercben
-
-Az **algoritmus** egy egyértelmű, lépésekre bontott megoldási eljárás.
-
-Röviden:
-
-- megmondja, hogyan oldunk meg egy problémát
-- ismételhető
-- nem csak számítógép, hanem ember is követheti
-
 ## Gyors vizuális kép
 
 ```text

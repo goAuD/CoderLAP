@@ -1,19 +1,5 @@
 # FTP und FTPS
 
-## Lényeg 30 másodpercben
-
-Az `FTP` fájlátviteli protokoll.
-
-Feladata:
-
-- fájlok fel- és letöltése kliens és szerver között
-
-Az alap `FTP` önmagában nem ad megfelelő modern titkosítást.
-
-Az `FTPS` azt jelenti:
-
-- FTP TLS-sel védve
-
 ## Gyors vizuális kép
 
 | Protokoll | Tipikus port | Védelem |

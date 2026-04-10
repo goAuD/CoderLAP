@@ -1,15 +1,5 @@
 # CMS
 
-## Lényeg 30 másodpercben
-
-A **CMS** (`Content Management System`) olyan rendszer, amellyel digitális tartalmak hozhatók létre, szerkeszthetők, tárolhatók és publikálhatók, tipikusan adatbázisra támaszkodva.
-
-Röviden:
-
-- tartalomkezelő rendszer
-- adminfelülettel dolgozik
-- sok esetben adatbázisban tárolja a tartalmat és beállításokat
-
 ## Gyors vizuális kép
 
 | Elem | Szerep |

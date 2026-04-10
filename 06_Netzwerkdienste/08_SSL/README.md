@@ -1,21 +1,5 @@
 # SSL
 
-## Lényeg 30 másodpercben
-
-Az `SSL` a `Secure Sockets Layer` rövidítése.
-
-Fontos:
-
-- történelmileg fontos volt
-- de ma már **elavult**
-- a modern megfelelője a **TLS**
-
-Ezért amikor hétköznapokban valaki "SSL tanúsítványt" mond, a gyakorlatban többnyire:
-
-- **TLS-tanúsítványra**
-
-gondol.
-
 ## Gyors vizuális kép
 
 | Fogalom | Mai helyzet |

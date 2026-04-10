@@ -1,20 +1,5 @@
 # Software Firewall
 
-## Lényeg 30 másodpercben
-
-A **software firewall** egy gépen futó tűzfal.
-
-Feladata:
-
-- szűri a hálózati forgalmat
-- enged vagy tilt kapcsolatokat szabályok alapján
-
-Egyszerűen:
-
-- nézi, mi jöhet be
-- nézi, mi mehet ki
-- csökkenti a jogosulatlan hozzáférés esélyét
-
 ## Gyors vizuális kép
 
 | Típus | Hol működik? |

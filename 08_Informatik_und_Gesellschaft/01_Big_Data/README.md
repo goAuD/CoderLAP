@@ -1,20 +1,5 @@
 # Big Data
 
-## Lényeg 30 másodpercben
-
-A **Big Data** nagy mennyiségű, gyorsan keletkező és sokféle forrásból származó adat kezelését és elemzését jelenti.
-
-Gyakran a `3V` modellel magyarázzák:
-
-- `Volume` = nagy adatmennyiség
-- `Velocity` = nagy sebességű adatkeletkezés
-- `Variety` = sokféle adat
-
-Sokszor még ezt is hozzáteszik:
-
-- `Veracity` = adatminőség / megbízhatóság
-- `Value` = az adatból kinyerhető érték
-
 ## Gyors vizuális kép
 
 | Jellemző | Jelentés |

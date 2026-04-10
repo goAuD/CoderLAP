@@ -1,16 +1,5 @@
 # Uebungsbeispiel
 
-## Lényeg 30 másodpercben
-
-Ez a blokk eltér az előző témáktól, mert itt nem csak elméleti fogalmakat kell tudni, hanem egy **konkrét, futó mintafeladatot** is ki kell dolgozni.
-
-A PDF alapján a gyakorlati feladat magja:
-
-- responsive HTML-form készítése
-- osztrák `SV-Nr` ellenőrzése
-- `QR`-kód generálása `Richtig` vagy `Falsch` tartalommal
-- a generált QR-kód ellenőrzése
-
 ## Gyors vizuális kép
 
 ```text

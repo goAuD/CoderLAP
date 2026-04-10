@@ -1,16 +1,5 @@
 # Java Technologien im Web
 
-## Lényeg 30 másodpercben
-
-A **Java webes technológiák** alatt főleg azokat a megoldásokat értjük, amelyekkel Java-alapon webalkalmazásokat és webes backendeket készítünk.
-
-Fontos példák:
-
-- `Servlet`
-- `JSP` történetileg
-- `Spring` / `Spring Boot`
-- `Jakarta EE`
-
 ## Gyors vizuális kép
 
 | Technológia | Szerep |

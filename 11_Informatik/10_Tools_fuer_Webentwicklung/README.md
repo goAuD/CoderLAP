@@ -1,18 +1,5 @@
 # Tools fuer Webentwicklung
 
-## Lényeg 30 másodpercben
-
-A webfejlesztéshez többféle **eszköz** kell, nem csak egy kódszerkesztő.
-
-A legfontosabb eszközcsoportok:
-
-- kódszerkesztő vagy IDE
-- böngésző és fejlesztői eszközök
-- verziókezelés
-- csomagkezelő
-- helyi fejlesztői környezet
-- hibakereső, linter, formatter
-
 ## Gyors vizuális kép
 
 | Eszközcsoport | Mire való? | Példa |

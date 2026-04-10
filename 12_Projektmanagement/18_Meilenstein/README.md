@@ -1,15 +1,5 @@
 # Meilenstein
 
-## Lényeg 30 másodpercben
-
-A **Meilenstein** (`mérföldkő`) egy fontos projektpont, amely egy jelentős állapot vagy eredmény elérését jelzi.
-
-Röviden:
-
-- nem hosszú feladat
-- inkább jelzőpont
-- mutatja, hogy egy fontos szakasz teljesült
-
 ## Gyors vizuális kép
 
 | Nem mérföldkő | Mérföldkő |

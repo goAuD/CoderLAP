@@ -1,16 +1,5 @@
 # Agile Softwareentwicklung
 
-## Lényeg 30 másodpercben
-
-Az **agilis szoftverfejlesztés** olyan szemlélet és munkamód, amely rövid ciklusokban, folyamatos visszajelzéssel és gyors alkalmazkodással dolgozik.
-
-Lényege:
-
-- kis lépésekben halad
-- gyakran szállít működő eredményt
-- figyel a változó igényekre
-- szorosabb együttműködést kíván
-
 ## Gyors vizuális kép
 
 | Klasszikus, merevebb modell | Agilis megközelítés |

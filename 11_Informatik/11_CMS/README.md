@@ -1,23 +1,5 @@
 # CMS
 
-## Lényeg 30 másodpercben
-
-A **CMS** (`Content Management System`) olyan rendszer, amellyel egy weboldal vagy más digitális tartalom **kódírás nélkül vagy minimális fejlesztéssel** kezelhető.
-
-Fő feladatai:
-
-- tartalom létrehozása
-- szerkesztése
-- tárolása
-- publikálása
-- felhasználók és jogosultságok kezelése
-
-Tipikus példák:
-
-- `WordPress`
-- `Drupal`
-- `Joomla`
-
 ## Gyors vizuális kép
 
 | Rész | Feladat |

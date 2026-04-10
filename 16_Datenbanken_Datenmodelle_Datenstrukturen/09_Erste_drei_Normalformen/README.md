@@ -1,15 +1,5 @@
 # Erste drei Normalformen
 
-## Lényeg 30 másodpercben
-
-Az első három normálforma célja, hogy az adatbázis szerkezete rendezettebb legyen, és csökkenjen a redundancia és az anomáliák esélye.
-
-Röviden:
-
-- `1NF`: egy mezőben egy érték
-- `2NF`: a nem kulcsmezők teljesen függjenek a teljes kulcstól
-- `3NF`: a nem kulcsmezők ne függjenek más nem kulcsmezőktől
-
 ## Gyors vizuális kép
 
 | Normálforma | Lényege |

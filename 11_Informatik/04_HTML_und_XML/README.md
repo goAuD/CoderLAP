@@ -1,17 +1,5 @@
 # HTML und XML
 
-## Lényeg 30 másodpercben
-
-Az `HTML` és az `XML` mindkettő markup language, de nem ugyanarra való.
-
-- `HTML` = weboldalak tartalmának és szerkezetének leírására
-- `XML` = adatok strukturált leírására és cseréjére
-
-Röviden:
-
-- `HTML` inkább megjeleníthető dokumentum
-- `XML` inkább adatszerkezet-leírás
-
 ## Gyors vizuális kép
 
 | Nyelv | Mire való? | Példa |

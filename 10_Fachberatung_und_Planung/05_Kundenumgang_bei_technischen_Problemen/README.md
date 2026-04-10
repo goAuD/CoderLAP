@@ -1,20 +1,5 @@
 # Kundenumgang bei technischen Problemen
 
-## Lényeg 30 másodpercben
-
-Technikai hiba esetén az ügyfélkezelés célja:
-
-- megérteni a problémát
-- megnyugtatni az ügyfelet
-- strukturáltan haladni a megoldás felé
-
-Röviden:
-
-- tisztázd a tünetet
-- ne bagatellizáld a gondot
-- mondd el, mi fog történni
-- tartsd az ügyfelet informálva
-
 ## Gyors vizuális kép
 
 | Jó hozzáállás | Rossz hozzáállás |

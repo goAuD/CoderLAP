@@ -1,17 +1,5 @@
 # Stack und Queue
 
-## Lényeg 30 másodpercben
-
-A **stack** és a **queue** két alapvető adatszerkezeti modell.
-
-- `stack` = verem
-- `queue` = sor
-
-Röviden:
-
-- a stack jellemzően `LIFO`
-- a queue jellemzően `FIFO`
-
 ## Gyors vizuális kép
 
 | Adatszerkezet | Működés | Alapműveletek |

@@ -1,16 +1,5 @@
 # Kopplungsverbot
 
-## Lényeg 30 másodpercben
-
-A **Kopplungsverbot** lényege:
-
-- a hozzájárulásnak szabadnak kell lennie
-- nem szabad valakit olyan adatkezeléshez "hozzákötni", ami a szolgáltatás teljesítéséhez nem szükséges
-
-Egyszerűen:
-
-- nem mondhatja egy cég azt, hogy "csak akkor használhatod a szolgáltatást, ha a reklámcélú adatkezeléshez is hozzájárulsz", ha ez a reklámkezelés nem szükséges a szolgáltatáshoz
-
 ## Gyors vizuális kép
 
 | Helyzet | Rendben van? |

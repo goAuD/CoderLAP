@@ -1,15 +1,5 @@
 # Rekursive Funktionen
 
-## Lényeg 30 másodpercben
-
-A **rekurzív függvény** olyan függvény, amely önmagát hívja meg.
-
-Röviden:
-
-- kisebb részproblémákra bontja a feladatot
-- kell hozzá kilépési feltétel
-- sokszor elegáns, de nem mindig ez a leghatékonyabb
-
 ## Gyors vizuális kép
 
 ```text

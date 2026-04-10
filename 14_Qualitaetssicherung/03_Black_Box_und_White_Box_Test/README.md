@@ -1,9 +1,5 @@
 # Black Box und White Box Test
 
-## Lényeg 30 másodpercben
-
-A **black-box teszt** a rendszer külső viselkedését nézi, a **white-box teszt** pedig a belső szerkezetet és kódlogikát is figyelembe veszi.
-
 ## Gyors vizuális kép
 
 | Teszttípus | Mire fókuszál? |

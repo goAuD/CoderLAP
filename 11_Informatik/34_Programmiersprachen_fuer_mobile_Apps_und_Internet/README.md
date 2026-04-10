@@ -1,14 +1,5 @@
 # Programmiersprachen fuer mobile Apps und Internet
 
-## Lényeg 30 másodpercben
-
-A mobilappok és internetes alkalmazások fejlesztéséhez **különböző nyelvek** használhatók attól függően, hogy:
-
-- natív mobilappot fejlesztünk
-- cross-platform appot építünk
-- webes frontendet készítünk
-- backend rendszert írunk
-
 ## Gyors vizuális kép
 
 | Terület | Tipikus nyelvek |

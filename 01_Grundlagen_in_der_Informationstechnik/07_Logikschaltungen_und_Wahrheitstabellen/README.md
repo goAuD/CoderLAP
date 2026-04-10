@@ -1,21 +1,5 @@
 # Logikschaltungen und Wahrheitstabellen
 
-## Lényeg 30 másodpercben
-
-A logikai kapcsolások digitális jelekkel dolgoznak, vagyis a bemenet és a kimenet tipikusan:
-
-- `0`
-- `1`
-
-A legalapvetőbb logikai műveletek:
-
-- **AND**
-- **OR**
-- **XOR**
-- **NOT**
-
-Ezek működését **igazságtáblával** írjuk le. Az igazságtábla megmutatja, hogy adott bemenetekhez milyen kimenet tartozik.
-
 ## Gyors vizuális kép
 
 ### NOT

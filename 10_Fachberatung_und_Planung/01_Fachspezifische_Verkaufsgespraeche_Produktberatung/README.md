@@ -1,20 +1,5 @@
 # Fachspezifische Verkaufsgespraeche Produktberatung
 
-## Lényeg 30 másodpercben
-
-A szakszerű értékesítési beszélgetés nem arról szól, hogy mindent felsorolunk egy termékről.
-
-A jó terméktanácsadás lényege:
-
-- először megérteni az ügyfél igényét
-- utána ehhez illeszteni a megoldást
-- közérthetően elmagyarázni az előnyöket
-
-Röviden:
-
-- ne terméket "tolj"
-- hanem problémára adj megfelelő megoldást
-
 ## Gyors vizuális kép
 
 | Jó megközelítés | Rossz megközelítés |

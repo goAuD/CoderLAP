@@ -1,17 +1,5 @@
 # Aufbereitung technischer Dokumentation
 
-## Lényeg 30 másodpercben
-
-A **technikai dokumentáció előkészítése és felépítése** azt jelenti, hogy a tartalmat nem csak összegyűjtjük, hanem úgy rendezzük és formázzuk, hogy:
-
-- gyorsan átlátható legyen
-- könnyen használható legyen
-- a célcsoport megértse
-- később karbantartható maradjon
-
-Nem elég, hogy a tartalom jó legyen.  
-Az is fontos, **hogyan van tálalva**.
-
 ## Gyors vizuális kép
 
 | Szempont | Mit jelent? |

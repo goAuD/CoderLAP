@@ -1,15 +1,5 @@
 # Softwareprozessmodelle
 
-## Lényeg 30 másodpercben
-
-A **szoftverfolyamat-modellek** azt írják le, hogyan szervezzük meg a szoftver fejlesztésének fő lépéseit.
-
-Röviden:
-
-- keretet adnak a fejlesztéshez
-- megmutatják a fő fázisokat
-- segítenek tervezni, követni és ellenőrizni a munkát
-
 ## Gyors vizuális kép
 
 | Modell | Fő jelleg |

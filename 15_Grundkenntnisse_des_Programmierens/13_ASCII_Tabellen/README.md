@@ -1,15 +1,5 @@
 # ASCII-Tabellen
 
-## Lényeg 30 másodpercben
-
-Az **ASCII-tábla** megmutatja, melyik karakterhez melyik számszerű kód tartozik az ASCII karakterkészletben.
-
-Röviden:
-
-- `7 bites`
-- `128` kódpont
-- betűk, számjegyek, írásjelek és vezérlőkarakterek
-
 ## Gyors vizuális kép
 
 | Karakter | Decimális kód | Hexa |

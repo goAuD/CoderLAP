@@ -1,17 +1,5 @@
 # Statische und dynamische Webseiten
 
-## Lényeg 30 másodpercben
-
-A **statikus weboldal** minden látogatónak jellemzően ugyanazt a kész tartalmat küldi.
-
-A **dinamikus weboldal** a tartalmat:
-
-- kérés közben
-- adatok alapján
-- felhasználóhoz vagy állapothoz igazítva
-
-állíthatja elő.
-
 ## Gyors vizuális kép
 
 | Típus | Jellemző | Példa |

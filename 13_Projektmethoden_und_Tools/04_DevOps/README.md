@@ -1,16 +1,5 @@
 # DevOps
 
-## Lényeg 30 másodpercben
-
-A **DevOps** olyan szemlélet és gyakorlatrendszer, amely közelebb hozza egymáshoz a **fejlesztést** és az **üzemeltetést**.
-
-Röviden:
-
-- közös felelősség
-- több automatizálás
-- gyorsabb szállítás
-- stabilabb működés
-
 ## Gyors vizuális kép
 
 | Hagyományos működés | DevOps |

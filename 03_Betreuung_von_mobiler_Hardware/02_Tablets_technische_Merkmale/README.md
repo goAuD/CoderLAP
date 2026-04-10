@@ -1,25 +1,5 @@
 # Tablets technische Merkmale
 
-## Lényeg 30 másodpercben
-
-A **tablet** olyan mobil számítástechnikai eszköz, amely:
-
-- nagyobb kijelzővel rendelkezik, mint egy tipikus smartphone
-- érintésvezérelt
-- appokat futtat
-- hordozható
-- gyakran alkalmas médiafogyasztásra és produktív munkára is
-
-A legfontosabb technikai jellemzők:
-
-- kijelzőméret és kijelzőminőség
-- teljesítmény
-- RAM és tárhely
-- akkumulátor
-- multitasking képesség
-- toll- és billentyűzettámogatás
-- Wi-Fi vagy mobilhálózati kapcsolat
-
 ## Gyors vizuális kép
 
 | Jellemző | Miért fontos tabletnél? |

@@ -1,32 +1,5 @@
 # Geschlossene Systeme und App Store
 
-## Lényeg 30 másodpercben
-
-A **zárt rendszer** olyan digitális ökoszisztéma, ahol egy gyártó vagy platformtulajdonos erősen kontrollálja:
-
-- a hardvert
-- az operációs rendszert
-- az alkalmazásterjesztést
-- a platformszabályokat
-
-Tipikus példa:
-
-- Apple eszköz + iOS + App Store
-
-Egy zárt rendszer előnye lehet:
-
-- egységesebb élmény
-- nagyobb kontroll
-- erősebb minőségbiztosítás
-- jobb biztonsági kiszámíthatóság
-
-Hátránya lehet:
-
-- kisebb szabadság
-- erősebb gyártói függés
-- korlátozottabb appterjesztési modell
-- platformfüggőség
-
 ## Gyors vizuális kép
 
 | Szempont | Zárt rendszer |

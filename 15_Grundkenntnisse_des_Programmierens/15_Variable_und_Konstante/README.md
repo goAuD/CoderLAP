@@ -1,15 +1,5 @@
 # Variable und Konstante
 
-## Lényeg 30 másodpercben
-
-A változó értéke a program futása során megváltozhat, a konstansé elvileg nem vagy csak korlátozottan.
-
-Röviden:
-
-- változó: módosítható
-- konstans: nem újraértékadható vagy fixnek szánt
-- a pontos viselkedés nyelvenként eltérhet
-
 ## Gyors vizuális kép
 
 | Fogalom | Jellemző |

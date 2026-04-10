@@ -1,15 +1,5 @@
 # Soll-Ist-Analyse
 
-## Lényeg 30 másodpercben
-
-A **Soll-Ist-Analyse** azt vizsgálja, hogy **hol tartunk most** és **hová szeretnénk eljutni**, majd azonosítja a kettő közti eltérést.
-
-Röviden:
-
-- `Ist`: jelenlegi állapot
-- `Soll`: célállapot
-- a kettő különbsége mutatja a fejlesztési feladatot
-
 ## Gyors vizuális kép
 
 | Elem | Jelentés |

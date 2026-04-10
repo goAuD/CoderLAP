@@ -1,15 +1,5 @@
 # DBMS
 
-## Lényeg 30 másodpercben
-
-A **`DBMS`** (`Database Management System`) az a szoftver, amely az adatbázis tárolását, szervezését, lekérdezését és adminisztrációját végzi.
-
-Röviden:
-
-- a `DBMS` kezeli az adatbázist
-- közvetít a programok és az adatok között
-- gondoskodik a hozzáférésről, integritásról és gyakran a mentésről is
-
 ## Gyors vizuális kép
 
 | `DBMS` feladat | Mit jelent? |

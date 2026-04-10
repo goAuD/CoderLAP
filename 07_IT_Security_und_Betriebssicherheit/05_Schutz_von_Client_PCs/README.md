@@ -1,20 +1,5 @@
 # Schutz von Client PCs
 
-## Lényeg 30 másodpercben
-
-A kliens PC védelme több rétegből áll.
-
-A minimum alapok:
-
-- rendszeres frissítés
-- malware-védelem
-- szoftveres tűzfal
-- erős jelszavak
-- MFA, ahol lehet
-- korlátozott jogosultság
-- phishing elleni tudatosság
-- rendszeres backup
-
 ## Gyors vizuális kép
 
 | Védelem | Miért kell? |

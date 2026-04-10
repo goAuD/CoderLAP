@@ -1,15 +1,5 @@
 # Pseudocode
 
-## Lényeg 30 másodpercben
-
-A **pseudocode** egy programkódra hasonlító, de nem futtatható leírás, amely az algoritmus logikáját mutatja meg.
-
-Röviden:
-
-- nyelvfüggetlen
-- embernek szól
-- tervezésre és magyarázatra való
-
 ## Gyors vizuális kép
 
 | Tulajdonság | Pseudocode |

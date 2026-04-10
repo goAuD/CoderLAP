@@ -1,15 +1,5 @@
 # JSON
 
-## Lényeg 30 másodpercben
-
-A **JSON** (`JavaScript Object Notation`) könnyű, szöveges adatcsere-formátum.
-
-Röviden:
-
-- ember számára viszonylag jól olvasható
-- gép számára könnyen feldolgozható
-- gyakran használják webes API-kban
-
 ## Gyors vizuális kép
 
 | Típus | Példa |

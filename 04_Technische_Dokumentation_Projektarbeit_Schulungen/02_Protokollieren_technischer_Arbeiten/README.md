@@ -1,18 +1,5 @@
 # Protokollieren technischer Arbeiten
 
-## Lényeg 30 másodpercben
-
-A **technikai munkák protokollálása** azt jelenti, hogy a műszaki tevékenységeket visszakövethetően dokumentáljuk.
-
-Ez azért fontos, mert így látszik:
-
-- ki mit csinált
-- mikor történt
-- milyen környezetben történt
-- mi volt az eredmény
-- milyen probléma merült fel
-- mi a következő lépés
-
 ## Gyors vizuális kép
 
 | Kérdés | Mit kell rögzíteni? |

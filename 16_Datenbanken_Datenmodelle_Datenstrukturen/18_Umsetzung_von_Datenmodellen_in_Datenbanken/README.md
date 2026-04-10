@@ -1,16 +1,5 @@
 # Umsetzung von Datenmodellen in Datenbanken
 
-## Lényeg 30 másodpercben
-
-Az adatmodell megvalósítása azt jelenti, hogy a fogalmi vagy logikai modellből konkrét adatbázis-séma lesz.
-
-Röviden:
-
-- entitásokból táblák lesznek
-- attribútumokból oszlopok
-- kapcsolatokból kulcsok és kapcsolótáblák
-- szabályokból megszorítások
-
 ## Gyors vizuális kép
 
 | Modell elem | Adatbázis-megvalósítás |

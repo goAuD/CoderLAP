@@ -1,15 +1,5 @@
 # Einsatzgebiet jQuery
 
-## Lényeg 30 másodpercben
-
-A **jQuery** egy JavaScript library, amely leegyszerűsítette a DOM-kezelést, eseménykezelést és az Ajax-hívásokat.
-
-Röviden:
-
-- régebben nagyon fontos volt
-- ma már kisebb a szerepe
-- főleg régi rendszerekben és egyszerűbb feladatoknál fordul elő
-
 ## Gyors vizuális kép
 
 | Régebbi tipikus használat | Példa |

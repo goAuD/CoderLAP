@@ -1,15 +1,5 @@
 # Single-User-System und Multi-User-System
 
-## Lényeg 30 másodpercben
-
-A **single-user rendszer** alapvetően egy felhasználó közvetlen használatára van kialakítva.  
-A **multi-user rendszer** több felhasználó egyidejű vagy szabályozott használatát támogatja.
-
-Egyszerűen:
-
-- single-user: egy ember használja közvetlenül
-- multi-user: több felhasználó is rendelkezhet saját hozzáféréssel, jogosultsággal és munkakörnyezettel
-
 ## Gyors vizuális kép
 
 | Típus | Jellemző |

@@ -1,22 +1,5 @@
 # SMTP und SMTPS
 
-## Lényeg 30 másodpercben
-
-Az `SMTP` a levelek küldésére és továbbítására szolgáló protokoll.
-
-Nem erre való:
-
-- levelek olvasása
-
-Ezért:
-
-- `SMTP` = küldés / továbbítás
-- `IMAP` vagy `POP3` = olvasás / hozzáférés
-
-A `SMTPS` kifejezés ma jellemzően ezt jelenti:
-
-- SMTP-szerű levélbeküldés titkosított kapcsolattal, tipikusan `465` porton
-
 ## Gyors vizuális kép
 
 | Protokoll / használat | Tipikus port | Fő cél |

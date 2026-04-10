@@ -1,16 +1,5 @@
 # Scrummaster
 
-## Lényeg 30 másodpercben
-
-A **Scrum Master** a Scrum keretrendszer támogató és facilitáló szerepe.
-
-Röviden:
-
-- segít, hogy a Scrum jól működjön
-- támogatja a csapatot
-- akadályokat segít eltávolítani
-- nem klasszikus főnök
-
 ## Gyors vizuális kép
 
 | Szerep | Fő fókusz |

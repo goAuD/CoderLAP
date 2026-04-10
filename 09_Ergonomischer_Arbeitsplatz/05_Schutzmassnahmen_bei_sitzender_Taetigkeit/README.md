@@ -1,18 +1,5 @@
 # Schutzmassnahmen bei sitzender Taetigkeit
 
-## Lényeg 30 másodpercben
-
-Az ülőmunka önmagában is terhelés lehet.
-
-Védekezés:
-
-- rendszeres testhelyzetváltás
-- felállás
-- rövid mozgás
-- megfelelő szék és asztal
-- jó monitorbeállítás
-- változatos munkaszervezés
-
 ## Gyors vizuális kép
 
 | Probléma | Védőintézkedés |

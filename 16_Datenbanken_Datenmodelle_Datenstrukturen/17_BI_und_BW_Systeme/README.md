@@ -1,14 +1,5 @@
 # BI- und BW-Systeme
 
-## Lényeg 30 másodpercben
-
-A **`BI`** (`Business Intelligence`) az üzleti adatok elemzését és döntéstámogatását jelenti, a **`BW`** (`Business Warehouse` vagy `Business Data Warehouse`) pedig az ehhez szükséges adattárházi környezetet vagy rendszert jelöli.
-
-Röviden:
-
-- `BI`: elemzés, riport, dashboard, döntéstámogatás
-- `BW`: központi, elemzésre előkészített adattárolás
-
 ## Gyors vizuális kép
 
 | Fogalom | Fő szerep |

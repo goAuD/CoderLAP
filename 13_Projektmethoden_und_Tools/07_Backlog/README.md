@@ -1,15 +1,5 @@
 # Backlog
 
-## Lényeg 30 másodpercben
-
-A **backlog** egy rendezett feladat- és igénylista.
-
-Röviden:
-
-- ide kerül minden fontos munkaelem
-- ebből választ a csapat a következő munkaciklusra
-- folyamatosan frissíteni és priorizálni kell
-
 ## Gyors vizuális kép
 
 | Fogalom | Mit jelent? |

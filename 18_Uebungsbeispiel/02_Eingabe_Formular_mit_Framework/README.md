@@ -1,17 +1,5 @@
 # Eingabe-Formular mit Framework
 
-## Lényeg 30 másodpercben
-
-Itt egy egyszerű, jól használható, responsive űrlap a cél, lehetőleg frameworkkel.
-
-Röviden:
-
-- `Vorname`
-- `Nachname`
-- `SV-NR`
-- kötelező mezők ellenőrzése
-- mobilon is jól működjön
-
 ## Gyors vizuális kép
 
 | Kötelező mező | Miért kell? |

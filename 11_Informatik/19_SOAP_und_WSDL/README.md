@@ -1,17 +1,5 @@
 # SOAP und WSDL
 
-## Lényeg 30 másodpercben
-
-A **SOAP** és a **WSDL** klasszikusan együtt jelennek meg a web service világában, de nem ugyanazt jelentik.
-
-- `SOAP` = üzenetküldési protokoll / üzenetformátum
-- `WSDL` = szolgáltatásleíró nyelv
-
-Röviden:
-
-- a SOAP megmondja, hogyan néz ki az üzenet
-- a WSDL megmondja, milyen műveletek és végpontok érhetők el
-
 ## Gyors vizuális kép
 
 | Fogalom | Szerep |

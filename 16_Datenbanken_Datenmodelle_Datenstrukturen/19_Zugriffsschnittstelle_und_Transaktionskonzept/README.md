@@ -1,15 +1,5 @@
 # Zugriffsschnittstelle und Transaktionskonzept
 
-## Lényeg 30 másodpercben
-
-Az **elérési interfész** azt jelenti, hogyan kapcsolódik egy alkalmazás az adatbázishoz, a **tranzakciós koncepció** pedig azt, hogyan kezeljük a logikailag összetartozó adatbázis-műveleteket egy egységként.
-
-Röviden:
-
-- interfész: kapcsolat az alkalmazás és az adatbázis között
-- tranzakció: több művelet együtt kezelve
-- cél: helyes, biztonságos és konzisztens adatkezelés
-
 ## Gyors vizuális kép
 
 ```text

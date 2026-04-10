@@ -1,22 +1,5 @@
 # iOS Grundlagen
 
-## Lényeg 30 másodpercben
-
-Az **iOS** az Apple mobil operációs rendszere az **iPhone** számára.
-
-Fontos jellemzői:
-
-- szoros Apple hardver-szoftver integráció
-- erősen ellenőrzött ökoszisztéma
-- App Store központú alkalmazásterjesztés
-- hangsúlyos biztonsági és adatvédelmi modell
-- egységesebb felhasználói élmény
-
-Fontos pontosítás:
-
-- **2026. április 8-án** az Apple külön `iOS` néven hivatkozik az iPhone rendszerére, míg az iPad platform neve `iPadOS`
-- sok vizsgakérdésben azonban az `iOS` még gyűjtőfogalomként is előfordulhat
-
 ## Gyors vizuális kép
 
 | Jellemző | iOS |

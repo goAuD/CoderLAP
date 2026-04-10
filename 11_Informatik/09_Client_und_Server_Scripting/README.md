@@ -1,16 +1,5 @@
 # Client und Server Scripting
 
-## Lényeg 30 másodpercben
-
-A **client-side scripting** a felhasználó eszközén, főleg a böngészőben fut.
-
-A **server-side scripting** a szerveren fut, és ott dolgozza fel a kéréseket.
-
-Röviden:
-
-- kliensoldal: felület, interakció, böngészőlogika
-- szerveroldal: üzleti logika, adatbázis, hitelesítés, adatfeldolgozás
-
 ## Gyors vizuális kép
 
 | Típus | Hol fut? | Mire jó? |
