@@ -1,18 +1,5 @@
 # Wesentliche Schritte der Projektplanung
 
-## Lényeg 30 másodpercben
-
-A **projekttervezés** lényege, hogy a célból egy **megvalósítható, követhető tervet** készítsünk.
-
-A legfontosabb lépések általában:
-
-- cél és scope tisztázása
-- követelmények összegyűjtése
-- feladatok bontása
-- idő- és erőforrás-tervezés
-- költségtervezés
-- kockázatok és mérföldkövek meghatározása
-
 ## Gyors vizuális kép
 
 | Lépés | Mire válaszol? |

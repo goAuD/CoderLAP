@@ -1,25 +1,5 @@
 # Bekannte Cloud Dienste
 
-## Lényeg 30 másodpercben
-
-A cloud szolgáltatások sokfélék lehetnek.
-
-Vannak:
-
-- infrastruktúra-központú megoldások
-- fejlesztői platformok
-- végfelhasználói SaaS szolgáltatások
-
-Ismert példák:
-
-- `AWS`
-- `Microsoft Azure`
-- `Google Cloud`
-- `Microsoft 365`
-- `Google Workspace`
-- `iCloud`
-- `Dropbox`
-
 ## Gyors vizuális kép
 
 | Szolgáltatás | Típus |

@@ -1,17 +1,5 @@
 # SEO und Massnahmen
 
-## Lényeg 30 másodpercben
-
-A **SEO** (`Search Engine Optimization`) azt jelenti, hogy egy weboldalt úgy készítünk el, hogy a keresőmotorok könnyebben megértsék, indexeljék és megfelelően rangsorolják.
-
-Nem trükközésről van szó, hanem főleg erről:
-
-- jó tartalom
-- tiszta szerkezet
-- egyértelmű címek
-- technikailag rendben lévő oldal
-- gyors és mobilbarát működés
-
 ## Gyors vizuális kép
 
 | Terület | Mit javítunk? | Példa |

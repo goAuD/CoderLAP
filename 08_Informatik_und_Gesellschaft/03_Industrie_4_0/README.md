@@ -1,21 +1,5 @@
 # Industrie 4.0
 
-## Lényeg 30 másodpercben
-
-Az **Industrie 4.0** az ipar digitalizálásának és hálózatba kapcsolásának fogalma.
-
-Tipikus elemek:
-
-- szenzorok
-- automatizálás
-- adatgyűjtés
-- gép-gép kommunikáció
-- intelligens gyártás
-
-Egyszerűen:
-
-- a gyár "okosabb", összekapcsoltabb és adatvezéreltebb lesz
-
 ## Gyors vizuális kép
 
 | Elem | Mit jelent? |

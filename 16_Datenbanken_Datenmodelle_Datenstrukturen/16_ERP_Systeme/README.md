@@ -1,15 +1,5 @@
 # ERP-Systeme
 
-## Lényeg 30 másodpercben
-
-Az **ERP** (`Enterprise Resource Planning`) olyan integrált vállalati rendszer, amely több üzleti terület adatait és folyamatait közös rendszerben kezeli.
-
-Röviden:
-
-- egy rendszerben kapcsol össze több területet
-- közös adatbázisra vagy erősen integrált adatkörnyezetre épül
-- célja a vállalati erőforrások és folyamatok koordinálása
-
 ## Gyors vizuális kép
 
 | ERP modul | Példa |

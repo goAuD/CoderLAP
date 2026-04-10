@@ -1,17 +1,5 @@
 # LIFO und FIFO
 
-## Lényeg 30 másodpercben
-
-A **LIFO** és a **FIFO** két alapvető feldolgozási sorrend.
-
-- `LIFO` = `Last In, First Out`
-- `FIFO` = `First In, First Out`
-
-Röviden:
-
-- LIFO esetén az utoljára betett elem jön ki először
-- FIFO esetén a legrégebben betett elem jön ki először
-
 ## Gyors vizuális kép
 
 | Elv | Jelentés | Tipikus adatszerkezet | Hétköznapi példa |

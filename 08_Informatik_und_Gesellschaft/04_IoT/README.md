@@ -1,23 +1,5 @@
 # IoT
 
-## Lényeg 30 másodpercben
-
-Az `IoT` az **Internet of Things**, vagyis a dolgok internete.
-
-Ez azt jelenti, hogy fizikai eszközök:
-
-- érzékelnek
-- adatot gyűjtenek
-- kommunikálnak
-- bizonyos esetben be is avatkoznak
-
-Példák:
-
-- okosóra
-- okosotthon eszközök
-- ipari szenzorok
-- okosmérők
-
 ## Gyors vizuális kép
 
 | Elem | Példa |

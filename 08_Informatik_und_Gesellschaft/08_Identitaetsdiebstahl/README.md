@@ -1,23 +1,5 @@
 # Identitaetsdiebstahl
 
-## Lényeg 30 másodpercben
-
-Az **identitáslopás** azt jelenti, hogy valaki más személyes vagy pénzügyi adatait engedély nélkül használják fel.
-
-Példák:
-
-- név
-- cím
-- bankszámlaadat
-- hitelkártyaadat
-- fiókhozzáférés
-
-Cél lehet:
-
-- pénzszerzés
-- csalás
-- más nevében ügyintézés
-
 ## Gyors vizuális kép
 
 | Típus | Példa |

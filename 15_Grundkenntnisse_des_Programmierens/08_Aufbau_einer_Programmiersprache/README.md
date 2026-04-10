@@ -1,15 +1,5 @@
 # Aufbau einer Programmiersprache
 
-## Lényeg 30 másodpercben
-
-Egy programozási nyelvnek van szabályrendszere és építőelemei, amelyek meghatározzák, hogyan lehet benne helyes és értelmes programot írni.
-
-Röviden:
-
-- szintaxis: hogyan kell leírni
-- szemantika: mit jelent
-- alapépítőelemek: kulcsszavak, változók, típusok, operátorok, vezérlési szerkezetek
-
 ## Gyors vizuális kép
 
 | Elem | Kérdés |

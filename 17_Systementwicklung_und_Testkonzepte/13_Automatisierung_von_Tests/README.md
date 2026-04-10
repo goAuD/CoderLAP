@@ -1,15 +1,5 @@
 # Automatisierung von Tests
 
-## Lényeg 30 másodpercben
-
-A tesztautomatizálás azt jelenti, hogy bizonyos teszteket eszközök és szkriptek futtatnak le emberi kézi végrehajtás helyett vagy mellett.
-
-Röviden:
-
-- gyorsabb ismételt futtatás
-- jobb skálázhatóság
-- nem minden tesztet érdemes automatizálni
-
 ## Gyors vizuális kép
 
 | Előny | Korlát |

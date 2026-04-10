@@ -1,17 +1,5 @@
 # Cloud Computing
 
-## Lényeg 30 másodpercben
-
-A **cloud computing** lényege, hogy IT-erőforrásokat nem feltétlenül helyben, saját szerveren használunk, hanem hálózaton keresztül, szolgáltatásként veszünk igénybe.
-
-Példák:
-
-- virtuális gép
-- tárhely
-- adatbázis
-- e-mail szolgáltatás
-- teljes üzleti alkalmazás
-
 ## Gyors vizuális kép
 
 | Jellemző | Jelentés |

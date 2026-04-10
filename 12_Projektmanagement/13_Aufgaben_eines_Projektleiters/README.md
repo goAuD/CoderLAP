@@ -1,17 +1,5 @@
 # Aufgaben eines Projektleiters
 
-## Lényeg 30 másodpercben
-
-A **projektvezető feladata** nem az, hogy mindent ő csináljon meg, hanem az, hogy a projektet **összefogja és irányítsa**.
-
-Fő feladatai:
-
-- tervezés
-- koordináció
-- kommunikáció
-- kontroll
-- problémakezelés
-
 ## Gyors vizuális kép
 
 | Feladat | Mit jelent? |

@@ -1,16 +1,5 @@
 # Agiles Projektmanagement
 
-## Lényeg 30 másodpercben
-
-Az **agilis projektmenedzsment** rugalmas, iteratív megközelítés, amely gyors visszajelzéssel és folyamatos alkalmazkodással dolgozik.
-
-Röviden:
-
-- kisebb ciklusokban halad
-- gyakran szállít eredményt
-- jól kezeli a változást
-- erős együttműködésre épít
-
 ## Gyors vizuális kép
 
 | Klasszikus | Agilis |

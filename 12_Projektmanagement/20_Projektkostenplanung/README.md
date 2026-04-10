@@ -1,16 +1,5 @@
 # Projektkostenplanung
 
-## Lényeg 30 másodpercben
-
-A **projektköltség-tervezés** azt jelenti, hogy előre megbecsüljük és megtervezzük, mennyibe fog kerülni a projekt.
-
-Röviden:
-
-- milyen erőforrás kell
-- mennyi idő kell
-- milyen eszközök, licencek, szolgáltatások kellenek
-- mennyi tartalék szükséges
-
 ## Gyors vizuális kép
 
 | Költségtípus | Példa |

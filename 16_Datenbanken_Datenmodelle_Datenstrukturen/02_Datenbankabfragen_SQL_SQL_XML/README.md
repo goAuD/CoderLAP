@@ -1,15 +1,5 @@
 # Datenbankabfragen: SQL / SQL-XML
 
-## Lényeg 30 másodpercben
-
-Az adatbázis-lekérdezések célja, hogy adatokat olvassunk ki, szűrjünk, módosítsunk vagy strukturált formában alakítsunk át.
-
-Röviden:
-
-- `SQL`: relációs adatbázisok szabványos lekérdezőnyelve
-- `SQL-XML`: SQL és XML összekapcsolása
-- lekérdezéssel nemcsak olvasni, hanem írni is lehet
-
 ## Gyors vizuális kép
 
 | Fogalom | Mire jó? |

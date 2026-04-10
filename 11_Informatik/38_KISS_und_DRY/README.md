@@ -1,17 +1,5 @@
 # KISS und DRY
 
-## Lényeg 30 másodpercben
-
-A **KISS** és a **DRY** két alapvető fejlesztési elv.
-
-- `KISS` = `Keep It Simple`
-- `DRY` = `Don't Repeat Yourself`
-
-Röviden:
-
-- KISS: ne bonyolítsd túl
-- DRY: ne ismételd feleslegesen ugyanazt
-
 ## Gyors vizuális kép
 
 | Elv | Lényege |

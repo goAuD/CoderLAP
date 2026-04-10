@@ -1,17 +1,5 @@
 # Ausgabe eines QR-Codes
 
-## Lényeg 30 másodpercben
-
-A `QR`-kód tartalma a PDF szerint **nem a teljes űrlapadat**, hanem kizárólag:
-
-- `Richtig`
-- vagy `Falsch`
-
-Röviden:
-
-- helyes `SV-Nr` esetén `Richtig`
-- hibás `SV-Nr` esetén `Falsch`
-
 ## Gyors vizuális kép
 
 | Eredmény | QR-kód tartalma |

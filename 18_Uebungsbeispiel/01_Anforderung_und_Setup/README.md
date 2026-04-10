@@ -1,15 +1,5 @@
 # Anforderung und Setup
 
-## Lényeg 30 másodpercben
-
-Ennél a feladatnál a cél egy **egyszerű, biztosan működő vizsgamegoldás**, nem pedig egy nagyobb alkalmazás felépítése.
-
-Röviden:
-
-- nincs szükség adatbázisra
-- nincs szükség backend mentésre
-- a fontos a működő űrlap, az `SV-Nr` ellenőrzés és a `QR`-kód
-
 ## Gyors vizuális kép
 
 | Kell | Nem kell |

@@ -1,18 +1,5 @@
 # Android Grundlagen
 
-## Lényeg 30 másodpercben
-
-Az **Android** a Google által vezetett, széles körben használt mobil operációs rendszer-platform.
-
-Fontos jellemzői:
-
-- nyílt forrású alapokra épül (`AOSP`)
-- sok gyártó sokféle eszközén fut
-- főleg smartphone-okon és tableteken használják
-- alkalmazások futtatására, kommunikációra és mobil szolgáltatásokra készült
-
-Az Android világa általában nyitottabb és sokszínűbb, mint az Apple zártabb mobil ökoszisztémája.
-
 ## Gyors vizuális kép
 
 | Jellemző | Android |

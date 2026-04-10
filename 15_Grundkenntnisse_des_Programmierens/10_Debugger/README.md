@@ -1,16 +1,5 @@
 # Debugger
 
-## Lényeg 30 másodpercben
-
-A **debugger** olyan eszköz, amellyel futás közben meg lehet figyelni, hol és miért hibázik a program.
-
-Röviden:
-
-- meg lehet állítani a programot
-- lépésenként lehet végrehajtani
-- meg lehet nézni a változók értékét
-- könnyebb megtalálni a hibák okát
-
 ## Gyors vizuális kép
 
 | Funkció | Mire jó? |

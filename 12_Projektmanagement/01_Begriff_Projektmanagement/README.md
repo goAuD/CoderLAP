@@ -1,17 +1,5 @@
 # Begriff Projektmanagement
 
-## Lényeg 30 másodpercben
-
-A **projektmenedzsment** azt jelenti, hogy egy projektet **tudatosan megtervezünk, megszervezünk, irányítunk és ellenőrzünk**, hogy elérjük a kitűzött célt.
-
-Röviden:
-
-- cél meghatározása
-- tervezés
-- erőforrások szervezése
-- csapat és kommunikáció irányítása
-- határidő, költség és eredmény figyelése
-
 ## Gyors vizuális kép
 
 | Terület | Mit jelent a gyakorlatban? |

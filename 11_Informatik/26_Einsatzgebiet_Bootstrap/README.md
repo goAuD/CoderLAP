@@ -1,16 +1,5 @@
 # Einsatzgebiet Bootstrap
 
-## Lényeg 30 másodpercben
-
-A **Bootstrap** egy népszerű frontendes `CSS`- és komponens-keretrendszer, amely gyorsabb felületépítést tesz lehetővé.
-
-Tipikus felhasználása:
-
-- reszponzív layout
-- gyors prototípus
-- admin felület
-- egységes komponensek
-
 ## Gyors vizuális kép
 
 | Mire jó? | Példa |

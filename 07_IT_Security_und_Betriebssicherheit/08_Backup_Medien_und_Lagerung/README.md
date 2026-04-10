@@ -1,21 +1,5 @@
 # Backup Medien und Lagerung
 
-## Lényeg 30 másodpercben
-
-Nem csak az számít, hogy van-e backup, hanem az is:
-
-- milyen adathordozón van
-- hol tároljuk
-- mennyire védett
-
-Tipikus backup médiumok:
-
-- külső HDD / SSD
-- NAS
-- szalag (`tape`)
-- optikai adathordozó bizonyos esetekben
-- cloud backup
-
 ## Gyors vizuális kép
 
 | Médium | Előny | Figyelni kell rá |

@@ -1,16 +1,5 @@
 # Stadien der Softwareentwicklung
 
-## Lényeg 30 másodpercben
-
-A szoftverfejlesztés nem csak kódírásból áll, hanem több egymásra épülő szakaszból.
-
-Röviden:
-
-- először meg kell érteni a problémát
-- aztán meg kell tervezni a megoldást
-- utána jön a megvalósítás és az ellenőrzés
-- végül a bevezetés és a karbantartás
-
 ## Gyors vizuális kép
 
 | Szakasz | Fő kérdés |

@@ -1,17 +1,5 @@
 # REST API
 
-## Lényeg 30 másodpercben
-
-A **REST API** olyan webes API, amely a **REST** (`Representational State Transfer`) architekturális elveit követi.
-
-Röviden:
-
-- erőforrásokra épít
-- URI-kkal azonosít
-- HTTP-módszereket használ
-- stateless működésre törekszik
-- gyakran JSON-t használ adatcserére
-
 ## Gyors vizuális kép
 
 | Elem | Példa |

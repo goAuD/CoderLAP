@@ -1,18 +1,5 @@
 # Eigenschaften eines Projektleiters
 
-## Lényeg 30 másodpercben
-
-Egy jó **projektvezetőnek** nemcsak szakmai, hanem erős **szervezési és emberi** tulajdonságokra is szüksége van.
-
-Fontos jellemzők:
-
-- kommunikáció
-- szervezettség
-- felelősségtudat
-- döntésképesség
-- problémamegoldás
-- stressztűrés
-
 ## Gyors vizuális kép
 
 | Tulajdonság | Miért fontos? |

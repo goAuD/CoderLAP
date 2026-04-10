@@ -1,20 +1,5 @@
 # Pflichten bei Datendiebstahl
 
-## Lényeg 30 másodpercben
-
-Ha személyes adatok illetéktelen kézbe kerülnek, elvesznek, megsemmisülnek vagy jogosulatlanul hozzáférnek hozzájuk, az **adatvédelmi incidens** vagy **Data Breach** lehet.
-
-Ilyenkor az adatkezelőnek meg kell vizsgálnia:
-
-- történt-e személyesadat-sértés
-- mekkora a kockázat
-- kell-e jelenteni a hatóságnak
-- kell-e értesíteni az érintetteket
-
-Fontos határidő:
-
-- **lehetőleg 72 órán belül** jelenteni kell a hatóságnak, ha a kockázati feltétel fennáll
-
 ## Gyors vizuális kép
 
 | Esemény | Lehetséges következmény |

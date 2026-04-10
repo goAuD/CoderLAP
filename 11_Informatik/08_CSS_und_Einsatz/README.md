@@ -1,23 +1,5 @@
 # CSS und Einsatz
 
-## Lényeg 30 másodpercben
-
-A **CSS** (`Cascading Style Sheets`) a weboldal megjelenését írja le.
-
-Ezzel szabályozzuk például:
-
-- színeket
-- betűket
-- méreteket
-- térközöket
-- elrendezést
-- reszponzív viselkedést
-
-Röviden:
-
-- a HTML a tartalom és szerkezet
-- a CSS a megjelenés és layout
-
 ## Gyors vizuális kép
 
 | Technológia | Fő szerep |

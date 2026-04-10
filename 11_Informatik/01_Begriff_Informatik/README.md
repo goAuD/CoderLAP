@@ -1,20 +1,5 @@
 # Begriff Informatik
 
-## Lényeg 30 másodpercben
-
-Az **informatika** nem csak programozás.
-
-Tágabb értelemben azzal foglalkozik, hogyan:
-
-- ábrázoljuk az információt
-- tároljuk az adatokat
-- dolgozzuk fel őket algoritmusokkal
-- építünk hozzá hardveres és szoftveres rendszereket
-
-Röviden:
-
-- információ + adat + algoritmus + rendszer + automatizálás
-
 ## Gyors vizuális kép
 
 | Terület | Példa |

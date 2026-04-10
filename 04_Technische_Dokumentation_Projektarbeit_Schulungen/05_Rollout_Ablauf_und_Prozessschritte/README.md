@@ -1,20 +1,5 @@
 # Roll-out Ablauf und Prozessschritte
 
-## Lényeg 30 másodpercben
-
-A **rollout** azt jelenti, hogy egy új rendszert, alkalmazást vagy verziót ténylegesen bevezetünk a használatba.
-
-Egy jó rollout nem csak telepítésből áll, hanem tartalmazza:
-
-- tervezést
-- pilot vagy tesztbevezetést
-- biztonsági és jogosultsági ellenőrzést
-- adatmigrationt / konverziót
-- felhasználói oktatást
-- átadást
-- elfogadást
-- szükség esetén **abbruch / rollback** lehetőségét
-
 ## Gyors vizuális kép
 
 | Fázis | Mit jelent? |

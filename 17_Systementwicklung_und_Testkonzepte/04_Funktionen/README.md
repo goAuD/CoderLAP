@@ -1,15 +1,5 @@
 # Funktionen
 
-## Lényeg 30 másodpercben
-
-A **függvény** egy névvel ellátott, újra felhasználható programrész, amely meghatározott feladatot végez.
-
-Röviden:
-
-- lehet bemenete
-- lehet visszatérési értéke
-- segít a programot kisebb, átlátható egységekre bontani
-
 ## Gyors vizuális kép
 
 ```text

@@ -1,15 +1,5 @@
 # Ablauf der Programmentwicklung
 
-## Lényeg 30 másodpercben
-
-A programfejlesztés gyakorlati menete általában: problémaértés, tervezés, kódolás, futtatás, hibakeresés, tesztelés és javítás.
-
-Röviden:
-
-- ez egy gyakorlati ciklus
-- ritkán lineáris
-- sokszor vissza kell lépni és pontosítani
-
 ## Gyors vizuális kép
 
 ```text

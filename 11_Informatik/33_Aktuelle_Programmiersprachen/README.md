@@ -1,22 +1,5 @@
 # Aktuelle Programmiersprachen
 
-## Lényeg 30 másodpercben
-
-Az **aktuális programozási nyelvek** alatt általában azokat a nyelveket értjük, amelyek **ma széles körben használtak, aktívan támogatottak és fontosak a modern fejlesztésben**.
-
-`2026. április 8.` nézőpontból különösen relevánsak:
-
-- `JavaScript`
-- `TypeScript`
-- `Python`
-- `Java`
-- `C#`
-- `PHP`
-- `Go`
-- `Kotlin`
-- `Swift`
-- `Dart`
-
 ## Gyors vizuális kép
 
 | Nyelv | Tipikus erősség |

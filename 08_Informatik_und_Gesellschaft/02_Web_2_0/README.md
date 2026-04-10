@@ -1,17 +1,5 @@
 # Web 2.0
 
-## Lényeg 30 másodpercben
-
-A **Web 2.0** egy történeti fogalom, amely azt a webes korszakot jelöli, amikor a felhasználók már nem csak olvasták a webet, hanem aktívan tartalmat is létrehoztak.
-
-Tipikus elemek:
-
-- kommentelés
-- blogok
-- wikik
-- közösségi oldalak
-- felhasználói tartalom
-
 ## Gyors vizuális kép
 
 | Web 1.0 jelleg | Web 2.0 jelleg |

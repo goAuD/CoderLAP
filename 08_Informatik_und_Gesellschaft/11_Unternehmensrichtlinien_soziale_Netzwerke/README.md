@@ -1,16 +1,5 @@
 # Unternehmensrichtlinien soziale Netzwerke
 
-## Lényeg 30 másodpercben
-
-Egy vállalatnak érdemes írásos irányelvet készítenie a közösségi hálózatok használatáról.
-
-Miért?
-
-- reputációvédelem
-- biztonság
-- adatvédelem
-- egységes kommunikáció
-
 ## Gyors vizuális kép
 
 | Szabályterület | Miért fontos? |

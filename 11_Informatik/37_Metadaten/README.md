@@ -1,21 +1,5 @@
 # Metadaten
 
-## Lényeg 30 másodpercben
-
-A **metaadat** olyan adat, amely **más adatot ír le**.
-
-Röviden:
-
-- nem maga a fő tartalom
-- hanem a tartalomról szóló leíró információ
-
-Példák:
-
-- fájl neve, mérete, létrehozási ideje
-- kép felbontása
-- dokumentum szerzője
-- weboldal leírása
-
 ## Gyors vizuális kép
 
 | Adat | Metaadat |

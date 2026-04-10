@@ -1,12 +1,5 @@
 # Zeichensatz ASCII
 
-## Lényeg 30 másodpercben
-
-Az **ASCII** egy klasszikus, **7 bites** karakterkódolási szabvány.  
-Összesen **128 kódot** használ (`0-127`), ezekkel angol ábécébeli betűket, számokat, írásjeleket és vezérlőkaraktereket lehet ábrázolni.
-
-Ma önmagában már kevés, mert **nem tartalmazza a magyar ékezetes betűket** sem, ezért a modern rendszerek jellemzően **Unicode + UTF-8** alapúak. Ettől függetlenül az ASCII továbbra is fontos alapfogalom, mert sok mai technológia erre épül visszafelé kompatibilis módon.
-
 ## Gyors vizuális kép
 
 | Tartomány | Típus | Példa | Mire való |

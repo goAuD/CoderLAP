@@ -1,20 +1,5 @@
 # Begriff Betriebssystem
 
-## Lényeg 30 másodpercben
-
-Az **operációs rendszer** olyan alapvető rendszer-szoftver, amely:
-
-- kezeli a hardvert
-- erőforrásokat oszt ki
-- futtatási környezetet biztosít a programoknak
-- kapcsolatot teremt a felhasználó, az alkalmazások és a hardver között
-
-Egyszerűen:
-
-- a hardver önmagában nem elég
-- az alkalmazás önmagában nem elég
-- az operációs rendszer köti össze a kettőt
-
 ## Gyors vizuális kép
 
 | Réteg | Szerep |

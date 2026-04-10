@@ -1,16 +1,5 @@
 # Projektstrukturplan
 
-## Lényeg 30 másodpercben
-
-A **Projektstrukturplan** (`PSP`) a projekt teljes munkáját **hierarchikusan részekre bontja**.
-
-Röviden:
-
-- felül a teljes projekt
-- alatta fő részek
-- az alattuk kisebb egységek
-- végül munkacsomagok
-
 ## Gyors vizuális kép
 
 | Szint | Példa |

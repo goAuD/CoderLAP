@@ -1,15 +1,5 @@
 # Schleifen
 
-## Lényeg 30 másodpercben
-
-A **ciklus** vagy **loop** olyan vezérlési szerkezet, amely egy műveletsort többször végrehajt.
-
-Röviden:
-
-- ismétlésekhez való
-- feltétel vagy elemsor vezérli
-- csökkenti a kódismétlést
-
 ## Gyors vizuális kép
 
 | Ciklustípus | Mikor jó? |

@@ -1,16 +1,5 @@
 # Datenminimierung
 
-## Lényeg 30 másodpercben
-
-A **Datenminimierung** magyarul: **adattakarékosság** vagy **adatminimalizálás**.
-
-Ez a GDPR egyik alapelve, és azt jelenti:
-
-- csak annyi személyes adatot szabad kezelni,
-- amennyi az adott célhoz **szükséges**
-
-Nem szabad „biztos, ami biztos” alapon felesleges adatot bekérni.
-
 ## Gyors vizuális kép
 
 | Rossz gyakorlat | Jó gyakorlat |

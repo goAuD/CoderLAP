@@ -1,15 +1,5 @@
 # Verzweigungen und Fallunterscheidungen
 
-## Lényeg 30 másodpercben
-
-Az elágazások segítségével a program különböző utakon haladhat tovább attól függően, hogy milyen feltételek teljesülnek.
-
-Röviden:
-
-- döntési pontokat valósítanak meg
-- tipikus eszköz az `if / else`
-- több lehetőség esetén gyakori a `switch / case`
-
 ## Gyors vizuális kép
 
 ```text

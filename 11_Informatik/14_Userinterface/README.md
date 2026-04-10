@@ -1,20 +1,5 @@
 # Userinterface
 
-## Lényeg 30 másodpercben
-
-A **user interface** (`UI`, felhasználói felület) az a felület, amelyen keresztül a felhasználó kapcsolatba lép egy rendszerrel.
-
-Ez lehet:
-
-- képernyős felület
-- gomb, menü, űrlap
-- érintőképernyős vezérlés
-- hangalapú vagy más logikai interfész
-
-Röviden:
-
-- a UI az ember és a rendszer találkozási pontja
-
 ## Gyors vizuális kép
 
 | UI-elem | Feladata |

@@ -1,15 +1,5 @@
 # Problemmanagement
 
-## Lényeg 30 másodpercben
-
-A **problemmanagement** célja az ismétlődő vagy jelentős hibák **kiváltó okának feltárása** és a jövőbeni előfordulás megelőzése.
-
-Röviden:
-
-- nem csak a tünetet kezeli
-- a gyökérokot keresi
-- a megelőzésre is fókuszál
-
 ## Gyors vizuális kép
 
 ```text

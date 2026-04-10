@@ -1,17 +1,5 @@
 # Wasserfallmodell Aufbau
 
-## Lényeg 30 másodpercben
-
-A **vízesésmodell** lineáris fejlesztési modell, ahol a fázisok főként **egymás után** következnek.
-
-Röviden:
-
-- először követelmények
-- utána tervezés
-- majd fejlesztés
-- aztán tesztelés
-- végül bevezetés és karbantartás
-
 ## Gyors vizuális kép
 
 `Követelmények -> Tervezés -> Implementáció -> Teszt -> Bevezetés -> Karbantartás`

@@ -146,6 +146,8 @@ body.sidebar-open .catalog-sidebar {
   left: var(--space-4);
   z-index: 20;
   align-content: start;
+  overflow: hidden;
+  background: rgb(21, 24, 28);
 }
 
 body.sidebar-open .catalog-sidebar [data-sidebar-panel] {

@@ -25,7 +25,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Sections that every topic document should have (Hungarian headings)
 REQUIRED_SECTIONS = [
-    "Lényeg 30 másodpercben",
     "Források",
 ]
 

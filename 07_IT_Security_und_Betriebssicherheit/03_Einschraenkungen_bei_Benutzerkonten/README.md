@@ -1,20 +1,5 @@
 # Einschraenkungen bei Benutzerkonten
 
-## Lényeg 30 másodpercben
-
-A felhasználói fiókok korlátozása biztonsági alapelv.
-
-Lényege:
-
-- a felhasználó csak annyi jogot kapjon, amennyi tényleg szükséges
-
-Ez a **least privilege** elv.
-
-Gyakorlatban:
-
-- napi munkára inkább normál felhasználó
-- admin jogosultság csak szükség esetén
-
 ## Gyors vizuális kép
 
 | Fióktípus | Mire jó? | Kockázat |

@@ -1,16 +1,5 @@
 # Viren Wuermer Trojaner Spyware Hacker Phishing
 
-## Lényeg 30 másodpercben
-
-Ezek nem ugyanazok, csak gyakran egy blokkban tanuljuk őket.
-
-- `vírus` = másik fájlhoz vagy gazdaprogramhoz kapcsolódva terjed
-- `worm` = önmagát terjeszti, gyakran hálózaton át
-- `trójai` = hasznosnak látszik, de kárt okoz
-- `spyware` = titokban adatot gyűjt
-- `hacker` = vizsgán többnyire jogosulatlan támadót értünk alatta
-- `phishing` = megtévesztéses adathalászat
-
 ## Gyors vizuális kép
 
 | Fogalom | Lényeg | Tipikus veszély |

@@ -1,16 +1,5 @@
 # Telekom Gesetz
 
-## Lényeg 30 másodpercben
-
-Az osztrák **Telekommunikationsgesetz 2021 (TKG 2021)** az elektronikus hírközlési szolgáltatások egyik alapvető kerettörvénye.
-
-Vizsgaszinten fontos belőle főleg:
-
-- a telekommunikációs szolgáltatások jogi kerete
-- a felhasználók védelme
-- a kommunikáció titkossága
-- a kéretlen reklámüzenetek és spam szabályai
-
 ## Gyors vizuális kép
 
 | Terület | Miért fontos? |

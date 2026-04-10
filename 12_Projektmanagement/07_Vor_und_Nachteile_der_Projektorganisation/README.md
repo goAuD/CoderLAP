@@ -1,21 +1,5 @@
 # Vor und Nachteile der Projektorganisation
 
-## Lényeg 30 másodpercben
-
-A **projektorganizáció** azt jelenti, hogy a projekt munkáját külön szervezeti rendben, felelősségekkel és kommunikációval irányítjuk.
-
-Előnye:
-
-- átláthatóbb felelősség
-- jobb fókusz
-- erősebb koordináció
-
-Hátránya:
-
-- több szervezési ráfordítás
-- erőforrásütközések
-- párhuzamos struktúrák kialakulása
-
 ## Gyors vizuális kép
 
 | Előny | Hátrány |

@@ -1,15 +1,5 @@
 # Gueltigkeitsbereiche von Variablen
 
-## Lényeg 30 másodpercben
-
-A változó **hatóköre** vagy **scope-ja** azt mondja meg, hogy a program mely részein érhető el a változó.
-
-Röviden:
-
-- nem minden változó látszik mindenhol
-- lehet lokális, blokk-szintű vagy globális
-- a rossz scope sok hibát okozhat
-
 ## Gyors vizuális kép
 
 | Scope típusa | Hol érhető el? |

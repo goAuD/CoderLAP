@@ -1,24 +1,5 @@
 # Entsorgung von Elektronikschrott
 
-## Lényeg 30 másodpercben
-
-Az **elektronikai hulladékot** nem szabad egyszerűen a vegyes szemétbe dobni.
-
-Ide tartozhat például:
-
-- számítógép
-- monitor
-- nyomtató
-- telefon
-- tablet
-- kábelek és bizonyos tartozékok
-
-Fontos:
-
-- külön kell gyűjteni
-- hivatalos gyűjtőhelyen vagy visszavételi rendszeren keresztül kell leadni
-- akkumulátorokra és elemekre külön szabályok is vonatkozhatnak
-
 ## Gyors vizuális kép
 
 | Eszköz | Mit tegyél vele? |

@@ -1,20 +1,5 @@
 # Rechte betroffener Personen
 
-## Lényeg 30 másodpercben
-
-A GDPR szerint az érintett személynek több fontos joga van a róla kezelt személyes adatokkal kapcsolatban.
-
-Ilyenek például:
-
-- tájékoztatáshoz való jog
-- hozzáférés / betekintés joga
-- helyesbítés
-- törlés
-- adatkezelés korlátozása
-- adathordozhatóság
-- tiltakozás
-- panasz a hatóságnál
-
 ## Gyors vizuális kép
 
 | Jog | Mit jelent? |

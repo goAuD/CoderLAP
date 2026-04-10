@@ -1,15 +1,5 @@
 # Lastenheft
 
-## Lényeg 30 másodpercben
-
-A **Lastenheft** a megrendelői oldalról írja le, hogy **mit** kell megoldani és **miért**.
-
-Röviden:
-
-- igényeket és elvárásokat ír le
-- még nem a technikai megoldás részletes terve
-- a `Pflichtenheft` alapja
-
 ## Gyors vizuális kép
 
 | Dokumentum | Fő nézőpont |

@@ -1,18 +1,5 @@
 # Sichere Backup Planung
 
-## Lényeg 30 másodpercben
-
-A biztonságos backup nem abból áll, hogy "néha lementünk valamit".
-
-Kell egy terv:
-
-- mit mentünk
-- milyen gyakran
-- hova
-- meddig őrizzük
-- hogyan állítjuk vissza
-- ki felel érte
-
 ## Gyors vizuális kép
 
 | Kérdés | Miért fontos? |

@@ -1,15 +1,5 @@
 # Vorgehensweise bei der Datenmodellierung
 
-## Lényeg 30 másodpercben
-
-Az adatmodellezés során a valós világ adatait és kapcsolatait strukturált adatbázis-sémává alakítjuk.
-
-Röviden:
-
-- először meg kell érteni az üzleti igényt
-- utána azonosítani kell az entitásokat és kapcsolatokat
-- végül logikai és fizikai adatbázismodell készül
-
 ## Gyors vizuális kép
 
 ```text

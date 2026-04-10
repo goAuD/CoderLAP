@@ -1,15 +1,5 @@
 # Schreibtischtest
 
-## Lényeg 30 másodpercben
-
-A **Schreibtischtest** alatt vizsgakörnyezetben általában egy **kézi logikai ellenőrzést** értünk: a program futtatása nélkül végiggondoljuk, mi történne a kóddal vagy algoritmussal.
-
-Röviden:
-
-- fejben vagy papíron követjük a lépéseket
-- korán észrevehetők logikai hibák
-- nem helyettesíti a valódi futtatást és tesztelést
-
 ## Gyors vizuális kép
 
 ```text

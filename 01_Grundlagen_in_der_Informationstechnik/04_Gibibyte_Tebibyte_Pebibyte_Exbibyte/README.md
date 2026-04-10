@@ -1,19 +1,5 @@
 # Gibibyte, Tebibyte, Pebibyte, Exbibyte
 
-## Lényeg 30 másodpercben
-
-A **gibibyte**, **tebibyte**, **pebibyte** és **exbibyte** a **byte bináris, 2-hatványokra épülő** nagyobb mértékegységei.
-
-Ebben a témában:
-
-- `1 GiB = 2^30 B = 1 073 741 824 byte`
-- `1 TiB = 2^40 B = 1 099 511 627 776 byte`
-- `1 PiB = 2^50 B = 1 125 899 906 842 624 byte`
-- `1 EiB = 2^60 B = 1 152 921 504 606 846 976 byte`
-
-Ezek **nem SI-egységek**, hanem **bináris prefixek**.  
-Nem szabad őket összekeverni a `GB`, `TB`, `PB`, `EB` decimális egységekkel.
-
 ## Gyors vizuális kép
 
 | Egység | Jelölés | Szorzó | Byte-ban |

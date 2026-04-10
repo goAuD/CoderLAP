@@ -1,15 +1,5 @@
 # V-Modell Aufbau
 
-## Lényeg 30 másodpercben
-
-A **V-modell** egy olyan folyamatmodell, amely a fejlesztési lépéseket és a hozzájuk tartozó tesztelési lépéseket egymással összerendeli.
-
-Röviden:
-
-- bal oldalon: elemzés és tervezés
-- alul: megvalósítás
-- jobb oldalon: tesztelés és ellenőrzés
-
 ## Gyors vizuális kép
 
 ```text

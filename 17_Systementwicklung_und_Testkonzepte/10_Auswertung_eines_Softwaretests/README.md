@@ -1,15 +1,5 @@
 # Auswertung eines Softwaretests
 
-## Lényeg 30 másodpercben
-
-A szoftverteszt kiértékelése azt jelenti, hogy összehasonlítjuk a tényleges eredményt a várt eredménnyel, és eldöntjük, hogy a teszt sikeres volt-e.
-
-Röviden:
-
-- elvárt eredmény vs tényleges eredmény
-- pass / fail döntés
-- eltérés esetén hiba vagy további vizsgálat
-
 ## Gyors vizuális kép
 
 | Lépés | Kérdés |

@@ -1,21 +1,5 @@
 # Backup Prinzipien
 
-## Lényeg 30 másodpercben
-
-A backup alapelvei közé tartozik:
-
-- rendszeresség
-- több példány
-- elkülönített tárolás
-- restore teszt
-- megfelelő mentési típus kiválasztása
-
-Fontos mentési típusok:
-
-- `full`
-- `incremental`
-- `differential`
-
 ## Gyors vizuális kép
 
 | Típus | Mit ment? | Előny | Hátrány |

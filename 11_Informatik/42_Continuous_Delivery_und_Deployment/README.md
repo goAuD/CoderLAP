@@ -1,14 +1,5 @@
 # Continuous Delivery und Deployment
 
-## Lényeg 30 másodpercben
-
-A **Continuous Delivery** és a **Continuous Deployment** a CI után következő automatizálási szint.
-
-Röviden:
-
-- `Continuous Delivery` = a rendszer bármikor kiadható állapotban van, de a végső kiadás sokszor még jóváhagyott lépés
-- `Continuous Deployment` = a sikeres ellenőrzés után automatikusan élesbe is mehet
-
 ## Gyors vizuális kép
 
 | Szint | Meddig automatikus? |
