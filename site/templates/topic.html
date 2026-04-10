@@ -31,5 +31,12 @@
     </a>
     {% endif %}
   </nav>
+
+  <script type="application/json" data-ui-copy-json>
+    {{ {
+      "mark_done_label": ui.get("mark_done_label", "Done"),
+      "mark_undo_label": ui.get("mark_undo_label", "Undo")
+    } | tojson }}
+  </script>
 </section>
 {% endblock %}

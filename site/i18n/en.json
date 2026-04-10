@@ -17,6 +17,8 @@
   "previous_label": "Previous",
   "next_label": "Next",
   "topic_pagination_label": "Topic pagination",
+  "mark_done_label": "Learned",
+  "mark_undo_label": "Undo",
   "imprint_label": "Imprint",
   "privacy_label": "Privacy"
 }
