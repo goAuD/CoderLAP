@@ -25,6 +25,8 @@
   --color-heading: #e6edf3;
   --color-accent: #5fa7a2;
   --color-accent-soft: rgba(95, 167, 162, 0.16);
+  --color-progress: #c8b45a;
+  --color-progress-soft: rgba(200, 180, 90, 0.18);
   --color-border: rgba(201, 209, 217, 0.12);
   --color-shadow: rgba(5, 8, 10, 0.42);
   --color-shadow-inset: rgba(255, 255, 255, 0.03);

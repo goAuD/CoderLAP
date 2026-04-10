@@ -1,6 +1,60 @@
 (function () {
   "use strict";
 
+  /* ── Progress persistence (localStorage) ────────────────────────── */
+  var PROGRESS_KEY = "coderlap_progress";
+
+  function loadProgress() {
+    try {
+      return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveProgress(data) {
+    try {
+      localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
+    } catch (e) {
+      // quota exceeded — silently ignore
+    }
+  }
+
+  function getStatus(topicId) {
+    var data = loadProgress();
+    var entry = data[topicId];
+    return entry ? entry.status : null;
+  }
+
+  function setStatus(topicId, status) {
+    var data = loadProgress();
+    data[topicId] = { status: status, ts: Date.now() };
+    saveProgress(data);
+  }
+
+  function markViewed(topicId) {
+    if (!getStatus(topicId)) {
+      setStatus(topicId, "viewed");
+    }
+  }
+
+  function markDone(topicId) {
+    setStatus(topicId, "done");
+  }
+
+  function countByStatus() {
+    var data = loadProgress();
+    var viewed = 0;
+    var done = 0;
+    var keys = Object.keys(data);
+    for (var i = 0; i < keys.length; i++) {
+      var s = data[keys[i]].status;
+      if (s === "done") { done++; }
+      else if (s === "viewed") { viewed++; }
+    }
+    return { viewed: viewed, done: done, total: viewed + done };
+  }
+
   function parseJsonScript(selector) {
     var node = document.querySelector(selector);
     if (!node) {
@@ -54,6 +108,13 @@
     titleLink.textContent = item.title;
     titleLink.setAttribute("href", "/topics/" + item.slug + "/");
 
+    var status = getStatus(item.id);
+    if (status === "done") {
+      article.classList.add("topic-card--done");
+    } else if (status === "viewed") {
+      article.classList.add("topic-card--viewed");
+    }
+
     return article;
   }
 
@@ -75,6 +136,14 @@
       link.className = "sidebar-group__link";
       link.textContent = topic.subtopic_number + " · " + topic.title;
       link.setAttribute("href", "/topics/" + topic.slug + "/");
+
+      var status = getStatus(topic.id);
+      if (status === "done") {
+        link.classList.add("sidebar-group__link--done");
+      } else if (status === "viewed") {
+        link.classList.add("sidebar-group__link--viewed");
+      }
+
       item.appendChild(link);
       list.appendChild(item);
     });
@@ -287,6 +356,55 @@
     });
   }
 
+  function setupTopicProgress() {
+    var topicId = document.body.getAttribute("data-topic-id");
+    if (!topicId) {
+      return;
+    }
+
+    // Auto mark as viewed
+    markViewed(topicId);
+
+    // Insert "Mark as done" button into .topic-actions
+    var actions = document.querySelector(".topic-actions");
+    if (!actions) {
+      return;
+    }
+
+    var uiCopy = parseJsonScript("[data-ui-copy-json]") || {};
+    var doneLabel = uiCopy.mark_done_label || "Done";
+    var undoLabel = uiCopy.mark_undo_label || "Undo";
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "site-nav-link topic-done-btn";
+    btn.setAttribute("data-done-toggle", "");
+
+    function updateButton() {
+      var status = getStatus(topicId);
+      if (status === "done") {
+        btn.textContent = "✓ " + undoLabel;
+        btn.classList.add("topic-done-btn--active");
+      } else {
+        btn.textContent = doneLabel;
+        btn.classList.remove("topic-done-btn--active");
+      }
+    }
+
+    btn.addEventListener("click", function () {
+      var status = getStatus(topicId);
+      if (status === "done") {
+        setStatus(topicId, "viewed");
+      } else {
+        markDone(topicId);
+      }
+      updateButton();
+    });
+
+    updateButton();
+    actions.appendChild(btn);
+  }
+
   // Quick View overlay for non-home pages (topic, legal).
   // On the home page, setupHomeCatalog already wires the overlay.
   function setupQuickViewAnywhere() {
@@ -388,7 +506,21 @@
     });
   }
 
+  function setupProgressCounter() {
+    var counter = document.querySelector("[data-progress-counter]");
+    if (!counter) {
+      return;
+    }
+    var topicIndex = parseJsonScript("[data-topic-index-json]");
+    var totalTopics = Array.isArray(topicIndex) ? topicIndex.length : 233;
+    var counts = countByStatus();
+    counter.textContent = counts.done + " / " + totalTopics;
+    counter.hidden = false;
+  }
+
   setupHomeCatalog();
   setupQuickViewAnywhere();
   setupPrintTrigger();
+  setupTopicProgress();
+  setupProgressCounter();
 })();
