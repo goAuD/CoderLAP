@@ -69,6 +69,7 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -246,7 +247,8 @@ blockquote {
 }
 
 table {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   border-collapse: collapse;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -256,21 +258,24 @@ table {
 
 th,
 td {
-  padding: 0.8rem 0.9rem;
+  padding: 0.65rem 0.85rem;
   border-bottom: 1px solid var(--color-border);
   text-align: left;
   vertical-align: top;
 }
 
 th {
+  white-space: nowrap;
   color: var(--color-heading);
   font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 0.88em;
   background: rgba(95, 167, 162, 0.08);
 }
 
 td {
   color: var(--color-text);
+  font-size: 0.92em;
 }
 
 :focus-visible {
@@ -345,4 +350,42 @@ td {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(95, 167, 162, 0.35) transparent;
+}
+
+.topic-article table::-webkit-scrollbar,
+.legal-article table::-webkit-scrollbar {
+  height: 0.45rem;
+}
+
+.topic-article table::-webkit-scrollbar-thumb,
+.legal-article table::-webkit-scrollbar-thumb {
+  background: rgba(95, 167, 162, 0.35);
+  border-radius: 999px;
+}
+
+/* Fade hint on right edge when table overflows */
+.topic-article .table-scroll-wrap,
+.legal-article .table-scroll-wrap {
+  position: relative;
+}
+
+.topic-article .table-scroll-wrap::after,
+.legal-article .table-scroll-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  background: linear-gradient(to right, transparent, rgba(21, 24, 28, 0.6));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.topic-article .table-scroll-wrap.has-overflow::after,
+.legal-article .table-scroll-wrap.has-overflow::after {
+  opacity: 1;
 }
