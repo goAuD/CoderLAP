@@ -287,6 +287,108 @@
     });
   }
 
+  // Quick View overlay for non-home pages (topic, legal).
+  // On the home page, setupHomeCatalog already wires the overlay.
+  function setupQuickViewAnywhere() {
+    if (document.querySelector("[data-catalog-controls]")) {
+      return;
+    }
+
+    var quickViewLink = document.querySelector("[data-quick-view-link]");
+    if (!quickViewLink) {
+      return;
+    }
+
+    var sidebar = null;
+    var panel = null;
+    var ready = false;
+
+    function buildSidebar(mainTopics) {
+      sidebar = document.createElement("aside");
+      sidebar.className = "catalog-sidebar";
+      sidebar.hidden = true;
+
+      panel = document.createElement("div");
+      panel.setAttribute("data-sidebar-panel", "");
+
+      mainTopics.forEach(function (mainTopic) {
+        panel.appendChild(createSidebarSection(mainTopic));
+      });
+
+      sidebar.appendChild(panel);
+
+      var shell = document.querySelector(".site-shell");
+      if (shell) {
+        shell.appendChild(sidebar);
+      }
+
+      panel.addEventListener("click", function (event) {
+        if (event.target && event.target.tagName === "A") {
+          closeOverlay();
+        }
+      });
+    }
+
+    function openOverlay() {
+      if (!sidebar) {
+        return;
+      }
+      sidebar.hidden = false;
+      document.body.classList.add("sidebar-open");
+    }
+
+    function closeOverlay() {
+      document.body.classList.remove("sidebar-open");
+      if (sidebar) {
+        sidebar.hidden = true;
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      if (!document.body.classList.contains("sidebar-open")) {
+        return;
+      }
+      if (sidebar && !sidebar.contains(event.target) && !event.target.hasAttribute("data-quick-view-link")) {
+        closeOverlay();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && document.body.classList.contains("sidebar-open")) {
+        closeOverlay();
+      }
+    });
+
+    quickViewLink.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      if (document.body.classList.contains("sidebar-open")) {
+        closeOverlay();
+        return;
+      }
+
+      if (ready) {
+        openOverlay();
+        return;
+      }
+
+      fetch("/data/navigation.json")
+        .then(function (res) { return res.json(); })
+        .then(function (nav) {
+          if (!nav || !Array.isArray(nav.main_topics)) {
+            return;
+          }
+          buildSidebar(nav.main_topics);
+          ready = true;
+          openOverlay();
+        })
+        .catch(function () {
+          window.location.href = "/#catalog-title";
+        });
+    });
+  }
+
   setupHomeCatalog();
+  setupQuickViewAnywhere();
   setupPrintTrigger();
 })();

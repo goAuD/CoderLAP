@@ -45,6 +45,6 @@
         </div>
       </footer>
     </div>
-    <script src="{{ asset_prefix }}/js/site.js" defer></script>
+    <script src="{{ asset_prefix }}/js/site.js?v={{ cache_bust | default('0') }}" defer></script>
   </body>
 </html>

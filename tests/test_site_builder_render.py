@@ -101,7 +101,7 @@ class RenderTests(unittest.TestCase):
 
         self.assertIn('<link rel="stylesheet" href="/assets/css/base.css">', html)
         self.assertIn('<link rel="stylesheet" href="/assets/css/print.css" media="print">', html)
-        self.assertIn('<script src="/assets/js/site.js" defer></script>', html)
+        self.assertIn('<script src="/assets/js/site.js?v=0" defer></script>', html)
         self.assertIn("Kezdőlap", html)
         self.assertIn('<html lang="hu">', html)
 
