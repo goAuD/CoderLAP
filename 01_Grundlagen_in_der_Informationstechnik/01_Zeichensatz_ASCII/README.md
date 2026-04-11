@@ -60,7 +60,7 @@ Az ASCII önmagában már nem elég a modern, többnyelvű rendszerekhez, de tov
 
 - sok technikai szabvány történetileg erre épült
 - sok fájlformátum és protokoll ASCII-barát
-- a **UTF-8** első `128` karaktere pontosan megegyezik az ASCII-val
+- az **UTF-8** első `128` karaktere pontosan megegyezik az ASCII-val
 - programozásban, hálózatokban, logokban, HTTP-fejlécekben, konfigurációkban ma is gyakran előjön
 
 ## ASCII, Unicode, UTF-8: ne keverd össze
@@ -103,7 +103,7 @@ Ezért ha egy rendszer csak ASCII-t vár, akkor az ilyen karakterek:
 
 - Azt mondani, hogy az ASCII **8 bites**.
 - Azt hinni, hogy az ASCII tud magyar ékezeteket.
-- Összekeverni az ASCII-t a Unicode-dal vagy a UTF-8-cal.
+- Összekeverni az ASCII-t a Unicode-dal vagy az UTF-8-cal.
 - Azt állítani, hogy minden mai szövegfájl ASCII.
 - Nem tudni példát mondani vezérlőkarakterre.
 
@@ -153,7 +153,7 @@ Az ASCII történeti definíciójához az eredeti RFC-hivatkozást is megadom.
    Használat: a szabványos internetes elnevezés (`US-ASCII`) megerősítése.
 
 7. IETF RFC 20 - ASCII format for Network Interchange  
-   https://www.ietf.org/ietf-ftp/rfc/rfc20.txt.pdf  
+   https://datatracker.ietf.org/doc/html/rfc20  
    Használat: az ASCII eredeti, történeti szabványos leírása és a vezérlőkarakterek.
 
 Megnyitva: `2026-04-08`
