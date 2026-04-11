@@ -100,7 +100,7 @@ Vizsgakörnyezetben ez általában olyan adatbázis-megoldást jelent, amely:
    Használat: hivatalos forrás az `SQLite` sajátos előnyeihez, például az egyszerű beágyazhatósághoz.
 
 4. MongoDB - What is MongoDB?  
-   https://www.mongodb.com/resources/basics/databases/what-is-mongodb  
+   https://www.mongodb.com/what-is-mongodb  
    Használat: hivatalos forrás dokumentumorientált, community-alapú adatbázis példához.
 
 Megjegyzés: a konkrét előnyök és hátrányok egy része a hivatalos termékleírásokból levont gyakorlati következtetés.
