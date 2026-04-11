@@ -118,11 +118,11 @@ Ezért fontos:
    Használat: hivatalos, aktuális alapelvek a jó keresőoptimalizálási gyakorlatról.
 
 2. Google Search Central - Search Essentials  
-   https://developers.google.com/search/docs/fundamentals/search-essentials  
+   https://developers.google.com/search/docs/essentials  
    Használat: hivatalos összefoglaló arról, mit vár el a Google az indexelhető és hasznos oldalaktól.
 
-3. web.dev - Learn SEO  
-   https://web.dev/learn/seo/  
+3. Google Search Central - Documentation  
+   https://developers.google.com/search/docs  
    Használat: modern, Google által gondozott fejlesztői anyag a SEO technikai és tartalmi alapjairól.
 
 Megnyitva: `2026-04-08`
