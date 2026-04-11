@@ -107,8 +107,8 @@ Mert a megfelelő modell kiválasztása függhet:
    https://aws.amazon.com/what-is/public-cloud/  
    Használat: közérthető, mai public cloud összefoglaló.
 
-4. AWS - What is Hybrid Cloud Computing?  
-   https://aws.amazon.com/what-is/hybrid-cloud-computing/  
+4. AWS - What is Hybrid Cloud?  
+   https://aws.amazon.com/what-is/hybrid-cloud/  
    Használat: gyakorlati magyarázat hybrid cloud használati mintákhoz.
 
 Megnyitva: `2026-04-08`
