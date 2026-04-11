@@ -76,8 +76,8 @@ Mert a tükröződés:
 
 ## Források
 
-1. Arbeitsinspektion - Bildschirmarbeitsplatz - Informationen für Anwenderinnen und Anwender  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Bildschirmarbeitsplatz.html  
+1. Arbeitsinspektion - Bildschirmarbeitsplatz  
+   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
    Használat: hivatalos osztrák forrás a monitor 90°-os ablakhoz viszonyított elhelyezéséhez és a blendfrei beállításhoz.
 
 2. AUVA - Checkliste Homeoffice für Arbeitnehmer:innen  
