@@ -173,8 +173,8 @@ Ezt sokan elfelejtik.
    https://support.microsoft.com/en-us/office/create-and-print-a-presentation-in-outline-view-3516310c-c9c0-4d4f-8c11-2759313477a5  
    Használat: vázlatalapú tervezés, logikus szerkezet.
 
-3. Microsoft Support - Rehearse and time the delivery of a presentation  
-   https://support.microsoft.com/en-us/office/rehearse-and-time-the-delivery-of-a-presentation-828c8c6d-97da-4d28-b9d1-4282f6d2b7f1  
+3. Microsoft Support - Record a slide show with narration and slide timings  
+   https://support.microsoft.com/en-us/office/record-a-slide-show-with-narration-and-slide-timings-0b9502c6-5f6c-40ae-b1e7-e47d8741161c  
    Használat: próba, időzítés és előadói felkészülés.
 
 Megnyitva: `2026-04-08`
