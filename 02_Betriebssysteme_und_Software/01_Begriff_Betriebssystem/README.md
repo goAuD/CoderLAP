@@ -170,8 +170,8 @@ Az OS teszi használhatóvá a számítógépet.
    https://www.ibm.com/think/topics/operating-systems  
    Használat: az operációs rendszer fő funkciói, például processz-, memória- és fájlkezelés.
 
-3. Microsoft Surface - What Is an Operating System (OS)?  
-   https://www.microsoft.com/en-us/surface/do-more-with-surface/what-is-operating-system  
-   Használat: közérthető, modern magyarázat az OS mint köztes réteg szerepéről.
+3. Microsoft - Windows help and learning  
+   https://support.microsoft.com/en-us/windows  
+   Használat: közérthető, modern áttekintés a Windows operációs rendszer funkcióiról.
 
 Megnyitva: `2026-04-08`
