@@ -116,8 +116,4 @@ Mert a gyakorlatban kell:
    https://www.ncsc.gov.uk/guidance/social-media-protect-what-you-publish  
    Használat: hivatalos útmutató arra, hogyan csökkenthető a hibás vagy káros vállalati social tartalom kockázata.
 
-4. ICO - Social media use policy  
-   https://ico.org.uk/media2/5bvpkd1w/social-media-use-policy.pdf  
-   Használat: valós, hivatalos policy-példa arra, hogyan nézhet ki egy szervezeti social media szabályzat.
-
 Megnyitva: `2026-04-08`
