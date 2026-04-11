@@ -100,7 +100,7 @@ Mert a DSGVO sok más témához kapcsolódik:
 - app
 - hírlevél
 - ügyféladatok
-- employee data
+- munkavállalói adatok
 - marketing
 - adatbiztonság
 
