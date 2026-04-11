@@ -98,7 +98,7 @@ Egy `CMS` gyakran használ egy `DBMS`-t a háttérben.
    Használat: rövid, tiszta technikai definíció a CMS fogalmához.
 
 2. Drupal.org - Drupal CMS  
-   https://www.drupal.org/drupal-cms  
+   https://new.drupal.org/drupal-cms  
    Használat: hivatalos, modern példa arra, hogyan működik a CMS mint valódi platform.
 
 3. WordPress.com - What Is a CMS?  
