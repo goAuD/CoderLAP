@@ -110,7 +110,7 @@ Mert ha a szoftver nem ügyfélközpontú:
    Használat: gyakorlati módszertan a user need alapú tervezéshez.
 
 3. GOV.UK Service Standard - Solve a whole problem for users  
-   https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem-for-users  
+   https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem  
    Használat: hivatalos forrás arra, hogy ne csak részproblémát, hanem a teljes felhasználói helyzetet kell megoldani.
 
 4. Digital.gov - An introduction to customer experience  
