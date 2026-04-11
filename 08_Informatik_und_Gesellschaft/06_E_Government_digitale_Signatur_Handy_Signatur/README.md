@@ -121,9 +121,9 @@ Ez gyakorlatban azt jelenti:
    https://www.oesterreich.gv.at/id-austria/haeufige-fragen/allgemeines-zu-id-austria.html  
    Használat: hivatalos forrás arra, hogy a Handy-Signaturt 2023.12.05-én az ID Austria váltotta fel.
 
-3. oesterreich.gv.at - Handy-Signatur  
-   https://www.oesterreich.gv.at/lexicon/H/Seite.9911412.html  
-   Használat: hivatalos fogalmi oldal, amely egyértelműen jelzi, hogy a Handy-Signaturt leváltotta az ID Austria.
+3. ID Austria - Hivatalos oldal  
+   https://www.id-austria.gv.at/  
+   Használat: a Handy-Signatur utódjaként bevezetett ID Austria hivatalos tájékoztató oldala.
 
 4. oesterreich.gv.at - PDF Signatur  
    https://www.oesterreich.gv.at/de/landingpages/pdf_signatur_services  
