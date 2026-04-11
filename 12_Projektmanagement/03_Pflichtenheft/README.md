@@ -84,8 +84,8 @@ Tipikusan:
    https://www.frankfurt-main.ihk.de/recht/mustervertraege/software-erstellungsvertrag-5199364  
    Használat: hivatalos IHK-forrás, amely a Pflichtenheft tartalmát és szerződéses szerepét mutatja be.
 
-2. IHK - Pflichtenheft für die IT-Abschlußprüfung Teil A Projektarbeit  
-   https://www.ihk.de/blueprint/servlet/resource/blob/688478/ddaafda6fa892098bd25b0a7e366996a/pflichtenheft-itapkfm-data.pdf  
-   Használat: hivatalos IHK minta, amelyből jól látszik a Pflichtenheft gyakorlati felépítése.
+2. Wikipedia - Pflichtenheft  
+   https://de.wikipedia.org/wiki/Pflichtenheft  
+   Használat: DIN 69901 és VDI hivatkozásokkal alátámasztott, jól strukturált összefoglaló a Pflichtenheft fogalmáról, tartalmáról és gyakorlati alkalmazásáról.
 
 Megnyitva: `2026-04-08`
