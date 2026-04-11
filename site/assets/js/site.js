@@ -81,6 +81,9 @@
       .trim();
   }
 
+  /* ── Resolve site root from embedded JSON (language-aware) ──── */
+  var SITE_ROOT = "/";
+
   function createCard(item, templateRoot) {
     var article;
     var meta;
@@ -106,7 +109,7 @@
 
     meta.textContent = item.main_topic_number + " · " + formatMainTopicLabel(item.main_topic_label);
     titleLink.textContent = item.title;
-    titleLink.setAttribute("href", "/topics/" + item.slug + "/");
+    titleLink.setAttribute("href", SITE_ROOT + "topics/" + item.slug + "/");
 
     var status = getStatus(item.id);
     if (status === "done") {
@@ -135,7 +138,7 @@
       var link = document.createElement("a");
       link.className = "sidebar-group__link";
       link.textContent = topic.subtopic_number + " · " + topic.title;
-      link.setAttribute("href", "/topics/" + topic.slug + "/");
+      link.setAttribute("href", SITE_ROOT + "topics/" + topic.slug + "/");
 
       var status = getStatus(topic.id);
       if (status === "done") {
@@ -266,6 +269,8 @@
     if (!Array.isArray(topicIndex) || !navigation || !Array.isArray(navigation.main_topics)) {
       return;
     }
+
+    SITE_ROOT = uiCopy.site_root || "/";
 
     var topics = Array.isArray(topicIndex) ? topicIndex.slice() : [];
     var mainTopics = navigation.main_topics.slice();
@@ -490,18 +495,21 @@
         return;
       }
 
-      fetch("/data/navigation.json")
+      var uiCopyQV = parseJsonScript("[data-ui-copy-json]") || {};
+      var root = uiCopyQV.site_root || SITE_ROOT;
+      fetch(root + "data/navigation.json")
         .then(function (res) { return res.json(); })
         .then(function (nav) {
           if (!nav || !Array.isArray(nav.main_topics)) {
             return;
           }
+          SITE_ROOT = root;
           buildSidebar(nav.main_topics);
           ready = true;
           openOverlay();
         })
         .catch(function () {
-          window.location.href = "/#catalog-title";
+          window.location.href = root + "#catalog-title";
         });
     });
   }
