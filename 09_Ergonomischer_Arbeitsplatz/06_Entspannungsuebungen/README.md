@@ -115,8 +115,8 @@ Mert a napi kis megszakítás:
    https://auva.at/praevention/medien-und-publikationen/publikationen-us/homeoffice-fuer-arbeitnehmerinnen/  
    Használat: gyakorlati checklistás forrás mozgásról, szünetről és ergonomikus munkaszervezésről.
 
-4. Arbeitsinspektion - Bildschirmarbeitsplatz - Informationen für Anwenderinnen und Anwender  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Bildschirmarbeitsplatz.html  
+4. Arbeitsinspektion - Bildschirmarbeitsplatz  
+   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
    Használat: hivatalos háttérmagyarázat a szem- és testterheléshez képernyőmunka esetén.
 
 Megnyitva: `2026-04-08`
