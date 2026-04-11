@@ -89,12 +89,8 @@ Mert a Web 2.0 nagy változást hozott:
 
 ## Források
 
-1. OECD - Participative Web and User-Created Content: Web 2.0, Wikis and Social Networking  
-   https://www.oecd.org/en/publications/participative-web-and-user-created-content_9789264037472-en.html  
-   Használat: intézményi, klasszikus alapforrás a Web 2.0 fogalmához és a user-generated content magyarázatához.
-
-2. OECD PDF - Participative Web and User-Created Content  
+1. OECD - Participative Web and User-Created Content (PDF)  
    https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/09/participative-web-and-user-created-content_g1gh826c/9789264037472-en.pdf  
-   Használat: részletesebb háttér a Web 2.0 társadalmi és gazdasági hatásaihoz.
+   Használat: klasszikus intézményi alapforrás a Web 2.0 fogalmához, a user-generated content magyarázatához, valamint a Web 2.0 társadalmi és gazdasági hatásaihoz.
 
 Megnyitva: `2026-04-08`
