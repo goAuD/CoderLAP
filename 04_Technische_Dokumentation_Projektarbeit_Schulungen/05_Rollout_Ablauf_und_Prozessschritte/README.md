@@ -154,14 +154,14 @@ Az elfogadás azt jelenti, hogy a megrendelő vagy felelős fél visszajelzi:
 
 > A rollout egy új rendszer vagy alkalmazás tervezett bevezetése az éles környezetbe.  
 > A folyamat tipikusan tartalmazza a tervezést, az előkészítést, a pilotot, a tényleges bevezetést, az ellenőrzést, az oktatást, az átadást és az elfogadást.  
-> Fontos része a biztonsági követelmények figyelembevétele, az adatmigration, valamint a rollback lehetősége arra az esetre, ha a bevezetés nem sikerül.
+> Fontos része a biztonsági követelmények figyelembevétele, az adatmigráció, valamint a rollback lehetősége arra az esetre, ha a bevezetés nem sikerül.
 
 ## Gyakori vizsgahibák
 
 - A rolloutot pusztán telepítésnek tekinteni.
 - Nem említeni a rollback lehetőségét.
 - Kihagyni a felhasználói oktatást.
-- Nem gondolni adatmigrationra.
+- Nem gondolni adatmigrációra.
 - Az átadás és elfogadás különbségét nem felismerni.
 
 ## Gyors önellenőrzés
@@ -169,7 +169,7 @@ Az elfogadás azt jelenti, hogy a megrendelő vagy felelős fél visszajelzi:
 1. Mi a rollout célja?
 2. Miért fontos a pilot?
 3. Mi a rollback szerepe?
-4. Miért kritikus az adatmigration ellenőrzése?
+4. Miért kritikus az adatmigráció ellenőrzése?
 5. Miért kell felhasználói oktatás?
 
 ## Rövid válaszok az önellenőrzéshez
