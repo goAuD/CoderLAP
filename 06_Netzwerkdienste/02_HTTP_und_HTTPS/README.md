@@ -2,14 +2,14 @@
 
 ## Gyors vizuális kép
 
-| Protokoll | Port | Védelem |
-|---|---|---|
-| HTTP | `80` | nincs beépített titkosítás |
-| HTTPS | `443` | TLS védi |
+| Protokoll | Teljes név | Port | Védelem |
+|---|---|---|---|
+| HTTP | Hypertext Transfer Protocol | `80` | nincs beépített titkosítás |
+| HTTPS | Hypertext Transfer Protocol Secure | `443` | TLS védi |
 
 ## Mi a HTTP?
 
-A HTTP egy stateless, azaz állapotmentes kérés-válasz protokoll.
+A HTTP – teljes nevén **Hypertext Transfer Protocol** – egy stateless, azaz állapotmentes kérés-válasz protokoll.
 
 A tipikus folyamat:
 
@@ -26,7 +26,7 @@ Példák HTTP-metódusokra:
 
 ## Mi a HTTPS?
 
-A HTTPS azt jelenti, hogy a HTTP-forgalom TLS-en keresztül megy.
+A HTTPS – teljes nevén **Hypertext Transfer Protocol Secure** – azt jelenti, hogy a HTTP-forgalom TLS-en keresztül megy.
 
 Ez három fontos dolgot ad:
 
@@ -72,8 +72,8 @@ Például nem oldja meg önmagában:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A HTTP a weben használt alapvető kérés-válasz protokoll.  
-> A HTTPS ugyanez a protokoll TLS-védelemmel, ezért biztosítja az adatforgalom titkosítását, sértetlenségét és a szerver hitelesítését.  
+> A HTTP (Hypertext Transfer Protocol) a weben használt alapvető kérés-válasz protokoll.  
+> A HTTPS (Hypertext Transfer Protocol Secure) ugyanez a protokoll TLS-védelemmel, ezért biztosítja az adatforgalom titkosítását, sértetlenégét és a szerver hitelesítését.  
 > Gyakorlatban a modern webes szolgáltatásoknál a HTTPS a standard.
 
 ## Gyakori vizsgahibák
