@@ -77,8 +77,8 @@ Majd megkeresi:
    https://www.atlassian.com/software/confluence/templates/gap-analysis  
    Használat: modern, jól használható forrás a jelenlegi és célállapot összevetésének logikájához.
 
-2. Lucidchart - Gap analysis process  
-   https://www.lucidchart.com/blog/gap-analysis-process  
+2. Asana - Gap analysis: 4-step process, types, and examples  
+   https://asana.com/resources/gap-analysis  
    Használat: kiegészítő, szemléletes forrás a gap-elemzés lépéseihez és gyakorlati alkalmazásához.
 
 Megnyitva: `2026-04-08`
