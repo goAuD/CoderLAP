@@ -130,8 +130,8 @@ A kettő kapcsolódik, de nem ugyanaz.
    https://blogs.oracle.com/linux/post/cfs-group-scheduling  
    Használat: modern Linux kernel ütemezési háttér és „ideal multitasking CPU” kontextus.
 
-3. Microsoft Surface - What Is an Operating System (OS)?  
-   https://www.microsoft.com/en-us/surface/do-more-with-surface/what-is-operating-system  
+3. Microsoft - Windows help and learning  
+   https://support.microsoft.com/en-us/windows  
    Használat: általános OS-feladatok modern, közérthető összefoglalása.
 
 Megnyitva: `2026-04-08`
