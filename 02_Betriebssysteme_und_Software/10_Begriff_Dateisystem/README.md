@@ -165,7 +165,7 @@ Ha Linux rendszerpartícióról van szó:
    Használat: modern Windows fájlrendszer-példa és fájlrendszer-jellemzők.
 
 3. Red Hat Enterprise Linux - Managing file systems  
-   https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/pdf/managing_file_systems/red_hat_enterprise_linux-9-managing_file_systems-en-us.pdf  
+   https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/managing_file_systems/  
    Használat: Linuxos fájlrendszer-kezelési háttér és rendszeres fogalmak.
 
 4. Apple Developer Documentation - Files and directories  
