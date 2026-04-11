@@ -89,8 +89,8 @@ Ezért jó vizsgás mondat:
 
 ## Források
 
-1. Microsoft Learn - How to: Pass Arguments by Value and by Reference (C++)  
-   https://learn.microsoft.com/en-us/cpp/cpp/how-to-pass-arguments-by-value-and-by-reference  
+1. Microsoft Learn - Method Parameters (C#) – Pass by value and pass by reference  
+   https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/method-parameters  
    Használat: hivatalos, jól érthető forrás a két paraméterátadási mód alapkülönbségéhez.
 
 2. Oracle - Pass-By-Value Example  
