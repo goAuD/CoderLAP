@@ -110,7 +110,7 @@ Ha nincs azonnali megoldás:
    Használat: hivatalos útmutató arra, hogyan kell a felhasználó igényeihez igazítani a támogatást és a kommunikációt.
 
 3. GOV.UK Service Manual - Solve a whole problem for users  
-   https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem-for-users  
+   https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem  
    Használat: hivatalos alapelv arra, hogy ne csak a technikai részhibát, hanem a teljes ügyfélhelyzetet kezeljük.
 
 4. Digital.gov - Customer experience  
