@@ -174,15 +174,15 @@ Hangnál fontos lehet:
 ## Források
 
 1. Apple Support - iPad User Guide  
-   https://support.apple.com/guide/ipad/take-flyover-tours-ipad6f5e96f4/ipados  
+   https://support.apple.com/guide/ipad/welcome/ipados  
    Használat: iPad mint modern tablet-funkciók hivatalos áttekintése, multitasking és kiegészítők.
 
 2. Apple - iPad Pro Technical Specifications  
    https://www.apple.com/ipad-pro/specs/  
    Használat: hivatalos tablet-spec példák kijelzőre, RAM-ra, tárhelyre, kamerára, cellular és stylus támogatásra.
 
-3. Android Developers - Large screen app quality  
-   https://developer.android.com/docs/quality-guidelines/large-screen-app-quality  
-   Használat: Android tablet és nagy kijelzős eszközök modern, hivatalos kontextusa.
+3. Android Developers - Adaptive app quality  
+   https://developer.android.com/docs/quality-guidelines/adaptive-app-quality  
+   Használat: Android tablet és többféle kijelzős eszközök modern, hivatalos minőségi irányelvei.
 
 Megnyitva: `2026-04-08`
