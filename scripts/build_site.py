@@ -16,18 +16,14 @@ _ensure_repo_root_on_path()
 from scripts.site_builder.settings import BuildSettings
 from scripts.site_builder.build import build_site
 
-import json
-
 
 def main() -> None:
     settings = BuildSettings.from_repo_root(Path(__file__).resolve().parents[1])
-    ui_strings = json.loads((settings.i18n_dir / "en.json").read_text(encoding="utf-8"))
-    legal_pages = {
-        "imprint": (settings.legal_content_dir / "imprint.md").read_text(encoding="utf-8"),
-        "privacy": (settings.legal_content_dir / "privacy.md").read_text(encoding="utf-8"),
-    }
-    output_dir = build_site(settings, ui_strings, legal_pages)
+    output_dir = build_site(settings)
     print(f"Built site into {output_dir}")
+    for lc in settings.languages:
+        tag = "(default)" if lc.is_default else f"(/{lc.code}/)"
+        print(f"  {lc.code} {tag}")
 
 
 if __name__ == "__main__":

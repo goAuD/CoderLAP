@@ -15,7 +15,7 @@
       <a class="skip-link" href="#main-content">Skip to content</a>
       <header class="site-topbar">
         <div class="site-topbar__inner">
-          <a class="site-brand" href="/">
+          <a class="site-brand" href="{{ site_root | default('/', true) }}">
             <span class="site-brand__row">
               <svg class="site-brand__icon" width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                 <rect width="32" height="32" rx="6" fill="#1d2329"/>
@@ -27,8 +27,19 @@
             </span>
           </a>
           <nav class="site-topbar__nav" aria-label="{{ ui.get('primary_navigation_label', 'Primary navigation') }}">
-            <a class="site-nav-link"{% if body_class == "page-home" %} aria-current="page"{% endif %} href="/">{{ ui.get("home_label", "Home") }}</a>
-            <a class="site-nav-link" href="/#catalog-title" data-quick-view-link>{{ ui.get("quick_view_label", "Quick view") }}</a>
+            <a class="site-nav-link"{% if body_class == "page-home" %} aria-current="page"{% endif %} href="{{ site_root | default('/', true) }}">{{ ui.get("home_label", "Home") }}</a>
+            <a class="site-nav-link" href="{{ site_root | default('/', true) }}#catalog-title" data-quick-view-link>{{ ui.get("quick_view_label", "Quick view") }}</a>
+            {% if lang_switcher is defined and lang_switcher %}
+            <span class="lang-switcher" aria-label="{{ ui.get('language_switcher_label', 'Switch language') }}">
+              {% for lang in lang_switcher %}
+              {% if lang.is_current %}
+              <span class="lang-switcher__item lang-switcher__item--active" aria-current="true">{{ lang.label }}</span>
+              {% else %}
+              <a class="lang-switcher__item" href="{{ lang.prefix }}">{{ lang.label }}</a>
+              {% endif %}
+              {% endfor %}
+            </span>
+            {% endif %}
           </nav>
         </div>
       </header>
@@ -39,8 +50,8 @@
         <div class="site-footer__inner">
           <p class="site-footer__meta">CoderLAP</p>
           <div class="site-footer__links">
-            <a href="/imprint/">{{ ui.get("imprint_label", "Imprint") }}</a>
-            <a href="/privacy/">{{ ui.get("privacy_label", "Privacy") }}</a>
+            <a href="{{ site_root | default('/', true) }}imprint/">{{ ui.get("imprint_label", "Imprint") }}</a>
+            <a href="{{ site_root | default('/', true) }}privacy/">{{ ui.get("privacy_label", "Privacy") }}</a>
           </div>
         </div>
       </footer>

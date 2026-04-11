@@ -31,4 +31,4 @@ class BuildSettingsTests(unittest.TestCase):
         )
 
         self.assertEqual(result.returncode, 0, msg=result.stderr)
-        self.assertEqual(result.stdout.strip(), expected_output)
+        self.assertIn(expected_output, result.stdout.strip())

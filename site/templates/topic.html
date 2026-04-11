@@ -13,7 +13,7 @@
 {% endfor %}
 <section class="page-shell" aria-label="{{ topic.title }}">
   <section class="topic-actions">
-    <a class="site-nav-link" href="/">{{ ui.get("back_to_catalog", "") }}</a>
+    <a class="site-nav-link" href="{{ site_root | default('/', true) }}">{{ ui.get("back_to_catalog", "") }}</a>
     <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "") }}</button>
   </section>
 
@@ -21,12 +21,12 @@
 
   <nav class="topic-pagination" aria-label="{{ ui.get('topic_pagination_label', '') }}">
     {% if prev_ref.item %}
-    <a class="topic-pagination__link topic-pagination__link--prev" href="/topics/{{ prev_ref.item.slug }}/">
+    <a class="topic-pagination__link topic-pagination__link--prev" href="{{ site_root | default('/', true) }}topics/{{ prev_ref.item.slug }}/">
       {{ ui.get("previous_label", "") }}: {{ prev_ref.item.title }}
     </a>
     {% endif %}
     {% if next_ref.item %}
-    <a class="topic-pagination__link topic-pagination__link--next" href="/topics/{{ next_ref.item.slug }}/">
+    <a class="topic-pagination__link topic-pagination__link--next" href="{{ site_root | default('/', true) }}topics/{{ next_ref.item.slug }}/">
       {{ ui.get("next_label", "") }}: {{ next_ref.item.title }}
     </a>
     {% endif %}
@@ -35,7 +35,8 @@
   <script type="application/json" data-ui-copy-json>
     {{ {
       "mark_done_label": ui.get("mark_done_label", "Done"),
-      "mark_undo_label": ui.get("mark_undo_label", "Undo")
+      "mark_undo_label": ui.get("mark_undo_label", "Undo"),
+      "site_root": site_root | default("/", true)
     } | tojson }}
   </script>
 </section>
