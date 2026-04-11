@@ -87,8 +87,8 @@ Jó, ha tudod:
    https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009121&Paragraf=10&Uebergangsrecht=  
    Használat: a munkaszünet és tevékenységváltás elsődleges osztrák jogforrása.
 
-3. Arbeitsinspektion - Bildschirmarbeitsplatz - Informationen für Anwenderinnen und Anwender  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Bildschirmarbeitsplatz.html  
+3. Arbeitsinspektion - Bildschirmarbeitsplatz  
+   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
    Használat: ergonómiai és egészségvédelmi háttérmagyarázat a képernyőmunka terheléseihez.
 
 Megnyitva: `2026-04-08`

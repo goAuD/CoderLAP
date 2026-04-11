@@ -102,8 +102,8 @@ Mert segíthet megelőzni:
 
 ## Források
 
-1. Arbeitsinspektion - Bildschirmarbeitsplatz - Informationen für Anwenderinnen und Anwender  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Bildschirmarbeitsplatz.html  
+1. Arbeitsinspektion - Bildschirmarbeitsplatz  
+   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
    Használat: hivatalos osztrák ergonómiai alapforrás a monitor, asztal, szék és billentyűzet elrendezéséhez.
 
 2. Arbeitsinspektion - Bildschirmarbeitsplätze  

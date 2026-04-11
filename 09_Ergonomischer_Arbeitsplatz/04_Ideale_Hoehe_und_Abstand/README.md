@@ -6,6 +6,7 @@
 |---|---|
 | monitor magassága | kissé szemmagasság alatt |
 | tekintet | enyhén lefelé |
+| dőlésszög | enyhén hátradöntve, felső szél kicsit távolabb |
 | távolság | lehetőleg nagy, kényelmesen olvasható |
 
 ## Miért fontos a magasság?
@@ -51,6 +52,23 @@ Gyakorlati kép:
 - elég nagy asztalfelület
 - megfelelő monitorpozíció
 
+## Miért fontos a monitor dőlésszöge?
+
+A képernyőt érdemes enyhén hátradönteni, vagyis:
+
+- a felső széle legyen kicsit távolabb a felhasználótól, mint az alsó
+
+Ez azért hasznos, mert:
+
+- támogatja a természetes, enyhén lefelé irányuló tekintetet
+- csökkenti a nyak- és szemterhelést
+- segíthet a tükröződés elkerülésében
+
+Fontos:
+
+- a dőlésszög ne legyen túl nagy, mert az ismét torzítást vagy tükröződést okozhat
+- a pontos beállítás függ a monitor magasságától és a felhasználó testhelyzetétől
+
 ## Mindenkinek ugyanaz az ideális?
 
 Nem teljesen.
@@ -65,6 +83,7 @@ Függhet:
 ## Vizsgán jól használható megfogalmazás
 
 > A monitor ideális beállításánál a tekintet enyhén lefelé irányuljon, és a felső információs sor ne legyen a szemmagasság fölött.  
+> A képernyőt érdemes enyhén hátradönteni, hogy a felső szél kicsit távolabb legyen a felhasználótól.  
 > A képernyő távolsága legyen lehetőleg nagy, de még kényelmesen olvasható, mert ez csökkenti a szem és a nyak terhelését.  
 > A pontos beállítás személyenként eltérhet, ezért a munkahelyet egyénileg kell igazítani.
 
@@ -73,6 +92,7 @@ Függhet:
 - Pontos, mindenkire kötelező centiméterértéket mondani.
 - Azt állítani, hogy a képernyő felső széle mindig jóval szemmagasság fölött legyen.
 - Nem megemlíteni a lefelé irányuló tekintetet.
+- Elfelejteni a monitor dőlésszögét.
 - Elfelejteni, hogy a billentyűzet különállása segíti a jó távolságot.
 
 ## Gyors önellenőrzés
@@ -81,7 +101,8 @@ Függhet:
 2. Hol legyen a felső információs sor?
 3. Miért ne legyen túl közel a monitor?
 4. Mi segít a jó képernyőtávolságban?
-5. Ugyanaz a beállítás jó mindenkinek?
+5. Miért érdemes a monitort enyhén hátradönteni?
+6. Ugyanaz a beállítás jó mindenkinek?
 
 ## Rövid válaszok az önellenőrzéshez
 
@@ -89,13 +110,14 @@ Függhet:
 2. Szemmagasság alatt vagy legfeljebb azon
 3. Mert jobban terheli a szemet
 4. Külön billentyűzet és nagyobb asztalfelület
-5. Nem
+5. Mert támogatja a lefelé irányuló tekintetet és csökkenti a nyak- és szemterhelést
+6. Nem
 
 ## Források
 
-1. Arbeitsinspektion - Bildschirmarbeitsplatz - Informationen für Anwenderinnen und Anwender  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Bildschirmarbeitsplatz.html  
-   Használat: hivatalos osztrák forrás a nagy képernyőtávolság és a lefelé irányuló tekintet alapelvéhez.
+1. Arbeitsinspektion - Bildschirmarbeitsplatz  
+   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   Használat: hivatalos osztrák forrás a képernyőtávolság, a lefelé irányuló tekintet és a monitor dőlésszögének alapélveihez.
 
 2. AUVA - Telearbeitsplätze  
    https://auva.at/media/iswlvmmn/mplus-022_telearbeitsplaetze_bf_2504.pdf  
