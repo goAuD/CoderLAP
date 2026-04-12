@@ -48,8 +48,11 @@ Architecture and delivery notes are documented in:
 - [docs/project/content-architecture.md](./docs/project/content-architecture.md)
 - [docs/project/architecture-adoption.md](./docs/project/architecture-adoption.md)
 - [docs/project/deploy-strategy.md](./docs/project/deploy-strategy.md)
+- [docs/project/github-release-hygiene.md](./docs/project/github-release-hygiene.md)
+- [docs/project/release-notes-v0.1.0-private-beta.1.md](./docs/project/release-notes-v0.1.0-private-beta.1.md)
 - [docs/project/private-rollout-access.md](./docs/project/private-rollout-access.md)
 - [docs/project/pre-public-checklist.md](./docs/project/pre-public-checklist.md)
+- [docs/process/md013-cleanup-strategy.md](./docs/process/md013-cleanup-strategy.md)
 
 ## Project layout
 

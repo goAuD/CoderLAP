@@ -43,7 +43,10 @@ Read only when relevant:
 - `docs/project/architecture-adoption.md`
 - `docs/project/private-rollout-access.md`
 - `docs/project/pre-public-checklist.md`
+- `docs/project/github-release-hygiene.md`
+- `docs/project/release-notes-v0.1.0-private-beta.1.md`
 - `docs/process/editorial-workflow.md`
+- `docs/process/md013-cleanup-strategy.md`
 - `docs/process/review-workflow.md`
 - `LAP_CONTENT_REGISTRY.json`
 
@@ -73,6 +76,8 @@ python -m http.server 4173 --bind 127.0.0.1 --directory dist
 - final Austrian legal/imprint pass before public launch
 - switch `robots.txt` to an indexable version when `basic_auth` is removed
 - optional MX/mail routing for `coderlap.com`
+- GitHub repo metadata and private-beta release hygiene maintenance
+- dedicated `MD013` cleanup in narrow batches, not mixed with feature work
 - normal review/polish flow on `dev`, then merge to `main`
 
 ## Rules To Preserve
