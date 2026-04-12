@@ -180,7 +180,9 @@ Ez nyelvenként változhat, de az alapötlet ugyanaz.
 > Az informatikában leggyakrabban a bináris, oktális, decimális és hexadecimális számrendszert használjuk.  
 > A bináris rendszer alapja 2, ezért csak 0 és 1 számjegyeket használ.  
 > A decimális rendszer alapja 10, ez a hétköznapi számrendszer.  
-> A hexadecimális rendszer alapja 16, és azért fontos, mert jól tömöríti a bináris adatokat: egy hexaszámjegy 4 bitnek felel meg.
+> A hexadecimális rendszer alapja 16, és azért fontos,
+> mert jól tömöríti a bináris adatokat:
+> egy hexaszámjegy 4 bitnek felel meg.
 
 ## Gyakori vizsgahibák
 

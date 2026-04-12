@@ -19,7 +19,9 @@ A bináris egységek a `2^10 = 1024` lépésre épülnek:
 
 ## Miért jöttek létre ezek az egységek?
 
-A digitális rendszerek természetesen **kettes alapúak**, ezért a memória és sok belső technikai számítás valójában `2` hatványaira épül.
+A digitális rendszerek természetesen **kettes alapúak**,
+ezért a memória és sok belső technikai számítás
+valójában `2` hatványaira épül.
 
 Sokáig a gyakorlatban a `KB`, `MB`, `GB` jelöléseket használták olyan értékekre is, amelyek valójában:
 
@@ -40,7 +42,9 @@ Ez félreértésekhez vezetett, ezért vezették be a pontosabb bináris neveket
 
 ## Mit jelent a név?
 
-A bináris prefixek úgy jöttek létre, hogy a megfelelő SI-prefix első része mellé hozzáadták a `bi` részt, ami a `binary` szóra utal.
+A bináris prefixek úgy jöttek létre,
+hogy a megfelelő SI-prefix első része mellé hozzáadták a `bi` részt,
+ami a `binary` szóra utal.
 
 Példák:
 
@@ -89,7 +93,10 @@ Szakmai dokumentációkban egyre fontosabb a pontos jelölés:
 
 ### 3. Tárhelykijelzésnél tapasztalt eltérések
 
-Egy gyártó megadhat egy háttértárat `1 TB`-ként, miközben az operációs rendszer bináris logika szerint jelenít meg méretet. Ettől a felhasználó kisebbnek érezheti a kapacitást, pedig valójában csak más egységet lát.
+Egy gyártó megadhat egy háttértárat `1 TB`-ként,
+miközben az operációs rendszer bináris logika szerint jelenít meg méretet.
+Ettől a felhasználó kisebbnek érezheti a kapacitást,
+pedig valójában csak más egységet lát.
 
 ## Gyors példák
 
@@ -128,7 +135,8 @@ Teljesebb lánc:
 ## Vizsgán jól használható megfogalmazás
 
 > A gibibyte, tebibyte, pebibyte és exbibyte bináris adatméret-egységek.  
-> Ezek 2 hatványaira épülnek, ezért például 1 GiB = 2^30 byte, 1 TiB = 2^40 byte.  
+> Ezek 2 hatványaira épülnek, ezért például
+> 1 GiB = 2^30 byte, 1 TiB = 2^40 byte.  
 > A GiB, TiB, PiB és EiB nem azonos a GB, TB, PB és EB decimális egységekkel.  
 > A bináris prefixeket azért vezették be, hogy egyértelmű legyen a 1000-es és 1024-es alapú számítás közti különbség.
 

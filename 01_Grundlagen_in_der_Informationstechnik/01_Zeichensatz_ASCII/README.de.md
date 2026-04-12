@@ -43,7 +43,8 @@ Häufige Beispiele:
 - `ESC` - Escape
 - `DEL` - Löschen (Delete)
 
-Diese sind vor allem bei älteren Datenübertragungen, beim Drucken, bei Terminals und auch heute noch in Dateiformaten und Protokollen wichtig.
+Diese sind vor allem bei älteren Datenübertragungen, beim Drucken,
+bei Terminals und auch heute noch in Dateiformaten und Protokollen wichtig.
 
 ### 2. Druckbare Zeichen
 
@@ -96,8 +97,10 @@ Wenn ein System daher nur ASCII erwartet, können solche Zeichen:
 
 > ASCII ist ein 7-Bit-Zeichenkodierungsstandard, der 128 Zeichen umfasst.  
 > Darin enthalten sind Steuerzeichen, Buchstaben, Zahlen und Satzzeichen.  
-> ASCII unterstützt hauptsächlich die Grundzeichen der englischen Sprache, weshalb es in modernen Systemen allein nicht mehr ausreicht.  
-> In der heutigen Praxis verwenden wir eher Unicode-basierte Kodierungen wie UTF-8, die rückwärtskompatibel mit ASCII sind.
+> ASCII unterstützt hauptsächlich die Grundzeichen der englischen Sprache,
+> weshalb es in modernen Systemen allein nicht mehr ausreicht.  
+> In der heutigen Praxis verwenden wir eher Unicode-basierte Kodierungen wie
+> UTF-8, die rückwärtskompatibel mit ASCII sind.
 
 ## Häufige Prüfungsfehler
 

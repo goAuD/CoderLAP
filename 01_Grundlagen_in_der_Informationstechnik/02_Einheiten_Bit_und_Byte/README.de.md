@@ -176,7 +176,9 @@ Bei Prüfungen wird das sehr oft verwechselt.
 
 > Das Bit ist die kleinste Einheit der digitalen Information, sein Wert kann 0 oder 1 sein.  
 > Ein Byte besteht aus 8 Bit und kann daher 256 verschiedene Werte darstellen.  
-> Bytes werden hauptsächlich zur Messung von Speicherplatz und Dateigrößen verwendet, während Bits häufig bei Datenübertragungsgeschwindigkeiten vorkommen.  
+> Bytes werden hauptsächlich zur Messung von Speicherplatz und Dateigrößen
+> verwendet, während Bits häufig bei Datenübertragungsgeschwindigkeiten
+> vorkommen.  
 > Ein wichtiger Unterschied ist, dass `b` für Bit und `B` für Byte steht.
 
 ## Häufige Prüfungsfehler
