@@ -66,6 +66,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  justify-self: end;
   align-items: center;
   gap: 0.5rem;
 }
@@ -113,22 +114,19 @@ a.lang-switcher__item:focus-visible {
 
 /* ── GitHub link ────────────────────────────────────────────────── */
 .site-github-link {
-  min-height: var(--touch-target);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
-  margin-left: 0.15rem;
+  justify-self: center;
+  padding: 0.35rem;
   color: var(--color-text-muted);
   text-decoration: none;
-  border-radius: var(--radius-md);
-  transition: color 140ms ease, background-color 140ms ease;
+  transition: color 140ms ease;
 }
 
 .site-github-link:hover,
 .site-github-link:focus-visible {
-  color: var(--color-heading);
-  background: rgba(95, 167, 162, 0.08);
+  color: var(--color-accent);
 }
 
 .site-github-icon {
@@ -136,27 +134,28 @@ a.lang-switcher__item:focus-visible {
   flex-shrink: 0;
 }
 
-/* ── Navbar progress pill ───────────────────────────────────────── */
-.nav-progress {
+/* ── Hero progress pill ─────────────────────────────────────────── */
+.hero-progress-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.3rem 0.7rem;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.85rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--color-text-muted);
   white-space: nowrap;
 }
 
-.nav-progress__ring {
+.hero-progress-pill__ring {
   flex-shrink: 0;
 }
 
-.nav-progress--active {
+.hero-progress-pill--active {
   color: #c8b45a;
   border-color: rgba(200, 180, 90, 0.3);
 }
@@ -541,13 +540,8 @@ a.lang-switcher__item:focus-visible {
 }
 
 @media (max-width: 35rem) {
-  .site-topbar__inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .site-topbar__nav {
-    width: 100%;
+    grid-column: 1 / -1;
     justify-content: flex-start;
   }
 

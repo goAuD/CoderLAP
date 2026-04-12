@@ -522,33 +522,27 @@
   }
 
   function setupProgressCounter() {
-    var counter = document.querySelector("[data-progress-counter]");
-    var navPill = document.querySelector("[data-nav-progress]");
+    var heroPill = document.querySelector("[data-hero-progress]");
     var topicIndex = parseJsonScript("[data-topic-index-json]");
     var totalTopics = Array.isArray(topicIndex) ? topicIndex.length : 233;
     var counts = countByStatus();
 
-    if (counter) {
-      counter.textContent = counts.done + " / " + totalTopics;
-      counter.hidden = false;
-    }
-
-    if (navPill && counts.done > 0) {
-      var pct = Math.round((counts.done / totalTopics) * 100);
+    if (heroPill) {
+      var pct = totalTopics > 0 ? Math.round((counts.done / totalTopics) * 100) : 0;
       var radius = 8;
       var circ = 2 * Math.PI * radius;
       var offset = circ - (pct / 100) * circ;
 
-      navPill.innerHTML =
-        '<svg class="nav-progress__ring" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">' +
+      heroPill.innerHTML =
+        '<svg class="hero-progress-pill__ring" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">' +
           '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>' +
           '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="#c8b45a" stroke-width="2.5"' +
             ' stroke-dasharray="' + circ.toFixed(1) + '" stroke-dashoffset="' + offset.toFixed(1) + '"' +
             ' stroke-linecap="round" transform="rotate(-90 11 11)"/>' +
         '</svg>' +
-        '<span>' + counts.done + '/' + totalTopics + '</span>';
-      navPill.classList.add("nav-progress--active");
-      navPill.hidden = false;
+        '<span>' + counts.done + ' / ' + totalTopics + '</span>';
+      heroPill.classList.add("hero-progress-pill--active");
+      heroPill.hidden = false;
     }
   }
 
