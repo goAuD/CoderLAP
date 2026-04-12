@@ -53,6 +53,31 @@ def _load_legal_pages(legal_dir: Path) -> dict[str, str]:
     return pages
 
 
+def _language_href(lang_config: LanguageConfig, relative_path: str = "") -> str:
+    clean_path = relative_path.strip("/")
+    if lang_config.is_default:
+        return f"/{clean_path}/" if clean_path else "/"
+    return f"/{lang_config.code}/{clean_path}/" if clean_path else f"/{lang_config.code}/"
+
+
+def _build_lang_switcher(
+    all_languages: tuple[LanguageConfig, ...],
+    current_lang_code: str,
+    relative_path: str = "",
+) -> list[dict[str, str | bool]]:
+    items: list[dict[str, str | bool]] = []
+    for lang_config in all_languages:
+        items.append(
+            {
+                "code": lang_config.code,
+                "label": lang_config.code.upper(),
+                "href": _language_href(lang_config, relative_path),
+                "is_current": lang_config.code == current_lang_code,
+            }
+        )
+    return items
+
+
 def _build_language(
     lang_config: LanguageConfig,
     settings: BuildSettings,
@@ -78,20 +103,6 @@ def _build_language(
 
     lang_output.mkdir(parents=True, exist_ok=True)
 
-    # Build language switcher data for templates
-    lang_switcher = []
-    for lc in all_languages:
-        if lc.is_default:
-            prefix = "/"
-        else:
-            prefix = f"/{lc.code}/"
-        lang_switcher.append({
-            "code": lc.code,
-            "label": lc.code.upper(),
-            "prefix": prefix,
-            "is_current": lc.code == lang_config.code,
-        })
-
     topic_index = [_topic_index_entry(topic) for topic in topics]
 
     common_ctx = {
@@ -101,7 +112,6 @@ def _build_language(
         "navigation": navigation,
         "cache_bust": cache_bust,
         "site_root": site_root,
-        "lang_switcher": lang_switcher,
         "current_lang": lang_config.code,
     }
 
@@ -125,6 +135,7 @@ def _build_language(
             topic=topic,
             content_html=content_html,
             topic_index=topic_index,
+            lang_switcher=_build_lang_switcher(all_languages, lang_config.code, f"topics/{topic.slug}"),
         )
         _write_text(lang_output / "topics" / topic.slug / "index.html", rendered)
 
@@ -134,6 +145,7 @@ def _build_language(
         page_title=ui_strings.get("home_title", "CoderLAP"),
         body_class="home-page",
         topic_index=topic_index,
+        lang_switcher=_build_lang_switcher(all_languages, lang_config.code),
     )
     _write_text(lang_output / "index.html", home_html)
 
@@ -145,6 +157,7 @@ def _build_language(
             body_class="legal-page",
             legal_slug=slug,
             content_html=render_markdown(markdown_text),
+            lang_switcher=_build_lang_switcher(all_languages, lang_config.code, slug),
         )
         _write_text(lang_output / slug / "index.html", rendered)
 

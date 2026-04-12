@@ -389,7 +389,7 @@
 
     var btn = document.createElement("button");
     btn.type = "button";
-    btn.className = "site-nav-link topic-done-btn";
+    btn.className = "site-nav-link site-nav-link--button topic-done-btn";
     btn.setAttribute("data-done-toggle", "");
 
     function updateButton() {

@@ -98,6 +98,7 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".catalog-controls {", self.components_css)
         self.assertIn(".catalog-field {", self.components_css)
         self.assertIn(".topic-card {", self.components_css)
+        self.assertIn(".site-nav-link--button {", self.components_css)
         self.assertIn(".topic-pagination {", self.components_css)
         self.assertIn(".topic-pagination__link {", self.components_css)
         self.assertIn(".catalog-results__empty {", self.components_css)

@@ -40,7 +40,7 @@
               {% if lang.is_current %}
               <span class="lang-switcher__item lang-switcher__item--active" aria-current="true">{{ lang.label }}</span>
               {% else %}
-              <a class="lang-switcher__item" href="{{ lang.prefix }}">{{ lang.label }}</a>
+              <a class="lang-switcher__item" href="{{ lang.href }}">{{ lang.label }}</a>
               {% endif %}
               {% endfor %}
             </span>

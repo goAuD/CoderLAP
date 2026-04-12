@@ -172,10 +172,29 @@ a.lang-switcher__item:focus-visible {
   text-decoration: none;
 }
 
+.site-nav-link--button {
+  border-color: var(--color-border);
+  background: rgba(29, 35, 41, 0.94);
+  box-shadow: var(--shadow-button);
+}
+
+.site-nav-link--button:is(a, button) {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+}
+
 .site-nav-link:hover,
 .site-nav-link:focus-visible {
   border-color: rgba(95, 167, 162, 0.32);
   background: rgba(95, 167, 162, 0.08);
+}
+
+.site-nav-link--button:hover,
+.site-nav-link--button:focus-visible {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 20px -18px rgba(95, 167, 162, 0.35);
 }
 
 .hero-panel,
@@ -434,6 +453,9 @@ a.lang-switcher__item:focus-visible {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: var(--space-5);
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .topic-actions .site-nav-link {
@@ -536,6 +558,11 @@ a.lang-switcher__item:focus-visible {
 @media (min-width: 56rem) {
   .catalog-controls__fields {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topic-actions {
+    margin-inline: auto;
+    max-width: 52rem;
   }
 }
 
