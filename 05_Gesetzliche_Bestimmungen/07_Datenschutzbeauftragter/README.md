@@ -79,8 +79,13 @@ A helyes gondolatmenet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az adatvédelmi tisztviselő feladata a szervezet adatvédelmi megfelelésének támogatása, a tanácsadás, az ellenőrzés és a hatósággal való kapcsolattartás.  
-> Nem minden szervezetnél kötelező, de a GDPR alapján bizonyos esetekben, például nagymértékű megfigyelés vagy különleges adatok nagy volumenű kezelése esetén igen.  
+> Az adatvédelmi tisztviselő feladata
+> a szervezet adatvédelmi megfelelésének támogatása,
+> a tanácsadás, az ellenőrzés és a hatósággal való kapcsolattartás.  
+> Nem minden szervezetnél kötelező,
+> de a GDPR alapján bizonyos esetekben,
+> például nagymértékű megfigyelés
+> vagy különleges adatok nagy volumenű kezelése esetén igen.  
 > Az adatvédelmi tisztviselő lehet belső vagy külső személy is.
 
 ## Gyakori vizsgahibák

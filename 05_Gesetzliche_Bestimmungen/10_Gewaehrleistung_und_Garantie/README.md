@@ -55,7 +55,9 @@ Mert sokan összekeverik:
 - letöltött szoftver nem működik szerződés szerint
 - előfizetéses digitális szolgáltatás hibásan teljesül
 
-Ausztriában a fogyasztói szerződéseknél a pontos szabályok a szerződés típusától is függenek, különösen áruk és digitális teljesítések esetén.
+Ausztriában a fogyasztói szerződéseknél a pontos szabályok
+a szerződés típusától is függenek,
+különösen áruk és digitális teljesítések esetén.
 
 ## Ne keverd össze
 
@@ -67,7 +69,8 @@ Ausztriában a fogyasztói szerződéseknél a pontos szabályok a szerződés t
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Gewährleistung a hibás teljesítéshez kapcsolódó törvényes felelősség, amely alapján a fogyasztónak például javításra vagy cserére lehet igénye.  
+> A Gewährleistung a hibás teljesítéshez kapcsolódó törvényes felelősség,
+> amely alapján a fogyasztónak például javításra vagy cserére lehet igénye.  
 > A Garantie ezzel szemben önként vállalt többletígéret, amelyet rendszerint a gyártó vagy az eladó ad.  
 > A garancia nem helyettesíti és nem szünteti meg a törvényes Gewährleistung jogokat.
 

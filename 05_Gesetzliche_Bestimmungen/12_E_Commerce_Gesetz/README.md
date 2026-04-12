@@ -74,7 +74,10 @@ akkor legalább alapszinten ismernie kell ezeket a kötelezettségeket.
 ## Vizsgán jól használható megfogalmazás
 
 > Az E-Commerce-Gesetz az online szolgáltatók egyes jogi kötelezettségeit szabályozza Ausztriában.  
-> Vizsgaszinten különösen fontos az, hogy a szolgáltatónak bizonyos adatokat könnyen hozzáférhetővé kell tennie, valamint hogy a reklámcélú elektronikus kommunikációnál figyelembe kell venni az ECG-listát is.  
+> Vizsgaszinten különösen fontos az,
+> hogy a szolgáltatónak bizonyos adatokat könnyen hozzáférhetővé kell tennie,
+> valamint hogy a reklámcélú elektronikus kommunikációnál
+> figyelembe kell venni az ECG-listát is.  
 > Az ECG ezért webshopok, céges weboldalak és online szolgáltatások esetén alapvető jogi háttér.
 
 ## Gyakori vizsgahibák

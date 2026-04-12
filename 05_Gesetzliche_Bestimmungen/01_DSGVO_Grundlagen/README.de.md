@@ -106,8 +106,10 @@ Weil die DSGVO mit vielen anderen Themen zusammenhängt:
 
 ## Prüfungstaugliche Formulierung
 
-> Die DSGVO ist die Datenschutz-Grundverordnung der Europäischen Union, die seit dem 25. Mai 2018 unmittelbar anwendbar ist.
-> Sie regelt die Grundsätze für die Verarbeitung personenbezogener Daten, die Rechte der betroffenen Personen und die Pflichten der Verantwortlichen.
+> Die DSGVO ist die Datenschutz-Grundverordnung der Europäischen Union,
+> die seit dem 25. Mai 2018 unmittelbar anwendbar ist.
+> Sie regelt die Grundsätze für die Verarbeitung personenbezogener Daten,
+> die Rechte der betroffenen Personen und die Pflichten der Verantwortlichen.
 > In Österreich ist neben der DSGVO auch das nationale Datenschutzgesetz relevant.
 
 ## Häufige Prüfungsfehler

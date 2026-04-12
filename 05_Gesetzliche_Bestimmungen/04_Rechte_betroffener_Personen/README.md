@@ -54,7 +54,10 @@ Bizonyos helyzetekben kérhető, hogy az adatot ne használják tovább aktívan
 
 ## 6. Adathordozhatóság
 
-Bizonyos esetekben az érintett kérheti, hogy a rá vonatkozó adatokat strukturált, géppel olvasható formában kapja meg, vagy továbbítsák más szolgáltatóhoz.
+Bizonyos esetekben az érintett kérheti,
+hogy a rá vonatkozó adatokat strukturált,
+géppel olvasható formában kapja meg,
+vagy továbbítsák más szolgáltatóhoz.
 
 ## 7. Tiltakozáshoz való jog
 
@@ -66,7 +69,9 @@ Különösen fontos lehet ez:
 
 ## 8. Automatizált döntéshozatal elleni jog
 
-Az érintettnek joga van ahhoz, hogy ne kizárólag automatizált döntés alapján szülessen róla jelentős döntés a törvényi feltételek figyelmen kívül hagyásával.
+Az érintettnek joga van ahhoz,
+hogy ne kizárólag automatizált döntés alapján szülessen róla jelentős döntés
+a törvényi feltételek figyelmen kívül hagyásával.
 
 ## 9. Panasz a hatóságnál
 
@@ -97,7 +102,9 @@ Bizonyos esetben ez meghosszabbítható.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A GDPR több jogot biztosít az érintett személyeknek, például a tájékoztatáshoz, a hozzáféréshez, a helyesbítéshez, a törléshez, a korlátozáshoz, az adathordozhatósághoz és a tiltakozáshoz való jogot.  
+> A GDPR több jogot biztosít az érintett személyeknek,
+> például a tájékoztatáshoz, a hozzáféréshez, a helyesbítéshez, a törléshez,
+> a korlátozáshoz, az adathordozhatósághoz és a tiltakozáshoz való jogot.  
 > Az adatkezelőnek ezekre a kérelmekre főszabály szerint egy hónapon belül reagálnia kell.  
 > Ha az érintett jogsértést észlel, panaszt tehet az osztrák adatvédelmi hatóságnál.
 

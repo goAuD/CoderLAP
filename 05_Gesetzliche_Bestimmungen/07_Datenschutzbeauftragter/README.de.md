@@ -29,7 +29,9 @@ Nach Art. 37 der GDPR kann die Benennung Pflicht sein, zum Beispiel wenn:
 
 - die Verarbeitung von einer Behörde oder einer Einrichtung mit öffentlichen Aufgaben durchgeführt wird
 - die Kerntätigkeit der Organisation eine umfangreiche, regelmäßige und systematische Überwachung erfordert
-- die Kerntätigkeit der Organisation in der umfangreichen Verarbeitung besonderer Kategorien oder strafrechtlicher Daten besteht
+- die Kerntätigkeit der Organisation
+  in der umfangreichen Verarbeitung besonderer Kategorien
+  oder strafrechtlicher Daten besteht
 
 ## Wann ist es nicht unbedingt Pflicht?
 
@@ -79,8 +81,13 @@ Der richtige Gedankengang:
 
 ## Prüfungstaugliche Formulierung
 
-> Aufgabe des Datenschutzbeauftragten ist die Unterstützung der datenschutzrechtlichen Compliance der Organisation, die Beratung, die Überwachung und die Zusammenarbeit mit der Behörde.
-> Er ist nicht in jeder Organisation Pflicht, aber nach der GDPR in bestimmten Fällen schon, zum Beispiel bei umfangreicher Überwachung oder umfangreicher Verarbeitung besonderer Daten.
+> Aufgabe des Datenschutzbeauftragten ist die Unterstützung
+> der datenschutzrechtlichen Compliance der Organisation,
+> die Beratung, die Überwachung und die Zusammenarbeit mit der Behörde.
+> Er ist nicht in jeder Organisation Pflicht,
+> aber nach der GDPR in bestimmten Fällen schon,
+> zum Beispiel bei umfangreicher Überwachung
+> oder umfangreicher Verarbeitung besonderer Daten.
 > Der Datenschutzbeauftragte kann eine interne oder externe Person sein.
 
 ## Häufige Prüfungsfehler
