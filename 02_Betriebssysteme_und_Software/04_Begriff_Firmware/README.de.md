@@ -11,7 +11,10 @@
 
 ## Was ist Firmware?
 
-Firmware ist Programmcode und Daten, die typischerweise fest an die Hardware gebunden gespeichert sind, oft nicht als herkömmliche Datei, sondern im eigenen Speicher des Geräts.
+Firmware ist Programmcode und Daten,
+die typischerweise fest an die Hardware gebunden gespeichert sind,
+oft nicht als herkömmliche Datei,
+sondern im eigenen Speicher des Geräts.
 
 Ihre Aufgabe kann zum Beispiel sein:
 

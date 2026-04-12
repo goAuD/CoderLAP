@@ -102,7 +102,9 @@ Mert több user osztozik ugyanazon a rendszeren vagy infrastruktúrán.
 ## Vizsgán jól használható megfogalmazás
 
 > A single-user rendszer elsősorban egy felhasználó közvetlen használatára készült.  
-> A multi-user rendszer ezzel szemben több felhasználó számára is képes hozzáférést, külön jogosultságokat és elkülönített munkakörnyezetet biztosítani.  
+> A multi-user rendszer ezzel szemben több felhasználó számára is képes
+> hozzáférést, külön jogosultságokat
+> és elkülönített munkakörnyezetet biztosítani.  
 > A multi-user rendszerek tipikusan szerveres vagy vállalati környezetben fontosak.
 
 ## Gyakori vizsgahibák
