@@ -8,6 +8,7 @@ desktop.ini
 
 # Python
 __pycache__/
+.pytest_cache/
 *.pyc
 *.pyo
 *.pyd
@@ -28,6 +29,10 @@ coverage/
 *.tmp
 *.bak
 *.swp
+
+# Local-only docs scratch space
+docs/_local/
+docs/tmp/
 
 # Keep local notes and agent settings out of Git.
 /docs/*

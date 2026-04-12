@@ -78,11 +78,13 @@ class BuildSiteTests(unittest.TestCase):
             registry_path = repo_root / "registry.json"
             template_dir = repo_root / "templates"
             asset_dir = repo_root / "assets-src"
+            static_content_dir = repo_root / "static-src"
             output_dir = repo_root / "dist"
             markdown_path = repo_root / "01_Grundlagen" / "01_ASCII" / "README.md"
 
             template_dir.mkdir()
             asset_dir.mkdir()
+            (static_content_dir / ".well-known").mkdir(parents=True)
             markdown_path.parent.mkdir(parents=True)
             output_dir.mkdir()
 
@@ -93,6 +95,11 @@ class BuildSiteTests(unittest.TestCase):
                 encoding="utf-8",
             )
             (asset_dir / "site.css").write_text("body { color: black; }", encoding="utf-8")
+            (static_content_dir / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+            (static_content_dir / ".well-known" / "security.txt").write_text(
+                "Contact: https://example.test/issues\n",
+                encoding="utf-8",
+            )
             (output_dir / "stale.txt").write_text("remove me", encoding="utf-8")
 
             settings = BuildSettings(
@@ -100,6 +107,7 @@ class BuildSiteTests(unittest.TestCase):
                 registry_path=registry_path,
                 template_dir=template_dir,
                 asset_dir=asset_dir,
+                static_content_dir=static_content_dir,
                 output_dir=output_dir,
                 i18n_dir=repo_root / "i18n",
                 legal_content_dir=repo_root / "legal",
@@ -121,6 +129,8 @@ class BuildSiteTests(unittest.TestCase):
             self.assertEqual(result, output_dir)
             self.assertFalse((output_dir / "stale.txt").exists())
             self.assertTrue((output_dir / "assets" / "site.css").exists())
+            self.assertTrue((output_dir / "robots.txt").exists())
+            self.assertTrue((output_dir / ".well-known" / "security.txt").exists())
             self.assertTrue((output_dir / "index.html").exists())
             self.assertTrue((output_dir / "topics" / "01-01-ascii" / "index.html").exists())
             self.assertTrue((output_dir / "imprint" / "index.html").exists())

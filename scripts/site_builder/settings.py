@@ -19,6 +19,7 @@ class BuildSettings:
     registry_path: Path
     template_dir: Path
     asset_dir: Path
+    static_content_dir: Path
     output_dir: Path
     i18n_dir: Path
     legal_content_dir: Path
@@ -49,6 +50,7 @@ class BuildSettings:
             registry_path=repo_root / "LAP_CONTENT_REGISTRY.json",
             template_dir=repo_root / "site" / "templates",
             asset_dir=repo_root / "site" / "assets",
+            static_content_dir=repo_root / "site" / "content" / "static" / "root",
             output_dir=repo_root / "dist",
             i18n_dir=i18n_dir,
             legal_content_dir=legal_base / "en",

@@ -1,0 +1,5 @@
+Contact: https://github.com/goAuD/CoderLAP/issues
+Canonical: https://coderlap.com/.well-known/security.txt
+Policy: https://coderlap.com/privacy/
+Preferred-Languages: de, hu, en
+Expires: 2027-04-12T00:00:00Z

@@ -12,6 +12,8 @@ class SiteContentAssetsTests(unittest.TestCase):
         ui_path = repo_root / "site" / "i18n" / "en.json"
         imprint_path = repo_root / "site" / "content" / "legal" / "en" / "imprint.md"
         privacy_path = repo_root / "site" / "content" / "legal" / "en" / "privacy.md"
+        robots_path = repo_root / "site" / "content" / "static" / "root" / "robots.txt"
+        security_txt_path = repo_root / "site" / "content" / "static" / "root" / ".well-known" / "security.txt"
 
         ui_strings = json.loads(ui_path.read_text(encoding="utf-8"))
         self.assertEqual(ui_strings["project_tagline"], "LAP \u00b7 Software Development \u00b7 Coding")
@@ -39,6 +41,15 @@ class SiteContentAssetsTests(unittest.TestCase):
         self.assertIn("# Privacy Policy", privacy_text)
         self.assertIn("## Sources", privacy_text)
         self.assertIn("## What we collect", privacy_text)
+
+        robots_text = robots_path.read_text(encoding="utf-8")
+        self.assertIn("User-agent: *", robots_text)
+        self.assertIn("Disallow: /", robots_text)
+
+        security_txt = security_txt_path.read_text(encoding="utf-8")
+        self.assertIn("Contact: https://github.com/goAuD/CoderLAP/issues", security_txt)
+        self.assertIn("Canonical: https://coderlap.com/.well-known/security.txt", security_txt)
+        self.assertIn("Preferred-Languages: de, hu, en", security_txt)
 
 
 if __name__ == "__main__":
