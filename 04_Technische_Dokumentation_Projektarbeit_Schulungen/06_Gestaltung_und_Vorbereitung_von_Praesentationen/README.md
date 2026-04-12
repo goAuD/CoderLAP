@@ -2,13 +2,13 @@
 
 ## Gyors vizuális kép
 
-| Szempont | Mit jelent? |
-|---|---|
-| cél | mit akarok átadni |
-| közönség | kinek beszélek |
-| szerkezet | bevezetés, fő rész, lezárás |
-| design | egyszerű, olvasható, következetes |
-| előadás | gyakorlás, időzítés, technikai próba |
+| Szempont  | Mit jelent?                          |
+| --------- | ------------------------------------ |
+| cél       | mit akarok átadni                    |
+| közönség  | kinek beszélek                       |
+| szerkezet | bevezetés, fő rész, lezárás          |
+| design    | egyszerű, olvasható, következetes    |
+| előadás   | gyakorlás, időzítés, technikai próba |
 
 ## Mi a jó prezentáció célja?
 

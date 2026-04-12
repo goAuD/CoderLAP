@@ -2,13 +2,13 @@
 
 ## Gyors vizuális kép
 
-| Jellemző | Android |
-|---|---|
-| platformalap | `AOSP` |
-| eszközök | sok gyártó, sok modell |
-| appterjesztés | Google Play és más források is lehetnek |
-| testreszabhatóság | általában nagyobb |
-| frissítések | gyártótól és modelltől is függhetnek |
+| Jellemző          | Android                                 |
+| ----------------- | --------------------------------------- |
+| platformalap      | `AOSP`                                  |
+| eszközök          | sok gyártó, sok modell                  |
+| appterjesztés     | Google Play és más források is lehetnek |
+| testreszabhatóság | általában nagyobb                       |
+| frissítések       | gyártótól és modelltől is függhetnek    |
 
 ## Mi az Android?
 
@@ -126,12 +126,12 @@ Ez rugalmas, de biztonsági kockázatot is jelenthet.
 
 ## Android vs iOS
 
-| Android | iOS |
-|---|---|
-| nyitottabb ökoszisztéma | zártabb ökoszisztéma |
-| sok gyártó | Apple-központú |
+| Android                    | iOS                                   |
+| -------------------------- | ------------------------------------- |
+| nyitottabb ökoszisztéma    | zártabb ökoszisztéma                  |
+| sok gyártó                 | Apple-központú                        |
 | többféle eszköz és felület | egységesebb hardver-szoftver kontroll |
-| több terjesztési lehetőség | erősebben ellenőrzött terjesztés |
+| több terjesztési lehetőség | erősebben ellenőrzött terjesztés      |
 
 ## Vizsgán jól használható megfogalmazás
 

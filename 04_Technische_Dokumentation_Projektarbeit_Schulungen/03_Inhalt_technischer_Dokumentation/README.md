@@ -2,15 +2,15 @@
 
 ## Gyors vizuális kép
 
-| Rész | Mire válaszol? |
-|---|---|
-| cél | miről szól a dokumentum |
-| célcsoport | kinek készült |
-| előfeltételek | mi kell a használatához |
-| rendszerleírás | hogyan működik |
-| lépések | mit kell csinálni |
-| hibák | mit tegyünk probléma esetén |
-| verzió | melyik állapotra vonatkozik |
+| Rész           | Mire válaszol?              |
+| -------------- | --------------------------- |
+| cél            | miről szól a dokumentum     |
+| célcsoport     | kinek készült               |
+| előfeltételek  | mi kell a használatához     |
+| rendszerleírás | hogyan működik              |
+| lépések        | mit kell csinálni           |
+| hibák          | mit tegyünk probléma esetén |
+| verzió         | melyik állapotra vonatkozik |
 
 ## Mi a technikai dokumentáció feladata?
 

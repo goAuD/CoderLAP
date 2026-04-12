@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Egység | Jelölés | Szorzó | Byte-ban |
-|---|---|---:|---:|
-| gigabyte | `GB` | `10^9` | `1 000 000 000 B` |
-| terabyte | `TB` | `10^12` | `1 000 000 000 000 B` |
-| petabyte | `PB` | `10^15` | `1 000 000 000 000 000 B` |
-| exabyte | `EB` | `10^18` | `1 000 000 000 000 000 000 B` |
+| Egység   | Jelölés |  Szorzó |                      Byte-ban |
+| -------- | ------- | ------: | ----------------------------: |
+| gigabyte | `GB`    |  `10^9` |             `1 000 000 000 B` |
+| terabyte | `TB`    | `10^12` |         `1 000 000 000 000 B` |
+| petabyte | `PB`    | `10^15` |     `1 000 000 000 000 000 B` |
+| exabyte  | `EB`    | `10^18` | `1 000 000 000 000 000 000 B` |
 
 ### Egyszerű emlékeztető
 
@@ -79,18 +79,18 @@ Riportokban, szerződésekben, szolgáltatási leírásokban is gyakran decimál
 
 ## GB és GiB: ne keverd össze
 
-| Egység | Jelentés | Érték byte-ban |
-|---|---|---:|
-| `GB` | gigabyte, decimális | `10^9 = 1 000 000 000 B` |
-| `GiB` | gibibyte, bináris | `2^30 = 1 073 741 824 B` |
+| Egység | Jelentés            |           Érték byte-ban |
+| ------ | ------------------- | -----------------------: |
+| `GB`   | gigabyte, decimális | `10^9 = 1 000 000 000 B` |
+| `GiB`  | gibibyte, bináris   | `2^30 = 1 073 741 824 B` |
 
 Ugyanez nagyobb egységeknél is igaz:
 
 | Decimális | Bináris |
-|---|---|
-| `TB` | `TiB` |
-| `PB` | `PiB` |
-| `EB` | `EiB` |
+| --------- | ------- |
+| `TB`      | `TiB`   |
+| `PB`      | `PiB`   |
+| `EB`      | `EiB`   |
 
 Ez a különbség azért fontos, mert ugyanannak a háttértárnak a mérete másként jelenhet meg attól függően, hogy a rendszer decimális vagy bináris egységet használ.
 

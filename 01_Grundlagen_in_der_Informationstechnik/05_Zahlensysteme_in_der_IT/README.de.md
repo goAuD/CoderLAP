@@ -3,11 +3,11 @@
 ## Schneller visueller Überblick
 
 | Zahlensystem | Basis | Verwendete Ziffern | Gleiches Beispiel |
-|---|---:|---|---|
-| binär | `2` | `0, 1` | `101010₂` |
-| oktal | `8` | `0-7` | `52₈` |
-| dezimal | `10` | `0-9` | `42₁₀` |
-| hexadezimal | `16` | `0-9, A-F` | `2A₁₆` |
+| ------------ | ----: | ------------------ | ----------------- |
+| binär        |   `2` | `0, 1`             | `101010₂`         |
+| oktal        |   `8` | `0-7`              | `52₈`             |
+| dezimal      |  `10` | `0-9`              | `42₁₀`            |
+| hexadezimal  |  `16` | `0-9, A-F`         | `2A₁₆`            |
 
 Alle vier Zahlen können denselben Wert darstellen:
 

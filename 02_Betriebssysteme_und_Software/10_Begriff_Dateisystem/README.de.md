@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Begriff | Was bedeutet es? |
-|---|---|
-| Datei | logisch zusammengehörende Daten |
-| Ordner / Verzeichnis | Organisation von Dateien |
-| Dateisystem | Regelwerk für Speicherung und Zugriff |
-| Massenspeicher | physischer oder logischer Speicher |
+| Begriff              | Was bedeutet es?                      |
+| -------------------- | ------------------------------------- |
+| Datei                | logisch zusammengehörende Daten       |
+| Ordner / Verzeichnis | Organisation von Dateien              |
+| Dateisystem          | Regelwerk für Speicherung und Zugriff |
+| Massenspeicher       | physischer oder logischer Speicher    |
 
 ## Was ist ein Dateisystem?
 
@@ -68,20 +68,20 @@ Viele Dateisysteme speichern:
 
 ## Gängige Dateisysteme
 
-| Dateisystem | Typische Umgebung |
-|---|---|
-| `NTFS` | Windows |
-| `ReFS` | Windows-Server-Umgebungen in bestimmten Fällen |
-| `exFAT` | Wechseldatenträger |
-| `ext4` | Linux |
-| `APFS` | Apple-Systeme |
+| Dateisystem | Typische Umgebung                              |
+| ----------- | ---------------------------------------------- |
+| `NTFS`      | Windows                                        |
+| `ReFS`      | Windows-Server-Umgebungen in bestimmten Fällen |
+| `exFAT`     | Wechseldatenträger                             |
+| `ext4`      | Linux                                          |
+| `APFS`      | Apple-Systeme                                  |
 
 ## Dateisystem vs Massenspeicher
 
-| Massenspeicher | Dateisystem |
-|---|---|
+| Massenspeicher                     | Dateisystem               |
+| ---------------------------------- | ------------------------- |
 | physischer oder logischer Speicher | Regelwerk der Speicherung |
-| z.B. SSD oder HDD | z.B. NTFS oder ext4 |
+| z.B. SSD oder HDD                  | z.B. NTFS oder ext4       |
 
 Beispiel:
 
@@ -90,14 +90,14 @@ Beispiel:
 
 ## Dateisystem vs Datei
 
-| Datei | Dateisystem |
-|---|---|
+| Datei                 | Dateisystem                         |
+| --------------------- | ----------------------------------- |
 | einzelnes Datenobjekt | System zur Verwaltung aller Dateien |
 
 ## Dateisystem vs Ordner
 
-| Ordner | Dateisystem |
-|---|---|
+| Ordner                       | Dateisystem                                |
+| ---------------------------- | ------------------------------------------ |
 | ein Element der Organisation | das gesamte Regelwerk der Speicherstruktur |
 
 ## Warum ist das wichtig?

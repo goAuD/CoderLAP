@@ -2,16 +2,16 @@
 
 ## Gyors vizuális kép
 
-| Fázis | Mit jelent? |
-|---|---|
-| tervezés | célok, érintettek, időzítés |
-| előkészítés | környezet, jogosultság, mentések |
-| pilot | kisebb körben kipróbálás |
-| rollout | tényleges bevezetés |
-| ellenőrzés | működés, monitoring, hibák |
-| átadás | tudásátadás, dokumentáció |
-| elfogadás | megerősítés, hogy a rendszer átvehető |
-| rollback | visszaállás, ha a rollout nem sikeres |
+| Fázis       | Mit jelent?                           |
+| ----------- | ------------------------------------- |
+| tervezés    | célok, érintettek, időzítés           |
+| előkészítés | környezet, jogosultság, mentések      |
+| pilot       | kisebb körben kipróbálás              |
+| rollout     | tényleges bevezetés                   |
+| ellenőrzés  | működés, monitoring, hibák            |
+| átadás      | tudásátadás, dokumentáció             |
+| elfogadás   | megerősítés, hogy a rendszer átvehető |
+| rollback    | visszaállás, ha a rollout nem sikeres |
 
 ## Mi a rollout célja?
 

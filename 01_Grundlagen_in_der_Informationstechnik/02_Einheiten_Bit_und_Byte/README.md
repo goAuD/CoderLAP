@@ -2,19 +2,19 @@
 
 ## Gyors vizuális kép
 
-| Egység | Jelölés | Mit jelent? | Lehetséges értékek |
-|---|---|---|---|
-| **bit** | `b` | 1 bináris számjegy | `0` vagy `1` |
-| **byte** | `B` | 8 bit együtt | `0-255` |
+| Egység   | Jelölés | Mit jelent?        | Lehetséges értékek |
+| -------- | ------- | ------------------ | ------------------ |
+| **bit**  | `b`     | 1 bináris számjegy | `0` vagy `1`       |
+| **byte** | `B`     | 8 bit együtt       | `0-255`            |
 
 ### Kapcsolatuk
 
-| Kifejezés | Jelentés |
-|---|---|
-| `1 bit` | egyetlen bináris érték |
-| `4 bit` | fél byte, gyakran 1 hexadecimális számjegynek felel meg |
-| `8 bit` | `1 byte` |
-| `2^8` | `256`, vagyis ennyi különböző értéket tud egy byte tárolni |
+| Kifejezés | Jelentés                                                   |
+| --------- | ---------------------------------------------------------- |
+| `1 bit`   | egyetlen bináris érték                                     |
+| `4 bit`   | fél byte, gyakran 1 hexadecimális számjegynek felel meg    |
+| `8 bit`   | `1 byte`                                                   |
+| `2^8`     | `256`, vagyis ennyi különböző értéket tud egy byte tárolni |
 
 ## Mi a bit?
 
@@ -140,9 +140,9 @@ Ezért hibás az az állítás, hogy:
 ## `b` és `B`: ne keverd össze
 
 | Jelölés | Jelentés |
-|---|---|
-| `b` | bit |
-| `B` | byte |
+| ------- | -------- |
+| `b`     | bit      |
+| `B`     | byte     |
 
 Ez nem csak helyesírási részlet, hanem **nyolcszoros különbséget** jelenthet.
 
@@ -155,14 +155,14 @@ Vizsgán ezt nagyon gyakran keverik.
 
 ## Gyors példák
 
-| Példa | Jelentés |
-|---|---|
-| `1 bit` | `0` vagy `1` |
-| `1 byte` | 8 bit |
-| `1 byte` | 256 lehetséges érték |
+| Példa               | Jelentés                                |
+| ------------------- | --------------------------------------- |
+| `1 bit`             | `0` vagy `1`                            |
+| `1 byte`            | 8 bit                                   |
+| `1 byte`            | 256 lehetséges érték                    |
 | `64-bit` processzor | 64 bites adatokkal dolgozó architektúra |
-| `100 Mbps` | hálózati sebesség bitben megadva |
-| `20 MB` fájl | fájlméret byte-alapú mértékben |
+| `100 Mbps`          | hálózati sebesség bitben megadva        |
+| `20 MB` fájl        | fájlméret byte-alapú mértékben          |
 
 ## Amire figyelni kell
 

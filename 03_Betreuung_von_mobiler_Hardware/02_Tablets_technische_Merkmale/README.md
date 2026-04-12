@@ -2,14 +2,14 @@
 
 ## Gyors vizuális kép
 
-| Jellemző | Miért fontos tabletnél? |
-|---|---|
-| nagyobb kijelző | olvasás, videó, munka, rajzolás |
-| multitasking | több app párhuzamos használata |
-| stylus támogatás | jegyzetelés, rajz, oktatás |
-| billentyűzet támogatás | produktivitás |
-| hosszú üzemidő | hordozható használat |
-| opcionális cellular | mobilinternet SIM-mel vagy eSIM-mel |
+| Jellemző               | Miért fontos tabletnél?             |
+| ---------------------- | ----------------------------------- |
+| nagyobb kijelző        | olvasás, videó, munka, rajzolás     |
+| multitasking           | több app párhuzamos használata      |
+| stylus támogatás       | jegyzetelés, rajz, oktatás          |
+| billentyűzet támogatás | produktivitás                       |
+| hosszú üzemidő         | hordozható használat                |
+| opcionális cellular    | mobilinternet SIM-mel vagy eSIM-mel |
 
 ## Mi a tablet?
 
@@ -134,12 +134,12 @@ Hangnál fontos lehet:
 
 ## Tablet vs smartphone
 
-| Tablet | Smartphone |
-|---|---|
-| nagyobb kijelző | kisebb, zsebben hordható |
-| jobb olvasásra és multitaskingra | jobb egykezes, gyors mobil használatra |
-| gyakran tollal / billentyűzettel is használják | ritkábban használják ilyen módon |
-| kevésbé „telefon-központú” | elsődlegesen kommunikációs eszköz is |
+| Tablet                                         | Smartphone                             |
+| ---------------------------------------------- | -------------------------------------- |
+| nagyobb kijelző                                | kisebb, zsebben hordható               |
+| jobb olvasásra és multitaskingra               | jobb egykezes, gyors mobil használatra |
+| gyakran tollal / billentyűzettel is használják | ritkábban használják ilyen módon       |
+| kevésbé „telefon-központú”                     | elsődlegesen kommunikációs eszköz is   |
 
 ## Vizsgán jól használható megfogalmazás
 

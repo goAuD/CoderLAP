@@ -2,15 +2,15 @@
 
 ## Schneller visueller Überblick
 
-| Element | Was bedeutet es? |
-|---|---|
-| Testziel | was wollen wir überprüfen |
-| Testumgebung | wo läuft der Test |
-| Testdaten | womit führen wir den Test durch |
-| Testschritte | was muss ausgeführt werden |
-| Erwartetes Ergebnis | was gilt als korrektes Verhalten |
-| Tatsächliches Ergebnis | was ist tatsächlich passiert |
-| Status | `pass`, `fail`, `blocked` usw. |
+| Element                | Was bedeutet es?                 |
+| ---------------------- | -------------------------------- |
+| Testziel               | was wollen wir überprüfen        |
+| Testumgebung           | wo läuft der Test                |
+| Testdaten              | womit führen wir den Test durch  |
+| Testschritte           | was muss ausgeführt werden       |
+| Erwartetes Ergebnis    | was gilt als korrektes Verhalten |
+| Tatsächliches Ergebnis | was ist tatsächlich passiert     |
+| Status                 | `pass`, `fail`, `blocked` usw.   |
 
 ## Was ist die Aufgabe eines Testlaufs?
 
@@ -119,13 +119,13 @@ Am Ende des Tests muss dokumentiert werden:
 
 ## Typische Testlauf-Status
 
-| Status | Bedeutung |
-|---|---|
-| `ready to run` | bereit zur Ausführung |
-| `pass` | erfolgreich |
-| `fail` | fehlerhaftes Ergebnis |
-| `blocked` | kann wegen eines Hindernisses nicht ausgeführt werden |
-| `skipped` | absichtlich übersprungen |
+| Status         | Bedeutung                                             |
+| -------------- | ----------------------------------------------------- |
+| `ready to run` | bereit zur Ausführung                                 |
+| `pass`         | erfolgreich                                           |
+| `fail`         | fehlerhaftes Ergebnis                                 |
+| `blocked`      | kann wegen eines Hindernisses nicht ausgeführt werden |
+| `skipped`      | absichtlich übersprungen                              |
 
 ## Worauf muss man achten?
 

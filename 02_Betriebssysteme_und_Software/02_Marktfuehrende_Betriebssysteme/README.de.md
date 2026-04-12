@@ -6,14 +6,14 @@
 
 **StatCounter Global Stats, März 2026** basierend:
 
-| System | Anteil |
-|---|---:|
-| Windows | `60.8%` |
-| OS X | `9.52%` |
-| macOS | `5.24%` |
-| Linux | `3.16%` |
-| ChromeOS | `1.62%` |
-| Unknown | `19.67%` |
+| System   |   Anteil |
+| -------- | -------: |
+| Windows  |  `60.8%` |
+| OS X     |  `9.52%` |
+| macOS    |  `5.24%` |
+| Linux    |  `3.16%` |
+| ChromeOS |  `1.62%` |
+| Unknown  | `19.67%` |
 
 Anmerkung:
 
@@ -24,14 +24,14 @@ Anmerkung:
 
 **StatCounter Global Stats, Februar 2026** basierend:
 
-| System | Anteil |
-|---|---:|
+| System  |   Anteil |
+| ------- | -------: |
 | Android | `35.87%` |
 | Windows | `31.37%` |
-| iOS | `17.01%` |
-| OS X | `3.43%` |
-| macOS | `2.31%` |
-| Unknown | `7.81%` |
+| iOS     | `17.01%` |
+| OS X    |  `3.43%` |
+| macOS   |  `2.31%` |
+| Unknown |  `7.81%` |
 
 ## Was bedeutet marktführend?
 

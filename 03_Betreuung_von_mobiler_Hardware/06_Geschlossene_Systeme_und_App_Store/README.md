@@ -2,14 +2,14 @@
 
 ## Gyors vizuális kép
 
-| Szempont | Zárt rendszer |
-|---|---|
-| hardver | erősebben kontrollált |
-| operációs rendszer | gyártó által szorosan irányított |
-| appterjesztés | jellemzően központi store |
-| felhasználói szabadság | kisebb |
-| egységesség | nagyobb |
-| gyártói kontroll | erősebb |
+| Szempont               | Zárt rendszer                    |
+| ---------------------- | -------------------------------- |
+| hardver                | erősebben kontrollált            |
+| operációs rendszer     | gyártó által szorosan irányított |
+| appterjesztés          | jellemzően központi store        |
+| felhasználói szabadság | kisebb                           |
+| egységesség            | nagyobb                          |
+| gyártói kontroll       | erősebb                          |
 
 ## Mi az a zárt rendszer?
 
@@ -107,12 +107,12 @@ Egy zártabb store-modell hatással lehet:
 
 ## Zárt rendszer vs nyitottabb rendszer
 
-| Zártabb rendszer | Nyitottabb rendszer |
-|---|---|
-| nagyobb kontroll | nagyobb rugalmasság |
-| egységesebb élmény | változatosabb környezet |
+| Zártabb rendszer    | Nyitottabb rendszer        |
+| ------------------- | -------------------------- |
+| nagyobb kontroll    | nagyobb rugalmasság        |
+| egységesebb élmény  | változatosabb környezet    |
 | erősebb review kapu | több terjesztési lehetőség |
-| kisebb szabadság | nagyobb szabadság |
+| kisebb szabadság    | nagyobb szabadság          |
 
 ## Mobil példák
 

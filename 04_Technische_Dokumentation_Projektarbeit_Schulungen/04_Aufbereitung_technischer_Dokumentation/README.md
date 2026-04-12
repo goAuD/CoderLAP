@@ -2,13 +2,13 @@
 
 ## Gyors vizuális kép
 
-| Szempont | Mit jelent? |
-|---|---|
-| szerkezet | logikus fejezetek és sorrend |
-| nyelvezet | egyszerű, pontos, célcsoportnak megfelelő |
-| formázás | címek, listák, táblák, kiemelések |
-| vizualitás | képek, ábrák, screenshotok, diagramok |
-| karbantarthatóság | verziózás, frissíthetőség |
+| Szempont          | Mit jelent?                               |
+| ----------------- | ----------------------------------------- |
+| szerkezet         | logikus fejezetek és sorrend              |
+| nyelvezet         | egyszerű, pontos, célcsoportnak megfelelő |
+| formázás          | címek, listák, táblák, kiemelések         |
+| vizualitás        | képek, ábrák, screenshotok, diagramok     |
+| karbantarthatóság | verziózás, frissíthetőség                 |
 
 ## Miért fontos a jó előkészítés?
 

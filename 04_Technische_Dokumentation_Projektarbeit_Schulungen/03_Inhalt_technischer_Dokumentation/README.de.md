@@ -2,15 +2,15 @@
 
 ## Schneller visueller Überblick
 
-| Teil | Welche Frage beantwortet er? |
-|---|---|
-| Ziel | worum geht es im Dokument |
-| Zielgruppe | für wen ist es erstellt |
-| Voraussetzungen | was braucht man zur Nutzung |
-| Systembeschreibung | wie funktioniert es |
-| Schritte | was muss man tun |
-| Fehler | was tun bei Problemen |
-| Version | auf welchen Stand bezieht es sich |
+| Teil               | Welche Frage beantwortet er?      |
+| ------------------ | --------------------------------- |
+| Ziel               | worum geht es im Dokument         |
+| Zielgruppe         | für wen ist es erstellt           |
+| Voraussetzungen    | was braucht man zur Nutzung       |
+| Systembeschreibung | wie funktioniert es               |
+| Schritte           | was muss man tun                  |
+| Fehler             | was tun bei Problemen             |
+| Version            | auf welchen Stand bezieht es sich |
 
 ## Was ist die Aufgabe einer technischen Dokumentation?
 

@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Schicht | Rolle |
-|---|---|
-| Benutzer | verwendet den Rechner |
-| Anwendungen | führen konkrete Aufgaben aus |
-| Betriebssystem | vermittelt, verwaltet, steuert |
-| Hardware | CPU, RAM, SSD, Display, Tastatur, Netzwerk |
+| Schicht        | Rolle                                      |
+| -------------- | ------------------------------------------ |
+| Benutzer       | verwendet den Rechner                      |
+| Anwendungen    | führen konkrete Aufgaben aus               |
+| Betriebssystem | vermittelt, verwaltet, steuert             |
+| Hardware       | CPU, RAM, SSD, Display, Tastatur, Netzwerk |
 
 ### Einfaches Modell
 
@@ -115,20 +115,20 @@ Das OS macht den Computer benutzbar.
 
 ## Einfache Beispiele
 
-| Situation | Was macht das Betriebssystem? |
-|---|---|
-| du öffnest eine Datei | sucht sie, prüft die Berechtigung, übergibt sie an die Anwendung |
-| du startest ein Programm | lädt es in den Speicher, startet den Prozess |
-| du verbindest dich mit Wi-Fi | verwaltet das Netzwerkgerät und die Verbindung |
-| du druckst | leitet die Daten an das entsprechende Gerät weiter |
+| Situation                    | Was macht das Betriebssystem?                                    |
+| ---------------------------- | ---------------------------------------------------------------- |
+| du öffnest eine Datei        | sucht sie, prüft die Berechtigung, übergibt sie an die Anwendung |
+| du startest ein Programm     | lädt es in den Speicher, startet den Prozess                     |
+| du verbindest dich mit Wi-Fi | verwaltet das Netzwerkgerät und die Verbindung                   |
+| du druckst                   | leitet die Daten an das entsprechende Gerät weiter               |
 
 ## Betriebssystem vs Anwendung
 
-| Betriebssystem | Anwendung |
-|---|---|
+| Betriebssystem                              | Anwendung                  |
+| ------------------------------------------- | -------------------------- |
 | stellt den Grundbetrieb des Rechners sicher | löst eine konkrete Aufgabe |
-| verwaltet die Hardware | nutzt die Dienste des OS |
-| z.B. Windows, macOS, Linux | z.B. Word, Chrome, VLC |
+| verwaltet die Hardware                      | nutzt die Dienste des OS   |
+| z.B. Windows, macOS, Linux                  | z.B. Word, Chrome, VLC     |
 
 ## Prüfungstaugliche Formulierung
 

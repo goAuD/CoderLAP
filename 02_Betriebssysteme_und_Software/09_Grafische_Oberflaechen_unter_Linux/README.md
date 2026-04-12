@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Felület | Jellemző |
-|---|---|
-| GNOME | letisztult, modern |
-| KDE Plasma | nagyon testreszabható |
-| Xfce | könnyű, gyors, takarékos |
-| Cinnamon | hagyományosabb desktop élmény |
+| Felület    | Jellemző                      |
+| ---------- | ----------------------------- |
+| GNOME      | letisztult, modern            |
+| KDE Plasma | nagyon testreszabható         |
+| Xfce       | könnyű, gyors, takarékos      |
+| Cinnamon   | hagyományosabb desktop élmény |
 
 ## Mi az a grafikus felület Linux alatt?
 
@@ -102,11 +102,11 @@ Az ablakok viselkedését, elhelyezését kezeli.
 
 ## Linux GUI vs Windows / macOS
 
-| Linux | Windows / macOS |
-|---|---|
-| többféle desktop environment | jellemzően egységesebb gyári felület |
-| erős testreszabhatóság | általában kötöttebb alapélmény |
-| disztribúciótól is függ | gyártó által szorosabban meghatározott |
+| Linux                        | Windows / macOS                        |
+| ---------------------------- | -------------------------------------- |
+| többféle desktop environment | jellemzően egységesebb gyári felület   |
+| erős testreszabhatóság       | általában kötöttebb alapélmény         |
+| disztribúciótól is függ      | gyártó által szorosabban meghatározott |
 
 ## Vizsgán jól használható megfogalmazás
 

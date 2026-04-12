@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Egység | Jelölés | Szorzó | Byte-ban |
-|---|---|---:|---:|
-| gibibyte | `GiB` | `2^30` | `1 073 741 824 B` |
-| tebibyte | `TiB` | `2^40` | `1 099 511 627 776 B` |
-| pebibyte | `PiB` | `2^50` | `1 125 899 906 842 624 B` |
-| exbibyte | `EiB` | `2^60` | `1 152 921 504 606 846 976 B` |
+| Egység   | Jelölés | Szorzó |                      Byte-ban |
+| -------- | ------- | -----: | ----------------------------: |
+| gibibyte | `GiB`   | `2^30` |             `1 073 741 824 B` |
+| tebibyte | `TiB`   | `2^40` |         `1 099 511 627 776 B` |
+| pebibyte | `PiB`   | `2^50` |     `1 125 899 906 842 624 B` |
+| exbibyte | `EiB`   | `2^60` | `1 152 921 504 606 846 976 B` |
 
 ### Emlékeztető
 
@@ -56,10 +56,10 @@ A jelölésben ezért jelenik meg az extra `i`:
 
 ## GiB és GB: a legfontosabb különbség
 
-| Egység | Típus | Érték |
-|---|---|---|
-| `GB` | decimális | `10^9 byte` |
-| `GiB` | bináris | `2^30 byte` |
+| Egység | Típus     | Érték       |
+| ------ | --------- | ----------- |
+| `GB`   | decimális | `10^9 byte` |
+| `GiB`  | bináris   | `2^30 byte` |
 
 Ez számokban:
 
