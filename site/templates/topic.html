@@ -13,8 +13,8 @@
 {% endfor %}
 <section class="page-shell" aria-label="{{ topic.title }}">
   <section class="topic-actions">
-    <a class="site-nav-link" href="{{ site_root | default('/', true) }}">{{ ui.get("back_to_catalog", "") }}</a>
-    <button type="button" class="site-nav-link" data-print-trigger>{{ ui.get("print_label", "") }}</button>
+    <a class="site-nav-link site-nav-link--button" href="{{ site_root | default('/', true) }}">{{ ui.get("back_to_catalog", "") }}</a>
+    <button type="button" class="site-nav-link site-nav-link--button" data-print-trigger>{{ ui.get("print_label", "") }}</button>
   </section>
 
   <article class="topic-article">{{ content_html | safe }}</article>
