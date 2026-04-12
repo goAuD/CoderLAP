@@ -166,8 +166,11 @@ A felhasználó belépett, dashboard megjelent.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A tesztfutás feladata annak ellenőrzése, hogy egy funkció vagy rendszer a követelményeknek megfelelően működik-e.  
-> Egy jól strukturált tesztfutás tartalmazza a tesztcélt, a tesztkörnyezetet, a tesztadatokat, a tesztlépéseket, a várt eredményt, a tényleges eredményt és a teszt státuszát.  
+> A tesztfutás feladata annak ellenőrzése,
+> hogy egy funkció vagy rendszer a követelményeknek megfelelően működik-e.  
+> Egy jól strukturált tesztfutás tartalmazza a tesztcélt,
+> a tesztkörnyezetet, a tesztadatokat, a tesztlépéseket,
+> a várt eredményt, a tényleges eredményt és a teszt státuszát.  
 > A tesztfutás dokumentálása fontos a hibák követéséhez, a minőségbiztosításhoz és az átadás előtti döntésekhez.
 
 ## Gyakori vizsgahibák

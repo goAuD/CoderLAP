@@ -153,8 +153,12 @@ Az elfogadás azt jelenti, hogy a megrendelő vagy felelős fél visszajelzi:
 ## Vizsgán jól használható megfogalmazás
 
 > A rollout egy új rendszer vagy alkalmazás tervezett bevezetése az éles környezetbe.  
-> A folyamat tipikusan tartalmazza a tervezést, az előkészítést, a pilotot, a tényleges bevezetést, az ellenőrzést, az oktatást, az átadást és az elfogadást.  
-> Fontos része a biztonsági követelmények figyelembevétele, az adatmigráció, valamint a rollback lehetősége arra az esetre, ha a bevezetés nem sikerül.
+> A folyamat tipikusan tartalmazza a tervezést, az előkészítést, a pilotot,
+> a tényleges bevezetést, az ellenőrzést, az oktatást,
+> az átadást és az elfogadást.  
+> Fontos része a biztonsági követelmények figyelembevétele,
+> az adatmigráció, valamint a rollback lehetősége arra az esetre,
+> ha a bevezetés nem sikerül.
 
 ## Gyakori vizsgahibák
 

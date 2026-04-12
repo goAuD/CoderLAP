@@ -144,8 +144,11 @@ Fontos, hogy látszódjon:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Egy technikai dokumentáció célja, hogy egy rendszer vagy folyamat működését, használatát és kezelését érthetően rögzítse.  
-> Fontos részei a cél, a célcsoport, az előfeltételek, a rendszerleírás, a telepítési vagy használati lépések, a hibaelhárítás és a verzióinformációk.  
+> Egy technikai dokumentáció célja,
+> hogy egy rendszer vagy folyamat működését, használatát és kezelését érthetően rögzítse.  
+> Fontos részei a cél, a célcsoport, az előfeltételek,
+> a rendszerleírás, a telepítési vagy használati lépések,
+> a hibaelhárítás és a verzióinformációk.  
 > A dokumentáció csak akkor hasznos, ha pontos, célcsoportnak megfelelő és naprakész.
 
 ## Gyakori vizsgahibák
