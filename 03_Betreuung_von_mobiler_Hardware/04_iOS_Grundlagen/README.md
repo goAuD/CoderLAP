@@ -110,7 +110,10 @@ Az iOS egyik fontos ismérve:
 ## Vizsgán jól használható megfogalmazás
 
 > Az iOS az Apple mobil operációs rendszere az iPhone számára.  
-> Jellemző rá a szoros hardver-szoftver integráció, az App Store központú alkalmazásterjesztés, az egységesebb felhasználói élmény és az erős biztonsági-adatvédelmi modell.  
+> Jellemző rá a szoros hardver-szoftver integráció,
+> az App Store központú alkalmazásterjesztés,
+> az egységesebb felhasználói élmény
+> és az erős biztonsági-adatvédelmi modell.  
 > A mai Apple platformelnevezésben az iPhone rendszere iOS, míg az iPadé iPadOS.
 
 ## Gyakori vizsgahibák

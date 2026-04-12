@@ -13,7 +13,9 @@
 
 QR steht für `Quick Response`.
 
-Es handelt sich um einen zweidimensionalen Code, der Informationen in einem Quadratraster aus schwarzen und weißen Modulen speichert.
+Es handelt sich um einen zweidimensionalen Code,
+der Informationen in einem Quadratraster
+aus schwarzen und weißen Modulen speichert.
 
 Typischerweise kann er enthalten:
 
@@ -111,7 +113,9 @@ Deshalb ist es wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Der QR-Code ist ein zweidimensionaler Barcode, der das schnelle und multidirektionale Einlesen großer Datenmengen ermöglicht.  
+> Der QR-Code ist ein zweidimensionaler Barcode,
+> der das schnelle und multidirektionale Einlesen
+> großer Datenmengen ermöglicht.  
 > Seine Vorteile sind die größere Datenspeicherkapazität, das schnelle Einlesen und die Fehlerkorrektur.  
 > Er wird häufig für Links, Zahlungen, Tickets und Identifikation verwendet.
 

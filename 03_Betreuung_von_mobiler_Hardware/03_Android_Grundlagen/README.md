@@ -137,7 +137,9 @@ Ez rugalmas, de biztonsági kockázatot is jelenthet.
 
 > Az Android egy széles körben használt mobil operációs rendszer-platform, amely nyílt forrású alapokra épül.  
 > Sok gyártó sokféle smartphone-ján és tabletjén fut, ezért rugalmas és széles körben elterjedt.  
-> Az Android fontos jellemzői az alkalmazások futtatása, a jogosultságkezelés, a Google Play ökoszisztéma, valamint a nagyobb testreszabhatóság.
+> Az Android fontos jellemzői az alkalmazások futtatása,
+> a jogosultságkezelés, a Google Play ökoszisztéma,
+> valamint a nagyobb testreszabhatóság.
 
 ## Gyakori vizsgahibák
 

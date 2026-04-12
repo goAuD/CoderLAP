@@ -144,8 +144,11 @@ Beim Audio kann wichtig sein:
 ## Prüfungstaugliche Formulierung
 
 > Ein Tablet ist ein tragbares, berührungsgesteuertes Gerät mit einem größeren Display als ein Smartphone.  
-> Wichtige technische Merkmale sind die Displaygröße und -qualität, der Prozessor, der RAM, der Speicher, der Akku, die drahtlosen Verbindungen und die Multitasking-Fähigkeit.  
-> Tablets unterstützen häufig auch einen digitalen Stift und eine Tastatur und sind daher auch für Bildungs- und Produktivitätsaufgaben geeignet.
+> Wichtige technische Merkmale sind die Displaygröße und -qualität,
+> der Prozessor, der RAM, der Speicher, der Akku,
+> die drahtlosen Verbindungen und die Multitasking-Fähigkeit.  
+> Tablets unterstützen häufig auch einen digitalen Stift und eine Tastatur
+> und sind daher auch für Bildungs- und Produktivitätsaufgaben geeignet.
 
 ## Häufige Prüfungsfehler
 
