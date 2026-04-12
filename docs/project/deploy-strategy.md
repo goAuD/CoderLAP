@@ -178,3 +178,8 @@ python -m http.server 4173 --bind 127.0.0.1 --directory dist
 2. Do one final Austrian legal/imprint review before removing `basic_auth` for public access.
 3. Replace the restrictive `robots.txt` with an indexable version once the site is ready for search engines.
 4. Add MX/mail routing later if the domain should receive operational or contact email.
+
+Related documents:
+
+- [private-rollout-access.md](./private-rollout-access.md)
+- [pre-public-checklist.md](./pre-public-checklist.md)

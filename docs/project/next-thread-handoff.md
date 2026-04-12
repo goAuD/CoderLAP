@@ -41,6 +41,9 @@ Last updated: `2026-04-12`
 Read only when relevant:
 
 - `docs/project/architecture-adoption.md`
+- `docs/project/private-rollout-access.md`
+- `docs/project/pre-public-checklist.md`
+- `docs/process/editorial-workflow.md`
 - `docs/process/review-workflow.md`
 - `LAP_CONTENT_REGISTRY.json`
 
