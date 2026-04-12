@@ -196,16 +196,23 @@ class TemplateHookTests(unittest.TestCase):
             content_html="<h1>Binaris</h1>",
             navigation=self.navigation,
             topic_index=self.topic_index,
+            site_root="/",
+            lang_switcher=[
+                {"code": "de", "label": "DE", "href": "/topics/01-02-binaris/", "is_current": True},
+                {"code": "hu", "label": "HU", "href": "/hu/topics/01-02-binaris/", "is_current": False},
+            ],
         )
 
         self.assertIn("data-print-trigger", html)
         self.assertIn(">Vissza a katalogushoz<", html)
         self.assertIn(">Tema nyomtatasa<", html)
+        self.assertIn('class="site-nav-link site-nav-link--button"', html)
         self.assertIn('aria-label="Temak kozotti lapozas"', html)
         self.assertRegex(html, r'>\s*Elozo: ASCII\s*<')
         self.assertRegex(html, r'>\s*Kovetkezo: Hexadezimalis\s*<')
         self.assertIn('href="/topics/01-01-ascii/"', html)
         self.assertIn('href="/topics/01-03-hexadezimalis/"', html)
+        self.assertIn('href="/hu/topics/01-02-binaris/"', html)
         self.assertNotIn('<nav class="topic-pagination" aria-label="Sidebar">', html)
         self.assertNotIn('<main class="page-shell">', html)
 
@@ -229,6 +236,7 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn('allOption.textContent = uiCopy.filter_label || "";', self.site_js)
         self.assertIn('setupResponsiveSidebar(sidebarContainer, sidebarPanel, uiCopy.sidebar_label || "");', self.site_js)
         self.assertIn('emptyState.textContent = uiCopy.empty_state_label || "";', self.site_js)
+        self.assertIn('btn.className = "site-nav-link site-nav-link--button topic-done-btn";', self.site_js)
         self.assertNotIn('No topics found.', self.site_js)
         self.assertNotIn('Search topics', self.site_js)
         self.assertNotIn('"Sidebar"', self.site_js)
