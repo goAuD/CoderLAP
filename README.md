@@ -7,6 +7,7 @@
 ![Registry](https://img.shields.io/badge/registry-233%20items-0a7ea4)
 ![i18n](https://img.shields.io/badge/i18n-DE%20%2B%20HU%20complete-1f883d)
 ![Frontend](https://img.shields.io/badge/frontend-HTML%2FCSS%2FJS%20built-1f883d)
+![Backend](https://img.shields.io/badge/backend-Python%20%2B%20Jinja2-0969da)
 ![Domain](https://img.shields.io/badge/domain-coderlap.com-0969da)
 
 `CoderLAP` is a study project for the Austrian `LAP` exam in `Applikationsentwicklung - Coding`.
