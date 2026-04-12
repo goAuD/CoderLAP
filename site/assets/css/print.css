@@ -55,6 +55,7 @@
   .hero-panel,
   .hero-progress,
   .topic-done-btn,
+  .lang-switcher,
   [data-ui-copy-json] {
     display: none !important;
   }
