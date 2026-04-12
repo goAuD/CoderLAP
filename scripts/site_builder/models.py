@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 
 @dataclass(frozen=True)
@@ -22,6 +22,10 @@ class TopicRecord:
     canonical: bool
 
     def absolute_markdown_path(self, repo_root: Path) -> Path:
+        posix_path = PurePosixPath(self.path)
+        windows_path = PureWindowsPath(self.path)
+        if posix_path.is_absolute() or windows_path.is_absolute() or windows_path.drive:
+            raise ValueError(f"Markdown path must stay repository-relative: {self.path}")
         root = repo_root.resolve()
         candidate = (root / self.path).resolve(strict=False)
         if not candidate.is_relative_to(root):
