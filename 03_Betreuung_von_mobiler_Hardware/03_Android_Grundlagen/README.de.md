@@ -137,7 +137,9 @@ Das ist flexibel, kann aber auch ein Sicherheitsrisiko darstellen.
 
 > Android ist eine weit verbreitete mobile Betriebssystem-Plattform, die auf Open-Source-Grundlagen aufbaut.  
 > Sie läuft auf Smartphones und Tablets vieler Hersteller und ist daher flexibel und weit verbreitet.  
-> Wichtige Merkmale von Android sind die App-Ausführung, die Berechtigungsverwaltung, das Google-Play-Ökosystem sowie die größere Anpassbarkeit.
+> Wichtige Merkmale von Android sind die App-Ausführung,
+> die Berechtigungsverwaltung, das Google-Play-Ökosystem
+> sowie die größere Anpassbarkeit.
 
 ## Häufige Prüfungsfehler
 

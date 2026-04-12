@@ -196,8 +196,13 @@ Konkrete Modelle müssen nicht auswendig gelernt werden, aber man muss verstehen
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Smartphone ist ein fortschrittliches Mobiltelefon, das für Kommunikation, Internetzugang und das Ausführen von Anwendungen geeignet ist.  
-> Wichtige technische Merkmale sind das Display, der Prozessor bzw. SoC, der RAM, der Speicher, der Akku, die Kameras, die drahtlosen Verbindungen, die Sensoren und die biometrische Identifikation.  
+> Ein Smartphone ist ein fortschrittliches Mobiltelefon,
+> das für Kommunikation, Internetzugang
+> und das Ausführen von Anwendungen geeignet ist.  
+> Wichtige technische Merkmale sind das Display, der Prozessor bzw. SoC,
+> der RAM, der Speicher, der Akku, die Kameras,
+> die drahtlosen Verbindungen, die Sensoren
+> und die biometrische Identifikation.  
 > Der Betrieb wird von einem mobilen Betriebssystem wie Android oder iOS gesteuert.
 
 ## Häufige Prüfungsfehler
@@ -218,32 +223,13 @@ Konkrete Modelle müssen nicht auswendig gelernt werden, aber man muss verstehen
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Das SoC (System on a Chip) enthält auf einem einzigen Chip die CPU, GPU, AI/NPU-Einheiten und andere Controller - es bestimmt die Geschwindigkeit und die Energieeffizienz.
-2. Der RAM ist der temporäre Speicher für aktuell laufende Anwendungen, der Speicher ist der dauerhafte Speicherplatz für Dateien und Apps.
+1. Das SoC (System on a Chip) enthält auf einem einzigen Chip die CPU, GPU,
+   AI/NPU-Einheiten und andere Controller - es bestimmt die Geschwindigkeit
+   und die Energieeffizienz.
+2. Der RAM ist der temporäre Speicher für aktuell laufende Anwendungen,
+   der Speicher ist der dauerhafte Speicherplatz für Dateien und Apps.
 3. 4G, 5G, Wi-Fi, Bluetooth, NFC, GPS
 4. Beschleunigungsmesser, Gyroskop, Näherungssensor
-5. Android und iOS
-
-## Quellen
-
-1. Apple Support - iPhone User Guide  
-   https://support.apple.com/guide/iphone/welcome/ios  
-   Verwendung: Offizielle Übersicht über technische Merkmale und Funktionen des iPhone.
-
-2. Android Developers - Core app quality guidelines  
-   https://developer.android.com/docs/quality-guidelines/core-app-quality  
-   Verwendung: Grundlegende Qualitäts- und technische Anforderungen für Android-Geräte.
-
-3. Android Open Source Project - Architecture overview  
-   https://source.android.com/docs/core/architecture  
-   Verwendung: SoC, Plattformaufbau und Hardware-Software-Zusammenspiel.
-
-Abgerufen: `2026-04-08`
-
-1. Integriert die wichtigsten Rechen- und Steuereinheiten
-2. RAM ist temporärer Speicher, Speicher ist permanenter Speicherplatz
-3. 4G/5G, Wi-Fi, Bluetooth, NFC, GPS
-4. Beschleunigungsmesser, Gyroskop, Lichtsensor
 5. Android und iOS
 
 ## Quellen

@@ -110,7 +110,10 @@ Eines der wichtigen Kennzeichen von iOS:
 ## Prüfungstaugliche Formulierung
 
 > iOS ist das mobile Betriebssystem von Apple für das iPhone.  
-> Charakteristisch sind die enge Hardware-Software-Integration, der App-Store-zentrierte Anwendungsvertrieb, das einheitlichere Benutzererlebnis und das starke Sicherheits- und Datenschutzmodell.  
+> Charakteristisch sind die enge Hardware-Software-Integration,
+> der App-Store-zentrierte Anwendungsvertrieb,
+> das einheitlichere Benutzererlebnis
+> und das starke Sicherheits- und Datenschutzmodell.  
 > In der heutigen Apple-Plattformbenennung heißt das System des iPhone iOS, während das des iPad iPadOS heißt.
 
 ## Häufige Prüfungsfehler
