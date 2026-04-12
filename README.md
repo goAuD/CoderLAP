@@ -40,9 +40,9 @@ Operational continuity and formatting rules are documented in:
 
 Architecture and delivery notes are documented in:
 
-- [LAP_CONTENT_ARCHITECTURE.md](./LAP_CONTENT_ARCHITECTURE.md)
-- [LAP_ARCHITECTURE_ADOPTION.md](./LAP_ARCHITECTURE_ADOPTION.md)
-- [LAP_DEPLOY_STRATEGY.md](./LAP_DEPLOY_STRATEGY.md)
+- [docs/project/content-architecture.md](./docs/project/content-architecture.md)
+- [docs/project/architecture-adoption.md](./docs/project/architecture-adoption.md)
+- [docs/project/deploy-strategy.md](./docs/project/deploy-strategy.md)
 
 ## Project layout
 
@@ -51,8 +51,9 @@ The root contains:
 - `18` main topic folders
 - `233` subtopic folders
 - one `README.md` per subtopic folder as the default content file
+- one `README.de.md` translation sidecar per subtopic folder
 - generated registry files for all canonical topic documents
-- repo/deployment helper docs for GitHub and later Caddy hosting
+- internal project/deployment docs under `docs/project/`
 
 Example:
 
@@ -111,7 +112,7 @@ Completed so far:
 - i18n infrastructure complete: German (default at `/`) and Hungarian (`/hu/`)
 - all `233` subtopic documents translated to German as `README.de.md`
 - static site generator built with Jinja2, producing bilingual output to `dist/`
-- planned production domain: `coderlap.com`
+- registered production domain: `coderlap.com`
 - GitHub-ready active working copy defined as `C:\GitHub\CoderLAP`
 
 ## Content principles
@@ -160,7 +161,7 @@ Useful parts of the architecture plan have already been adopted without restruct
 - the current numbered German folder tree remains unchanged
 - stable IDs are provided through the generated content registry
 - `.gitignore` and deployment planning are in place for private GitHub use
-- the future site is still intended as a simple static HTML/CSS/JS presentation layer
+- the bilingual static site already ships from the current repository
 
 What was deliberately deferred:
 
@@ -224,7 +225,7 @@ python -m http.server 4173 --directory dist
 If you continue this project in a new Codex thread:
 
 1. Read [AGENTS.md](./AGENTS.md).
-2. Check the registry and architecture notes in the root.
+2. Check the registry and `docs/project/` notes.
 3. Use `C:\GitHub\CoderLAP` as the active working copy.
 4. Check what topic folders already contain a `README.md`.
 5. Continue within the existing structure.
@@ -233,7 +234,7 @@ If you continue this project in a new Codex thread:
 
 Short cross-machine continuation note:
 
-- [NEXT_THREAD_HANDOFF.md](./NEXT_THREAD_HANDOFF.md)
+- [docs/project/next-thread-handoff.md](./docs/project/next-thread-handoff.md)
 
 ## Notes
 
