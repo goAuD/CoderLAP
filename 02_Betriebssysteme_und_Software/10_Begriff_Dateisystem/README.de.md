@@ -126,7 +126,9 @@ Wenn es um eine Linux-Systempartition geht:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Dateisystem ist ein softwarebasierter Mechanismus oder ein Regelwerk, das festlegt, wie Dateien auf dem Massenspeicher benannt, gespeichert, organisiert und zugegriffen werden.  
+> Das Dateisystem ist ein softwarebasierter Mechanismus oder ein Regelwerk,
+> das festlegt, wie Dateien auf dem Massenspeicher benannt, gespeichert,
+> organisiert und zugegriffen werden.  
 > Das Dateisystem verwaltet die Verzeichnisstruktur, den Zugriff und häufig auch die Metadaten.  
 > Typische Beispiele sind NTFS, exFAT, ext4 oder APFS.
 

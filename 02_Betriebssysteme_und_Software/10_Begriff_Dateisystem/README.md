@@ -126,7 +126,9 @@ Ha Linux rendszerpartícióról van szó:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A fájlrendszer olyan szoftveres mechanizmus vagy szabályrendszer, amely meghatározza, hogyan nevezzük el, tároljuk, rendezzük és érjük el a fájlokat a háttértáron.  
+> A fájlrendszer olyan szoftveres mechanizmus vagy szabályrendszer,
+> amely meghatározza, hogyan nevezzük el, tároljuk, rendezzük
+> és érjük el a fájlokat a háttértáron.  
 > A fájlrendszer kezeli a könyvtárstruktúrát, a hozzáférést és gyakran a metaadatokat is.  
 > Tipikus példák az NTFS, exFAT, ext4 vagy APFS.
 

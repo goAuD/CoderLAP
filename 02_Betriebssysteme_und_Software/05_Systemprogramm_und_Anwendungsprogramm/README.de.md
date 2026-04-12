@@ -109,8 +109,11 @@ In der Prüfung ist jedoch das Grundprinzip wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Systemprogramm ist Software, die den Grundbetrieb des Computers sicherstellt oder unterstützt, zum Beispiel das Betriebssystem, Gerätetreiber oder die Shell.  
-> Ein Anwendungsprogramm hingegen erledigt eine konkrete Benutzeraufgabe, zum Beispiel Textverarbeitung, Webbrowsing oder Medienwiedergabe.  
+> Ein Systemprogramm ist Software, die den Grundbetrieb des Computers
+> sicherstellt oder unterstützt, zum Beispiel das Betriebssystem,
+> Gerätetreiber oder die Shell.  
+> Ein Anwendungsprogramm hingegen erledigt eine konkrete Benutzeraufgabe,
+> zum Beispiel Textverarbeitung, Webbrowsing oder Medienwiedergabe.  
 > Anwendungsprogramme nutzen die Dienste des Betriebssystems.
 
 ## Häufige Prüfungsfehler

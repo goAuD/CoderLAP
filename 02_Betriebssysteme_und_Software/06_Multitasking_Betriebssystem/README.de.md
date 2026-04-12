@@ -92,8 +92,12 @@ Beides hängt zusammen, ist aber nicht dasselbe.
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Multitasking-Betriebssystem ist in der Lage, mehrere Prozesse oder Aufgaben so zu verwalten, dass sie dem Benutzer als gleichzeitig erscheinen.  
-> Dazu plant das System die Prozesse, teilt CPU-Zeit zu, verwaltet den Speicher und koordiniert Hintergrund- und Vordergrundaufgaben.  
+> Ein Multitasking-Betriebssystem ist in der Lage,
+> mehrere Prozesse oder Aufgaben so zu verwalten,
+> dass sie dem Benutzer als gleichzeitig erscheinen.  
+> Dazu plant das System die Prozesse, teilt CPU-Zeit zu,
+> verwaltet den Speicher
+> und koordiniert Hintergrund- und Vordergrundaufgaben.  
 > Moderne Desktop-Betriebssysteme sind in der Regel Multitasking-Systeme.
 
 ## Häufige Prüfungsfehler

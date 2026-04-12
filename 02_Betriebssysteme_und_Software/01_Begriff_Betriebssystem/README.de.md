@@ -132,9 +132,13 @@ Das OS macht den Computer benutzbar.
 
 ## Prüfungstaugliche Formulierung
 
-> Das Betriebssystem ist die grundlegende Systemsoftware eines Computers, die die Hardware-Ressourcen verwaltet und eine Laufzeitumgebung für Anwendungen bereitstellt.  
+> Das Betriebssystem ist die grundlegende Systemsoftware eines Computers,
+> die die Hardware-Ressourcen verwaltet und eine Laufzeitumgebung
+> für Anwendungen bereitstellt.  
 > Es stellt die Verbindung zwischen Benutzer, Programmen und Hardware her.  
-> Zu seinen Aufgaben gehören unter anderem die Prozessverwaltung, die Speicherverwaltung, die Dateiverwaltung, die Geräteverwaltung und die Bereitstellung der Benutzeroberfläche.
+> Zu seinen Aufgaben gehören unter anderem die Prozessverwaltung,
+> die Speicherverwaltung, die Dateiverwaltung, die Geräteverwaltung
+> und die Bereitstellung der Benutzeroberfläche.
 
 ## Häufige Prüfungsfehler
 

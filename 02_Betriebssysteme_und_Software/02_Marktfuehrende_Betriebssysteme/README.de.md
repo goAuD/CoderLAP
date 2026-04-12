@@ -121,7 +121,9 @@ Denn hier reicht es nicht, nur Namen zu nennen, man muss wissen:
 > Im Desktop-Bereich ist Windows am weitesten verbreitet, daneben sind macOS und Linux wichtig.  
 > Im mobilen Bereich dominieren Android und iOS.  
 > Im Serverumfeld haben Linux und Windows Server große Bedeutung.  
-> Die genaue Marktsituation kann sich im Laufe der Zeit ändern, deshalb muss man immer angeben, über welche Plattform und welchen Zeitpunkt man spricht.
+> Die genaue Marktsituation kann sich im Laufe der Zeit ändern,
+> deshalb muss man immer angeben,
+> über welche Plattform und welchen Zeitpunkt man spricht.
 
 ## Häufige Prüfungsfehler
 

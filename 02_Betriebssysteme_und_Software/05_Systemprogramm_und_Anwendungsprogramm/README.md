@@ -109,8 +109,11 @@ Vizsgán viszont az alapelv a fontos:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A rendszerprogram a számítógép alapműködését biztosító vagy támogató szoftver, például az operációs rendszer, az illesztőprogramok vagy a shell.  
-> Az alkalmazásprogram ezzel szemben konkrét felhasználói feladatot végez, például szövegszerkesztést, böngészést vagy médialejátszást.  
+> A rendszerprogram a számítógép alapműködését biztosító vagy támogató
+> szoftver, például az operációs rendszer, az illesztőprogramok
+> vagy a shell.  
+> Az alkalmazásprogram ezzel szemben konkrét felhasználói feladatot végez,
+> például szövegszerkesztést, böngészést vagy médialejátszást.  
 > Az alkalmazásprogramok az operációs rendszer szolgáltatásait használják.
 
 ## Gyakori vizsgahibák

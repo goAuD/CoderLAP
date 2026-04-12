@@ -112,7 +112,8 @@ Verwaltet das Verhalten und die Positionierung der Fenster.
 
 > Unter Linux können verschiedene grafische Oberflächen, auch Desktop-Umgebungen genannt, verwendet werden.  
 > Beispiele dafür sind GNOME, KDE Plasma, Xfce oder Cinnamon.  
-> Diese stellen die Fensterverwaltung, die Panels, den Dateimanager und die grafischen Einstellungsmöglichkeiten bereit.  
+> Diese stellen die Fensterverwaltung, die Panels,
+> den Dateimanager und die grafischen Einstellungsmöglichkeiten bereit.  
 > Ein Vorteil von Linux ist, dass der Benutzer zwischen verschiedenen grafischen Umgebungen wählen kann.
 
 ## Häufige Prüfungsfehler
