@@ -2,10 +2,10 @@
 
 ## Gyors vizuális kép
 
-| Típus | Mire való? | Példa |
-|---|---|---|
-| rendszerprogram | a rendszer működését biztosítja | operációs rendszer, driver, shell |
-| alkalmazásprogram | a felhasználó feladatát végzi | Word, Chrome, Photoshop |
+| Típus             | Mire való?                      | Példa                             |
+| ----------------- | ------------------------------- | --------------------------------- |
+| rendszerprogram   | a rendszer működését biztosítja | operációs rendszer, driver, shell |
+| alkalmazásprogram | a felhasználó feladatát végzi   | Word, Chrome, Photoshop           |
 
 ## Mi az a rendszerprogram?
 
@@ -45,12 +45,12 @@ Fő jellemzői:
 
 ## A két fogalom közti különbség
 
-| Szempont | Rendszerprogram | Alkalmazásprogram |
-|---|---|---|
-| fő cél | a rendszer működtetése / támogatása | felhasználói feladat megoldása |
-| hardverközelség | általában közelebb áll a hardverhez | távolabb áll a hardvertől |
-| függés az OS-től | része lehet vagy szorosan kapcsolódik hozzá | az OS-en fut |
-| példa | Windows, driver, PowerShell | Excel, Firefox, VLC |
+| Szempont         | Rendszerprogram                             | Alkalmazásprogram              |
+| ---------------- | ------------------------------------------- | ------------------------------ |
+| fő cél           | a rendszer működtetése / támogatása         | felhasználói feladat megoldása |
+| hardverközelség  | általában közelebb áll a hardverhez         | távolabb áll a hardvertől      |
+| függés az OS-től | része lehet vagy szorosan kapcsolódik hozzá | az OS-en fut                   |
+| példa            | Windows, driver, PowerShell                 | Excel, Firefox, VLC            |
 
 ## Tipikus rendszerprogramok
 

@@ -2,10 +2,10 @@
 
 ## Schneller visueller Überblick
 
-| Typ | Merkmal |
-|---|---|
+| Typ         | Merkmal                                                               |
+| ----------- | --------------------------------------------------------------------- |
 | Single-User | typischerweise wird es von einem Hauptbenutzer gleichzeitig verwendet |
-| Multi-User | mehrere Benutzer, Konten, Berechtigungen, Trennung |
+| Multi-User  | mehrere Benutzer, Konten, Berechtigungen, Trennung                    |
 
 ## Was ist ein Single-User-System?
 
@@ -42,12 +42,12 @@ Beispiele:
 
 ## Der wichtigste Unterschied
 
-| Aspekt | Single-User | Multi-User |
-|---|---|---|
-| primäre Nutzung | ein Benutzer | mehrere Benutzer |
+| Aspekt              | Single-User         | Multi-User                 |
+| ------------------- | ------------------- | -------------------------- |
+| primäre Nutzung     | ein Benutzer        | mehrere Benutzer           |
 | Berechtigungssystem | kann einfacher sein | in der Regel detaillierter |
-| paralleler Zugriff | nicht das Hauptziel | ja, typisches Ziel |
-| Administration | einfacher | komplexer |
+| paralleler Zugriff  | nicht das Hauptziel | ja, typisches Ziel         |
+| Administration      | einfacher           | komplexer                  |
 
 ## Was muss man in der Prüfung wissen?
 

@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Begriff | Was ist das? | Beispiel |
-|---|---|---|
-| Hardware | physisches Bauteil | Mainboard, SSD, Router |
-| Firmware | in das Gerät geschriebene Steuerungssoftware | UEFI, SSD-Firmware |
-| Betriebssystem | Systemsoftware, die den gesamten Rechner verwaltet | Windows, Linux |
-| Anwendung | Benutzerprogramm | Chrome, Word |
+| Begriff        | Was ist das?                                       | Beispiel               |
+| -------------- | -------------------------------------------------- | ---------------------- |
+| Hardware       | physisches Bauteil                                 | Mainboard, SSD, Router |
+| Firmware       | in das Gerät geschriebene Steuerungssoftware       | UEFI, SSD-Firmware     |
+| Betriebssystem | Systemsoftware, die den gesamten Rechner verwaltet | Windows, Linux         |
+| Anwendung      | Benutzerprogramm                                   | Chrome, Word           |
 
 ## Was ist Firmware?
 
@@ -71,20 +71,20 @@ Zum Beispiel:
 
 ## Firmware vs Software - nicht verwechseln
 
-| Firmware | „Normale" Software |
-|---|---|
-| direkt an ein Gerät gebunden | läuft in einem allgemeinen System |
-| steuert den Grundbetrieb | führt Benutzer- oder Systemaufgaben aus |
-| oft auf Flash-/ROM-Speicher | wird auf Massenspeicher installiert |
-| gerätespezifisch | oft portabler |
+| Firmware                     | „Normale" Software                      |
+| ---------------------------- | --------------------------------------- |
+| direkt an ein Gerät gebunden | läuft in einem allgemeinen System       |
+| steuert den Grundbetrieb     | führt Benutzer- oder Systemaufgaben aus |
+| oft auf Flash-/ROM-Speicher  | wird auf Massenspeicher installiert     |
+| gerätespezifisch             | oft portabler                           |
 
 ## Firmware vs Treiber
 
-| Firmware | Treiber |
-|---|---|
-| befindet sich auf dem Gerät | typischerweise im Betriebssystem |
-| steuert den internen Betrieb des Geräts | vermittelt zwischen OS und Gerät |
-| eng an die Hardware gebunden | systemseitiges Schnittstellenprogramm |
+| Firmware                                | Treiber                               |
+| --------------------------------------- | ------------------------------------- |
+| befindet sich auf dem Gerät             | typischerweise im Betriebssystem      |
+| steuert den internen Betrieb des Geräts | vermittelt zwischen OS und Gerät      |
+| eng an die Hardware gebunden            | systemseitiges Schnittstellenprogramm |
 
 Einfach gesagt:
 

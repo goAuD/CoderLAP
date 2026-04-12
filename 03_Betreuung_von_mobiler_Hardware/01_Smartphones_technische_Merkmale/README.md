@@ -2,17 +2,17 @@
 
 ## Gyors vizuális kép
 
-| Jellemző | Mit nézünk? |
-|---|---|
-| kijelző | méret, felbontás, technológia, fényerő, frissítés |
-| teljesítmény | SoC, CPU, GPU, NPU |
-| memória | RAM |
-| tárhely | belső tároló, bővíthetőség |
-| energia | akkumulátor, töltés |
-| kamera | fő kamera, ultra wide, zoom, videó |
-| kapcsolat | 4G/5G, Wi-Fi, Bluetooth, NFC, GPS |
-| biztonság | PIN, ujjlenyomat, arcfelismerés |
-| szoftver | Android vagy iOS, frissítések |
+| Jellemző     | Mit nézünk?                                       |
+| ------------ | ------------------------------------------------- |
+| kijelző      | méret, felbontás, technológia, fényerő, frissítés |
+| teljesítmény | SoC, CPU, GPU, NPU                                |
+| memória      | RAM                                               |
+| tárhely      | belső tároló, bővíthetőség                        |
+| energia      | akkumulátor, töltés                               |
+| kamera       | fő kamera, ultra wide, zoom, videó                |
+| kapcsolat    | 4G/5G, Wi-Fi, Bluetooth, NFC, GPS                 |
+| biztonság    | PIN, ujjlenyomat, arcfelismerés                   |
+| szoftver     | Android vagy iOS, frissítések                     |
 
 ## Mi a smartphone?
 

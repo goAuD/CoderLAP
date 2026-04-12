@@ -2,19 +2,19 @@
 
 ## Schneller visueller Überblick
 
-| Einheit | Bezeichnung | Bedeutung | Mögliche Werte |
-|---|---|---|---|
-| **Bit** | `b` | 1 Binärziffer | `0` oder `1` |
-| **Byte** | `B` | 8 Bit zusammen | `0-255` |
+| Einheit  | Bezeichnung | Bedeutung      | Mögliche Werte |
+| -------- | ----------- | -------------- | -------------- |
+| **Bit**  | `b`         | 1 Binärziffer  | `0` oder `1`   |
+| **Byte** | `B`         | 8 Bit zusammen | `0-255`        |
 
 ### Zusammenhang
 
-| Ausdruck | Bedeutung |
-|---|---|
-| `1 Bit` | ein einzelner Binärwert |
-| `4 Bit` | halbes Byte, entspricht oft 1 Hexadezimalziffer |
-| `8 Bit` | `1 Byte` |
-| `2^8` | `256`, so viele verschiedene Werte kann ein Byte speichern |
+| Ausdruck | Bedeutung                                                  |
+| -------- | ---------------------------------------------------------- |
+| `1 Bit`  | ein einzelner Binärwert                                    |
+| `4 Bit`  | halbes Byte, entspricht oft 1 Hexadezimalziffer            |
+| `8 Bit`  | `1 Byte`                                                   |
+| `2^8`    | `256`, so viele verschiedene Werte kann ein Byte speichern |
 
 ## Was ist ein Bit?
 
@@ -140,9 +140,9 @@ Deshalb ist die Aussage falsch, dass:
 ## `b` und `B`: nicht verwechseln
 
 | Bezeichnung | Bedeutung |
-|---|---|
-| `b` | Bit |
-| `B` | Byte |
+| ----------- | --------- |
+| `b`         | Bit       |
+| `B`         | Byte      |
 
 Das ist nicht nur ein orthografisches Detail, sondern kann einen **achtfachen Unterschied** bedeuten.
 
@@ -155,14 +155,14 @@ Bei Prüfungen wird das sehr oft verwechselt.
 
 ## Schnelle Beispiele
 
-| Beispiel | Bedeutung |
-|---|---|
-| `1 Bit` | `0` oder `1` |
-| `1 Byte` | 8 Bit |
-| `1 Byte` | 256 mögliche Werte |
+| Beispiel           | Bedeutung                                  |
+| ------------------ | ------------------------------------------ |
+| `1 Bit`            | `0` oder `1`                               |
+| `1 Byte`           | 8 Bit                                      |
+| `1 Byte`           | 256 mögliche Werte                         |
 | `64-Bit`-Prozessor | Architektur, die mit 64-Bit-Daten arbeitet |
-| `100 Mbps` | Netzwerkgeschwindigkeit in Bit angegeben |
-| `20 MB` Datei | Dateigröße in Byte-basierter Einheit |
+| `100 Mbps`         | Netzwerkgeschwindigkeit in Bit angegeben   |
+| `20 MB` Datei      | Dateigröße in Byte-basierter Einheit       |
 
 ## Worauf muss man achten
 

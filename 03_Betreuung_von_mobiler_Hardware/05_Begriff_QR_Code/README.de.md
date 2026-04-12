@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Merkmal | Was bedeutet es? |
-|---|---|
-| `2D`-Code | speichert Daten nicht nur in einer Zeile, sondern in zwei Richtungen |
-| hohe Kapazität | kann mehr Daten speichern als viele klassische Barcodes |
-| richtungsunabhängiges Lesen | von mehreren Seiten erkennbar |
-| Fehlerkorrektur | teilweise beschädigter Code kann noch lesbar sein |
+| Merkmal                     | Was bedeutet es?                                                     |
+| --------------------------- | -------------------------------------------------------------------- |
+| `2D`-Code                   | speichert Daten nicht nur in einer Zeile, sondern in zwei Richtungen |
+| hohe Kapazität              | kann mehr Daten speichern als viele klassische Barcodes              |
+| richtungsunabhängiges Lesen | von mehreren Seiten erkennbar                                        |
+| Fehlerkorrektur             | teilweise beschädigter Code kann noch lesbar sein                    |
 
 ## Was ist ein QR-Code?
 
@@ -25,12 +25,12 @@ Typischerweise kann er enthalten:
 
 ## Worin unterscheidet er sich von einem herkömmlichen Barcode?
 
-| Herkömmlicher Barcode | QR-Code |
-|---|---|
-| typischerweise 1D | 2D |
-| weniger Daten | größere Datenmenge |
-| Leserichtung empfindlicher | aus mehreren Richtungen lesbar |
-| hauptsächlich einfache Identifikation | vielfältige Daten speicherbar |
+| Herkömmlicher Barcode                 | QR-Code                        |
+| ------------------------------------- | ------------------------------ |
+| typischerweise 1D                     | 2D                             |
+| weniger Daten                         | größere Datenmenge             |
+| Leserichtung empfindlicher            | aus mehreren Richtungen lesbar |
+| hauptsächlich einfache Identifikation | vielfältige Daten speicherbar  |
 
 ## Wie sieht er aus?
 

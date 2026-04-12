@@ -2,11 +2,11 @@
 
 ## Schneller visueller Überblick
 
-| Situation | Was macht das Multitasking-OS? |
-|---|---|
-| Browser + Musik + Download | plant die Prozesse |
-| mehrere Fenster offen | verwaltet CPU-Zeit und Speicher |
-| Hintergrund-Update läuft | organisiert Hintergrund- und Vordergrundaufgaben gemeinsam |
+| Situation                  | Was macht das Multitasking-OS?                             |
+| -------------------------- | ---------------------------------------------------------- |
+| Browser + Musik + Download | plant die Prozesse                                         |
+| mehrere Fenster offen      | verwaltet CPU-Zeit und Speicher                            |
+| Hintergrund-Update läuft   | organisiert Hintergrund- und Vordergrundaufgaben gemeinsam |
 
 ## Was ist Multitasking?
 
@@ -76,19 +76,19 @@ Der Mechanismus, mit dem das OS entscheidet, welche Aufgabe wann laufen soll.
 
 ## Multitasking vs Multiprocessing
 
-| Begriff | Bedeutung |
-|---|---|
-| Multitasking | Verwaltung mehrerer Aufgaben in einem Betriebssystem |
-| Multiprocessing | Nutzung mehrerer Prozessoren / Kerne |
+| Begriff         | Bedeutung                                            |
+| --------------- | ---------------------------------------------------- |
+| Multitasking    | Verwaltung mehrerer Aufgaben in einem Betriebssystem |
+| Multiprocessing | Nutzung mehrerer Prozessoren / Kerne                 |
 
 Beides hängt zusammen, ist aber nicht dasselbe.
 
 ## Multitasking vs Multithreading
 
-| Begriff | Bedeutung |
-|---|---|
-| Multitasking | Verwaltung mehrerer Prozesse / Aufgaben auf Systemebene |
-| Multithreading | Nutzung mehrerer Threads innerhalb eines Programms |
+| Begriff        | Bedeutung                                               |
+| -------------- | ------------------------------------------------------- |
+| Multitasking   | Verwaltung mehrerer Prozesse / Aufgaben auf Systemebene |
+| Multithreading | Nutzung mehrerer Threads innerhalb eines Programms      |
 
 ## Prüfungstaugliche Formulierung
 

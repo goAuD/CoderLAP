@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Begriff | Bedeutung |
-|---|---|
-| Shell | Kommandointerpreter-Umgebung |
-| Cmdlet | PowerShell-Befehl |
+| Begriff       | Bedeutung                                          |
+| ------------- | -------------------------------------------------- |
+| Shell         | Kommandointerpreter-Umgebung                       |
+| Cmdlet        | PowerShell-Befehl                                  |
 | Objektbasiert | verarbeitet nicht nur reinen Text, sondern Objekte |
-| Script | aus Befehlen bestehende `.ps1`-Datei |
+| Script        | aus Befehlen bestehende `.ps1`-Datei               |
 
 ## Was ist PowerShell?
 
@@ -49,9 +49,9 @@ Beispiele:
 
 ### Hilfe und Befehlssuche
 
-| Befehl | Wofür? |
-|---|---|
-| `Get-Help` | Hilfe anzeigen |
+| Befehl        | Wofür?                    |
+| ------------- | ------------------------- |
+| `Get-Help`    | Hilfe anzeigen            |
 | `Get-Command` | verfügbare Befehle suchen |
 
 Beispiele:
@@ -63,10 +63,10 @@ Get-Command *Item*
 
 ### Ort und Navigation
 
-| Befehl | Wofür? |
-|---|---|
+| Befehl         | Wofür?                 |
+| -------------- | ---------------------- |
 | `Get-Location` | aktuellen Ort anzeigen |
-| `Set-Location` | Ordner wechseln |
+| `Set-Location` | Ordner wechseln        |
 
 Beispiele:
 
@@ -77,8 +77,8 @@ Set-Location C:\DEV_SCHOOL
 
 ### Dateien und Ordner auflisten
 
-| Befehl | Wofür? |
-|---|---|
+| Befehl          | Wofür?                       |
+| --------------- | ---------------------------- |
 | `Get-ChildItem` | Dateien und Ordner auflisten |
 
 Beispiele:
@@ -91,12 +91,12 @@ Get-ChildItem -Recurse
 
 ### Erstellen, Kopieren, Verschieben, Löschen
 
-| Befehl | Wofür? |
-|---|---|
-| `New-Item` | neues Element erstellen |
-| `Copy-Item` | Kopieren |
-| `Move-Item` | Verschieben / Umbenennen |
-| `Remove-Item` | Löschen |
+| Befehl        | Wofür?                   |
+| ------------- | ------------------------ |
+| `New-Item`    | neues Element erstellen  |
+| `Copy-Item`   | Kopieren                 |
+| `Move-Item`   | Verschieben / Umbenennen |
+| `Remove-Item` | Löschen                  |
 
 Beispiele:
 
@@ -109,8 +109,8 @@ Remove-Item .\b.txt
 
 ### Inhalt anzeigen
 
-| Befehl | Wofür? |
-|---|---|
+| Befehl        | Wofür?               |
+| ------------- | -------------------- |
 | `Get-Content` | Dateiinhalt ausgeben |
 
 Beispiel:
@@ -123,12 +123,12 @@ Get-Content .\jegyzet.txt
 
 In PowerShell häufige Kurzaliase:
 
-| Alias | Originalbefehl |
-|---|---|
-| `ls` | `Get-ChildItem` |
+| Alias | Originalbefehl  |
+| ----- | --------------- |
+| `ls`  | `Get-ChildItem` |
 | `dir` | `Get-ChildItem` |
-| `cd` | `Set-Location` |
-| `cat` | `Get-Content` |
+| `cd`  | `Set-Location`  |
+| `cat` | `Get-Content`   |
 
 Wichtig:
 

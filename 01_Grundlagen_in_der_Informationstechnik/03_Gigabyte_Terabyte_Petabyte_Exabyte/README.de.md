@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Einheit | Bezeichnung | Faktor | In Byte |
-|---|---|---:|---:|
-| Gigabyte | `GB` | `10^9` | `1 000 000 000 B` |
-| Terabyte | `TB` | `10^12` | `1 000 000 000 000 B` |
-| Petabyte | `PB` | `10^15` | `1 000 000 000 000 000 B` |
-| Exabyte | `EB` | `10^18` | `1 000 000 000 000 000 000 B` |
+| Einheit  | Bezeichnung |  Faktor |                       In Byte |
+| -------- | ----------- | ------: | ----------------------------: |
+| Gigabyte | `GB`        |  `10^9` |             `1 000 000 000 B` |
+| Terabyte | `TB`        | `10^12` |         `1 000 000 000 000 B` |
+| Petabyte | `PB`        | `10^15` |     `1 000 000 000 000 000 B` |
+| Exabyte  | `EB`        | `10^18` | `1 000 000 000 000 000 000 B` |
 
 ### Einfache Eselsbrücke
 
@@ -79,18 +79,18 @@ In Berichten, Verträgen und Dienstbeschreibungen werden ebenfalls häufig dezim
 
 ## GB und GiB: nicht verwechseln
 
-| Einheit | Bedeutung | Wert in Byte |
-|---|---|---:|
-| `GB` | Gigabyte, dezimal | `10^9 = 1 000 000 000 B` |
-| `GiB` | Gibibyte, binär | `2^30 = 1 073 741 824 B` |
+| Einheit | Bedeutung         |             Wert in Byte |
+| ------- | ----------------- | -----------------------: |
+| `GB`    | Gigabyte, dezimal | `10^9 = 1 000 000 000 B` |
+| `GiB`   | Gibibyte, binär   | `2^30 = 1 073 741 824 B` |
 
 Dasselbe gilt bei größeren Einheiten:
 
 | Dezimal | Binär |
-|---|---|
-| `TB` | `TiB` |
-| `PB` | `PiB` |
-| `EB` | `EiB` |
+| ------- | ----- |
+| `TB`    | `TiB` |
+| `PB`    | `PiB` |
+| `EB`    | `EiB` |
 
 Dieser Unterschied ist wichtig, weil dieselbe Festplatte je nachdem, ob das System dezimale oder binäre Einheiten verwendet, unterschiedlich groß angezeigt werden kann.
 

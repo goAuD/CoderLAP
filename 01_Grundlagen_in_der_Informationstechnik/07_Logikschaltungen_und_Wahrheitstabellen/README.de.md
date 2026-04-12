@@ -4,37 +4,37 @@
 
 ### NOT
 
-| A | NOT A |
-|---|---|
-| 0 | 1 |
-| 1 | 0 |
+| A   | NOT A |
+| --- | ----- |
+| 0   | 1     |
+| 1   | 0     |
 
 ### AND
 
-| A | B | A AND B |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
+| A   | B   | A AND B |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
 ### OR
 
-| A | B | A OR B |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 1 |
+| A   | B   | A OR B |
+| --- | --- | ------ |
+| 0   | 0   | 0      |
+| 0   | 1   | 1      |
+| 1   | 0   | 1      |
+| 1   | 1   | 1      |
 
 ### XOR
 
-| A | B | A XOR B |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
+| A   | B   | A XOR B |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 1       |
+| 1   | 0   | 1       |
+| 1   | 1   | 0       |
 
 ## Was ist eine logische Schaltung?
 
@@ -175,12 +175,12 @@ XOR ist besonders wichtig zum Beispiel bei:
 
 Manchmal begegnet man auch folgenden Formen:
 
-| Operation | Wortform | Häufige Kurzform |
-|---|---|---|
-| NOT | Negation | `NOT A` |
-| AND | Und | `A AND B` |
-| OR | Oder | `A OR B` |
-| XOR | Exklusives Oder | `A XOR B` |
+| Operation | Wortform        | Häufige Kurzform |
+| --------- | --------------- | ---------------- |
+| NOT       | Negation        | `NOT A`          |
+| AND       | Und             | `A AND B`        |
+| OR        | Oder            | `A OR B`         |
+| XOR       | Exklusives Oder | `A XOR B`        |
 
 In mathematischen oder programmtechnischen Umgebungen können andere Zeichen vorkommen, aber bei der Prüfung ist die textuelle Interpretation am wichtigsten.
 

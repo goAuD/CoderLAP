@@ -2,14 +2,14 @@
 
 ## Schneller visueller Überblick
 
-| Frage | Was muss festgehalten werden? |
-|---|---|
-| wer? | verantwortliche Person |
-| wann? | Datum, Uhrzeit |
-| wo? | System, Umgebung, Gerät |
-| was? | durchgeführte Tätigkeit |
-| warum? | Ziel oder Begründung |
-| was war das Ergebnis? | Erfolg, Fehler, Abweichung |
+| Frage                        | Was muss festgehalten werden?   |
+| ---------------------------- | ------------------------------- |
+| wer?                         | verantwortliche Person          |
+| wann?                        | Datum, Uhrzeit                  |
+| wo?                          | System, Umgebung, Gerät         |
+| was?                         | durchgeführte Tätigkeit         |
+| warum?                       | Ziel oder Begründung            |
+| was war das Ergebnis?        | Erfolg, Fehler, Abweichung      |
 | was ist der nächste Schritt? | Maßnahme, Eskalation, Abschluss |
 
 ## Warum muss protokolliert werden?

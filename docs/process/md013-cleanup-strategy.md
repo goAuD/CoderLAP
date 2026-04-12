@@ -14,8 +14,29 @@ would create noisy diffs and make real content review harder.
 ## Current Rule
 
 - `MD013` stays enabled
+- the active repository rule is pragmatic:
+  - `line_length = 120`
+  - headings ignored
+  - tables ignored
+  - code blocks ignored
 - cleanup happens in dedicated batches
 - cleanup should improve readability, not just satisfy the linter mechanically
+
+## Why The Rule Was Tuned
+
+The original `80` character rule produced too much noise for this project.
+
+The main reasons were:
+
+- visual study tables with longer labels
+- explicit source URLs
+- short technical headings and comparison lines that are readable as-is
+- bilingual content with many inline code terms and legal citations
+
+For this corpus, the stricter rule created churn faster than it created value.
+
+The current policy keeps `MD013` useful by focusing it on genuinely overlong
+running prose.
 
 ## What Counts As Success
 
@@ -76,8 +97,8 @@ Typical acceptable leftovers may include:
 - literal command examples
 - legal citations that are clearer on one line
 
-If these leftovers are frequent and justified, only then consider a narrow
-config adjustment. Do not weaken the rule before the easy cleanup is done.
+The config adjustment has already been made because the initial audit showed
+that the old rule mostly punished the study format rather than bad prose.
 
 ## Safe Editing Rules
 
@@ -104,19 +125,19 @@ For each cleanup batch:
 Repository-wide inspection:
 
 ```powershell
-markdownlint "**/*.md" --config .markdownlint.json
+npx --yes markdownlint-cli "**/*.md" --config .markdownlint.json
 ```
 
 Scoped inspection example:
 
 ```powershell
-markdownlint "docs/**/*.md" --config .markdownlint.json
+npx --yes markdownlint-cli "docs/**/*.md" --config .markdownlint.json
 ```
 
 Module-scoped inspection example:
 
 ```powershell
-markdownlint "01_Grundlagen_in_der_Informationstechnik/**/*.md" --config .markdownlint.json
+npx --yes markdownlint-cli "01_Grundlagen_in_der_Informationstechnik/**/*.md" --config .markdownlint.json
 ```
 
 ## Decision Rule

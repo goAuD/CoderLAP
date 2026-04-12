@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Számrendszer | Alap | Használt számjegyek | Példa ugyanarra az értékre |
-|---|---:|---|---|
-| bináris | `2` | `0, 1` | `101010₂` |
-| oktális | `8` | `0-7` | `52₈` |
-| decimális | `10` | `0-9` | `42₁₀` |
-| hexadecimális | `16` | `0-9, A-F` | `2A₁₆` |
+| Számrendszer  | Alap | Használt számjegyek | Példa ugyanarra az értékre |
+| ------------- | ---: | ------------------- | -------------------------- |
+| bináris       |  `2` | `0, 1`              | `101010₂`                  |
+| oktális       |  `8` | `0-7`               | `52₈`                      |
+| decimális     | `10` | `0-9`               | `42₁₀`                     |
+| hexadecimális | `16` | `0-9, A-F`          | `2A₁₆`                     |
 
 Mind a négy szám ugyanazt az értéket jelentheti:
 

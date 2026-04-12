@@ -6,14 +6,14 @@
 
 **StatCounter Global Stats, 2026 március** alapján:
 
-| Rendszer | Arány |
-|---|---:|
-| Windows | `60.8%` |
-| OS X | `9.52%` |
-| macOS | `5.24%` |
-| Linux | `3.16%` |
-| ChromeOS | `1.62%` |
-| Unknown | `19.67%` |
+| Rendszer |    Arány |
+| -------- | -------: |
+| Windows  |  `60.8%` |
+| OS X     |  `9.52%` |
+| macOS    |  `5.24%` |
+| Linux    |  `3.16%` |
+| ChromeOS |  `1.62%` |
+| Unknown  | `19.67%` |
 
 Megjegyzés:
 
@@ -24,14 +24,14 @@ Megjegyzés:
 
 **StatCounter Global Stats, 2026 február** alapján:
 
-| Rendszer | Arány |
-|---|---:|
-| Android | `35.87%` |
-| Windows | `31.37%` |
-| iOS | `17.01%` |
-| OS X | `3.43%` |
-| macOS | `2.31%` |
-| Unknown | `7.81%` |
+| Rendszer |    Arány |
+| -------- | -------: |
+| Android  | `35.87%` |
+| Windows  | `31.37%` |
+| iOS      | `17.01%` |
+| OS X     |  `3.43%` |
+| macOS    |  `2.31%` |
+| Unknown  |  `7.81%` |
 
 ## Mit jelent az, hogy piacvezető?
 

@@ -2,14 +2,14 @@
 
 ## Gyors vizuális kép
 
-| Kérdés | Mit kell rögzíteni? |
-|---|---|
-| ki? | felelős személy |
-| mikor? | dátum, idő |
-| hol? | rendszer, környezet, eszköz |
-| mit? | végrehajtott tevékenység |
-| miért? | cél vagy indok |
-| mi lett az eredmény? | siker, hiba, eltérés |
+| Kérdés                | Mit kell rögzíteni?         |
+| --------------------- | --------------------------- |
+| ki?                   | felelős személy             |
+| mikor?                | dátum, idő                  |
+| hol?                  | rendszer, környezet, eszköz |
+| mit?                  | végrehajtott tevékenység    |
+| miért?                | cél vagy indok              |
+| mi lett az eredmény?  | siker, hiba, eltérés        |
 | mi a következő lépés? | teendő, eszkaláció, lezárás |
 
 ## Miért kell protokollálni?
