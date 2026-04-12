@@ -2,18 +2,19 @@
 
 ## Anbieter
 
+- Betreiber: Viktor Halupka
 - Projektname: CoderLAP
 - Projekttyp: Bildungsressource für die österreichische LAP-Prüfung in Applikationsentwicklung - Coding
 - Veröffentlichungsformat: statische Website, generiert aus Repository-Inhalten
 
 ## Kontakt
 
-- Hauptkontakt: die Projektverantwortlichen des Repositories
+- Hauptkontakt: Viktor Halupka
 - Öffentlicher Feedback-Kanal: Issues oder Pull Requests im Repository
 
 ## Verantwortung
 
-- Verantwortlich für den Inhalt dieses Entwurfs: die CoderLAP-Projektverantwortlichen
+- Verantwortlich für den Inhalt dieses Entwurfs: Viktor Halupka
 - Diese Seite ist ein Entwurf eines rechtlichen Hinweises und sollte vor der öffentlichen Veröffentlichung überprüft werden
 
 ## Quellen

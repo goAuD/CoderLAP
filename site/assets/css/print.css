@@ -56,6 +56,9 @@
   .hero-progress,
   .topic-done-btn,
   .lang-switcher,
+  .site-github-link,
+  .nav-progress,
+  .back-to-top,
   [data-ui-copy-json] {
     display: none !important;
   }
