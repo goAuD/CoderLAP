@@ -1,0 +1,115 @@
+name: CoderLAP Static CI/CD
+
+'on':
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "docs/**"
+      - ".github/ISSUE_TEMPLATE/**"
+  push:
+    branches:
+      - dev
+      - main
+    paths-ignore:
+      - "docs/**"
+      - ".github/ISSUE_TEMPLATE/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coderlap-static-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run test suite
+        run: python -m unittest discover -s tests -v
+
+      - name: Build static site
+        run: python scripts/build_site.py
+
+      - name: Upload static artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coderlap-dist
+          path: dist/
+          if-no-files-found: error
+
+      - name: Build summary
+        run: |
+          echo "### CoderLAP CI" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Python: $(python --version)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Dist root:" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          ls -lah dist | head -20 >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    name: Deploy Static Site
+    runs-on:
+      - self-hosted
+      - Linux
+      - X64
+      - coderlap
+    timeout-minutes: 15
+    needs: ci
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Download static artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: coderlap-dist
+          path: dist
+
+      - name: Stage release locally on server
+        run: |
+          set -euo pipefail
+          TARGET="/srv/www/coderlap"
+
+          mkdir -p "$TARGET"
+          rm -rf "$TARGET/dist.incoming"
+          mkdir -p "$TARGET/dist.incoming"
+          rsync -a --delete dist/ "$TARGET/dist.incoming/"
+
+      - name: Promote staged release
+        run: |
+          set -euo pipefail
+          TARGET="/srv/www/coderlap"
+
+          rm -rf "$TARGET/dist.backup"
+          if [ -d "$TARGET/dist" ]; then
+            mv "$TARGET/dist" "$TARGET/dist.backup"
+          fi
+          mv "$TARGET/dist.incoming" "$TARGET/dist"
+          test -f "$TARGET/dist/index.html"
+
+      - name: Deployment summary
+        run: |
+          echo "### Static Deploy" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Target runner: \`self-hosted / coderlap\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Target dir: \`/srv/www/coderlap/dist\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Commit: \`${{ github.sha }}\`" >> "$GITHUB_STEP_SUMMARY"
