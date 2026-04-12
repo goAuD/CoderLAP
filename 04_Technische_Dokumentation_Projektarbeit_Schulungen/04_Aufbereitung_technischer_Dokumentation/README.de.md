@@ -119,8 +119,11 @@ Sie sind nicht gut, wenn:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der Aufbereitung technischer Dokumentation muss der Inhalt logisch strukturiert, an die Zielgruppe angepasst und in übersichtlicher Form dargestellt werden.  
-> Wichtig sind eine klare Struktur, einheitliche Terminologie, kurze und präzise Formulierungen sowie der angemessene Einsatz von Bildern, Tabellen und Beispielen.  
+> Bei der Aufbereitung technischer Dokumentation muss der Inhalt logisch strukturiert,
+> an die Zielgruppe angepasst und in übersichtlicher Form dargestellt werden.  
+> Wichtig sind eine klare Struktur, einheitliche Terminologie,
+> kurze und präzise Formulierungen sowie der angemessene Einsatz
+> von Bildern, Tabellen und Beispielen.  
 > Die Dokumentation muss auch langfristig wartbar und aktualisierbar bleiben.
 
 ## Häufige Prüfungsfehler

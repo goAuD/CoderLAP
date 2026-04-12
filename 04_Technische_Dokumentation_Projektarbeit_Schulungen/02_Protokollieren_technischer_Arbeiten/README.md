@@ -131,7 +131,9 @@ Nyomtató hálózati beállításának javítása
 ## Vizsgán jól használható megfogalmazás
 
 > A technikai munkák protokollálása azt jelenti, hogy a műszaki tevékenységeket visszakövethető módon dokumentáljuk.  
-> Egy jó protokoll tartalmazza a dátumot, a felelőst, az érintett rendszert, a végrehajtott lépéseket, az eredményt, az esetleges hibákat és a következő lépéseket.  
+> Egy jó protokoll tartalmazza a dátumot, a felelőst,
+> az érintett rendszert, a végrehajtott lépéseket, az eredményt,
+> az esetleges hibákat és a következő lépéseket.  
 > Ez fontos a hibakereséshez, az átadáshoz, az ellenőrizhetőséghez és a csapatmunkához.
 
 ## Gyakori vizsgahibák

@@ -166,9 +166,13 @@ Der Benutzer wurde angemeldet, Dashboard wurde angezeigt.
 
 ## Prüfungstaugliche Formulierung
 
-> Die Aufgabe eines Testlaufs besteht darin zu überprüfen, ob eine Funktion oder ein System den Anforderungen entsprechend funktioniert.  
-> Ein gut strukturierter Testlauf enthält das Testziel, die Testumgebung, die Testdaten, die Testschritte, das erwartete Ergebnis, das tatsächliche Ergebnis und den Teststatus.  
-> Die Dokumentation des Testlaufs ist wichtig für die Fehlerverfolgung, die Qualitätssicherung und für Entscheidungen vor der Übergabe.
+> Die Aufgabe eines Testlaufs besteht darin zu überprüfen,
+> ob eine Funktion oder ein System den Anforderungen entsprechend funktioniert.  
+> Ein gut strukturierter Testlauf enthält das Testziel,
+> die Testumgebung, die Testdaten, die Testschritte,
+> das erwartete Ergebnis, das tatsächliche Ergebnis und den Teststatus.  
+> Die Dokumentation des Testlaufs ist wichtig für die Fehlerverfolgung,
+> die Qualitätssicherung und für Entscheidungen vor der Übergabe.
 
 ## Häufige Prüfungsfehler
 
