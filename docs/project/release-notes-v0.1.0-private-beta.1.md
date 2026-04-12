@@ -15,7 +15,8 @@ This is not a public launch.
 - Hungarian is available at `/hu/`
 - all `233` canonical Hungarian topic files exist
 - all `233` German translation sidecars exist
-- search, filter, topic navigation, language routing, and print views are working
+- search, filter, topic navigation, language routing, and print views are
+  working
 - legal pages exist for `de`, `hu`, and editorial fallback `en`
 
 ## Delivery State

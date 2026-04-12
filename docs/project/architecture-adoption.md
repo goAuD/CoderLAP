@@ -4,10 +4,12 @@ Last updated: `2026-04-12`
 
 ## Purpose
 
-This file explains how the original architecture intent was adapted to the **actual** repository that now exists.
+This file explains how the original architecture intent was adapted to the
+**actual** repository that now exists.
 
-The original planning assumed a later translation phase and a later frontend phase.
-Those phases are now complete enough that the repository model has to be described in its current form, not in its earlier planned form.
+The original planning assumed a later translation phase and a later frontend
+phase. Those phases are now complete enough that the repository model has to be
+described in its current form, not in its earlier planned form.
 
 ## What Was Adopted
 
@@ -28,13 +30,15 @@ The project uses:
 - `LAP_CONTENT_REGISTRY.json`
 - `LAP_CONTENT_REGISTRY.csv`
 
-This keeps metadata centralized without forcing front matter into all `233` topic folders.
+This keeps metadata centralized without forcing front matter into all `233`
+topic folders.
 
 ### The numbered folder tree stays unchanged
 
 Adopted.
 
-The repository already matches the official PDF structure, so no migration into a new content tree was performed.
+The repository already matches the official PDF structure, so no migration into
+a new content tree was performed.
 
 ### Static frontend delivery
 
@@ -51,12 +55,14 @@ The repository now has a working static build pipeline:
 
 Adopted in a practical form.
 
-Instead of moving content into a new `content/de` tree, German translations are stored next to the canonical source:
+Instead of moving content into a new `content/de` tree, German translations are
+stored next to the canonical source:
 
 - `README.md`
 - `README.de.md`
 
-This keeps the numbered topic structure stable and keeps contributor workflow simple.
+This keeps the numbered topic structure stable and keeps contributor workflow
+simple.
 
 ## What Was Not Adopted
 
@@ -83,7 +89,8 @@ The following are now true and should be treated as current-state facts:
 
 ## Documentation Layout Decision
 
-Internal project and engineering docs now belong under `docs/`, not the repository root.
+Internal project and engineering docs now belong under `docs/`, not the
+repository root.
 
 GitHub-facing root files should stay in the root:
 
@@ -108,4 +115,5 @@ For future work, optimize for:
 3. deploying only the static result
 4. avoiding unnecessary structural rewrites
 
-If the architecture changes again, update this file and `docs/project/content-architecture.md` together.
+If the architecture changes again, update this file and
+`docs/project/content-architecture.md` together.

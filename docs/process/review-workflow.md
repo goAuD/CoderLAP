@@ -1,29 +1,38 @@
 # Lektorálás Workflow — CoderLAP
 
-> Reusable prompt for any AI agent / LLM to systematically review and fix topic README files in the CoderLAP repository.
+> Reusable prompt for any AI agent / LLM to systematically review and fix topic
+> README files in the CoderLAP repository.
 
 ---
 
 ## How to use this document
 
-Copy everything below the `---` line under **"Prompt starts here"** into a new chat session with any capable AI agent (GPT-4o, Claude, Gemini, Copilot, Codex, etc.). Adjust the `CURRENT_GROUP` variable to the topic group you want to review next.
+Copy everything below the `---` line under **"Prompt starts here"** into a new
+chat session with any capable AI agent (GPT-4o, Claude, Gemini, Copilot, Codex,
+etc.). Adjust the `CURRENT_GROUP` variable to the topic group you want to review
+next.
 
 ---
 
 ## Prompt starts here
 
-```
-You are reviewing the study material in the CoderLAP repository — an Austrian LAP exam knowledge base (Applikationsentwicklung – Coding).
+```text
+You are reviewing the study material in the CoderLAP repository — an
+Austrian LAP exam knowledge base (Applikationsentwicklung – Coding).
 
-REPOSITORY ROOT: C:\GitHub\CoderLAP  (or the path where the repo is checked out)
-BRANCH: dev  (always work on dev, merge to main after push)
-CURRENT_GROUP: 04  (change this to the topic group number you want to review next)
+REPOSITORY ROOT: C:\GitHub\CoderLAP
+(or the path where the repo is checked out)
+BRANCH: dev
+(always work on dev, merge to main after push)
+CURRENT_GROUP: 04
+(change this to the topic group number you want to review next)
 
 ──────────────────────────────────────
 1. CONTEXT
 ──────────────────────────────────────
 
-- Each main topic is a numbered folder (e.g. 04_Technische_Dokumentation_Projektarbeit_Schulungen/).
+- Each main topic is a numbered folder
+  (e.g. `04_Technische_Dokumentation_Projektarbeit_Schulungen/`).
 - Each subtopic is a numbered subfolder containing a canonical README.md.
 - German translations may exist as README.de.md next to the canonical file.
 - Content language: Hungarian canonical source.
@@ -37,16 +46,22 @@ CURRENT_GROUP: 04  (change this to the topic group number you want to review nex
 A) URL VALIDATION
    - Open/fetch every URL in the ## Források section.
    - If a URL is dead (4xx/5xx), replace it with the closest live official equivalent.
-   - If a URL redirects to a renamed page, update the URL and the source title/description to match.
-   - If a URL points to a misleading slug (content doesn't match what the source note says), replace it with the correct page.
+   - If a URL redirects to a renamed page, update the URL and the source
+     title/description to match.
+   - If a URL points to a misleading slug
+     (content doesn't match what the source note says), replace it with the
+     correct page.
    - Verify PDFs with a HEAD request if the fetch tool can't parse them.
 
 B) FACTUAL ACCURACY
-   - Check definitions, comparisons, and technical claims against the linked sources.
-   - Flag anything outdated or incorrect; fix it with a brief, exam-appropriate correction.
+   - Check definitions, comparisons, and technical claims against the linked
+     sources.
+   - Flag anything outdated or incorrect; fix it with a brief,
+     exam-appropriate correction.
 
 C) FORMAT CONSISTENCY
-   - Expected structure (not every section is mandatory, but order should be consistent):
+   - Expected structure
+     (not every section is mandatory, but order should be consistent):
      1. # <German topic title>
      2. ## Gyors vizuális kép  (quick visual overview table)
      3. ## Mi az …? / core explanation
@@ -56,8 +71,10 @@ C) FORMAT CONSISTENCY
      7. ## Vizsgán jól használható megfogalmazás
      8. ## Gyakori vizsgahibák
      9. ## Gyors önellenőrzés  (self-check questions)
-    10. ## Rövid válaszok az önellenőrzéshez  (answers — must not be empty!)
-    11. ## Források  (must exist and must have at least one URL with usage note)
+    10. ## Rövid válaszok az önellenőrzéshez
+        (answers — must not be empty!)
+    11. ## Források
+        (must exist and must have at least one URL with usage note)
    - If "Rövid válaszok az önellenőrzéshez" is empty or missing, fill it in.
    - If "Források" is missing entirely, add it with relevant official sources.
 
@@ -129,7 +146,7 @@ Step 9: REPORT results to the user:
 
 ## Change log
 
-| Date | Notes |
-|---|---|
-| 2026-04-11 | Initial version based on review workflow used for groups 01–03. |
-| 2026-04-12 | Moved from repository root-level docs area into `docs/process/`. |
+- `2026-04-11`: Initial version based on review workflow used for groups
+  `01–03`.
+- `2026-04-12`: Moved from repository root-level docs area into
+  `docs/process/`.

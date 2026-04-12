@@ -26,7 +26,8 @@ The project has four distinct source layers:
 
 3. **Translation sidecars**
    - `README.de.md` next to the Hungarian `README.md`
-   - German is the translated delivery language, not the canonical authoring source.
+   - German is the translated delivery language, not the canonical authoring
+     source.
 
 4. **Machine-readable metadata**
    - `LAP_CONTENT_REGISTRY.json`
@@ -92,7 +93,8 @@ CoderLAP/
 - `site/i18n/de.json`
 - `site/i18n/hu.json`
 
-English files can exist as editorial fallback material, but the active published site is currently `de + hu`.
+English files can exist as editorial fallback material, but the active published
+site is currently `de + hu`.
 
 ## Static Build Model
 
@@ -155,13 +157,16 @@ Examples:
 
 Important rule:
 
-- regenerate the registry if canonical topic files are added, removed, renamed, or structurally moved
+- regenerate the registry if canonical topic files are added, removed, renamed,
+  or structurally moved
 
-The registry is intentionally external. The project still does **not** depend on front matter embedded into all topic files.
+The registry is intentionally external. The project still does **not** depend on
+front matter embedded into all topic files.
 
 Current metadata semantics worth remembering:
 
-- `review_status` is still a coarse editorial field and currently remains `draft`
+- `review_status` is still a coarse editorial field and currently remains
+  `draft`
 - `translation_status` is generated from the file system
 - `de_complete` means the German sidecar exists
 - `de_missing` means the German sidecar is missing
@@ -191,4 +196,5 @@ The architecture is now stable enough for:
 3. Debian + Caddy delivery
 4. low-attack-surface hosting with a single deploy path
 
-This document should be updated whenever the on-disk structure, language routing, or build pipeline changes.
+This document should be updated whenever the on-disk structure, language
+routing, or build pipeline changes.
