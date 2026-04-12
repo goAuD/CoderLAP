@@ -9,7 +9,7 @@
 | 0   | 1     |
 | 1   | 0     |
 
-### AND
+### AND merken
 
 | A   | B   | A AND B |
 | --- | --- | ------- |
@@ -18,7 +18,7 @@
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-### OR
+### OR merken
 
 | A   | B   | A OR B |
 | --- | --- | ------ |
@@ -27,7 +27,7 @@
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
 
-### XOR
+### XOR merken
 
 | A   | B   | A XOR B |
 | --- | --- | ------- |
@@ -167,7 +167,7 @@ XOR ist besonders wichtig zum Beispiel bei:
 - genau eines ist wahr
 - oder anders gesagt: die beiden Eingaben sind unterschiedlich
 
-### NOT
+### NOT merken
 
 - kehrt den Wert um
 
@@ -182,7 +182,9 @@ Manchmal begegnet man auch folgenden Formen:
 | OR        | Oder            | `A OR B`         |
 | XOR       | Exklusives Oder | `A XOR B`        |
 
-In mathematischen oder programmtechnischen Umgebungen können andere Zeichen vorkommen, aber bei der Prüfung ist die textuelle Interpretation am wichtigsten.
+In mathematischen oder programmtechnischen Umgebungen
+können andere Zeichen vorkommen,
+aber bei der Prüfung ist die textuelle Interpretation am wichtigsten.
 
 ## Wofür werden sie verwendet?
 
@@ -196,7 +198,10 @@ In mathematischen oder programmtechnischen Umgebungen können andere Zeichen vor
 
 > Logische Schaltungen arbeiten mit binären Eingaben, die Signale haben also den Wert 0 oder 1.  
 > Die Wahrheitstabelle zeigt, welche Ausgabe zu allen möglichen Eingabekombinationen gehört.  
-> AND ergibt nur dann 1, wenn beide Eingaben 1 sind. OR ergibt 1, wenn mindestens eine Eingabe 1 ist. XOR ergibt 1, wenn die beiden Eingaben unterschiedlich sind. NOT invertiert eine einzelne Eingabe.
+> AND ergibt nur dann 1, wenn beide Eingaben 1 sind.  
+> OR ergibt 1, wenn mindestens eine Eingabe 1 ist.  
+> XOR ergibt 1, wenn die beiden Eingaben unterschiedlich sind.  
+> NOT invertiert eine einzelne Eingabe.
 
 ## Häufige Prüfungsfehler
 

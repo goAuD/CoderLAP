@@ -19,7 +19,9 @@ Die binären Einheiten basieren auf `2^10 = 1024`:
 
 ## Warum wurden diese Einheiten eingeführt?
 
-Digitale Systeme arbeiten von Natur aus **binär**, daher basieren Speicher und viele interne technische Berechnungen tatsächlich auf Potenzen von `2`.
+Digitale Systeme arbeiten von Natur aus **binär**,
+daher basieren Speicher und viele interne technische Berechnungen
+tatsächlich auf Potenzen von `2`.
 
 Lange Zeit wurden in der Praxis die Bezeichnungen `KB`, `MB`, `GB` auch für Werte verwendet, die in Wirklichkeit:
 
@@ -40,7 +42,9 @@ Das führte zu Missverständnissen, weshalb genauere binäre Bezeichnungen einge
 
 ## Was bedeutet der Name?
 
-Die binären Präfixe entstanden, indem zum ersten Teil des entsprechenden SI-Präfixes `bi` hinzugefügt wurde, was auf das Wort `binary` verweist.
+Die binären Präfixe entstanden,
+indem zum ersten Teil des entsprechenden SI-Präfixes `bi` hinzugefügt wurde,
+was auf das Wort `binary` verweist.
 
 Beispiele:
 
@@ -78,7 +82,9 @@ Dasselbe gilt bei größeren Einheiten:
 
 ### 1. Betriebssysteme und Speicher
 
-RAM, Cache und viele interne Speicherbegriffe sind von Natur aus in der binären Welt angesiedelt, daher sind hier binäre Einheiten logischer.
+RAM, Cache und viele interne Speicherbegriffe sind von Natur aus
+in der binären Welt angesiedelt,
+daher sind hier binäre Einheiten logischer.
 
 ### 2. Systemtools und technische Dokumentation
 
@@ -89,7 +95,10 @@ In Fachdokumentationen wird die genaue Kennzeichnung immer wichtiger:
 
 ### 3. Abweichungen bei Speicheranzeigen
 
-Ein Hersteller kann einen Datenträger als `1 TB` angeben, während das Betriebssystem die Größe nach binärer Logik anzeigt. Dadurch kann der Benutzer die Kapazität als kleiner empfinden, obwohl er in Wirklichkeit nur eine andere Einheit sieht.
+Ein Hersteller kann einen Datenträger als `1 TB` angeben,
+während das Betriebssystem die Größe nach binärer Logik anzeigt.
+Dadurch kann der Benutzer die Kapazität als kleiner empfinden,
+obwohl er in Wirklichkeit nur eine andere Einheit sieht.
 
 ## Schnelle Beispiele
 
@@ -128,9 +137,12 @@ Vollständige Kette:
 ## Prüfungstaugliche Formulierung
 
 > Gibibyte, Tebibyte, Pebibyte und Exbibyte sind binäre Datengrößeneinheiten.  
-> Sie basieren auf Potenzen von 2, daher gilt zum Beispiel 1 GiB = 2^30 Byte, 1 TiB = 2^40 Byte.  
+> Sie basieren auf Potenzen von 2, daher gilt zum Beispiel
+> 1 GiB = 2^30 Byte, 1 TiB = 2^40 Byte.  
 > GiB, TiB, PiB und EiB sind nicht identisch mit den dezimalen Einheiten GB, TB, PB und EB.  
-> Die binären Präfixe wurden eingeführt, damit der Unterschied zwischen 1000er- und 1024er-basierter Berechnung eindeutig ist.
+> Die binären Präfixe wurden eingeführt,
+> damit der Unterschied zwischen 1000er-
+> und 1024er-basierter Berechnung eindeutig ist.
 
 ## Häufige Prüfungsfehler
 

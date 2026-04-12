@@ -92,7 +92,9 @@ Ugyanez nagyobb egységeknél is igaz:
 | `PB`      | `PiB`   |
 | `EB`      | `EiB`   |
 
-Ez a különbség azért fontos, mert ugyanannak a háttértárnak a mérete másként jelenhet meg attól függően, hogy a rendszer decimális vagy bináris egységet használ.
+Ez a különbség azért fontos, mert ugyanannak a háttértárnak a mérete
+másként jelenhet meg attól függően, hogy a rendszer decimális vagy
+bináris egységet használ.
 
 ## Gyors példák
 

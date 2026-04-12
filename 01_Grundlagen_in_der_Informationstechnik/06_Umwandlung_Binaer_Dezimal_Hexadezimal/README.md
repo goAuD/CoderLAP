@@ -38,7 +38,7 @@ Módszer:
 - minden helyiértéket megszorzunk a megfelelő `2` hatvánnyal
 - az eredményeket összeadjuk
 
-### Példa
+### Példa: decimálisból binárisba
 
 `101101₂`
 
@@ -67,7 +67,7 @@ Módszer:
 - feljegyezzük a maradékokat
 - a maradékokat alulról felfelé olvassuk
 
-### Példa
+### Példa: binárisból hexadecimálisba
 
 `45₁₀`
 
@@ -96,7 +96,7 @@ Módszer:
 - ha kell, bal oldalon nullákkal kiegészítjük
 - minden `4 bites` csoportot egy hexaszámjegyre cserélünk
 
-### Példa
+### Példa: hexadecimálisból binárisba
 
 `1101111010₂`
 
@@ -120,7 +120,7 @@ Módszer:
 
 - minden hexaszámjegyet lecserélünk a megfelelő `4 bites` bináris alakra
 
-### Példa
+### Példa: decimálisból hexadecimálisba
 
 `7B₁₆`
 
@@ -141,7 +141,7 @@ Módszer:
 - maradékok feljegyzése
 - a maradékokat alulról felfelé olvassuk
 
-### Példa
+### Példa: hexadecimálisból decimálisba
 
 `123₁₀`
 
@@ -209,7 +209,9 @@ esetén a hexadecimális alak nagyon praktikus.
 ## Vizsgán jól használható megfogalmazás
 
 > A bináris, decimális és hexadecimális számok közti átváltás alapja a helyiértékes rendszer.  
-> Binárisból decimálisba 2 hatványok alapján számolunk, decimálisból binárisba pedig 2-vel osztunk és a maradékokat olvassuk visszafelé.  
+> Binárisból decimálisba 2 hatványok alapján számolunk,
+> decimálisból binárisba pedig 2-vel osztunk
+> és a maradékokat olvassuk visszafelé.  
 > Hexadecimális és bináris között különösen könnyű az átváltás, mert egy hexaszámjegy pontosan 4 bitnek felel meg.
 
 ## Gyakori vizsgahibák
