@@ -11,30 +11,33 @@ from scripts.site_builder.models import TopicRecord
 
 class TopicRecordTests(unittest.TestCase):
     def test_absolute_markdown_path_joins_repo_root_and_relative_path(self) -> None:
-        record = TopicRecord(
-            id="LAP-11-02",
-            lang="hu",
-            title="Példa",
-            path="11_Informatik/02_Pelda/README.md",
-            main_topic_number="11",
-            main_topic_dir="11_Informatik",
-            subtopic_number="02",
-            subtopic_dir="02_Pelda",
-            slug="11-02-pelda",
-            review_status="draft",
-            translation_status="not_started",
-            source_count=3,
-            opened_at="2026-04-09",
-            canonical=True,
-        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir)
+            record = TopicRecord(
+                id="LAP-11-02",
+                lang="hu",
+                title="Példa",
+                path="11_Informatik/02_Pelda/README.md",
+                main_topic_number="11",
+                main_topic_dir="11_Informatik",
+                subtopic_number="02",
+                subtopic_dir="02_Pelda",
+                slug="11-02-pelda",
+                review_status="draft",
+                translation_status="not_started",
+                source_count=3,
+                opened_at="2026-04-09",
+                canonical=True,
+            )
 
-        self.assertEqual(
-            record.absolute_markdown_path(Path("C:/GitHub/CoderLAP")),
-            Path("C:/GitHub/CoderLAP/11_Informatik/02_Pelda/README.md"),
-        )
+            self.assertEqual(
+                record.absolute_markdown_path(repo_root),
+                (repo_root / "11_Informatik/02_Pelda/README.md").resolve(strict=False),
+            )
 
     def test_absolute_markdown_path_rejects_absolute_or_escaped_paths(self) -> None:
-        repo_root = Path("C:/GitHub/CoderLAP")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir)
         absolute_record = TopicRecord(
             id="LAP-11-02",
             lang="hu",
@@ -67,12 +70,31 @@ class TopicRecordTests(unittest.TestCase):
             opened_at="2026-04-09",
             canonical=True,
         )
+        posix_absolute_record = TopicRecord(
+            id="LAP-11-04",
+            lang="hu",
+            title="POSIX",
+            path="/var/tmp/outside.md",
+            main_topic_number="11",
+            main_topic_dir="11_Informatik",
+            subtopic_number="04",
+            subtopic_dir="04_Posix",
+            slug="11-04-posix",
+            review_status="draft",
+            translation_status="not_started",
+            source_count=1,
+            opened_at="2026-04-09",
+            canonical=True,
+        )
 
         with self.assertRaises(ValueError):
             absolute_record.absolute_markdown_path(repo_root)
 
         with self.assertRaises(ValueError):
             escaped_record.absolute_markdown_path(repo_root)
+
+        with self.assertRaises(ValueError):
+            posix_absolute_record.absolute_markdown_path(repo_root)
 
 
 class LoaderTests(unittest.TestCase):
