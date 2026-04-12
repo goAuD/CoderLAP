@@ -111,7 +111,7 @@ Completed already:
 - A practical reference implementation was also added under `18_Uebungsbeispiel\Musterloesung_Minimal`.
 - Total completed subtopic documents so far: `233`.
 - Stable registry files were generated for all `233` canonical subtopic documents.
-- Root architecture/deployment docs were added for GitHub/private-repo and later Caddy use.
+- Internal architecture/deployment docs now live under `docs/project/`.
 - i18n infrastructure fully built: German default (`/`), Hungarian secondary (`/hu/`).
 - All `233` subtopics translated to German as `README.de.md` files.
 - Static site generator (Jinja2) outputs bilingual site to `dist/`.
@@ -291,8 +291,8 @@ When continuing this project:
 
 1. Read this `AGENTS.md`.
 2. Check whether the active working copy is `C:\GitHub\CoderLAP`.
-3. Read the root architecture notes:
-   `LAP_CONTENT_ARCHITECTURE.md`, `LAP_ARCHITECTURE_ADOPTION.md`, `LAP_DEPLOY_STRATEGY.md`
+3. Read the project architecture notes:
+   `docs/project/content-architecture.md`, `docs/project/architecture-adoption.md`, `docs/project/deploy-strategy.md`
 4. Check the registry files before large structural work:
    `LAP_CONTENT_REGISTRY.json`, `LAP_CONTENT_REGISTRY.csv`
 5. Continue in the existing numbered structure.
@@ -310,8 +310,8 @@ For a completely new Codex thread on another machine, use this startup order:
 1. Open the repository root `C:\GitHub\CoderLAP`.
 2. Read `AGENTS.md` first.
 3. Read `README.md` for the high-level state.
-4. Read `LAP_DEPLOY_STRATEGY.md` if the task involves Git, GitHub, Caddy, SSH, Debian, or deployment.
-5. Read `NEXT_THREAD_HANDOFF.md` for the shortest practical continuation context.
+4. Read `docs/project/deploy-strategy.md` if the task involves Git, GitHub, Caddy, DNS, Debian, or deployment.
+5. Read `docs/project/next-thread-handoff.md` for the shortest practical continuation context.
 6. Only read `LAP_CONTENT_REGISTRY.json` when indexing, i18n mapping, or site-building logic is relevant.
 
 Deployment-oriented assumptions for a new thread:
@@ -326,13 +326,13 @@ Deployment-oriented assumptions for a new thread:
 
 Planned phases:
 
-1. Complete all topic writeups in Hungarian.
-2. Standardize quality and formatting across all topic documents.
-3. Add i18n-friendly structure for translation.
-4. Create translated versions as requested.
-5. Build a simple HTML/CSS/JS frontend to browse the material.
+1. Keep the Hungarian canonical corpus stable and review-ready.
+2. Keep the German translation sidecars aligned with the Hungarian source.
+3. Maintain and polish the bilingual static frontend.
+4. Deploy the generated static site to `coderlap.com`.
+5. Keep deployment simple: Debian + Caddy + static output.
 
-## Future i18n Guidance
+## Current i18n Guidance
 
 The current priority is Hungarian source content.
 
@@ -344,12 +344,12 @@ Write documents with future translation in mind:
 - keep terminology consistent across topics
 - prefer reusable wording for definitions
 
-Likely future direction:
+Current direction:
 
 - keep one canonical source document per subtopic
 - use the registry IDs as stable language-mapping anchors
-- later introduce translated variants in a predictable way
-- do not invent the translation file structure yet unless the user asks
+- keep German translations as `README.de.md` sidecars
+- keep German default at `/` and Hungarian at `/hu/`
 
 ## Architecture Adoption Notes
 
@@ -358,14 +358,16 @@ What is already adopted from the architecture plan:
 - Markdown-first source of truth
 - stable external metadata registry instead of immediate front matter migration
 - GitHub-ready repo hygiene via `.gitignore`
-- explicit deployment planning for later private-repo + Caddy use
+- explicit deployment planning for later Caddy delivery
+- sidecar translation files (`README.de.md`)
+- bilingual static-site build pipeline
 
 What is intentionally deferred for now:
 
 - full front matter in all `233` topic files
 - migration into a new `content/hu` tree
 - full `related_ids` graph inside each document
-- full validation/build pipeline before the frontend phase
+- database/CMS-backed publishing
 
 ## Registry Notes
 
@@ -403,21 +405,22 @@ The generator script is repository-root relative.
 Current repo preparation state:
 
 - `.gitignore` exists
-- architecture adoption is documented
-- deployment direction is documented
-- project is ready for Git/GitHub work under `C:\GitHub\CoderLAP`
+- architecture adoption is documented under `docs/project/`
+- deployment direction is documented under `docs/project/`
+- project is already Git/GitHub-ready under `C:\GitHub\CoderLAP`
+- the bilingual static frontend build is already implemented
 
 Recommended next technical phase after content completion:
 
 1. continue from the GitHub copy
-2. create/connect a private repository
-3. keep `main` and `dev`
-4. build the later static presentation layer from Markdown + registry
-5. deploy the generated/static output through Caddy
+2. keep `main` and `dev`
+3. perform final QA on `dev`
+4. deploy the generated/static output through Caddy
+5. cut over `coderlap.com`
 
-## Future Web Frontend Guidance
+## Current Web Frontend Guidance
 
-The user intends to eventually render the full project in a simple web interface.
+The project already renders through a static web interface.
 
 Therefore:
 
@@ -429,13 +432,13 @@ Therefore:
 
 Potential future deliverables:
 
-- topic index page
-- per-topic detail pages
-- language switcher
-- search/filter
-- progress overview
+- further UI polish
+- deployment-specific hardening
+- search/filter refinements
+- print improvements
+- content QA adjustments
 
-Do not build the web frontend yet unless the user asks for it.
+Do not replace the current frontend architecture unless the user explicitly requests a redesign.
 
 ## Editing Policy
 

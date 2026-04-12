@@ -1,6 +1,6 @@
 # Lektorálás Workflow — CoderLAP
 
-> Reusable prompt for any AI agent / LLM to systematically review and fix all topic README files in the CoderLAP repository.
+> Reusable prompt for any AI agent / LLM to systematically review and fix topic README files in the CoderLAP repository.
 
 ---
 
@@ -17,20 +17,21 @@ You are reviewing the study material in the CoderLAP repository — an Austrian 
 
 REPOSITORY ROOT: C:\GitHub\CoderLAP  (or the path where the repo is checked out)
 BRANCH: dev  (always work on dev, merge to main after push)
-CURRENT_GROUP: 04  (change this to the topic group number you want to review)
+CURRENT_GROUP: 04  (change this to the topic group number you want to review next)
 
 ──────────────────────────────────────
 1. CONTEXT
 ──────────────────────────────────────
 
 - Each main topic is a numbered folder (e.g. 04_Technische_Dokumentation_Projektarbeit_Schulungen/).
-- Each subtopic is a numbered subfolder containing a README.md.
-- Content language: Hungarian.
+- Each subtopic is a numbered subfolder containing a canonical README.md.
+- German translations may exist as README.de.md next to the canonical file.
+- Content language: Hungarian canonical source.
 - File/folder names: German.
 - Commit messages: English.
 
 ──────────────────────────────────────
-2. REVIEW CHECKLIST — apply to every README.md in the group
+2. REVIEW CHECKLIST — apply to every canonical README.md in the group
 ──────────────────────────────────────
 
 A) URL VALIDATION
@@ -131,3 +132,4 @@ Step 9: REPORT results to the user:
 | Date | Notes |
 |---|---|
 | 2026-04-11 | Initial version based on review workflow used for groups 01–03. |
+| 2026-04-12 | Moved from repository root-level docs area into `docs/process/`. |
