@@ -18,8 +18,11 @@ Purpose:
 - Base the structure on `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`.
 - Develop the content first in **Hungarian**.
 - Keep folder names and file names in **German**.
-- Later add **i18n translations**.
-- Later present the whole project in a simple **HTML/CSS/JS web frontend**.
+- German translations exist as `README.de.md` alongside Hungarian `README.md`.
+- German is the **default language** (served at `/`).
+- Hungarian is the **secondary language** (served at `/hu/`).
+- Planned production domain: `coderlap.com`.
+- Present the whole project in a simple **HTML/CSS/JS web frontend**.
 
 This is a long-running project. Any future thread should treat this file as the continuity source.
 
@@ -109,6 +112,10 @@ Completed already:
 - Total completed subtopic documents so far: `233`.
 - Stable registry files were generated for all `233` canonical subtopic documents.
 - Root architecture/deployment docs were added for GitHub/private-repo and later Caddy use.
+- i18n infrastructure fully built: German default (`/`), Hungarian secondary (`/hu/`).
+- All `233` subtopics translated to German as `README.de.md` files.
+- Static site generator (Jinja2) outputs bilingual site to `dist/`.
+- Planned production domain: `coderlap.com`.
 
 When continuing work in a new thread:
 

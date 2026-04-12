@@ -5,18 +5,21 @@
 ![Folders](https://img.shields.io/badge/folders-German-6f42c1)
 ![Sources](https://img.shields.io/badge/sources-modern%20%26%20reliable-0969da)
 ![Registry](https://img.shields.io/badge/registry-233%20items-0a7ea4)
-![i18n](https://img.shields.io/badge/i18n-planned-f59e0b)
-![Frontend](https://img.shields.io/badge/frontend-HTML%2FCSS%2FJS%20planned-d97706)
+![i18n](https://img.shields.io/badge/i18n-DE%20%2B%20HU%20complete-1f883d)
+![Frontend](https://img.shields.io/badge/frontend-HTML%2FCSS%2FJS%20built-1f883d)
+![Domain](https://img.shields.io/badge/domain-coderlap.com-0969da)
 
 `CoderLAP` is a study project for the Austrian `LAP` exam in `Applikationsentwicklung - Coding`.
 
 This project turns the official topic catalog into a structured knowledge base with:
 
 - German folder and file names
-- Hungarian learning content
+- bilingual content: German (default) and Hungarian
+- `233` subtopic documents fully translated to German (`README.de.md`)
 - clean, visual-first Markdown documents
 - explicit source lists at the end of each topic
-- a future path toward i18n and a simple web frontend
+- a working static site generator with i18n support
+- planned domain: `coderlap.com`
 
 ## Source of truth
 
@@ -104,6 +107,10 @@ Completed so far:
 - practical reference solution added under `18_Uebungsbeispiel/Musterloesung_Minimal`
 - total completed topic documents so far: `233`
 - stable metadata registry generated for all `233` canonical topic documents
+- i18n infrastructure complete: German (default at `/`) and Hungarian (`/hu/`)
+- all `233` subtopic documents translated to German as `README.de.md`
+- static site generator built with Jinja2, producing bilingual output to `dist/`
+- planned production domain: `coderlap.com`
 - GitHub-ready active working copy defined as `C:\GitHub\CoderLAP`
 
 ## Content principles
@@ -162,12 +169,12 @@ What was deliberately deferred:
 
 ## Roadmap
 
-1. Keep the Markdown corpus stable and review-ready.
-2. Continue from the GitHub-ready copy under `C:\GitHub\CoderLAP`.
-3. Add i18n-ready structure on top of the registry and current Markdown files.
-4. Create translated variants.
-5. Build a simple HTML/CSS/JS frontend for browsing the full catalog.
-6. Deploy the static result later through Caddy with a single clean delivery path.
+1. ~~Keep the Markdown corpus stable and review-ready.~~ Done.
+2. ~~Continue from the GitHub-ready copy under `C:\GitHub\CoderLAP`.~~ Done.
+3. ~~Add i18n-ready structure on top of the registry and current Markdown files.~~ Done.
+4. ~~Create translated variants.~~ Done — all `233` subtopics translated to German.
+5. ~~Build a simple HTML/CSS/JS frontend for browsing the full catalog.~~ Done.
+6. Deploy the static result through Caddy on `coderlap.com` with a single clean delivery path.
 
 ## Static frontend build
 

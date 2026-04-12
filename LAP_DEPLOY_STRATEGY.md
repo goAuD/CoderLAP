@@ -59,8 +59,8 @@ For the first real hosted version:
 Example direction:
 
 ```caddy
-example.com {
-    root * /var/www/coderlap-site
+coderlap.com {
+    root * /var/www/coderlap
     encode zstd gzip
 
     basic_auth {

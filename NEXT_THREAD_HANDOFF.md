@@ -12,7 +12,11 @@
 
 - The content corpus is complete.
 - There are `18` main topic folders.
-- There are `233` canonical subtopic `README.md` files.
+- There are `233` canonical subtopic `README.md` files (Hungarian).
+- All `233` subtopics translated to German as `README.de.md`.
+- i18n infrastructure is complete: German at `/` (default), Hungarian at `/hu/`.
+- Static site generator (Jinja2) outputs bilingual site to `dist/`.
+- Planned production domain: `coderlap.com`
 - The metadata registry exists:
   - `LAP_CONTENT_REGISTRY.json`
   - `LAP_CONTENT_REGISTRY.csv`
@@ -33,11 +37,10 @@ Read only when relevant:
 
 ## Most Likely Next Work
 
-- frontend/static-site scaffold
-- i18n structure
-- deployment preparation
+- deployment to `coderlap.com` via Caddy
 - Debian + Caddy setup
 - server-side Git workflow
+- DNS configuration for `coderlap.com`
 
 ## Deployment Context
 

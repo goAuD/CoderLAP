@@ -719,8 +719,8 @@ Recommended starter protection:
 ### 19.3 Recommended target Caddy shape
 
 ```caddy
-chseets.com {
-    root * /var/www/chseets
+coderlap.com {
+    root * /var/www/coderlap
     encode zstd gzip
 
     basic_auth {

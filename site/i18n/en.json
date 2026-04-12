@@ -20,5 +20,7 @@
   "mark_done_label": "Learned",
   "mark_undo_label": "Undo",
   "imprint_label": "Imprint",
-  "privacy_label": "Privacy"
+  "privacy_label": "Privacy",
+  "language_label": "Language",
+  "language_switcher_label": "Switch language"
 }
