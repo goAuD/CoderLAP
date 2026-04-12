@@ -93,6 +93,7 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".catalog-main {", self.layout_css)
         self.assertIn("body.sidebar-open .catalog-sidebar {", self.layout_css)
         self.assertIn("grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);", self.layout_css)
+        self.assertIn("max-width: var(--max-content-width);", self.layout_css)
 
     def test_components_css_covers_task9_catalog_and_topic_surfaces(self) -> None:
         self.assertIn(".catalog-controls {", self.components_css)
@@ -103,6 +104,7 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".topic-pagination__link {", self.components_css)
         self.assertIn(".catalog-results__empty {", self.components_css)
         self.assertIn(".catalog-sidebar__toggle {", self.components_css)
+        self.assertIn(".topic-actions {", self.components_css)
 
     def test_components_css_prevents_catalog_text_overflow(self) -> None:
         self.assertIn(".topic-card__meta,", self.components_css)

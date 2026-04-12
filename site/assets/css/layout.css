@@ -193,7 +193,7 @@ body.sidebar-open .catalog-sidebar [data-sidebar-panel] {
 
   .topic-article,
   .legal-article {
-    max-width: 52rem;
+    max-width: var(--max-content-width);
     margin-inline: auto;
   }
 }

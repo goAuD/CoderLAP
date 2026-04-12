@@ -10,9 +10,13 @@
 ![Backend](https://img.shields.io/badge/backend-Python%20%2B%20Jinja2-0969da)
 ![Domain](https://img.shields.io/badge/domain-coderlap.com-0969da)
 
-`CoderLAP` is a study project for the Austrian `LAP` exam in `Applikationsentwicklung - Coding`.
+`CoderLAP` is a study project for the Austrian `LAP` exam in
+`Applikationsentwicklung - Coding`.
 
-This project turns the official topic catalog into a structured knowledge base with:
+![CoderLAP homepage preview](./docs/assets/images/coderlap-homepage-desktop.png)
+
+This project turns the official topic catalog into a structured knowledge base
+with:
 
 - German folder and file names
 - bilingual content: German (default) and Hungarian
@@ -23,8 +27,8 @@ This project turns the official topic catalog into a structured knowledge base w
 - planned domain: `coderlap.com`
 - static site default language: German at `/`, Hungarian at `/hu/`
 
-German is the public default language of the generated site.
-Hungarian remains the canonical source corpus used to maintain the content base.
+German is the public default language of the generated site. Hungarian remains
+the canonical source corpus used to maintain the content base.
 
 ## Source of truth
 
@@ -32,9 +36,9 @@ The project structure is based on:
 
 - `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`
 
-The canonical learning content remains the existing Hungarian topic `README.md` corpus,
-with German translation sidecars in `README.de.md`.
-For future indexing, translation mapping, and site-building, the project now also includes:
+The canonical learning content remains the existing Hungarian topic `README.md`
+corpus, with German translation sidecars in `README.de.md`. For future indexing,
+translation mapping, and site-building, the project now also includes:
 
 - `LAP_CONTENT_REGISTRY.json`
 - `LAP_CONTENT_REGISTRY.csv`
@@ -116,7 +120,8 @@ Completed so far:
 - `13 / 13` subtopic documents created for topic `17`
 - main topic `18_Uebungsbeispiel` completed
 - `5 / 5` subtopic documents created for topic `18`
-- practical reference solution added under `18_Uebungsbeispiel/Musterloesung_Minimal`
+- practical reference solution added under
+  `18_Uebungsbeispiel/Musterloesung_Minimal`
 - total completed topic documents so far: `233`
 - stable metadata registry generated for all `233` canonical topic documents
 - i18n infrastructure complete: German (default at `/`) and Hungarian (`/hu/`)
@@ -129,7 +134,8 @@ Completed so far:
 
 Each topic document should be:
 
-- maintained from Hungarian canonical source content, with German translation sidecars for the live frontend
+- maintained from Hungarian canonical source content, with German translation
+  sidecars for the live frontend
 - practical and exam-oriented
 - easy to scan quickly
 - visually structured with headings, lists, and tables
@@ -165,7 +171,8 @@ Typical sections include:
 
 ## Architecture status
 
-Useful parts of the architecture plan have already been adopted without restructuring the finished corpus:
+Useful parts of the architecture plan have already been adopted without
+restructuring the finished corpus:
 
 - Markdown remains the source of truth
 - the current numbered German folder tree remains unchanged
@@ -183,10 +190,13 @@ What was deliberately deferred:
 
 1. ~~Keep the Markdown corpus stable and review-ready.~~ Done.
 2. ~~Continue from the GitHub-ready copy under `C:\GitHub\CoderLAP`.~~ Done.
-3. ~~Add i18n-ready structure on top of the registry and current Markdown files.~~ Done.
-4. ~~Create translated variants.~~ Done — all `233` subtopics translated to German.
+3. ~~Add i18n-ready structure on top of the registry and current Markdown
+   files.~~ Done.
+4. ~~Create translated variants.~~ Done — all `233` subtopics translated to
+   German.
 5. ~~Build a simple HTML/CSS/JS frontend for browsing the full catalog.~~ Done.
-6. Deploy the static result through Caddy on `coderlap.com` with a single clean delivery path.
+6. Deploy the static result through Caddy on `coderlap.com` with a single clean
+   delivery path.
 
 ## Static frontend build
 
@@ -213,7 +223,8 @@ python -m http.server 4173 --bind 0.0.0.0 --directory dist
 Then open `http://localhost:4173` in a browser.  
 Use `--bind 0.0.0.0` to access the site from other devices on the same LAN.
 
-If `localhost` behaves inconsistently on your machine, use `http://127.0.0.1:4173/` instead.
+If `localhost` behaves inconsistently on your machine, use
+`http://127.0.0.1:4173/` instead.
 
 Run the test suite:
 
@@ -241,7 +252,8 @@ If you continue this project in a new Codex thread:
 3. Use `C:\GitHub\CoderLAP` as the active working copy.
 4. Check what topic folders already contain a `README.md`.
 5. Continue within the existing structure.
-6. Preserve the German naming + bilingual content structure, with Hungarian as canonical source and German as the default frontend language.
+6. Preserve the German naming + bilingual content structure, with Hungarian as
+   canonical source and German as the default frontend language.
 7. Keep sources explicit in every topic document.
 
 Short cross-machine continuation note:
@@ -251,4 +263,5 @@ Short cross-machine continuation note:
 ## Notes
 
 This is a long-running working project, not just a static notes dump.  
-The goal is to end up with a complete, consistent, reusable exam knowledge base that can later be translated and rendered on the web.
+The goal is to end up with a complete, consistent, reusable exam knowledge base
+that can later be translated and rendered on the web.
