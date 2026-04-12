@@ -15,6 +15,7 @@ class BuildSettingsTests(unittest.TestCase):
         self.assertEqual(settings.registry_path, repo_root / "LAP_CONTENT_REGISTRY.json")
         self.assertEqual(settings.template_dir, repo_root / "site" / "templates")
         self.assertEqual(settings.asset_dir, repo_root / "site" / "assets")
+        self.assertEqual(settings.static_content_dir, repo_root / "site" / "content" / "static" / "root")
         self.assertEqual(settings.output_dir, repo_root / "dist")
         self.assertEqual(settings.i18n_dir, repo_root / "site" / "i18n")
         self.assertEqual(settings.legal_content_dir, repo_root / "site" / "content" / "legal" / "en")

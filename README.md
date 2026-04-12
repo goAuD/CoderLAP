@@ -1,7 +1,7 @@
 # CoderLAP
 
 ![Status](https://img.shields.io/badge/status-content%20complete-1f883d)
-![Content](https://img.shields.io/badge/content-Hungarian-1f883d)
+![Content](https://img.shields.io/badge/content-DE%20default%20%2F%20HU%20canonical-1f883d)
 ![Folders](https://img.shields.io/badge/folders-German-6f42c1)
 ![Sources](https://img.shields.io/badge/sources-modern%20%26%20reliable-0969da)
 ![Registry](https://img.shields.io/badge/registry-233%20items-0a7ea4)
@@ -21,6 +21,10 @@ This project turns the official topic catalog into a structured knowledge base w
 - explicit source lists at the end of each topic
 - a working static site generator with i18n support
 - planned domain: `coderlap.com`
+- static site default language: German at `/`, Hungarian at `/hu/`
+
+German is the public default language of the generated site.
+Hungarian remains the canonical source corpus used to maintain the content base.
 
 ## Source of truth
 
@@ -28,7 +32,8 @@ The project structure is based on:
 
 - `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`
 
-The canonical learning content remains the existing topic `README.md` corpus.
+The canonical learning content remains the existing Hungarian topic `README.md` corpus,
+with German translation sidecars in `README.de.md`.
 For future indexing, translation mapping, and site-building, the project now also includes:
 
 - `LAP_CONTENT_REGISTRY.json`
@@ -50,7 +55,7 @@ The root contains:
 
 - `18` main topic folders
 - `233` subtopic folders
-- one `README.md` per subtopic folder as the default content file
+- one `README.md` per subtopic folder as the canonical Hungarian source file
 - one `README.de.md` translation sidecar per subtopic folder
 - generated registry files for all canonical topic documents
 - internal project/deployment docs under `docs/project/`
@@ -119,7 +124,7 @@ Completed so far:
 
 Each topic document should be:
 
-- written in Hungarian
+- maintained from Hungarian canonical source content, with German translation sidecars for the live frontend
 - practical and exam-oriented
 - easy to scan quickly
 - visually structured with headings, lists, and tables
@@ -203,10 +208,12 @@ python -m http.server 4173 --bind 0.0.0.0 --directory dist
 Then open `http://localhost:4173` in a browser.  
 Use `--bind 0.0.0.0` to access the site from other devices on the same LAN.
 
+If `localhost` behaves inconsistently on your machine, use `http://127.0.0.1:4173/` instead.
+
 Run the test suite:
 
 ```bash
-python -m pytest tests/ -v
+python -m unittest discover -s tests -v
 ```
 
 ### Quick start on a new machine
@@ -229,7 +236,7 @@ If you continue this project in a new Codex thread:
 3. Use `C:\GitHub\CoderLAP` as the active working copy.
 4. Check what topic folders already contain a `README.md`.
 5. Continue within the existing structure.
-6. Preserve the German naming + Hungarian content rule.
+6. Preserve the German naming + bilingual content structure, with Hungarian as canonical source and German as the default frontend language.
 7. Keep sources explicit in every topic document.
 
 Short cross-machine continuation note:
