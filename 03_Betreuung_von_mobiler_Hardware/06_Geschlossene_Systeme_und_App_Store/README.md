@@ -32,7 +32,9 @@ Egy zártabb rendszerben az **App Store** vagy központi alkalmazásbolt kulcssz
 
 ## Fontos megjegyzés
 
-Az alábbi előnyök és hátrányok **részben következtetések** a hivatkozott hivatalos platformszabályokból, review-folyamatokból és ökoszisztéma-dokumentációból.
+Az alábbi előnyök és hátrányok **részben következtetések**
+a hivatkozott hivatalos platformszabályokból,
+review-folyamatokból és ökoszisztéma-dokumentációból.
 
 ## Előnyök
 
@@ -136,7 +138,9 @@ Mert itt nem elég azt mondani, hogy „zárt = rossz” vagy „zárt = jó”.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A zárt rendszer olyan ökoszisztéma, ahol a gyártó vagy platformtulajdonos erősen szabályozza a hardvert, az operációs rendszert és az alkalmazásterjesztést.  
+> A zárt rendszer olyan ökoszisztéma,
+> ahol a gyártó vagy platformtulajdonos erősen szabályozza
+> a hardvert, az operációs rendszert és az alkalmazásterjesztést.  
 > Ennek előnye lehet az egységesebb működés, a jobb integráció és a szigorúbb minőségellenőrzés.  
 > Hátránya lehet a kisebb szabadság, a gyártói függőség és a korlátozottabb appterjesztési lehetőség.
 

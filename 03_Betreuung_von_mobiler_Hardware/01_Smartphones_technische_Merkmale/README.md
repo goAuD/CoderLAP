@@ -196,8 +196,13 @@ Nem konkrét modelleket kell magolni, hanem érteni kell:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A smartphone egy fejlett mobiltelefon, amely kommunikációra, internetelérésre és alkalmazások futtatására alkalmas.  
-> Fontos technikai jellemzői a kijelző, a processzor vagy SoC, a RAM, a tárhely, az akkumulátor, a kamerák, a vezeték nélküli kapcsolatok, a szenzorok és a biometrikus azonosítás.  
+> A smartphone egy fejlett mobiltelefon,
+> amely kommunikációra, internetelérésre
+> és alkalmazások futtatására alkalmas.  
+> Fontos technikai jellemzői a kijelző, a processzor vagy SoC,
+> a RAM, a tárhely, az akkumulátor, a kamerák,
+> a vezeték nélküli kapcsolatok, a szenzorok
+> és a biometrikus azonosítás.  
 > A működését mobil operációs rendszer, például Android vagy iOS vezérli.
 
 ## Gyakori vizsgahibák
@@ -218,32 +223,12 @@ Nem konkrét modelleket kell magolni, hanem érteni kell:
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. A SoC (System on a Chip) egyetlen chipben tartalmazza a CPU-t, GPU-t, AI/NPU egységeket és más vezérlőket — ez határozza meg a sebességet és az energiahatékonyságot.
+1. A SoC (System on a Chip) egyetlen chipben tartalmazza a CPU-t, GPU-t,
+   AI/NPU egységeket és más vezérlőket
+   — ez határozza meg a sebességet és az energiahatékonyságot.
 2. A RAM az éppen futó alkalmazások ideiglenes memóriája, a tárhely a fájlok és appok tartós tárhelye.
 3. 4G, 5G, Wi-Fi, Bluetooth, NFC, GPS
 4. Gyorsulásmérő, giroszkóp, közelségérzékelő
-5. Android és iOS
-
-## Források
-
-1. Apple Support - iPhone User Guide  
-   https://support.apple.com/guide/iphone/welcome/ios  
-   Használat: iPhone műszaki jellemzők és funkciók hivatalos áttekintése.
-
-2. Android Developers - Core app quality guidelines  
-   https://developer.android.com/docs/quality-guidelines/core-app-quality  
-   Használat: Android-eszközök alapvető minőségi és műszaki elvárásai.
-
-3. Android Open Source Project - Architecture overview  
-   https://source.android.com/docs/core/architecture  
-   Használat: SoC, platformfelépítés és hardver-szoftver kapcsolat.
-
-Megnyitva: `2026-04-08`
-
-1. A fő számítási és vezérlési egységeket integrálja
-2. A RAM ideiglenes memória, a tárhely tartós tárolás
-3. 4G/5G, Wi-Fi, Bluetooth, NFC, GPS
-4. Gyorsulásmérő, giroszkóp, fényérzékelő
 5. Android és iOS
 
 ## Források
