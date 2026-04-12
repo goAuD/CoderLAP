@@ -132,9 +132,13 @@ Az OS teszi használhatóvá a számítógépet.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az operációs rendszer a számítógép alapvető rendszer-szoftvere, amely kezeli a hardvererőforrásokat és futtatási környezetet biztosít az alkalmazások számára.  
+> Az operációs rendszer a számítógép alapvető rendszer-szoftvere,
+> amely kezeli a hardvererőforrásokat és futtatási környezetet biztosít
+> az alkalmazások számára.  
 > Kapcsolatot teremt a felhasználó, a programok és a hardver között.  
-> Feladata többek között a folyamatkezelés, a memóriakezelés, a fájlkezelés, az eszközkezelés és a felhasználói felület biztosítása.
+> Feladata többek között a folyamatkezelés, a memóriakezelés,
+> a fájlkezelés, az eszközkezelés
+> és a felhasználói felület biztosítása.
 
 ## Gyakori vizsgahibák
 

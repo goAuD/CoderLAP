@@ -145,7 +145,9 @@ Wichtig:
 ## Prüfungstaugliche Formulierung
 
 > PowerShell ist die objektbasierte Kommandozeilen-Shell und Automatisierungsumgebung von Microsoft.  
-> Es verwendet Cmdlets, die typischerweise in der Form Verb-Nomen benannt sind, zum Beispiel `Get-Help` oder `Get-ChildItem`.  
+> Es verwendet Cmdlets,
+> die typischerweise in der Form Verb-Nomen benannt sind,
+> zum Beispiel `Get-Help` oder `Get-ChildItem`.  
 > Es kann für Dateiverwaltung, Informationsabfragen und Automatisierung administrativer Aufgaben verwendet werden.
 
 ## Häufige Prüfungsfehler

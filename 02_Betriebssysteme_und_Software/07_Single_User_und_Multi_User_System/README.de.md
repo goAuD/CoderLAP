@@ -102,7 +102,8 @@ Denn mehrere Benutzer teilen sich dasselbe System oder dieselbe Infrastruktur.
 ## Prüfungstaugliche Formulierung
 
 > Ein Single-User-System ist in erster Linie für die direkte Nutzung durch einen Benutzer ausgelegt.  
-> Ein Multi-User-System hingegen kann mehreren Benutzern Zugang, separate Berechtigungen und getrennte Arbeitsumgebungen bieten.  
+> Ein Multi-User-System hingegen kann mehreren Benutzern Zugang,
+> separate Berechtigungen und getrennte Arbeitsumgebungen bieten.  
 > Multi-User-Systeme sind typischerweise in Server- oder Unternehmensumgebungen wichtig.
 
 ## Häufige Prüfungsfehler
