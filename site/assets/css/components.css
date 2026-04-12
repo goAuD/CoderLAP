@@ -176,6 +176,12 @@ a.lang-switcher__item:focus-visible {
   border-color: var(--color-border);
   background: rgba(29, 35, 41, 0.94);
   box-shadow: var(--shadow-button);
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease,
+    color 140ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .site-nav-link--button:is(a, button) {
@@ -192,6 +198,7 @@ a.lang-switcher__item:focus-visible {
 
 .site-nav-link--button:hover,
 .site-nav-link--button:focus-visible {
+  transform: translateY(-1px);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.03),
     0 10px 20px -18px rgba(95, 167, 162, 0.35);
