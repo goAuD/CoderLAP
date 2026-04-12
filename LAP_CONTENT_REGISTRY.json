@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-09",
+  "generated_at": "2026-04-12",
   "generator": "scripts/generate_content_registry.py",
   "id_format": "LAP-<MAIN>-<SUB>",
   "item_count": 233,
-  "source_root": "C:\\GitHub\\CoderLAP",
+  "source_root": ".",
   "items": [
     {
       "id": "LAP-01-01",
@@ -16,7 +16,7 @@
       "subtopic_dir": "01_Zeichensatz_ASCII",
       "slug": "01-01-zeichensatz_ascii",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 7,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -32,7 +32,7 @@
       "subtopic_dir": "02_Einheiten_Bit_und_Byte",
       "slug": "01-02-einheiten_bit_und_byte",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 7,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -48,7 +48,7 @@
       "subtopic_dir": "03_Gigabyte_Terabyte_Petabyte_Exabyte",
       "slug": "01-03-gigabyte_terabyte_petabyte_exabyte",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -64,7 +64,7 @@
       "subtopic_dir": "04_Gibibyte_Tebibyte_Pebibyte_Exbibyte",
       "slug": "01-04-gibibyte_tebibyte_pebibyte_exbibyte",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 6,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -80,7 +80,7 @@
       "subtopic_dir": "05_Zahlensysteme_in_der_IT",
       "slug": "01-05-zahlensysteme_in_der_it",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -96,7 +96,7 @@
       "subtopic_dir": "06_Umwandlung_Binaer_Dezimal_Hexadezimal",
       "slug": "01-06-umwandlung_binaer_dezimal_hexadezimal",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -112,7 +112,7 @@
       "subtopic_dir": "07_Logikschaltungen_und_Wahrheitstabellen",
       "slug": "01-07-logikschaltungen_und_wahrheitstabellen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -128,7 +128,7 @@
       "subtopic_dir": "01_Begriff_Betriebssystem",
       "slug": "02-01-begriff_betriebssystem",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -144,7 +144,7 @@
       "subtopic_dir": "02_Marktfuehrende_Betriebssysteme",
       "slug": "02-02-marktfuehrende_betriebssysteme",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -160,7 +160,7 @@
       "subtopic_dir": "03_Desktop_Betriebssysteme",
       "slug": "02-03-desktop_betriebssysteme",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -176,7 +176,7 @@
       "subtopic_dir": "04_Begriff_Firmware",
       "slug": "02-04-begriff_firmware",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -192,7 +192,7 @@
       "subtopic_dir": "05_Systemprogramm_und_Anwendungsprogramm",
       "slug": "02-05-systemprogramm_und_anwendungsprogramm",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -208,7 +208,7 @@
       "subtopic_dir": "06_Multitasking_Betriebssystem",
       "slug": "02-06-multitasking_betriebssystem",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -224,7 +224,7 @@
       "subtopic_dir": "07_Single_User_und_Multi_User_System",
       "slug": "02-07-single_user_und_multi_user_system",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -240,7 +240,7 @@
       "subtopic_dir": "08_Powershell_Grundlagen",
       "slug": "02-08-powershell_grundlagen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 7,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -256,7 +256,7 @@
       "subtopic_dir": "09_Grafische_Oberflaechen_unter_Linux",
       "slug": "02-09-grafische_oberflaechen_unter_linux",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -272,7 +272,7 @@
       "subtopic_dir": "10_Begriff_Dateisystem",
       "slug": "02-10-begriff_dateisystem",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -288,8 +288,8 @@
       "subtopic_dir": "01_Smartphones_technische_Merkmale",
       "slug": "03-01-smartphones_technische_merkmale",
       "review_status": "draft",
-      "translation_status": "not_started",
-      "source_count": 3,
+      "translation_status": "de_complete",
+      "source_count": 8,
       "opened_at": "2026-04-08",
       "canonical": true
     },
@@ -304,7 +304,7 @@
       "subtopic_dir": "02_Tablets_technische_Merkmale",
       "slug": "03-02-tablets_technische_merkmale",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -320,7 +320,7 @@
       "subtopic_dir": "03_Android_Grundlagen",
       "slug": "03-03-android_grundlagen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -336,7 +336,7 @@
       "subtopic_dir": "04_iOS_Grundlagen",
       "slug": "03-04-ios_grundlagen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -352,7 +352,7 @@
       "subtopic_dir": "05_Begriff_QR_Code",
       "slug": "03-05-begriff_qr_code",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -368,7 +368,7 @@
       "subtopic_dir": "06_Geschlossene_Systeme_und_App_Store",
       "slug": "03-06-geschlossene_systeme_und_app_store",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -384,7 +384,7 @@
       "subtopic_dir": "01_Aufgabe_und_Strukturierung_von_Testlaeufen",
       "slug": "04-01-aufgabe_und_strukturierung_von_testlaeufen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -400,7 +400,7 @@
       "subtopic_dir": "02_Protokollieren_technischer_Arbeiten",
       "slug": "04-02-protokollieren_technischer_arbeiten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -416,7 +416,7 @@
       "subtopic_dir": "03_Inhalt_technischer_Dokumentation",
       "slug": "04-03-inhalt_technischer_dokumentation",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -432,7 +432,7 @@
       "subtopic_dir": "04_Aufbereitung_technischer_Dokumentation",
       "slug": "04-04-aufbereitung_technischer_dokumentation",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -448,7 +448,7 @@
       "subtopic_dir": "05_Rollout_Ablauf_und_Prozessschritte",
       "slug": "04-05-rollout_ablauf_und_prozessschritte",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -464,7 +464,7 @@
       "subtopic_dir": "06_Gestaltung_und_Vorbereitung_von_Praesentationen",
       "slug": "04-06-gestaltung_und_vorbereitung_von_praesentationen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -480,7 +480,7 @@
       "subtopic_dir": "01_DSGVO_Grundlagen",
       "slug": "05-01-dsgvo_grundlagen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -496,7 +496,7 @@
       "subtopic_dir": "02_Datenminimierung",
       "slug": "05-02-datenminimierung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -512,7 +512,7 @@
       "subtopic_dir": "03_Betroffene_Verantwortlicher_Auftragsverarbeiter",
       "slug": "05-03-betroffene_verantwortlicher_auftragsverarbeiter",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -528,7 +528,7 @@
       "subtopic_dir": "04_Rechte_betroffener_Personen",
       "slug": "05-04-rechte_betroffener_personen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -544,7 +544,7 @@
       "subtopic_dir": "05_Personenbezogene_und_sensible_Daten",
       "slug": "05-05-personenbezogene_und_sensible_daten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -560,7 +560,7 @@
       "subtopic_dir": "06_Kopplungsverbot",
       "slug": "05-06-kopplungsverbot",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -576,7 +576,7 @@
       "subtopic_dir": "07_Datenschutzbeauftragter",
       "slug": "05-07-datenschutzbeauftragter",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -592,7 +592,7 @@
       "subtopic_dir": "08_Pflichten_bei_Datendiebstahl",
       "slug": "05-08-pflichten_bei_datendiebstahl",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -608,7 +608,7 @@
       "subtopic_dir": "09_Urheberrecht_Grundbegriffe",
       "slug": "05-09-urheberrecht_grundbegriffe",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -624,7 +624,7 @@
       "subtopic_dir": "10_Gewaehrleistung_und_Garantie",
       "slug": "05-10-gewaehrleistung_und_garantie",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -640,7 +640,7 @@
       "subtopic_dir": "11_Entsorgung_von_Elektronikschrott",
       "slug": "05-11-entsorgung_von_elektronikschrott",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -656,7 +656,7 @@
       "subtopic_dir": "12_E_Commerce_Gesetz",
       "slug": "05-12-e_commerce_gesetz",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -672,7 +672,7 @@
       "subtopic_dir": "13_Telekom_Gesetz",
       "slug": "05-13-telekom_gesetz",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -688,7 +688,7 @@
       "subtopic_dir": "14_Impressumspflicht",
       "slug": "05-14-impressumspflicht",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -704,7 +704,7 @@
       "subtopic_dir": "15_Pflichtangaben_im_E_Mail_Verkehr",
       "slug": "05-15-pflichtangaben_im_e_mail_verkehr",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -720,7 +720,7 @@
       "subtopic_dir": "16_Bildschirmpausen",
       "slug": "05-16-bildschirmpausen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -736,7 +736,7 @@
       "subtopic_dir": "01_Domain_Subdomain_Top_Level_Domain",
       "slug": "06-01-domain_subdomain_top_level_domain",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -752,7 +752,7 @@
       "subtopic_dir": "02_HTTP_und_HTTPS",
       "slug": "06-02-http_und_https",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 6,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -768,7 +768,7 @@
       "subtopic_dir": "03_Funktionsprinzip_Mail_Server",
       "slug": "06-03-funktionsprinzip_mail_server",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -784,7 +784,7 @@
       "subtopic_dir": "04_POP3_und_POP3S",
       "slug": "06-04-pop3_und_pop3s",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -800,7 +800,7 @@
       "subtopic_dir": "05_IMAP_und_IMAPS",
       "slug": "06-05-imap_und_imaps",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -816,7 +816,7 @@
       "subtopic_dir": "06_SMTP_und_SMTPS",
       "slug": "06-06-smtp_und_smtps",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -832,7 +832,7 @@
       "subtopic_dir": "07_FTP_und_FTPS",
       "slug": "06-07-ftp_und_ftps",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -848,7 +848,7 @@
       "subtopic_dir": "08_SSL",
       "slug": "06-08-ssl",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -864,7 +864,7 @@
       "subtopic_dir": "09_Cloud_Computing",
       "slug": "06-09-cloud_computing",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -880,7 +880,7 @@
       "subtopic_dir": "10_Private_Public_Hybrid_Cloud",
       "slug": "06-10-private_public_hybrid_cloud",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -896,7 +896,7 @@
       "subtopic_dir": "11_IaaS_PaaS_SaaS",
       "slug": "06-11-iaas_paas_saas",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -912,7 +912,7 @@
       "subtopic_dir": "12_Bekannte_Cloud_Dienste",
       "slug": "06-12-bekannte_cloud_dienste",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 7,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -928,7 +928,7 @@
       "subtopic_dir": "13_Kriterien_fuer_Cloud_Dienste",
       "slug": "06-13-kriterien_fuer_cloud_dienste",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -944,7 +944,7 @@
       "subtopic_dir": "01_Viren_Wuermer_Trojaner_Spyware_Hacker_Phishing",
       "slug": "07-01-viren_wuermer_trojaner_spyware_hacker_phishing",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -960,7 +960,7 @@
       "subtopic_dir": "02_Zero_Day_Exploit",
       "slug": "07-02-zero_day_exploit",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -976,7 +976,7 @@
       "subtopic_dir": "03_Einschraenkungen_bei_Benutzerkonten",
       "slug": "07-03-einschraenkungen_bei_benutzerkonten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -992,7 +992,7 @@
       "subtopic_dir": "04_Software_Firewall",
       "slug": "07-04-software_firewall",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1008,7 +1008,7 @@
       "subtopic_dir": "05_Schutz_von_Client_PCs",
       "slug": "07-05-schutz_von_client_pcs",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 6,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1024,7 +1024,7 @@
       "subtopic_dir": "06_Sichere_Backup_Planung",
       "slug": "07-06-sichere_backup_planung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1040,7 +1040,7 @@
       "subtopic_dir": "07_Backup_Prinzipien",
       "slug": "07-07-backup_prinzipien",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1056,7 +1056,7 @@
       "subtopic_dir": "08_Backup_Medien_und_Lagerung",
       "slug": "07-08-backup_medien_und_lagerung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1072,7 +1072,7 @@
       "subtopic_dir": "01_Big_Data",
       "slug": "08-01-big_data",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1088,8 +1088,8 @@
       "subtopic_dir": "02_Web_2_0",
       "slug": "08-02-web_2_0",
       "review_status": "draft",
-      "translation_status": "not_started",
-      "source_count": 2,
+      "translation_status": "de_complete",
+      "source_count": 1,
       "opened_at": "2026-04-08",
       "canonical": true
     },
@@ -1104,7 +1104,7 @@
       "subtopic_dir": "03_Industrie_4_0",
       "slug": "08-03-industrie_4_0",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1120,7 +1120,7 @@
       "subtopic_dir": "04_IoT",
       "slug": "08-04-iot",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1136,7 +1136,7 @@
       "subtopic_dir": "05_Sprachassistenten_Vor_und_Nachteile",
       "slug": "08-05-sprachassistenten_vor_und_nachteile",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1152,7 +1152,7 @@
       "subtopic_dir": "06_E_Government_digitale_Signatur_Handy_Signatur",
       "slug": "08-06-e_government_digitale_signatur_handy_signatur",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1168,7 +1168,7 @@
       "subtopic_dir": "07_Schutz_vor_Cookie_Tracking",
       "slug": "08-07-schutz_vor_cookie_tracking",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1184,7 +1184,7 @@
       "subtopic_dir": "08_Identitaetsdiebstahl",
       "slug": "08-08-identitaetsdiebstahl",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1200,7 +1200,7 @@
       "subtopic_dir": "09_Netzneutralitaet",
       "slug": "08-09-netzneutralitaet",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1216,7 +1216,7 @@
       "subtopic_dir": "10_Biometrische_Daten_Vor_und_Nachteile",
       "slug": "08-10-biometrische_daten_vor_und_nachteile",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1232,8 +1232,8 @@
       "subtopic_dir": "11_Unternehmensrichtlinien_soziale_Netzwerke",
       "slug": "08-11-unternehmensrichtlinien_soziale_netzwerke",
       "review_status": "draft",
-      "translation_status": "not_started",
-      "source_count": 4,
+      "translation_status": "de_complete",
+      "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
     },
@@ -1248,7 +1248,7 @@
       "subtopic_dir": "01_Ergonomische_Einrichtung",
       "slug": "09-01-ergonomische_einrichtung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1264,7 +1264,7 @@
       "subtopic_dir": "02_Aufstellungsort_von_Bildschirmen",
       "slug": "09-02-aufstellungsort_von_bildschirmen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1280,7 +1280,7 @@
       "subtopic_dir": "03_Bildschirmarbeit_Pausenregelung",
       "slug": "09-03-bildschirmarbeit_pausenregelung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1296,7 +1296,7 @@
       "subtopic_dir": "04_Ideale_Hoehe_und_Abstand",
       "slug": "09-04-ideale_hoehe_und_abstand",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1312,7 +1312,7 @@
       "subtopic_dir": "05_Schutzmassnahmen_bei_sitzender_Taetigkeit",
       "slug": "09-05-schutzmassnahmen_bei_sitzender_taetigkeit",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1328,7 +1328,7 @@
       "subtopic_dir": "06_Entspannungsuebungen",
       "slug": "09-06-entspannungsuebungen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1344,7 +1344,7 @@
       "subtopic_dir": "01_Fachspezifische_Verkaufsgespraeche_Produktberatung",
       "slug": "10-01-fachspezifische_verkaufsgespraeche_produktberatung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1360,7 +1360,7 @@
       "subtopic_dir": "02_Technische_Zusammenhaenge_erklaeren",
       "slug": "10-02-technische_zusammenhaenge_erklaeren",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1376,7 +1376,7 @@
       "subtopic_dir": "03_Kundenorientierte_Softwareloesungen",
       "slug": "10-03-kundenorientierte_softwareloesungen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1392,7 +1392,7 @@
       "subtopic_dir": "04_Umgang_mit_Reklamationen",
       "slug": "10-04-umgang_mit_reklamationen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1408,7 +1408,7 @@
       "subtopic_dir": "05_Kundenumgang_bei_technischen_Problemen",
       "slug": "10-05-kundenumgang_bei_technischen_problemen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1424,7 +1424,7 @@
       "subtopic_dir": "01_Begriff_Informatik",
       "slug": "11-01-begriff_informatik",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1440,7 +1440,7 @@
       "subtopic_dir": "02_Statische_und_dynamische_Webseiten",
       "slug": "11-02-statische_und_dynamische_webseiten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1456,7 +1456,7 @@
       "subtopic_dir": "03_Weblog_Webshop_Webplattform",
       "slug": "11-03-weblog_webshop_webplattform",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1472,7 +1472,7 @@
       "subtopic_dir": "04_HTML_und_XML",
       "slug": "11-04-html_und_xml",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1488,7 +1488,7 @@
       "subtopic_dir": "05_HTML5_Grundgeruest",
       "slug": "11-05-html5_grundgeruest",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1504,7 +1504,7 @@
       "subtopic_dir": "06_Meta_Elemente_und_Metadaten",
       "slug": "11-06-meta_elemente_und_metadaten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1520,7 +1520,7 @@
       "subtopic_dir": "07_SEO_und_Massnahmen",
       "slug": "11-07-seo_und_massnahmen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1536,7 +1536,7 @@
       "subtopic_dir": "08_CSS_und_Einsatz",
       "slug": "11-08-css_und_einsatz",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1552,7 +1552,7 @@
       "subtopic_dir": "09_Client_und_Server_Scripting",
       "slug": "11-09-client_und_server_scripting",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1568,7 +1568,7 @@
       "subtopic_dir": "10_Tools_fuer_Webentwicklung",
       "slug": "11-10-tools_fuer_webentwicklung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1584,7 +1584,7 @@
       "subtopic_dir": "11_CMS",
       "slug": "11-11-cms",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1600,7 +1600,7 @@
       "subtopic_dir": "12_LIFO_und_FIFO",
       "slug": "11-12-lifo_und_fifo",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1616,7 +1616,7 @@
       "subtopic_dir": "13_Stack_und_Queue",
       "slug": "11-13-stack_und_queue",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1632,7 +1632,7 @@
       "subtopic_dir": "14_Userinterface",
       "slug": "11-14-userinterface",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1648,7 +1648,7 @@
       "subtopic_dir": "15_Zeichencodierung",
       "slug": "11-15-zeichencodierung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1664,7 +1664,7 @@
       "subtopic_dir": "16_Standards_ANSI_ISO_IEEE",
       "slug": "11-16-standards_ansi_iso_ieee",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1680,7 +1680,7 @@
       "subtopic_dir": "17_Frame",
       "slug": "11-17-frame",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1696,7 +1696,7 @@
       "subtopic_dir": "18_Webservices",
       "slug": "11-18-webservices",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1712,7 +1712,7 @@
       "subtopic_dir": "19_SOAP_und_WSDL",
       "slug": "11-19-soap_und_wsdl",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1728,7 +1728,7 @@
       "subtopic_dir": "20_REST_API",
       "slug": "11-20-rest_api",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1744,7 +1744,7 @@
       "subtopic_dir": "21_JSON",
       "slug": "11-21-json",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1760,7 +1760,7 @@
       "subtopic_dir": "22_Agile_Softwareentwicklung",
       "slug": "11-22-agile_softwareentwicklung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1776,7 +1776,7 @@
       "subtopic_dir": "23_Reaktive_Programmierung",
       "slug": "11-23-reaktive_programmierung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1792,7 +1792,7 @@
       "subtopic_dir": "24_Frameworks",
       "slug": "11-24-frameworks",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1808,7 +1808,7 @@
       "subtopic_dir": "25_Einsatzgebiet_AngularJS",
       "slug": "11-25-einsatzgebiet_angularjs",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1824,7 +1824,7 @@
       "subtopic_dir": "26_Einsatzgebiet_Bootstrap",
       "slug": "11-26-einsatzgebiet_bootstrap",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1840,7 +1840,7 @@
       "subtopic_dir": "27_Einsatzgebiet_jQuery",
       "slug": "11-27-einsatzgebiet_jquery",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1856,7 +1856,7 @@
       "subtopic_dir": "28_PHP_Zugriff_auf_MySQL",
       "slug": "11-28-php_zugriff_auf_mysql",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1872,7 +1872,7 @@
       "subtopic_dir": "29_Multitasking",
       "slug": "11-29-multitasking",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1888,7 +1888,7 @@
       "subtopic_dir": "30_Mobile_Webseiten",
       "slug": "11-30-mobile_webseiten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1904,7 +1904,7 @@
       "subtopic_dir": "31_Responsive_Webdesign",
       "slug": "11-31-responsive_webdesign",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1920,7 +1920,7 @@
       "subtopic_dir": "32_Mobile_First",
       "slug": "11-32-mobile_first",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1936,7 +1936,7 @@
       "subtopic_dir": "33_Aktuelle_Programmiersprachen",
       "slug": "11-33-aktuelle_programmiersprachen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1952,7 +1952,7 @@
       "subtopic_dir": "34_Programmiersprachen_fuer_mobile_Apps_und_Internet",
       "slug": "11-34-programmiersprachen_fuer_mobile_apps_und_internet",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 5,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1968,7 +1968,7 @@
       "subtopic_dir": "35_Java_Technologien_im_Web",
       "slug": "11-35-java_technologien_im_web",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -1984,7 +1984,7 @@
       "subtopic_dir": "36_DotNet_Technologien_im_Web",
       "slug": "11-36-dotnet_technologien_im_web",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2000,7 +2000,7 @@
       "subtopic_dir": "37_Metadaten",
       "slug": "11-37-metadaten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2016,7 +2016,7 @@
       "subtopic_dir": "38_KISS_und_DRY",
       "slug": "11-38-kiss_und_dry",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2032,7 +2032,7 @@
       "subtopic_dir": "39_Coding_Standards_und_Code_Konventionen",
       "slug": "11-39-coding_standards_und_code_konventionen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2048,7 +2048,7 @@
       "subtopic_dir": "40_Cross_Plattform_Entwicklung",
       "slug": "11-40-cross_plattform_entwicklung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2064,7 +2064,7 @@
       "subtopic_dir": "41_Continuous_Integration",
       "slug": "11-41-continuous_integration",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2080,7 +2080,7 @@
       "subtopic_dir": "42_Continuous_Delivery_und_Deployment",
       "slug": "11-42-continuous_delivery_und_deployment",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2096,7 +2096,7 @@
       "subtopic_dir": "43_CI_CD_Vorgaben",
       "slug": "11-43-ci_cd_vorgaben",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2112,7 +2112,7 @@
       "subtopic_dir": "01_Begriff_Projektmanagement",
       "slug": "12-01-begriff_projektmanagement",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2128,7 +2128,7 @@
       "subtopic_dir": "02_Definition_von_Projekten",
       "slug": "12-02-definition_von_projekten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2144,7 +2144,7 @@
       "subtopic_dir": "03_Pflichtenheft",
       "slug": "12-03-pflichtenheft",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2160,7 +2160,7 @@
       "subtopic_dir": "04_Lastenheft",
       "slug": "12-04-lastenheft",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2176,7 +2176,7 @@
       "subtopic_dir": "05_Spannungsfelder_im_Projekt",
       "slug": "12-05-spannungsfelder_im_projekt",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2192,7 +2192,7 @@
       "subtopic_dir": "06_Primaeres_Projektziel",
       "slug": "12-06-primaeres_projektziel",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2208,7 +2208,7 @@
       "subtopic_dir": "07_Vor_und_Nachteile_der_Projektorganisation",
       "slug": "12-07-vor_und_nachteile_der_projektorganisation",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2224,7 +2224,7 @@
       "subtopic_dir": "08_Ziel_der_Projektdokumentation",
       "slug": "12-08-ziel_der_projektdokumentation",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2240,7 +2240,7 @@
       "subtopic_dir": "09_Struktogramm",
       "slug": "12-09-struktogramm",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2256,7 +2256,7 @@
       "subtopic_dir": "10_Ablaufdiagramm_Flowchart",
       "slug": "12-10-ablaufdiagramm_flowchart",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2272,7 +2272,7 @@
       "subtopic_dir": "11_Wesentliche_Schritte_der_Projektplanung",
       "slug": "12-11-wesentliche_schritte_der_projektplanung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2288,7 +2288,7 @@
       "subtopic_dir": "12_Eigenschaften_eines_Projektleiters",
       "slug": "12-12-eigenschaften_eines_projektleiters",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2304,7 +2304,7 @@
       "subtopic_dir": "13_Aufgaben_eines_Projektleiters",
       "slug": "12-13-aufgaben_eines_projektleiters",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2320,7 +2320,7 @@
       "subtopic_dir": "14_Dokumentationen_eines_Projektes",
       "slug": "12-14-dokumentationen_eines_projektes",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2336,7 +2336,7 @@
       "subtopic_dir": "15_Projektauftrag",
       "slug": "12-15-projektauftrag",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2352,7 +2352,7 @@
       "subtopic_dir": "16_Projektstrukturplan",
       "slug": "12-16-projektstrukturplan",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2368,7 +2368,7 @@
       "subtopic_dir": "17_Arbeitspaket",
       "slug": "12-17-arbeitspaket",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2384,7 +2384,7 @@
       "subtopic_dir": "18_Meilenstein",
       "slug": "12-18-meilenstein",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2400,7 +2400,7 @@
       "subtopic_dir": "19_Internes_und_externes_Projekt",
       "slug": "12-19-internes_und_externes_projekt",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2416,7 +2416,7 @@
       "subtopic_dir": "20_Projektkostenplanung",
       "slug": "12-20-projektkostenplanung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2432,7 +2432,7 @@
       "subtopic_dir": "01_Softwareprozessmodelle",
       "slug": "13-01-softwareprozessmodelle",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2448,7 +2448,7 @@
       "subtopic_dir": "02_Wasserfallmodell_Aufbau",
       "slug": "13-02-wasserfallmodell_aufbau",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2464,7 +2464,7 @@
       "subtopic_dir": "03_Agiles_Projektmanagement",
       "slug": "13-03-agiles_projektmanagement",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2480,7 +2480,7 @@
       "subtopic_dir": "04_DevOps",
       "slug": "13-04-devops",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2496,7 +2496,7 @@
       "subtopic_dir": "05_Scrummaster",
       "slug": "13-05-scrummaster",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2512,7 +2512,7 @@
       "subtopic_dir": "06_Productowner",
       "slug": "13-06-productowner",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2528,7 +2528,7 @@
       "subtopic_dir": "07_Backlog",
       "slug": "13-07-backlog",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2544,7 +2544,7 @@
       "subtopic_dir": "08_Sprint",
       "slug": "13-08-sprint",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2560,7 +2560,7 @@
       "subtopic_dir": "09_Stakeholder",
       "slug": "13-09-stakeholder",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2576,7 +2576,7 @@
       "subtopic_dir": "10_Daily_Scrum_Standup",
       "slug": "13-10-daily_scrum_standup",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2592,7 +2592,7 @@
       "subtopic_dir": "11_User_Story_und_Story_Board",
       "slug": "13-11-user_story_und_story_board",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2608,7 +2608,7 @@
       "subtopic_dir": "12_Probleme_des_Wasserfallmodells",
       "slug": "13-12-probleme_des_wasserfallmodells",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2624,7 +2624,7 @@
       "subtopic_dir": "13_V_Modell_Aufbau",
       "slug": "13-13-v_modell_aufbau",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2640,7 +2640,7 @@
       "subtopic_dir": "14_Vor_und_Nachteile_des_V_Modells",
       "slug": "13-14-vor_und_nachteile_des_v_modells",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2656,7 +2656,7 @@
       "subtopic_dir": "15_Softwareentwurf",
       "slug": "13-15-softwareentwurf",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2672,7 +2672,7 @@
       "subtopic_dir": "16_Prototyp",
       "slug": "13-16-prototyp",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2688,7 +2688,7 @@
       "subtopic_dir": "17_Soll_Ist_Analyse",
       "slug": "13-17-soll_ist_analyse",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2704,7 +2704,7 @@
       "subtopic_dir": "18_Versionsverwaltung",
       "slug": "13-18-versionsverwaltung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2720,7 +2720,7 @@
       "subtopic_dir": "01_Zweck_von_Code_Reviews",
       "slug": "14-01-zweck_von_code_reviews",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2736,7 +2736,7 @@
       "subtopic_dir": "02_Schreibtischtest",
       "slug": "14-02-schreibtischtest",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2752,7 +2752,7 @@
       "subtopic_dir": "03_Black_Box_und_White_Box_Test",
       "slug": "14-03-black_box_und_white_box_test",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2768,7 +2768,7 @@
       "subtopic_dir": "04_Qualitaetsmerkmale_der_Softwarefunktionalitaet",
       "slug": "14-04-qualitaetsmerkmale_der_softwarefunktionalitaet",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2784,7 +2784,7 @@
       "subtopic_dir": "05_Changemanagement",
       "slug": "14-05-changemanagement",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2800,7 +2800,7 @@
       "subtopic_dir": "06_Versionierung_und_Nutzen",
       "slug": "14-06-versionierung_und_nutzen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2816,7 +2816,7 @@
       "subtopic_dir": "07_Problemmanagement",
       "slug": "14-07-problemmanagement",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-08",
       "canonical": true
@@ -2832,7 +2832,7 @@
       "subtopic_dir": "01_Stadien_der_Softwareentwicklung",
       "slug": "15-01-stadien_der_softwareentwicklung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2848,7 +2848,7 @@
       "subtopic_dir": "02_Prozedurale_und_objektorientierte_Programmierung",
       "slug": "15-02-prozedurale_und_objektorientierte_programmierung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2864,7 +2864,7 @@
       "subtopic_dir": "03_Algorithmus",
       "slug": "15-03-algorithmus",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2880,7 +2880,7 @@
       "subtopic_dir": "04_Pseudocode",
       "slug": "15-04-pseudocode",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2896,7 +2896,7 @@
       "subtopic_dir": "05_Sortieralgorithmen_Bubblesort_Quicksort",
       "slug": "15-05-sortieralgorithmen_bubblesort_quicksort",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2912,7 +2912,7 @@
       "subtopic_dir": "06_Suchalgorithmen_sequentiell_binaer",
       "slug": "15-06-suchalgorithmen_sequentiell_binaer",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2928,7 +2928,7 @@
       "subtopic_dir": "07_Ablauf_der_Programmentwicklung",
       "slug": "15-07-ablauf_der_programmentwicklung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2944,7 +2944,7 @@
       "subtopic_dir": "08_Aufbau_einer_Programmiersprache",
       "slug": "15-08-aufbau_einer_programmiersprache",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2960,7 +2960,7 @@
       "subtopic_dir": "09_Interpreter_und_Compiler",
       "slug": "15-09-interpreter_und_compiler",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2976,7 +2976,7 @@
       "subtopic_dir": "10_Debugger",
       "slug": "15-10-debugger",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -2992,7 +2992,7 @@
       "subtopic_dir": "11_Assembler",
       "slug": "15-11-assembler",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3008,7 +3008,7 @@
       "subtopic_dir": "12_Rekursive_Funktionen",
       "slug": "15-12-rekursive_funktionen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3024,7 +3024,7 @@
       "subtopic_dir": "13_ASCII_Tabellen",
       "slug": "15-13-ascii_tabellen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3040,7 +3040,7 @@
       "subtopic_dir": "14_Variablenarten_Datentypen_Definitionen",
       "slug": "15-14-variablenarten_datentypen_definitionen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3056,7 +3056,7 @@
       "subtopic_dir": "15_Variable_und_Konstante",
       "slug": "15-15-variable_und_konstante",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3072,7 +3072,7 @@
       "subtopic_dir": "16_Gueltigkeitsbereiche_von_Variablen",
       "slug": "15-16-gueltigkeitsbereiche_von_variablen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3088,7 +3088,7 @@
       "subtopic_dir": "17_Schleifen",
       "slug": "15-17-schleifen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3104,7 +3104,7 @@
       "subtopic_dir": "18_Kopf_und_Fussgesteuerte_Schleifen",
       "slug": "15-18-kopf_und_fussgesteuerte_schleifen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3120,7 +3120,7 @@
       "subtopic_dir": "19_Verzweigungen_und_Fallunterscheidungen",
       "slug": "15-19-verzweigungen_und_fallunterscheidungen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3136,7 +3136,7 @@
       "subtopic_dir": "20_Objektorientierte_Programmierung",
       "slug": "15-20-objektorientierte_programmierung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3152,7 +3152,7 @@
       "subtopic_dir": "01_Datenbanksysteme",
       "slug": "16-01-datenbanksysteme",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3168,7 +3168,7 @@
       "subtopic_dir": "02_Datenbankabfragen_SQL_SQL_XML",
       "slug": "16-02-datenbankabfragen_sql_sql_xml",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3184,7 +3184,7 @@
       "subtopic_dir": "03_DBMS",
       "slug": "16-03-dbms",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3200,7 +3200,7 @@
       "subtopic_dir": "04_CMS",
       "slug": "16-04-cms",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3216,7 +3216,7 @@
       "subtopic_dir": "05_Integritaet_in_Datenbanken",
       "slug": "16-05-integritaet_in_datenbanken",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3232,7 +3232,7 @@
       "subtopic_dir": "06_Redundanz_in_Datenbanken",
       "slug": "16-06-redundanz_in_datenbanken",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3248,7 +3248,7 @@
       "subtopic_dir": "07_Vorgehensweise_bei_der_Datenmodellierung",
       "slug": "16-07-vorgehensweise_bei_der_datenmodellierung",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3264,7 +3264,7 @@
       "subtopic_dir": "08_Grundlegende_Datenbankoperationen",
       "slug": "16-08-grundlegende_datenbankoperationen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3280,7 +3280,7 @@
       "subtopic_dir": "09_Erste_drei_Normalformen",
       "slug": "16-09-erste_drei_normalformen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3296,7 +3296,7 @@
       "subtopic_dir": "10_Primaerschluessel_Fremdschluessel_Relationen",
       "slug": "16-10-primaerschluessel_fremdschluessel_relationen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3312,7 +3312,7 @@
       "subtopic_dir": "11_Index_Vor_und_Nachteile",
       "slug": "16-11-index_vor_und_nachteile",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3328,7 +3328,7 @@
       "subtopic_dir": "12_Freeware_Datenbanken_Vor_und_Nachteile",
       "slug": "16-12-freeware_datenbanken_vor_und_nachteile",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 4,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3344,7 +3344,7 @@
       "subtopic_dir": "13_Sicherungsmethoden",
       "slug": "16-13-sicherungsmethoden",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3360,7 +3360,7 @@
       "subtopic_dir": "14_Sperrtabelle_und_Sperrverhalten",
       "slug": "16-14-sperrtabelle_und_sperrverhalten",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3376,7 +3376,7 @@
       "subtopic_dir": "15_Betriebliches_Informationssystem_BIS",
       "slug": "16-15-betriebliches_informationssystem_bis",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3392,7 +3392,7 @@
       "subtopic_dir": "16_ERP_Systeme",
       "slug": "16-16-erp_systeme",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3408,7 +3408,7 @@
       "subtopic_dir": "17_BI_und_BW_Systeme",
       "slug": "16-17-bi_und_bw_systeme",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3424,7 +3424,7 @@
       "subtopic_dir": "18_Umsetzung_von_Datenmodellen_in_Datenbanken",
       "slug": "16-18-umsetzung_von_datenmodellen_in_datenbanken",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3440,7 +3440,7 @@
       "subtopic_dir": "19_Zugriffsschnittstelle_und_Transaktionskonzept",
       "slug": "16-19-zugriffsschnittstelle_und_transaktionskonzept",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3456,7 +3456,7 @@
       "subtopic_dir": "01_Programmspezifikation",
       "slug": "17-01-programmspezifikation",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3472,7 +3472,7 @@
       "subtopic_dir": "02_Datenmodell",
       "slug": "17-02-datenmodell",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3488,7 +3488,7 @@
       "subtopic_dir": "03_Wichtige_Datentypen_und_Datenstrukturen",
       "slug": "17-03-wichtige_datentypen_und_datenstrukturen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3504,7 +3504,7 @@
       "subtopic_dir": "04_Funktionen",
       "slug": "17-04-funktionen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3520,7 +3520,7 @@
       "subtopic_dir": "05_Call_By_Value_und_Call_By_Reference",
       "slug": "17-05-call_by_value_und_call_by_reference",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3536,7 +3536,7 @@
       "subtopic_dir": "06_Klassen",
       "slug": "17-06-klassen",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3552,7 +3552,7 @@
       "subtopic_dir": "07_Vererbungsprinzip",
       "slug": "17-07-vererbungsprinzip",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3568,7 +3568,7 @@
       "subtopic_dir": "08_Standardbibliothek",
       "slug": "17-08-standardbibliothek",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3584,7 +3584,7 @@
       "subtopic_dir": "09_Testkonzepte",
       "slug": "17-09-testkonzepte",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3600,7 +3600,7 @@
       "subtopic_dir": "10_Auswertung_eines_Softwaretests",
       "slug": "17-10-auswertung_eines_softwaretests",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3616,7 +3616,7 @@
       "subtopic_dir": "11_Test_von_Datenbankfeldern",
       "slug": "17-11-test_von_datenbankfeldern",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3632,7 +3632,7 @@
       "subtopic_dir": "12_Reproduzierbare_und_nicht_reproduzierbare_Fehler",
       "slug": "17-12-reproduzierbare_und_nicht_reproduzierbare_fehler",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3648,7 +3648,7 @@
       "subtopic_dir": "13_Automatisierung_von_Tests",
       "slug": "17-13-automatisierung_von_tests",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3664,7 +3664,7 @@
       "subtopic_dir": "01_Anforderung_und_Setup",
       "slug": "18-01-anforderung_und_setup",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 1,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3680,7 +3680,7 @@
       "subtopic_dir": "02_Eingabe_Formular_mit_Framework",
       "slug": "18-02-eingabe_formular_mit_framework",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 3,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3696,7 +3696,7 @@
       "subtopic_dir": "03_Gueltigkeitspruefung_der_SV_Nummer",
       "slug": "18-03-gueltigkeitspruefung_der_sv_nummer",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3712,7 +3712,7 @@
       "subtopic_dir": "04_Ausgabe_eines_QR_Codes",
       "slug": "18-04-ausgabe_eines_qr_codes",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
@@ -3728,7 +3728,7 @@
       "subtopic_dir": "05_QR_Code_Pruefung_und_Tools",
       "slug": "18-05-qr_code_pruefung_und_tools",
       "review_status": "draft",
-      "translation_status": "not_started",
+      "translation_status": "de_complete",
       "source_count": 2,
       "opened_at": "2026-04-09",
       "canonical": true
