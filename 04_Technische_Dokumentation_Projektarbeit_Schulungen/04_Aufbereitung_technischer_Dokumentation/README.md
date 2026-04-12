@@ -119,8 +119,11 @@ Nem jók, ha:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A technikai dokumentáció előkészítése során a tartalmat logikusan kell strukturálni, a célcsoporthoz kell igazítani, és áttekinthető formában kell megjeleníteni.  
-> Fontos a világos szerkezet, az egységes terminológia, a rövid és pontos megfogalmazás, valamint a képek, táblázatok és példák megfelelő használata.  
+> A technikai dokumentáció előkészítése során a tartalmat logikusan kell strukturálni,
+> a célcsoporthoz kell igazítani, és áttekinthető formában kell megjeleníteni.  
+> Fontos a világos szerkezet, az egységes terminológia,
+> a rövid és pontos megfogalmazás,
+> valamint a képek, táblázatok és példák megfelelő használata.  
 > A dokumentációnak később is karbantarthatónak és frissíthetőnek kell maradnia.
 
 ## Gyakori vizsgahibák

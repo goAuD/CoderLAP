@@ -131,7 +131,9 @@ Reparatur der Netzwerkeinstellungen des Druckers
 ## Prüfungstaugliche Formulierung
 
 > Technische Arbeiten zu protokollieren bedeutet, die technischen Tätigkeiten nachvollziehbar zu dokumentieren.  
-> Ein gutes Protokoll enthält das Datum, den Verantwortlichen, das betroffene System, die durchgeführten Schritte, das Ergebnis, eventuelle Fehler und die nächsten Schritte.  
+> Ein gutes Protokoll enthält das Datum, den Verantwortlichen,
+> das betroffene System, die durchgeführten Schritte, das Ergebnis,
+> eventuelle Fehler und die nächsten Schritte.  
 > Das ist wichtig für die Fehlersuche, die Übergabe, die Überprüfbarkeit und die Teamarbeit.
 
 ## Häufige Prüfungsfehler
