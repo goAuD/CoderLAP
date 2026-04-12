@@ -36,11 +36,16 @@ class SiteContentAssetsTests(unittest.TestCase):
         self.assertIn("# Imprint", imprint_text)
         self.assertIn("## Sources", imprint_text)
         self.assertIn("## Contact", imprint_text)
+        self.assertIn("Section 5 ECG", imprint_text)
+        self.assertIn("Section 25 MedienG", imprint_text)
 
         privacy_text = privacy_path.read_text(encoding="utf-8")
         self.assertIn("# Privacy Policy", privacy_text)
         self.assertIn("## Sources", privacy_text)
-        self.assertIn("## What we collect", privacy_text)
+        self.assertIn("## What data processing can realistically happen right now", privacy_text)
+        self.assertIn("coderlap_progress", privacy_text)
+        self.assertIn("Cloudflare", privacy_text)
+        self.assertIn("Austrian Data Protection Authority", privacy_text)
 
         robots_text = robots_path.read_text(encoding="utf-8")
         self.assertIn("User-agent: *", robots_text)

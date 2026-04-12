@@ -36,6 +36,11 @@ class RegistryItem:
     canonical: bool
 
 
+def get_translation_status(subtopic_dir: Path) -> str:
+    german_sidecar = subtopic_dir / "README.de.md"
+    return "de_complete" if german_sidecar.exists() else "de_missing"
+
+
 def count_sources(markdown: str) -> int:
     if "## Források" not in markdown:
         return 0
@@ -96,7 +101,7 @@ def build_registry() -> list[RegistryItem]:
                 subtopic_dir=subtopic_dir.name,
                 slug=slug,
                 review_status="draft",
-                translation_status="not_started",
+                translation_status=get_translation_status(subtopic_dir),
                 source_count=count_sources(markdown),
                 opened_at=get_opened_at(markdown),
                 canonical=True,
@@ -112,7 +117,7 @@ def write_json(items: list[RegistryItem]) -> None:
         "generator": "scripts/generate_content_registry.py",
         "id_format": "LAP-<MAIN>-<SUB>",
         "item_count": len(items),
-        "source_root": str(ROOT),
+        "source_root": ".",
         "items": [asdict(item) for item in items],
     }
     OUTPUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

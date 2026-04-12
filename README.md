@@ -48,6 +48,8 @@ Architecture and delivery notes are documented in:
 - [docs/project/content-architecture.md](./docs/project/content-architecture.md)
 - [docs/project/architecture-adoption.md](./docs/project/architecture-adoption.md)
 - [docs/project/deploy-strategy.md](./docs/project/deploy-strategy.md)
+- [docs/project/private-rollout-access.md](./docs/project/private-rollout-access.md)
+- [docs/project/pre-public-checklist.md](./docs/project/pre-public-checklist.md)
 
 ## Project layout
 
