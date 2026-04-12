@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Réteg | Szerep |
-|---|---|
-| felhasználó | használja a gépet |
-| alkalmazások | konkrét feladatokat végeznek |
-| operációs rendszer | közvetít, kezel, irányít |
-| hardver | CPU, RAM, SSD, kijelző, billentyűzet, hálózat |
+| Réteg              | Szerep                                        |
+| ------------------ | --------------------------------------------- |
+| felhasználó        | használja a gépet                             |
+| alkalmazások       | konkrét feladatokat végeznek                  |
+| operációs rendszer | közvetít, kezel, irányít                      |
+| hardver            | CPU, RAM, SSD, kijelző, billentyűzet, hálózat |
 
 ### Egyszerű modell
 
@@ -115,20 +115,20 @@ Az OS teszi használhatóvá a számítógépet.
 
 ## Egyszerű példák
 
-| Helyzet | Mit csinál az operációs rendszer? |
-|---|---|
-| megnyitsz egy fájlt | megkeresi, jogosultságot ellenőriz, átadja az alkalmazásnak |
-| elindítasz egy programot | betölti memóriába, elindítja a folyamatot |
-| csatlakozol Wi-Fi-re | kezeli a hálózati eszközt és a kapcsolatot |
-| nyomtatsz | továbbítja az adatot a megfelelő eszköznek |
+| Helyzet                  | Mit csinál az operációs rendszer?                           |
+| ------------------------ | ----------------------------------------------------------- |
+| megnyitsz egy fájlt      | megkeresi, jogosultságot ellenőriz, átadja az alkalmazásnak |
+| elindítasz egy programot | betölti memóriába, elindítja a folyamatot                   |
+| csatlakozol Wi-Fi-re     | kezeli a hálózati eszközt és a kapcsolatot                  |
+| nyomtatsz                | továbbítja az adatot a megfelelő eszköznek                  |
 
 ## Operációs rendszer vs alkalmazás
 
-| Operációs rendszer | Alkalmazás |
-|---|---|
-| a gép alapműködését biztosítja | konkrét feladatot old meg |
-| kezeli a hardvert | az OS szolgáltatásait használja |
-| például Windows, macOS, Linux | például Word, Chrome, VLC |
+| Operációs rendszer             | Alkalmazás                      |
+| ------------------------------ | ------------------------------- |
+| a gép alapműködését biztosítja | konkrét feladatot old meg       |
+| kezeli a hardvert              | az OS szolgáltatásait használja |
+| például Windows, macOS, Linux  | például Word, Chrome, VLC       |
 
 ## Vizsgán jól használható megfogalmazás
 

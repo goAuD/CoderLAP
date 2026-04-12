@@ -2,10 +2,10 @@
 
 ## Schneller visueller Überblick
 
-| Typ | Wofür? | Beispiel |
-|---|---|---|
-| Systemprogramm | stellt den Systembetrieb sicher | Betriebssystem, Treiber, Shell |
-| Anwendungsprogramm | erledigt die Aufgabe des Benutzers | Word, Chrome, Photoshop |
+| Typ                | Wofür?                             | Beispiel                       |
+| ------------------ | ---------------------------------- | ------------------------------ |
+| Systemprogramm     | stellt den Systembetrieb sicher    | Betriebssystem, Treiber, Shell |
+| Anwendungsprogramm | erledigt die Aufgabe des Benutzers | Word, Chrome, Photoshop        |
 
 ## Was ist ein Systemprogramm?
 
@@ -45,12 +45,12 @@ Hauptmerkmale:
 
 ## Der Unterschied zwischen beiden Begriffen
 
-| Aspekt | Systemprogramm | Anwendungsprogramm |
-|---|---|---|
-| Hauptzweck | Betrieb / Unterstützung des Systems | Lösung einer Benutzeraufgabe |
-| Hardwarenähe | steht der Hardware in der Regel näher | steht weiter von der Hardware entfernt |
-| Abhängigkeit vom OS | kann Teil davon sein oder eng damit verbunden | läuft auf dem OS |
-| Beispiel | Windows, Treiber, PowerShell | Excel, Firefox, VLC |
+| Aspekt              | Systemprogramm                                | Anwendungsprogramm                     |
+| ------------------- | --------------------------------------------- | -------------------------------------- |
+| Hauptzweck          | Betrieb / Unterstützung des Systems           | Lösung einer Benutzeraufgabe           |
+| Hardwarenähe        | steht der Hardware in der Regel näher         | steht weiter von der Hardware entfernt |
+| Abhängigkeit vom OS | kann Teil davon sein oder eng damit verbunden | läuft auf dem OS                       |
+| Beispiel            | Windows, Treiber, PowerShell                  | Excel, Firefox, VLC                    |
 
 ## Typische Systemprogramme
 

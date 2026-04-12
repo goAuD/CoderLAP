@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Tartomány | Típus | Példa | Mire való |
-|---|---|---|---|
-| `0-31` | vezérlőkarakter | `LF`, `CR`, `TAB` | nem látható jelek, hanem vezérlés |
-| `32` | szóköz | `SPACE` | elválasztás |
-| `33-126` | nyomtatható karakter | `A`, `a`, `7`, `?`, `#` | szöveg megjelenítése |
-| `127` | vezérlőkarakter | `DEL` | törléshez kapcsolódó jel |
+| Tartomány | Típus                | Példa                   | Mire való                         |
+| --------- | -------------------- | ----------------------- | --------------------------------- |
+| `0-31`    | vezérlőkarakter      | `LF`, `CR`, `TAB`       | nem látható jelek, hanem vezérlés |
+| `32`      | szóköz               | `SPACE`                 | elválasztás                       |
+| `33-126`  | nyomtatható karakter | `A`, `a`, `7`, `?`, `#` | szöveg megjelenítése              |
+| `127`     | vezérlőkarakter      | `DEL`                   | törléshez kapcsolódó jel          |
 
 ## Mi az ASCII?
 
@@ -17,11 +17,11 @@ Lényege, hogy a karakterekhez egy-egy **számkódot** rendel.
 Például:
 
 | Karakter | Decimális | Hexadecimális | 7 bites bináris |
-|---|---:|---:|---:|
-| `A` | `65` | `41` | `1000001` |
-| `a` | `97` | `61` | `1100001` |
-| `0` | `48` | `30` | `0110000` |
-| `?` | `63` | `3F` | `0111111` |
+| -------- | --------: | ------------: | --------------: |
+| `A`      |      `65` |          `41` |       `1000001` |
+| `a`      |      `97` |          `61` |       `1100001` |
+| `0`      |      `48` |          `30` |       `0110000` |
+| `?`      |      `63` |          `3F` |       `0111111` |
 
 Fontos:
 
@@ -65,11 +65,11 @@ Az ASCII önmagában már nem elég a modern, többnyelvű rendszerekhez, de tov
 
 ## ASCII, Unicode, UTF-8: ne keverd össze
 
-| Fogalom | Mit jelent? | Példa |
-|---|---|---|
-| **ASCII** | 7 bites, 128 karakteres régi szabvány | `A`, `7`, `?` |
-| **Unicode** | általános karakterkészlet és kódtér nagyon sok nyelvhez | `á`, `ö`, `Ж`, `中`, `€` |
-| **UTF-8** | a Unicode egyik elterjedt tárolási/kódolási formája | az ASCII karaktereket változatlanul viszi tovább |
+| Fogalom     | Mit jelent?                                             | Példa                                            |
+| ----------- | ------------------------------------------------------- | ------------------------------------------------ |
+| **ASCII**   | 7 bites, 128 karakteres régi szabvány                   | `A`, `7`, `?`                                    |
+| **Unicode** | általános karakterkészlet és kódtér nagyon sok nyelvhez | `á`, `ö`, `Ж`, `中`, `€`                         |
+| **UTF-8**   | a Unicode egyik elterjedt tárolási/kódolási formája     | az ASCII karaktereket változatlanul viszi tovább |
 
 Egyszerűen:
 

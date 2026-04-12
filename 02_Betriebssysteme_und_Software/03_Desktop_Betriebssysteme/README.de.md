@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| System | Typische Umgebung | Merkmal |
-|---|---|---|
-| Windows | allgemeiner PC | breite Hardware- und Softwareunterstützung |
-| macOS | Apple Mac | enge Hardware-Software-Integration |
-| Ubuntu / Linux | offenes System | Flexibilität, Stärke bei Entwicklern und Technik |
-| ChromeOS | einfachere, webbasierte Nutzung | leichte Bedienung, Cloud-Orientierung |
+| System         | Typische Umgebung               | Merkmal                                          |
+| -------------- | ------------------------------- | ------------------------------------------------ |
+| Windows        | allgemeiner PC                  | breite Hardware- und Softwareunterstützung       |
+| macOS          | Apple Mac                       | enge Hardware-Software-Integration               |
+| Ubuntu / Linux | offenes System                  | Flexibilität, Stärke bei Entwicklern und Technik |
+| ChromeOS       | einfachere, webbasierte Nutzung | leichte Bedienung, Cloud-Orientierung            |
 
 ## Was ist ein Desktop-Betriebssystem?
 
@@ -103,20 +103,20 @@ Merkmale:
 
 ## Desktop-OS vs Mobiles OS
 
-| Desktop-Betriebssystem | Mobiles Betriebssystem |
-|---|---|
+| Desktop-Betriebssystem                      | Mobiles Betriebssystem              |
+| ------------------------------------------- | ----------------------------------- |
 | für Desktop-Rechner oder Laptops entwickelt | für Telefone und Tablets entwickelt |
-| Maus + Tastatur im Vordergrund | Touchsteuerung im Vordergrund |
-| komplexere Fensterverwaltung | App-zentrierte Nutzung |
-| z.B. Windows, macOS, Ubuntu | z.B. Android, iOS |
+| Maus + Tastatur im Vordergrund              | Touchsteuerung im Vordergrund       |
+| komplexere Fensterverwaltung                | App-zentrierte Nutzung              |
+| z.B. Windows, macOS, Ubuntu                 | z.B. Android, iOS                   |
 
 ## Desktop-OS vs Server-OS
 
-| Desktop | Server |
-|---|---|
-| Benutzer-Arbeitsstation | Dienste und Hintergrundaufgaben |
-| GUI wichtig | häufig CLI oder Admin-Konsole im Vordergrund |
-| lokale tägliche Nutzung | Netzwerkdienste, Bedienung vieler Clients |
+| Desktop                 | Server                                       |
+| ----------------------- | -------------------------------------------- |
+| Benutzer-Arbeitsstation | Dienste und Hintergrundaufgaben              |
+| GUI wichtig             | häufig CLI oder Admin-Konsole im Vordergrund |
+| lokale tägliche Nutzung | Netzwerkdienste, Bedienung vieler Clients    |
 
 ## Prüfungstaugliche Formulierung
 

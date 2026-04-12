@@ -2,11 +2,11 @@
 
 ## Gyors vizuális kép
 
-| Helyzet | Mit csinál a multitasking OS? |
-|---|---|
-| böngésző + zene + letöltés | ütemezi a folyamatokat |
-| több ablak nyitva | kezeli a CPU-időt és a memóriát |
-| háttérfrissítés fut | a háttér- és előtérfeladatokat együtt szervezi |
+| Helyzet                    | Mit csinál a multitasking OS?                  |
+| -------------------------- | ---------------------------------------------- |
+| böngésző + zene + letöltés | ütemezi a folyamatokat                         |
+| több ablak nyitva          | kezeli a CPU-időt és a memóriát                |
+| háttérfrissítés fut        | a háttér- és előtérfeladatokat együtt szervezi |
 
 ## Mi az a multitasking?
 
@@ -76,19 +76,19 @@ Az a mechanizmus, amellyel az OS eldönti, melyik feladat mikor fusson.
 
 ## Multitasking vs multiprocessing
 
-| Fogalom | Jelentés |
-|---|---|
-| multitasking | több feladat kezelése egy operációs rendszerben |
-| multiprocessing | több processzor / több mag használata |
+| Fogalom         | Jelentés                                        |
+| --------------- | ----------------------------------------------- |
+| multitasking    | több feladat kezelése egy operációs rendszerben |
+| multiprocessing | több processzor / több mag használata           |
 
 A kettő kapcsolódik, de nem ugyanaz.
 
 ## Multitasking vs multithreading
 
-| Fogalom | Jelentés |
-|---|---|
-| multitasking | több folyamat / feladat kezelése rendszer-szinten |
-| multithreading | egy programon belüli több szál használata |
+| Fogalom        | Jelentés                                          |
+| -------------- | ------------------------------------------------- |
+| multitasking   | több folyamat / feladat kezelése rendszer-szinten |
+| multithreading | egy programon belüli több szál használata         |
 
 ## Vizsgán jól használható megfogalmazás
 

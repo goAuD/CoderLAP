@@ -2,16 +2,16 @@
 
 ## Schneller visueller Überblick
 
-| Phase | Was bedeutet es? |
-|---|---|
-| Planung | Ziele, Beteiligte, Zeitplan |
-| Vorbereitung | Umgebung, Berechtigungen, Backups |
-| Pilot | Erprobung in kleinerem Kreis |
-| Rollout | tatsächliche Einführung |
-| Überprüfung | Betrieb, Monitoring, Fehler |
-| Übergabe | Wissensübergabe, Dokumentation |
-| Abnahme | Bestätigung, dass das System übernommen werden kann |
-| Rollback | Rückführung, wenn der Rollout nicht erfolgreich ist |
+| Phase        | Was bedeutet es?                                    |
+| ------------ | --------------------------------------------------- |
+| Planung      | Ziele, Beteiligte, Zeitplan                         |
+| Vorbereitung | Umgebung, Berechtigungen, Backups                   |
+| Pilot        | Erprobung in kleinerem Kreis                        |
+| Rollout      | tatsächliche Einführung                             |
+| Überprüfung  | Betrieb, Monitoring, Fehler                         |
+| Übergabe     | Wissensübergabe, Dokumentation                      |
+| Abnahme      | Bestätigung, dass das System übernommen werden kann |
+| Rollback     | Rückführung, wenn der Rollout nicht erfolgreich ist |
 
 ## Was ist das Ziel eines Rollouts?
 

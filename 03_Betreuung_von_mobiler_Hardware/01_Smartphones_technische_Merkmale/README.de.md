@@ -2,17 +2,17 @@
 
 ## Schneller visueller Überblick
 
-| Merkmal | Was wird betrachtet? |
-|---|---|
-| Display | Größe, Auflösung, Technologie, Helligkeit, Bildwiederholrate |
-| Leistung | SoC, CPU, GPU, NPU |
-| Arbeitsspeicher | RAM |
-| Speicher | interner Speicher, Erweiterbarkeit |
-| Energie | Akku, Laden |
-| Kamera | Hauptkamera, Ultra Wide, Zoom, Video |
-| Konnektivität | 4G/5G, Wi-Fi, Bluetooth, NFC, GPS |
-| Sicherheit | PIN, Fingerabdruck, Gesichtserkennung |
-| Software | Android oder iOS, Updates |
+| Merkmal         | Was wird betrachtet?                                         |
+| --------------- | ------------------------------------------------------------ |
+| Display         | Größe, Auflösung, Technologie, Helligkeit, Bildwiederholrate |
+| Leistung        | SoC, CPU, GPU, NPU                                           |
+| Arbeitsspeicher | RAM                                                          |
+| Speicher        | interner Speicher, Erweiterbarkeit                           |
+| Energie         | Akku, Laden                                                  |
+| Kamera          | Hauptkamera, Ultra Wide, Zoom, Video                         |
+| Konnektivität   | 4G/5G, Wi-Fi, Bluetooth, NFC, GPS                            |
+| Sicherheit      | PIN, Fingerabdruck, Gesichtserkennung                        |
+| Software        | Android oder iOS, Updates                                    |
 
 ## Was ist ein Smartphone?
 

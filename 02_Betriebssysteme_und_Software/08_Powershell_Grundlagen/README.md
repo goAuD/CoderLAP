@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Fogalom | Jelentés |
-|---|---|
-| shell | parancsértelmező környezet |
-| cmdlet | PowerShell-parancs |
+| Fogalom        | Jelentés                                         |
+| -------------- | ------------------------------------------------ |
+| shell          | parancsértelmező környezet                       |
+| cmdlet         | PowerShell-parancs                               |
 | objektum-alapú | nem csak sima szöveget, hanem objektumokat kezel |
-| script | parancsokból álló `.ps1` fájl |
+| script         | parancsokból álló `.ps1` fájl                    |
 
 ## Mi az a PowerShell?
 
@@ -49,9 +49,9 @@ Példák:
 
 ### Segítség és parancskeresés
 
-| Parancs | Mire jó? |
-|---|---|
-| `Get-Help` | súgó megjelenítése |
+| Parancs       | Mire jó?                    |
+| ------------- | --------------------------- |
+| `Get-Help`    | súgó megjelenítése          |
 | `Get-Command` | elérhető parancsok keresése |
 
 Példák:
@@ -63,10 +63,10 @@ Get-Command *Item*
 
 ### Hely és navigáció
 
-| Parancs | Mire jó? |
-|---|---|
+| Parancs        | Mire jó?                    |
+| -------------- | --------------------------- |
 | `Get-Location` | aktuális hely megjelenítése |
-| `Set-Location` | mappaváltás |
+| `Set-Location` | mappaváltás                 |
 
 Példák:
 
@@ -77,8 +77,8 @@ Set-Location C:\DEV_SCHOOL
 
 ### Fájlok és mappák listázása
 
-| Parancs | Mire jó? |
-|---|---|
+| Parancs         | Mire jó?                   |
+| --------------- | -------------------------- |
 | `Get-ChildItem` | fájlok és mappák listázása |
 
 Példák:
@@ -91,12 +91,12 @@ Get-ChildItem -Recurse
 
 ### Létrehozás, másolás, mozgatás, törlés
 
-| Parancs | Mire jó? |
-|---|---|
-| `New-Item` | új elem létrehozása |
-| `Copy-Item` | másolás |
-| `Move-Item` | mozgatás / átnevezés |
-| `Remove-Item` | törlés |
+| Parancs       | Mire jó?             |
+| ------------- | -------------------- |
+| `New-Item`    | új elem létrehozása  |
+| `Copy-Item`   | másolás              |
+| `Move-Item`   | mozgatás / átnevezés |
+| `Remove-Item` | törlés               |
 
 Példák:
 
@@ -109,8 +109,8 @@ Remove-Item .\b.txt
 
 ### Tartalom megjelenítése
 
-| Parancs | Mire jó? |
-|---|---|
+| Parancs       | Mire jó?                 |
+| ------------- | ------------------------ |
 | `Get-Content` | fájl tartalmának kiírása |
 
 Példa:
@@ -124,11 +124,11 @@ Get-Content .\jegyzet.txt
 PowerShellben gyakori rövid aliasok:
 
 | Alias | Eredeti parancs |
-|---|---|
-| `ls` | `Get-ChildItem` |
+| ----- | --------------- |
+| `ls`  | `Get-ChildItem` |
 | `dir` | `Get-ChildItem` |
-| `cd` | `Set-Location` |
-| `cat` | `Get-Content` |
+| `cd`  | `Set-Location`  |
+| `cat` | `Get-Content`   |
 
 Fontos:
 

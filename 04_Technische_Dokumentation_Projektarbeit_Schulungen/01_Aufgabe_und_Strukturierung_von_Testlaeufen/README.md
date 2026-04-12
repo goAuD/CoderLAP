@@ -2,15 +2,15 @@
 
 ## Gyors vizuális kép
 
-| Elem | Mit jelent? |
-|---|---|
-| tesztcél | mit akarunk ellenőrizni |
-| tesztkörnyezet | hol fut a teszt |
-| tesztadat | mivel végezzük a tesztet |
-| tesztlépések | mit kell végrehajtani |
-| várt eredmény | mi számít helyes működésnek |
-| tényleges eredmény | mi történt valójában |
-| státusz | `pass`, `fail`, `blocked` stb. |
+| Elem               | Mit jelent?                    |
+| ------------------ | ------------------------------ |
+| tesztcél           | mit akarunk ellenőrizni        |
+| tesztkörnyezet     | hol fut a teszt                |
+| tesztadat          | mivel végezzük a tesztet       |
+| tesztlépések       | mit kell végrehajtani          |
+| várt eredmény      | mi számít helyes működésnek    |
+| tényleges eredmény | mi történt valójában           |
+| státusz            | `pass`, `fail`, `blocked` stb. |
 
 ## Mi a tesztfutás feladata?
 
@@ -119,13 +119,13 @@ A teszt végén dokumentálni kell:
 
 ## Tipikus tesztfutási státuszok
 
-| Státusz | Jelentés |
-|---|---|
-| `ready to run` | futtatásra kész |
-| `pass` | sikeres |
-| `fail` | hibás eredmény |
-| `blocked` | nem futtatható valamilyen akadály miatt |
-| `skipped` | szándékosan kihagyva |
+| Státusz        | Jelentés                                |
+| -------------- | --------------------------------------- |
+| `ready to run` | futtatásra kész                         |
+| `pass`         | sikeres                                 |
+| `fail`         | hibás eredmény                          |
+| `blocked`      | nem futtatható valamilyen akadály miatt |
+| `skipped`      | szándékosan kihagyva                    |
 
 ## Mire kell figyelni?
 

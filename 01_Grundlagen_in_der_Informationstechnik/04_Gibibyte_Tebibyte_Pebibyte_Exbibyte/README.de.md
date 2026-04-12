@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Einheit | Bezeichnung | Faktor | In Byte |
-|---|---|---:|---:|
-| Gibibyte | `GiB` | `2^30` | `1 073 741 824 B` |
-| Tebibyte | `TiB` | `2^40` | `1 099 511 627 776 B` |
-| Pebibyte | `PiB` | `2^50` | `1 125 899 906 842 624 B` |
-| Exbibyte | `EiB` | `2^60` | `1 152 921 504 606 846 976 B` |
+| Einheit  | Bezeichnung | Faktor |                       In Byte |
+| -------- | ----------- | -----: | ----------------------------: |
+| Gibibyte | `GiB`       | `2^30` |             `1 073 741 824 B` |
+| Tebibyte | `TiB`       | `2^40` |         `1 099 511 627 776 B` |
+| Pebibyte | `PiB`       | `2^50` |     `1 125 899 906 842 624 B` |
+| Exbibyte | `EiB`       | `2^60` | `1 152 921 504 606 846 976 B` |
 
 ### Eselsbrücke
 
@@ -56,10 +56,10 @@ In der Bezeichnung erscheint daher das zusätzliche `i`:
 
 ## GiB und GB: der wichtigste Unterschied
 
-| Einheit | Typ | Wert |
-|---|---|---|
-| `GB` | dezimal | `10^9 Byte` |
-| `GiB` | binär | `2^30 Byte` |
+| Einheit | Typ     | Wert        |
+| ------- | ------- | ----------- |
+| `GB`    | dezimal | `10^9 Byte` |
+| `GiB`   | binär   | `2^30 Byte` |
 
 In Zahlen:
 

@@ -2,13 +2,13 @@
 
 ## Schneller visueller Überblick
 
-| Aspekt | Was bedeutet es? |
-|---|---|
-| Ziel | was möchte ich vermitteln |
-| Publikum | zu wem spreche ich |
-| Struktur | Einleitung, Hauptteil, Schluss |
-| Design | einfach, lesbar, konsistent |
-| Vortrag | Übung, Zeitplanung, technische Probe |
+| Aspekt   | Was bedeutet es?                     |
+| -------- | ------------------------------------ |
+| Ziel     | was möchte ich vermitteln            |
+| Publikum | zu wem spreche ich                   |
+| Struktur | Einleitung, Hauptteil, Schluss       |
+| Design   | einfach, lesbar, konsistent          |
+| Vortrag  | Übung, Zeitplanung, technische Probe |
 
 ## Was ist das Ziel einer guten Präsentation?
 

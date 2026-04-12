@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Bereich | Typ | Beispiel | Wofür |
-|---|---|---|---|
-| `0-31` | Steuerzeichen | `LF`, `CR`, `TAB` | keine sichtbaren Zeichen, sondern Steuerung |
-| `32` | Leerzeichen | `SPACE` | Trennung |
-| `33-126` | druckbare Zeichen | `A`, `a`, `7`, `?`, `#` | Textdarstellung |
-| `127` | Steuerzeichen | `DEL` | löschbezogenes Zeichen |
+| Bereich  | Typ               | Beispiel                | Wofür                                       |
+| -------- | ----------------- | ----------------------- | ------------------------------------------- |
+| `0-31`   | Steuerzeichen     | `LF`, `CR`, `TAB`       | keine sichtbaren Zeichen, sondern Steuerung |
+| `32`     | Leerzeichen       | `SPACE`                 | Trennung                                    |
+| `33-126` | druckbare Zeichen | `A`, `a`, `7`, `?`, `#` | Textdarstellung                             |
+| `127`    | Steuerzeichen     | `DEL`                   | löschbezogenes Zeichen                      |
 
 ## Was ist ASCII?
 
@@ -17,11 +17,11 @@ Das Wesentliche ist, dass jedem Zeichen ein **Zahlencode** zugeordnet wird.
 Zum Beispiel:
 
 | Zeichen | Dezimal | Hexadezimal | 7-Bit Binär |
-|---|---:|---:|---:|
-| `A` | `65` | `41` | `1000001` |
-| `a` | `97` | `61` | `1100001` |
-| `0` | `48` | `30` | `0110000` |
-| `?` | `63` | `3F` | `0111111` |
+| ------- | ------: | ----------: | ----------: |
+| `A`     |    `65` |        `41` |   `1000001` |
+| `a`     |    `97` |        `61` |   `1100001` |
+| `0`     |    `48` |        `30` |   `0110000` |
+| `?`     |    `63` |        `3F` |   `0111111` |
 
 Wichtig:
 
@@ -65,11 +65,11 @@ ASCII allein reicht für moderne, mehrsprachige Systeme nicht mehr aus, ist aber
 
 ## ASCII, Unicode, UTF-8: nicht verwechseln
 
-| Begriff | Was bedeutet es? | Beispiel |
-|---|---|---|
-| **ASCII** | 7-Bit, 128 Zeichen umfassender alter Standard | `A`, `7`, `?` |
-| **Unicode** | allgemeiner Zeichensatz und Coderaum für sehr viele Sprachen | `á`, `ö`, `Ж`, `中`, `€` |
-| **UTF-8** | eine verbreitete Speicher-/Kodierungsform von Unicode | übernimmt ASCII-Zeichen unverändert |
+| Begriff     | Was bedeutet es?                                             | Beispiel                            |
+| ----------- | ------------------------------------------------------------ | ----------------------------------- |
+| **ASCII**   | 7-Bit, 128 Zeichen umfassender alter Standard                | `A`, `7`, `?`                       |
+| **Unicode** | allgemeiner Zeichensatz und Coderaum für sehr viele Sprachen | `á`, `ö`, `Ж`, `中`, `€`            |
+| **UTF-8**   | eine verbreitete Speicher-/Kodierungsform von Unicode        | übernimmt ASCII-Zeichen unverändert |
 
 Einfach gesagt:
 

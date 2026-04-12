@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Jellemző | Mit jelent? |
-|---|---|
-| `2D` kód | nem csak egy sorban, hanem két irányban tárol adatot |
-| nagy kapacitás | több adat fér bele, mint sok klasszikus vonalkódba |
-| irányfüggetlen olvasás | több oldalról is felismerhető |
-| hibajavítás | részben sérült kód is olvasható lehet |
+| Jellemző               | Mit jelent?                                          |
+| ---------------------- | ---------------------------------------------------- |
+| `2D` kód               | nem csak egy sorban, hanem két irányban tárol adatot |
+| nagy kapacitás         | több adat fér bele, mint sok klasszikus vonalkódba   |
+| irányfüggetlen olvasás | több oldalról is felismerhető                        |
+| hibajavítás            | részben sérült kód is olvasható lehet                |
 
 ## Mi az a QR-kód?
 
@@ -25,12 +25,12 @@ Tipikusan tartalmazhat:
 
 ## Miben más, mint egy hagyományos vonalkód?
 
-| Hagyományos vonalkód | QR-kód |
-|---|---|
-| jellemzően 1D | 2D |
-| kevesebb adat | nagyobb adatmennyiség |
-| olvasás irányérzékenyebb | több irányból olvasható |
-| főleg egyszerű azonosítás | sokféle adat tárolható |
+| Hagyományos vonalkód      | QR-kód                  |
+| ------------------------- | ----------------------- |
+| jellemzően 1D             | 2D                      |
+| kevesebb adat             | nagyobb adatmennyiség   |
+| olvasás irányérzékenyebb  | több irányból olvasható |
+| főleg egyszerű azonosítás | sokféle adat tárolható  |
 
 ## Hogyan néz ki?
 

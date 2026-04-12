@@ -2,13 +2,13 @@
 
 ## Schneller visueller Überblick
 
-| Merkmal | Android |
-|---|---|
-| Plattformbasis | `AOSP` |
-| Geräte | viele Hersteller, viele Modelle |
-| App-Vertrieb | Google Play und auch andere Quellen möglich |
-| Anpassbarkeit | im Allgemeinen größer |
-| Updates | können von Hersteller und Modell abhängen |
+| Merkmal        | Android                                     |
+| -------------- | ------------------------------------------- |
+| Plattformbasis | `AOSP`                                      |
+| Geräte         | viele Hersteller, viele Modelle             |
+| App-Vertrieb   | Google Play und auch andere Quellen möglich |
+| Anpassbarkeit  | im Allgemeinen größer                       |
+| Updates        | können von Hersteller und Modell abhängen   |
 
 ## Was ist Android?
 
@@ -126,12 +126,12 @@ Das ist flexibel, kann aber auch ein Sicherheitsrisiko darstellen.
 
 ## Android vs iOS
 
-| Android | iOS |
-|---|---|
-| offeneres Ökosystem | geschlosseneres Ökosystem |
-| viele Hersteller | Apple-zentriert |
+| Android                             | iOS                                        |
+| ----------------------------------- | ------------------------------------------ |
+| offeneres Ökosystem                 | geschlosseneres Ökosystem                  |
+| viele Hersteller                    | Apple-zentriert                            |
 | verschiedene Geräte und Oberflächen | einheitlichere Hardware-Software-Kontrolle |
-| mehr Vertriebsmöglichkeiten | stärker kontrollierter Vertrieb |
+| mehr Vertriebsmöglichkeiten         | stärker kontrollierter Vertrieb            |
 
 ## Prüfungstaugliche Formulierung
 

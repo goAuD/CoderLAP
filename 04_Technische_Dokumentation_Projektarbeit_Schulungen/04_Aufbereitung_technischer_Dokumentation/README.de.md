@@ -2,13 +2,13 @@
 
 ## Schneller visueller Überblick
 
-| Aspekt | Was bedeutet es? |
-|---|---|
-| Struktur | logische Kapitel und Reihenfolge |
-| Sprache | einfach, genau, zielgruppengerecht |
-| Formatierung | Überschriften, Listen, Tabellen, Hervorhebungen |
-| Visualisierung | Bilder, Abbildungen, Screenshots, Diagramme |
-| Wartbarkeit | Versionierung, Aktualisierbarkeit |
+| Aspekt         | Was bedeutet es?                                |
+| -------------- | ----------------------------------------------- |
+| Struktur       | logische Kapitel und Reihenfolge                |
+| Sprache        | einfach, genau, zielgruppengerecht              |
+| Formatierung   | Überschriften, Listen, Tabellen, Hervorhebungen |
+| Visualisierung | Bilder, Abbildungen, Screenshots, Diagramme     |
+| Wartbarkeit    | Versionierung, Aktualisierbarkeit               |
 
 ## Warum ist eine gute Aufbereitung wichtig?
 

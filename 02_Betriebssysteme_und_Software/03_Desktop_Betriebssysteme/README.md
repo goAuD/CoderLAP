@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Rendszer | Tipikus környezet | Jellemző |
-|---|---|---|
-| Windows | általános PC | széles hardver- és szoftvertámogatás |
-| macOS | Apple Mac | szoros hardver-szoftver integráció |
-| Ubuntu / Linux | nyílt rendszer | rugalmasság, fejlesztői és technikai erősség |
-| ChromeOS | egyszerűbb, webes használat | könnyű kezelés, cloud-központúság |
+| Rendszer       | Tipikus környezet           | Jellemző                                     |
+| -------------- | --------------------------- | -------------------------------------------- |
+| Windows        | általános PC                | széles hardver- és szoftvertámogatás         |
+| macOS          | Apple Mac                   | szoros hardver-szoftver integráció           |
+| Ubuntu / Linux | nyílt rendszer              | rugalmasság, fejlesztői és technikai erősség |
+| ChromeOS       | egyszerűbb, webes használat | könnyű kezelés, cloud-központúság            |
 
 ## Mi az a desktop operációs rendszer?
 
@@ -103,20 +103,20 @@ Jellemzői:
 
 ## Desktop OS vs mobil OS
 
-| Desktop operációs rendszer | Mobil operációs rendszer |
-|---|---|
+| Desktop operációs rendszer          | Mobil operációs rendszer      |
+| ----------------------------------- | ----------------------------- |
 | asztali gépre vagy laptopra készült | telefonra és tabletre készült |
-| egér + billentyűzet hangsúlyos | érintésvezérlés hangsúlyos |
-| összetettebb ablakkezelés | mobil-app központú használat |
-| például Windows, macOS, Ubuntu | például Android, iOS |
+| egér + billentyűzet hangsúlyos      | érintésvezérlés hangsúlyos    |
+| összetettebb ablakkezelés           | mobil-app központú használat  |
+| például Windows, macOS, Ubuntu      | például Android, iOS          |
 
 ## Desktop OS vs szerver OS
 
-| Desktop | Szerver |
-|---|---|
-| felhasználói munkaállomás | szolgáltatások és háttérfeladatok |
-| GUI fontos | gyakran CLI vagy admin-konzol hangsúlyos |
-| helyi napi használat | hálózati szolgáltatások, sok kliens kiszolgálása |
+| Desktop                   | Szerver                                          |
+| ------------------------- | ------------------------------------------------ |
+| felhasználói munkaállomás | szolgáltatások és háttérfeladatok                |
+| GUI fontos                | gyakran CLI vagy admin-konzol hangsúlyos         |
+| helyi napi használat      | hálózati szolgáltatások, sok kliens kiszolgálása |
 
 ## Vizsgán jól használható megfogalmazás
 
