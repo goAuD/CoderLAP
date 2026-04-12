@@ -144,8 +144,11 @@ Es ist wichtig, dass sichtbar ist:
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel einer technischen Dokumentation ist es, Funktion, Nutzung und Bedienung eines Systems oder Prozesses verständlich festzuhalten.  
-> Wichtige Bestandteile sind das Ziel, die Zielgruppe, die Voraussetzungen, die Systembeschreibung, die Installations- oder Nutzungsschritte, die Fehlerbehebung und die Versionsinformationen.  
+> Ziel einer technischen Dokumentation ist es,
+> Funktion, Nutzung und Bedienung eines Systems oder Prozesses verständlich festzuhalten.  
+> Wichtige Bestandteile sind das Ziel, die Zielgruppe, die Voraussetzungen,
+> die Systembeschreibung, die Installations- oder Nutzungsschritte,
+> die Fehlerbehebung und die Versionsinformationen.  
 > Die Dokumentation ist nur dann nützlich, wenn sie genau, zielgruppengerecht und aktuell ist.
 
 ## Häufige Prüfungsfehler

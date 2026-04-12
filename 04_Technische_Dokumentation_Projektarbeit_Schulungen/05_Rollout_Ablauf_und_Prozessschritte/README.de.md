@@ -153,8 +153,11 @@ Die Abnahme bedeutet, dass der Auftraggeber oder Verantwortliche bestätigt:
 ## Prüfungstaugliche Formulierung
 
 > Ein Rollout ist die geplante Einführung eines neuen Systems oder einer Anwendung in die Produktivumgebung.  
-> Der Ablauf umfasst typischerweise Planung, Vorbereitung, Pilot, eigentliche Einführung, Überprüfung, Schulung, Übergabe und Abnahme.  
-> Wichtige Bestandteile sind die Berücksichtigung der Sicherheitsanforderungen, die Datenmigration sowie die Rollback-Möglichkeit für den Fall, dass die Einführung nicht gelingt.
+> Der Ablauf umfasst typischerweise Planung, Vorbereitung, Pilot,
+> eigentliche Einführung, Überprüfung, Schulung, Übergabe und Abnahme.  
+> Wichtige Bestandteile sind die Berücksichtigung der Sicherheitsanforderungen,
+> die Datenmigration sowie die Rollback-Möglichkeit für den Fall,
+> dass die Einführung nicht gelingt.
 
 ## Häufige Prüfungsfehler
 
