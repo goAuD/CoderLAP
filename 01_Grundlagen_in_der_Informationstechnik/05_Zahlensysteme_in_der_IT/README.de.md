@@ -180,7 +180,9 @@ Das kann je nach Sprache variieren, aber die Grundidee ist dieselbe.
 > In der Informatik werden am häufigsten das Binär-, Oktal-, Dezimal- und Hexadezimalsystem verwendet.  
 > Das Binärsystem hat die Basis 2 und verwendet daher nur die Ziffern 0 und 1.  
 > Das Dezimalsystem hat die Basis 10, es ist das alltägliche Zahlensystem.  
-> Das Hexadezimalsystem hat die Basis 16 und ist deshalb wichtig, weil es Binärdaten gut komprimiert: eine Hexadezimalziffer entspricht 4 Bit.
+> Das Hexadezimalsystem hat die Basis 16 und ist deshalb wichtig,
+> weil es Binärdaten gut komprimiert:
+> eine Hexadezimalziffer entspricht 4 Bit.
 
 ## Häufige Prüfungsfehler
 

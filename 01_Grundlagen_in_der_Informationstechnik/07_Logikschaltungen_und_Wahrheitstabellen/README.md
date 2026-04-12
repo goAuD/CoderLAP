@@ -9,7 +9,7 @@
 | 0   | 1     |
 | 1   | 0     |
 
-### AND
+### AND röviden
 
 | A   | B   | A AND B |
 | --- | --- | ------- |
@@ -18,7 +18,7 @@
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-### OR
+### OR röviden
 
 | A   | B   | A OR B |
 | --- | --- | ------ |
@@ -27,7 +27,7 @@
 | 1   | 0   | 1      |
 | 1   | 1   | 1      |
 
-### XOR
+### XOR röviden
 
 | A   | B   | A XOR B |
 | --- | --- | ------- |
@@ -167,7 +167,7 @@ Az XOR nagyon fontos például:
 - pontosan az egyik igaz
 - vagy úgy is: a két bemenet különbözik
 
-### NOT
+### NOT röviden
 
 - megfordítja az értéket
 
@@ -196,7 +196,10 @@ Matematikai vagy programozási környezetben lehetnek más jelek is, de vizsgán
 
 > A logikai kapcsolások bináris bemenetekkel dolgoznak, tehát a jelek 0 vagy 1 értékűek.  
 > Az igazságtábla megmutatja, hogy az összes lehetséges bemeneti kombinációhoz milyen kimenet tartozik.  
-> Az AND csak akkor ad 1-et, ha mindkét bemenet 1. Az OR akkor ad 1-et, ha legalább az egyik bemenet 1. Az XOR akkor ad 1-et, ha a két bemenet különbözik. A NOT egy bemenetet invertál.
+> Az AND csak akkor ad 1-et, ha mindkét bemenet 1.  
+> Az OR akkor ad 1-et, ha legalább az egyik bemenet 1.  
+> Az XOR akkor ad 1-et, ha a két bemenet különbözik.  
+> A NOT egy bemenetet invertál.
 
 ## Gyakori vizsgahibák
 
