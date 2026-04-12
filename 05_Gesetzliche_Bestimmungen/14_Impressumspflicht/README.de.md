@@ -67,8 +67,12 @@ Typische Lösung:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Impressum bedeutet die verpflichtende Veröffentlichung von Identifikations- und Kontaktinformationen auf einer Website oder in einem elektronischen Medium.
-> Sein Zweck ist die Transparenz und die Sicherstellung, dass der Nutzer weiß, wer der Betreiber oder die für den Inhalt verantwortliche Person ist.
+> Das Impressum bedeutet die verpflichtende Veröffentlichung
+> von Identifikations- und Kontaktinformationen
+> auf einer Website oder in einem elektronischen Medium.
+> Sein Zweck ist die Transparenz und die Sicherstellung,
+> dass der Nutzer weiß, wer der Betreiber
+> oder die für den Inhalt verantwortliche Person ist.
 > In Österreich sind für die Impressumspflicht insbesondere das ECG § 5 und das Mediengesetz § 24 relevant.
 
 ## Häufige Prüfungsfehler

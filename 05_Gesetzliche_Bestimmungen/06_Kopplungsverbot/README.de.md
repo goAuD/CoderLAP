@@ -63,7 +63,8 @@ Wenn eine Anwendung ein für den Betrieb nicht notwendiges Profiling durchführe
 
 ## Was gilt nicht als verbotene Kopplung?
 
-Es liegt kein Verstoß gegen das Kopplungsverbot vor, wenn die Datenverarbeitung tatsächlich für die Erbringung der Dienstleistung notwendig ist.
+Es liegt kein Verstoß gegen das Kopplungsverbot vor,
+wenn die Datenverarbeitung tatsächlich für die Erbringung der Dienstleistung notwendig ist.
 
 Zum Beispiel:
 
@@ -75,12 +76,15 @@ Zum Beispiel:
 
 - die Lösung „alles akzeptieren oder den Dienst nicht nutzen" ist oft problematisch
 - die Einwilligung darf nicht erzwungen sein
-- die Einwilligung muss getrennt von der Vertragserfüllung behandelt werden, wenn es um eine nicht notwendige Datenverarbeitung geht
+- die Einwilligung muss getrennt von der Vertragserfüllung behandelt werden,
+  wenn es um eine nicht notwendige Datenverarbeitung geht
 
 ## Prüfungstaugliche Formulierung
 
 > Das Kopplungsverbot bedeutet, dass die Einwilligung freiwillig sein muss.
-> Die Inanspruchnahme einer Dienstleistung darf nicht automatisch an eine Datenverarbeitung geknüpft werden, die für die Vertragserfüllung nicht notwendig ist.
+> Die Inanspruchnahme einer Dienstleistung darf nicht automatisch
+> an eine Datenverarbeitung geknüpft werden,
+> die für die Vertragserfüllung nicht notwendig ist.
 > Wenn keine echte Wahlmöglichkeit besteht, kann die Gültigkeit der Einwilligung in Frage gestellt werden.
 
 ## Häufige Prüfungsfehler

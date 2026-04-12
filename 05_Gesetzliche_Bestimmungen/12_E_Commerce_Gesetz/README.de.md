@@ -74,7 +74,10 @@ dann sollte er zumindest auf Grundniveau diese Pflichten kennen.
 ## Prüfungstaugliche Formulierung
 
 > Das E-Commerce-Gesetz regelt in Österreich bestimmte rechtliche Pflichten der Online-Diensteanbieter.
-> Auf Prüfungsniveau ist besonders wichtig, dass der Diensteanbieter bestimmte Angaben leicht zugänglich machen muss und dass bei kommerzieller elektronischer Kommunikation auch die ECG-Liste zu beachten ist.
+> Auf Prüfungsniveau ist besonders wichtig,
+> dass der Diensteanbieter bestimmte Angaben leicht zugänglich machen muss
+> und dass bei kommerzieller elektronischer Kommunikation
+> auch die ECG-Liste zu beachten ist.
 > Das ECG ist daher bei Webshops, Unternehmenswebsites und Online-Diensten ein grundlegender rechtlicher Hintergrund.
 
 ## Häufige Prüfungsfehler

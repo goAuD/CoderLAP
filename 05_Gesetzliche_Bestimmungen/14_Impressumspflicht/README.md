@@ -67,8 +67,12 @@ Tipikus megoldás:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az impresszum kötelezően közzéteendő azonosító és kapcsolati információkat jelent egy weboldalon vagy elektronikus médiumban.  
-> Célja az átláthatóság és annak biztosítása, hogy a felhasználó tudja, ki az üzemeltető vagy a tartalomért felelős személy.  
+> Az impresszum kötelezően közzéteendő azonosító
+> és kapcsolati információkat jelent
+> egy weboldalon vagy elektronikus médiumban.  
+> Célja az átláthatóság és annak biztosítása,
+> hogy a felhasználó tudja,
+> ki az üzemeltető vagy a tartalomért felelős személy.  
 > Ausztriában az impresszum kötelezettségéhez különösen az ECG 5. § és a Mediengesetz 24. § kapcsolódik.
 
 ## Gyakori vizsgahibák

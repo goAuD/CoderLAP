@@ -50,11 +50,16 @@ Wichtig:
 
 ## 5. Einschränkung der Verarbeitung
 
-In bestimmten Situationen kann verlangt werden, dass die Daten nicht mehr aktiv verwendet, sondern nur eingeschränkt verarbeitet werden.
+In bestimmten Situationen kann verlangt werden,
+dass die Daten nicht mehr aktiv verwendet,
+sondern nur eingeschränkt verarbeitet werden.
 
 ## 6. Datenübertragbarkeit
 
-In bestimmten Fällen kann die betroffene Person verlangen, dass die sie betreffenden Daten in einem strukturierten, maschinenlesbaren Format bereitgestellt oder an einen anderen Anbieter übermittelt werden.
+In bestimmten Fällen kann die betroffene Person verlangen,
+dass die sie betreffenden Daten in einem strukturierten,
+maschinenlesbaren Format bereitgestellt
+oder an einen anderen Anbieter übermittelt werden.
 
 ## 7. Widerspruchsrecht
 
@@ -66,7 +71,10 @@ Besonders wichtig kann dies sein bei:
 
 ## 8. Recht bezüglich automatisierter Entscheidungsfindung
 
-Die betroffene Person hat das Recht, nicht ausschließlich einer automatisierten Entscheidung unterworfen zu werden, die erhebliche Auswirkungen auf sie hat, unter Missachtung der gesetzlichen Voraussetzungen.
+Die betroffene Person hat das Recht,
+nicht ausschließlich einer automatisierten Entscheidung unterworfen zu werden,
+die erhebliche Auswirkungen auf sie hat,
+unter Missachtung der gesetzlichen Voraussetzungen.
 
 ## 9. Beschwerde bei der Behörde
 
@@ -97,9 +105,12 @@ In bestimmten Fällen kann diese Frist verlängert werden.
 
 ## Prüfungstaugliche Formulierung
 
-> Die GDPR gewährt den betroffenen Personen mehrere Rechte, zum Beispiel das Recht auf Information, Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch.
+> Die GDPR gewährt den betroffenen Personen mehrere Rechte,
+> zum Beispiel das Recht auf Information, Auskunft, Berichtigung, Löschung,
+> Einschränkung, Datenübertragbarkeit und Widerspruch.
 > Der Verantwortliche muss auf diese Anträge grundsätzlich innerhalb eines Monats reagieren.
-> Wenn die betroffene Person eine Rechtsverletzung feststellt, kann sie eine Beschwerde bei der österreichischen Datenschutzbehörde einreichen.
+> Wenn die betroffene Person eine Rechtsverletzung feststellt,
+> kann sie eine Beschwerde bei der österreichischen Datenschutzbehörde einreichen.
 
 ## Häufige Prüfungsfehler
 

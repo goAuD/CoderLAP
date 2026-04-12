@@ -33,7 +33,8 @@ Weil in IT- oder Web-Umgebungen häufig vorkommt:
 - Kundenkommunikation
 - Online-Dienst und elektronische Erreichbarkeit
 
-Wenn ein System zum Beispiel Werbe-E-Mails oder SMS versendet, können neben der GDPR auch die Telekommunikationsvorschriften relevant sein.
+Wenn ein System zum Beispiel Werbe-E-Mails oder SMS versendet,
+können neben der GDPR auch die Telekommunikationsvorschriften relevant sein.
 
 ## Spam und unerbetene Nachrichten
 
@@ -50,7 +51,9 @@ Das ist besonders wichtig bei:
 
 ## Kommunikationsgeheimnis
 
-Der Kern der Telekommunikationsvorschriften ist auch, dass der Inhalt der Kommunikation und die zugehörigen Daten nicht willkürlich für Unbefugte zugänglich sein dürfen.
+Der Kern der Telekommunikationsvorschriften ist auch,
+dass der Inhalt der Kommunikation und die zugehörigen Daten
+nicht willkürlich für Unbefugte zugänglich sein dürfen.
 
 Einfach gesagt:
 
@@ -68,7 +71,9 @@ Einfach gesagt:
 ## Prüfungstaugliche Formulierung
 
 > Das Telekommunikationsgesetz 2021 ist eines der grundlegenden österreichischen Gesetze für elektronische Kommunikationsdienste.
-> Auf Prüfungsniveau sind daraus besonders wichtig der Schutz der Endnutzer, die Vertraulichkeit der Kommunikation sowie die Regelung zu unerbetenen Werbenachrichten und Spam.
+> Auf Prüfungsniveau sind daraus besonders wichtig
+> der Schutz der Endnutzer, die Vertraulichkeit der Kommunikation
+> sowie die Regelung zu unerbetenen Werbenachrichten und Spam.
 > Wenn ein System E-Mail, SMS oder andere elektronische Kommunikation nutzt, ist das TKG 2021 häufig relevant.
 
 ## Häufige Prüfungsfehler

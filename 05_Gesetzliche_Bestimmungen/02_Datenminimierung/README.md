@@ -85,8 +85,10 @@ Mert ha kevesebb adatot kezelünk:
 ## Vizsgán jól használható megfogalmazás
 
 > Az adattakarékosság a GDPR egyik alapelve.  
-> Azt jelenti, hogy csak olyan személyes adat kezelhető, amely az adott adatkezelési célhoz szükséges, megfelelő és releváns.  
-> A gyakorlatban ez azt jelenti, hogy nem kérhetünk be felesleges adatokat, és az adatokat nem tarthatjuk meg indokolatlanul sokáig.
+> Azt jelenti, hogy csak olyan személyes adat kezelhető,
+> amely az adott adatkezelési célhoz szükséges, megfelelő és releváns.  
+> A gyakorlatban ez azt jelenti, hogy nem kérhetünk be felesleges adatokat,
+> és az adatokat nem tarthatjuk meg indokolatlanul sokáig.
 
 ## Gyakori vizsgahibák
 
