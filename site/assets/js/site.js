@@ -322,10 +322,17 @@
           item.id,
           item.title,
           item.main_topic_label,
-          item.subtopic_label
-        ].join(" ").toLowerCase();
+          item.subtopic_label,
+          item.main_topic_number
+        ].join(" ").toLowerCase().replace(/_/g, " ");
 
-        return haystack.indexOf(query) !== -1;
+        var words = query.split(/\s+/);
+        for (var w = 0; w < words.length; w++) {
+          if (words[w] && haystack.indexOf(words[w]) === -1) {
+            return false;
+          }
+        }
+        return true;
       });
 
       clearChildren(resultsContainer);
@@ -516,14 +523,63 @@
 
   function setupProgressCounter() {
     var counter = document.querySelector("[data-progress-counter]");
-    if (!counter) {
-      return;
-    }
+    var navPill = document.querySelector("[data-nav-progress]");
     var topicIndex = parseJsonScript("[data-topic-index-json]");
     var totalTopics = Array.isArray(topicIndex) ? topicIndex.length : 233;
     var counts = countByStatus();
-    counter.textContent = counts.done + " / " + totalTopics;
-    counter.hidden = false;
+
+    if (counter) {
+      counter.textContent = counts.done + " / " + totalTopics;
+      counter.hidden = false;
+    }
+
+    if (navPill && counts.done > 0) {
+      var pct = Math.round((counts.done / totalTopics) * 100);
+      var radius = 8;
+      var circ = 2 * Math.PI * radius;
+      var offset = circ - (pct / 100) * circ;
+
+      navPill.innerHTML =
+        '<svg class="nav-progress__ring" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">' +
+          '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>' +
+          '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="#c8b45a" stroke-width="2.5"' +
+            ' stroke-dasharray="' + circ.toFixed(1) + '" stroke-dashoffset="' + offset.toFixed(1) + '"' +
+            ' stroke-linecap="round" transform="rotate(-90 11 11)"/>' +
+        '</svg>' +
+        '<span>' + counts.done + '/' + totalTopics + '</span>';
+      navPill.classList.add("nav-progress--active");
+      navPill.hidden = false;
+    }
+  }
+
+  function setupBackToTop() {
+    var btn = document.querySelector("[data-back-to-top]");
+    if (!btn) {
+      return;
+    }
+    btn.hidden = false;
+
+    var visible = false;
+    var threshold = 400;
+
+    function onScroll() {
+      var shouldShow = (window.pageYOffset || document.documentElement.scrollTop) > threshold;
+      if (shouldShow !== visible) {
+        visible = shouldShow;
+        if (visible) {
+          btn.classList.add("is-visible");
+        } else {
+          btn.classList.remove("is-visible");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 
   setupHomeCatalog();
@@ -531,4 +587,5 @@
   setupPrintTrigger();
   setupTopicProgress();
   setupProgressCounter();
+  setupBackToTop();
 })();

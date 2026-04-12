@@ -2,18 +2,19 @@
 
 ## Szolgáltató
 
+- Üzemeltető: Viktor Halupka
 - Projekt neve: CoderLAP
 - Projekt típusa: oktatási tananyag az osztrák LAP vizsgára Applikationsentwicklung - Coding témában
 - Közzétételi formátum: statikus weboldal, repository-tartalomból generálva
 
 ## Kapcsolat
 
-- Fő kapcsolat: a repository projekt-karbantartói
+- Fő kapcsolat: Viktor Halupka
 - Nyilvános visszajelzési csatorna: a repository issue-i vagy pull requestjei
 
 ## Felelősség
 
-- A jelen tervezet tartalmáért felelős: a CoderLAP projekt-karbantartói
+- A jelen tervezet tartalmáért felelős: Viktor Halupka
 - Ez az oldal jogi nyilatkozat-tervezet, amelyet nyilvános közzététel előtt felül kell vizsgálni
 
 ## Források

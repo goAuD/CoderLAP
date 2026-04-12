@@ -111,6 +111,56 @@ a.lang-switcher__item:focus-visible {
   color: var(--color-accent);
 }
 
+/* ── GitHub link ────────────────────────────────────────────────── */
+.site-github-link {
+  min-height: var(--touch-target);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-left: 0.15rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: color 140ms ease, background-color 140ms ease;
+}
+
+.site-github-link:hover,
+.site-github-link:focus-visible {
+  color: var(--color-heading);
+  background: rgba(95, 167, 162, 0.08);
+}
+
+.site-github-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Navbar progress pill ───────────────────────────────────────── */
+.nav-progress {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.nav-progress__ring {
+  flex-shrink: 0;
+}
+
+.nav-progress--active {
+  color: #c8b45a;
+  border-color: rgba(200, 180, 90, 0.3);
+}
+
 .site-nav-link {
   min-height: var(--touch-target);
   display: inline-flex;
@@ -590,4 +640,39 @@ a.lang-switcher__item:focus-visible {
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+/* ── Back to top button ──────────────────────────────────────────── */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface-raised);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  box-shadow: var(--shadow-button);
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 200ms ease, transform 200ms ease, color 140ms ease, border-color 140ms ease;
+  pointer-events: none;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  color: var(--color-heading);
+  border-color: rgba(95, 167, 162, 0.4);
 }
