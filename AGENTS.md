@@ -394,7 +394,7 @@ Current default metadata values in the registry:
 
 - `lang = hu`
 - `review_status = draft`
-- `translation_status = not_started`
+- `translation_status = de_complete` when `README.de.md` exists, otherwise `de_missing`
 - `canonical = true`
 
 If content files are added, removed, or renamed, regenerate the registry.

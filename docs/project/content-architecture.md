@@ -159,6 +159,13 @@ Important rule:
 
 The registry is intentionally external. The project still does **not** depend on front matter embedded into all topic files.
 
+Current metadata semantics worth remembering:
+
+- `review_status` is still a coarse editorial field and currently remains `draft`
+- `translation_status` is generated from the file system
+- `de_complete` means the German sidecar exists
+- `de_missing` means the German sidecar is missing
+
 ## What Is Intentionally Preserved
 
 - the numbered German folder tree
