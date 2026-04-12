@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Oberfläche | Merkmal |
-|---|---|
-| GNOME | klar, modern |
-| KDE Plasma | sehr anpassbar |
-| Xfce | leicht, schnell, ressourcenschonend |
-| Cinnamon | klassischeres Desktop-Erlebnis |
+| Oberfläche | Merkmal                             |
+| ---------- | ----------------------------------- |
+| GNOME      | klar, modern                        |
+| KDE Plasma | sehr anpassbar                      |
+| Xfce       | leicht, schnell, ressourcenschonend |
+| Cinnamon   | klassischeres Desktop-Erlebnis      |
 
 ## Was ist eine grafische Oberfläche unter Linux?
 
@@ -102,11 +102,11 @@ Verwaltet das Verhalten und die Positionierung der Fenster.
 
 ## Linux-GUI vs Windows / macOS
 
-| Linux | Windows / macOS |
-|---|---|
-| mehrere Desktop-Umgebungen | in der Regel einheitlichere Werksoberfläche |
-| starke Anpassbarkeit | im Allgemeinen gebundeneres Grunderlebnis |
-| hängt auch von der Distribution ab | vom Hersteller enger festgelegt |
+| Linux                              | Windows / macOS                             |
+| ---------------------------------- | ------------------------------------------- |
+| mehrere Desktop-Umgebungen         | in der Regel einheitlichere Werksoberfläche |
+| starke Anpassbarkeit               | im Allgemeinen gebundeneres Grunderlebnis   |
+| hängt auch von der Distribution ab | vom Hersteller enger festgelegt             |
 
 ## Prüfungstaugliche Formulierung
 

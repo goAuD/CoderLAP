@@ -2,14 +2,14 @@
 
 ## Schneller visueller Überblick
 
-| Aspekt | Geschlossenes System |
-|---|---|
-| Hardware | stärker kontrolliert |
-| Betriebssystem | eng vom Hersteller gesteuert |
-| App-Vertrieb | typischerweise zentraler Store |
-| Benutzerfreiheit | geringer |
-| Einheitlichkeit | größer |
-| Herstellerkontrolle | stärker |
+| Aspekt              | Geschlossenes System           |
+| ------------------- | ------------------------------ |
+| Hardware            | stärker kontrolliert           |
+| Betriebssystem      | eng vom Hersteller gesteuert   |
+| App-Vertrieb        | typischerweise zentraler Store |
+| Benutzerfreiheit    | geringer                       |
+| Einheitlichkeit     | größer                         |
+| Herstellerkontrolle | stärker                        |
 
 ## Was ist ein geschlossenes System?
 
@@ -107,12 +107,12 @@ Ein geschlosseneres Store-Modell kann Auswirkungen haben auf:
 
 ## Geschlossenes System vs offeneres System
 
-| Geschlosseneres System | Offeneres System |
-|---|---|
-| größere Kontrolle | größere Flexibilität |
-| einheitlicheres Erlebnis | vielfältigere Umgebung |
-| stärkeres Review-Tor | mehr Vertriebsmöglichkeiten |
-| geringere Freiheit | größere Freiheit |
+| Geschlosseneres System   | Offeneres System            |
+| ------------------------ | --------------------------- |
+| größere Kontrolle        | größere Flexibilität        |
+| einheitlicheres Erlebnis | vielfältigere Umgebung      |
+| stärkeres Review-Tor     | mehr Vertriebsmöglichkeiten |
+| geringere Freiheit       | größere Freiheit            |
 
 ## Mobile Beispiele
 

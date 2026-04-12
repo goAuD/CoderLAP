@@ -2,14 +2,14 @@
 
 ## Schneller visueller Überblick
 
-| Merkmal | iOS |
-|---|---|
-| Hersteller | Apple |
-| Hauptgerät | iPhone |
-| App-Vertrieb | App Store-zentriert |
-| Erlebnis | einheitlicher, kontrollierter |
-| Updates | stärker zentral gesteuertes Apple-Modell |
-| Sicherheit | starke Sandbox, Review, Plattformkontrolle |
+| Merkmal      | iOS                                        |
+| ------------ | ------------------------------------------ |
+| Hersteller   | Apple                                      |
+| Hauptgerät   | iPhone                                     |
+| App-Vertrieb | App Store-zentriert                        |
+| Erlebnis     | einheitlicher, kontrollierter              |
+| Updates      | stärker zentral gesteuertes Apple-Modell   |
+| Sicherheit   | starke Sandbox, Review, Plattformkontrolle |
 
 ## Was ist iOS?
 
@@ -100,12 +100,12 @@ Eines der wichtigen Kennzeichen von iOS:
 
 ## iOS vs Android
 
-| iOS | Android |
-|---|---|
-| Apple-zentriertes Ökosystem | viele Hersteller, offenere Basis |
-| kontrollierterer Vertrieb | flexiblerer Vertrieb |
-| einheitlicheres Erlebnis | vielfältigere Geräte- und Oberflächen-Landschaft |
-| enge Hardware-Software-Zusammenarbeit | größere Plattformstreuung |
+| iOS                                   | Android                                          |
+| ------------------------------------- | ------------------------------------------------ |
+| Apple-zentriertes Ökosystem           | viele Hersteller, offenere Basis                 |
+| kontrollierterer Vertrieb             | flexiblerer Vertrieb                             |
+| einheitlicheres Erlebnis              | vielfältigere Geräte- und Oberflächen-Landschaft |
+| enge Hardware-Software-Zusammenarbeit | größere Plattformstreuung                        |
 
 ## Prüfungstaugliche Formulierung
 

@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Fogalom | Mit jelent? |
-|---|---|
-| fájl | logikailag összetartozó adat |
-| mappa / könyvtár | fájlok rendezése |
-| fájlrendszer | a tárolás és elérés szabályrendszere |
-| háttértár | fizikai vagy logikai tároló |
+| Fogalom          | Mit jelent?                          |
+| ---------------- | ------------------------------------ |
+| fájl             | logikailag összetartozó adat         |
+| mappa / könyvtár | fájlok rendezése                     |
+| fájlrendszer     | a tárolás és elérés szabályrendszere |
+| háttértár        | fizikai vagy logikai tároló          |
 
 ## Mi az a fájlrendszer?
 
@@ -68,20 +68,20 @@ Minden olyan helyen, ahol fájlokat használsz:
 
 ## Gyakori fájlrendszerek
 
-| Fájlrendszer | Tipikus környezet |
-|---|---|
-| `NTFS` | Windows |
-| `ReFS` | Windows Server környezetekben bizonyos esetek |
-| `exFAT` | cserélhető adathordozók |
-| `ext4` | Linux |
-| `APFS` | Apple rendszerek |
+| Fájlrendszer | Tipikus környezet                             |
+| ------------ | --------------------------------------------- |
+| `NTFS`       | Windows                                       |
+| `ReFS`       | Windows Server környezetekben bizonyos esetek |
+| `exFAT`      | cserélhető adathordozók                       |
+| `ext4`       | Linux                                         |
+| `APFS`       | Apple rendszerek                              |
 
 ## Fájlrendszer vs háttértár
 
-| Háttértár | Fájlrendszer |
-|---|---|
+| Háttértár                   | Fájlrendszer               |
+| --------------------------- | -------------------------- |
 | fizikai vagy logikai tároló | a tárolás szabályrendszere |
-| például SSD vagy HDD | például NTFS vagy ext4 |
+| például SSD vagy HDD        | például NTFS vagy ext4     |
 
 Példa:
 
@@ -90,14 +90,14 @@ Példa:
 
 ## Fájlrendszer vs fájl
 
-| Fájl | Fájlrendszer |
-|---|---|
+| Fájl                  | Fájlrendszer                         |
+| --------------------- | ------------------------------------ |
 | egyetlen adatobjektum | az összes fájl kezelésének rendszere |
 
 ## Fájlrendszer vs mappa
 
-| Mappa | Fájlrendszer |
-|---|---|
+| Mappa                   | Fájlrendszer                                 |
+| ----------------------- | -------------------------------------------- |
 | a szervezés egyik eleme | a teljes tárolási struktúra szabályrendszere |
 
 ## Miért fontos?

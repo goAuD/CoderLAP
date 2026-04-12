@@ -2,14 +2,14 @@
 
 ## Gyors vizuális kép
 
-| Jellemző | iOS |
-|---|---|
-| gyártó | Apple |
-| fő eszköz | iPhone |
-| appterjesztés | App Store központú |
-| élmény | egységesebb, kontrolláltabb |
-| frissítések | központilag irányítottabb Apple-modell |
-| biztonság | erős sandbox, review, platformkontroll |
+| Jellemző      | iOS                                    |
+| ------------- | -------------------------------------- |
+| gyártó        | Apple                                  |
+| fő eszköz     | iPhone                                 |
+| appterjesztés | App Store központú                     |
+| élmény        | egységesebb, kontrolláltabb            |
+| frissítések   | központilag irányítottabb Apple-modell |
+| biztonság     | erős sandbox, review, platformkontroll |
 
 ## Mi az iOS?
 
@@ -100,12 +100,12 @@ Az iOS egyik fontos ismérve:
 
 ## iOS vs Android
 
-| iOS | Android |
-|---|---|
-| Apple-központú ökoszisztéma | sok gyártó, nyitottabb alap |
-| kontrolláltabb terjesztés | rugalmasabb terjesztés |
-| egységesebb élmény | változatosabb eszköz- és felületvilág |
-| szoros hardver-szoftver együttműködés | nagyobb platformszórás |
+| iOS                                   | Android                               |
+| ------------------------------------- | ------------------------------------- |
+| Apple-központú ökoszisztéma           | sok gyártó, nyitottabb alap           |
+| kontrolláltabb terjesztés             | rugalmasabb terjesztés                |
+| egységesebb élmény                    | változatosabb eszköz- és felületvilág |
+| szoros hardver-szoftver együttműködés | nagyobb platformszórás                |
 
 ## Vizsgán jól használható megfogalmazás
 

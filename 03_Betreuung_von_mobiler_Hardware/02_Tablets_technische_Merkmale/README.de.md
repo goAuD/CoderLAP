@@ -2,14 +2,14 @@
 
 ## Schneller visueller Überblick
 
-| Merkmal | Warum ist es beim Tablet wichtig? |
-|---|---|
-| größeres Display | Lesen, Video, Arbeit, Zeichnen |
-| Multitasking | parallele Nutzung mehrerer Apps |
-| Stylus-Unterstützung | Notizen, Zeichnen, Bildung |
-| Tastaturunterstützung | Produktivität |
-| lange Akkulaufzeit | mobiler Einsatz |
-| optionales Cellular | mobiles Internet mit SIM oder eSIM |
+| Merkmal               | Warum ist es beim Tablet wichtig?  |
+| --------------------- | ---------------------------------- |
+| größeres Display      | Lesen, Video, Arbeit, Zeichnen     |
+| Multitasking          | parallele Nutzung mehrerer Apps    |
+| Stylus-Unterstützung  | Notizen, Zeichnen, Bildung         |
+| Tastaturunterstützung | Produktivität                      |
+| lange Akkulaufzeit    | mobiler Einsatz                    |
+| optionales Cellular   | mobiles Internet mit SIM oder eSIM |
 
 ## Was ist ein Tablet?
 
@@ -134,12 +134,12 @@ Beim Audio kann wichtig sein:
 
 ## Tablet vs Smartphone
 
-| Tablet | Smartphone |
-|---|---|
-| größeres Display | kleiner, passt in die Tasche |
-| besser zum Lesen und Multitasking | besser für einhändige, schnelle mobile Nutzung |
-| wird häufig mit Stift / Tastatur verwendet | wird seltener auf diese Weise genutzt |
-| weniger „telefonzentriert" | ist auch primär ein Kommunikationsgerät |
+| Tablet                                     | Smartphone                                     |
+| ------------------------------------------ | ---------------------------------------------- |
+| größeres Display                           | kleiner, passt in die Tasche                   |
+| besser zum Lesen und Multitasking          | besser für einhändige, schnelle mobile Nutzung |
+| wird häufig mit Stift / Tastatur verwendet | wird seltener auf diese Weise genutzt          |
+| weniger „telefonzentriert"                 | ist auch primär ein Kommunikationsgerät        |
 
 ## Prüfungstaugliche Formulierung
 

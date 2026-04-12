@@ -2,10 +2,10 @@
 
 ## Gyors vizuális kép
 
-| Típus | Jellemző |
-|---|---|
-| single-user | jellemzően egy fő használja egyszerre |
-| multi-user | több felhasználó, fiókok, jogosultságok, elkülönítés |
+| Típus       | Jellemző                                             |
+| ----------- | ---------------------------------------------------- |
+| single-user | jellemzően egy fő használja egyszerre                |
+| multi-user  | több felhasználó, fiókok, jogosultságok, elkülönítés |
 
 ## Mi az a single-user rendszer?
 
@@ -42,12 +42,12 @@ Példák:
 
 ## A legfontosabb különbség
 
-| Szempont | Single-user | Multi-user |
-|---|---|---|
-| elsődleges használat | egy felhasználó | több felhasználó |
+| Szempont              | Single-user         | Multi-user             |
+| --------------------- | ------------------- | ---------------------- |
+| elsődleges használat  | egy felhasználó     | több felhasználó       |
 | jogosultsági rendszer | egyszerűbb is lehet | általában részletesebb |
-| párhuzamos hozzáférés | nem ez a fő cél | igen, tipikus cél |
-| adminisztráció | egyszerűbb | összetettebb |
+| párhuzamos hozzáférés | nem ez a fő cél     | igen, tipikus cél      |
+| adminisztráció        | egyszerűbb          | összetettebb           |
 
 ## Mit kell tudni vizsgán?
 

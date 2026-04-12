@@ -4,37 +4,37 @@
 
 ### NOT
 
-| A | NOT A |
-|---|---|
-| 0 | 1 |
-| 1 | 0 |
+| A   | NOT A |
+| --- | ----- |
+| 0   | 1     |
+| 1   | 0     |
 
 ### AND
 
-| A | B | A AND B |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
+| A   | B   | A AND B |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
 ### OR
 
-| A | B | A OR B |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 1 |
+| A   | B   | A OR B |
+| --- | --- | ------ |
+| 0   | 0   | 0      |
+| 0   | 1   | 1      |
+| 1   | 0   | 1      |
+| 1   | 1   | 1      |
 
 ### XOR
 
-| A | B | A XOR B |
-|---|---|---|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
+| A   | B   | A XOR B |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 1       |
+| 1   | 0   | 1       |
+| 1   | 1   | 0       |
 
 ## Mi az a logikai kapcsolás?
 
@@ -176,11 +176,11 @@ Az XOR nagyon fontos például:
 Néha a következő alakokkal is találkozhatsz:
 
 | Művelet | Szavas alak | Gyakoribb rövid alak |
-|---|---|---|
-| NOT | tagadás | `NOT A` |
-| AND | és | `A AND B` |
-| OR | vagy | `A OR B` |
-| XOR | kizáró vagy | `A XOR B` |
+| ------- | ----------- | -------------------- |
+| NOT     | tagadás     | `NOT A`              |
+| AND     | és          | `A AND B`            |
+| OR      | vagy        | `A OR B`             |
+| XOR     | kizáró vagy | `A XOR B`            |
 
 Matematikai vagy programozási környezetben lehetnek más jelek is, de vizsgán a szöveges értelmezés a legfontosabb.
 

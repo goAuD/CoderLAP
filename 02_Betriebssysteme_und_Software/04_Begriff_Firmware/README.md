@@ -2,12 +2,12 @@
 
 ## Gyors vizuális kép
 
-| Fogalom | Mi ez? | Példa |
-|---|---|---|
-| hardver | fizikai alkatrész | alaplap, SSD, router |
-| firmware | az eszközbe írt vezérlőszoftver | UEFI, SSD firmware |
-| operációs rendszer | a teljes gépet kezelő rendszer-szoftver | Windows, Linux |
-| alkalmazás | felhasználói program | Chrome, Word |
+| Fogalom            | Mi ez?                                  | Példa                |
+| ------------------ | --------------------------------------- | -------------------- |
+| hardver            | fizikai alkatrész                       | alaplap, SSD, router |
+| firmware           | az eszközbe írt vezérlőszoftver         | UEFI, SSD firmware   |
+| operációs rendszer | a teljes gépet kezelő rendszer-szoftver | Windows, Linux       |
+| alkalmazás         | felhasználói program                    | Chrome, Word         |
 
 ## Mi a firmware?
 
@@ -71,20 +71,20 @@ Például:
 
 ## Firmware vs szoftver: ne keverd össze
 
-| Firmware | „Normál” szoftver |
-|---|---|
-| közvetlenül eszközhöz kötődik | általános rendszerben fut |
-| alapműködést vezérel | felhasználói vagy rendszerfeladatot végez |
-| gyakran flash / ROM jellegű tárolón van | háttértáron települ |
-| eszközspecifikus | gyakran hordozhatóbb |
+| Firmware                                | „Normál” szoftver                         |
+| --------------------------------------- | ----------------------------------------- |
+| közvetlenül eszközhöz kötődik           | általános rendszerben fut                 |
+| alapműködést vezérel                    | felhasználói vagy rendszerfeladatot végez |
+| gyakran flash / ROM jellegű tárolón van | háttértáron települ                       |
+| eszközspecifikus                        | gyakran hordozhatóbb                      |
 
 ## Firmware vs driver
 
-| Firmware | Driver |
-|---|---|
-| az eszközön van | jellemzően az operációs rendszerben |
-| az eszköz belső működését vezérli | az OS és az eszköz között közvetít |
-| hardverhez szorosan kötődik | rendszeroldali illesztőprogram |
+| Firmware                          | Driver                              |
+| --------------------------------- | ----------------------------------- |
+| az eszközön van                   | jellemzően az operációs rendszerben |
+| az eszköz belső működését vezérli | az OS és az eszköz között közvetít  |
+| hardverhez szorosan kötődik       | rendszeroldali illesztőprogram      |
 
 Egyszerűen:
 
