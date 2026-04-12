@@ -62,7 +62,9 @@ Wenn dies vor der Abgabe nicht ordnungsgemäß gelöscht wird, kann das ein Date
 ## Prüfungstaugliche Formulierung
 
 > Elektronikschrott muss getrennt gesammelt und über eine offizielle Sammelstelle oder ein Rücknahmesystem abgegeben werden.
-> Bei IT-Geräten ist vor der Abgabe nicht nur aus Umweltschutzgründen, sondern auch aus Datenschutzgründen die ordnungsgemäße Datenlöschung und Vorbereitung des Geräts wichtig.
+> Bei IT-Geräten ist vor der Abgabe nicht nur aus Umweltschutzgründen,
+> sondern auch aus Datenschutzgründen
+> die ordnungsgemäße Datenlöschung und Vorbereitung des Geräts wichtig.
 > Akkumulatoren und Batterien dürfen ebenfalls nicht einfach in den Restmüll geworfen werden.
 
 ## Häufige Prüfungsfehler

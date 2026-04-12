@@ -49,7 +49,8 @@ Wichtig:
 
 ## Wie ist es mit strafrechtlichen Daten?
 
-Daten über strafrechtliche Verurteilungen und Straftaten sind nicht dasselbe wie besondere Kategorien personenbezogener Daten.
+Daten über strafrechtliche Verurteilungen und Straftaten
+sind nicht dasselbe wie besondere Kategorien personenbezogener Daten.
 
 Dafür gilt **Art. 10** der GDPR.
 
@@ -83,8 +84,13 @@ Beispiel:
 
 ## Prüfungstaugliche Formulierung
 
-> Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.
-> Besondere Kategorien personenbezogener Daten, wie zum Beispiel Gesundheits- oder biometrische Daten, stehen unter besonderem Schutz und ihre Verarbeitung ist grundsätzlich verboten, nur unter bestimmten Ausnahmen zulässig.
+> Personenbezogene Daten sind alle Informationen,
+> die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.
+> Besondere Kategorien personenbezogener Daten,
+> wie zum Beispiel Gesundheits- oder biometrische Daten,
+> stehen unter besonderem Schutz
+> und ihre Verarbeitung ist grundsätzlich verboten,
+> nur unter bestimmten Ausnahmen zulässig.
 > Daten über strafrechtliche Verurteilungen und Straftaten unterliegen einer gesonderten Regelung nach Art. 10 der GDPR.
 
 ## Häufige Prüfungsfehler

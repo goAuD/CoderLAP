@@ -78,7 +78,9 @@ Például:
 ## Vizsgán jól használható megfogalmazás
 
 > A Kopplungsverbot azt jelenti, hogy a hozzájárulásnak önkéntesnek kell lennie.  
-> Egy szolgáltatás igénybevételét nem lehet automatikusan olyan adatkezeléshez kötni, amely nem szükséges a szerződés teljesítéséhez.  
+> Egy szolgáltatás igénybevételét nem lehet automatikusan
+> olyan adatkezeléshez kötni,
+> amely nem szükséges a szerződés teljesítéséhez.  
 > Ha nincs valódi választási lehetőség, akkor a hozzájárulás érvényessége megkérdőjelezhető.
 
 ## Gyakori vizsgahibák

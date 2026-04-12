@@ -64,7 +64,9 @@ Ezért a munkát úgy kell megszervezni, hogy a terhelés csökkenjen.
 ## Vizsgán jól használható megfogalmazás
 
 > A képernyős munka Ausztriában munkavédelmi szabályok alá tartozik.  
-> A főszabály szerint 50 perc megszakítás nélküli képernyőmunka után legalább 10 perc szünetet vagy a terhelést csökkentő tevékenységváltást kell biztosítani.  
+> A főszabály szerint 50 perc megszakítás nélküli képernyőmunka után
+> legalább 10 perc szünetet
+> vagy a terhelést csökkentő tevékenységváltást kell biztosítani.  
 > Ennek célja a szem, a testtartás és az általános terhelés csökkentése.
 
 ## Gyakori vizsgahibák

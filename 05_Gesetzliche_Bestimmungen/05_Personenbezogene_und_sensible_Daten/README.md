@@ -84,7 +84,10 @@ Példa:
 ## Vizsgán jól használható megfogalmazás
 
 > Személyes adat minden olyan információ, amely egy azonosított vagy azonosítható természetes személyre vonatkozik.  
-> A különleges kategóriájú személyes adatok, például az egészségügyi vagy biometrikus adatok, fokozott védelem alatt állnak, és kezelésük főszabály szerint tilos, csak meghatározott kivételek mellett megengedett.  
+> A különleges kategóriájú személyes adatok,
+> például az egészségügyi vagy biometrikus adatok,
+> fokozott védelem alatt állnak, és kezelésük főszabály szerint tilos,
+> csak meghatározott kivételek mellett megengedett.  
 > A büntetőítéletekre és bűncselekményekre vonatkozó adatok külön, a GDPR 10. cikke szerinti szabályozás alá tartoznak.
 
 ## Gyakori vizsgahibák

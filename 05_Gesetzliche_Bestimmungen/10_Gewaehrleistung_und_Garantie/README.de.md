@@ -55,7 +55,9 @@ Weil viele sie verwechseln:
 - heruntergeladene Software funktioniert nicht vertragsgemäß
 - abonnierter digitaler Dienst wird mangelhaft erbracht
 
-In Österreich hängen bei Verbraucherverträgen die genauen Regeln auch vom Vertragstyp ab, insbesondere bei Waren und digitalen Leistungen.
+In Österreich hängen bei Verbraucherverträgen die genauen Regeln
+auch vom Vertragstyp ab,
+insbesondere bei Waren und digitalen Leistungen.
 
 ## Nicht verwechseln
 
@@ -67,8 +69,11 @@ In Österreich hängen bei Verbraucherverträgen die genauen Regeln auch vom Ver
 
 ## Prüfungstaugliche Formulierung
 
-> Die Gewährleistung ist die gesetzliche Haftung bei mangelhafter Leistung, aufgrund derer der Verbraucher zum Beispiel Anspruch auf Reparatur oder Austausch haben kann.
-> Die Garantie hingegen ist ein freiwillig abgegebenes Zusatzversprechen, das in der Regel vom Hersteller oder Verkäufer gegeben wird.
+> Die Gewährleistung ist die gesetzliche Haftung bei mangelhafter Leistung,
+> aufgrund derer der Verbraucher zum Beispiel Anspruch auf Reparatur
+> oder Austausch haben kann.
+> Die Garantie hingegen ist ein freiwillig abgegebenes Zusatzversprechen,
+> das in der Regel vom Hersteller oder Verkäufer gegeben wird.
 > Die Garantie ersetzt und beseitigt nicht die gesetzlichen Gewährleistungsrechte.
 
 ## Häufige Prüfungsfehler

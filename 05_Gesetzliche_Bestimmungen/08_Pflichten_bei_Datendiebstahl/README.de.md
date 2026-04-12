@@ -48,7 +48,8 @@ Praktische erste Schritte:
 
 Nach Art. 33 der GDPR:
 
-- muss der Verantwortliche den Vorfall **ohne unangemessene Verzögerung**, möglichst **innerhalb von 72 Stunden** an die Aufsichtsbehörde melden
+- muss der Verantwortliche den Vorfall **ohne unangemessene Verzögerung**,
+  möglichst **innerhalb von 72 Stunden** an die Aufsichtsbehörde melden
 - Ausnahme: wenn der Vorfall **voraussichtlich kein Risiko** für die Rechte und Freiheiten der betroffenen Personen darstellt
 
 In Österreich ist die zuständige Behörde:
@@ -80,8 +81,11 @@ Dokumentiert werden muss zum Beispiel:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei Datendiebstahl oder einer anderen Verletzung personenbezogener Daten muss der Verantwortliche unverzüglich eine Risikobewertung durchführen.
-> Wenn ein Risiko für die Rechte und Freiheiten wahrscheinlich ist, muss der Vorfall nach Art. 33 der GDPR möglichst innerhalb von 72 Stunden der Behörde gemeldet werden.
+> Bei Datendiebstahl oder einer anderen Verletzung personenbezogener Daten
+> muss der Verantwortliche unverzüglich eine Risikobewertung durchführen.
+> Wenn ein Risiko für die Rechte und Freiheiten wahrscheinlich ist,
+> muss der Vorfall nach Art. 33 der GDPR möglichst innerhalb von 72 Stunden
+> der Behörde gemeldet werden.
 > Bei hohem Risiko müssen auch die betroffenen Personen nach Art. 34 der GDPR informiert werden.
 
 ## Häufige Prüfungsfehler
