@@ -144,7 +144,9 @@ Hangnál fontos lehet:
 ## Vizsgán jól használható megfogalmazás
 
 > A tablet hordozható, érintésvezérelt eszköz nagyobb kijelzővel, mint egy smartphone.  
-> Fontos technikai jellemzői a kijelző mérete és minősége, a processzor, a RAM, a tárhely, az akkumulátor, a vezeték nélküli kapcsolatok és a multitasking-képesség.  
+> Fontos technikai jellemzői a kijelző mérete és minősége,
+> a processzor, a RAM, a tárhely, az akkumulátor,
+> a vezeték nélküli kapcsolatok és a multitasking-képesség.  
 > A tabletek gyakran támogatnak digitális tollat és billentyűzetet is, ezért oktatási és produktív feladatokra is alkalmasak.
 
 ## Gyakori vizsgahibák

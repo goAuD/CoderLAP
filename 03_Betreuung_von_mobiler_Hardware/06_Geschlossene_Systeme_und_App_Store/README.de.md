@@ -32,7 +32,9 @@ In einem geschlosseneren System nimmt der **App Store** oder zentrale Anwendungs
 
 ## Wichtiger Hinweis
 
-Die folgenden Vor- und Nachteile sind **teilweise Schlussfolgerungen** aus den referenzierten offiziellen Plattformregeln, Review-Prozessen und Ökosystem-Dokumentationen.
+Die folgenden Vor- und Nachteile sind **teilweise Schlussfolgerungen**
+aus den referenzierten offiziellen Plattformregeln,
+Review-Prozessen und Ökosystem-Dokumentationen.
 
 ## Vorteile
 
@@ -136,7 +138,9 @@ Man muss verstehen:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein geschlossenes System ist ein Ökosystem, bei dem der Hersteller oder Plattformeigentümer Hardware, Betriebssystem und App-Vertrieb stark reguliert.  
+> Ein geschlossenes System ist ein Ökosystem,
+> bei dem der Hersteller oder Plattformeigentümer Hardware,
+> Betriebssystem und App-Vertrieb stark reguliert.  
 > Der Vorteil kann ein einheitlicherer Betrieb, eine bessere Integration und eine strengere Qualitätskontrolle sein.  
 > Der Nachteil kann geringere Freiheit, Herstellerabhängigkeit und eingeschränktere App-Vertriebsmöglichkeiten sein.
 
