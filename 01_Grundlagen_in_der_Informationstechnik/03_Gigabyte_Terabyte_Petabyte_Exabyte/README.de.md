@@ -92,7 +92,9 @@ Dasselbe gilt bei größeren Einheiten:
 | `PB`    | `PiB` |
 | `EB`    | `EiB` |
 
-Dieser Unterschied ist wichtig, weil dieselbe Festplatte je nachdem, ob das System dezimale oder binäre Einheiten verwendet, unterschiedlich groß angezeigt werden kann.
+Dieser Unterschied ist wichtig, weil dieselbe Festplatte je nachdem,
+ob das System dezimale oder binäre Einheiten verwendet,
+unterschiedlich groß angezeigt werden kann.
 
 ## Schnelle Beispiele
 

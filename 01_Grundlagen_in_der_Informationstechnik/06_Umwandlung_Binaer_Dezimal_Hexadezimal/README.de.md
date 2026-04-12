@@ -38,7 +38,7 @@ Methode:
 - jeden Stellenwert mit der entsprechenden Potenz von `2` multiplizieren
 - die Ergebnisse addieren
 
-### Beispiel
+### Beispiel: Dezimal zu Binär
 
 `101101₂`
 
@@ -67,7 +67,7 @@ Methode:
 - die Reste notieren
 - die Reste von unten nach oben lesen
 
-### Beispiel
+### Beispiel: Binär zu Hexadezimal
 
 `45₁₀`
 
@@ -96,7 +96,7 @@ Methode:
 - bei Bedarf links mit Nullen auffüllen
 - jede `4-Bit-Gruppe` durch eine Hexadezimalziffer ersetzen
 
-### Beispiel
+### Beispiel: Hexadezimal zu Binär
 
 `1101111010₂`
 
@@ -120,7 +120,7 @@ Methode:
 
 - jede Hexadezimalziffer durch die entsprechende `4-Bit-Binärform` ersetzen
 
-### Beispiel
+### Beispiel: Dezimal zu Hexadezimal
 
 `7B₁₆`
 
@@ -141,7 +141,7 @@ Methode:
 - Reste notieren
 - die Reste von unten nach oben lesen
 
-### Beispiel
+### Beispiel: Hexadezimal zu Dezimal
 
 `123₁₀`
 
@@ -209,7 +209,9 @@ die hexadezimale Darstellung sehr praktisch.
 ## Prüfungstaugliche Formulierung
 
 > Die Umwandlung zwischen Binär-, Dezimal- und Hexadezimalzahlen basiert auf dem Stellenwertsystem.  
-> Von Binär nach Dezimal rechnet man mit Potenzen von 2, von Dezimal nach Binär teilt man durch 2 und liest die Reste rückwärts.  
+> Von Binär nach Dezimal rechnet man mit Potenzen von 2,
+> von Dezimal nach Binär teilt man durch 2
+> und liest die Reste rückwärts.  
 > Zwischen Hexadezimal und Binär ist die Umwandlung besonders einfach, weil eine Hexadezimalziffer genau 4 Bit entspricht.
 
 ## Häufige Prüfungsfehler
