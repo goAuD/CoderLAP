@@ -39,7 +39,8 @@ Vizsgaszinten főleg:
 - **UGB 14. §**
 - nem Firmenbuch-bejegyzett Gewerbetreibende esetén a **GewO 63. §** is releváns lehet
 
-Ez nem minden vállalkozási formára pontosan ugyanúgy vonatkozik, ezért a konkrét kötelező adattartalom a cég típusától is függhet.
+Ez nem minden vállalkozási formára pontosan ugyanúgy vonatkozik,
+ezért a konkrét kötelező adattartalom a cég típusától is függhet.
 
 ## Miért fontos IT-s vagy webes munkánál?
 
@@ -61,8 +62,13 @@ Ha ezekből kimaradnak a szükséges céges adatok, az jogi problémát okozhat.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az üzleti e-mail-forgalomban bizonyos vállalkozásoknak kötelező céges adatokat kell feltüntetniük, például a cégnevüket, jogi formájukat, székhelyüket és nyilvántartási adataikat.  
-> Ez az üzleti átláthatóságot szolgálja, és különösen fontos automatikus vagy rendszerből küldött üzleti e-maileknél is.  
+> Az üzleti e-mail-forgalomban bizonyos vállalkozásoknak
+> kötelező céges adatokat kell feltüntetniük,
+> például a cégnevüket, jogi formájukat,
+> székhelyüket és nyilvántartási adataikat.  
+> Ez az üzleti átláthatóságot szolgálja,
+> és különösen fontos automatikus
+> vagy rendszerből küldött üzleti e-maileknél is.  
 > A pontos kötelező adattartalom a vállalkozás jogi formájától függhet.
 
 ## Gyakori vizsgahibák

@@ -107,7 +107,8 @@ Mert a DSGVO sok más témához kapcsolódik:
 ## Vizsgán jól használható megfogalmazás
 
 > A DSGVO az Európai Unió adatvédelmi alaprendelete, amely 2018. május 25. óta közvetlenül alkalmazandó.  
-> A személyes adatok kezelésére vonatkozó alapelveket, az érintettek jogait és az adatkezelők kötelezettségeit szabályozza.  
+> A személyes adatok kezelésére vonatkozó alapelveket,
+> az érintettek jogait és az adatkezelők kötelezettségeit szabályozza.  
 > Ausztriában a DSGVO mellett a nemzeti Datenschutzgesetz is releváns.
 
 ## Gyakori vizsgahibák
@@ -129,10 +130,10 @@ Mert a DSGVO sok más témához kapcsolódik:
 ## Rövid válaszok az önellenőrzéshez
 
 1. Az EU adatvédelmi alaprendelete
-2. 2018. május 25. óta
-3. A személyes adatok védelme és az egységes EU-s szabályozás
-4. Az a természetes személy, akinek az adatait kezelik
-5. Az Österreichische Datenschutzbehörde
+1. `2018. május 25.` óta
+1. A személyes adatok védelme és az egységes EU-s szabályozás
+1. Az a természetes személy, akinek az adatait kezelik
+1. Az Österreichische Datenschutzbehörde
 
 ## Források
 

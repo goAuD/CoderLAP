@@ -48,7 +48,8 @@ Gyakorlati első lépések:
 
 A GDPR 33. cikke szerint:
 
-- az adatkezelőnek az incidenst **indokolatlan késedelem nélkül**, lehetőleg **72 órán belül** jelentenie kell a felügyeleti hatóságnak
+- az adatkezelőnek az incidenst **indokolatlan késedelem nélkül**,
+  lehetőleg **72 órán belül** jelentenie kell a felügyeleti hatóságnak
 - kivétel: ha az incidens **valószínűleg nem jár kockázattal** az érintettek jogaira és szabadságaira
 
 Ausztriában az illetékes hatóság:
@@ -81,7 +82,9 @@ Dokumentálni kell például:
 ## Vizsgán jól használható megfogalmazás
 
 > Adatlopás vagy más személyesadat-sértés esetén az adatkezelőnek haladéktalanul kockázatértékelést kell végeznie.  
-> Ha a jogokra és szabadságokra nézve kockázat valószínűsíthető, az incidenst a GDPR 33. cikke alapján lehetőleg 72 órán belül jelenteni kell a hatóságnak.  
+> Ha a jogokra és szabadságokra nézve kockázat valószínűsíthető,
+> az incidenst a GDPR 33. cikke alapján lehetőleg 72 órán belül
+> jelenteni kell a hatóságnak.  
 > Magas kockázat esetén az érintetteket is tájékoztatni kell a GDPR 34. cikke szerint.
 
 ## Gyakori vizsgahibák

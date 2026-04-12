@@ -33,7 +33,9 @@ Mert IT-s vagy webes környezetben gyakran előjön:
 - ügyfélkapcsolati kommunikáció
 - online szolgáltatás és elektronikus elérhetőség
 
-Ha például egy rendszer reklámcélú e-mailt vagy SMS-t küld, akkor nem csak a GDPR, hanem a telekommunikációs szabályok is relevánsak lehetnek.
+Ha például egy rendszer reklámcélú e-mailt vagy SMS-t küld,
+akkor nem csak a GDPR,
+hanem a telekommunikációs szabályok is relevánsak lehetnek.
 
 ## Spam és kéretlen üzenetek
 
@@ -50,7 +52,9 @@ Ez különösen fontos:
 
 ## Kommunikáció titkossága
 
-A telekommunikációs szabályok lényege az is, hogy a kommunikáció tartalma és kapcsolódó adatai ne legyenek önkényesen hozzáférhetők illetéktelenek számára.
+A telekommunikációs szabályok lényege az is,
+hogy a kommunikáció tartalma és kapcsolódó adatai
+ne legyenek önkényesen hozzáférhetők illetéktelenek számára.
 
 Egyszerűen:
 
@@ -68,7 +72,9 @@ Egyszerűen:
 ## Vizsgán jól használható megfogalmazás
 
 > A Telekommunikationsgesetz 2021 az elektronikus kommunikációs szolgáltatások egyik alapvető osztrák jogszabálya.  
-> Vizsgaszinten különösen fontos belőle a végfelhasználók védelme, a kommunikáció bizalmassága, valamint a kéretlen reklámüzenetekre és spamre vonatkozó szabályozás.  
+> Vizsgaszinten különösen fontos belőle a végfelhasználók védelme,
+> a kommunikáció bizalmassága,
+> valamint a kéretlen reklámüzenetekre és spamre vonatkozó szabályozás.  
 > Ha egy rendszer e-mailt, SMS-t vagy más elektronikus kommunikációt használ, a TKG 2021 gyakran releváns.
 
 ## Gyakori vizsgahibák

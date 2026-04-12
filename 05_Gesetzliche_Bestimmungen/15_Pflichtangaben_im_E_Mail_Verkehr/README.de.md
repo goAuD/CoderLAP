@@ -61,8 +61,13 @@ Wenn in diesen die notwendigen Unternehmensdaten fehlen, kann das rechtliche Pro
 
 ## Prüfungstaugliche Formulierung
 
-> Im geschäftlichen E-Mail-Verkehr müssen bestimmte Unternehmen verpflichtende Angaben anführen, zum Beispiel ihren Firmennamen, ihre Rechtsform, ihren Sitz und ihre Registrierungsdaten.
-> Dies dient der geschäftlichen Transparenz und ist auch bei automatischen oder systemgenerierten geschäftlichen E-Mails besonders wichtig.
+> Im geschäftlichen E-Mail-Verkehr müssen bestimmte Unternehmen
+> verpflichtende Angaben anführen,
+> zum Beispiel ihren Firmennamen, ihre Rechtsform,
+> ihren Sitz und ihre Registrierungsdaten.
+> Dies dient der geschäftlichen Transparenz
+> und ist auch bei automatischen
+> oder systemgenerierten geschäftlichen E-Mails besonders wichtig.
 > Der genaue Pflichtinhalt kann von der Rechtsform des Unternehmens abhängen.
 
 ## Häufige Prüfungsfehler
@@ -104,7 +109,8 @@ Wenn in diesen die notwendigen Unternehmensdaten fehlen, kann das rechtliche Pro
 
 4. WKO - Das korrekte E-Mail Impressum für nicht im Firmenbuch eingetragene Einzelunternehmen
    https://www.wko.at/internetrecht/das-korrekte-e-mail-impressum-nicht-im-fb
-   Verwendung: praktische, verlässliche österreichische Kammerzusammenfassung dazu, dass der Pflichtinhalt von der Rechtsform abhängen kann.
+   Verwendung: praktische, verlässliche österreichische Kammerzusammenfassung dazu,
+   dass der Pflichtinhalt von der Rechtsform abhängen kann.
 
 5. RIS - Mediengesetz § 24
    https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000719&Paragraf=24&Uebergangsrecht=

@@ -64,7 +64,10 @@ Deshalb muss die Arbeit so organisiert werden, dass die Belastung verringert wir
 ## Prüfungstaugliche Formulierung
 
 > Bildschirmarbeit unterliegt in Österreich Arbeitsschutzvorschriften.
-> Die Grundregel besagt, dass nach 50 Minuten ununterbrochener Bildschirmarbeit eine Pause oder ein die Belastung verringernder Tätigkeitswechsel von mindestens 10 Minuten gewährt werden muss.
+> Die Grundregel besagt,
+> dass nach 50 Minuten ununterbrochener Bildschirmarbeit
+> eine Pause oder ein die Belastung verringernder Tätigkeitswechsel
+> von mindestens 10 Minuten gewährt werden muss.
 > Ziel ist die Verringerung der Belastung für die Augen, die Körperhaltung und die allgemeine Beanspruchung.
 
 ## Häufige Prüfungsfehler
@@ -102,6 +105,7 @@ Deshalb muss die Arbeit so organisiert werden, dass die Belastung verringert wir
 
 3. Arbeitsinspektion - Bildschirmarbeitsplätze
    https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html
-   Verwendung: offizielle österreichische Arbeitsschutzerklärung zu den Regeln für Bildschirmarbeit, der 50/10-Regel und Ergonomie.
+   Verwendung: offizielle österreichische Arbeitsschutzerklärung
+   zu den Regeln für Bildschirmarbeit, der 50/10-Regel und Ergonomie.
 
 Abgerufen: `2026-04-08`

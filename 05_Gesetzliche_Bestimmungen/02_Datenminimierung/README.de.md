@@ -85,8 +85,10 @@ Weil weniger verarbeitete Daten bedeuten:
 ## Prüfungstaugliche Formulierung
 
 > Die Datenminimierung ist ein Grundsatz der GDPR.
-> Sie besagt, dass nur personenbezogene Daten verarbeitet werden dürfen, die für den jeweiligen Verarbeitungszweck notwendig, angemessen und erheblich sind.
-> In der Praxis bedeutet das, dass keine unnötigen Daten erhoben werden dürfen und Daten nicht unangemessen lange gespeichert werden dürfen.
+> Sie besagt, dass nur personenbezogene Daten verarbeitet werden dürfen,
+> die für den jeweiligen Verarbeitungszweck notwendig, angemessen und erheblich sind.
+> In der Praxis bedeutet das, dass keine unnötigen Daten erhoben werden dürfen
+> und Daten nicht unangemessen lange gespeichert werden dürfen.
 
 ## Häufige Prüfungsfehler
 
