@@ -569,7 +569,7 @@ a.lang-switcher__item:focus-visible {
 
   .topic-actions {
     margin-inline: auto;
-    max-width: 52rem;
+    max-width: var(--max-content-width);
   }
 }
 

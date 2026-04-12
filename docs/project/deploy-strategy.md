@@ -19,13 +19,17 @@ Last updated: `2026-04-12`
 - SSL/TLS mode is `Full (strict)`
 - Caddy currently serves the static site through a Cloudflare Origin Certificate
 - Temporary `basic_auth` is enabled for restricted access during private rollout
-- `robots.txt` and `.well-known/security.txt` are generated from the repository and shipped with the static build
+- `robots.txt` and `.well-known/security.txt` are generated from the repository
+  and shipped with the static build
 
-The project is already deployed in a restricted-access production shape. The next phase is no longer first deployment, but controlled hardening and public-launch preparation.
+The project is already deployed in a restricted-access production shape. The
+next phase is no longer first deployment, but controlled hardening and
+public-launch preparation.
 
 ## Deployment Target
 
-The deploy target should be the **generated static site**, not the raw working tree as a web root.
+The deploy target should be the **generated static site**, not the raw working
+tree as a web root.
 
 That means:
 
@@ -38,7 +42,11 @@ That means:
 Use one clean path only:
 
 ```text
-dev review -> merge to main -> GitHub Actions build -> self-hosted deploy -> Caddy serves dist/
+dev review
+-> merge to main
+-> GitHub Actions build
+-> self-hosted deploy
+-> Caddy serves dist/
 ```
 
 Do not mix multiple competing deploy paths.
@@ -118,8 +126,10 @@ Operational notes:
 - `basic_auth` is intentionally kept at the Caddy layer during private rollout
 - use `caddy hash-password --algorithm bcrypt` for future password rotation
 - do not use `argon2id` hashes with the current Caddy `basic_auth` setup
-- the stricter `client_auth` block for Cloudflare Authenticated Origin Pulls is intentionally not active right now
-- if Authenticated Origin Pulls is enabled later in Cloudflare, the matching `client_auth` block can be restored in Caddy after explicit verification
+- the stricter `client_auth` block for Cloudflare Authenticated Origin Pulls is
+  intentionally not active right now
+- if Authenticated Origin Pulls is enabled later in Cloudflare, the matching
+  `client_auth` block can be restored in Caddy after explicit verification
 
 ## DNS Direction
 
@@ -174,10 +184,14 @@ python -m http.server 4173 --bind 127.0.0.1 --directory dist
 
 ## Current Hardening And Launch Follow-ups
 
-1. Re-introduce Cloudflare Authenticated Origin Pulls only after explicit end-to-end verification.
-2. Do one final Austrian legal/imprint review before removing `basic_auth` for public access.
-3. Replace the restrictive `robots.txt` with an indexable version once the site is ready for search engines.
-4. Add MX/mail routing later if the domain should receive operational or contact email.
+1. Re-introduce Cloudflare Authenticated Origin Pulls only after explicit
+   end-to-end verification.
+2. Do one final Austrian legal/imprint review before removing `basic_auth` for
+   public access.
+3. Replace the restrictive `robots.txt` with an indexable version once the site
+   is ready for search engines.
+4. Add MX/mail routing later if the domain should receive operational or contact
+   email.
 
 Related documents:
 

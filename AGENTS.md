@@ -14,8 +14,10 @@ Preferred working location going forward:
 
 Purpose:
 
-- Build a complete study knowledge base for the Austrian `LAP` exam in `Applikationsentwicklung - Coding`.
-- Base the structure on `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`.
+- Build a complete study knowledge base for the Austrian `LAP` exam in
+  `Applikationsentwicklung - Coding`.
+- Base the structure on
+  `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`.
 - Develop the content first in **Hungarian**.
 - Keep folder names and file names in **German**.
 - German translations exist as `README.de.md` alongside Hungarian `README.md`.
@@ -24,13 +26,15 @@ Purpose:
 - Planned production domain: `coderlap.com`.
 - Present the whole project in a simple **HTML/CSS/JS web frontend**.
 
-This is a long-running project. Any future thread should treat this file as the continuity source.
+This is a long-running project. Any future thread should treat this file as the
+continuity source.
 
 ## Source Of Truth
 
 Primary structural source:
 
-- `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf` in the repository root
+- `themenkatalog-applikationsentwicklung-coding-v2-2024.pdf` in the repository
+  root
 
 Canonical content source:
 
@@ -43,11 +47,14 @@ Canonical metadata layer:
 
 Interpretation rules:
 
-- The PDF defines the canonical topic hierarchy unless the user explicitly changes it.
-- The existing directory structure in the repository root is already aligned to the PDF.
+- The PDF defines the canonical topic hierarchy unless the user explicitly
+  changes it.
+- The existing directory structure in the repository root is already aligned to
+  the PDF.
 - Each main module has its own numbered folder.
 - Each subtopic has its own numbered subfolder.
-- The current numbered folder tree is intentionally preserved and should not be migrated unless the user explicitly requests it.
+- The current numbered folder tree is intentionally preserved and should not be
+  migrated unless the user explicitly requests it.
 
 ## Directory Conventions
 
@@ -108,11 +115,14 @@ Completed already:
 - `13 / 13` subtopic documents exist for main topic `17`.
 - Main topic `18_Uebungsbeispiel` completed.
 - `5 / 5` subtopic documents exist for main topic `18`.
-- A practical reference implementation was also added under `18_Uebungsbeispiel\Musterloesung_Minimal`.
+- A practical reference implementation was also added under
+  `18_Uebungsbeispiel\Musterloesung_Minimal`.
 - Total completed subtopic documents so far: `233`.
-- Stable registry files were generated for all `233` canonical subtopic documents.
+- Stable registry files were generated for all `233` canonical subtopic
+  documents.
 - Internal architecture/deployment docs now live under `docs/project/`.
-- i18n infrastructure fully built: German default (`/`), Hungarian secondary (`/hu/`).
+- i18n infrastructure fully built: German default (`/`), Hungarian secondary
+  (`/hu/`).
 - All `233` subtopics translated to German as `README.de.md` files.
 - Static site generator (Jinja2) outputs bilingual site to `dist/`.
 - Planned production domain: `coderlap.com`.
@@ -171,22 +181,31 @@ Special note for main topic `11_Informatik`:
 
 Special note for main topic `15_Grundkenntnisse_des_Programmierens`:
 
-- the user asked for this topic to be developed slightly more deeply than topic `11_Informatik`
-- keep the content practical and exam-oriented, but add more concept clarification
-- prefer stronger compare/contrast sections for commonly confused programming basics
-- include more precise distinctions for fundamentals such as algorithm vs program, variable vs constant, scope vs lifetime, compiler vs interpreter, and loop variants
+- the user asked for this topic to be developed slightly more deeply than topic
+  `11_Informatik`
+- keep the content practical and exam-oriented, but add more concept
+  clarification
+- prefer stronger compare/contrast sections for commonly confused programming
+  basics
+- include more precise distinctions for fundamentals such as algorithm vs
+  program, variable vs constant, scope vs lifetime, compiler vs interpreter, and
+  loop variants
 
 Special note for main topic `18_Uebungsbeispiel`:
 
 - this topic is practical, not theory-only
 - keep the PDF as the exact functional source of truth
-- besides the normal `README.md` writeups in the subfolders, create a minimal working reference solution
-- prefer the simplest exam-realistic implementation over feature-rich architecture
-- avoid adding backend, persistence, or extra UX features unless the PDF explicitly requires them
+- besides the normal `README.md` writeups in the subfolders, create a minimal
+  working reference solution
+- prefer the simplest exam-realistic implementation over feature-rich
+  architecture
+- avoid adding backend, persistence, or extra UX features unless the PDF
+  explicitly requires them
 
 ## Required Output Format For Topic Documents
 
-Every new subtopic `README.md` should follow a consistent, visual-first structure.
+Every new subtopic `README.md` should follow a consistent, visual-first
+structure.
 
 Recommended structure:
 
@@ -205,7 +224,8 @@ Recommended structure:
 
 Notes:
 
-- Not every topic needs every section, but the structure should stay close to this pattern.
+- Not every topic needs every section, but the structure should stay close to
+  this pattern.
 - The document should be easy to scan visually.
 - Use tables where they improve understanding.
 - Use short paragraphs.
@@ -219,7 +239,8 @@ Use:
 - clear headings
 - flat bullet lists
 - compact tables
-- inline code for technical terms, commands, literals, encodings, protocol names, keywords
+- inline code for technical terms, commands, literals, encodings, protocol
+  names, keywords
 
 Avoid:
 
@@ -250,8 +271,10 @@ Strong preferred sources by topic:
 
 - Web and encoding: `W3C`, `WHATWG`, `MDN`, `Unicode`, `IETF RFCs`, `IANA`
 - Security: `OWASP`, `NIST`, vendor official docs, RFCs
-- Databases and web tech: official product/vendor documentation, standards, MDN, W3C
-- Legal/EU/Austria topics: `EUR-Lex`, `RIS`, `oesterreich.gv.at`, official ministry or EU sources
+- Databases and web tech: official product/vendor documentation, standards, MDN,
+  W3C
+- Legal/EU/Austria topics: `EUR-Lex`, `RIS`, `oesterreich.gv.at`, official
+  ministry or EU sources
 
 Avoid:
 
@@ -279,9 +302,7 @@ Minimum expectation:
 
 Preferred citation style:
 
-1. Source title
-   URL
-   Usage note
+1. Source title URL Usage note
 
 Do not leave sources implied. Make them explicit.
 
@@ -291,14 +312,15 @@ When continuing this project:
 
 1. Read this `AGENTS.md`.
 2. Check whether the active working copy is `C:\GitHub\CoderLAP`.
-3. Read the project architecture notes:
-   `docs/project/content-architecture.md`, `docs/project/architecture-adoption.md`, `docs/project/deploy-strategy.md`
+3. Read the project architecture notes: `docs/project/content-architecture.md`,
+   `docs/project/architecture-adoption.md`, `docs/project/deploy-strategy.md`
 4. Check the registry files before large structural work:
    `LAP_CONTENT_REGISTRY.json`, `LAP_CONTENT_REGISTRY.csv`
 5. Continue in the existing numbered structure.
 6. For a requested topic, verify whether a `README.md` already exists.
 7. If not, create it in the subtopic folder.
-8. If it exists, improve it without breaking the established format unless the user asks for a redesign.
+8. If it exists, improve it without breaking the established format unless the
+   user asks for a redesign.
 9. Use current, reliable sources when needed.
 10. Keep Hungarian content and German file/folder names.
 11. Preserve consistency across all topics.
@@ -310,9 +332,12 @@ For a completely new Codex thread on another machine, use this startup order:
 1. Open the repository root `C:\GitHub\CoderLAP`.
 2. Read `AGENTS.md` first.
 3. Read `README.md` for the high-level state.
-4. Read `docs/project/deploy-strategy.md` if the task involves Git, GitHub, Caddy, DNS, Debian, or deployment.
-5. Read `docs/project/next-thread-handoff.md` for the shortest practical continuation context.
-6. Only read `LAP_CONTENT_REGISTRY.json` when indexing, i18n mapping, or site-building logic is relevant.
+4. Read `docs/project/deploy-strategy.md` if the task involves Git, GitHub,
+   Caddy, DNS, Debian, or deployment.
+5. Read `docs/project/next-thread-handoff.md` for the shortest practical
+   continuation context.
+6. Only read `LAP_CONTENT_REGISTRY.json` when indexing, i18n mapping, or
+   site-building logic is relevant.
 
 Deployment-oriented assumptions for a new thread:
 
@@ -394,11 +419,12 @@ Current default metadata values in the registry:
 
 - `lang = hu`
 - `review_status = draft`
-- `translation_status = de_complete` when `README.de.md` exists, otherwise `de_missing`
+- `translation_status = de_complete` when `README.de.md` exists, otherwise
+  `de_missing`
 - `canonical = true`
 
-If content files are added, removed, or renamed, regenerate the registry.
-The generator script is repository-root relative.
+If content files are added, removed, or renamed, regenerate the registry. The
+generator script is repository-root relative.
 
 ## Repo And Deployment Notes
 
@@ -438,7 +464,8 @@ Potential future deliverables:
 - print improvements
 - content QA adjustments
 
-Do not replace the current frontend architecture unless the user explicitly requests a redesign.
+Do not replace the current frontend architecture unless the user explicitly
+requests a redesign.
 
 ## Editing Policy
 
@@ -448,7 +475,8 @@ When modifying this project:
 - prefer incremental improvement over unnecessary restructuring
 - keep naming stable
 - do not duplicate the same topic in multiple places
-- if a topic overlaps another topic, mention the distinction clearly inside the content rather than restructuring folders
+- if a topic overlaps another topic, mention the distinction clearly inside the
+  content rather than restructuring folders
 
 ## Session Memory Notes
 

@@ -6,7 +6,8 @@ Last updated: `2026-04-12`
 
 CoderLAP is intentionally not open to the general public yet.
 
-The project is already live on `coderlap.com`, but access is deliberately limited to a small trusted group during the current review phase.
+The project is already live on `coderlap.com`, but access is deliberately
+limited to a small trusted group during the current review phase.
 
 ## Current Access Model
 
@@ -16,7 +17,8 @@ The project is already live on `coderlap.com`, but access is deliberately limite
 - access gate implemented with Caddy `basic_auth`
 - indexing blocked with `robots.txt`
 
-This is acceptable for a small private rollout because it keeps the stack static and avoids introducing a backend user system.
+This is acceptable for a small private rollout because it keeps the stack static
+and avoids introducing a backend user system.
 
 ## Operational Rules
 
@@ -24,7 +26,8 @@ This is acceptable for a small private rollout because it keeps the stack static
 - Distribute the password only out of band.
 - Rotate the password when the trusted access group changes.
 - Rotate the password immediately if it is forwarded beyond the intended group.
-- Keep `basic_auth` enabled until legal text, content QA, and launch readiness are explicitly approved.
+- Keep `basic_auth` enabled until legal text, content QA, and launch readiness
+  are explicitly approved.
 
 ## Current Security Tradeoff
 
@@ -44,11 +47,13 @@ Limitations:
 
 ## Recommended Next Step If Access Needs Grow
 
-If the user group becomes larger than a small trusted circle, prefer one of these before building any app backend:
+If the user group becomes larger than a small trusted circle, prefer one of
+these before building any app backend:
 
 1. Cloudflare Access with identity-based access control
 2. a new rotated shared password for a distinct cohort
-3. Caddy-side per-user credentials only if absolutely necessary and still manageable
+3. Caddy-side per-user credentials only if absolutely necessary and still
+   manageable
 
 Do not build a custom auth backend unless the project scope changes materially.
 

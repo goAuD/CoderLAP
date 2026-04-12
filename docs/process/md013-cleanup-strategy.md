@@ -4,9 +4,12 @@ Last updated: `2026-04-12`
 
 ## Purpose
 
-This document defines how to reduce the remaining `MD013` (`line-length`) warnings without mixing formatting churn into normal content, frontend, legal, or deploy work.
+This document defines how to reduce the remaining `MD013` (`line-length`)
+warnings without mixing formatting churn into normal content, frontend, legal,
+or deploy work.
 
-The warning volume is currently large enough that a single global reflow pass would create noisy diffs and make real content review harder.
+The warning volume is currently large enough that a single global reflow pass
+would create noisy diffs and make real content review harder.
 
 ## Current Rule
 
@@ -26,7 +29,8 @@ The warning volume is currently large enough that a single global reflow pass wo
 - do not mass-reflow all `233` topic files in one commit
 - do not combine `MD013` cleanup with legal, deploy, search, or frontend changes
 - do not rewrite exam wording just to shorten lines
-- do not aggressively wrap Markdown tables or code fences if that hurts readability
+- do not aggressively wrap Markdown tables or code fences if that hurts
+  readability
 
 ## Recommended Order
 
@@ -72,15 +76,18 @@ Typical acceptable leftovers may include:
 - literal command examples
 - legal citations that are clearer on one line
 
-If these leftovers are frequent and justified, only then consider a narrow config adjustment. Do not weaken the rule before the easy cleanup is done.
+If these leftovers are frequent and justified, only then consider a narrow
+config adjustment. Do not weaken the rule before the easy cleanup is done.
 
 ## Safe Editing Rules
 
 - preserve wording unless a line break requires a tiny punctuation-safe rewrite
 - prefer breaking bullet items at logical clauses
-- prefer breaking paragraphs into shorter sentences instead of arbitrary hard wraps
+- prefer breaking paragraphs into shorter sentences instead of arbitrary hard
+  wraps
 - keep source lists readable and explicit
-- keep Hungarian canonical topic files and German sidecars structurally aligned when both are touched
+- keep Hungarian canonical topic files and German sidecars structurally aligned
+  when both are touched
 
 ## Operational Workflow
 
@@ -114,4 +121,5 @@ markdownlint "01_Grundlagen_in_der_Informationstechnik/**/*.md" --config .markdo
 
 ## Decision Rule
 
-If the work changes meaning, tone, or translation alignment, it is no longer a style-only cleanup and should be handled as a separate content review.
+If the work changes meaning, tone, or translation alignment, it is no longer a
+style-only cleanup and should be handled as a separate content review.
