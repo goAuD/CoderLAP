@@ -163,6 +163,8 @@ def build_site(
 
     _recreate_output_dir(settings.output_dir)
     shutil.copytree(settings.asset_dir, settings.output_dir / "assets")
+    if settings.static_content_dir.is_dir():
+        shutil.copytree(settings.static_content_dir, settings.output_dir, dirs_exist_ok=True)
 
     cache_bust = str(int(time.time()))
 

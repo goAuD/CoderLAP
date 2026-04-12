@@ -30,6 +30,8 @@ class BuildSiteSmokeTests(unittest.TestCase):
         self.assertTrue((dist_dir / "topics" / "01-01-zeichensatz_ascii" / "index.html").exists())
         self.assertTrue((dist_dir / "imprint" / "index.html").exists())
         self.assertTrue((dist_dir / "privacy" / "index.html").exists())
+        self.assertTrue((dist_dir / "robots.txt").exists())
+        self.assertTrue((dist_dir / ".well-known" / "security.txt").exists())
         # Hungarian under /hu/
         self.assertTrue((dist_dir / "hu" / "index.html").exists())
         self.assertTrue((dist_dir / "hu" / "topics" / "01-01-zeichensatz_ascii" / "index.html").exists())
