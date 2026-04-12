@@ -120,9 +120,13 @@ Merkmale:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Desktop-Betriebssystem ist ein Allzweck-Betriebssystem, das hauptsächlich auf Desktop-Rechnern und Laptops verwendet wird.  
-> Charakteristisch sind die grafische Oberfläche, die Dateiverwaltung, die Peripherieunterstützung und die Ausführung mehrerer Anwendungen.  
-> Typische Desktop-Betriebssysteme sind Windows, macOS und verschiedene Linux-Desktop-Systeme.
+> Ein Desktop-Betriebssystem ist ein Allzweck-Betriebssystem,
+> das hauptsächlich auf Desktop-Rechnern und Laptops verwendet wird.  
+> Charakteristisch sind die grafische Oberfläche, die Dateiverwaltung,
+> die Peripherieunterstützung
+> und die Ausführung mehrerer Anwendungen.  
+> Typische Desktop-Betriebssysteme sind Windows, macOS
+> und verschiedene Linux-Desktop-Systeme.
 
 ## Häufige Prüfungsfehler
 

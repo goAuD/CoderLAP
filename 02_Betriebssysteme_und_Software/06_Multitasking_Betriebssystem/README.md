@@ -92,8 +92,11 @@ A kettő kapcsolódik, de nem ugyanaz.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A multitasking operációs rendszer képes több folyamat vagy feladat kezelésére úgy, hogy azok a felhasználó számára egyidejűnek tűnjenek.  
-> Ehhez a rendszer ütemezi a folyamatokat, CPU-időt oszt, memóriát kezel és koordinálja a háttér- és előtérfeladatokat.  
+> A multitasking operációs rendszer képes több folyamat vagy feladat
+> kezelésére úgy, hogy azok a felhasználó számára egyidejűnek tűnjenek.  
+> Ehhez a rendszer ütemezi a folyamatokat, CPU-időt oszt,
+> memóriát kezel
+> és koordinálja a háttér- és előtérfeladatokat.  
 > A modern desktop operációs rendszerek általában multitasking rendszerek.
 
 ## Gyakori vizsgahibák

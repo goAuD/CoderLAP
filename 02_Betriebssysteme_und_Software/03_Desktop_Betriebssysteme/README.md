@@ -120,9 +120,11 @@ Jellemzői:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A desktop operációs rendszer olyan általános célú operációs rendszer, amelyet főleg asztali gépeken és laptopokon használunk.  
+> A desktop operációs rendszer olyan általános célú operációs rendszer,
+> amelyet főleg asztali gépeken és laptopokon használunk.  
 > Jellemző rá a grafikus felület, a fájlkezelés, a perifériák támogatása és több alkalmazás futtatása.  
-> Tipikus desktop operációs rendszerek a Windows, a macOS és különböző Linux desktop rendszerek.
+> Tipikus desktop operációs rendszerek a Windows, a macOS
+> és különböző Linux desktop rendszerek.
 
 ## Gyakori vizsgahibák
 

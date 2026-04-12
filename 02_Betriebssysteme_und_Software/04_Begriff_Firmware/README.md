@@ -11,7 +11,10 @@
 
 ## Mi a firmware?
 
-A firmware olyan programkód és adat, amely jellemzően a hardverhez kötötten van tárolva, gyakran nem hagyományos fájlként, hanem az eszköz saját memóriájában.
+A firmware olyan programkód és adat,
+amely jellemzően a hardverhez kötötten van tárolva,
+gyakran nem hagyományos fájlként,
+hanem az eszköz saját memóriájában.
 
 Feladata lehet például:
 
