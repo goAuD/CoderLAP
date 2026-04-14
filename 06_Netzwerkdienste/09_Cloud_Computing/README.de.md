@@ -67,8 +67,12 @@ Weiterhin wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Cloud Computing ist ein Modell, bei dem Rechenressourcen, Speicherplatz, Plattformen oder komplette Anwendungen über das Netzwerk nach Bedarf in Anspruch genommen werden.  
-> Hauptmerkmale sind die On-Demand-Nutzung, der Netzwerkzugriff, der gemeinsame Ressourcenpool, die schnelle Skalierbarkeit und der messbare Dienstcharakter.  
+> Cloud Computing ist ein Modell,
+> bei dem Rechenressourcen, Speicherplatz, Plattformen
+> oder komplette Anwendungen über das Netzwerk nach Bedarf in Anspruch genommen werden.  
+> Hauptmerkmale sind die On-Demand-Nutzung, der Netzwerkzugriff,
+> der gemeinsame Ressourcenpool, die schnelle Skalierbarkeit
+> und der messbare Dienstcharakter.  
 > Der Vorteil ist die Flexibilität, aber man muss auch auf Sicherheits-, Datenschutz- und Kostenaspekte achten.
 
 ## Häufige Prüfungsfehler

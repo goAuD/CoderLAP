@@ -73,7 +73,9 @@ Zum Beispiel löst es allein nicht:
 ## Prüfungstaugliche Formulierung
 
 > HTTP (Hypertext Transfer Protocol) ist das grundlegende Request-Response-Protokoll im Web.  
-> HTTPS (Hypertext Transfer Protocol Secure) ist dasselbe Protokoll mit TLS-Schutz und gewährleistet daher die Verschlüsselung des Datenverkehrs, die Integrität und die Authentifizierung des Servers.  
+> HTTPS (Hypertext Transfer Protocol Secure) ist dasselbe Protokoll mit TLS-Schutz
+> und gewährleistet daher die Verschlüsselung des Datenverkehrs,
+> die Integrität und die Authentifizierung des Servers.  
 > In der Praxis ist HTTPS bei modernen Webdiensten der Standard.
 
 ## Häufige Prüfungsfehler

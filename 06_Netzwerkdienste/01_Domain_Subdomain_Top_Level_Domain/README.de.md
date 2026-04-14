@@ -75,8 +75,11 @@ Das ist bei Prüfungen ein typischer Grundbegriff.
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Domainname ist ein hierarchischer Name im Internet, der einen Dienst oder eine Ressource auf menschenfreundliche Weise identifiziert.  
-> Eine Domain kann aus mehreren Teilen bestehen: Der oberste Teil ist die TLD, und unterhalb der Domain können weitere Subdomains erstellt werden.  
+> Ein Domainname ist ein hierarchischer Name im Internet,
+> der einen Dienst oder eine Ressource auf menschenfreundliche Weise identifiziert.  
+> Eine Domain kann aus mehreren Teilen bestehen:
+> Der oberste Teil ist die TLD,
+> und unterhalb der Domain können weitere Subdomains erstellt werden.  
 > Zum Beispiel ist im Namen `developer.mozilla.org` das `org` die TLD, `mozilla` der Domainteil und `developer` die Subdomain.
 
 ## Häufige Prüfungsfehler

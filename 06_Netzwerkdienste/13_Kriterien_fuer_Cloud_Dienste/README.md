@@ -75,8 +75,13 @@ Ez modellenként eltérhet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Cloud szolgáltatás választásánál nemcsak a funkcionalitást és az árat kell nézni, hanem a biztonságot, a compliance-t, az adatlokációt, a rendelkezésre állást, a költségmodellt, a skálázhatóságot és a vendor lock-in kockázatát is.  
-> Emellett fontos megérteni a shared responsibility modellt, vagyis azt, hogy a biztonsági felelősség a szolgáltató és az ügyfél között megoszlik.
+> Cloud szolgáltatás választásánál nemcsak a funkcionalitást és az árat kell nézni,
+> hanem a biztonságot, a compliance-t, az adatlokációt,
+> a rendelkezésre állást, a költségmodellt,
+> a skálázhatóságot és a vendor lock-in kockázatát is.  
+> Emellett fontos megérteni a shared responsibility modellt,
+> vagyis azt, hogy a biztonsági felelősség
+> a szolgáltató és az ügyfél között megoszlik.
 
 ## Gyakori vizsgahibák
 

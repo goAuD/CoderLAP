@@ -61,7 +61,9 @@ Daher ist heute eine verschlüsselte Verbindung die erwartete Lösung.
 ## Prüfungstaugliche Formulierung
 
 > POP3 ist ein E-Mail-Protokoll zum Herunterladen eingehender E-Mails.  
-> Aufgrund seines einfachen Modells eignet es sich primär zum lokalen Herunterladen, während IMAP für die Synchronisierung über mehrere Geräte oft die bessere Wahl ist.  
+> Aufgrund seines einfachen Modells eignet es sich primär zum lokalen Herunterladen,
+> während IMAP für die Synchronisierung über mehrere Geräte
+> oft die bessere Wahl ist.  
 > POP3S ist die mit TLS geschützte Variante von POP3 und daher sicherer.
 
 ## Häufige Prüfungsfehler
