@@ -92,7 +92,10 @@ A jó védelem:
 ## Vizsgán jól használható megfogalmazás
 
 > A kliens PC védelmét több rétegben kell megvalósítani.  
-> Ide tartozik a rendszeres frissítés, a naprakész malware-védelem, a helyi tűzfal, az erős jelszó és MFA használata, a korlátozott jogosultságok, a phishing elleni tudatosság és a rendszeres biztonsági mentés.  
+> Ide tartozik a rendszeres frissítés, a naprakész malware-védelem,
+> a helyi tűzfal, az erős jelszó és MFA használata,
+> a korlátozott jogosultságok, a phishing elleni tudatosság
+> és a rendszeres biztonsági mentés.  
 > Egyetlen eszköz önmagában nem elég, ezért rétegzett védelemre van szükség.
 
 ## Gyakori vizsgahibák

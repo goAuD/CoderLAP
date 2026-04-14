@@ -101,8 +101,12 @@ Nachteil:
 
 ## Prüfungstaugliche Formulierung
 
-> Zu den Backup-Grundsätzen gehören regelmäßige Sicherung, Aufbewahrung in mehreren Kopien und getrennt, sowie regelmäßiges Testen der Wiederherstellung.  
-> Das Full Backup sichert alle Daten, das Incremental nur die seit der letzten Sicherung geänderten Daten, und das Differential die seit der letzten Vollsicherung geänderten Daten.  
+> Zu den Backup-Grundsätzen gehören regelmäßige Sicherung,
+> Aufbewahrung in mehreren Kopien und getrennt,
+> sowie regelmäßiges Testen der Wiederherstellung.  
+> Das Full Backup sichert alle Daten,
+> das Incremental nur die seit der letzten Sicherung geänderten Daten,
+> und das Differential die seit der letzten Vollsicherung geänderten Daten.  
 > Das passende Sicherungsprinzip muss anhand des Wiederherstellungsbedarfs, der Zeit und des Speicherplatzes gewählt werden.
 
 ## Häufige Prüfungsfehler

@@ -92,7 +92,10 @@ Ein guter Schutz:
 ## Prüfungstaugliche Formulierung
 
 > Der Schutz des Client-PCs muss in mehreren Schichten umgesetzt werden.  
-> Dazu gehören regelmäßige Updates, aktueller Malware-Schutz, die lokale Firewall, starke Passwörter und MFA, eingeschränkte Berechtigungen, Bewusstsein gegen Phishing und regelmäßige Datensicherung.  
+> Dazu gehören regelmäßige Updates, aktueller Malware-Schutz,
+> die lokale Firewall, starke Passwörter und MFA,
+> eingeschränkte Berechtigungen, Bewusstsein gegen Phishing
+> und regelmäßige Datensicherung.  
 > Kein einzelnes Werkzeug reicht für sich allein aus, daher ist ein mehrschichtiger Schutz erforderlich.
 
 ## Häufige Prüfungsfehler

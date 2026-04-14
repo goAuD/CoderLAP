@@ -86,8 +86,14 @@ Daher ist wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Grundlage einer sicheren Backup-Planung ist die Festlegung, was gesichert werden muss, wie oft, mit welcher Zielzeit die Wiederherstellung erfolgen soll, wo die Sicherungen aufbewahrt werden und wie die Wiederherstellbarkeit überprüft wird.  
-> Ein guter Backup-Plan enthält den Sicherungszeitplan, die Verantwortlichkeiten, die Aufbewahrungsdauer, die Zugriffsregeln und die Restore-Tests.  
+> Die Grundlage einer sicheren Backup-Planung ist die Festlegung,
+> was gesichert werden muss, wie oft,
+> mit welcher Zielzeit die Wiederherstellung erfolgen soll,
+> wo die Sicherungen aufbewahrt werden
+> und wie die Wiederherstellbarkeit überprüft wird.  
+> Ein guter Backup-Plan enthält den Sicherungszeitplan,
+> die Verantwortlichkeiten, die Aufbewahrungsdauer,
+> die Zugriffsregeln und die Restore-Tests.  
 > Die Sicherungen müssen auch getrennt vom Originalsystem verfügbar sein.
 
 ## Häufige Prüfungsfehler

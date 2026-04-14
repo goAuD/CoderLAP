@@ -86,8 +86,14 @@ Ezért fontos:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A biztonságos backup tervezésének alapja annak meghatározása, hogy mit kell menteni, milyen gyakran, milyen célidővel kell visszaállni, hol tároljuk a mentéseket, és hogyan ellenőrizzük a visszaállíthatóságot.  
-> Egy jó backup terv tartalmazza a mentési ütemezést, a felelősségeket, a megőrzési időt, a hozzáférési szabályokat és a restore teszteket is.  
+> A biztonságos backup tervezésének alapja annak meghatározása,
+> hogy mit kell menteni, milyen gyakran,
+> milyen célidővel kell visszaállni,
+> hol tároljuk a mentéseket,
+> és hogyan ellenőrizzük a visszaállíthatóságot.  
+> Egy jó backup terv tartalmazza a mentési ütemezést,
+> a felelősségeket, a megőrzési időt,
+> a hozzáférési szabályokat és a restore teszteket is.  
 > A mentéseknek az eredeti rendszertől elkülönítve is rendelkezésre kell állniuk.
 
 ## Gyakori vizsgahibák
