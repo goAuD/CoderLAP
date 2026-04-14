@@ -86,7 +86,9 @@ Ez gyakorlatban azt jelenti:
 
 > Az e-government a közigazgatási ügyek digitális intézését jelenti.  
 > Az elektronikus aláírás lehetővé teszi, hogy bizonyos dokumentumokat digitálisan, joghatású módon írjunk alá.  
-> Ausztriában a korábbi Handy-Signaturt 2023. december 5-én az ID Austria váltotta fel, ezért ma már az ID Austria az aktuális megoldás.
+> Ausztriában a korábbi Handy-Signaturt
+> `2023. december 5-én` az ID Austria váltotta fel,
+> ezért ma már az ID Austria az aktuális megoldás.
 
 ## Gyakori vizsgahibák
 
@@ -108,7 +110,7 @@ Ez gyakorlatban azt jelenti:
 1. Digitális hatósági ügyintézés
 2. Digitális dokumentumok joghatású aláírására
 3. Az ID Austria
-4. 2023. december 5-én
+4. `2023. december 5-én`
 5. Az aktuális rendszer az ID Austria
 
 ## Források

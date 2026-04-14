@@ -26,10 +26,10 @@ Mert a fogalom a negyedik ipari forradalomként szokott megjelenni.
 
 Rövid történeti logika:
 
-- 1. = gépesítés
-- 2. = villamosítás és tömegtermelés
-- 3. = informatizálás és automatizálás
-- 4. = hálózatba kötött, adatvezérelt, intelligens rendszerek
+1. gépesítés
+1. villamosítás és tömegtermelés
+1. informatizálás és automatizálás
+1. hálózatba kötött, adatvezérelt, intelligens rendszerek
 
 ## Miért fontos?
 
@@ -59,7 +59,8 @@ Előnyök lehetnek:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az Industrie 4.0 a gyártási folyamatok digitalizálását, hálózatba kapcsolását és adatvezérelt optimalizálását jelenti.  
+> Az Industrie 4.0 a gyártási folyamatok digitalizálását,
+> hálózatba kapcsolását és adatvezérelt optimalizálását jelenti.  
 > Tipikus elemei a szenzorok, a gép-gép kommunikáció, a valós idejű adatok és az intelligens gyártási folyamatok.  
 > Előnye a hatékonyság és a rugalmasság, de biztonsági, integrációs és szervezeti kihívásokat is jelent.
 

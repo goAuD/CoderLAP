@@ -60,9 +60,14 @@ Weil Web 2.0 große Veränderungen gebracht hat:
 
 ## Prüfungstaugliche Formulierung
 
-> Web 2.0 bezeichnet jene Phase der Web-Entwicklung, in der Benutzer Inhalte nicht nur konsumieren, sondern auch selbst erstellen und teilen.  
-> Dazu gehören beispielsweise Blogs, Wikis, soziale Netzwerke und andere Plattformen, die auf nutzergeneriertem Inhalt basieren.  
-> Der Vorteil liegt in der Zusammenarbeit und schnellen Kommunikation, das Risiko kann jedoch Datenschutzprobleme, Fake News und Manipulation sein.
+> Web 2.0 bezeichnet jene Phase der Web-Entwicklung,
+> in der Benutzer Inhalte nicht nur konsumieren,
+> sondern auch selbst erstellen und teilen.  
+> Dazu gehören beispielsweise Blogs, Wikis, soziale Netzwerke
+> und andere Plattformen,
+> die auf nutzergeneriertem Inhalt basieren.  
+> Der Vorteil liegt in der Zusammenarbeit und schnellen Kommunikation,
+> das Risiko kann jedoch Datenschutzprobleme, Fake News und Manipulation sein.
 
 ## Häufige Prüfungsfehler
 
@@ -91,6 +96,8 @@ Weil Web 2.0 große Veränderungen gebracht hat:
 
 1. OECD - Participative Web and User-Created Content (PDF)  
    https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/09/participative-web-and-user-created-content_g1gh826c/9789264037472-en.pdf  
-   Verwendung: klassische institutionelle Grundquelle zum Begriff Web 2.0, zur Erklärung von User-Generated Content sowie zu den gesellschaftlichen und wirtschaftlichen Auswirkungen von Web 2.0.
+   Verwendung: klassische institutionelle Grundquelle zum Begriff Web 2.0,
+   zur Erklärung von User-Generated Content sowie zu den gesellschaftlichen
+   und wirtschaftlichen Auswirkungen von Web 2.0.
 
 Abgerufen: `2026-04-08`

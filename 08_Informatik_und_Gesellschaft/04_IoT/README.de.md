@@ -51,9 +51,13 @@ Das Wesentliche an IoT ist, dass Geräte:
 
 ## Prüfungstaugliche Formulierung
 
-> IoT, also das Internet der Dinge, bezeichnet die Vernetzung physischer Geräte, die Daten erfassen, sammeln, kommunizieren und häufig automatisierte Prozesse unterstützen.  
+> IoT, also das Internet der Dinge,
+> bezeichnet die Vernetzung physischer Geräte,
+> die Daten erfassen, sammeln, kommunizieren
+> und häufig automatisierte Prozesse unterstützen.  
 > IoT kommt im Smart Home, in der Industrie, im Gesundheitswesen und in vielen anderen Bereichen vor.  
-> Der Vorteil liegt in der bequemeren Steuerung und den Echtzeitdaten, das Risiko betrifft jedoch die Sicherheit und den Datenschutz.
+> Der Vorteil liegt in der bequemeren Steuerung und den Echtzeitdaten,
+> das Risiko betrifft jedoch die Sicherheit und den Datenschutz.
 
 ## Häufige Prüfungsfehler
 
