@@ -54,7 +54,8 @@ Unterschiedliche Modelle eignen sich für:
 
 ## Prüfungstaugliche Formulierung
 
-> Softwareprozessmodelle sind methodische Rahmenwerke, die festlegen, wie der Softwareentwicklungsprozess aufgebaut ist.  
+> Softwareprozessmodelle sind methodische Rahmenwerke,
+> die festlegen, wie der Softwareentwicklungsprozess aufgebaut ist.  
 > Sie beschreiben die Hauptphasen, deren Reihenfolge und die zugehörigen Ergebnisse.  
 > Mit ihrer Hilfe wird die Entwicklung übersichtlicher, planbarer und besser kontrollierbar.
 

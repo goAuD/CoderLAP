@@ -56,7 +56,9 @@ A hivatalos `V-Modell XT` ezt kibővíti projektirányítási, minőségbiztosí
 ## Vizsgán jól használható megfogalmazás
 
 > A V-modell egy folyamatmodell, amelyben a fejlesztési és a tesztelési tevékenységek egymáshoz vannak rendelve.  
-> A bal oldalon a követelmények és a tervezés található, alul az implementáció, a jobb oldalon pedig a hozzájuk tartozó tesztelési szintek.  
+> A bal oldalon a követelmények és a tervezés található,
+> alul az implementáció,
+> a jobb oldalon pedig a hozzájuk tartozó tesztelési szintek.  
 > A modell fő előnye, hogy a tesztelés már a tervezés korai szakaszában hangsúlyt kap.
 
 ## Gyakori vizsgahibák

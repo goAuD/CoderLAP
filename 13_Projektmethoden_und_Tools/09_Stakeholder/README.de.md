@@ -47,9 +47,13 @@ Der Kunde ist oft ein Stakeholder, aber nicht jeder Stakeholder ist ein Kunde.
 
 ## Prüfungstaugliche Formulierung
 
-> Als Stakeholder bezeichnen wir Personen, Gruppen oder Organisationen, die am Projekt interessiert sind, Einfluss darauf haben oder vom Projekt betroffen sind.  
+> Als Stakeholder bezeichnen wir Personen, Gruppen oder Organisationen,
+> die am Projekt interessiert sind,
+> Einfluss darauf haben oder vom Projekt betroffen sind.  
 > Dazu können z. B. der Auftraggeber, die Benutzer, das Projektteam, das Management oder der Betrieb gehören.  
-> Ziel des Stakeholder-Managements ist die Identifikation der Beteiligten, das Verstehen ihrer Erwartungen und die Sicherstellung einer angemessenen Kommunikation.
+> Ziel des Stakeholder-Managements ist die Identifikation der Beteiligten,
+> das Verstehen ihrer Erwartungen
+> und die Sicherstellung einer angemessenen Kommunikation.
 
 ## Häufige Prüfungsfehler
 

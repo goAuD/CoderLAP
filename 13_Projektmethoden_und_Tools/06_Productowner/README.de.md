@@ -40,8 +40,11 @@ Denn wenn es keine klare Priorität gibt:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Product Owner ist eine der Schlüsselrollen im Scrum-Team und verantwortlich für die Maximierung des Produktwerts.  
-> Dazu gehören die Verwaltung des Product Backlogs, die Festlegung der Prioritäten und die Abstimmung der Stakeholder-Anforderungen.  
+> Der Product Owner ist eine der Schlüsselrollen im Scrum-Team
+> und verantwortlich für die Maximierung des Produktwerts.  
+> Dazu gehören die Verwaltung des Product Backlogs,
+> die Festlegung der Prioritäten
+> und die Abstimmung der Stakeholder-Anforderungen.  
 > Der Product Owner stellt sicher, dass sich das Team mit den wichtigsten und wertschöpfendsten Elementen befasst.
 
 ## Häufige Prüfungsfehler

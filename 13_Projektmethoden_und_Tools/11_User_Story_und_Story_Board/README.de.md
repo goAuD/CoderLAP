@@ -65,7 +65,9 @@ Es kann sein:
 
 ## Prüfungstaugliche Formulierung
 
-> Eine User Story ist eine kurze, aus der Benutzerperspektive formulierte Anforderung, die beschreibt, wer was möchte und zu welchem Zweck.  
+> Eine User Story ist eine kurze,
+> aus der Benutzerperspektive formulierte Anforderung,
+> die beschreibt, wer was möchte und zu welchem Zweck.  
 > Ein Story Board hingegen stellt den Benutzerablauf oder ein Nutzungsszenario visuell dar.  
 > Zusammen unterstützen sie das Verständnis der Anforderungen, die Kommunikation und die Planung.
 

@@ -45,7 +45,9 @@ Dann wird gesucht:
 ## Prüfungstaugliche Formulierung
 
 > Bei der Soll-Ist-Analyse vergleichen wir den aktuellen Zustand mit dem angestrebten Zielzustand.  
-> Ziel der Analyse ist das Erkennen von Abweichungen, die Identifikation von Lücken und die Bestimmung der notwendigen Maßnahmen.  
+> Ziel der Analyse ist das Erkennen von Abweichungen,
+> die Identifikation von Lücken
+> und die Bestimmung der notwendigen Maßnahmen.  
 > Sie kann eine wichtige Grundlage für die Projektplanung und Entwicklungsentscheidungen sein.
 
 ## Häufige Prüfungsfehler

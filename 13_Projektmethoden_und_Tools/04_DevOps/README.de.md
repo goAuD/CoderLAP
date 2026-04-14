@@ -54,9 +54,13 @@ Ziel ist es, dass das Team Software schneller und zuverlässiger liefert.
 
 ## Prüfungstaugliche Formulierung
 
-> DevOps ist ein auf Zusammenarbeit von Entwicklung und Betrieb basierender Ansatz, der Kultur, Prozesse, Praktiken und Werkzeuge gleichermaßen umfasst.  
+> DevOps ist ein auf Zusammenarbeit von Entwicklung und Betrieb basierender Ansatz,
+> der Kultur, Prozesse, Praktiken
+> und Werkzeuge gleichermaßen umfasst.  
 > Ziel ist es, dass Software schneller, zuverlässiger und mit höherem Automatisierungsgrad zu den Nutzern gelangt.  
-> Zu den wichtigen Elementen von DevOps gehören z. B. Versionskontrolle, CI/CD, Infrastrukturautomatisierung, Monitoring und kontinuierliche Rückkopplung.
+> Zu den wichtigen Elementen von DevOps gehören z. B. Versionskontrolle,
+> CI/CD, Infrastrukturautomatisierung, Monitoring
+> und kontinuierliche Rückkopplung.
 
 ## Häufige Prüfungsfehler
 

@@ -56,7 +56,9 @@ Das offizielle `V-Modell XT` erweitert dies um Projektsteuerungs-, Qualitätssic
 ## Prüfungstaugliche Formulierung
 
 > Das V-Modell ist ein Prozessmodell, bei dem Entwicklungs- und Testaktivitäten einander zugeordnet sind.  
-> Auf der linken Seite befinden sich die Anforderungen und der Entwurf, unten die Implementierung und auf der rechten Seite die zugehörigen Teststufen.  
+> Auf der linken Seite befinden sich die Anforderungen und der Entwurf,
+> unten die Implementierung
+> und auf der rechten Seite die zugehörigen Teststufen.  
 > Der Hauptvorteil des Modells ist, dass das Testen bereits in der frühen Planungsphase Gewicht bekommt.
 
 ## Häufige Prüfungsfehler

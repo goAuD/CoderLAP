@@ -18,13 +18,17 @@ Das Modell ist linear:
 - dann Entwicklung
 - danach Test
 
-Das kann in einer stabilen Umgebung funktionieren, aber wenn sich die Anforderungen während des Projekts ändern, kann das Modell schwerfällig werden.
+Das kann in einer stabilen Umgebung funktionieren,
+aber wenn sich die Anforderungen während des Projekts ändern,
+kann das Modell schwerfällig werden.
 
 ## Typische Probleme
 
 ### 1. Änderungen sind teuer
 
-Wenn sich erst spät herausstellt, dass etwas anders gemacht werden müsste, muss auf mehrere frühere Phasen zurückgegriffen werden.
+Wenn sich erst spät herausstellt,
+dass etwas anders gemacht werden müsste,
+muss auf mehrere frühere Phasen zurückgegriffen werden.
 
 ### 2. Der Benutzer sieht spät ein Ergebnis
 
@@ -49,7 +53,9 @@ Es ist also kein schlechtes Modell, nur nicht in jeder Situation ideal.
 ## Prüfungstaugliche Formulierung
 
 > Eines der Hauptprobleme des Wasserfallmodells ist sein starrer, linearer Aufbau.  
-> Sich ändernde Anforderungen werden nur schwer gehandhabt, und Fehler oder Missverständnisse werden oft erst spät erkannt, wenn die Korrektur bereits teurer ist.  
+> Sich ändernde Anforderungen werden nur schwer gehandhabt,
+> und Fehler oder Missverständnisse werden oft erst spät erkannt,
+> wenn die Korrektur bereits teurer ist.  
 > Deshalb ist es bei unsicheren oder sich schnell ändernden Projekten oft weniger vorteilhaft als iterative oder agile Ansätze.
 
 ## Häufige Prüfungsfehler

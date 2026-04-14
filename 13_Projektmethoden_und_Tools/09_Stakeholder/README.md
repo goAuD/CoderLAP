@@ -47,7 +47,9 @@ Az ügyfél sokszor stakeholder, de nem minden stakeholder ügyfél.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Stakeholdernek nevezzük azokat a személyeket, csoportokat vagy szervezeteket, amelyek érdekeltek a projektben, hatással vannak rá, vagy a projekt hatással van rájuk.  
+> Stakeholdernek nevezzük azokat a személyeket,
+> csoportokat vagy szervezeteket, amelyek érdekeltek a projektben,
+> hatással vannak rá, vagy a projekt hatással van rájuk.  
 > Ide tartozhat például a megrendelő, a felhasználó, a projektcsapat, a vezetőség vagy az üzemeltetés.  
 > A stakeholder-kezelés célja az érintettek azonosítása, elvárásaik megértése és a megfelelő kommunikáció biztosítása.
 

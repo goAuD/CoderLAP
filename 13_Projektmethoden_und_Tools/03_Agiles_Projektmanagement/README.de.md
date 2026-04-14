@@ -41,8 +41,11 @@ geführt.
 
 ## Prüfungstaugliche Formulierung
 
-> Agiles Projektmanagement ist ein flexibler Projektführungsansatz, der in kurzen Iterationen, mit häufigem Feedback und kontinuierlicher Priorisierung arbeitet.  
-> Ziel ist es, dass das Team schnell auf sich ändernde Anforderungen reagieren kann, während es regelmäßig Mehrwert liefert.  
+> Agiles Projektmanagement ist ein flexibler Projektführungsansatz,
+> der in kurzen Iterationen, mit häufigem Feedback
+> und kontinuierlicher Priorisierung arbeitet.  
+> Ziel ist es, dass das Team schnell auf sich ändernde Anforderungen reagieren kann,
+> während es regelmäßig Mehrwert liefert.  
 > Agil bedeutet nicht eine einzelne Methode, sondern eine Denkweise, zu der Frameworks wie z. B. Scrum gehören können.
 
 ## Häufige Prüfungsfehler

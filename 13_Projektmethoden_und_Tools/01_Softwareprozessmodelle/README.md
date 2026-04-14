@@ -54,7 +54,8 @@ Más modell lehet jó:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A szoftverfolyamat-modellek olyan módszertani keretek, amelyek meghatározzák, hogyan épül fel a szoftverfejlesztés folyamata.  
+> A szoftverfolyamat-modellek olyan módszertani keretek,
+> amelyek meghatározzák, hogyan épül fel a szoftverfejlesztés folyamata.  
 > Leírják a fő fázisokat, azok sorrendjét és a hozzájuk tartozó eredményeket.  
 > Segítségükkel a fejlesztés átláthatóbbá, tervezhetőbbé és jobban ellenőrizhetővé válik.
 

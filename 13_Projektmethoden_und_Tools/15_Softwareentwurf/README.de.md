@@ -49,7 +49,9 @@ Hier wird unter anderem entschieden:
 ## Prüfungstaugliche Formulierung
 
 > Der Softwareentwurf ist der Plan für die technische Umsetzung der Anforderungen.  
-> Er legt den Aufbau des Systems, die Komponenten, die Schnittstellen, die Datenverarbeitung und die wichtigen Entwurfsentscheidungen fest.  
+> Er legt den Aufbau des Systems, die Komponenten, die Schnittstellen,
+> die Datenverarbeitung
+> und die wichtigen Entwurfsentscheidungen fest.  
 > Sein Ziel ist es, dass die Entwicklung übersichtlich, erweiterbar und wartbar ist.
 
 ## Häufige Prüfungsfehler
