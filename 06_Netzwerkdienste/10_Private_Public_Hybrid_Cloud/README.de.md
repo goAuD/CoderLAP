@@ -67,7 +67,10 @@ Weil die Wahl des richtigen Modells abhängen kann von:
 ## Prüfungstaugliche Formulierung
 
 > Private, Public und Hybrid Cloud sind die Deployment-Modelle der Cloud.  
-> Die Private Cloud ist eine an eine Organisation gebundene Umgebung mit größerer Kontrolle, die Public Cloud ist eine von einem externen Dienstleister bereitgestellte Lösung, und die Hybrid Cloud ist eine Kombination davon.  
+> Die Private Cloud ist eine an eine Organisation gebundene Umgebung
+> mit größerer Kontrolle,
+> die Public Cloud ist eine von einem externen Dienstleister bereitgestellte Lösung,
+> und die Hybrid Cloud ist eine Kombination davon.  
 > Bei der Wahl sind Kosten, Flexibilität, Sicherheit und Compliance wichtige Aspekte.
 
 ## Häufige Prüfungsfehler

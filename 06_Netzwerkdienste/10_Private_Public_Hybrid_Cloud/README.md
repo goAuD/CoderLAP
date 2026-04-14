@@ -67,7 +67,9 @@ Mert a megfelelő modell kiválasztása függhet:
 ## Vizsgán jól használható megfogalmazás
 
 > A private, public és hybrid cloud a cloud telepítési modelljei.  
-> A private cloud egy szervezethez kötött, nagyobb kontrollt adó környezet, a public cloud külső szolgáltató által biztosított megoldás, míg a hybrid cloud ezek kombinációja.  
+> A private cloud egy szervezethez kötött, nagyobb kontrollt adó környezet,
+> a public cloud külső szolgáltató által biztosított megoldás,
+> míg a hybrid cloud ezek kombinációja.  
 > A választásnál fontos szempont a költség, a rugalmasság, a biztonság és a compliance.
 
 ## Gyakori vizsgahibák

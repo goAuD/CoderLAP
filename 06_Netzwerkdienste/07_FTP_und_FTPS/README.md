@@ -62,7 +62,9 @@ Pedig ezek nem ugyanazok.
 ## Vizsgán jól használható megfogalmazás
 
 > Az FTP klasszikus fájlátviteli protokoll kliens és szerver között.  
-> A sima FTP nem nyújt megfelelő modern titkosítást, ezért biztonságosabb alternatíva az FTPS, amely TLS-sel védi a kapcsolatot.  
+> A sima FTP nem nyújt megfelelő modern titkosítást,
+> ezért biztonságosabb alternatíva az FTPS,
+> amely TLS-sel védi a kapcsolatot.  
 > Az FTPS nem ugyanaz, mint az SSH-alapú SFTP.
 
 ## Gyakori vizsgahibák

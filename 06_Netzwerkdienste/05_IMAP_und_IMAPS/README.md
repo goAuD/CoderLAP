@@ -63,7 +63,8 @@ szükséges.
 ## Vizsgán jól használható megfogalmazás
 
 > Az IMAP egy levelezési protokoll, amely a szerveren tárolt levelek és mappák szinkronizálására szolgál.  
-> Több eszköz használatánál általában előnyösebb, mint a POP3, mert a levelek és állapotok központilag a szerveren maradnak.  
+> Több eszköz használatánál általában előnyösebb, mint a POP3,
+> mert a levelek és állapotok központilag a szerveren maradnak.  
 > Az IMAPS az IMAP TLS-sel védett, biztonságos változata.
 
 ## Gyakori vizsgahibák

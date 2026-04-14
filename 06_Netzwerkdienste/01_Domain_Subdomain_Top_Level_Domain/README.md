@@ -75,7 +75,8 @@ Ez vizsgán tipikus alapfogalom.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A domainnév az interneten használt hierarchikus név, amely emberbarát módon azonosít egy szolgáltatást vagy erőforrást.  
+> A domainnév az interneten használt hierarchikus név,
+> amely emberbarát módon azonosít egy szolgáltatást vagy erőforrást.  
 > A domain több részből állhat: a legfelső szintű rész a TLD, a domain alatt pedig további subdomainek hozhatók létre.  
 > Például a `developer.mozilla.org` névben az `org` a TLD, a `mozilla` a domain része, a `developer` pedig subdomain.
 

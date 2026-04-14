@@ -59,7 +59,9 @@ Weil bei Prüfungen häufig gefragt wird:
 ## Prüfungstaugliche Formulierung
 
 > Das E-Mail-System besteht aus mehreren Komponenten.  
-> Der Benutzer schreibt und liest E-Mails mit einem Client, das Einliefern und Weiterleiten erfolgt per SMTP, und für den Zugriff auf eingehende E-Mails dient typischerweise IMAP oder POP3.  
+> Der Benutzer schreibt und liest E-Mails mit einem Client,
+> das Einliefern und Weiterleiten erfolgt per SMTP,
+> und für den Zugriff auf eingehende E-Mails dient typischerweise IMAP oder POP3.  
 > Der Mailserver speichert also nicht nur, sondern empfängt, leitet weiter und stellt auch zu.
 
 ## Häufige Prüfungsfehler

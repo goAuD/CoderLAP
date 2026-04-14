@@ -75,8 +75,12 @@ Das kann je nach Modell variieren:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der Auswahl eines Cloud-Dienstes muss man nicht nur Funktionalität und Preis betrachten, sondern auch Sicherheit, Compliance, Datenstandort, Verfügbarkeit, Kostenmodell, Skalierbarkeit und das Vendor-Lock-in-Risiko.  
-> Darüber hinaus ist es wichtig, das Shared-Responsibility-Modell zu verstehen, also dass sich die Sicherheitsverantwortung zwischen Dienstleister und Kunde aufteilt.
+> Bei der Auswahl eines Cloud-Dienstes muss man nicht nur Funktionalität und Preis betrachten,
+> sondern auch Sicherheit, Compliance, Datenstandort, Verfügbarkeit,
+> Kostenmodell, Skalierbarkeit und das Vendor-Lock-in-Risiko.  
+> Darüber hinaus ist es wichtig, das Shared-Responsibility-Modell zu verstehen,
+> also dass sich die Sicherheitsverantwortung
+> zwischen Dienstleister und Kunde aufteilt.
 
 ## Häufige Prüfungsfehler
 

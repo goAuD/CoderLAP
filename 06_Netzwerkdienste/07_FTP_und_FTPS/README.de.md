@@ -62,7 +62,9 @@ Dabei sind das nicht dasselbe.
 ## Prüfungstaugliche Formulierung
 
 > FTP ist ein klassisches Dateiübertragungsprotokoll zwischen Client und Server.  
-> Einfaches FTP bietet keine angemessene moderne Verschlüsselung, daher ist FTPS die sicherere Alternative, die die Verbindung mit TLS schützt.  
+> Einfaches FTP bietet keine angemessene moderne Verschlüsselung,
+> daher ist FTPS die sicherere Alternative,
+> die die Verbindung mit TLS schützt.  
 > FTPS ist nicht dasselbe wie das SSH-basierte SFTP.
 
 ## Häufige Prüfungsfehler

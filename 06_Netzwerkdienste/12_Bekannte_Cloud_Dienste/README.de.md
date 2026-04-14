@@ -64,7 +64,10 @@ Zum Beispiel:
 
 ## Prüfungstaugliche Formulierung
 
-> Bekannte Cloud-Dienste sind zum Beispiel AWS, Microsoft Azure und Google Cloud als Infrastruktur- und Plattformanbieter sowie Microsoft 365, Google Workspace, iCloud oder Dropbox als eher SaaS- oder Endbenutzer-Cloud-Lösungen.  
+> Bekannte Cloud-Dienste sind zum Beispiel AWS, Microsoft Azure und Google Cloud
+> als Infrastruktur- und Plattformanbieter sowie Microsoft 365,
+> Google Workspace, iCloud oder Dropbox
+> als eher SaaS- oder Endbenutzer-Cloud-Lösungen.  
 > Bei der Prüfung ist es wichtig, das Beispiel eines Dienstes dem richtigen Cloud-Modell zuordnen zu können.
 
 ## Häufige Prüfungsfehler
