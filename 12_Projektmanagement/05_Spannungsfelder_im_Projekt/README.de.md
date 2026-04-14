@@ -41,9 +41,13 @@ Weil der Projektleiter immer abwägen muss zwischen:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Spannungsfelder im Projekt bedeuten, dass die Haupteinschränkungen des Projekts - wie Zeit, Kosten und Umfang - miteinander zusammenhängen.  
+> Die Spannungsfelder im Projekt bedeuten,
+> dass die Haupteinschränkungen des Projekts
+> wie Zeit, Kosten und Umfang miteinander zusammenhängen.  
 > Wenn sich ein Faktor ändert, wirkt sich das in der Regel auch auf die anderen aus.  
-> Deshalb ist es eine wichtige Aufgabe des Projektmanagements, zwischen diesen Erwartungen ein Gleichgewicht zu schaffen, während das gewünschte Ergebnis und die Qualität erhalten bleiben.
+> Deshalb ist es eine wichtige Aufgabe des Projektmanagements,
+> zwischen diesen Erwartungen ein Gleichgewicht zu schaffen,
+> während das gewünschte Ergebnis und die Qualität erhalten bleiben.
 
 ## Häufige Prüfungsfehler
 

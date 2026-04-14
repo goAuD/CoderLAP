@@ -51,7 +51,8 @@ Typischerweise:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Pflichtenheft ist die detaillierte Beschreibung der Umsetzung, die festhält, wie die vom Auftraggeber vorgegebenen Anforderungen erfüllt werden.  
+> Das Pflichtenheft ist die detaillierte Beschreibung der Umsetzung,
+> die festhält, wie die vom Auftraggeber vorgegebenen Anforderungen erfüllt werden.  
 > Typischerweise wird es von der Auftragnehmer- bzw. Entwicklerseite auf Basis des Lastenhefts erarbeitet.  
 > Seine wichtige Rolle besteht darin, eine technisch eindeutige Grundlage für Entwicklung, Test und spätere Abnahme zu bieten.
 
@@ -86,6 +87,8 @@ Typischerweise:
 
 2. Wikipedia - Pflichtenheft  
    https://de.wikipedia.org/wiki/Pflichtenheft  
-   Verwendung: gut strukturierte Zusammenfassung des Pflichtenheft-Begriffs, Inhalts und der praktischen Anwendung, gestützt auf DIN 69901 und VDI-Referenzen.
+   Verwendung: gut strukturierte Zusammenfassung des Pflichtenheft-Begriffs,
+   Inhalts und der praktischen Anwendung,
+   gestützt auf DIN 69901 und VDI-Referenzen.
 
 Abgerufen: `2026-04-08`

@@ -47,8 +47,13 @@
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projektköltség-tervezés során meghatározzuk a projekt várható pénzügyi igényeit, például a személyi ráfordítást, az eszközöket, licenceket, szolgáltatásokat és a szükséges tartalékot.  
-> Célja, hogy a projekt reális költségkerettel induljon, a pénzügyi kockázatok láthatók legyenek, és a projekt során a költségek követhetők maradjanak.
+> A projektköltség-tervezés során meghatározzuk
+> a projekt várható pénzügyi igényeit,
+> például a személyi ráfordítást, az eszközöket,
+> licenceket, szolgáltatásokat és a szükséges tartalékot.  
+> Célja, hogy a projekt reális költségkerettel induljon,
+> a pénzügyi kockázatok láthatók legyenek,
+> és a projekt során a költségek követhetők maradjanak.
 
 ## Gyakori vizsgahibák
 

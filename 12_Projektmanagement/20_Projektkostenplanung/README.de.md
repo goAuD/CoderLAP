@@ -47,8 +47,13 @@
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der Projektkostenplanung werden die voraussichtlichen finanziellen Bedarfe des Projekts bestimmt, zum Beispiel Personalaufwand, Werkzeuge, Lizenzen, Dienstleistungen und die nötige Reserve.  
-> Ihr Ziel ist es, dass das Projekt mit einem realistischen Kostenrahmen startet, finanzielle Risiken sichtbar sind und die Kosten im Projektverlauf nachverfolgbar bleiben.
+> Bei der Projektkostenplanung werden
+> die voraussichtlichen finanziellen Bedarfe des Projekts bestimmt,
+> zum Beispiel Personalaufwand, Werkzeuge, Lizenzen,
+> Dienstleistungen und die nötige Reserve.  
+> Ihr Ziel ist es, dass das Projekt mit einem realistischen Kostenrahmen startet,
+> finanzielle Risiken sichtbar sind
+> und die Kosten im Projektverlauf nachverfolgbar bleiben.
 
 ## Häufige Prüfungsfehler
 

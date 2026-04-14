@@ -37,7 +37,9 @@
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Meilenstein ist eine wichtige Station des Projekts, die das Erreichen eines bedeutenden Ergebnisses oder Zustands anzeigt.  
+> Ein Meilenstein ist eine wichtige Station des Projekts,
+> die das Erreichen eines bedeutenden Ergebnisses
+> oder Zustands anzeigt.  
 > Er steht nicht für einen längeren Arbeitsprozess, sondern eher für einen Kontroll- oder Kommunikationspunkt.  
 > Meilensteine helfen bei der Nachverfolgung des Projektfortschritts und bei der Stakeholder-Kommunikation.
 

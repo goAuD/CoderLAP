@@ -45,7 +45,11 @@ Mert a projektdokumentáció nem egyetlen fájl, hanem **dokumentumrendszer**.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Egy projekt dokumentációjához többféle dokumentum tartozik, például a projektauftrag, a követelménydokumentumok, a projektterv, a projektstrukturaterv, a státuszriportok, a jegyzőkönyvek, valamint a teszt- és átadási dokumentációk.  
+> Egy projekt dokumentációjához többféle dokumentum tartozik,
+> például a projektauftrag, a követelménydokumentumok,
+> a projektterv, a projektstrukturaterv, a státuszriportok,
+> a jegyzőkönyvek, valamint a teszt-
+> és átadási dokumentációk.  
 > Ezek együtt biztosítják, hogy a projekt indítása, tervezése, megvalósítása és lezárása átlátható és visszakövethető legyen.
 
 ## Gyakori vizsgahibák

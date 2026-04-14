@@ -45,8 +45,13 @@ Wenn es keine Dokumentation gibt:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Ziel der Projektdokumentation ist es, dass die wesentlichen Informationen des Projekts transparent, einheitlich und auffindbar zur Verfügung stehen.  
-> Dies unterstützt die Kommunikation, die Nachvollziehbarkeit von Entscheidungen, die Wissenserhaltung, die Projektkontrolle sowie die spätere Übergabe oder Wartung.  
+> Das Ziel der Projektdokumentation ist es,
+> dass die wesentlichen Informationen des Projekts transparent,
+> einheitlich und auffindbar zur Verfügung stehen.  
+> Dies unterstützt die Kommunikation,
+> die Nachvollziehbarkeit von Entscheidungen,
+> die Wissenserhaltung, die Projektkontrolle
+> sowie die spätere Übergabe oder Wartung.  
 > Gute Projektdokumentation ist also keine bloße Administration, sondern ein wichtiger Teil des Projekterfolgs.
 
 ## Häufige Prüfungsfehler

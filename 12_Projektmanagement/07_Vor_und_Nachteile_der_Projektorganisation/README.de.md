@@ -39,8 +39,11 @@ Es bedeutet, dass dem Projekt:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Vorteil der Projektorganisation ist, dass sie die Verantwortlichkeiten klarer macht, die Koordination verbessert und dem Projekt einen stärkeren Fokus gibt.  
-> Nachteilig kann jedoch der größere Organisationsaufwand sein, Ressourcenkonflikte und die Entstehung paralleler Organisationsstrukturen.  
+> Der Vorteil der Projektorganisation ist,
+> dass sie die Verantwortlichkeiten klarer macht,
+> die Koordination verbessert und dem Projekt einen stärkeren Fokus gibt.  
+> Nachteilig kann jedoch der größere Organisationsaufwand sein,
+> Ressourcenkonflikte und die Entstehung paralleler Organisationsstrukturen.  
 > Bei komplexeren Projekten ist sie besonders nützlich, bei kleineren Aufgaben kann sie aber auch zu schwerfällig sein.
 
 ## Häufige Prüfungsfehler

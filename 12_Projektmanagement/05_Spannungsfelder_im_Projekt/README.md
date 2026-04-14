@@ -43,9 +43,13 @@ között.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projekt feszültségterei azt jelentik, hogy a projekt fő korlátai, például az idő, költség és terjedelem egymással összefüggnek.  
+> A projekt feszültségterei azt jelentik,
+> hogy a projekt fő korlátai, például az idő, költség és terjedelem
+> egymással összefüggnek.  
 > Ha az egyik tényező megváltozik, az rendszerint kihat a többire is.  
-> Ezért a projektmenedzsment egyik fontos feladata, hogy ezek között az elvárások között egyensúlyt teremtsen, miközben a kívánt eredmény és minőség is megmarad.
+> Ezért a projektmenedzsment egyik fontos feladata,
+> hogy ezek között az elvárások között egyensúlyt teremtsen,
+> miközben a kívánt eredmény és minőség is megmarad.
 
 ## Gyakori vizsgahibák
 

@@ -40,7 +40,8 @@ Denn ohne sie kann leicht passieren:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Aufgabe des Projektleiters ist die Planung, Koordination, Überwachung und Sicherstellung der Kommunikation des Projekts.  
+> Die Aufgabe des Projektleiters ist die Planung, Koordination,
+> Überwachung und Sicherstellung der Kommunikation des Projekts.  
 > Er überwacht Fristen, Kosten, Ressourcen, Meilensteine und Risiken und managt Probleme und Änderungen.  
 > Der Projektleiter erledigt also nicht unbedingt selbst die fachliche Arbeit, sondern führt und steuert das gesamte Projekt.
 

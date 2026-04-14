@@ -53,8 +53,11 @@ Deshalb umfasst Projektmanagement typischerweise:
 ## Prüfungstaugliche Formulierung
 
 > Projektmanagement bedeutet die bewusste Planung, Steuerung, Koordination und Kontrolle eines Projekts.  
-> Ziel ist es, dass das Projekt das definierte Ergebnis innerhalb der verfügbaren Zeit, des Budgets und der Ressourcen erreicht.  
-> Zum Projektmanagement gehören unter anderem Planung, Kommunikation, Aufgabenverteilung, Risikomanagement und laufende Überwachung.
+> Ziel ist es, dass das Projekt das definierte Ergebnis innerhalb
+> der verfügbaren Zeit, des Budgets und der Ressourcen erreicht.  
+> Zum Projektmanagement gehören unter anderem Planung,
+> Kommunikation, Aufgabenverteilung, Risikomanagement
+> und laufende Überwachung.
 
 ## Häufige Prüfungsfehler
 

@@ -39,8 +39,14 @@ Ezért a soft skillek nagyon fontosak.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Egy jó projektvezető fontos tulajdonságai közé tartozik a jó kommunikáció, a szervezettség, a döntésképesség, a felelősségtudat, a problémamegoldó szemlélet és a stressztűrés.  
-> Mivel a projektvezetőnek embereket, feladatokat, elvárásokat és konfliktusokat is kezelnie kell, a szakmai tudás mellett az emberi és vezetői készségek is kulcsfontosságúak.
+> Egy jó projektvezető fontos tulajdonságai közé tartozik
+> a jó kommunikáció, a szervezettség, a döntésképesség,
+> a felelősségtudat, a problémamegoldó szemlélet
+> és a stressztűrés.  
+> Mivel a projektvezetőnek embereket, feladatokat,
+> elvárásokat és konfliktusokat is kezelnie kell,
+> a szakmai tudás mellett az emberi
+> és vezetői készségek is kulcsfontosságúak.
 
 ## Gyakori vizsgahibák
 
