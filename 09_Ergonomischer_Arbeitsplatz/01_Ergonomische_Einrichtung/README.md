@@ -73,7 +73,9 @@ Mert segíthet megelőzni:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az ergonomikus munkahely kialakításának célja, hogy a munkaeszközök és a környezet az emberi test adottságaihoz igazodjanak.  
+> Az ergonomikus munkahely kialakításának célja,
+> hogy a munkaeszközök és a környezet
+> az emberi test adottságaihoz igazodjanak.  
 > Fontos a megfelelő szék, asztal, monitor, billentyűzet, egér, lábtér és a jó fényviszony.  
 > Az ergonomikus berendezés csökkenti a túlterhelést és segíthet megelőzni a hát-, nyak- és szempanaszokat.
 
