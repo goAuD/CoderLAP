@@ -60,9 +60,11 @@ Weil gute Datenanalyse helfen kann:
 
 ## Prüfungstaugliche Formulierung
 
-> Big Data bezeichnet die Verarbeitung und Analyse großer Mengen von Daten, die schnell entstehen und aus vielfältigen Quellen stammen.  
+> Big Data bezeichnet die Verarbeitung und Analyse großer Mengen von Daten,
+> die schnell entstehen und aus vielfältigen Quellen stammen.  
 > Der Begriff wird häufig mit den Merkmalen `Volume`, `Velocity` und `Variety` beschrieben.  
-> Der Vorteil besteht darin, dass wertvolle Informationen gewonnen werden können, gleichzeitig birgt es jedoch Risiken in Bezug auf Datenschutz, Qualität und Ethik.
+> Der Vorteil besteht darin, dass wertvolle Informationen gewonnen werden können,
+> gleichzeitig birgt es jedoch Risiken in Bezug auf Datenschutz, Qualität und Ethik.
 
 ## Häufige Prüfungsfehler
 

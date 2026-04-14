@@ -80,8 +80,13 @@ Die "Do Not Track"-Funktion oder ähnliche Funktionen im Browser:
 
 ## Prüfungstaugliche Formulierung
 
-> Beim Cookie-Tracking können Websites oder Drittanbieter mithilfe von Cookies und ähnlichen Technologien das Online-Verhalten der Benutzer verfolgen.  
-> Zum Schutz ist es wichtig, nicht notwendige Cookies abzulehnen, Drittanbieter-Cookies einzuschränken, die Privacy-Einstellungen des Browsers zu nutzen und bei Bedarf Trackerblocker-Tools einzusetzen.  
+> Beim Cookie-Tracking können Websites oder Drittanbieter
+> mithilfe von Cookies und ähnlichen Technologien
+> das Online-Verhalten der Benutzer verfolgen.  
+> Zum Schutz ist es wichtig, nicht notwendige Cookies abzulehnen,
+> Drittanbieter-Cookies einzuschränken,
+> die Privacy-Einstellungen des Browsers zu nutzen
+> und bei Bedarf Trackerblocker-Tools einzusetzen.  
 > Aus Datenschutzsicht sind besonders Marketing und Cross-Site-Tracking problematisch.
 
 ## Häufige Prüfungsfehler
@@ -111,7 +116,8 @@ Die "Do Not Track"-Funktion oder ähnliche Funktionen im Browser:
 
 1. ICO - Cookies  
    https://ico.org.uk/for-the-public/online/cookies/  
-   Verwendung: offizielle, allgemein verständliche Quelle darüber, was Cookies sind und wie man sie nutzerseitig verwalten kann.
+   Verwendung: offizielle, allgemein verständliche Quelle darüber,
+   was Cookies sind und wie man sie nutzerseitig verwalten kann.
 
 2. ICO - Cookies and similar technologies  
    https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/  

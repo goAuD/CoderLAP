@@ -60,7 +60,8 @@ Mert a jó adatelemzés segíthet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Big Data nagy mennyiségű, gyorsan keletkező és sokféle forrásból származó adatok feldolgozását és elemzését jelenti.  
+> A Big Data nagy mennyiségű, gyorsan keletkező
+> és sokféle forrásból származó adatok feldolgozását és elemzését jelenti.  
 > A fogalmat gyakran a `Volume`, `Velocity` és `Variety` jellemzőkkel írják le.  
 > Előnye, hogy értékes információ nyerhető ki belőle, ugyanakkor adatvédelmi, minőségi és etikai kockázatokat is hordoz.
 

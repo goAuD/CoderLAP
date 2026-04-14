@@ -61,9 +61,13 @@ Weil wenn die Netzneutralität verletzt wird:
 
 ## Prüfungstaugliche Formulierung
 
-> Netzneutralität bezeichnet das Prinzip, dass der Internetanbieter den Datenverkehr grundsätzlich gleich behandelt und bestimmte Online-Dienste nicht willkürlich bevorzugt oder benachteiligt.  
+> Netzneutralität bezeichnet das Prinzip,
+> dass der Internetanbieter den Datenverkehr grundsätzlich gleich behandelt
+> und bestimmte Online-Dienste nicht willkürlich bevorzugt oder benachteiligt.  
 > Dies ist für das offene Internet, den Wettbewerb und die Innovation wichtig.  
-> Begrenztes, begründetes und transparentes Verkehrsmanagement ist in bestimmten Fällen möglich, aber das Hauptprinzip ist die Gleichbehandlung.
+> Begrenztes, begründetes und transparentes Verkehrsmanagement
+> ist in bestimmten Fällen möglich,
+> aber das Hauptprinzip ist die Gleichbehandlung.
 
 ## Häufige Prüfungsfehler
 

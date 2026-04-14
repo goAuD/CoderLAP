@@ -60,9 +60,12 @@ Mert a Web 2.0 nagy változást hozott:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Web 2.0 a web fejlődésének azt a szakaszát jelöli, amelyben a felhasználók már nemcsak fogyasztják, hanem létre is hozzák és megosztják a tartalmat.  
+> A Web 2.0 a web fejlődésének azt a szakaszát jelöli,
+> amelyben a felhasználók már nemcsak fogyasztják,
+> hanem létre is hozzák és megosztják a tartalmat.  
 > Ide tartoznak például a blogok, wikik, közösségi oldalak és más felhasználói tartalomra épülő platformok.  
-> Előnye az együttműködés és a gyors kommunikáció, kockázata viszont az adatvédelmi probléma, az álhír és a manipuláció lehet.
+> Előnye az együttműködés és a gyors kommunikáció,
+> kockázata viszont az adatvédelmi probléma, az álhír és a manipuláció lehet.
 
 ## Gyakori vizsgahibák
 
@@ -91,6 +94,8 @@ Mert a Web 2.0 nagy változást hozott:
 
 1. OECD - Participative Web and User-Created Content (PDF)  
    https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/09/participative-web-and-user-created-content_g1gh826c/9789264037472-en.pdf  
-   Használat: klasszikus intézményi alapforrás a Web 2.0 fogalmához, a user-generated content magyarázatához, valamint a Web 2.0 társadalmi és gazdasági hatásaihoz.
+   Használat: klasszikus intézményi alapforrás a Web 2.0 fogalmához,
+   a user-generated content magyarázatához,
+   valamint a Web 2.0 társadalmi és gazdasági hatásaihoz.
 
 Megnyitva: `2026-04-08`

@@ -74,9 +74,16 @@ Daher ist ihre Verwendung nicht "nur technisch", sondern auch eine Datenschutzfr
 
 ## Prüfungstaugliche Formulierung
 
-> Biometrische Daten, wie zum Beispiel Fingerabdruck, Gesichtsbild oder Stimmprobe, können eine bequeme und schnelle Identifizierung ermöglichen.  
-> Gleichzeitig handelt es sich um besonders sensible personenbezogene Daten, weshalb ihre Nutzung Fragen des Datenschutzes, der Sicherheit und der Fairness aufwirft.  
-> Ein Risiko kann die fehlerhafte Erkennung, das verzerrte Funktionieren und auch die Tatsache sein, dass ein biometrisches Merkmal bei Kompromittierung nicht so einfach ausgetauscht werden kann wie ein Passwort.
+> Biometrische Daten, wie zum Beispiel Fingerabdruck,
+> Gesichtsbild oder Stimmprobe,
+> können eine bequeme und schnelle Identifizierung ermöglichen.  
+> Gleichzeitig handelt es sich um besonders sensible personenbezogene Daten,
+> weshalb ihre Nutzung Fragen des Datenschutzes,
+> der Sicherheit und der Fairness aufwirft.  
+> Ein Risiko kann die fehlerhafte Erkennung,
+> das verzerrte Funktionieren und auch die Tatsache sein,
+> dass ein biometrisches Merkmal bei Kompromittierung
+> nicht so einfach ausgetauscht werden kann wie ein Passwort.
 
 ## Häufige Prüfungsfehler
 

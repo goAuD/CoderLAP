@@ -86,7 +86,9 @@ Das bedeutet in der Praxis:
 
 > E-Government bezeichnet die digitale Abwicklung von Behördenangelegenheiten.  
 > Die elektronische Signatur ermöglicht es, bestimmte Dokumente digital und rechtsverbindlich zu unterschreiben.  
-> In Österreich wurde die frühere Handy-Signatur am 5. Dezember 2023 durch ID Austria abgelöst, daher ist ID Austria heute die aktuelle Lösung.
+> In Österreich wurde die frühere Handy-Signatur
+> am 5. Dezember 2023 durch ID Austria abgelöst,
+> daher ist ID Austria heute die aktuelle Lösung.
 
 ## Häufige Prüfungsfehler
 

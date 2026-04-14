@@ -59,7 +59,10 @@ Mert ha a net neutrality sérül:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A net neutrality, vagyis hálózatsemlegesség azt az elvet jelenti, hogy az internetszolgáltató a forgalmat alapvetően egyenlően kezelje, és ne részesítsen előnyben vagy hátrányban bizonyos online szolgáltatásokat önkényesen.  
+> A net neutrality, vagyis hálózatsemlegesség azt az elvet jelenti,
+> hogy az internetszolgáltató a forgalmat alapvetően egyenlően kezelje,
+> és ne részesítsen előnyben
+> vagy hátrányban bizonyos online szolgáltatásokat önkényesen.  
 > Ez a nyílt internet, a verseny és az innováció szempontjából fontos.  
 > Korlátozott, indokolt és átlátható forgalomkezelés bizonyos esetekben lehetséges, de a fő elv az egyenlő bánásmód.
 
