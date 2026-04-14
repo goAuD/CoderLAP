@@ -54,9 +54,13 @@ Célja, hogy a csapat gyorsabban és megbízhatóbban szállítson szoftvert.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A DevOps a fejlesztés és üzemeltetés együttműködésére épülő szemlélet, amely kultúrát, folyamatokat, gyakorlatokat és eszközöket egyaránt magában foglal.  
+> A DevOps a fejlesztés és üzemeltetés együttműködésére épülő szemlélet,
+> amely kultúrát, folyamatokat, gyakorlatokat
+> és eszközöket egyaránt magában foglal.  
 > Célja, hogy a szoftver gyorsabban, megbízhatóbban és nagyobb automatizáltsággal jusson el a felhasználókhoz.  
-> A DevOps fontos elemei közé tartozik például a verziókezelés, a CI/CD, az infrastruktúra automatizálása, a monitorozás és a folyamatos visszacsatolás.
+> A DevOps fontos elemei közé tartozik például a verziókezelés,
+> a CI/CD, az infrastruktúra automatizálása,
+> a monitorozás és a folyamatos visszacsatolás.
 
 ## Gyakori vizsgahibák
 

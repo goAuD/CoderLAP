@@ -42,8 +42,11 @@ Eher:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Scrum Master ist eine unterstützende Rolle im Scrum-Team, die sicherstellt, dass das Scrum-Framework korrekt funktioniert.  
-> Er unterstützt das Team bei der Selbstorganisation, begleitet die Scrum-Events und wirkt bei der Beseitigung von Hindernissen mit.  
+> Der Scrum Master ist eine unterstützende Rolle im Scrum-Team,
+> die sicherstellt, dass das Scrum-Framework korrekt funktioniert.  
+> Er unterstützt das Team bei der Selbstorganisation,
+> begleitet die Scrum-Events
+> und wirkt bei der Beseitigung von Hindernissen mit.  
 > Es handelt sich nicht um eine klassische Vorgesetztenrolle, sondern um eine facilitative und unterstützende Funktion.
 
 ## Häufige Prüfungsfehler

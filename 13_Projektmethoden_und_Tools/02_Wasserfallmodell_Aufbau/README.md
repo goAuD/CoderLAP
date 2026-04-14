@@ -53,7 +53,9 @@ Ezért a modell:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A vízesésmodell egy lineáris szoftverfolyamat-modell, amelyben a fejlesztés fő fázisai jellemzően egymás után következnek.  
+> A vízesésmodell egy lineáris szoftverfolyamat-modell,
+> amelyben a fejlesztés fő fázisai
+> jellemzően egymás után következnek.  
 > Tipikus fázisai a követelményelemzés, tervezés, implementáció, tesztelés, bevezetés és karbantartás.  
 > Előnye az átlátható szerkezet, hátránya pedig az, hogy kevésbé rugalmas, ha a követelmények menet közben változnak.
 

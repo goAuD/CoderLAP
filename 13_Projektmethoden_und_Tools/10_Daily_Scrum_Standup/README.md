@@ -51,7 +51,9 @@ Fontos: ez hasznos minta, de a lényeg a sprintcél körüli napi újratervezés
 ## Vizsgán jól használható megfogalmazás
 
 > A Daily Scrum egy rövid, napi egyeztetés a Scrum csapat számára.  
-> Célja, hogy a csapat összehangolja a munkát, lássa az akadályokat, és a sprintcél érdekében szükség esetén módosítsa a napi tervet.  
+> Célja, hogy a csapat összehangolja a munkát,
+> lássa az akadályokat,
+> és a sprintcél érdekében szükség esetén módosítsa a napi tervet.  
 > Nem hosszú státuszmeeting, hanem fókuszált, rövid szinkronizálás.
 
 ## Gyakori vizsgahibák

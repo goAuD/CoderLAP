@@ -51,7 +51,9 @@ Wichtig: Das ist ein nützliches Muster, aber das Wesentliche ist die tägliche 
 ## Prüfungstaugliche Formulierung
 
 > Das Daily Scrum ist eine kurze, tägliche Abstimmung für das Scrum-Team.  
-> Ziel ist es, dass das Team die Arbeit koordiniert, Hindernisse erkennt und bei Bedarf den täglichen Plan im Sinne des Sprintziels anpasst.  
+> Ziel ist es, dass das Team die Arbeit koordiniert,
+> Hindernisse erkennt und bei Bedarf
+> den täglichen Plan im Sinne des Sprintziels anpasst.  
 > Es ist kein langes Statusmeeting, sondern eine fokussierte, kurze Synchronisation.
 
 ## Häufige Prüfungsfehler

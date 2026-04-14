@@ -41,9 +41,13 @@ vezetjük.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az agilis projektmenedzsment olyan rugalmas projektvezetési megközelítés, amely rövid iterációkban, gyakori visszajelzéssel és folyamatos priorizálással dolgozik.  
+> Az agilis projektmenedzsment olyan rugalmas projektvezetési megközelítés,
+> amely rövid iterációkban, gyakori visszajelzéssel
+> és folyamatos priorizálással dolgozik.  
 > Célja, hogy a csapat gyorsan tudjon reagálni a változó igényekre, miközben rendszeresen értéket szállít.  
-> Az agilis nem egyetlen módszert jelent, hanem egy szemléletet, amelyhez olyan keretrendszerek tartozhatnak, mint például a Scrum.
+> Az agilis nem egyetlen módszert jelent,
+> hanem egy szemléletet, amelyhez olyan keretrendszerek tartozhatnak,
+> mint például a Scrum.
 
 ## Gyakori vizsgahibák
 
