@@ -67,7 +67,9 @@ Weil sich unterscheiden:
 ## Prüfungstaugliche Formulierung
 
 > IaaS, PaaS und SaaS sind die Servicemodelle der Cloud.  
-> Bei IaaS stellt der Dienstleister hauptsächlich Infrastruktur bereit, bei PaaS bietet er eine Plattform zum Betrieb von Anwendungen, und bei SaaS nutzt der Benutzer fertige Software.  
+> Bei IaaS stellt der Dienstleister hauptsächlich Infrastruktur bereit,
+> bei PaaS bietet er eine Plattform zum Betrieb von Anwendungen,
+> und bei SaaS nutzt der Benutzer fertige Software.  
 > Je höherstufig der Dienst, desto weniger technische Betriebsaufgaben verbleiben in der Regel beim Kunden.
 
 ## Häufige Prüfungsfehler

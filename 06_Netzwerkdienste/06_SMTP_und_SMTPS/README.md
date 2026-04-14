@@ -65,7 +65,8 @@ használatos.
 ## Vizsgán jól használható megfogalmazás
 
 > Az SMTP a levelek küldésére és továbbítására szolgáló protokoll.  
-> Kliensoldali levélbeküldésre ma gyakran a `587` portot használják, titkosított submissionhöz pedig elterjedt a `465` port is.  
+> Kliensoldali levélbeküldésre ma gyakran a `587` portot használják,
+> titkosított submissionhöz pedig elterjedt a `465` port is.  
 > Az SMTP nem a levelek olvasására való, arra tipikusan IMAP vagy POP3 szolgál.
 
 ## Gyakori vizsgahibák

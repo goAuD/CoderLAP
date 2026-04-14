@@ -67,7 +67,9 @@ Mert más lesz:
 ## Vizsgán jól használható megfogalmazás
 
 > Az IaaS, PaaS és SaaS a cloud szolgáltatási modelljei.  
-> IaaS esetén a szolgáltató főleg infrastruktúrát ad, PaaS esetén platformot biztosít az alkalmazások futtatásához, SaaS esetén pedig kész szoftvert használ a felhasználó.  
+> IaaS esetén a szolgáltató főleg infrastruktúrát ad,
+> PaaS esetén platformot biztosít az alkalmazások futtatásához,
+> SaaS esetén pedig kész szoftvert használ a felhasználó.  
 > Minél magasabb szintű a szolgáltatás, általában annál kevesebb technikai üzemeltetési feladat marad az ügyfélnél.
 
 ## Gyakori vizsgahibák

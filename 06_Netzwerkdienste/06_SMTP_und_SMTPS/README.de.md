@@ -65,7 +65,8 @@ verwendet.
 ## Prüfungstaugliche Formulierung
 
 > SMTP ist das Protokoll zum Senden und Weiterleiten von E-Mails.  
-> Für die clientseitige E-Mail-Einlieferung wird heute häufig Port `587` verwendet, für verschlüsselte Submission ist auch Port `465` verbreitet.  
+> Für die clientseitige E-Mail-Einlieferung wird heute häufig Port `587` verwendet,
+> für verschlüsselte Submission ist auch Port `465` verbreitet.  
 > SMTP dient nicht zum Lesen von E-Mails, dafür werden typischerweise IMAP oder POP3 verwendet.
 
 ## Häufige Prüfungsfehler
