@@ -62,7 +62,10 @@ Weil die Beschwerden oft:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei sitzender Tätigkeit sind die wichtigsten Schutzmaßnahmen regelmäßiger Haltungswechsel, Aufstehen, kurze Bewegung, ein passender Stuhl und Tisch sowie ein gut eingestellter Monitor und Arbeitsmittel.  
+> Bei sitzender Tätigkeit sind die wichtigsten Schutzmaßnahmen
+> regelmäßiger Haltungswechsel, Aufstehen, kurze Bewegung,
+> ein passender Stuhl und Tisch
+> sowie ein gut eingestellter Monitor und Arbeitsmittel.  
 > Ziel ist die Verringerung der Überlastung von Rücken, Nacken, Schultern und Kreislauf.  
 > Es reicht nicht nur "richtig zu sitzen", regelmäßige Bewegung und Unterbrechung sind ebenso wichtig.
 
@@ -101,7 +104,9 @@ Weil die Beschwerden oft:
 
 3. Arbeitsinspektion - Schnittstelle Mensch - Technik  
    https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Schnittstelle_Mensch_-_Technik.html  
-   Verwendung: offizieller ergonomischer Hintergrund zum an den Menschen angepassten Arbeitsplatz und zur Bedeutung der Körperhaltung.
+   Verwendung: offizieller ergonomischer Hintergrund
+   zum an den Menschen angepassten Arbeitsplatz
+   und zur Bedeutung der Körperhaltung.
 
 4. AUVA - Checkliste Homeoffice für Arbeitnehmer:innen  
    https://auva.at/media/rzkba4dl/checkliste_homeoffice_2022-10_bf.pdf  

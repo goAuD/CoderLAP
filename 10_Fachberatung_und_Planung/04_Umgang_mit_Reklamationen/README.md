@@ -71,7 +71,8 @@ Jegyezd fel:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Reklamáció esetén az ügyfelet először nyugodtan meg kell hallgatni, majd pontosan tisztázni kell a probléma lényegét.  
+> Reklamáció esetén az ügyfelet először nyugodtan meg kell hallgatni,
+> majd pontosan tisztázni kell a probléma lényegét.  
 > Fontos az empatikus, de tárgyszerű kommunikáció, a következő lépések egyértelmű ismertetése és az ügy dokumentálása.  
 > A jó reklamációkezelés nemcsak a probléma megoldását szolgálja, hanem a szolgáltatás javítására is visszajelzést ad.
 

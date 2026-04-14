@@ -74,7 +74,9 @@ Mert a napi kis megszakítás:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A képernyős vagy ülő munka mellett a rövid mozgás- és lazítógyakorlatok segítenek csökkenteni a statikus terhelést és az izomfeszülést.  
+> A képernyős vagy ülő munka mellett a rövid mozgás-
+> és lazítógyakorlatok segítenek csökkenteni
+> a statikus terhelést és az izomfeszülést.  
 > Hasznosak a mobilizáló, nyújtó és aktiváló gyakorlatok, valamint a szem tehermentesítése is.  
 > A lényeg nem a nagy intenzitás, hanem a rendszeres, rövid és kíméletes átmozgatás.
 

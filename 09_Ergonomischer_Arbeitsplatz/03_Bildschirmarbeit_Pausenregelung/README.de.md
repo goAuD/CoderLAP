@@ -50,7 +50,10 @@ Gut zu wissen:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei Bildschirmarbeit muss in Österreich die Arbeit so organisiert werden, dass nach 50 Minuten ununterbrochener Bildschirmarbeit mindestens 10 Minuten Pause oder ein belastungsmindernder Tätigkeitswechsel folgen.  
+> Bei Bildschirmarbeit muss in Österreich die Arbeit so organisiert werden,
+> dass nach 50 Minuten ununterbrochener Bildschirmarbeit
+> mindestens 10 Minuten Pause
+> oder ein belastungsmindernder Tätigkeitswechsel folgen.  
 > Wenn der Arbeitsablauf es erfordert, erlaubt die Regel auch 20 Minuten Erholung in der zweiten Stunde.  
 > Ziel ist die Verringerung der Belastung von Augen, Bewegungsapparat und Aufmerksamkeit.
 

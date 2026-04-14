@@ -48,7 +48,9 @@ Weil Spiegelungen:
 ## Prüfungstaugliche Formulierung
 
 > Der Monitor muss so aufgestellt werden, dass möglichst wenig Spiegelung und Blendung entstehen.  
-> Gute Praxis ist es, den Bildschirm nicht direkt vor oder hinter das Fenster zu stellen, sondern seitlich, oft etwa 90 Grad zum Fenster.  
+> Gute Praxis ist es,
+> den Bildschirm nicht direkt vor oder hinter das Fenster zu stellen,
+> sondern seitlich, oft etwa 90 Grad zum Fenster.  
 > Die richtige Monitorposition reduziert die Augenbelastung und Zwangshaltungen.
 
 ## Häufige Prüfungsfehler

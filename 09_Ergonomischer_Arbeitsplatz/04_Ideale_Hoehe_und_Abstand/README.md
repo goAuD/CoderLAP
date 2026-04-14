@@ -82,9 +82,12 @@ Függhet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A monitor ideális beállításánál a tekintet enyhén lefelé irányuljon, és a felső információs sor ne legyen a szemmagasság fölött.  
+> A monitor ideális beállításánál a tekintet enyhén lefelé irányuljon,
+> és a felső információs sor ne legyen a szemmagasság fölött.  
 > A képernyőt érdemes enyhén hátradönteni, hogy a felső szél kicsit távolabb legyen a felhasználótól.  
-> A képernyő távolsága legyen lehetőleg nagy, de még kényelmesen olvasható, mert ez csökkenti a szem és a nyak terhelését.  
+> A képernyő távolsága legyen lehetőleg nagy,
+> de még kényelmesen olvasható,
+> mert ez csökkenti a szem és a nyak terhelését.  
 > A pontos beállítás személyenként eltérhet, ezért a munkahelyet egyénileg kell igazítani.
 
 ## Gyakori vizsgahibák

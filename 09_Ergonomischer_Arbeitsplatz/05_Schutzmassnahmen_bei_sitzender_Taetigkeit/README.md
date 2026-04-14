@@ -62,7 +62,9 @@ Mert a panaszok sokszor:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Ülőmunka esetén a fő védőintézkedések a rendszeres testhelyzetváltás, a felállás, a rövid mozgás, a megfelelő szék és asztal, valamint a jól beállított monitor és munkaeszközök.  
+> Ülőmunka esetén a fő védőintézkedések a rendszeres testhelyzetváltás,
+> a felállás, a rövid mozgás, a megfelelő szék és asztal,
+> valamint a jól beállított monitor és munkaeszközök.  
 > A cél a hát, a nyak, a váll és a keringés túlterhelésének csökkentése.  
 > Nem elég csak "jól ülni", a rendszeres mozgás és megszakítás is fontos.
 

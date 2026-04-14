@@ -73,7 +73,9 @@ Weil sie helfen kann, Folgendes zu vermeiden:
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel der ergonomischen Arbeitsplatzgestaltung ist es, dass Arbeitsmittel und Umgebung an die Gegebenheiten des menschlichen Körpers angepasst werden.  
+> Ziel der ergonomischen Arbeitsplatzgestaltung ist es,
+> dass Arbeitsmittel und Umgebung
+> an die Gegebenheiten des menschlichen Körpers angepasst werden.  
 > Wichtig sind der passende Stuhl, Tisch, Monitor, Tastatur, Maus, Beinfreiheit und gute Lichtverhältnisse.  
 > Die ergonomische Einrichtung reduziert Überlastung und kann Rücken-, Nacken- und Augenbeschwerden vorbeugen.
 

@@ -74,7 +74,9 @@ Weil die tägliche kleine Unterbrechung:
 
 ## Prüfungstaugliche Formulierung
 
-> Neben Bildschirm- oder Sitzarbeit helfen kurze Bewegungs- und Entspannungsübungen, die statische Belastung und Muskelverspannungen zu reduzieren.  
+> Neben Bildschirm- oder Sitzarbeit helfen kurze Bewegungs-
+> und Entspannungsübungen,
+> die statische Belastung und Muskelverspannungen zu reduzieren.  
 > Nützlich sind mobilisierende, dehnende und aktivierende Übungen sowie die Entlastung der Augen.  
 > Es geht nicht um hohe Intensität, sondern um regelmäßige, kurze und schonende Bewegung.
 
