@@ -70,8 +70,13 @@ Sondern auch:
 ## Prüfungstaugliche Formulierung
 
 > Die Grundlage einer fachgerechten Produktberatung ist die Ermittlung der Kundenbedürfnisse.  
-> Zuerst muss man verstehen, wofür der Kunde die Lösung verwenden möchte, welche Einschränkungen und Erwartungen er hat, und erst danach darf man ein konkretes Produkt oder eine Software empfehlen.  
-> In einem guten Verkaufsgespräch müssen die technischen Merkmale immer in für den Kunden verständliche Vorteile übersetzt werden.
+> Zuerst muss man verstehen,
+> wofür der Kunde die Lösung verwenden möchte,
+> welche Einschränkungen und Erwartungen er hat,
+> und erst danach darf man ein konkretes Produkt
+> oder eine Software empfehlen.  
+> In einem guten Verkaufsgespräch müssen die technischen Merkmale
+> immer in für den Kunden verständliche Vorteile übersetzt werden.
 
 ## Häufige Prüfungsfehler
 

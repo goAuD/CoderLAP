@@ -71,9 +71,13 @@ Notiere:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei einer Reklamation muss man dem Kunden zunächst ruhig zuhören, dann das Problem genau klären.  
-> Wichtig ist eine empathische, aber sachliche Kommunikation, die klare Darstellung der nächsten Schritte und die Dokumentation des Vorgangs.  
-> Eine gute Reklamationsbehandlung dient nicht nur der Problemlösung, sondern liefert auch Feedback zur Verbesserung der Dienstleistung.
+> Bei einer Reklamation muss man dem Kunden zunächst ruhig zuhören,
+> dann das Problem genau klären.  
+> Wichtig ist eine empathische, aber sachliche Kommunikation,
+> die klare Darstellung der nächsten Schritte
+> und die Dokumentation des Vorgangs.  
+> Eine gute Reklamationsbehandlung dient nicht nur der Problemlösung,
+> sondern liefert auch Feedback zur Verbesserung der Dienstleistung.
 
 ## Häufige Prüfungsfehler
 
@@ -107,7 +111,9 @@ Notiere:
 
 2. HMRC Complaint Handling Guidance - Standards of service for dealing with complaints: Quality  
    https://www.gov.uk/hmrc-internal-manuals/complaints-handling-guidance/chg620  
-   Verwendung: offizielle Quelle dafür, dass eine gut bearbeitete Beschwerde eine Lern- und Qualitätsverbesserungsmöglichkeit ist.
+   Verwendung: offizielle Quelle dafür,
+   dass eine gut bearbeitete Beschwerde
+   eine Lern- und Qualitätsverbesserungsmöglichkeit ist.
 
 3. UK Gambling Commission - How to handle customer complaints  
    https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/page/handling-complaints  
@@ -115,6 +121,8 @@ Notiere:
 
 4. UK Gambling Commission - Developing complaints handling policies  
    https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/page/developing-complaints-handling-policies  
-   Verwendung: offizielle Quelle dafür, dass die Reklamationsbehandlung auf einem klaren Prozess und einer Eskalation basieren muss.
+   Verwendung: offizielle Quelle dafür,
+   dass die Reklamationsbehandlung
+   auf einem klaren Prozess und einer Eskalation basieren muss.
 
 Abgerufen: `2026-04-08`

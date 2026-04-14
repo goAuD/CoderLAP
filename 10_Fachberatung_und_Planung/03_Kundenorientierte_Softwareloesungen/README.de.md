@@ -73,7 +73,10 @@ Weil wenn die Software nicht kundenorientiert ist:
 ## Prüfungstaugliche Formulierung
 
 > Eine kundenorientierte Softwarelösung geht von den Bedürfnissen und Problemen des Benutzers aus.  
-> Es ist wichtig, dass das System nicht nur technisch funktioniert, sondern einfach zu bedienen, zuverlässig und an die realen Arbeitsabläufe angepasst ist.  
+> Es ist wichtig,
+> dass das System nicht nur technisch funktioniert,
+> sondern einfach zu bedienen, zuverlässig
+> und an die realen Arbeitsabläufe angepasst ist.  
 > Eine gute Lösung verbessert sich iterativ auf Basis von Benutzerfeedback.
 
 ## Häufige Prüfungsfehler
@@ -103,7 +106,8 @@ Weil wenn die Software nicht kundenorientiert ist:
 
 1. GOV.UK Service Standard - Understand users and their needs  
    https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs  
-   Verwendung: offizielles Grundprinzip dafür, dass eine gute Lösung nur aus dem Benutzerbedürfnis heraus geplant werden kann.
+   Verwendung: offizielles Grundprinzip dafür,
+   dass eine gute Lösung nur aus dem Benutzerbedürfnis heraus geplant werden kann.
 
 2. GOV.UK Service Manual - Learning about users and their needs  
    https://www.gov.uk/service-manual/user-centred-design/user-needs  
@@ -111,7 +115,9 @@ Weil wenn die Software nicht kundenorientiert ist:
 
 3. GOV.UK Service Standard - Solve a whole problem for users  
    https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem  
-   Verwendung: offizielle Quelle dafür, dass nicht nur ein Teilproblem, sondern die gesamte Benutzersituation gelöst werden muss.
+   Verwendung: offizielle Quelle dafür,
+   dass nicht nur ein Teilproblem,
+   sondern die gesamte Benutzersituation gelöst werden muss.
 
 4. Digital.gov - An introduction to customer experience  
    https://digital.gov/resources/an-introduction-to-customer-experience/  

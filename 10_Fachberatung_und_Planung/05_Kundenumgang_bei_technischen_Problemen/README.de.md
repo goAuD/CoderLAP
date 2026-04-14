@@ -47,7 +47,8 @@ Sage nicht:
 
 Sage lieber:
 
-- einer der Hintergrunddienste des Systems antwortet gerade nicht richtig, deshalb läuft die Funktion nicht vollständig durch
+- einer der Hintergrunddienste des Systems antwortet gerade nicht richtig,
+  deshalb läuft die Funktion nicht vollständig durch
 
 ### 4. Nenne den nächsten Schritt und den Zeithorizont
 
@@ -73,7 +74,11 @@ Wenn es keine sofortige Lösung gibt:
 ## Prüfungstaugliche Formulierung
 
 > Bei einem technischen Problem muss man mit dem Kunden ruhig, strukturiert und verständlich kommunizieren.  
-> Zuerst muss das Symptom präzisiert werden, dann muss die Ursache schrittweise ermittelt werden, und dabei muss der Kunde fortlaufend über die nächsten Schritte und den voraussichtlichen Zeitrahmen informiert werden.  
+> Zuerst muss das Symptom präzisiert werden,
+> dann muss die Ursache schrittweise ermittelt werden,
+> und dabei muss der Kunde fortlaufend
+> über die nächsten Schritte
+> und den voraussichtlichen Zeitrahmen informiert werden.  
 > Guter Kundenumgang bei technischen Problemen ist auch dann empathisch, sachlich und lösungsorientiert.
 
 ## Häufige Prüfungsfehler
@@ -103,15 +108,21 @@ Wenn es keine sofortige Lösung gibt:
 
 1. GOV.UK Service Manual - Set up and manage user support  
    https://www.gov.uk/service-manual/operations/managing-user-support.html  
-   Verwendung: offizielle Quelle dafür, dass User-Support nicht nur Reaktion, sondern Teil der Dienstleistungsverbesserung ist.
+   Verwendung: offizielle Quelle dafür,
+   dass User-Support nicht nur Reaktion,
+   sondern Teil der Dienstleistungsverbesserung ist.
 
 2. GOV.UK Service Manual - Designing assisted digital support  
    https://www.gov.uk/service-manual/helping-people-to-use-your-service/designing-assisted-digital  
-   Verwendung: offizielle Anleitung dafür, wie man Unterstützung und Kommunikation an die Bedürfnisse des Benutzers anpassen muss.
+   Verwendung: offizielle Anleitung dafür,
+   wie man Unterstützung und Kommunikation
+   an die Bedürfnisse des Benutzers anpassen muss.
 
 3. GOV.UK Service Manual - Solve a whole problem for users  
    https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem  
-   Verwendung: offizielles Grundprinzip dafür, dass nicht nur der technische Teilfehler, sondern die gesamte Kundensituation behandelt werden muss.
+   Verwendung: offizielles Grundprinzip dafür,
+   dass nicht nur der technische Teilfehler,
+   sondern die gesamte Kundensituation behandelt werden muss.
 
 4. Digital.gov - Customer experience  
    https://digital.gov/topics/customer-experience/  
