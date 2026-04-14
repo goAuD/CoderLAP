@@ -80,7 +80,10 @@ Példa:
 
 > A weblog elsősorban tartalomközlésre szolgáló, bejegyzésalapú weboldal.  
 > A webshop online értékesítési felület, ahol termékeket vagy szolgáltatásokat lehet megvásárolni.  
-> A webplatform ennél tágabb fogalom: olyan webes rendszer, amely több szereplőt, szolgáltatást vagy folyamatot kapcsol össze, például piactér vagy tanulási platform formájában.
+> A webplatform ennél tágabb fogalom:
+> olyan webes rendszer,
+> amely több szereplőt, szolgáltatást vagy folyamatot kapcsol össze,
+> például piactér vagy tanulási platform formájában.
 
 ## Gyakori vizsgahibák
 
@@ -117,7 +120,8 @@ Példa:
 
 3. EUR-Lex - Regulation (EU) 2022/2065 (Digital Services Act)  
    https://eur-lex.europa.eu/eli/reg/2022/2065/oj  
-   Használat: az "online platform" hivatalos EU-s fogalmi hátteréhez, amikor a platform több felhasználót és szolgáltatást köt össze.
+   Használat: az "online platform" hivatalos EU-s fogalmi hátteréhez,
+   amikor a platform több felhasználót és szolgáltatást köt össze.
 
 4. MDN - Site  
    https://developer.mozilla.org/docs/Glossary/Site  

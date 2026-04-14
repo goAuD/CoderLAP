@@ -67,7 +67,9 @@ Das hängt vom Arbeitsbereich ab, aber typischerweise:
 ## Prüfungstaugliche Formulierung
 
 > Die Informatik ist die Wissenschaft und Praxis der strukturierten, automatisierten Verarbeitung von Informationen.  
-> Sie beschäftigt sich nicht nur mit Programmierung, sondern auch mit Daten, Algorithmen, Systemen, Netzwerken, Benutzeroberflächen und dem gesamten Lebenszyklus digitaler Lösungen.  
+> Sie beschäftigt sich nicht nur mit Programmierung,
+> sondern auch mit Daten, Algorithmen, Systemen, Netzwerken,
+> Benutzeroberflächen und dem gesamten Lebenszyklus digitaler Lösungen.  
 > Die Programmierung ist also ein Teil der Informatik, aber nicht das gesamte Fachgebiet.
 
 ## Häufige Prüfungsfehler

@@ -52,8 +52,11 @@ In der Praxis wird heute in der Regel die **responsive** Lösung empfohlen.
 
 ## Prüfungstaugliche Formulierung
 
-> Eine mobile Webseite ist eine Weboberfläche, die speziell für die gute Nutzung auf Telefonen und anderen kleinen Bildschirmen gestaltet wird.
-> Wichtige Aspekte sind gute Lesbarkeit, berührungsfreundliche Bedienung, schnelles Laden und ein an den kleinen Bildschirm angepasstes Layout.
+> Eine mobile Webseite ist eine Weboberfläche,
+> die speziell für die gute Nutzung
+> auf Telefonen und anderen kleinen Bildschirmen gestaltet wird.
+> Wichtige Aspekte sind gute Lesbarkeit, berührungsfreundliche Bedienung,
+> schnelles Laden und ein an den kleinen Bildschirm angepasstes Layout.
 > In der modernen Praxis wird dies meist mit responsive Webdesign umgesetzt.
 
 ## Häufige Prüfungsfehler

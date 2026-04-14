@@ -84,8 +84,12 @@ Daher ist es wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Ziel von SEO ist, dass die Webseite für Suchmaschinen technisch gut interpretierbar und für die Benutzer nützlich und gut nutzbar ist.  
-> Zu den wichtigen Maßnahmen gehören qualitativ hochwertiger Inhalt, korrekte HTML-Struktur, eindeutige Titel, schnelle Ladezeit, mobilfreundliche Gestaltung und logische interne Verlinkung.
+> Das Ziel von SEO ist,
+> dass die Webseite für Suchmaschinen technisch gut interpretierbar
+> und für die Benutzer nützlich und gut nutzbar ist.  
+> Zu den wichtigen Maßnahmen gehören qualitativ hochwertiger Inhalt,
+> korrekte HTML-Struktur, eindeutige Titel, schnelle Ladezeit,
+> mobilfreundliche Gestaltung und logische interne Verlinkung.
 
 ## Häufige Prüfungsfehler
 

@@ -74,7 +74,8 @@ Wenn das falsche Prinzip gewählt wird, kann das System logisch fehlerhaft sein.
 
 ## Prüfungstaugliche Formulierung
 
-> LIFO und FIFO sind Verarbeitungsprinzipien, die bestimmen, in welcher Reihenfolge Elemente entnommen oder verarbeitet werden.  
+> LIFO und FIFO sind Verarbeitungsprinzipien,
+> die bestimmen, in welcher Reihenfolge Elemente entnommen oder verarbeitet werden.  
 > Bei LIFO kommt das zuletzt eingefügte Element zuerst heraus, bei FIFO das am frühesten eingefügte.  
 > Die typische Umsetzung von LIFO ist der Stack, die von FIFO die Queue.
 

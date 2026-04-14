@@ -21,7 +21,9 @@ Weboldalnál ez lehet például:
 - mobilos megjelenítési beállítása
 - keresőrobotoknak adott jelzés
 
-A metaadat célja nem az, hogy a felhasználó hosszú szövegként elolvassa, hanem hogy a rendszer könnyebben értelmezze az oldalt.
+A metaadat célja nem az,
+hogy a felhasználó hosszú szövegként elolvassa,
+hanem hogy a rendszer könnyebben értelmezze az oldalt.
 
 ## Mi a szerepe a `<meta>` elemnek?
 
@@ -81,8 +83,12 @@ Fontos:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A metaadat a dokumentumról szóló leíró adat. HTML-ben ezt gyakran a `head` részben elhelyezett `<meta>` elemek adják meg.  
-> Ezek a böngészőnek, keresőmotoroknak és más rendszereknek segítenek az oldal helyes feldolgozásában, például a karakterkódolás, a mobilnézet vagy az oldal rövid leírása terén.
+> A metaadat a dokumentumról szóló leíró adat.
+> HTML-ben ezt gyakran a `head` részben elhelyezett `<meta>` elemek adják meg.  
+> Ezek a böngészőnek, keresőmotoroknak és más rendszereknek
+> segítenek az oldal helyes feldolgozásában,
+> például a karakterkódolás, a mobilnézet
+> vagy az oldal rövid leírása terén.
 
 ## Gyakori vizsgahibák
 

@@ -65,7 +65,9 @@ Az agilis csapat jellemzően:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az agilis szoftverfejlesztés olyan rugalmas fejlesztési megközelítés, amely rövid iterációkban, folyamatos visszajelzéssel és gyakori szállítással dolgozik.  
+> Az agilis szoftverfejlesztés olyan rugalmas fejlesztési megközelítés,
+> amely rövid iterációkban,
+> folyamatos visszajelzéssel és gyakori szállítással dolgozik.  
 > Célja, hogy a csapat gyorsan tudjon reagálni a változó igényekre, miközben rendszeresen működő szoftvert ad át.  
 > Az agilis fejlesztéshez több konkrét keretrendszer is tartozhat, például a Scrum vagy a Kanban.
 

@@ -54,8 +54,12 @@ Ezek fontosak megérteni, mert sok mai megoldás ezekre is épül történetileg
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Java webes technológiái elsősorban szerveroldali alkalmazások, backend szolgáltatások és vállalati webes rendszerek fejlesztésére szolgálnak.  
-> A klasszikus alapok közé tartozik a Servlet és a JSP, míg a modern gyakorlatban a Spring Boot és a Jakarta EE a legfontosabb irányok közé tartoznak.  
+> A Java webes technológiái elsősorban szerveroldali alkalmazások,
+> backend szolgáltatások
+> és vállalati webes rendszerek fejlesztésére szolgálnak.  
+> A klasszikus alapok közé tartozik a Servlet és a JSP,
+> míg a modern gyakorlatban a Spring Boot
+> és a Jakarta EE a legfontosabb irányok közé tartoznak.  
 > A Java különösen erős stabilitás, skálázhatóság és enterprise használat terén.
 
 ## Gyakori vizsgahibák

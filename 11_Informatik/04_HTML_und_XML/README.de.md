@@ -36,12 +36,12 @@ Beispiel für XML-artige Logik:
 
 ## Was ist der Hauptunterschied?
 
-### HTML
+### HTML in der Praxis
 
 - verwendet vordefinierte Elemente
 - wird von Browsern zur Darstellung interpretiert
 
-### XML
+### XML in der Praxis
 
 - verwendet eine freier gestaltbare Struktur
 - dient hauptsächlich nicht der Darstellung, sondern der Datenbeschreibung
@@ -78,7 +78,9 @@ Weil es eine häufige Prüfungsfrage ist:
 ## Prüfungstaugliche Formulierung
 
 > HTML und XML sind beides Auszeichnungssprachen, die jedoch für unterschiedliche Zwecke eingesetzt werden.  
-> HTML dient zur Beschreibung von Inhalt und Struktur von Webseiten, während XML zur Beschreibung und zum Austausch strukturierter Daten verwendet wird.  
+> HTML dient zur Beschreibung von Inhalt und Struktur von Webseiten,
+> während XML zur Beschreibung
+> und zum Austausch strukturierter Daten verwendet wird.  
 > HTML arbeitet mit vordefinierten Elementen, XML ermöglicht eine flexiblere Datenstruktur.
 
 ## Häufige Prüfungsfehler

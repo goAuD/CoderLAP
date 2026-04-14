@@ -98,8 +98,13 @@ Als Entwickler arbeiten wir häufig mit:
 
 ## Prüfungstaugliche Formulierung
 
-> CMS, also Content Management System, ist ein System, das die Erstellung, Bearbeitung, Speicherung und Veröffentlichung digitaler Inhalte ermöglicht.  
-> Sein Vorteil ist, dass nicht nur Entwickler es nutzen können, und es gleichzeitig mit Templates, Modulen und Rechteverwaltung erweiterbar ist.  
+> CMS, also Content Management System, ist ein System,
+> das die Erstellung, Bearbeitung, Speicherung
+> und Veröffentlichung digitaler Inhalte ermöglicht.  
+> Sein Vorteil ist,
+> dass nicht nur Entwickler es nutzen können,
+> und es gleichzeitig mit Templates, Modulen
+> und Rechteverwaltung erweiterbar ist.  
 > Typische Einsatzgebiete sind zum Beispiel Unternehmenswebseiten, Blogs und Portale.
 
 ## Häufige Prüfungsfehler

@@ -75,8 +75,13 @@ Zum Beispiel ist die `IEEE 802`-Familie in der Welt der Netzwerktechnologien seh
 ## Prüfungstaugliche Formulierung
 
 > ANSI, ISO und IEEE sind wichtige Akteure in der Welt der Normung.  
-> Das Ziel von Normen ist, dass informatische Systeme kompatibel, sicher und nach einheitlichen Prinzipien funktionieren.  
-> ANSI ist vor allem bei der Koordination der amerikanischen Normung wichtig, ISO gibt internationale Normen heraus und IEEE ist besonders bedeutend im Bereich technischer und informatischer Standards.
+> Das Ziel von Normen ist,
+> dass informatische Systeme kompatibel, sicher
+> und nach einheitlichen Prinzipien funktionieren.  
+> ANSI ist vor allem bei der Koordination der amerikanischen Normung wichtig,
+> ISO gibt internationale Normen heraus
+> und IEEE ist besonders bedeutend
+> im Bereich technischer und informatischer Standards.
 
 ## Häufige Prüfungsfehler
 

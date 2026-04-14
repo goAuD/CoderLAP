@@ -53,7 +53,9 @@ Tehát:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A responsive webdesign olyan tervezési és fejlesztési megközelítés, amelynek célja, hogy ugyanaz a weboldal különböző kijelzőméreteken is jól használható legyen.  
+> A responsive webdesign olyan tervezési és fejlesztési megközelítés,
+> amelynek célja,
+> hogy ugyanaz a weboldal különböző kijelzőméreteken is jól használható legyen.  
 > Ehhez rugalmas elrendezést, media query-ket, breakpointokat és alkalmazkodó tartalmi megjelenítést használunk.  
 > Előnye, hogy nem kell külön mobil és desktop oldalt fenntartani.
 

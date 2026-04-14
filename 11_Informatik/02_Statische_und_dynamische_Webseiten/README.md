@@ -88,8 +88,11 @@ Például:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A statikus weboldal előre elkészített fájlokból áll, ezért a szerver jellemzően minden látogatónak ugyanazt a tartalmat küldi.  
-> A dinamikus weboldal ezzel szemben futás közben, adatok és logika alapján állíthat elő tartalmat, például felhasználóhoz vagy adatbázishoz igazítva.  
+> A statikus weboldal előre elkészített fájlokból áll,
+> ezért a szerver jellemzően minden látogatónak ugyanazt a tartalmat küldi.  
+> A dinamikus weboldal ezzel szemben futás közben,
+> adatok és logika alapján állíthat elő tartalmat,
+> például felhasználóhoz vagy adatbázishoz igazítva.  
 > A mai webalkalmazások gyakran a két megközelítést kombinálják.
 
 ## Gyakori vizsgahibák

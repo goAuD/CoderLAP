@@ -60,8 +60,11 @@
 
 > Für die Entwicklung von mobilen Apps und Internetanwendungen werden verschiedene Programmiersprachen verwendet.
 > In der nativen Android-Entwicklung ist Kotlin, in der nativen iOS-Entwicklung Swift typisch.
-> Bei Cross-Platform-Mobillösungen ist zum Beispiel Dart mit `Flutter` oder JavaScript bzw. TypeScript mit `React Native` einsetzbar.
-> Bei Internetanwendungen sind auf der Frontend-Seite hauptsächlich JavaScript und TypeScript, auf der Backend-Seite zum Beispiel PHP, Java, C# oder Python verbreitet.
+> Bei Cross-Platform-Mobillösungen ist zum Beispiel Dart mit `Flutter`
+> oder JavaScript bzw. TypeScript mit `React Native` einsetzbar.
+> Bei Internetanwendungen sind auf der Frontend-Seite
+> hauptsächlich JavaScript und TypeScript,
+> auf der Backend-Seite zum Beispiel PHP, Java, C# oder Python verbreitet.
 
 ## Häufige Prüfungsfehler
 

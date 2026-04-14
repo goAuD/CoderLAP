@@ -54,8 +54,11 @@ A jQuery ezt sokáig sokkal egyszerűbbé tette.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A jQuery egy JavaScript library, amely leegyszerűsíti a DOM-manipulációt, az eseménykezelést és az Ajax-alapú kommunikációt.  
-> Történetileg nagyon fontos szerepe volt a webfejlesztésben, különösen a böngészőközi kompatibilitási problémák kezelésében.  
+> A jQuery egy JavaScript library,
+> amely leegyszerűsíti a DOM-manipulációt,
+> az eseménykezelést és az Ajax-alapú kommunikációt.  
+> Történetileg nagyon fontos szerepe volt a webfejlesztésben,
+> különösen a böngészőközi kompatibilitási problémák kezelésében.  
 > Ma már kisebb a szerepe, de régi rendszerekben és egyszerűbb webes feladatoknál még mindig előfordul.
 
 ## Gyakori vizsgahibák

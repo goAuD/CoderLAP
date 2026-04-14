@@ -10,7 +10,9 @@
 
 ## Was ist JSON?
 
-JSON ist ein sprachunabhängiges Datenaustauschformat, das aus der JavaScript-Objektnotation hervorgegangen ist, aber heute von vielen Programmiersprachen verwendet wird.
+JSON ist ein sprachunabhängiges Datenaustauschformat,
+das aus der JavaScript-Objektnotation hervorgegangen ist,
+aber heute von vielen Programmiersprachen verwendet wird.
 
 Es wird häufig eingesetzt bei:
 
@@ -84,9 +86,13 @@ Wichtige Unterschiede:
 
 ## Prüfungstaugliche Formulierung
 
-> JSON ist ein leichtes, textbasiertes Datenaustauschformat, das Daten mithilfe von Schlüssel-Wert-Paaren und Arrays beschreibt.  
-> Es wird häufig in Web-APIs verwendet, weil es einfach, gut lesbar und von vielen Programmiersprachen leicht verarbeitbar ist.  
-> In Standard-JSON müssen zum Beispiel Schlüssel in Anführungszeichen stehen, und Kommentare sind nicht verwendbar.
+> JSON ist ein leichtes, textbasiertes Datenaustauschformat,
+> das Daten mithilfe von Schlüssel-Wert-Paaren und Arrays beschreibt.  
+> Es wird häufig in Web-APIs verwendet,
+> weil es einfach, gut lesbar
+> und von vielen Programmiersprachen leicht verarbeitbar ist.  
+> In Standard-JSON müssen zum Beispiel Schlüssel in Anführungszeichen stehen,
+> und Kommentare sind nicht verwendbar.
 
 ## Häufige Prüfungsfehler
 
