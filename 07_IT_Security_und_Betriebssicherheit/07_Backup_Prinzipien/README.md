@@ -101,8 +101,12 @@ Hátrány:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A backup alapelvei közé tartozik a rendszeres mentés, a több példányos és elkülönített tárolás, valamint a visszaállítás rendszeres tesztelése.  
-> A full backup minden adatot ment, az incremental csak a legutóbbi mentés óta változott adatokat, a differential pedig az utolsó teljes mentés óta történt változásokat.  
+> A backup alapelvei közé tartozik a rendszeres mentés,
+> a több példányos és elkülönített tárolás,
+> valamint a visszaállítás rendszeres tesztelése.  
+> A full backup minden adatot ment,
+> az incremental csak a legutóbbi mentés óta változott adatokat,
+> a differential pedig az utolsó teljes mentés óta történt változásokat.  
 > A megfelelő mentési elvet a visszaállítási igény, az idő és a tárhely alapján kell megválasztani.
 
 ## Gyakori vizsgahibák

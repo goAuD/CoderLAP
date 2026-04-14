@@ -55,7 +55,9 @@ Aufgabe:
 ## Prüfungstaugliche Formulierung
 
 > Das Ziel der Einschränkung von Benutzerkonten ist die Umsetzung des Prinzips der geringsten Berechtigung.  
-> Für die tägliche Arbeit ist es ratsam, ein Standard-User-Konto zu verwenden und nur bei Bedarf auf Admin-Ebene zu erhöhen.  
+> Für die tägliche Arbeit ist es ratsam,
+> ein Standard-User-Konto zu verwenden
+> und nur bei Bedarf auf Admin-Ebene zu erhöhen.  
 > Das reduziert das Ausmaß von Fehlern, unbefugten Systemänderungen und durch Malware verursachten Schäden.
 
 ## Häufige Prüfungsfehler
