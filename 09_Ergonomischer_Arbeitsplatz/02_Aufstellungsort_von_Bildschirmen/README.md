@@ -48,7 +48,10 @@ Mert a tükröződés:
 ## Vizsgán jól használható megfogalmazás
 
 > A monitort úgy kell elhelyezni, hogy a lehető legkevesebb tükröződés és vakítás érje.  
-> Jó gyakorlat, ha a képernyő nem közvetlenül az ablak elé vagy mögé kerül, hanem oldalirányban, gyakran körülbelül 90 fokban az ablakhoz képest.  
+> Jó gyakorlat,
+> ha a képernyő nem közvetlenül az ablak elé vagy mögé kerül,
+> hanem oldalirányban,
+> gyakran körülbelül 90 fokban az ablakhoz képest.  
 > A helyes monitorpozíció csökkenti a szemterhelést és a kényszertartást.
 
 ## Gyakori vizsgahibák

@@ -50,7 +50,10 @@ Jó, ha tudod:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Képernyőmunka esetén Ausztriában úgy kell megszervezni a munkát, hogy 50 perc megszakítás nélküli képernyőmunka után legalább 10 perc szünet vagy a terhelést csökkentő tevékenységváltás következzen.  
+> Képernyőmunka esetén Ausztriában úgy kell megszervezni a munkát,
+> hogy 50 perc megszakítás nélküli képernyőmunka után
+> legalább 10 perc szünet
+> vagy a terhelést csökkentő tevékenységváltás következzen.  
 > Ha a munkafolyamat ezt indokolja, a szabály 20 perc pihenőt is megenged a második órában.  
 > A cél a szem, a mozgásszervrendszer és a figyelem terhelésének csökkentése.
 
