@@ -82,9 +82,12 @@ Es kann abhängen von:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der idealen Monitoreinstellung sollte der Blick leicht nach unten gerichtet sein, und die obere Informationszeile sollte nicht über der Augenhöhe liegen.  
+> Bei der idealen Monitoreinstellung sollte der Blick leicht nach unten gerichtet sein,
+> und die obere Informationszeile sollte nicht über der Augenhöhe liegen.  
 > Den Bildschirm sollte man leicht nach hinten neigen, sodass der obere Rand etwas weiter vom Benutzer entfernt ist.  
-> Der Bildschirmabstand sollte möglichst groß, aber noch bequem lesbar sein, da dies die Belastung von Augen und Nacken verringert.  
+> Der Bildschirmabstand sollte möglichst groß,
+> aber noch bequem lesbar sein,
+> da dies die Belastung von Augen und Nacken verringert.  
 > Die genaue Einstellung kann von Person zu Person variieren, daher muss der Arbeitsplatz individuell angepasst werden.
 
 ## Häufige Prüfungsfehler
@@ -117,7 +120,8 @@ Es kann abhängen von:
 
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
    https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
-   Verwendung: offizielle österreichische Quelle zu Bildschirmabstand, nach unten gerichtetem Blick und Neigungswinkel des Monitors.
+   Verwendung: offizielle österreichische Quelle zu Bildschirmabstand,
+   nach unten gerichtetem Blick und Neigungswinkel des Monitors.
 
 2. AUVA - Telearbeitsplätze  
    https://auva.at/media/iswlvmmn/mplus-022_telearbeitsplaetze_bf_2504.pdf  

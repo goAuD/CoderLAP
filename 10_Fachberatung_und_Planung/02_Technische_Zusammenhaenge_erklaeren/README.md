@@ -71,8 +71,12 @@ Mert technikai munkában sokszor kell:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A technikai összefüggéseket úgy kell elmagyarázni, hogy a magyarázat szakmailag pontos, de a hallgató számára érthető legyen.  
-> Célszerű a célból és a gyakorlati jelentésből kiindulni, a szakkifejezéseket pedig egyszerű nyelven, példával vagy hasonlattal tisztázni.  
+> A technikai összefüggéseket úgy kell elmagyarázni,
+> hogy a magyarázat szakmailag pontos,
+> de a hallgató számára érthető legyen.  
+> Célszerű a célból és a gyakorlati jelentésből kiindulni,
+> a szakkifejezéseket pedig egyszerű nyelven,
+> példával vagy hasonlattal tisztázni.  
 > A jó magyarázat végén ellenőrizni kell, hogy a másik fél valóban megértette-e a lényeget.
 
 ## Gyakori vizsgahibák
