@@ -86,7 +86,9 @@ Ha a mentés és a beolvasás nem ugyanazzal a kódolással történik, hibás e
 ## Vizsgán jól használható megfogalmazás
 
 > A karakterkódolás azt határozza meg, hogyan reprezentáljuk a szöveg karaktereit bájtok formájában.  
-> A weben a modern és ajánlott megoldás a UTF-8, mert sok nyelv karaktereit képes egységesen kezelni, és elkerülhető vele a hibás karaktermegjelenítés.  
+> A weben a modern és ajánlott megoldás a UTF-8,
+> mert sok nyelv karaktereit képes egységesen kezelni,
+> és elkerülhető vele a hibás karaktermegjelenítés.  
 > A hibás kódolás tipikus következménye a torz vagy olvashatatlan szöveg.
 
 ## Gyakori vizsgahibák

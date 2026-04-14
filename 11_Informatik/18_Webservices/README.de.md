@@ -11,7 +11,9 @@
 
 ## Was ist ein Web Service?
 
-Ein Web Service ist ein Softwaredienst, der über ein Netzwerk erreichbar ist und auf bestimmte Weise kommuniziert werden kann.
+Ein Web Service ist ein Softwaredienst,
+der über ein Netzwerk erreichbar ist
+und auf bestimmte Weise kommuniziert werden kann.
 
 Häufige Eigenschaften:
 
@@ -67,9 +69,12 @@ Der Web Service ermöglicht, dass:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Web Service ist ein über das Netzwerk erreichbarer Dienst, der von anderen Programmen auf geregelte Weise aufgerufen werden kann.  
+> Ein Web Service ist ein über das Netzwerk erreichbarer Dienst,
+> der von anderen Programmen auf geregelte Weise aufgerufen werden kann.  
 > Sein Hauptzweck ist die Kommunikation und Integration zwischen Systemen.  
-> In der Praxis nutzt er typischerweise ein Webprotokoll und ein strukturiertes Nachrichtenformat, zum Beispiel SOAP oder REST-basierte HTTP-Kommunikation.
+> In der Praxis nutzt er typischerweise ein Webprotokoll
+> und ein strukturiertes Nachrichtenformat,
+> zum Beispiel SOAP oder REST-basierte HTTP-Kommunikation.
 
 ## Häufige Prüfungsfehler
 

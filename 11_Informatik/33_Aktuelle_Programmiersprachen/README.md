@@ -76,8 +76,11 @@ Ha a kérdés "aktuális nyelvek", akkor érdemes:
 
 ## Vizsgán jól használható megfogalmazás
 
-> `2026. április 8.` szerint az aktuális programozási nyelvek közé azok sorolhatók, amelyek ma is széles körben használtak és aktívan támogatottak.  
-> A webes, mobilos és vállalati fejlesztésben különösen fontos például a JavaScript, TypeScript, Python, Java, C#, PHP, Kotlin és Swift.  
+> `2026. április 8.` szerint az aktuális programozási nyelvek közé azok sorolhatók,
+> amelyek ma is széles körben használtak és aktívan támogatottak.  
+> A webes, mobilos és vállalati fejlesztésben
+> különösen fontos például a JavaScript, TypeScript, Python, Java,
+> C#, PHP, Kotlin és Swift.  
 > Nem egyetlen “legjobb” nyelv létezik, hanem a választás mindig a feladat, a platform és az ökoszisztéma függvénye.
 
 ## Gyakori vizsgahibák

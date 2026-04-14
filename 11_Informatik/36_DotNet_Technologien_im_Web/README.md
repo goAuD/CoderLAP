@@ -61,7 +61,9 @@ A mai központi irány a `.NET` és `ASP.NET Core`, mert:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A .NET webes technológiái közé tartoznak azok a megoldások, amelyekkel webalkalmazásokat, backendeket és API-kat fejleszthetünk a Microsoft ökoszisztémában.  
+> A .NET webes technológiái közé tartoznak azok a megoldások,
+> amelyekkel webalkalmazásokat, backendeket és API-kat
+> fejleszthetünk a Microsoft ökoszisztémában.  
 > A mai fő irány az ASP.NET Core, amely modern, cross-platform és nagy teljesítményű alapot ad.  
 > Ehhez kapcsolódik például a Web API, a Blazor és a SignalR is.
 

@@ -77,8 +77,10 @@ Also:
 ## Prüfungstaugliche Formulierung
 
 > Stack und Queue sind grundlegende Datenstrukturmodelle.  
-> Der Stack funktioniert nach dem Stapelprinzip, daher wird das zuletzt eingefügte Element zuerst entnommen - also LIFO.  
-> Die Queue funktioniert hingegen nach dem Schlangenprinzip, daher wird das am frühesten eingefügte Element zuerst verarbeitet - also FIFO.
+> Der Stack funktioniert nach dem Stapelprinzip,
+> daher wird das zuletzt eingefügte Element zuerst entnommen - also LIFO.  
+> Die Queue funktioniert hingegen nach dem Schlangenprinzip,
+> daher wird das am frühesten eingefügte Element zuerst verarbeitet - also FIFO.
 
 ## Häufige Prüfungsfehler
 

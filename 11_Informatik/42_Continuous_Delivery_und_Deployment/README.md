@@ -46,8 +46,12 @@ Mert vizsgán gyakran ezt kérdezik:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Continuous Delivery azt jelenti, hogy a szoftver folyamatosan kiadható állapotban van, de a végső éles kiadás előtt még lehet manuális jóváhagyás.  
-> A Continuous Deployment ennél tovább megy: ha a pipeline minden feltétele teljesül, a rendszer automatikusan telepíti az új verziót.  
+> A Continuous Delivery azt jelenti,
+> hogy a szoftver folyamatosan kiadható állapotban van,
+> de a végső éles kiadás előtt még lehet manuális jóváhagyás.  
+> A Continuous Deployment ennél tovább megy:
+> ha a pipeline minden feltétele teljesül,
+> a rendszer automatikusan telepíti az új verziót.  
 > A két fogalom közötti fő különbség tehát az, hogy deployment esetén az élesbe juttatás is automatizált.
 
 ## Gyakori vizsgahibák

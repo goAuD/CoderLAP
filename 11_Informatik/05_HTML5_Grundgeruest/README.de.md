@@ -88,8 +88,11 @@ Wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Das HTML5-Grundgerüst ist eine standardkonforme Dokumentstruktur, die aus `doctype`, `html`, `head` und `body` besteht.  
-> Der `head`-Teil enthält Metadaten wie die Zeichenkodierung, die Viewport-Einstellung und den Titel, während der `body` den für den Benutzer sichtbaren Inhalt enthält.  
+> Das HTML5-Grundgerüst ist eine standardkonforme Dokumentstruktur,
+> die aus `doctype`, `html`, `head` und `body` besteht.  
+> Der `head`-Teil enthält Metadaten wie die Zeichenkodierung,
+> die Viewport-Einstellung und den Titel,
+> während der `body` den für den Benutzer sichtbaren Inhalt enthält.  
 > Das korrekte Grundgerüst unterstützt standardkonformes Verhalten, mobile Darstellung und Wartbarkeit.
 
 ## Häufige Prüfungsfehler

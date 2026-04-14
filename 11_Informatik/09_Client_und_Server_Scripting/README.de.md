@@ -94,8 +94,12 @@ Weil die Rollen unterschiedlich sind.
 
 ## Prüfungstaugliche Formulierung
 
-> Clientseitiges Scripting läuft im Browser des Benutzers und ist hauptsächlich für die interaktive Funktionalität der Oberfläche verantwortlich.  
-> Serverseitiges Scripting läuft auf dem Server und übernimmt die Geschäftslogik, die Datenverwaltung, die Authentifizierung und die Erzeugung der Antwort.  
+> Clientseitiges Scripting läuft im Browser des Benutzers
+> und ist hauptsächlich
+> für die interaktive Funktionalität der Oberfläche verantwortlich.  
+> Serverseitiges Scripting läuft auf dem Server
+> und übernimmt die Geschäftslogik, die Datenverwaltung,
+> die Authentifizierung und die Erzeugung der Antwort.  
 > Eine moderne Webanwendung verwendet typischerweise beide Ansätze gemeinsam.
 
 ## Häufige Prüfungsfehler

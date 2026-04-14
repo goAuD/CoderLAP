@@ -57,9 +57,14 @@ Das Ziel von Bootstrap ist, dass man schnell:
 
 ## Prüfungstaugliche Formulierung
 
-> Bootstrap ist ein verbreitetes Frontend-Framework, das ein responsives Layout, fertige UI-Komponenten und Utility-Klassen für eine schnellere Oberflächenentwicklung bereitstellt.
-> Besonders nützlich ist es bei Prototypen, Admin-Oberflächen und Projekten, bei denen ein schnelles, einheitliches Erscheinungsbild wichtig ist.
-> Sein Vorteil ist die Geschwindigkeit und die fertige Komponentensammlung, sein Nachteil kann das schablonenartige Aussehen und die schwierigere Umsetzung eines individuellen Designs sein.
+> Bootstrap ist ein verbreitetes Frontend-Framework,
+> das ein responsives Layout, fertige UI-Komponenten
+> und Utility-Klassen für eine schnellere Oberflächenentwicklung bereitstellt.
+> Besonders nützlich ist es bei Prototypen, Admin-Oberflächen und Projekten,
+> bei denen ein schnelles, einheitliches Erscheinungsbild wichtig ist.
+> Sein Vorteil ist die Geschwindigkeit und die fertige Komponentensammlung,
+> sein Nachteil kann das schablonenartige Aussehen
+> und die schwierigere Umsetzung eines individuellen Designs sein.
 
 ## Häufige Prüfungsfehler
 

@@ -57,7 +57,9 @@ A Bootstrap célja, hogy gyorsan lehessen:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Bootstrap egy elterjedt frontend keretrendszer, amely reszponzív layoutot, kész UI-komponenseket és utility classokat biztosít a gyorsabb felületfejlesztéshez.  
+> A Bootstrap egy elterjedt frontend keretrendszer,
+> amely reszponzív layoutot, kész UI-komponenseket
+> és utility classokat biztosít a gyorsabb felületfejlesztéshez.  
 > Különösen hasznos prototípusok, adminfelületek és olyan projektek esetén, ahol fontos a gyors, egységes megjelenés.  
 > Előnye a gyorsaság és a kész komponenskészlet, hátránya lehet a sablonos kinézet és az egyedi design nehezebb kialakítása.
 

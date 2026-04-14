@@ -86,7 +86,9 @@ Wenn das Speichern und Lesen nicht mit derselben Kodierung erfolgt, wird das Erg
 ## Prüfungstaugliche Formulierung
 
 > Die Zeichenkodierung bestimmt, wie die Zeichen eines Textes in Form von Bytes repräsentiert werden.  
-> Im Web ist die moderne und empfohlene Lösung UTF-8, weil damit Zeichen vieler Sprachen einheitlich verarbeitet werden können und fehlerhafte Zeichendarstellung vermieden wird.  
+> Im Web ist die moderne und empfohlene Lösung UTF-8,
+> weil damit Zeichen vieler Sprachen einheitlich verarbeitet werden können
+> und fehlerhafte Zeichendarstellung vermieden wird.  
 > Die typische Folge einer falschen Kodierung ist verzerrter oder unleserlicher Text.
 
 ## Häufige Prüfungsfehler

@@ -101,7 +101,9 @@ Hier:
 ## Prüfungstaugliche Formulierung
 
 > CSS ist eine Stylesheet-Sprache zur Beschreibung des Erscheinungsbilds von Webseiten.  
-> Mit ihr können HTML-Elemente formatiert, das Layout gesteuert und responsive, einheitliche Benutzeroberflächen gestaltet werden.  
+> Mit ihr können HTML-Elemente formatiert,
+> das Layout gesteuert
+> und responsive, einheitliche Benutzeroberflächen gestaltet werden.  
 > HTML liefert die Struktur, CSS das Erscheinungsbild und JavaScript die interaktive Funktionalität.
 
 ## Häufige Prüfungsfehler

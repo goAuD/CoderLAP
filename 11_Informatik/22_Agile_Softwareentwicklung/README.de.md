@@ -65,8 +65,12 @@ Ein agiles Team arbeitet typischerweise:
 
 ## Prüfungstaugliche Formulierung
 
-> Agile Softwareentwicklung ist ein flexibler Entwicklungsansatz, der in kurzen Iterationen, mit kontinuierlichem Feedback und häufiger Lieferung arbeitet.
-> Ziel ist es, dass das Team schnell auf sich ändernde Anforderungen reagieren kann und dabei regelmäßig funktionierende Software liefert.
+> Agile Softwareentwicklung ist ein flexibler Entwicklungsansatz,
+> der in kurzen Iterationen,
+> mit kontinuierlichem Feedback und häufiger Lieferung arbeitet.
+> Ziel ist es,
+> dass das Team schnell auf sich ändernde Anforderungen reagieren kann
+> und dabei regelmäßig funktionierende Software liefert.
 > Zur agilen Entwicklung gehören mehrere konkrete Frameworks, zum Beispiel Scrum oder Kanban.
 
 ## Häufige Prüfungsfehler

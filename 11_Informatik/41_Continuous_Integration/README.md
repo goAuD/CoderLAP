@@ -46,7 +46,9 @@
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Continuous Integration célja, hogy a fejlesztők gyakran integrálják a kódjukat a közös rendszerbe, és az integrációt automatikus ellenőrzések kövessék.  
+> A Continuous Integration célja,
+> hogy a fejlesztők gyakran integrálják a kódjukat a közös rendszerbe,
+> és az integrációt automatikus ellenőrzések kövessék.  
 > Ilyenkor jellemzően build, teszt és más kódminőségi ellenőrzések futnak le.  
 > A CI legnagyobb előnye, hogy gyorsan kiderülnek az integrációs hibák, így stabilabb marad a projekt.
 

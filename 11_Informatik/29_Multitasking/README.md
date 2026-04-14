@@ -48,7 +48,9 @@ Ez történhet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A multitasking azt jelenti, hogy egy operációs rendszer több feladatot vagy folyamatot kezel úgy, hogy azok a felhasználó számára egyidejűnek tűnnek.  
+> A multitasking azt jelenti,
+> hogy egy operációs rendszer több feladatot vagy folyamatot kezel úgy,
+> hogy azok a felhasználó számára egyidejűnek tűnnek.  
 > Ez megvalósulhat gyors időosztással vagy több processzormag használatával.  
 > Célja, hogy a rendszer több alkalmazást és háttérműveletet is hatékonyan tudjon kezelni.
 

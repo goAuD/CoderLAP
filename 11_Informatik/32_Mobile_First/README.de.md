@@ -52,8 +52,13 @@ Also:
 
 ## Prüfungstaugliche Formulierung
 
-> Mobile First ist eine Webdesign-Strategie, die die Entwicklung mit der für den kleinsten Bildschirm optimierten Ansicht beginnt und dann die Oberfläche für größere Geräte erweitert.
-> Der Vorteil ist, dass die Priorität von Inhalt und Funktionalität klarer sichtbar wird und die Oberfläche in der Regel einfacher, schneller und auch auf Mobilgeräten besser nutzbar wird.
+> Mobile First ist eine Webdesign-Strategie,
+> die die Entwicklung mit der für den kleinsten Bildschirm optimierten Ansicht beginnt
+> und dann die Oberfläche für größere Geräte erweitert.
+> Der Vorteil ist,
+> dass die Priorität von Inhalt und Funktionalität klarer sichtbar wird
+> und die Oberfläche in der Regel einfacher,
+> schneller und auch auf Mobilgeräten besser nutzbar wird.
 
 ## Häufige Prüfungsfehler
 

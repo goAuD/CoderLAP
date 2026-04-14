@@ -49,8 +49,14 @@ Ha nincs governance, akkor:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A CI/CD előírások olyan szabályok, amelyek biztosítják, hogy a build, teszt, kiadás és telepítés folyamata ellenőrzött, biztonságos és visszakövethető legyen.  
-> Ide tartozhatnak például a kötelező státuszellenőrzések, a védett branchek, a code review, a deployment jóváhagyás, a környezetvédelem, a titkok biztonságos kezelése és a rollback lehetősége.  
+> A CI/CD előírások olyan szabályok,
+> amelyek biztosítják,
+> hogy a build, teszt, kiadás és telepítés folyamata
+> ellenőrzött, biztonságos és visszakövethető legyen.  
+> Ide tartozhatnak például a kötelező státuszellenőrzések,
+> a védett branchek, a code review, a deployment jóváhagyás,
+> a környezetvédelem, a titkok biztonságos kezelése
+> és a rollback lehetősége.  
 > Ezek a szabályok azért fontosak, mert az automatizálást kontrollal és minőségbiztosítással kell összekapcsolni.
 
 ## Gyakori vizsgahibák

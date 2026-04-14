@@ -60,8 +60,11 @@
 
 > Mobilappok és internetes alkalmazások fejlesztéséhez többféle programozási nyelvet használunk.  
 > Natív Android fejlesztésben a Kotlin, natív iOS fejlesztésben a Swift jellemző.  
-> Cross-platform mobilmegoldásoknál például a Dart `Flutter`-rel, illetve a JavaScript vagy TypeScript `React Native`-val használható.  
-> Internetes alkalmazásoknál a frontend oldalon főleg JavaScript és TypeScript, a backend oldalon pedig például PHP, Java, C# vagy Python terjedt el.
+> Cross-platform mobilmegoldásoknál például a Dart `Flutter`-rel,
+> illetve a JavaScript vagy TypeScript `React Native`-val használható.  
+> Internetes alkalmazásoknál a frontend oldalon
+> főleg JavaScript és TypeScript,
+> a backend oldalon pedig például PHP, Java, C# vagy Python terjedt el.
 
 ## Gyakori vizsgahibák
 

@@ -10,7 +10,9 @@
 
 ## Was war das alte Frame-System?
 
-Bei der klassischen `frame`-basierten HTML-Lösung wurde eine Seite in mehrere separate Teile aufgeteilt, die jeweils eigene Dokumente luden.
+Bei der klassischen `frame`-basierten HTML-Lösung
+wurde eine Seite in mehrere separate Teile aufgeteilt,
+die jeweils eigene Dokumente luden.
 
 Das schien früher für Navigation und Seitenaufteilung nützlich, verursachte aber viele Probleme:
 
@@ -75,9 +77,14 @@ Daher ist häufig die Verwendung von `sandbox` und anderen einschränkenden Attr
 
 ## Prüfungstaugliche Formulierung
 
-> Der Frame-Begriff bedeutete im alten HTML Seiten, die in mehrere Rahmen aufgeteilt waren, aber diese Lösung gilt heute als veraltet.  
-> Im modernen Web kann stattdessen das `iframe` verwendet werden, mit dem ein anderes Dokument in die aktuelle Seite eingebettet werden kann.  
-> Das `iframe` kann zum Beispiel für Videos oder externe Dienste nützlich sein, muss aber hinsichtlich Sicherheit und Benutzbarkeit umsichtig eingesetzt werden.
+> Der Frame-Begriff bedeutete im alten HTML Seiten,
+> die in mehrere Rahmen aufgeteilt waren,
+> aber diese Lösung gilt heute als veraltet.  
+> Im modernen Web kann stattdessen das `iframe` verwendet werden,
+> mit dem ein anderes Dokument in die aktuelle Seite eingebettet werden kann.  
+> Das `iframe` kann zum Beispiel für Videos oder externe Dienste nützlich sein,
+> muss aber hinsichtlich Sicherheit
+> und Benutzbarkeit umsichtig eingesetzt werden.
 
 ## Häufige Prüfungsfehler
 
