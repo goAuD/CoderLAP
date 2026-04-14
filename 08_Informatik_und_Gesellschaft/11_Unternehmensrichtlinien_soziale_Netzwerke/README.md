@@ -75,9 +75,13 @@ Mert a gyakorlatban kell:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A vállalati social media irányelv meghatározza, hogy ki, hogyan és milyen szabályok szerint használhat közösségi hálózati fiókokat a szervezet nevében.  
+> A vállalati social media irányelv meghatározza,
+> hogy ki, hogyan és milyen szabályok szerint használhat
+> közösségi hálózati fiókokat a szervezet nevében.  
 > Célja a reputáció, az adatok és a hivatalos kommunikáció védelme.  
-> Egy jó irányelv tartalmazza a jogosultságkezelést, a tartalmi szabályokat, a fiókbiztonsági előírásokat, valamint az incidenskezelési lépéseket is.
+> Egy jó irányelv tartalmazza a jogosultságkezelést,
+> a tartalmi szabályokat, a fiókbiztonsági előírásokat,
+> valamint az incidenskezelési lépéseket is.
 
 ## Gyakori vizsgahibák
 

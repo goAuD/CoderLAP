@@ -26,10 +26,10 @@ Weil der Begriff als vierte industrielle Revolution bezeichnet wird.
 
 Kurze historische Logik:
 
-- 1. = Mechanisierung
-- 2. = Elektrifizierung und Massenproduktion
-- 3. = Informatisierung und Automatisierung
-- 4. = vernetzte, datengetriebene, intelligente Systeme
+1. Mechanisierung
+1. Elektrifizierung und Massenproduktion
+1. Informatisierung und Automatisierung
+1. vernetzte, datengetriebene, intelligente Systeme
 
 ## Warum ist das wichtig?
 
@@ -60,8 +60,11 @@ Vorteile können sein:
 ## Prüfungstaugliche Formulierung
 
 > Industrie 4.0 bezeichnet die Digitalisierung, Vernetzung und datengetriebene Optimierung von Fertigungsprozessen.  
-> Typische Elemente sind Sensoren, Maschine-zu-Maschine-Kommunikation, Echtzeitdaten und intelligente Fertigungsprozesse.  
-> Der Vorteil liegt in der Effizienz und Flexibilität, es bedeutet aber auch sicherheitstechnische, integrations- und organisatorische Herausforderungen.
+> Typische Elemente sind Sensoren, Maschine-zu-Maschine-Kommunikation,
+> Echtzeitdaten und intelligente Fertigungsprozesse.  
+> Der Vorteil liegt in der Effizienz und Flexibilität,
+> es bedeutet aber auch sicherheitstechnische,
+> integrations- und organisatorische Herausforderungen.
 
 ## Häufige Prüfungsfehler
 

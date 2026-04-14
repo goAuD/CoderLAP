@@ -51,8 +51,12 @@ Jemand nutzt deine persönlichen Daten:
 
 ## Prüfungstaugliche Formulierung
 
-> Beim Identitätsdiebstahl verwendet jemand die persönlichen oder finanziellen Daten einer anderen Person unbefugt, beispielsweise für Finanzbetrug, Kontoübernahme oder die Inanspruchnahme von Dienstleistungen.  
-> Die wichtigsten Präventionsschritte sind ein starkes, einzigartiges Passwort, MFA, Bewusstsein gegenüber Phishing und der Schutz sensibler Daten.  
+> Beim Identitätsdiebstahl verwendet jemand
+> die persönlichen oder finanziellen Daten einer anderen Person unbefugt,
+> beispielsweise für Finanzbetrug, Kontoübernahme
+> oder die Inanspruchnahme von Dienstleistungen.  
+> Die wichtigsten Präventionsschritte sind ein starkes, einzigartiges Passwort,
+> MFA, Bewusstsein gegenüber Phishing und der Schutz sensibler Daten.  
 > Verdächtig können ungewöhnliche Transaktionen, unbekannte Konten oder unerwartete Kontoprobleme sein.
 
 ## Häufige Prüfungsfehler
@@ -82,7 +86,8 @@ Jemand nutzt deine persönlichen Daten:
 
 1. FTC - What To Know About Identity Theft  
    https://consumer.ftc.gov/articles/what-know-about-identity-theft  
-   Verwendung: offizielle, moderne und praktische Zusammenfassung zum Begriff Identitätsdiebstahl, zu den Anzeichen und zum Schutz.
+   Verwendung: offizielle, moderne und praktische Zusammenfassung
+   zum Begriff Identitätsdiebstahl, zu den Anzeichen und zum Schutz.
 
 2. IdentityTheft.gov  
    https://www.identitytheft.gov/  

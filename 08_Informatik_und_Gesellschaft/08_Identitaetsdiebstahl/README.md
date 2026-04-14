@@ -51,8 +51,12 @@ Valaki a személyes adataiddal:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az identitáslopás során valaki egy másik személy személyes vagy pénzügyi adatait jogosulatlanul használja fel, például pénzügyi csalásra, fiókátvételre vagy szolgáltatások igénybevételére.  
-> A legfontosabb megelőzési lépések az erős, egyedi jelszó, az MFA, a phishing elleni tudatosság és az érzékeny adatok védelme.  
+> Az identitáslopás során valaki egy másik személy
+> személyes vagy pénzügyi adatait jogosulatlanul használja fel,
+> például pénzügyi csalásra, fiókátvételre
+> vagy szolgáltatások igénybevételére.  
+> A legfontosabb megelőzési lépések az erős, egyedi jelszó,
+> az MFA, a phishing elleni tudatosság és az érzékeny adatok védelme.  
 > Gyanús jel lehet a szokatlan tranzakció, az ismeretlen számla vagy a váratlan fiókprobléma.
 
 ## Gyakori vizsgahibák

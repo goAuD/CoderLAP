@@ -80,8 +80,13 @@ A böngészőben a "Do Not Track" vagy hasonló funkció:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A cookie tracking során a weboldalak vagy harmadik felek sütik és hasonló technológiák segítségével követhetik a felhasználó online viselkedését.  
-> A védekezéshez fontos a nem szükséges cookie-k elutasítása, a harmadik fél sütijeinek korlátozása, a böngésző privacy beállításai és szükség esetén trackerblokkoló eszközök használata.  
+> A cookie tracking során a weboldalak vagy harmadik felek
+> sütik és hasonló technológiák segítségével
+> követhetik a felhasználó online viselkedését.  
+> A védekezéshez fontos a nem szükséges cookie-k elutasítása,
+> a harmadik fél sütijeinek korlátozása,
+> a böngésző privacy beállításai
+> és szükség esetén trackerblokkoló eszközök használata.  
 > Adatvédelmi szempontból különösen a marketing és cross-site követés problémás.
 
 ## Gyakori vizsgahibák

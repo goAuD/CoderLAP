@@ -74,9 +74,15 @@ Ezért a használata nem "csak technikai", hanem adatvédelmi kérdés is.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A biometrikus adatok, például az ujjlenyomat, arckép vagy hangminta, kényelmes és gyors azonosítást tehetnek lehetővé.  
-> Ugyanakkor különösen érzékeny személyes adatok, ezért használatuk adatvédelmi, biztonsági és fairness kérdéseket vet fel.  
-> Kockázat lehet a hibás felismerés, a torz működés és az is, hogy kompromittálódás esetén a biometrikus jellemző nem cserélhető úgy, mint egy jelszó.
+> A biometrikus adatok, például az ujjlenyomat,
+> arckép vagy hangminta,
+> kényelmes és gyors azonosítást tehetnek lehetővé.  
+> Ugyanakkor különösen érzékeny személyes adatok,
+> ezért használatuk adatvédelmi, biztonsági
+> és fairness kérdéseket vet fel.  
+> Kockázat lehet a hibás felismerés, a torz működés
+> és az is, hogy kompromittálódás esetén
+> a biometrikus jellemző nem cserélhető úgy, mint egy jelszó.
 
 ## Gyakori vizsgahibák
 

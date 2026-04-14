@@ -75,9 +75,13 @@ Weil in der Praxis notwendig sind:
 
 ## Prüfungstaugliche Formulierung
 
-> Eine Social-Media-Richtlinie für Unternehmen legt fest, wer, wie und nach welchen Regeln soziale Netzwerk-Konten im Namen der Organisation nutzen darf.  
+> Eine Social-Media-Richtlinie für Unternehmen legt fest,
+> wer, wie und nach welchen Regeln soziale Netzwerk-Konten
+> im Namen der Organisation nutzen darf.  
 > Ihr Ziel ist der Schutz der Reputation, der Daten und der offiziellen Kommunikation.  
-> Eine gute Richtlinie enthält Berechtigungsmanagement, inhaltliche Regeln, Kontosicherheitsvorschriften sowie Schritte für das Vorfallmanagement.
+> Eine gute Richtlinie enthält Berechtigungsmanagement,
+> inhaltliche Regeln, Kontosicherheitsvorschriften
+> sowie Schritte für das Vorfallmanagement.
 
 ## Häufige Prüfungsfehler
 
@@ -110,10 +114,13 @@ Weil in der Praxis notwendig sind:
 
 2. CISA - Social Media Account Protection  
    https://www.cisa.gov/sites/default/files/publications/CISA_CEG_Social_Media_Account_Protection_508.pdf  
-   Verwendung: detaillierter, offizieller Leitfaden zum Schutz von Social-Media-Konten des Unternehmens, mit MFA, Policy und Vorfallmanagement.
+   Verwendung: detaillierter, offizieller Leitfaden
+   zum Schutz von Social-Media-Konten des Unternehmens,
+   mit MFA, Policy und Vorfallmanagement.
 
 3. NCSC - Social media: protecting what you publish  
    https://www.ncsc.gov.uk/guidance/social-media-protect-what-you-publish  
-   Verwendung: offizieller Leitfaden zur Reduzierung des Risikos fehlerhafter oder schädlicher Social-Media-Inhalte des Unternehmens.
+   Verwendung: offizieller Leitfaden zur Reduzierung des Risikos
+   fehlerhafter oder schädlicher Social-Media-Inhalte des Unternehmens.
 
 Abgerufen: `2026-04-08`
