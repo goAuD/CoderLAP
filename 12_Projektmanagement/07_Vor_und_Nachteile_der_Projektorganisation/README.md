@@ -39,8 +39,11 @@ Azt, hogy a projekthez:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projektorganizáció előnye, hogy egyértelműbbé teszi a felelősségeket, javítja a koordinációt és nagyobb fókuszt ad a projektnek.  
-> Hátránya lehet ugyanakkor a nagyobb szervezési ráfordítás, az erőforrásütközés és a párhuzamos szervezeti struktúrák kialakulása.  
+> A projektorganizáció előnye,
+> hogy egyértelműbbé teszi a felelősségeket,
+> javítja a koordinációt és nagyobb fókuszt ad a projektnek.  
+> Hátránya lehet ugyanakkor a nagyobb szervezési ráfordítás,
+> az erőforrásütközés és a párhuzamos szervezeti struktúrák kialakulása.  
 > Különösen összetettebb projektnél hasznos, de kisebb feladatoknál túl nehézkes is lehet.
 
 ## Gyakori vizsgahibák

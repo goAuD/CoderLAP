@@ -43,8 +43,12 @@ Deshalb:
 ## Prüfungstaugliche Formulierung
 
 > Ein Struktogramm ist eine blockbasierte, strukturierte Darstellung eines Algorithmus oder einer Programmlogik.  
-> Mit seiner Hilfe lassen sich die Reihenfolge der Schritte, Verzweigungen und Schleifen gut veranschaulichen, weshalb es besonders bei der Planung und Vermittlung von Algorithmen nützlich ist.  
-> Im Gegensatz zum Flowchart verwendet es eher ineinander verschachtelte Strukturen und steht der Denkweise der strukturierten Programmierung näher.
+> Mit seiner Hilfe lassen sich die Reihenfolge der Schritte,
+> Verzweigungen und Schleifen gut veranschaulichen,
+> weshalb es besonders bei der Planung
+> und Vermittlung von Algorithmen nützlich ist.  
+> Im Gegensatz zum Flowchart verwendet es eher ineinander verschachtelte Strukturen
+> und steht der Denkweise der strukturierten Programmierung näher.
 
 ## Häufige Prüfungsfehler
 

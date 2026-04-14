@@ -46,7 +46,9 @@ Mert más lehet:
 ## Fontos megjegyzés
 
 Ez a belső/külső felosztás gyakorlati projektmenedzsment-kategorizálás.  
-Az alábbi források főleg a projektkörnyezetet, stakeholdereket és szervezeti kapcsolatokat írják le; ebből következik ez a megkülönböztetés.
+Az alábbi források főleg a projektkörnyezetet,
+stakeholdereket és szervezeti kapcsolatokat írják le;
+ebből következik ez a megkülönböztetés.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -81,10 +83,15 @@ Az alábbi források főleg a projektkörnyezetet, stakeholdereket és szervezet
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  
-   Használat: projektkörnyezet, stakeholderek és szervezeti kapcsolódások; ebből következtethető a belső és külső projekt megkülönböztetése.
+   Használat: projektkörnyezet, stakeholderek
+   és szervezeti kapcsolódások;
+   ebből következtethető
+   a belső és külső projekt megkülönböztetése.
 
 2. Atlassian - Project charter template  
    https://www.atlassian.com/software/confluence/templates/project-charter  
-   Használat: projektcél, scope, stakeholder és ownership struktúra, amely jól mutatja a belső és külső projektek eltérő kereteit.
+   Használat: projektcél, scope,
+   stakeholder és ownership struktúra,
+   amely jól mutatja a belső és külső projektek eltérő kereteit.
 
 Megnyitva: `2026-04-08`

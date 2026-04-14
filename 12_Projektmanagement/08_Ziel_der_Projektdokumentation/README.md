@@ -45,8 +45,12 @@ Ha nincs dokumentáció:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projektdokumentáció célja, hogy a projekt lényeges információi átláthatóan, egységesen és visszakereshetően rendelkezésre álljanak.  
-> Ez támogatja a kommunikációt, a döntések követhetőségét, a tudásmegőrzést, a projektellenőrzést és a későbbi átadást vagy karbantartást is.  
+> A projektdokumentáció célja,
+> hogy a projekt lényeges információi átláthatóan,
+> egységesen és visszakereshetően rendelkezésre álljanak.  
+> Ez támogatja a kommunikációt, a döntések követhetőségét,
+> a tudásmegőrzést, a projektellenőrzést
+> és a későbbi átadást vagy karbantartást is.  
 > A jó projektdokumentáció tehát nem puszta adminisztráció, hanem a projekt sikerének fontos része.
 
 ## Gyakori vizsgahibák

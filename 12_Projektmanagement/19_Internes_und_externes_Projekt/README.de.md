@@ -46,13 +46,19 @@ Weil sich Folgendes unterscheiden kann:
 ## Wichtige Anmerkung
 
 Diese interne/externe Einteilung ist eine praktische Projektmanagement-Kategorisierung.  
-Die folgenden Quellen beschreiben hauptsächlich die Projektumgebung, Stakeholder und organisatorische Zusammenhänge; daraus ergibt sich diese Unterscheidung.
+Die folgenden Quellen beschreiben hauptsächlich die Projektumgebung,
+Stakeholder und organisatorische Zusammenhänge;
+daraus ergibt sich diese Unterscheidung.
 
 ## Prüfungstaugliche Formulierung
 
-> Als internes Projekt bezeichnet man ein Projekt, das für die eigene Organisation erstellt wird und primär internen Zielen dient.  
+> Als internes Projekt bezeichnet man ein Projekt,
+> das für die eigene Organisation erstellt wird
+> und primär internen Zielen dient.  
 > Bei einem externen Projekt wird das Projektergebnis für einen externen Kunden, Partner oder Auftraggeber erstellt.  
-> Der Unterschied ist deshalb wichtig, weil sich Kommunikation, Erwartungen, Genehmigung und oft auch der vertragliche Rahmen unterscheiden.
+> Der Unterschied ist deshalb wichtig,
+> weil sich Kommunikation, Erwartungen, Genehmigung
+> und oft auch der vertragliche Rahmen unterscheiden.
 
 ## Häufige Prüfungsfehler
 
@@ -81,10 +87,16 @@ Die folgenden Quellen beschreiben hauptsächlich die Projektumgebung, Stakeholde
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  
-   Verwendung: Projektumgebung, Stakeholder und organisatorische Zusammenhänge; daraus ableitbare Unterscheidung zwischen internem und externem Projekt.
+   Verwendung: Projektumgebung, Stakeholder
+   und organisatorische Zusammenhänge;
+   daraus ableitbare Unterscheidung
+   zwischen internem und externem Projekt.
 
 2. Atlassian - Project charter template  
    https://www.atlassian.com/software/confluence/templates/project-charter  
-   Verwendung: Projektziel, Scope, Stakeholder- und Ownership-Struktur, die gut die unterschiedlichen Rahmenbedingungen interner und externer Projekte zeigt.
+   Verwendung: Projektziel, Scope,
+   Stakeholder- und Ownership-Struktur,
+   die gut die unterschiedlichen Rahmenbedingungen
+   interner und externer Projekte zeigt.
 
 Abgerufen: `2026-04-08`
