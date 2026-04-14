@@ -53,7 +53,8 @@ tartozik, mint egy napi rutinfeladathoz.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projekt egy időben korlátozott, egyedi célra irányuló feladat vagy kezdeményezés, amely meghatározott eredményt kíván elérni.  
+> A projekt egy időben korlátozott, egyedi célra irányuló feladat
+> vagy kezdeményezés, amely meghatározott eredményt kíván elérni.  
 > Eltér a folyamatos rutinszerű működéstől, mert van kezdete, vége, külön erőforrásigénye és egyedi kimenetele.  
 > Ezért a projektet külön tervezni, szervezni és irányítani kell.
 

@@ -44,7 +44,9 @@ Egy munkacsomag tartalmazhat több kisebb feladatot is.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A munkacsomag a projekt olyan kezelhető méretű részegysége, amelyhez konkrét cél, felelős, idő- és erőforrásigény rendelhető.  
+> A munkacsomag a projekt olyan kezelhető méretű részegysége,
+> amelyhez konkrét cél, felelős
+> és idő- és erőforrásigény rendelhető.  
 > A projektstrukturaterv alsóbb szintjein jelenik meg, és alapja a részletes tervezésnek, a végrehajtásnak és az ellenőrzésnek.
 
 ## Gyakori vizsgahibák

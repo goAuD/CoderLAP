@@ -46,8 +46,12 @@ Ein Arbeitspaket kann mehrere kleinere Aufgaben enthalten.
 
 ## Prüfungstaugliche Formulierung
 
-> Das Arbeitspaket ist eine handhabbare Teileinheit des Projekts, der ein konkretes Ziel, ein Verantwortlicher sowie Zeit- und Ressourcenbedarf zugeordnet werden können.  
-> Es erscheint auf den unteren Ebenen des Projektstrukturplans und bildet die Grundlage für die Detailplanung, Durchführung und Kontrolle.
+> Das Arbeitspaket ist eine handhabbare Teileinheit des Projekts,
+> der ein konkretes Ziel, ein Verantwortlicher
+> sowie Zeit- und Ressourcenbedarf zugeordnet werden können.  
+> Es erscheint auf den unteren Ebenen des Projektstrukturplans
+> und bildet die Grundlage
+> für die Detailplanung, Durchführung und Kontrolle.
 
 ## Häufige Prüfungsfehler
 

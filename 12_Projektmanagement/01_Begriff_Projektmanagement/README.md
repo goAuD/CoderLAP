@@ -53,8 +53,11 @@ Ezért a projektmenedzsment jellemzően magában foglalja:
 ## Vizsgán jól használható megfogalmazás
 
 > A projektmenedzsment egy projekt tudatos megtervezését, irányítását, koordinálását és ellenőrzését jelenti.  
-> Célja, hogy a projekt a meghatározott eredményt a rendelkezésre álló időn, költségkereten és erőforrásokon belül elérje.  
-> A projektmenedzsmenthez tartozik többek között a tervezés, a kommunikáció, a feladatkiosztás, a kockázatkezelés és a folyamatos nyomon követés.
+> Célja, hogy a projekt a meghatározott eredményt a rendelkezésre álló időn,
+> költségkereten és erőforrásokon belül elérje.  
+> A projektmenedzsmenthez tartozik többek között a tervezés,
+> a kommunikáció, a feladatkiosztás, a kockázatkezelés
+> és a folyamatos nyomon követés.
 
 ## Gyakori vizsgahibák
 

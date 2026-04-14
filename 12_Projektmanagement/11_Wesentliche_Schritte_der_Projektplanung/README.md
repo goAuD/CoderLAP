@@ -56,7 +56,11 @@
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projekttervezés legfontosabb lépései közé tartozik a cél és a scope tisztázása, a követelmények összegyűjtése, a feladatok lebontása, az ütemezés, az erőforrás- és költségtervezés, valamint a kockázatok és mérföldkövek meghatározása.  
+> A projekttervezés legfontosabb lépései közé tartozik
+> a cél és a scope tisztázása, a követelmények összegyűjtése,
+> a feladatok lebontása, az ütemezés,
+> az erőforrás- és költségtervezés,
+> valamint a kockázatok és mérföldkövek meghatározása.  
 > A jó projektterv azért fontos, mert átláthatóvá és követhetővé teszi a megvalósítást.
 
 ## Gyakori vizsgahibák

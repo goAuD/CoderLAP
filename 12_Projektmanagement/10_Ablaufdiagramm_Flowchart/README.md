@@ -46,7 +46,9 @@ Ezért használják:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A flowchart vagy folyamatábra olyan grafikus ábrázolás, amely szimbólumokkal és nyilakkal mutatja meg egy folyamat vagy algoritmus lépéseit.  
+> A flowchart vagy folyamatábra olyan grafikus ábrázolás,
+> amely szimbólumokkal és nyilakkal mutatja meg
+> egy folyamat vagy algoritmus lépéseit.  
 > Segítségével jól szemléltethetők a műveletek sorrendjei, a döntési pontok és az elágazások.  
 > Előnye, hogy könnyen áttekinthető és technikai, illetve nem technikai környezetben is jól használható.
 

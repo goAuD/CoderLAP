@@ -45,8 +45,13 @@ Weil die Projektdokumentation nicht eine einzige Datei ist, sondern ein **Dokume
 
 ## Prüfungstaugliche Formulierung
 
-> Zur Dokumentation eines Projekts gehören verschiedene Dokumenttypen, zum Beispiel der Projektauftrag, die Anforderungsdokumente, der Projektplan, der Projektstrukturplan, Statusberichte, Protokolle sowie Test- und Übergabedokumentationen.  
-> Zusammen stellen sie sicher, dass Start, Planung, Umsetzung und Abschluss des Projekts transparent und nachvollziehbar sind.
+> Zur Dokumentation eines Projekts gehören verschiedene Dokumenttypen,
+> zum Beispiel der Projektauftrag, die Anforderungsdokumente,
+> der Projektplan, der Projektstrukturplan, Statusberichte,
+> Protokolle sowie Test- und Übergabedokumentationen.  
+> Zusammen stellen sie sicher,
+> dass Start, Planung, Umsetzung und Abschluss des Projekts
+> transparent und nachvollziehbar sind.
 
 ## Häufige Prüfungsfehler
 

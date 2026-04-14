@@ -43,7 +43,10 @@ A lényeg nem a forma, hanem a logikai felbontás.
 ## Vizsgán jól használható megfogalmazás
 
 > A Projektstrukturplan a projekt teljes munkájának hierarchikus felbontása.  
-> Célja, hogy a projekt összes lényeges részfeladata és eredménye átláthatóvá váljon, és ez alapot adjon az ütemezéshez, költségtervezéshez és felelősségi körök kijelöléséhez.  
+> Célja, hogy a projekt összes lényeges részfeladata
+> és eredménye átláthatóvá váljon,
+> és ez alapot adjon az ütemezéshez,
+> költségtervezéshez és felelősségi körök kijelöléséhez.  
 > A PSP tehát nem időterv, hanem a projekt logikai felbontása.
 
 ## Gyakori vizsgahibák
