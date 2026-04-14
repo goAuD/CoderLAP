@@ -73,7 +73,9 @@ Mert ha a szoftver nem ügyfélközpontú:
 ## Vizsgán jól használható megfogalmazás
 
 > Az ügyfélközpontú szoftvermegoldás a felhasználó igényeiből és problémáiból indul ki.  
-> Fontos, hogy a rendszer ne csak technikailag működjön, hanem egyszerűen használható, megbízható és a valós munkafolyamatokhoz illeszkedő legyen.  
+> Fontos, hogy a rendszer ne csak technikailag működjön,
+> hanem egyszerűen használható, megbízható
+> és a valós munkafolyamatokhoz illeszkedő legyen.  
 > A jó megoldás felhasználói visszajelzés alapján iteratívan javul.
 
 ## Gyakori vizsgahibák

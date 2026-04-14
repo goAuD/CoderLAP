@@ -71,8 +71,12 @@ Weil man in der technischen Arbeit oft:
 
 ## Prüfungstaugliche Formulierung
 
-> Technische Zusammenhänge müssen so erklärt werden, dass die Erklärung fachlich korrekt, aber für den Zuhörer verständlich ist.  
-> Es empfiehlt sich, vom Ziel und der praktischen Bedeutung auszugehen, und Fachbegriffe mit einfacher Sprache, Beispielen oder Vergleichen zu klären.  
+> Technische Zusammenhänge müssen so erklärt werden,
+> dass die Erklärung fachlich korrekt,
+> aber für den Zuhörer verständlich ist.  
+> Es empfiehlt sich, vom Ziel und der praktischen Bedeutung auszugehen,
+> und Fachbegriffe mit einfacher Sprache,
+> Beispielen oder Vergleichen zu klären.  
 > Am Ende einer guten Erklärung sollte man überprüfen, ob die andere Person das Wesentliche tatsächlich verstanden hat.
 
 ## Häufige Prüfungsfehler

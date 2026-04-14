@@ -73,7 +73,11 @@ Ha nincs azonnali megoldás:
 ## Vizsgán jól használható megfogalmazás
 
 > Technikai probléma esetén az ügyféllel nyugodtan, strukturáltan és érthetően kell kommunikálni.  
-> Először pontosítani kell a tünetet, majd lépésenként fel kell tárni az okot, és közben az ügyfelet folyamatosan tájékoztatni kell a következő lépésekről és a várható időkeretről.  
+> Először pontosítani kell a tünetet,
+> majd lépésenként fel kell tárni az okot,
+> és közben az ügyfelet folyamatosan tájékoztatni kell
+> a következő lépésekről
+> és a várható időkeretről.  
 > A jó ügyfélkezelés technikai hiba esetén is empatikus, tárgyszerű és megoldásorientált.
 
 ## Gyakori vizsgahibák

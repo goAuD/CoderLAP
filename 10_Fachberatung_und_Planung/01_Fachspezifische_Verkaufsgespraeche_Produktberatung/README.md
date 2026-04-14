@@ -70,7 +70,10 @@ Hanem ezt is:
 ## Vizsgán jól használható megfogalmazás
 
 > A szakszerű terméktanácsadás alapja az ügyfél igényeinek felmérése.  
-> Először meg kell érteni, hogy mire szeretné használni a megoldást, milyen korlátai és elvárásai vannak, és csak ezután szabad konkrét terméket vagy szoftvert ajánlani.  
+> Először meg kell érteni,
+> hogy mire szeretné használni a megoldást,
+> milyen korlátai és elvárásai vannak,
+> és csak ezután szabad konkrét terméket vagy szoftvert ajánlani.  
 > A jó értékesítési beszélgetésben a technikai jellemzőket mindig az ügyfél számára érthető előnyökre kell lefordítani.
 
 ## Gyakori vizsgahibák
