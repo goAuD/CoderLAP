@@ -57,7 +57,9 @@ Ilyenkor különösen fontos, hogy a gép maga is védje magát.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A software firewall a helyi gépen futó tűzfal, amely szűri a hálózati forgalmat és szabályok alapján engedi vagy tiltja a kapcsolatokat.  
+> A software firewall a helyi gépen futó tűzfal,
+> amely szűri a hálózati forgalmat
+> és szabályok alapján engedi vagy tiltja a kapcsolatokat.  
 > Segít megakadályozni a jogosulatlan bejövő hozzáférést, és bizonyos esetekben a kimenő kapcsolatokat is korlátozza.  
 > Különösen fontos kliensgépeknél és nem megbízható hálózati környezetben.
 

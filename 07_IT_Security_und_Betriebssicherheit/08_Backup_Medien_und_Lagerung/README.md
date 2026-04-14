@@ -89,7 +89,9 @@ egyszerre pusztíthatja el az elsődleges adatot és a közeli mentést.
 ## Vizsgán jól használható megfogalmazás
 
 > A backup médiumnál és tárolásnál nemcsak a kapacitás számít, hanem a biztonság és a helyreállíthatóság is.  
-> A mentéseket célszerű az eredeti rendszertől elkülönítve, megfelelően védett helyen tárolni, és érzékeny adatok esetén titkosítani.  
+> A mentéseket célszerű az eredeti rendszertől elkülönítve,
+> megfelelően védett helyen tárolni,
+> és érzékeny adatok esetén titkosítani.  
 > A hálózaton állandóan elérhető mentés önmagában nem elég, ezért fontos lehet az offline vagy offsite példány is.
 
 ## Gyakori vizsgahibák

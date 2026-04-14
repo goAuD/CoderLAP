@@ -97,7 +97,10 @@ Weil sie unterschiedlich funktionieren:
 ## Prüfungstaugliche Formulierung
 
 > Virus, Worm, Trojaner und Spyware sind alle Malware-Typen, funktionieren aber unterschiedlich.  
-> Der Virus infiziert häufig andere Dateien, der Worm verbreitet sich selbst, der Trojaner tarnt sich als legitimes Programm, und die Spyware sammelt heimlich Daten.  
+> Der Virus infiziert häufig andere Dateien,
+> der Worm verbreitet sich selbst,
+> der Trojaner tarnt sich als legitimes Programm,
+> und die Spyware sammelt heimlich Daten.  
 > Phishing hingegen ist eine auf Täuschung basierende Angriffsmethode, deren Ziel häufig Passwort- oder Datendiebstahl ist.
 
 ## Häufige Prüfungsfehler
