@@ -41,7 +41,9 @@ Mert nélküle könnyen előfordulhat:
 ## Vizsgán jól használható megfogalmazás
 
 > A projektvezető feladata a projekt megtervezése, koordinálása, nyomon követése és kommunikációjának biztosítása.  
-> Figyeli a határidőket, költségeket, erőforrásokat, mérföldköveket és kockázatokat, valamint kezeli a problémákat és a változásokat.  
+> Figyeli a határidőket, költségeket, erőforrásokat,
+> mérföldköveket és kockázatokat,
+> valamint kezeli a problémákat és a változásokat.  
 > A projektvezető tehát nem feltétlenül maga végzi a szakmai munkát, hanem összefogja és irányítja a teljes projektet.
 
 ## Gyakori vizsgahibák

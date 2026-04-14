@@ -46,9 +46,14 @@ Deshalb wird es verwendet für:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Flowchart oder Ablaufdiagramm ist eine grafische Darstellung, die mit Symbolen und Pfeilen die Schritte eines Prozesses oder Algorithmus zeigt.  
-> Mit seiner Hilfe lassen sich die Reihenfolge der Operationen, Entscheidungspunkte und Verzweigungen gut veranschaulichen.  
-> Sein Vorteil ist, dass es leicht überschaubar und sowohl im technischen als auch im nicht-technischen Umfeld gut einsetzbar ist.
+> Ein Flowchart oder Ablaufdiagramm ist eine grafische Darstellung,
+> die mit Symbolen und Pfeilen die Schritte eines Prozesses
+> oder Algorithmus zeigt.  
+> Mit seiner Hilfe lassen sich die Reihenfolge der Operationen,
+> Entscheidungspunkte und Verzweigungen gut veranschaulichen.  
+> Sein Vorteil ist, dass es leicht überschaubar
+> und sowohl im technischen als auch im nicht-technischen Umfeld
+> gut einsetzbar ist.
 
 ## Häufige Prüfungsfehler
 

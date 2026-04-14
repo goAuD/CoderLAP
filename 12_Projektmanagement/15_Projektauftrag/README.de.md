@@ -37,7 +37,9 @@ In vielen Projektmanagement-Sprachen ist das nahe Äquivalent der **Project Char
 
 ## Prüfungstaugliche Formulierung
 
-> Der Projektauftrag ist das offizielle Startdokument des Projekts, das Ziel, Begründung, Hauptrahmen und die wichtigsten Beteiligten festhält.  
+> Der Projektauftrag ist das offizielle Startdokument des Projekts,
+> das Ziel, Begründung, Hauptrahmen
+> und die wichtigsten Beteiligten festhält.  
 > Seine Aufgabe ist es, eine gemeinsame Grundlage für den Projektstart und die weitere Planung zu bieten.  
 > Inhaltlich steht er dem nahe, was im englischsprachigen Projektumfeld als Project Charter bezeichnet wird.
 

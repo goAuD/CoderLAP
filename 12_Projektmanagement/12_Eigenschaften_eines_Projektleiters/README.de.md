@@ -39,8 +39,13 @@ Deshalb sind Soft Skills sehr wichtig.
 
 ## Prüfungstaugliche Formulierung
 
-> Zu den wichtigen Eigenschaften eines guten Projektleiters gehören gute Kommunikation, Organisiertheit, Entscheidungsfähigkeit, Verantwortungsbewusstsein, Problemlösungsorientierung und Stressresistenz.  
-> Da der Projektleiter Menschen, Aufgaben, Erwartungen und Konflikte managen muss, sind neben dem Fachwissen auch die menschlichen und Führungskompetenzen entscheidend.
+> Zu den wichtigen Eigenschaften eines guten Projektleiters gehören
+> gute Kommunikation, Organisiertheit, Entscheidungsfähigkeit,
+> Verantwortungsbewusstsein, Problemlösungsorientierung
+> und Stressresistenz.  
+> Da der Projektleiter Menschen, Aufgaben, Erwartungen
+> und Konflikte managen muss, sind neben dem Fachwissen
+> auch die menschlichen und Führungskompetenzen entscheidend.
 
 ## Häufige Prüfungsfehler
 

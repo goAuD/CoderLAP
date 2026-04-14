@@ -53,8 +53,11 @@ als bei einer täglichen Routineaufgabe.
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Projekt ist eine zeitlich begrenzte, auf ein einzigartiges Ziel gerichtete Aufgabe oder Initiative, die ein bestimmtes Ergebnis erzielen soll.  
-> Es unterscheidet sich vom laufenden Routinebetrieb, weil es einen Anfang, ein Ende, einen eigenen Ressourcenbedarf und ein einzigartiges Ergebnis hat.  
+> Ein Projekt ist eine zeitlich begrenzte, auf ein einzigartiges Ziel
+> gerichtete Aufgabe oder Initiative, die ein bestimmtes Ergebnis erzielen soll.  
+> Es unterscheidet sich vom laufenden Routinebetrieb, weil es einen Anfang,
+> ein Ende, einen eigenen Ressourcenbedarf
+> und ein einzigartiges Ergebnis hat.  
 > Deshalb muss ein Projekt separat geplant, organisiert und gesteuert werden.
 
 ## Häufige Prüfungsfehler

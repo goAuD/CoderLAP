@@ -43,7 +43,10 @@ Das Wesentliche ist nicht die Form, sondern die logische Zerlegung.
 ## Prüfungstaugliche Formulierung
 
 > Der Projektstrukturplan ist die hierarchische Aufgliederung der gesamten Projektarbeit.  
-> Sein Ziel ist es, alle wesentlichen Teilaufgaben und Ergebnisse des Projekts übersichtlich zu machen und damit die Grundlage für Zeitplanung, Kostenplanung und Zuordnung von Verantwortlichkeiten zu schaffen.  
+> Sein Ziel ist es, alle wesentlichen Teilaufgaben
+> und Ergebnisse des Projekts übersichtlich zu machen
+> und damit die Grundlage für Zeitplanung, Kostenplanung
+> und Zuordnung von Verantwortlichkeiten zu schaffen.  
 > Der PSP ist also kein Zeitplan, sondern die logische Zerlegung des Projekts.
 
 ## Häufige Prüfungsfehler

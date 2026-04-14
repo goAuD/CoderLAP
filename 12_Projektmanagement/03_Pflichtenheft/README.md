@@ -51,7 +51,9 @@ Tipikusan:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Pflichtenheft a megvalósítás részletes leírása, amely azt rögzíti, hogy a megrendelő által megadott követelményeket hogyan fogják teljesíteni.  
+> A Pflichtenheft a megvalósítás részletes leírása,
+> amely azt rögzíti, hogy a megrendelő által megadott követelményeket
+> hogyan fogják teljesíteni.  
 > Jellemzően a kivitelező vagy fejlesztő oldal dolgozza ki a Lastenheft alapján.  
 > Fontos szerepe, hogy technikailag egyértelmű alapot adjon a fejlesztéshez, teszteléshez és későbbi átvételhez.
 
@@ -86,6 +88,8 @@ Tipikusan:
 
 2. Wikipedia - Pflichtenheft  
    https://de.wikipedia.org/wiki/Pflichtenheft  
-   Használat: DIN 69901 és VDI hivatkozásokkal alátámasztott, jól strukturált összefoglaló a Pflichtenheft fogalmáról, tartalmáról és gyakorlati alkalmazásáról.
+   Használat: DIN 69901 és VDI hivatkozásokkal alátámasztott,
+   jól strukturált összefoglaló a Pflichtenheft fogalmáról,
+   tartalmáról és gyakorlati alkalmazásáról.
 
 Megnyitva: `2026-04-08`

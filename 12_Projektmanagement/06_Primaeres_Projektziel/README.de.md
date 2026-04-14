@@ -32,7 +32,9 @@ Weil Frist, Kosten und Ressourcen zwar wichtig sind, aber sie geben an:
 
 - innerhalb welcher Rahmenbedingungen das Ziel erreicht werden muss
 
-Wenn zum Beispiel alles rechtzeitig fertig wird, aber die Lösung nicht das kann, was gebraucht wurde, dann ist das Projekt in Wirklichkeit nicht erfolgreich.
+Wenn zum Beispiel alles rechtzeitig fertig wird,
+aber die Lösung nicht das kann, was gebraucht wurde,
+dann ist das Projekt in Wirklichkeit nicht erfolgreich.
 
 ## Was bedeutet das in der Praxis?
 
@@ -52,8 +54,11 @@ Bei der Projektleitung muss immer geklärt werden:
 ## Prüfungstaugliche Formulierung
 
 > Das primäre Projektziel ist das Erreichen des definierten Ergebnisses oder Nutzens.  
-> Frist, Kosten und Ressourcen sind sehr wichtig, aber sie stellen die Einschränkungen der Umsetzung dar, nicht das eigentliche Wesen des Projekts.  
-> Ein Projekt kann erst dann als wirklich erfolgreich betrachtet werden, wenn es das gesetzte Ziel in angemessener Qualität erfüllt.
+> Frist, Kosten und Ressourcen sind sehr wichtig,
+> aber sie stellen die Einschränkungen der Umsetzung dar,
+> nicht das eigentliche Wesen des Projekts.  
+> Ein Projekt kann erst dann als wirklich erfolgreich betrachtet werden,
+> wenn es das gesetzte Ziel in angemessener Qualität erfüllt.
 
 ## Häufige Prüfungsfehler
 

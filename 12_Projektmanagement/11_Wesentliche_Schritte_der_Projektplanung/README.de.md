@@ -56,7 +56,11 @@
 
 ## Prüfungstaugliche Formulierung
 
-> Zu den wichtigsten Schritten der Projektplanung gehören die Klärung von Ziel und Scope, das Sammeln der Anforderungen, die Aufgliederung der Aufgaben, die Zeitplanung, die Ressourcen- und Kostenplanung sowie die Festlegung von Risiken und Meilensteinen.  
+> Zu den wichtigsten Schritten der Projektplanung gehören
+> die Klärung von Ziel und Scope, das Sammeln der Anforderungen,
+> die Aufgliederung der Aufgaben, die Zeitplanung,
+> die Ressourcen- und Kostenplanung sowie die Festlegung
+> von Risiken und Meilensteinen.  
 > Ein guter Projektplan ist deshalb wichtig, weil er die Umsetzung transparent und nachvollziehbar macht.
 
 ## Häufige Prüfungsfehler

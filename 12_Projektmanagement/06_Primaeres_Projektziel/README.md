@@ -50,7 +50,9 @@ Projektvezetésnél mindig tisztázni kell:
 ## Vizsgán jól használható megfogalmazás
 
 > A projekt elsődleges célja a meghatározott eredmény vagy haszon elérése.  
-> A határidő, költség és erőforrás nagyon fontos, de ezek a megvalósítás korlátait jelentik, nem magát a projekt lényegét.  
+> A határidő, költség és erőforrás nagyon fontos,
+> de ezek a megvalósítás korlátait jelentik,
+> nem magát a projekt lényegét.  
 > Egy projekt akkor tekinthető igazán sikeresnek, ha a kitűzött célt megfelelő minőségben teljesíti.
 
 ## Gyakori vizsgahibák

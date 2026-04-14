@@ -43,7 +43,9 @@ Ezért:
 ## Vizsgán jól használható megfogalmazás
 
 > A struktogramm egy algoritmus vagy programlogika blokkszerű, strukturált ábrázolása.  
-> Segítségével jól szemléltethető a lépések sorrendje, az elágazás és a ciklus, ezért különösen hasznos az algoritmusok tervezésében és oktatásában.  
+> Segítségével jól szemléltethető a lépések sorrendje,
+> az elágazás és a ciklus, ezért különösen hasznos
+> az algoritmusok tervezésében és oktatásában.  
 > A flowcharttal szemben inkább egymásba ágyazott szerkezeteket használ, és közelebb áll a strukturált programozás gondolkodásmódjához.
 
 ## Gyakori vizsgahibák

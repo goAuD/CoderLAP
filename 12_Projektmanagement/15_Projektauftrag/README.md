@@ -37,7 +37,9 @@ Sok projektmenedzsment-nyelvben ennek közeli megfelelője a **project charter**
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Projektauftrag a projekt hivatalos indító dokumentuma, amely rögzíti a projekt célját, indoklását, fő kereteit és legfontosabb szereplőit.  
+> A Projektauftrag a projekt hivatalos indító dokumentuma,
+> amely rögzíti a projekt célját, indoklását,
+> fő kereteit és legfontosabb szereplőit.  
 > Feladata, hogy közös alapot adjon a projekt elindításához és a további tervezéshez.  
 > Tartalmilag közel áll ahhoz, amit angol nyelvű projektkörnyezetben project charternek neveznek.
 
