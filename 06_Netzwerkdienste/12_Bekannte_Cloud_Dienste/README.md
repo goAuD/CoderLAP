@@ -64,7 +64,10 @@ Például:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Ismert cloud szolgáltatások például az AWS, a Microsoft Azure és a Google Cloud mint infrastruktúra- és platformszolgáltatók, valamint a Microsoft 365, a Google Workspace, az iCloud vagy a Dropbox mint inkább SaaS vagy végfelhasználói cloud megoldások.  
+> Ismert cloud szolgáltatások például az AWS, a Microsoft Azure és a Google Cloud
+> mint infrastruktúra- és platformszolgáltatók,
+> valamint a Microsoft 365, a Google Workspace, az iCloud vagy a Dropbox
+> mint inkább SaaS vagy végfelhasználói cloud megoldások.  
 > Vizsgán fontos, hogy a szolgáltatás példáját a megfelelő cloud modellhez tudjuk kapcsolni.
 
 ## Gyakori vizsgahibák

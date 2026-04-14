@@ -63,7 +63,8 @@ benötigt.
 ## Prüfungstaugliche Formulierung
 
 > IMAP ist ein E-Mail-Protokoll zur Synchronisierung von auf dem Server gespeicherten E-Mails und Ordnern.  
-> Bei der Nutzung mehrerer Geräte ist es im Allgemeinen vorteilhafter als POP3, da E-Mails und Zustände zentral auf dem Server bleiben.  
+> Bei der Nutzung mehrerer Geräte ist es im Allgemeinen vorteilhafter als POP3,
+> da E-Mails und Zustände zentral auf dem Server bleiben.  
 > IMAPS ist die mit TLS geschützte, sichere Variante von IMAP.
 
 ## Häufige Prüfungsfehler

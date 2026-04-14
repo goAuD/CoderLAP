@@ -59,7 +59,9 @@ Mert vizsgán gyakori kérdés:
 ## Vizsgán jól használható megfogalmazás
 
 > A levelezőrendszer több komponensből áll.  
-> A felhasználó klienssel ír és olvas levelet, a levél beküldése és továbbítása SMTP-vel történik, a bejövő levelek elérésére pedig jellemzően IMAP vagy POP3 szolgál.  
+> A felhasználó klienssel ír és olvas levelet,
+> a levél beküldése és továbbítása SMTP-vel történik,
+> a bejövő levelek elérésére pedig jellemzően IMAP vagy POP3 szolgál.  
 > A mail server tehát nemcsak tárol, hanem fogad, továbbít és kiszolgál is.
 
 ## Gyakori vizsgahibák

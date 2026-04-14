@@ -61,7 +61,8 @@ Ezért ma a titkosított kapcsolat az elvárt megoldás.
 ## Vizsgán jól használható megfogalmazás
 
 > A POP3 egy levelezési protokoll, amely a bejövő e-mailek letöltésére szolgál.  
-> Egyszerű modellje miatt elsősorban helyi letöltésre alkalmas, míg több eszközös szinkronhoz az IMAP gyakran jobb választás.  
+> Egyszerű modellje miatt elsősorban helyi letöltésre alkalmas,
+> míg több eszközös szinkronhoz az IMAP gyakran jobb választás.  
 > A POP3S a POP3 TLS-sel védett változata, ezért biztonságosabb.
 
 ## Gyakori vizsgahibák

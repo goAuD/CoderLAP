@@ -67,8 +67,12 @@ Továbbra is fontos:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A cloud computing olyan modell, amelyben számítási erőforrásokat, tárhelyet, platformokat vagy teljes alkalmazásokat hálózaton keresztül, igény szerint veszünk igénybe.  
-> Fő jellemzői az on-demand használat, a hálózati elérés, a megosztott erőforráskészlet, a gyors skálázhatóság és a mérhető szolgáltatásjelleg.  
+> A cloud computing olyan modell,
+> amelyben számítási erőforrásokat, tárhelyet, platformokat
+> vagy teljes alkalmazásokat hálózaton keresztül, igény szerint veszünk igénybe.  
+> Fő jellemzői az on-demand használat, a hálózati elérés,
+> a megosztott erőforráskészlet, a gyors skálázhatóság
+> és a mérhető szolgáltatásjelleg.  
 > Előnye a rugalmasság, de figyelni kell a biztonsági, adatvédelmi és költségszempontokra is.
 
 ## Gyakori vizsgahibák

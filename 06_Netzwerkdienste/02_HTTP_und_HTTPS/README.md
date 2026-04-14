@@ -73,7 +73,9 @@ Például nem oldja meg önmagában:
 ## Vizsgán jól használható megfogalmazás
 
 > A HTTP (Hypertext Transfer Protocol) a weben használt alapvető kérés-válasz protokoll.  
-> A HTTPS (Hypertext Transfer Protocol Secure) ugyanez a protokoll TLS-védelemmel, ezért biztosítja az adatforgalom titkosítását, sértetlenégét és a szerver hitelesítését.  
+> A HTTPS (Hypertext Transfer Protocol Secure) ugyanez a protokoll TLS-védelemmel,
+> ezért biztosítja az adatforgalom titkosítását,
+> sértetlenégét és a szerver hitelesítését.  
 > Gyakorlatban a modern webes szolgáltatásoknál a HTTPS a standard.
 
 ## Gyakori vizsgahibák
