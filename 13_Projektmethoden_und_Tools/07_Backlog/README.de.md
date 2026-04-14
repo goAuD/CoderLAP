@@ -10,7 +10,9 @@
 
 ## Was ist ein Backlog?
 
-Das Backlog ist die **gemeinsame, transparente Liste** aller wichtigen Aufgaben, Anforderungen, Verbesserungen, Entwicklungsideen und technischen Arbeiten.
+Das Backlog ist die **gemeinsame, transparente Liste**
+aller wichtigen Aufgaben, Anforderungen, Verbesserungen,
+Entwicklungsideen und technischen Arbeiten.
 
 In einer agilen Umgebung kann es typischerweise enthalten:
 
@@ -57,8 +59,12 @@ Dabei macht das Team:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Backlog ist eine priorisierte Aufgabenliste, die alle wichtigen Arbeitselemente zum Produkt oder Projekt enthält.  
-> In einer agilen Umgebung bezeichnet das Product Backlog die vollständige Anforderungsliste, während das Sprint Backlog die für den aktuellen Sprint ausgewählten Aufgaben zusammenfasst.  
+> Das Backlog ist eine priorisierte Aufgabenliste,
+> die alle wichtigen Arbeitselemente zum Produkt oder Projekt enthält.  
+> In einer agilen Umgebung bezeichnet das Product Backlog
+> die vollständige Anforderungsliste,
+> während das Sprint Backlog
+> die für den aktuellen Sprint ausgewählten Aufgaben zusammenfasst.  
 > Ziel des Backlogs ist die Unterstützung von Transparenz, Priorisierung und Planung.
 
 ## Häufige Prüfungsfehler

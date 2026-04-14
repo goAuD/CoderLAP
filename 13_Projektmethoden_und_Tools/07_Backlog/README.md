@@ -57,8 +57,12 @@ Ilyenkor a csapat:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A backlog egy priorizált feladatlista, amely a termékhez vagy projekthez kapcsolódó összes fontos munkaelemet tartalmazza.  
-> Agilis környezetben a product backlog a teljes igénylistát jelenti, míg a sprint backlog az aktuális sprintre kiválasztott feladatokat foglalja össze.  
+> A backlog egy priorizált feladatlista,
+> amely a termékhez vagy projekthez kapcsolódó
+> összes fontos munkaelemet tartalmazza.  
+> Agilis környezetben a product backlog a teljes igénylistát jelenti,
+> míg a sprint backlog
+> az aktuális sprintre kiválasztott feladatokat foglalja össze.  
 > A backlog célja az átláthatóság, a priorizálás és a tervezés támogatása.
 
 ## Gyakori vizsgahibák

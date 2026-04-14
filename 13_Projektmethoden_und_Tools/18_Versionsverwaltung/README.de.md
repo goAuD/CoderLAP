@@ -55,7 +55,9 @@ Ein Versionsverwaltungssystem ist nützlich, aber nicht dasselbe wie eine vollst
 ## Prüfungstaugliche Formulierung
 
 > Versionsverwaltung bedeutet die Nachverfolgung und Verwaltung von Änderungen an Dateien, insbesondere am Quellcode.  
-> Damit lässt sich nachvollziehen, wer was und wann geändert hat, und es besteht die Möglichkeit, frühere Zustände wiederherzustellen und die Arbeit mehrerer Entwickler zu koordinieren.  
+> Damit lässt sich nachvollziehen, wer was und wann geändert hat,
+> und es besteht die Möglichkeit, frühere Zustände wiederherzustellen
+> und die Arbeit mehrerer Entwickler zu koordinieren.  
 > In der modernen Softwareentwicklung ist Git eines der verbreitetsten verteilten Versionsverwaltungssysteme.
 
 ## Häufige Prüfungsfehler

@@ -47,7 +47,8 @@ Az alábbi hátrányok részben a szigorú szerkezetből következnek:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A V-modell előnye, hogy világos szerkezetet ad, és a fejlesztési lépésekhez a megfelelő tesztelési lépéseket rendeli.  
+> A V-modell előnye, hogy világos szerkezetet ad,
+> és a fejlesztési lépésekhez a megfelelő tesztelési lépéseket rendeli.  
 > Ez javítja a nyomon követhetőséget és a minőségbiztosítást.  
 > Hátránya, hogy merevebb, nagyobb dokumentációs igénnyel járhat, ezért gyorsan változó projektekben kevésbé előnyös.
 

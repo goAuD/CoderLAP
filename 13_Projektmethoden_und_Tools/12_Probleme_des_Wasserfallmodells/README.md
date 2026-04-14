@@ -49,7 +49,9 @@ Tehát nem rossz modell, csak nem minden helyzetben ideális.
 ## Vizsgán jól használható megfogalmazás
 
 > A vízesésmodell egyik fő problémája a merev, lineáris felépítés.  
-> A változó követelményeket nehezen kezeli, és a hibák vagy félreértések gyakran csak későn derülnek ki, amikor a javítás már drágább.  
+> A változó követelményeket nehezen kezeli,
+> és a hibák vagy félreértések gyakran csak későn derülnek ki,
+> amikor a javítás már drágább.  
 > Emiatt bizonytalan vagy gyorsan változó projektekben sokszor kevésbé előnyös, mint az iteratív vagy agilis megközelítések.
 
 ## Gyakori vizsgahibák

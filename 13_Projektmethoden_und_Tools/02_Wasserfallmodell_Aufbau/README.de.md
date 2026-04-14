@@ -53,9 +53,13 @@ Daher ist das Modell:
 
 ## Prüfungstaugliche Formulierung
 
-> Das Wasserfallmodell ist ein lineares Softwareprozessmodell, bei dem die Hauptphasen der Entwicklung typischerweise nacheinander ablaufen.  
+> Das Wasserfallmodell ist ein lineares Softwareprozessmodell,
+> bei dem die Hauptphasen der Entwicklung
+> typischerweise nacheinander ablaufen.  
 > Typische Phasen sind Anforderungsanalyse, Entwurf, Implementierung, Test, Einführung und Wartung.  
-> Der Vorteil ist die übersichtliche Struktur, der Nachteil ist, dass es weniger flexibel ist, wenn sich die Anforderungen im Laufe des Projekts ändern.
+> Der Vorteil ist die übersichtliche Struktur,
+> der Nachteil ist, dass es weniger flexibel ist,
+> wenn sich die Anforderungen im Laufe des Projekts ändern.
 
 ## Häufige Prüfungsfehler
 

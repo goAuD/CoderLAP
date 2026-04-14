@@ -65,7 +65,9 @@ Ez lehet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A user story egy rövid, felhasználói nézőpontból megfogalmazott igény, amely azt írja le, hogy ki mit szeretne és milyen célból.  
+> A user story egy rövid,
+> felhasználói nézőpontból megfogalmazott igény,
+> amely azt írja le, hogy ki mit szeretne és milyen célból.  
 > A story board ezzel szemben vizuálisan mutatja be a felhasználói folyamatot vagy egy használati helyzetet.  
 > A kettő együtt segíti a követelmények megértését, a kommunikációt és a tervezést.
 

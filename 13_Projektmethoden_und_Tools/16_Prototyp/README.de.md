@@ -42,8 +42,12 @@ Er kann sein:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Prototyp ist ein frühes Muster des geplanten Systems, das hilft, Ideen, Benutzerabläufe oder technische Lösungen auszuprobieren.  
-> Er ist nicht unbedingt endgültig oder vollständig funktionsfähig, aber gut geeignet für frühes Feedback und die Vermeidung von Fehlern.  
+> Ein Prototyp ist ein frühes Muster des geplanten Systems,
+> das hilft, Ideen, Benutzerabläufe
+> oder technische Lösungen auszuprobieren.  
+> Er ist nicht unbedingt endgültig oder vollständig funktionsfähig,
+> aber gut geeignet für frühes Feedback
+> und die Vermeidung von Fehlern.  
 > Mit seiner Hilfe können Kunde und Entwicklungsteam leichter ein gemeinsames Bild der Lösung entwickeln.
 
 ## Häufige Prüfungsfehler

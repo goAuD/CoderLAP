@@ -47,9 +47,12 @@ Die folgenden Nachteile ergeben sich teilweise aus der strengen Struktur:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Vorteil des V-Modells ist, dass es eine klare Struktur bietet und den Entwicklungsschritten die entsprechenden Testschritte zuordnet.  
+> Der Vorteil des V-Modells ist, dass es eine klare Struktur bietet
+> und den Entwicklungsschritten die entsprechenden Testschritte zuordnet.  
 > Das verbessert die Nachverfolgbarkeit und die Qualitätssicherung.  
-> Der Nachteil ist, dass es starrer ist und einen höheren Dokumentationsaufwand mit sich bringen kann, weshalb es bei sich schnell ändernden Projekten weniger vorteilhaft ist.
+> Der Nachteil ist, dass es starrer ist
+> und einen höheren Dokumentationsaufwand mit sich bringen kann,
+> weshalb es bei sich schnell ändernden Projekten weniger vorteilhaft ist.
 
 ## Häufige Prüfungsfehler
 

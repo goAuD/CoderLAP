@@ -57,7 +57,9 @@ Ein Projekt kann aus mehreren Sprints bestehen, und ein Release fällt nicht imm
 ## Prüfungstaugliche Formulierung
 
 > Der Sprint ist eines der zentralen Elemente von Scrum.  
-> Es handelt sich um eine kurze Iteration mit fixer Zeitdauer, in der das Team an bestimmten Backlog-Elementen arbeitet und auf ein definiertes Sprintziel hinarbeitet.  
+> Es handelt sich um eine kurze Iteration mit fixer Zeitdauer,
+> in der das Team an bestimmten Backlog-Elementen arbeitet
+> und auf ein definiertes Sprintziel hinarbeitet.  
 > Am Ende des Sprints muss ein überprüfbares Ergebnis vorliegen, gefolgt von Review und Retrospective.
 
 ## Häufige Prüfungsfehler
