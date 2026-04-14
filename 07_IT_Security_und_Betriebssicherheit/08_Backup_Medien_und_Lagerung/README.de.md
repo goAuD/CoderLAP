@@ -88,9 +88,13 @@ gleichzeitig die Primärdaten und die nahe Sicherung zerstören kann.
 
 ## Prüfungstaugliche Formulierung
 
-> Beim Backup-Medium und der Aufbewahrung zählt nicht nur die Kapazität, sondern auch die Sicherheit und die Wiederherstellbarkeit.  
-> Die Sicherungen sollten getrennt vom Originalsystem an einem angemessen geschützten Ort aufbewahrt und bei sensiblen Daten verschlüsselt werden.  
-> Ein ständig im Netzwerk erreichbares Backup allein reicht nicht aus, daher kann auch eine Offline- oder Offsite-Kopie wichtig sein.
+> Beim Backup-Medium und der Aufbewahrung zählt nicht nur die Kapazität,
+> sondern auch die Sicherheit und die Wiederherstellbarkeit.  
+> Die Sicherungen sollten getrennt vom Originalsystem
+> an einem angemessen geschützten Ort aufbewahrt
+> und bei sensiblen Daten verschlüsselt werden.  
+> Ein ständig im Netzwerk erreichbares Backup allein reicht nicht aus,
+> daher kann auch eine Offline- oder Offsite-Kopie wichtig sein.
 
 ## Häufige Prüfungsfehler
 

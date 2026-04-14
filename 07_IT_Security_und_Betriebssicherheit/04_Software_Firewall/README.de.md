@@ -57,8 +57,12 @@ In solchen Fällen ist es besonders wichtig, dass der Rechner sich selbst schüt
 
 ## Prüfungstaugliche Formulierung
 
-> Die Software Firewall ist eine auf dem lokalen Rechner laufende Firewall, die den Netzwerkverkehr filtert und Verbindungen anhand von Regeln erlaubt oder blockiert.  
-> Sie hilft, unbefugten eingehenden Zugriff zu verhindern, und kann in bestimmten Fällen auch ausgehende Verbindungen einschränken.  
+> Die Software Firewall ist eine auf dem lokalen Rechner laufende Firewall,
+> die den Netzwerkverkehr filtert
+> und Verbindungen anhand von Regeln erlaubt oder blockiert.  
+> Sie hilft, unbefugten eingehenden Zugriff zu verhindern,
+> und kann in bestimmten Fällen
+> auch ausgehende Verbindungen einschränken.  
 > Sie ist besonders wichtig bei Client-Rechnern und in nicht vertrauenswürdigen Netzwerkumgebungen.
 
 ## Häufige Prüfungsfehler

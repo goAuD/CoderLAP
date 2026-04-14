@@ -97,7 +97,10 @@ Mert más a működésük:
 ## Vizsgán jól használható megfogalmazás
 
 > A vírus, a worm, a trójai és a spyware mind malware-típusok, de eltérő módon működnek.  
-> A vírus gyakran más fájlhoz kapcsolódva fertőz, a worm önmagát terjeszti, a trójai legitim programnak álcázza magát, a spyware pedig titokban adatot gyűjt.  
+> A vírus gyakran más fájlhoz kapcsolódva fertőz,
+> a worm önmagát terjeszti,
+> a trójai legitim programnak álcázza magát,
+> a spyware pedig titokban adatot gyűjt.  
 > A phishing ezzel szemben megtévesztésen alapuló támadási módszer, amelynek célja gyakran jelszó- vagy adatlopás.
 
 ## Gyakori vizsgahibák
