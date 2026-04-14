@@ -12,7 +12,8 @@
 
 ## Was ist ein User Interface?
 
-Die Benutzeroberfläche ist das physische oder logische Werkzeugsystem, mit dem der Benutzer eine Anwendung, ein Gerät oder einen Prozess nutzen kann.
+Die Benutzeroberfläche ist das physische oder logische Werkzeugsystem,
+mit dem der Benutzer eine Anwendung, ein Gerät oder einen Prozess nutzen kann.
 
 In einer Webumgebung ist das typischerweise:
 
@@ -59,7 +60,8 @@ Ein schlechtes UI:
 | UI | die Oberfläche selbst und ihre Elemente |
 | UX | das gesamte Benutzererlebnis |
 
-UI ist eher das "was sieht man und womit klickt man", UX ist eher die Seite "wie fühlt es sich an und wie effizient ist es".
+UI ist eher das "was sieht man und womit klickt man",
+UX ist eher die Seite "wie fühlt es sich an und wie effizient ist es".
 
 ## Worauf muss man als Entwickler achten?
 

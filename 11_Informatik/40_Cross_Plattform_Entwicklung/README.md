@@ -54,8 +54,14 @@
 
 ## Vizsgán jól használható megfogalmazás
 
-> A cross-platform fejlesztés célja, hogy egy közös vagy nagyrészt közös kódbázisból több platformra is tudjunk alkalmazást készíteni.  
-> Előnye a gyorsabb fejlesztés és a kisebb duplikáció, hátránya pedig az, hogy bizonyos esetekben kompromisszumot kell kötni a natív élmény, a teljesítmény vagy a platformspecifikus funkciók terén.  
+> A cross-platform fejlesztés célja,
+> hogy egy közös vagy nagyrészt közös kódbázisból
+> több platformra is tudjunk alkalmazást készíteni.  
+> Előnye a gyorsabb fejlesztés és a kisebb duplikáció,
+> hátránya pedig az,
+> hogy bizonyos esetekben kompromisszumot kell kötni
+> a natív élmény, a teljesítmény
+> vagy a platformspecifikus funkciók terén.  
 > Tipikus példák a Flutter, a React Native és a .NET MAUI.
 
 ## Gyakori vizsgahibák

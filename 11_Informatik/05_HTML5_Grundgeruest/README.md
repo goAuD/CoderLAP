@@ -89,7 +89,9 @@ Fontos:
 ## Vizsgán jól használható megfogalmazás
 
 > A HTML5 alapváz egy szabványos dokumentumszerkezet, amely `doctype`, `html`, `head` és `body` részekből áll.  
-> A `head` rész tartalmazza a metaadatokat, például a karakterkódolást, a viewport beállítást és a címet, míg a `body` tartalmazza a felhasználó számára látható tartalmat.  
+> A `head` rész tartalmazza a metaadatokat,
+> például a karakterkódolást, a viewport beállítást és a címet,
+> míg a `body` tartalmazza a felhasználó számára látható tartalmat.  
 > A helyes alapváz segíti a szabványos működést, a mobilos megjelenést és a karbantarthatóságot.
 
 ## Gyakori vizsgahibák

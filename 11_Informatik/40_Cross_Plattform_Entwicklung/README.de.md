@@ -54,8 +54,13 @@
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel der Cross-Platform-Entwicklung ist es, aus einer gemeinsamen oder weitgehend gemeinsamen Codebasis Anwendungen für mehrere Plattformen erstellen zu können.
-> Ihr Vorteil ist schnellere Entwicklung und weniger Duplikation, ihr Nachteil ist, dass in bestimmten Fällen Kompromisse beim nativen Erlebnis, bei der Leistung oder bei plattformspezifischen Funktionen nötig sind.
+> Ziel der Cross-Platform-Entwicklung ist es,
+> aus einer gemeinsamen oder weitgehend gemeinsamen Codebasis
+> Anwendungen für mehrere Plattformen erstellen zu können.
+> Ihr Vorteil ist schnellere Entwicklung und weniger Duplikation,
+> ihr Nachteil ist,
+> dass in bestimmten Fällen Kompromisse beim nativen Erlebnis,
+> bei der Leistung oder bei plattformspezifischen Funktionen nötig sind.
 > Typische Beispiele sind Flutter, React Native und .NET MAUI.
 
 ## Häufige Prüfungsfehler

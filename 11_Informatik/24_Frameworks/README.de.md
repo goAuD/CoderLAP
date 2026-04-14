@@ -54,9 +54,15 @@ Dazu sagt man häufig:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Framework ist ein Rahmenwerk, das eine vorgefertigte Struktur, Werkzeuge und Regeln für die Anwendungsentwicklung bereitstellt.
-> Der Vorteil ist, dass es eine schnellere, einheitlichere und besser organisierte Entwicklung ermöglicht, besonders bei größeren Projekten.
-> Ein Framework ist mehr als eine einfache Library, weil es nicht nur Funktionen bereitstellt, sondern auch den Aufbau und die Arbeitsweise des Programms beeinflusst.
+> Ein Framework ist ein Rahmenwerk,
+> das eine vorgefertigte Struktur, Werkzeuge und Regeln
+> für die Anwendungsentwicklung bereitstellt.
+> Der Vorteil ist,
+> dass es eine schnellere, einheitlichere und besser organisierte Entwicklung ermöglicht,
+> besonders bei größeren Projekten.
+> Ein Framework ist mehr als eine einfache Library,
+> weil es nicht nur Funktionen bereitstellt,
+> sondern auch den Aufbau und die Arbeitsweise des Programms beeinflusst.
 
 ## Häufige Prüfungsfehler
 

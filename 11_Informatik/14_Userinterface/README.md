@@ -12,7 +12,8 @@
 
 ## Mi az a user interface?
 
-A felhasználói felület az a fizikai vagy logikai eszközrendszer, amellyel a felhasználó használni tud egy alkalmazást, eszközt vagy folyamatot.
+A felhasználói felület az a fizikai vagy logikai eszközrendszer,
+amellyel a felhasználó használni tud egy alkalmazást, eszközt vagy folyamatot.
 
 Webes környezetben ez tipikusan:
 
@@ -71,8 +72,11 @@ A UI inkább a "mit lát és mivel kattint", a UX inkább a "milyen érzés és 
 
 ## Vizsgán jól használható megfogalmazás
 
-> A user interface a rendszer azon része, amelyen keresztül a felhasználó kapcsolatba lép az alkalmazással vagy eszközzel.  
-> Ide tartoznak például a gombok, menük, űrlapok, ikonok és visszajelző elemek.  
+> A user interface a rendszer azon része,
+> amelyen keresztül a felhasználó kapcsolatba lép
+> az alkalmazással vagy eszközzel.  
+> Ide tartoznak például a gombok, menük,
+> űrlapok, ikonok és visszajelző elemek.  
 > Egy jó felhasználói felület érthető, következetes, könnyen kezelhető és támogatja a hibamentes használatot.
 
 ## Gyakori vizsgahibák

@@ -101,7 +101,9 @@ Itt:
 ## Vizsgán jól használható megfogalmazás
 
 > A CSS a weboldalak megjelenésének leírására szolgáló stílusnyelv.  
-> Segítségével formázhatjuk a HTML-elemeket, szabályozhatjuk az elrendezést, és kialakíthatunk reszponzív, egységes felhasználói felületeket.  
+> Segítségével formázhatjuk a HTML-elemeket,
+> szabályozhatjuk az elrendezést,
+> és kialakíthatunk reszponzív, egységes felhasználói felületeket.  
 > A HTML a szerkezetet, a CSS a megjelenést, a JavaScript pedig az interaktív működést adja.
 
 ## Gyakori vizsgahibák

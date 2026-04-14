@@ -62,8 +62,11 @@ In solchen Fällen ist die Aufgabe häufig nicht Neuentwicklung, sondern:
 
 ## Prüfungstaugliche Formulierung
 
-> AngularJS ist ein älteres JavaScript-basiertes Frontend-Framework, das hauptsächlich für dynamische Single-Page-Webanwendungen verwendet wurde.
-> Historisch spielte es eine wichtige Rolle bei der Entstehung der modernen Frontend-Entwicklung, aber die offizielle Unterstützung endete im Januar 2022.
+> AngularJS ist ein älteres JavaScript-basiertes Frontend-Framework,
+> das hauptsächlich für dynamische Single-Page-Webanwendungen verwendet wurde.
+> Historisch spielte es eine wichtige Rolle
+> bei der Entstehung der modernen Frontend-Entwicklung,
+> aber die offizielle Unterstützung endete im Januar 2022.
 > Daher wird es für neue Projekte heute nicht mehr empfohlen, man trifft es eher bei der Wartung alter Systeme an.
 
 ## Häufige Prüfungsfehler
@@ -93,10 +96,14 @@ In solchen Fällen ist die Aufgabe häufig nicht Neuentwicklung, sondern:
 
 1. AngularJS official site
    https://angularjs.org/
-   Verwendung: offizieller Status und Beschreibung der Rolle von AngularJS; die Hauptseite zeigt klar an, dass die Unterstützung im Januar 2022 endete.
+   Verwendung: offizieller Status und Beschreibung der Rolle von AngularJS;
+   die Hauptseite zeigt klar an,
+   dass die Unterstützung im Januar 2022 endete.
 
 2. Stack Overflow Developer Survey 2025 - Technology
    https://survey.stackoverflow.co/2025/technology/
-   Verwendung: aktuelle Technologieübersicht und Usage-Snapshot, in dem AngularJS bereits mit geringerer Präsenz, typischerweise als Legacy-Technologie sichtbar ist.
+   Verwendung: aktuelle Technologieübersicht und Usage-Snapshot,
+   in dem AngularJS bereits mit geringerer Präsenz,
+   typischerweise als Legacy-Technologie sichtbar ist.
 
 Abgerufen: `2026-04-08`

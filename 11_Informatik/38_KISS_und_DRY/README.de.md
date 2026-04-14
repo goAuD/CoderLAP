@@ -70,8 +70,13 @@ Wenn dieselbe Berechnung oder Validierung an drei Stellen vorkommt, lohnt es sic
 
 ## Prüfungstaugliche Formulierung
 
-> Das KISS-Prinzip besagt, dass die Lösung einfach und gut verständlich sein soll, wobei unnötige Komplexität vermieden wird.
-> Das DRY-Prinzip besagt, dass dieselbe Logik nicht unnötig an mehreren Stellen wiederholt werden soll, sondern in eine gemeinsame Abstraktion oder Funktion ausgelagert werden soll.
+> Das KISS-Prinzip besagt,
+> dass die Lösung einfach und gut verständlich sein soll,
+> wobei unnötige Komplexität vermieden wird.
+> Das DRY-Prinzip besagt,
+> dass dieselbe Logik nicht unnötig an mehreren Stellen wiederholt werden soll,
+> sondern in eine gemeinsame Abstraktion
+> oder Funktion ausgelagert werden soll.
 > In guter Entwicklung sollten beide Prinzipien gemeinsam und im Gleichgewicht angewendet werden.
 
 ## Häufige Prüfungsfehler

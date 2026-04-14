@@ -46,9 +46,15 @@ Weil in der Prüfung häufig genau das gefragt wird:
 
 ## Prüfungstaugliche Formulierung
 
-> Continuous Delivery bedeutet, dass die Software kontinuierlich in einem auslieferbaren Zustand gehalten wird, aber vor der endgültigen Produktivstellung noch eine manuelle Freigabe möglich ist.
-> Continuous Deployment geht einen Schritt weiter: wenn alle Bedingungen der Pipeline erfüllt sind, wird die neue Version automatisch installiert.
-> Der Hauptunterschied zwischen den beiden Begriffen ist also, dass bei Deployment auch die Produktivstellung automatisiert ist.
+> Continuous Delivery bedeutet,
+> dass die Software kontinuierlich in einem auslieferbaren Zustand gehalten wird,
+> aber vor der endgültigen Produktivstellung
+> noch eine manuelle Freigabe möglich ist.
+> Continuous Deployment geht einen Schritt weiter:
+> wenn alle Bedingungen der Pipeline erfüllt sind,
+> wird die neue Version automatisch installiert.
+> Der Hauptunterschied zwischen den beiden Begriffen ist also,
+> dass bei Deployment auch die Produktivstellung automatisiert ist.
 
 ## Häufige Prüfungsfehler
 

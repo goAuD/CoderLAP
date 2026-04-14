@@ -75,8 +75,13 @@ Például az `IEEE 802` család a hálózati technológiák világában nagyon f
 ## Vizsgán jól használható megfogalmazás
 
 > Az ANSI, ISO és IEEE a szabványosítás világának fontos szereplői.  
-> A szabványok célja, hogy az informatikai rendszerek kompatibilisen, biztonságosan és egységes elvek szerint működjenek.  
-> Az ANSI főleg az amerikai szabványosítás koordinálásában fontos, az ISO nemzetközi szabványokat ad ki, az IEEE pedig különösen jelentős a műszaki és informatikai szabványok területén.
+> A szabványok célja,
+> hogy az informatikai rendszerek kompatibilisen,
+> biztonságosan és egységes elvek szerint működjenek.  
+> Az ANSI főleg az amerikai szabványosítás koordinálásában fontos,
+> az ISO nemzetközi szabványokat ad ki,
+> az IEEE pedig különösen jelentős
+> a műszaki és informatikai szabványok területén.
 
 ## Gyakori vizsgahibák
 

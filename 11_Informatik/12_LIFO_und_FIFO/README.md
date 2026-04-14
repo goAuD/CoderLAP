@@ -74,7 +74,9 @@ Ha rossz elvet választunk, a rendszer logikailag hibás lehet.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A LIFO és FIFO olyan feldolgozási elvek, amelyek meghatározzák, milyen sorrendben vesszük ki vagy dolgozzuk fel az elemeket.  
+> A LIFO és FIFO olyan feldolgozási elvek,
+> amelyek meghatározzák, milyen sorrendben vesszük ki
+> vagy dolgozzuk fel az elemeket.  
 > LIFO esetén az utoljára bekerült elem jön ki először, FIFO esetén pedig a legkorábban bekerült elem.  
 > A LIFO tipikus megvalósítása a stack, a FIFO-é pedig a queue.
 

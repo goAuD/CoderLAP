@@ -36,12 +36,12 @@ Példa XML-szerű logikára:
 
 ## Mi a fő különbség?
 
-### HTML
+### HTML a gyakorlatban
 
 - előre definiált elemeket használ
 - böngészők megjelenítésre értelmezik
 
-### XML
+### XML a gyakorlatban
 
 - szabadabban kialakítható struktúrát használ
 - nem a megjelenítés, hanem az adatleírás a fő célja
@@ -78,7 +78,9 @@ Mert vizsgán gyakori kérdés:
 ## Vizsgán jól használható megfogalmazás
 
 > A HTML és az XML egyaránt jelölőnyelvek, de eltérő céllal használjuk őket.  
-> A HTML a weboldalak tartalmának és szerkezetének leírására szolgál, míg az XML strukturált adatok leírására és cseréjére használható.  
+> A HTML a weboldalak tartalmának és szerkezetének leírására szolgál,
+> míg az XML strukturált adatok leírására
+> és cseréjére használható.  
 > A HTML előre definiált elemekkel dolgozik, az XML pedig rugalmasabban alakítható adatszerkezetet tesz lehetővé.
 
 ## Gyakori vizsgahibák

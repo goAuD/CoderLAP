@@ -61,7 +61,9 @@ Die heutige zentrale Richtung ist `.NET` und `ASP.NET Core`, weil es:
 
 ## Prüfungstaugliche Formulierung
 
-> Zu den Web-Technologien von .NET gehören jene Lösungen, mit denen Webanwendungen, Backends und APIs im Microsoft-Ökosystem entwickelt werden können.
+> Zu den Web-Technologien von .NET gehören jene Lösungen,
+> mit denen Webanwendungen, Backends und APIs
+> im Microsoft-Ökosystem entwickelt werden können.
 > Die heutige Hauptrichtung ist ASP.NET Core, das eine moderne, plattformübergreifende und leistungsstarke Grundlage bietet.
 > Dazu gehören beispielsweise auch Web API, Blazor und SignalR.
 

@@ -54,8 +54,11 @@ Aus Sicht von `2026. April 8.`:
 
 ## Prüfungstaugliche Formulierung
 
-> jQuery ist eine JavaScript-Library, die DOM-Manipulation, Ereignisbehandlung und Ajax-basierte Kommunikation vereinfacht.
-> Historisch spielte es eine sehr wichtige Rolle in der Webentwicklung, besonders bei der Bewältigung browserübergreifender Kompatibilitätsprobleme.
+> jQuery ist eine JavaScript-Library,
+> die DOM-Manipulation, Ereignisbehandlung
+> und Ajax-basierte Kommunikation vereinfacht.
+> Historisch spielte es eine sehr wichtige Rolle in der Webentwicklung,
+> besonders bei der Bewältigung browserübergreifender Kompatibilitätsprobleme.
 > Heute ist seine Rolle geringer, aber in alten Systemen und bei einfacheren Webaufgaben kommt es immer noch vor.
 
 ## Häufige Prüfungsfehler
@@ -93,6 +96,8 @@ Aus Sicht von `2026. April 8.`:
 
 3. Stack Overflow Developer Survey 2025 - Web frameworks and technologies
    https://survey.stackoverflow.co/2025/technology/
-   Verwendung: aktuelle Technologieübersicht, die gut zeigt, dass jQuery heute eher eine ältere, aber noch vorhandene Technologie ist.
+   Verwendung: aktuelle Technologieübersicht,
+   die gut zeigt, dass jQuery heute eher eine ältere,
+   aber noch vorhandene Technologie ist.
 
 Abgerufen: `2026-04-08`

@@ -65,7 +65,8 @@ Das HTML-`meta`-Element ist also nur ein spezielles Werkzeug für eine Art von M
 ## Prüfungstaugliche Formulierung
 
 > Metadaten sind Daten, die andere Daten beschreiben.
-> Nicht der Hauptinhalt selbst, sondern seine ergänzende Beschreibung, zum Beispiel Titel, Autor, Datum, Dateigröße oder Webseitenbeschreibung.
+> Nicht der Hauptinhalt selbst, sondern seine ergänzende Beschreibung,
+> zum Beispiel Titel, Autor, Datum, Dateigröße oder Webseitenbeschreibung.
 > Metadaten sind wichtig für die Systematisierung, Suche, Darstellung und automatisierte Verarbeitung.
 
 ## Häufige Prüfungsfehler

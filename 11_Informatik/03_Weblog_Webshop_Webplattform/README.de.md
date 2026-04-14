@@ -80,7 +80,9 @@ Beispiel:
 
 > Der Weblog dient in erster Linie der Veröffentlichung von Inhalten und basiert auf Beiträgen.  
 > Der Webshop ist eine Online-Verkaufsplattform, auf der Produkte oder Dienstleistungen gekauft werden können.  
-> Die Webplattform ist ein breiterer Begriff: ein webbasiertes System, das mehrere Akteure, Dienste oder Prozesse verbindet, zum Beispiel in Form eines Marktplatzes oder einer Lernplattform.
+> Die Webplattform ist ein breiterer Begriff:
+> ein webbasiertes System, das mehrere Akteure, Dienste oder Prozesse verbindet,
+> zum Beispiel in Form eines Marktplatzes oder einer Lernplattform.
 
 ## Häufige Prüfungsfehler
 
@@ -117,7 +119,8 @@ Beispiel:
 
 3. EUR-Lex - Regulation (EU) 2022/2065 (Digital Services Act)  
    https://eur-lex.europa.eu/eli/reg/2022/2065/oj  
-   Verwendung: offizieller EU-Hintergrund zum Begriff "Online-Plattform", wenn die Plattform mehrere Benutzer und Dienste verbindet.
+   Verwendung: offizieller EU-Hintergrund zum Begriff "Online-Plattform",
+   wenn die Plattform mehrere Benutzer und Dienste verbindet.
 
 4. MDN - Site  
    https://developer.mozilla.org/docs/Glossary/Site  

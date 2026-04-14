@@ -52,8 +52,13 @@ Tehát:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A mobile first olyan webtervezési stratégia, amely a fejlesztést a legkisebb kijelzőre optimalizált nézettel kezdi, majd onnan bővíti a felületet nagyobb eszközökre.  
-> Előnye, hogy a tartalom és funkcionalitás prioritása tisztábban látszik, és a felület általában egyszerűbb, gyorsabb és használhatóbb lesz mobilon is.
+> A mobile first olyan webtervezési stratégia,
+> amely a fejlesztést a legkisebb kijelzőre optimalizált nézettel kezdi,
+> majd onnan bővíti a felületet nagyobb eszközökre.  
+> Előnye,
+> hogy a tartalom és funkcionalitás prioritása tisztábban látszik,
+> és a felület általában egyszerűbb,
+> gyorsabb és használhatóbb lesz mobilon is.
 
 ## Gyakori vizsgahibák
 

@@ -53,7 +53,9 @@ Also:
 
 ## Prüfungstaugliche Formulierung
 
-> Responsive Webdesign ist ein Design- und Entwicklungsansatz, dessen Ziel es ist, dass dieselbe Webseite auf verschiedenen Bildschirmgrößen gut nutzbar ist.
+> Responsive Webdesign ist ein Design- und Entwicklungsansatz,
+> dessen Ziel es ist,
+> dass dieselbe Webseite auf verschiedenen Bildschirmgrößen gut nutzbar ist.
 > Dafür verwenden wir flexibles Layout, Media Queries, Breakpoints und adaptive Inhaltsdarstellung.
 > Der Vorteil ist, dass keine separaten Mobil- und Desktop-Seiten gepflegt werden müssen.
 

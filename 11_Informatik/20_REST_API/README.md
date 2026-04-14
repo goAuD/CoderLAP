@@ -112,7 +112,8 @@ Ahhoz REST-szerű legyen, kell:
 
 ## Források
 
-1. Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures, Chapter 5: Representational State Transfer (REST)  
+1. Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures,  
+   Chapter 5: Representational State Transfer (REST)  
    https://roy.gbiv.com/pubs/dissertation/rest_arch_style.htm  
    Használat: az eredeti REST architekturális háttér.
 

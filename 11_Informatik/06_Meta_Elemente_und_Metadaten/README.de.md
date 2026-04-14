@@ -21,7 +21,9 @@ Bei einer Webseite kann das zum Beispiel sein:
 - die Einstellung für die mobile Darstellung
 - Signale für Suchmaschinen-Robots
 
-Der Zweck von Metadaten ist nicht, dass der Benutzer sie als langen Text liest, sondern dass das System die Seite leichter interpretieren kann.
+Der Zweck von Metadaten ist nicht,
+dass der Benutzer sie als langen Text liest,
+sondern dass das System die Seite leichter interpretieren kann.
 
 ## Welche Rolle spielt das `<meta>`-Element?
 
@@ -81,8 +83,12 @@ Wichtig:
 
 ## Prüfungstaugliche Formulierung
 
-> Metadaten sind beschreibende Daten über das Dokument. In HTML werden sie häufig durch `<meta>`-Elemente im `head`-Teil angegeben.  
-> Diese helfen dem Browser, Suchmaschinen und anderen Systemen bei der korrekten Verarbeitung der Seite, zum Beispiel bei der Zeichenkodierung, der mobilen Ansicht oder der Kurzbeschreibung der Seite.
+> Metadaten sind beschreibende Daten über das Dokument.
+> In HTML werden sie häufig durch `<meta>`-Elemente im `head`-Teil angegeben.  
+> Diese helfen dem Browser, Suchmaschinen und anderen Systemen
+> bei der korrekten Verarbeitung der Seite,
+> zum Beispiel bei der Zeichenkodierung,
+> der mobilen Ansicht oder der Kurzbeschreibung der Seite.
 
 ## Häufige Prüfungsfehler
 

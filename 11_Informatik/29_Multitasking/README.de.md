@@ -48,7 +48,9 @@ Das kann geschehen durch:
 
 ## Prüfungstaugliche Formulierung
 
-> Multitasking bedeutet, dass ein Betriebssystem mehrere Aufgaben oder Prozesse so verwaltet, dass sie für den Benutzer gleichzeitig erscheinen.
+> Multitasking bedeutet,
+> dass ein Betriebssystem mehrere Aufgaben oder Prozesse so verwaltet,
+> dass sie für den Benutzer gleichzeitig erscheinen.
 > Dies kann durch schnelle Zeiteinteilung oder durch Nutzung mehrerer Prozessorkerne erreicht werden.
 > Ziel ist es, dass das System mehrere Anwendungen und Hintergrundoperationen effizient verwalten kann.
 
