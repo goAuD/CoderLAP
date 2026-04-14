@@ -100,7 +100,13 @@ Feladata:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A webfejlesztéshez többféle eszköz szükséges: kódszerkesztő a fejlesztéshez, böngészőbe épített DevTools a hibakereséshez, verziókezelő a változások követéséhez, csomagkezelő a függőségek kezeléséhez, valamint helyi futtatási környezet és kódminőségi eszközök a stabil munkafolyamathoz.
+> A webfejlesztéshez többféle eszköz szükséges:
+> kódszerkesztő a fejlesztéshez,
+> böngészőbe épített DevTools a hibakereséshez,
+> verziókezelő a változások követéséhez,
+> csomagkezelő a függőségek kezeléséhez,
+> valamint helyi futtatási környezet
+> és kódminőségi eszközök a stabil munkafolyamathoz.
 
 ## Gyakori vizsgahibák
 

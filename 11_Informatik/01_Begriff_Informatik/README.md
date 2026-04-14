@@ -67,7 +67,10 @@ Attól függ, milyen területen dolgozik, de tipikusan:
 ## Vizsgán jól használható megfogalmazás
 
 > Az informatika az információk strukturált, automatizált feldolgozásának tudománya és gyakorlata.  
-> Nemcsak programozással foglalkozik, hanem adatokkal, algoritmusokkal, rendszerekkel, hálózatokkal, felhasználói felületekkel és a digitális megoldások teljes életciklusával is.  
+> Nemcsak programozással foglalkozik,
+> hanem adatokkal, algoritmusokkal, rendszerekkel, hálózatokkal,
+> felhasználói felületekkel
+> és a digitális megoldások teljes életciklusával is.  
 > A programozás tehát az informatika egyik része, de nem maga az egész terület.
 
 ## Gyakori vizsgahibák

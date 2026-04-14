@@ -52,8 +52,11 @@ Ma a gyakorlatban általában a **reszponzív** megoldás az ajánlott.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A mobil weboldal olyan webes felület, amelyet kifejezetten telefonon és más kisebb kijelzőn is jól használhatóra terveznek.  
-> Fontos szempont a jó olvashatóság, az érintésbarát kezelés, a gyors betöltés és a kis képernyőhöz alkalmazkodó elrendezés.  
+> A mobil weboldal olyan webes felület,
+> amelyet kifejezetten telefonon
+> és más kisebb kijelzőn is jól használhatóra terveznek.  
+> Fontos szempont a jó olvashatóság, az érintésbarát kezelés,
+> a gyors betöltés és a kis képernyőhöz alkalmazkodó elrendezés.  
 > A modern gyakorlatban ezt leginkább reszponzív webdesignnal valósítják meg.
 
 ## Gyakori vizsgahibák

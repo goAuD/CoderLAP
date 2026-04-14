@@ -76,8 +76,11 @@ Wenn die Frage "aktuelle Sprachen" lautet, sollte man:
 
 ## Prüfungstaugliche Formulierung
 
-> Laut Stand `2026. April 8.` zählen zu den aktuellen Programmiersprachen jene, die heute noch weit verbreitet und aktiv unterstützt werden.
-> In der Web-, Mobil- und Unternehmensentwicklung sind beispielsweise JavaScript, TypeScript, Python, Java, C#, PHP, Kotlin und Swift besonders wichtig.
+> Laut Stand `2026. April 8.` zählen zu den aktuellen Programmiersprachen jene,
+> die heute noch weit verbreitet und aktiv unterstützt werden.
+> In der Web-, Mobil- und Unternehmensentwicklung
+> sind beispielsweise JavaScript, TypeScript, Python, Java,
+> C#, PHP, Kotlin und Swift besonders wichtig.
 > Es gibt keine einzige "beste" Sprache, die Wahl hängt immer von der Aufgabe, der Plattform und dem Ökosystem ab.
 
 ## Häufige Prüfungsfehler

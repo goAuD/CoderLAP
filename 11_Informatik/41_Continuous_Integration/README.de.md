@@ -46,7 +46,9 @@
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel von Continuous Integration ist, dass die Entwickler ihren Code häufig in das gemeinsame System integrieren und die Integration von automatischen Prüfungen begleitet wird.
+> Ziel von Continuous Integration ist,
+> dass die Entwickler ihren Code häufig in das gemeinsame System integrieren
+> und die Integration von automatischen Prüfungen begleitet wird.
 > Dabei laufen typischerweise Build, Test und andere Codequalitätsprüfungen ab.
 > Der größte Vorteil von CI ist, dass Integrationsfehler schnell erkannt werden und das Projekt dadurch stabiler bleibt.
 

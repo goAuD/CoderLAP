@@ -10,7 +10,9 @@
 
 ## Mi az a JSON?
 
-A JSON egy nyelvfüggetlen adatcsere-formátum, amely a JavaScript objektumjelöléséből indult, de ma már sokféle programnyelv használja.
+A JSON egy nyelvfüggetlen adatcsere-formátum,
+amely a JavaScript objektumjelöléséből indult,
+de ma már sokféle programnyelv használja.
 
 Gyakran alkalmazzák:
 

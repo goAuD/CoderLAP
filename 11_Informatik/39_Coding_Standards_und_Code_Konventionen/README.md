@@ -55,7 +55,8 @@ Mert a rosszul egységesített kód:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A coding standardok és code konvenciók olyan közös szabályok, amelyek egységesebbé és jobban olvashatóvá teszik a forráskódot.  
+> A coding standardok és code konvenciók olyan közös szabályok,
+> amelyek egységesebbé és jobban olvashatóvá teszik a forráskódot.  
 > Ide tartozik például a névadás, a formázás, a szerkezet, a kommentelés és a kódminőségi szabályok használata.  
 > Ezek különösen csapatmunkában fontosak, mert megkönnyítik a review-t, a karbantartást és az együttműködést.
 

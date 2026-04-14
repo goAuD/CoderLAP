@@ -95,7 +95,9 @@ Mert más a szerepük.
 ## Vizsgán jól használható megfogalmazás
 
 > A kliensoldali scripting a felhasználó böngészőjében fut, és főleg a felület interaktív működéséért felel.  
-> A szerveroldali scripting a szerveren fut, és az üzleti logikát, az adatkezelést, a hitelesítést és a válasz előállítását végzi.  
+> A szerveroldali scripting a szerveren fut,
+> és az üzleti logikát, az adatkezelést,
+> a hitelesítést és a válasz előállítását végzi.  
 > Egy modern webalkalmazás jellemzően mindkét megközelítést együtt használja.
 
 ## Gyakori vizsgahibák

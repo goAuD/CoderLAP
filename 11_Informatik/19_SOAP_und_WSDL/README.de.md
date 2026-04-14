@@ -9,7 +9,9 @@
 
 ## Was ist SOAP?
 
-`SOAP` (`Simple Object Access Protocol`) ist ein Protokoll mit XML-basierter Nachrichtenstruktur für die Kommunikation zwischen Systemen.
+`SOAP` (`Simple Object Access Protocol`) ist ein Protokoll
+mit XML-basierter Nachrichtenstruktur
+für die Kommunikation zwischen Systemen.
 
 Merkmale:
 
@@ -75,7 +77,9 @@ Weil es stark standardisierte und präzise Funktionsweise ermöglicht:
 
 > SOAP ist ein XML-basiertes Nachrichtenprotokoll, das für die Kommunikation von Web Services verwendet wird.  
 > WSDL dient hingegen zur Beschreibung des Dienstes: es gibt die Operationen, Nachrichtentypen und Endpunkte an.  
-> In klassischen Unternehmenssystemen traten SOAP und WSDL häufig gemeinsam auf, da sie einen präzisen, formalen Vertrag und standardisierte Kommunikation boten.
+> In klassischen Unternehmenssystemen traten SOAP und WSDL häufig gemeinsam auf,
+> da sie einen präzisen, formalen Vertrag
+> und standardisierte Kommunikation boten.
 
 ## Häufige Prüfungsfehler
 

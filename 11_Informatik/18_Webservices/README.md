@@ -11,7 +11,9 @@
 
 ## Mi az a web service?
 
-A web service egy olyan szoftveres szolgáltatás, amely hálózaton keresztül érhető el, és meghatározott módon lehet vele kommunikálni.
+A web service egy olyan szoftveres szolgáltatás,
+amely hálózaton keresztül érhető el,
+és meghatározott módon lehet vele kommunikálni.
 
 Gyakori tulajdonságai:
 
@@ -67,9 +69,12 @@ A web service lehetővé teszi, hogy:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A web service olyan hálózaton keresztül elérhető szolgáltatás, amelyet más programok szabályozott módon hívhatnak meg.  
+> A web service olyan hálózaton keresztül elérhető szolgáltatás,
+> amelyet más programok szabályozott módon hívhatnak meg.  
 > Fő célja a rendszerek közötti kommunikáció és integráció.  
-> A gyakorlatban tipikusan valamilyen webes protokollt és strukturált üzenetformátumot használ, például SOAP-ot vagy REST-alapú HTTP-kommunikációt.
+> A gyakorlatban tipikusan valamilyen webes protokollt
+> és strukturált üzenetformátumot használ,
+> például SOAP-ot vagy REST-alapú HTTP-kommunikációt.
 
 ## Gyakori vizsgahibák
 

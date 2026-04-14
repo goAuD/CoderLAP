@@ -75,7 +75,9 @@ Mert erősen szabványosított és pontos működést tesz lehetővé:
 
 > A SOAP egy XML-alapú üzenetküldési protokoll, amelyet web service kommunikációra használnak.  
 > A WSDL ezzel szemben a szolgáltatás leírására szolgál: megadja a műveleteket, üzenettípusokat és elérési pontokat.  
-> Klasszikus vállalati rendszerekben a SOAP és WSDL gyakran együtt jelent meg, mert pontos, formális szerződést és szabványos kommunikációt biztosítottak.
+> Klasszikus vállalati rendszerekben a SOAP és WSDL gyakran együtt jelent meg,
+> mert pontos, formális szerződést
+> és szabványos kommunikációt biztosítottak.
 
 ## Gyakori vizsgahibák
 

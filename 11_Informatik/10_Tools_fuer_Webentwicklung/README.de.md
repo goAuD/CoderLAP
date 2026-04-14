@@ -100,7 +100,13 @@ Aufgabe:
 
 ## Prüfungstaugliche Formulierung
 
-> Für die Webentwicklung werden verschiedene Werkzeuge benötigt: ein Code-Editor zum Entwickeln, in den Browser eingebaute DevTools zum Debuggen, ein Versionskontrollsystem zum Nachverfolgen von Änderungen, ein Paketmanager zur Verwaltung von Abhängigkeiten sowie eine lokale Laufzeitumgebung und Code-Qualitätswerkzeuge für einen stabilen Workflow.
+> Für die Webentwicklung werden verschiedene Werkzeuge benötigt:
+> ein Code-Editor zum Entwickeln,
+> in den Browser eingebaute DevTools zum Debuggen,
+> ein Versionskontrollsystem zum Nachverfolgen von Änderungen,
+> ein Paketmanager zur Verwaltung von Abhängigkeiten
+> sowie eine lokale Laufzeitumgebung
+> und Code-Qualitätswerkzeuge für einen stabilen Workflow.
 
 ## Häufige Prüfungsfehler
 

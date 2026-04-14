@@ -54,9 +54,15 @@ Erre gyakran azt mondják:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A framework egy olyan keretrendszer, amely előre kialakított struktúrát, eszközöket és szabályokat biztosít az alkalmazásfejlesztéshez.  
-> Előnye, hogy gyorsabb, egységesebb és jobban szervezett fejlesztést tesz lehetővé, különösen nagyobb projektek esetén.  
-> A framework több, mint egy egyszerű library, mert nemcsak funkciókat ad, hanem a program felépítését és működési mintáját is befolyásolja.
+> A framework egy olyan keretrendszer,
+> amely előre kialakított struktúrát, eszközöket és szabályokat
+> biztosít az alkalmazásfejlesztéshez.  
+> Előnye,
+> hogy gyorsabb, egységesebb és jobban szervezett fejlesztést tesz lehetővé,
+> különösen nagyobb projektek esetén.  
+> A framework több, mint egy egyszerű library,
+> mert nemcsak funkciókat ad,
+> hanem a program felépítését és működési mintáját is befolyásolja.
 
 ## Gyakori vizsgahibák
 

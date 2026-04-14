@@ -76,8 +76,11 @@ Ezért gyakran fontos a `sandbox` és más korlátozó attribútumok használata
 ## Vizsgán jól használható megfogalmazás
 
 > A frame fogalom a régi HTML-ben több keretre osztott oldalakat jelentett, de ez a megoldás ma már elavult.  
-> A modern weben helyette az `iframe` használható, amellyel egy másik dokumentumot lehet az aktuális oldalba beágyazni.  
-> Az `iframe` hasznos lehet például videók vagy külső szolgáltatások megjelenítésére, de biztonsági és használhatósági szempontból körültekintően kell alkalmazni.
+> A modern weben helyette az `iframe` használható,
+> amellyel egy másik dokumentumot lehet az aktuális oldalba beágyazni.  
+> Az `iframe` hasznos lehet például videók
+> vagy külső szolgáltatások megjelenítésére,
+> de biztonsági és használhatósági szempontból körültekintően kell alkalmazni.
 
 ## Gyakori vizsgahibák
 

@@ -62,8 +62,10 @@ Ilyenkor a feladat gyakran nem új fejlesztés, hanem:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az AngularJS egy régebbi JavaScript-alapú frontend framework, amelyet elsősorban dinamikus, egyoldalas webalkalmazások fejlesztésére használtak.  
-> Történetileg fontos szerepe volt a modern frontend-fejlesztés kialakulásában, de hivatalos támogatása 2022 januárjában megszűnt.  
+> Az AngularJS egy régebbi JavaScript-alapú frontend framework,
+> amelyet elsősorban dinamikus, egyoldalas webalkalmazások fejlesztésére használtak.  
+> Történetileg fontos szerepe volt a modern frontend-fejlesztés kialakulásában,
+> de hivatalos támogatása 2022 januárjában megszűnt.  
 > Ezért új projektekhez ma már nem ajánlott, inkább régi rendszerek karbantartásánál találkozhatunk vele.
 
 ## Gyakori vizsgahibák
@@ -93,10 +95,14 @@ Ilyenkor a feladat gyakran nem új fejlesztés, hanem:
 
 1. AngularJS official site  
    https://angularjs.org/  
-   Használat: hivatalos státusz és leírás az AngularJS szerepéről; a főoldal egyértelműen jelzi, hogy a támogatás 2022 januárjában megszűnt.
+   Használat: hivatalos státusz és leírás az AngularJS szerepéről;
+   a főoldal egyértelműen jelzi,
+   hogy a támogatás 2022 januárjában megszűnt.
 
 2. Stack Overflow Developer Survey 2025 - Technology  
    https://survey.stackoverflow.co/2025/technology/  
-   Használat: aktuális technológiai körkép és usage snapshot, amelyben az AngularJS már alacsonyabb jelenlétű, jellemzően legacy technológiaként látszik.
+   Használat: aktuális technológiai körkép és usage snapshot,
+   amelyben az AngularJS már alacsonyabb jelenlétű,
+   jellemzően legacy technológiaként látszik.
 
 Megnyitva: `2026-04-08`

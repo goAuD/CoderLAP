@@ -98,8 +98,12 @@ Fejlesztőként gyakran ezekkel dolgozunk:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A CMS, vagyis Content Management System olyan rendszer, amely lehetővé teszi digitális tartalmak létrehozását, szerkesztését, tárolását és közzétételét.  
-> Előnye, hogy nem csak fejlesztők tudják használni, ugyanakkor bővíthető sablonokkal, modulokkal és jogosultságkezeléssel.  
+> A CMS, vagyis Content Management System olyan rendszer,
+> amely lehetővé teszi digitális tartalmak létrehozását,
+> szerkesztését, tárolását és közzétételét.  
+> Előnye, hogy nem csak fejlesztők tudják használni,
+> ugyanakkor bővíthető sablonokkal, modulokkal
+> és jogosultságkezeléssel.  
 > Tipikus felhasználása például vállalati weboldalak, blogok és portálok üzemeltetése.
 
 ## Gyakori vizsgahibák

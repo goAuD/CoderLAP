@@ -88,8 +88,11 @@ Zum Beispiel:
 
 ## Prüfungstaugliche Formulierung
 
-> Eine statische Webseite besteht aus vorab erstellten Dateien, daher sendet der Server typischerweise jedem Besucher denselben Inhalt.  
-> Eine dynamische Webseite hingegen kann zur Laufzeit basierend auf Daten und Logik Inhalte erstellen, zum Beispiel angepasst an den Benutzer oder die Datenbank.  
+> Eine statische Webseite besteht aus vorab erstellten Dateien,
+> daher sendet der Server typischerweise jedem Besucher denselben Inhalt.  
+> Eine dynamische Webseite hingegen kann zur Laufzeit
+> basierend auf Daten und Logik Inhalte erstellen,
+> zum Beispiel angepasst an den Benutzer oder die Datenbank.  
 > Heutige Webanwendungen kombinieren häufig beide Ansätze.
 
 ## Häufige Prüfungsfehler

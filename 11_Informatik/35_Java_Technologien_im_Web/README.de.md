@@ -54,8 +54,12 @@ Diese sind wichtig zu verstehen, weil viele heutige Lösungen historisch darauf 
 
 ## Prüfungstaugliche Formulierung
 
-> Die Web-Technologien von Java dienen hauptsächlich der Entwicklung serverseitiger Anwendungen, Backend-Services und Unternehmens-Websysteme.
-> Zu den klassischen Grundlagen gehören Servlet und JSP, während in der modernen Praxis Spring Boot und Jakarta EE zu den wichtigsten Richtungen zählen.
+> Die Web-Technologien von Java dienen hauptsächlich
+> der Entwicklung serverseitiger Anwendungen,
+> Backend-Services und Unternehmens-Websysteme.
+> Zu den klassischen Grundlagen gehören Servlet und JSP,
+> während in der modernen Praxis Spring Boot und Jakarta EE
+> zu den wichtigsten Richtungen zählen.
 > Java ist besonders stark in den Bereichen Stabilität, Skalierbarkeit und Enterprise-Einsatz.
 
 ## Häufige Prüfungsfehler

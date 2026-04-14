@@ -84,8 +84,13 @@ Ezért fontos:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A SEO célja, hogy a weboldal a keresőmotorok számára technikailag jól értelmezhető, a felhasználók számára pedig hasznos és jól használható legyen.  
-> A fontos intézkedések közé tartozik a minőségi tartalom, a helyes HTML-szerkezet, az egyértelmű címek, a gyors betöltés, a mobilbarát kialakítás és a logikus belső linkelés.
+> A SEO célja,
+> hogy a weboldal a keresőmotorok számára technikailag jól értelmezhető,
+> a felhasználók számára pedig hasznos és jól használható legyen.  
+> A fontos intézkedések közé tartozik a minőségi tartalom,
+> a helyes HTML-szerkezet, az egyértelmű címek,
+> a gyors betöltés, a mobilbarát kialakítás
+> és a logikus belső linkelés.
 
 ## Gyakori vizsgahibák
 

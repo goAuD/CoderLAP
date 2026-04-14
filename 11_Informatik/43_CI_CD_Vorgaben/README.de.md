@@ -49,8 +49,14 @@ Wenn es keine Governance gibt, dann:
 
 ## Prüfungstaugliche Formulierung
 
-> CI/CD-Vorgaben sind Regeln, die sicherstellen, dass der Prozess von Build, Test, Release und Deployment kontrolliert, sicher und nachvollziehbar abläuft.
-> Dazu gehören beispielsweise obligatorische Statusprüfungen, geschützte Branches, Code Review, Deployment-Freigabe, Umgebungsschutz, sichere Verwaltung von Geheimnissen und Rollback-Möglichkeit.
+> CI/CD-Vorgaben sind Regeln,
+> die sicherstellen,
+> dass der Prozess von Build, Test, Release und Deployment
+> kontrolliert, sicher und nachvollziehbar abläuft.
+> Dazu gehören beispielsweise obligatorische Statusprüfungen,
+> geschützte Branches, Code Review, Deployment-Freigabe,
+> Umgebungsschutz, sichere Verwaltung von Geheimnissen
+> und Rollback-Möglichkeit.
 > Diese Regeln sind deshalb wichtig, weil Automatisierung mit Kontrolle und Qualitätssicherung verbunden werden muss.
 
 ## Häufige Prüfungsfehler
