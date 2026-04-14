@@ -51,7 +51,10 @@ Az IoT lényege, hogy az eszközök:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az IoT, vagyis a dolgok internete olyan fizikai eszközök hálózatba kapcsolását jelenti, amelyek érzékelnek, adatot gyűjtenek, kommunikálnak és sokszor automatizált folyamatokat támogatnak.  
+> Az IoT, vagyis a dolgok internete olyan fizikai eszközök
+> hálózatba kapcsolását jelenti,
+> amelyek érzékelnek, adatot gyűjtenek, kommunikálnak
+> és sokszor automatizált folyamatokat támogatnak.  
 > Az IoT megjelenik az okosotthonban, az iparban, az egészségügyben és sok más területen is.  
 > Előnye a kényelmesebb vezérlés és a valós idejű adat, kockázata viszont a biztonság és az adatvédelem.
 

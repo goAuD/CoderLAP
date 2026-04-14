@@ -76,9 +76,15 @@ können vorkommen.
 
 ## Prüfungstaugliche Formulierung
 
-> Sprachassistenten ermöglichen eine bequeme, sprachbasierte Steuerung und können dadurch auch die Benutzerfreundlichkeit und Barrierefreiheit verbessern.  
-> Gleichzeitig bergen sie Datenschutz- und Sicherheitsrisiken, da sie Sprachaufnahmen, Kontodaten und Nutzungsinformationen verarbeiten können, und es kann auch zu versehentlicher Aktivierung kommen.  
-> Daher sind ein angemessener Passwortschutz, die Überprüfung der Privacy-Einstellungen und ein bewusster Umgang mit der Aufnahmeverwaltung wichtig.
+> Sprachassistenten ermöglichen eine bequeme, sprachbasierte Steuerung
+> und können dadurch auch die Benutzerfreundlichkeit
+> und Barrierefreiheit verbessern.  
+> Gleichzeitig bergen sie Datenschutz- und Sicherheitsrisiken,
+> da sie Sprachaufnahmen, Kontodaten und Nutzungsinformationen verarbeiten können,
+> und es kann auch zu versehentlicher Aktivierung kommen.  
+> Daher sind ein angemessener Passwortschutz,
+> die Überprüfung der Privacy-Einstellungen
+> und ein bewusster Umgang mit der Aufnahmeverwaltung wichtig.
 
 ## Häufige Prüfungsfehler
 
@@ -111,10 +117,12 @@ können vorkommen.
 
 2. FTC - Amazon didn't protect Alexa users' or children's privacy  
    https://consumer.ftc.gov/consumer-alerts/2023/05/ftc-says-amazon-didnt-protect-alexa-users-or-childrens-privacy  
-   Verwendung: reales, offizielles Beispiel dafür, dass das Datenschutzrisiko bei Sprachassistenten nicht nur theoretisch ist.
+   Verwendung: reales, offizielles Beispiel dafür,
+   dass das Datenschutzrisiko bei Sprachassistenten nicht nur theoretisch ist.
 
 3. ICO - Guidance for consumer Internet of Things products and services  
    https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/online-tracking/guidance-for-consumer-internet-of-things-products-and-services/  
-   Verwendung: offizielle Privacy-by-Design- und Datenverarbeitungsaspekte für Smart-Geräte, einschließlich sprachgesteuerter Geräte.
+   Verwendung: offizielle Privacy-by-Design- und Datenverarbeitungsaspekte
+   für Smart-Geräte, einschließlich sprachgesteuerter Geräte.
 
 Abgerufen: `2026-04-08`

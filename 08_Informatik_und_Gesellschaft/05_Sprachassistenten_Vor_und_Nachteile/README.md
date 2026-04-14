@@ -76,8 +76,11 @@ is előfordulhat.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A hangasszisztensek kényelmes, hangalapú vezérlést tesznek lehetővé, ezért javíthatják a használhatóságot és az akadálymentességet is.  
-> Ugyanakkor adatvédelmi és biztonsági kockázatot hordoznak, mert hangfelvételeket, fiókadatokat és használati információkat kezelhetnek, valamint előfordulhat véletlen aktiválás is.  
+> A hangasszisztensek kényelmes, hangalapú vezérlést tesznek lehetővé,
+> ezért javíthatják a használhatóságot és az akadálymentességet is.  
+> Ugyanakkor adatvédelmi és biztonsági kockázatot hordoznak,
+> mert hangfelvételeket, fiókadatokat és használati információkat kezelhetnek,
+> valamint előfordulhat véletlen aktiválás is.  
 > Ezért fontos a megfelelő jelszóvédelem, a privacy beállítások ellenőrzése és a felvételek kezelésének tudatos szabályozása.
 
 ## Gyakori vizsgahibák
@@ -115,6 +118,7 @@ is előfordulhat.
 
 3. ICO - Guidance for consumer Internet of Things products and services  
    https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/online-tracking/guidance-for-consumer-internet-of-things-products-and-services/  
-   Használat: hivatalos privacy-by-design és adatkezelési szempontok a smart eszközökhöz, ideértve a hangvezérelt eszközöket is.
+   Használat: hivatalos privacy-by-design és adatkezelési szempontok
+   a smart eszközökhöz, ideértve a hangvezérelt eszközöket is.
 
 Megnyitva: `2026-04-08`
