@@ -42,7 +42,9 @@ Lehet:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A prototípus a tervezett rendszer korai mintája, amely segít az ötletek, felhasználói folyamatok vagy technikai megoldások kipróbálásában.  
+> A prototípus a tervezett rendszer korai mintája,
+> amely segít az ötletek, felhasználói folyamatok
+> vagy technikai megoldások kipróbálásában.  
 > Nem feltétlenül végleges vagy teljes funkcionalitású, de jól használható korai visszajelzésre és hibák megelőzésére.  
 > Segítségével az ügyfél és a fejlesztőcsapat könnyebben alakíthat ki közös képet a megoldásról.
 

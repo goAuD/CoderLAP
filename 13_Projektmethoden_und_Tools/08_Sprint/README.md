@@ -57,7 +57,9 @@ Egy projekt több sprintből állhat, és egy release nem mindig esik egyetlen s
 ## Vizsgán jól használható megfogalmazás
 
 > A sprint a Scrum egyik központi eleme.  
-> Ez egy rövid, fix időtartamú iteráció, amely alatt a csapat meghatározott backlog-elemekből dolgozik, és egy elérendő sprintcél felé halad.  
+> Ez egy rövid, fix időtartamú iteráció,
+> amely alatt a csapat meghatározott backlog-elemekből dolgozik,
+> és egy elérendő sprintcél felé halad.  
 > A sprint végén ellenőrizhető eredménynek kell létrejönnie, majd review és retrospective következik.
 
 ## Gyakori vizsgahibák

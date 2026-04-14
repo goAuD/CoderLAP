@@ -49,7 +49,9 @@ Itt dől el többek között:
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverterv a követelmények technikai megvalósításának terve.  
-> Meghatározza a rendszer felépítését, a komponenseket, az interfészeket, az adatkezelést és a fontos tervezési döntéseket.  
+> Meghatározza a rendszer felépítését, a komponenseket,
+> az interfészeket, az adatkezelést
+> és a fontos tervezési döntéseket.  
 > Célja, hogy a fejlesztés átlátható, bővíthető és karbantartható legyen.
 
 ## Gyakori vizsgahibák
