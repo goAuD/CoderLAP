@@ -185,14 +185,14 @@
     }
 
     if (mediaQuery) {
-      applyState(mediaQuery.matches);
+      applyState();
       if (typeof mediaQuery.addEventListener === "function") {
         mediaQuery.addEventListener("change", function (event) {
-          applyState(event.matches);
+          applyState();
         });
       } else if (typeof mediaQuery.addListener === "function") {
         mediaQuery.addListener(function (event) {
-          applyState(event.matches);
+          applyState();
         });
       }
     }

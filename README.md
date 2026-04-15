@@ -214,17 +214,22 @@ python scripts/build_site.py
 
 The generated static frontend is written to `dist/` (git-ignored).
 
-Start a local dev server:
+Start a local preview server on a free local port. Example:
 
 ```bash
-python -m http.server 4173 --bind 0.0.0.0 --directory dist
+python -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
-Then open `http://localhost:4173` in a browser.  
-Use `--bind 0.0.0.0` to access the site from other devices on the same LAN.
+Then open `http://127.0.0.1:8000/` in a browser.
 
-If `localhost` behaves inconsistently on your machine, use
-`http://127.0.0.1:4173/` instead.
+If you need LAN access from another device on the same network:
+
+```bash
+python -m http.server 8000 --bind 0.0.0.0 --directory dist
+```
+
+If port `8000` is already in use or behaves inconsistently on your machine,
+retry with another free port such as `8001` and update the URL accordingly.
 
 Run the test suite:
 
@@ -240,7 +245,7 @@ cd CoderLAP
 git checkout dev
 pip install -r requirements.txt
 python scripts/build_site.py
-python -m http.server 4173 --directory dist
+python -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
 ## Continuing work
