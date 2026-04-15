@@ -83,8 +83,10 @@ Hier wird aus dem theoretischen Modell ein konkretes Datenbankschema.
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der Datenmodellierung werden die Daten realer oder geschäftlicher Prozesse in ein strukturiertes Modell überführt.  
-> Typische Schritte sind die Erhebung der Anforderungen, die Bestimmung von Entitäten und Attributen, die Festlegung von Beziehungen und Schlüsseln sowie die Normalisierung und die Erstellung des konkreten Datenbankschemas.  
+> Bei der Datenmodellierung werden die Daten realer oder geschäftlicher Prozesse in ein strukturiertes Modell  
+> überführt.  
+> Typische Schritte sind die Erhebung der Anforderungen, die Bestimmung von Entitäten und Attributen, die Festlegung  
+> von Beziehungen und Schlüsseln sowie die Normalisierung und die Erstellung des konkreten Datenbankschemas.  
 > Ziel ist die Schaffung einer übersichtlichen, erweiterbaren und konsistenten Datenstruktur.
 
 ## Häufige Prüfungsfehler

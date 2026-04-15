@@ -62,8 +62,10 @@ Typischerweise:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Programmspezifikation ist eine Beschreibung, die festhält, welche Aufgabe das Programm erfüllen muss, mit welchen Eingaben es arbeitet, welche Ausgaben es liefert und nach welchen Regeln es funktioniert.  
-> Das Ziel der Spezifikation ist die eindeutige Festlegung der Anforderungen, damit Entwicklung und Testen auf demselben erwarteten Verhalten aufbauen können.  
+> Die Programmspezifikation ist eine Beschreibung, die festhält, welche Aufgabe das Programm erfüllen muss, mit  
+> welchen Eingaben es arbeitet, welche Ausgaben es liefert und nach welchen Regeln es funktioniert.  
+> Das Ziel der Spezifikation ist die eindeutige Festlegung der Anforderungen, damit Entwicklung und Testen auf  
+> demselben erwarteten Verhalten aufbauen können.  
 > Die Spezifikation beschreibt also nicht den Code, sondern das erwartete Verhalten.
 
 ## Häufige Prüfungsfehler

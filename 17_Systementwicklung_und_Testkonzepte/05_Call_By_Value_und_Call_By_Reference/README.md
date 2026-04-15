@@ -60,9 +60,11 @@ Ezért jó vizsgás mondat:
 
 ## Vizsgán jól használható megfogalmazás
 
-> `Call by value` esetén a függvény a paraméter értékének másolatával dolgozik, ezért a módosítás jellemzően nem érinti közvetlenül az eredeti változót.  
+> `Call by value` esetén a függvény a paraméter értékének másolatával dolgozik, ezért a módosítás jellemzően nem  
+> érinti közvetlenül az eredeti változót.  
 > `Call by reference` esetén a függvény hivatkozáson keresztül éri el az adatot, ezért az eredeti érték is módosulhat.  
-> A pontos megvalósítás programozási nyelvenként eltérhet, de az alapvető különbség a másolat és a közvetlenebb hozzáférés között van.
+> A pontos megvalósítás programozási nyelvenként eltérhet, de az alapvető különbség a másolat és a közvetlenebb
+> hozzáférés között van.
 
 ## Gyakori vizsgahibák
 

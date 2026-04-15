@@ -43,7 +43,8 @@ A hivatalos osztrák leírás alapján:
 ## Vizsgán jól használható megfogalmazás
 
 > Az osztrák `SV-Nr` érvényességvizsgálatánál a szám formátumát és a hivatalos Prüfziffer-logikát kell ellenőrizni.  
-> A három első Laufnummer-számjegyet és a `TTMMJJ` részt meghatározott súlyokkal kell szorozni, majd az összeg `11`-gyel vett maradékát össze kell hasonlítani a `4.` pozícióban lévő Prüfzifferrel.  
+> A három első Laufnummer-számjegyet és a `TTMMJJ` részt meghatározott súlyokkal kell szorozni, majd az összeg  
+> `11`-gyel vett maradékát össze kell hasonlítani a `4.` pozícióban lévő Prüfzifferrel.  
 > Ha az ellenőrzés nem egyezik, a szám érvénytelen.
 
 ## Gyakori vizsgahibák

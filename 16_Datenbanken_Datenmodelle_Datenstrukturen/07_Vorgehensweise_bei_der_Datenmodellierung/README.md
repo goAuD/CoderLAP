@@ -84,7 +84,8 @@ Itt lesz az elméleti modellből konkrét adatbázis-séma.
 ## Vizsgán jól használható megfogalmazás
 
 > Az adatmodellezés során a valós vagy üzleti folyamatok adatait strukturált modellé alakítjuk.  
-> Ennek tipikus lépése a követelmények felmérése, az entitások és attribútumok meghatározása, a kapcsolatok és kulcsok kijelölése, majd a normalizálás és a konkrét adatbázis-séma kialakítása.  
+> Ennek tipikus lépése a követelmények felmérése, az entitások és attribútumok meghatározása, a kapcsolatok és kulcsok  
+> kijelölése, majd a normalizálás és a konkrét adatbázis-séma kialakítása.  
 > A cél egy átlátható, bővíthető és konzisztens adatstruktúra létrehozása.
 
 ## Gyakori vizsgahibák

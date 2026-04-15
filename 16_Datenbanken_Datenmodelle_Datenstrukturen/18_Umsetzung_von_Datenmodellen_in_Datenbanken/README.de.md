@@ -70,8 +70,10 @@ Weil hier entschieden wird, ob:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der Umsetzung von Datenmodellen in Datenbanken werden die Elemente des konzeptionellen oder logischen Modells in konkrete Datenbankstrukturen überführt.  
-> Aus Entitäten werden Tabellen, aus Attributen Spalten, aus Beziehungen Primär- und Fremdschlüssel sowie bei Bedarf Verknüpfungstabellen.  
+> Bei der Umsetzung von Datenmodellen in Datenbanken werden die Elemente des konzeptionellen oder logischen Modells in  
+> konkrete Datenbankstrukturen überführt.  
+> Aus Entitäten werden Tabellen, aus Attributen Spalten, aus Beziehungen Primär- und Fremdschlüssel sowie bei Bedarf  
+> Verknüpfungstabellen.  
 > Dabei werden auch die Datentypen, Integritätsregeln und weitere technische Details festgelegt.
 
 ## Häufige Prüfungsfehler

@@ -66,7 +66,8 @@ Bei der Prüfung ist es eine gute Antwort, wenn man sagt:
 ## Prüfungstaugliche Formulierung
 
 > Redundanz in einer Datenbank bedeutet, dass dieselbe Information unnötig an mehreren Stellen gespeichert wird.  
-> Das erhöht den Speicherbedarf und kann zu Dateninkonsistenzen führen, zum Beispiel wenn eine Änderung nicht an allen Stellen durchgeführt wird.  
+> Das erhöht den Speicherbedarf und kann zu Dateninkonsistenzen führen, zum Beispiel wenn eine Änderung nicht an allen  
+> Stellen durchgeführt wird.  
 > Eines der Ziele des relationalen Datenbankentwurfs ist die Reduzierung unnötiger Redundanz, zum Beispiel durch Normalisierung.
 
 ## Häufige Prüfungsfehler
@@ -96,7 +97,8 @@ Bei der Prüfung ist es eine gute Antwort, wenn man sagt:
 
 1. Microsoft Support - Database design basics  
    https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5  
-   Verwendung: offizielle, gut verwendbare Quelle zum Verständnis des Zusammenhangs zwischen Redundanz und relationalem Entwurf.
+   Verwendung: offizielle, gut verwendbare Quelle zum Verständnis des Zusammenhangs zwischen Redundanz und relationalem
+   Entwurf.
 
 2. Microsoft Learn - Description of the database normalization basics  
    https://learn.microsoft.com/en-us/troubleshoot/microsoft-365-apps/access/database-normalization-description  

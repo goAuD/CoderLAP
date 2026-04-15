@@ -42,8 +42,10 @@ Gemäß der offiziellen österreichischen Beschreibung:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei der Gültigkeitsprüfung der österreichischen `SV-Nr` müssen das Format der Nummer und die offizielle Prüfziffer-Logik überprüft werden.  
-> Die ersten drei Laufnummer-Ziffern und der `TTMMJJ`-Teil werden mit bestimmten Gewichten multipliziert, und dann wird der Rest der Summe bei Division durch `11` mit der Prüfziffer an der `4.` Position verglichen.  
+> Bei der Gültigkeitsprüfung der österreichischen `SV-Nr` müssen das Format der Nummer und die offizielle  
+> Prüfziffer-Logik überprüft werden.  
+> Die ersten drei Laufnummer-Ziffern und der `TTMMJJ`-Teil werden mit bestimmten Gewichten multipliziert, und dann  
+> wird der Rest der Summe bei Division durch `11` mit der Prüfziffer an der `4.` Position verglichen.  
 > Wenn die Prüfung nicht übereinstimmt, ist die Nummer ungültig.
 
 ## Häufige Prüfungsfehler

@@ -65,7 +65,8 @@ Beziehung:
 ## Prüfungstaugliche Formulierung
 
 > Das Datenmodell ist die Beschreibung der Struktur und Beziehungen von Daten.  
-> Es legt fest, welche Entitäten, Attribute und Relationen verwaltet werden müssen, sowie welche Regeln und Schlüssel für sie gelten.  
+> Es legt fest, welche Entitäten, Attribute und Relationen verwaltet werden müssen, sowie welche Regeln und Schlüssel  
+> für sie gelten.  
 > Das Datenmodell ist eine der wichtigsten Planungsgrundlagen für eine gut aufgebaute Datenbank und ein Datenverwaltungssystem.
 
 ## Häufige Prüfungsfehler

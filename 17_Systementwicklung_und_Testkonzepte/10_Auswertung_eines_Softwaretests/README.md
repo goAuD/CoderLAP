@@ -62,7 +62,8 @@ Tipikusan:
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverteszt kiértékelése során a tényleges eredményt összehasonlítjuk a várt eredménnyel.  
-> Ha a kettő megegyezik, a teszt sikeres, ha eltérés van, a teszt sikertelen, és a hibát vagy rendellenességet dokumentálni kell.  
+> Ha a kettő megegyezik, a teszt sikeres, ha eltérés van, a teszt sikertelen, és a hibát vagy rendellenességet  
+> dokumentálni kell.  
 > A megfelelő kiértékelés segíti a hibakövetést, a minőség mérését és a további fejlesztési döntéseket.
 
 ## Gyakori vizsgahibák

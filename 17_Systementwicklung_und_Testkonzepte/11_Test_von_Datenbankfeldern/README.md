@@ -64,7 +64,8 @@ Vizsgán jó pont:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az adatbázismezők tesztelése során azt ellenőrizzük, hogy a mezők megfelelnek-e az adattípusra, kötelezőségre, hosszra, tartományra, formátumra és egyediségre vonatkozó elvárásoknak.  
+> Az adatbázismezők tesztelése során azt ellenőrizzük, hogy a mezők megfelelnek-e az adattípusra, kötelezőségre,  
+> hosszra, tartományra, formátumra és egyediségre vonatkozó elvárásoknak.  
 > Fontos nemcsak helyes, hanem hibás, határértékű és váratlan bemenetekkel is tesztelni.  
 > A cél az adatminőség, a konzisztencia és a biztonság biztosítása.
 

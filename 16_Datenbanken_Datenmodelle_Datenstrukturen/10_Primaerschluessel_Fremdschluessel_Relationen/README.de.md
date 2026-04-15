@@ -31,7 +31,8 @@ Der Fremdschlüssel:
 
 Beispiel:
 
-Wenn in der Tabelle `Orders` eine `CustomerID` vorhanden ist, die auf die Tabelle `Customers` verweist, dann ist das ein typischer Fremdschlüssel.
+Wenn in der Tabelle `Orders` eine `CustomerID` vorhanden ist, die auf die Tabelle `Customers` verweist, dann ist das ein
+typischer Fremdschlüssel.
 
 ## Was ist eine Relation?
 
@@ -62,8 +63,10 @@ Die `n:m`-Beziehung wird in der Regel mit einer Verknüpfungstabelle umgesetzt.
 ## Prüfungstaugliche Formulierung
 
 > Der Primärschlüssel dient der eindeutigen Identifikation eines Datensatzes innerhalb einer Tabelle.  
-> Der Fremdschlüssel hingegen verweist auf den Schlüssel einer anderen Tabelle und stellt so eine Beziehung zwischen den Tabellen her.  
-> Durch Relationen können getrennt gespeicherte Daten verknüpft werden, was die Grundlage des relationalen Datenbankmodells darstellt.
+> Der Fremdschlüssel hingegen verweist auf den Schlüssel einer anderen Tabelle und stellt so eine Beziehung zwischen  
+> den Tabellen her.  
+> Durch Relationen können getrennt gespeicherte Daten verknüpft werden, was die Grundlage des relationalen
+> Datenbankmodells darstellt.
 
 ## Häufige Prüfungsfehler
 

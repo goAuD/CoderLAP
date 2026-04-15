@@ -29,7 +29,8 @@
 
 ## Prüfungstaugliche Formulierung
 
-> Der erste Teil der praktischen Aufgabe ist die Erstellung eines einfachen, responsiven HTML-Formulars mit den Feldern `Vorname`, `Nachname` und `SV-NR`.  
+> Der erste Teil der praktischen Aufgabe ist die Erstellung eines einfachen, responsiven HTML-Formulars mit den  
+> Feldern `Vorname`, `Nachname` und `SV-NR`.  
 > Die Verwendung von `Bootstrap` ist vorteilhaft, da es schnell ein ordentliches und mobilfreundliches Layout bietet.  
 > Wichtig ist, dass die Ausfüllung der relevanten Felder beim Klick auf den Button überprüft wird.
 

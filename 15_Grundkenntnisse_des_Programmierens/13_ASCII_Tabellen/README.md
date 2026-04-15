@@ -59,8 +59,10 @@ A modern rendszerek többsége ma már Unicode-ot használ, de az ASCII alapjai 
 ## Vizsgán jól használható megfogalmazás
 
 > Az ASCII-tábla az ASCII karakterkészlet karaktereihez tartozó numerikus kódokat mutatja meg.  
-> Az ASCII egy 7 bites karakterkódolás, amely 128 karaktert tartalmaz, köztük vezérlőkaraktereket és nyomtatható jeleket.  
-> Bár ma már jellemzően Unicode-alapú rendszereket használunk, az ASCII továbbra is alapvető jelentőségű a karakterkódolás megértésében.
+> Az ASCII egy 7 bites karakterkódolás, amely 128 karaktert tartalmaz, köztük vezérlőkaraktereket és nyomtatható  
+> jeleket.  
+> Bár ma már jellemzően Unicode-alapú rendszereket használunk, az ASCII továbbra is alapvető jelentőségű a
+> karakterkódolás megértésében.
 
 ## Gyakori vizsgahibák
 

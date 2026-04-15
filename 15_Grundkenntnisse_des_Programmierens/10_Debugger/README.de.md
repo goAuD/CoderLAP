@@ -63,7 +63,8 @@ Beides zusammen ist am nützlichsten.
 ## Prüfungstaugliche Formulierung
 
 > Der Debugger ist ein Fehlersuch-Werkzeug, das es ermöglicht, die Programmausführung zu beobachten und zu steuern.  
-> Mit ihm können Breakpoints gesetzt, der Code schrittweise ausgeführt, Variablenwerte beobachtet und die Aufrufkette analysiert werden.  
+> Mit ihm können Breakpoints gesetzt, der Code schrittweise ausgeführt, Variablenwerte beobachtet und die Aufrufkette  
+> analysiert werden.  
 > Das ist besonders nützlich zur Aufdeckung logischer Fehler und Laufzeitprobleme.
 
 ## Häufige Prüfungsfehler

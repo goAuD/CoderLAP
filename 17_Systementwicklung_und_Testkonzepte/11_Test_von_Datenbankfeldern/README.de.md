@@ -64,8 +64,10 @@ Guter Punkt bei der Prüfung:
 
 ## Prüfungstaugliche Formulierung
 
-> Beim Testen von Datenbankfeldern prüfen wir, ob die Felder den Erwartungen hinsichtlich Datentyp, Pflichtbereich, Länge, Wertebereich, Format und Eindeutigkeit entsprechen.  
-> Es ist wichtig, nicht nur mit korrekten, sondern auch mit fehlerhaften Eingaben, Grenzwerten und unerwarteten Eingaben zu testen.  
+> Beim Testen von Datenbankfeldern prüfen wir, ob die Felder den Erwartungen hinsichtlich Datentyp, Pflichtbereich,  
+> Länge, Wertebereich, Format und Eindeutigkeit entsprechen.  
+> Es ist wichtig, nicht nur mit korrekten, sondern auch mit fehlerhaften Eingaben, Grenzwerten und unerwarteten  
+> Eingaben zu testen.  
 > Das Ziel ist die Sicherstellung von Datenqualität, Konsistenz und Sicherheit.
 
 ## Häufige Prüfungsfehler
@@ -95,10 +97,12 @@ Guter Punkt bei der Prüfung:
 
 1. OWASP Input Validation Cheat Sheet  
    https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html  
-   Verwendung: offizielle Quelle zu den korrekten Prinzipien der Input-Validierung, einschließlich syntaktischer und semantischer Validierung.
+   Verwendung: offizielle Quelle zu den korrekten Prinzipien der Input-Validierung, einschließlich syntaktischer und
+   semantischer Validierung.
 
 2. PostgreSQL - Constraints  
    https://www.postgresql.org/docs/current/ddl-constraints.html  
-   Verwendung: offizieller Hintergrund zu den feldbezogenen Einschränkungen, z.B. `NOT NULL`, `UNIQUE`, `CHECK`, `FOREIGN KEY`.
+   Verwendung: offizieller Hintergrund zu den feldbezogenen Einschränkungen, z.B. `NOT NULL`, `UNIQUE`, `CHECK`,
+   `FOREIGN KEY`.
 
 Abgerufen: `2026-04-09`

@@ -79,8 +79,10 @@ Alkalmazott
 
 ## Vizsgán jól használható megfogalmazás
 
-> A procedurális programozás a feladatot műveletek és függvények sorozataként szervezi meg, míg az objektumorientált programozás a rendszer elemeit objektumokkal és osztályokkal modellezi.  
-> A procedurális megközelítés főleg a végrehajtandó lépésekre, az objektumorientált megközelítés pedig az adatok és a hozzájuk tartozó műveletek egységére koncentrál.  
+> A procedurális programozás a feladatot műveletek és függvények sorozataként szervezi meg, míg az objektumorientált  
+> programozás a rendszer elemeit objektumokkal és osztályokkal modellezi.  
+> A procedurális megközelítés főleg a végrehajtandó lépésekre, az objektumorientált megközelítés pedig az adatok és a  
+> hozzájuk tartozó műveletek egységére koncentrál.  
 > Mindkét paradigma hasznos, és a választás a feladattól függ.
 
 ## Gyakori vizsgahibák

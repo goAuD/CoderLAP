@@ -81,7 +81,8 @@ Das ist vor allem bei Systemen wichtig, die Daten zwischen verschiedenen Systeme
 
 > Für Datenbankabfragen verwendet man in relationalen Systemen üblicherweise `SQL`.  
 > Mit `SQL` können Daten abgefragt, eingefügt, geändert und gelöscht werden.  
-> `SQL/XML` dient hingegen der Verbindung von `XML`-Daten und SQL-basierter Datenverarbeitung, zum Beispiel zum Auslesen von XML-Daten oder zur Umwandlung von SQL-Ergebnissen ins XML-Format.
+> `SQL/XML` dient hingegen der Verbindung von `XML`-Daten und SQL-basierter Datenverarbeitung, zum Beispiel zum Auslesen
+> von XML-Daten oder zur Umwandlung von SQL-Ergebnissen ins XML-Format.
 
 ## Häufige Prüfungsfehler
 

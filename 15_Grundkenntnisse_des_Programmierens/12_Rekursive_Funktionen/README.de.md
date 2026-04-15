@@ -71,7 +71,8 @@ Viele Aufgaben lassen sich auf beide Arten lösen, aber nicht immer gleich gut.
 
 > Eine rekursive Funktion ist eine Funktion, die sich selbst aufruft, um ein kleineres Teilproblem zu lösen.  
 > Für die korrekte Funktionsweise ist immer ein Basisfall und ein rekursiver Fall erforderlich.  
-> Die Rekursion ist besonders nützlich bei hierarchischen oder Aufteilungsproblemen, kann aber bei zu tiefen Aufrufen Ressourcenprobleme verursachen.
+> Die Rekursion ist besonders nützlich bei hierarchischen oder Aufteilungsproblemen, kann aber bei zu tiefen Aufrufen
+> Ressourcenprobleme verursachen.
 
 ## Häufige Prüfungsfehler
 

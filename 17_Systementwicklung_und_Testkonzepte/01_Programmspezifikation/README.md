@@ -62,8 +62,10 @@ Tipikusan:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A programspecifikáció olyan leírás, amely rögzíti, hogy a programnak milyen feladatot kell ellátnia, milyen bemenetekkel dolgozik, milyen kimenetet ad, és milyen szabályok szerint működik.  
-> A specifikáció célja a követelmények egyértelmű rögzítése, hogy a fejlesztés és a tesztelés ugyanarra az elvárt működésre épülhessen.  
+> A programspecifikáció olyan leírás, amely rögzíti, hogy a programnak milyen feladatot kell ellátnia, milyen  
+> bemenetekkel dolgozik, milyen kimenetet ad, és milyen szabályok szerint működik.  
+> A specifikáció célja a követelmények egyértelmű rögzítése, hogy a fejlesztés és a tesztelés ugyanarra az elvárt  
+> működésre épülhessen.  
 > A specifikáció tehát nem a kódot, hanem az elvárt viselkedést írja le.
 
 ## Gyakori vizsgahibák

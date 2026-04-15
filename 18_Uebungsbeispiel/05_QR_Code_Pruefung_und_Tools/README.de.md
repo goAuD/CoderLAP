@@ -20,7 +20,10 @@ Dieser ist dafür geeignet:
 - Einen am Bildschirm angezeigten QR-Code zu überprüfen
 - Den generierten Code auch ohne Telefon zurücklesen zu können
 
-> **Wichtig (2026):** Der `CodeTwo QR Code Desktop Reader` hat auf der Herstellerseite den Status **deprecated** - er steht nicht mehr zum Download bereit und wird nicht mehr aktualisiert. Die PDF nennt noch dieses Tool, daher ist es ratsam, den Namen für die Prüfung zu kennen, aber in der Praxis kann auch ein alternativer QR-Reader benötigt werden, zum Beispiel die Handykamera, ein browserbasierter Online-Decoder oder ein anderer kostenloser Desktop-Scanner.
+> **Wichtig (2026):** Der `CodeTwo QR Code Desktop Reader` hat auf der Herstellerseite den Status **deprecated** - er
+> steht nicht mehr zum Download bereit und wird nicht mehr aktualisiert. Die PDF nennt noch dieses Tool, daher ist es
+> ratsam, den Namen für die Prüfung zu kennen, aber in der Praxis kann auch ein alternativer QR-Reader benötigt werden,
+> zum Beispiel die Handykamera, ein browserbasierter Online-Decoder oder ein anderer kostenloser Desktop-Scanner.
 
 ## Was muss man überprüfen?
 
@@ -39,7 +42,8 @@ Dieser ist dafür geeignet:
 ## Prüfungstaugliche Formulierung
 
 > Die Korrektheit des generierten QR-Codes muss separat mit einem Lesegerät oder Desktop-Scanner überprüft werden.  
-> Ziel ist der Nachweis, dass der Code tatsächlich den gewünschten Inhalt enthält, also den Text `Richtig` oder `Falsch`.  
+> Ziel ist der Nachweis, dass der Code tatsächlich den gewünschten Inhalt enthält, also den Text `Richtig` oder  
+> `Falsch`.  
 > Die PDF nennt dafür als Beispiel die Verwendung des `CodeTwo QR Code Desktop Reader`.
 
 ## Häufige Prüfungsfehler

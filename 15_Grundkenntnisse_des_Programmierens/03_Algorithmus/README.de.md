@@ -71,7 +71,8 @@ Deshalb sprechen wir auch vom Vergleich von Algorithmen.
 
 > Ein Algorithmus ist eine eindeutige, endliche Schrittfolge, die zur Lösung eines bestimmten Problems dient.  
 > Er verarbeitet Eingaben und liefert ein Ergebnis zurück.  
-> In der Programmierung ist der Algorithmus die Logik der Lösung, die später in einer konkreten Programmiersprache umgesetzt wird.
+> In der Programmierung ist der Algorithmus die Logik der Lösung, die später in einer konkreten Programmiersprache
+> umgesetzt wird.
 
 ## Häufige Prüfungsfehler
 

@@ -54,7 +54,8 @@ Ezt a gyakorlatban gyakran:
 ## Vizsgán jól használható megfogalmazás
 
 > A reprodukálható hiba olyan hiba, amely ugyanazokkal a bemenetekkel és lépésekkel megbízhatóan újra előidézhető.  
-> A nem reprodukálható vagy intermittáló hiba ezzel szemben nem jelentkezik minden alkalommal, ezért nehezebb elemezni és javítani.  
+> A nem reprodukálható vagy intermittáló hiba ezzel szemben nem jelentkezik minden alkalommal, ezért nehezebb elemezni  
+> és javítani.  
 > Az ilyen hibáknál különösen fontos a részletes hibadokumentáció, a logok és a környezeti feltételek rögzítése.
 
 ## Gyakori vizsgahibák

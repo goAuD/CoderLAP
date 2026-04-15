@@ -53,7 +53,8 @@ Das heißt:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein betriebliches Informationssystem ist ein System, das die Erfassung, Speicherung, Verarbeitung und Weitergabe der für den Unternehmensbetrieb notwendigen Informationen unterstützt.  
+> Ein betriebliches Informationssystem ist ein System, das die Erfassung, Speicherung, Verarbeitung und Weitergabe der  
+> für den Unternehmensbetrieb notwendigen Informationen unterstützt.  
 > Ein `BIS` besteht nicht nur aus technologischen Elementen, sondern auch aus Menschen, Prozessen und Geschäftsregeln.  
 > Sein Ziel ist die Unterstützung der operativen Arbeit und der Entscheidungsfindung innerhalb des Unternehmens.
 
@@ -92,8 +93,10 @@ Das heißt:
 
 3. IBM - What is business intelligence (BI)?  
    https://www.ibm.com/topics/business-intelligence  
-   Verwendung: ergänzende, zuverlässige Quelle zum Verständnis, wie `BI` in das breitere betriebliche Informationsumfeld eingebettet ist.
+   Verwendung: ergänzende, zuverlässige Quelle zum Verständnis, wie `BI` in das breitere betriebliche Informationsumfeld
+   eingebettet ist.
 
-Hinweis: `BIS` ist hier als Sammelbegriff formuliert, basierend auf einer Zusammenfassung der oben genannten zuverlässigen Quellen.
+Hinweis: `BIS` ist hier als Sammelbegriff formuliert, basierend auf einer Zusammenfassung der oben genannten
+zuverlässigen Quellen.
 
 Abgerufen: `2026-04-09`
