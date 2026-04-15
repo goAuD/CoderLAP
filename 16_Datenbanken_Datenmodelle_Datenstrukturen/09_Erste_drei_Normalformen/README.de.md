@@ -60,7 +60,9 @@ und `Discount` von `SRP` abhängt und nicht direkt vom Schlüssel, dann kann das
 ## Prüfungstaugliche Formulierung
 
 > Die ersten drei Normalformen gehören zu den Grundprinzipien des relationalen Datenbankentwurfs.  
-> Die erste Normalform besagt, dass in einem Feld nur ein Wert stehen darf; die zweite Normalform schließt partielle Abhängigkeiten bei zusammengesetzten Schlüsseln aus; die dritte Normalform verbietet, dass Nicht-Schlüsselfelder von anderen Nicht-Schlüsselfeldern abhängen.  
+> Die erste Normalform besagt, dass in einem Feld nur ein Wert stehen darf; die zweite Normalform schließt partielle  
+> Abhängigkeiten bei zusammengesetzten Schlüsseln aus; die dritte Normalform verbietet, dass Nicht-Schlüsselfelder von  
+> anderen Nicht-Schlüsselfeldern abhängen.  
 > Diese Regeln reduzieren die Redundanz und verbessern die Datenkonsistenz.
 
 ## Häufige Prüfungsfehler
@@ -94,6 +96,7 @@ und `Discount` von `SRP` abhängt und nicht direkt vom Schlüssel, dann kann das
 
 2. Microsoft Learn - Description of the database normalization basics  
    https://learn.microsoft.com/en-us/troubleshoot/microsoft-365-apps/access/database-normalization-description  
-   Verwendung: offizieller Hintergrund zum Zweck der Normalisierung und zur praktischen Interpretation von `1NF`, `2NF`, `3NF`.
+   Verwendung: offizieller Hintergrund zum Zweck der Normalisierung und zur praktischen Interpretation von `1NF`, `2NF`,
+   `3NF`.
 
 Abgerufen: `2026-04-09`

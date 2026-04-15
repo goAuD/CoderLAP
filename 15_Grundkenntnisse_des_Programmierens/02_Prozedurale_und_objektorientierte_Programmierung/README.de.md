@@ -79,8 +79,10 @@ Mitarbeiter
 
 ## Prüfungstaugliche Formulierung
 
-> Die prozedurale Programmierung organisiert die Aufgabe als Abfolge von Operationen und Funktionen, während die objektorientierte Programmierung die Elemente des Systems mit Objekten und Klassen modelliert.  
-> Der prozedurale Ansatz konzentriert sich hauptsächlich auf die auszuführenden Schritte, der objektorientierte Ansatz hingegen auf die Einheit von Daten und zugehörigen Operationen.  
+> Die prozedurale Programmierung organisiert die Aufgabe als Abfolge von Operationen und Funktionen, während die  
+> objektorientierte Programmierung die Elemente des Systems mit Objekten und Klassen modelliert.  
+> Der prozedurale Ansatz konzentriert sich hauptsächlich auf die auszuführenden Schritte, der objektorientierte Ansatz  
+> hingegen auf die Einheit von Daten und zugehörigen Operationen.  
 > Beide Paradigmen sind nützlich, und die Wahl hängt von der Aufgabe ab.
 
 ## Häufige Prüfungsfehler

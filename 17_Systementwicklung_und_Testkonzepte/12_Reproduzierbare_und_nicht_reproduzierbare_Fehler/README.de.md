@@ -53,9 +53,12 @@ In der Praxis wird dies häufig auch als:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein reproduzierbarer Fehler ist ein Fehler, der mit denselben Eingaben und Schritten zuverlässig erneut ausgelöst werden kann.  
-> Ein nicht reproduzierbarer oder intermittierender Fehler tritt hingegen nicht jedes Mal auf, weshalb er schwieriger zu analysieren und zu beheben ist.  
-> Bei solchen Fehlern ist eine detaillierte Fehlerdokumentation, die Logs und die Dokumentation der Umgebungsbedingungen besonders wichtig.
+> Ein reproduzierbarer Fehler ist ein Fehler, der mit denselben Eingaben und Schritten zuverlässig erneut ausgelöst  
+> werden kann.  
+> Ein nicht reproduzierbarer oder intermittierender Fehler tritt hingegen nicht jedes Mal auf, weshalb er schwieriger  
+> zu analysieren und zu beheben ist.  
+> Bei solchen Fehlern ist eine detaillierte Fehlerdokumentation, die Logs und die Dokumentation der Umgebungsbedingungen
+> besonders wichtig.
 
 ## Häufige Prüfungsfehler
 
@@ -88,6 +91,7 @@ In der Praxis wird dies häufig auch als:
 
 2. Selenium - Avoid sharing state  
    https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/  
-   Verwendung: offizielle, moderne Quelle dazu, wie Shared State intermittierendes oder flaky Testverhalten verursachen kann.
+   Verwendung: offizielle, moderne Quelle dazu, wie Shared State intermittierendes oder flaky Testverhalten verursachen
+   kann.
 
 Abgerufen: `2026-04-09`

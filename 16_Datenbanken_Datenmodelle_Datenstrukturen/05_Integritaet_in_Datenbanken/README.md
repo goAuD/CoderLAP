@@ -57,7 +57,8 @@ A kettő együtt a legerősebb.
 ## Vizsgán jól használható megfogalmazás
 
 > Az integritás az adatbázisban tárolt adatok helyességét és következetességét jelenti.  
-> Ezt a `DBMS` különböző szabályokkal biztosíthatja, például `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `UNIQUE` és `CHECK` megszorításokkal.  
+> Ezt a `DBMS` különböző szabályokkal biztosíthatja, például `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `UNIQUE` és  
+> `CHECK` megszorításokkal.  
 > Az integritás célja, hogy az adatbázis ne kerülhessen hibás vagy ellentmondásos állapotba.
 
 ## Gyakori vizsgahibák

@@ -62,7 +62,8 @@ Typischerweise:
 ## Prüfungstaugliche Formulierung
 
 > Bei der Auswertung eines Softwaretests wird das tatsächliche Ergebnis mit dem erwarteten Ergebnis verglichen.  
-> Wenn beide übereinstimmen, ist der Test erfolgreich; bei einer Abweichung ist der Test fehlgeschlagen, und der Fehler oder die Anomalie muss dokumentiert werden.  
+> Wenn beide übereinstimmen, ist der Test erfolgreich; bei einer Abweichung ist der Test fehlgeschlagen, und der  
+> Fehler oder die Anomalie muss dokumentiert werden.  
 > Eine ordnungsgemäße Auswertung unterstützt die Fehlerverfolgung, die Qualitätsmessung und weitere Entwicklungsentscheidungen.
 
 ## Häufige Prüfungsfehler

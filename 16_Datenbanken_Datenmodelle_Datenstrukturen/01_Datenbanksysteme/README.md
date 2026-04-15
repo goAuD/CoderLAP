@@ -57,7 +57,8 @@ Tipikus példák:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az adatbázisrendszer a tárolt adatokból, az adatbáziskezelő rendszerből és a hozzájuk kapcsolódó alkalmazásokból álló teljes rendszer.  
+> Az adatbázisrendszer a tárolt adatokból, az adatbáziskezelő rendszerből és a hozzájuk kapcsolódó alkalmazásokból  
+> álló teljes rendszer.  
 > Célja az adatok strukturált tárolása, lekérdezése, módosítása és biztonságos kezelése.  
 > Az adatbázisrendszer tehát nemcsak maga az adat, hanem annak teljes működési környezete is.
 

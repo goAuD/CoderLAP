@@ -76,8 +76,10 @@ Az adatszerkezet azt írja le, hogyan szervezzük az adatokat úgy, hogy:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az adattípus azt határozza meg, hogy milyen jellegű adatot kezelünk, például egész számot, szöveget vagy logikai értéket.  
-> Az adatszerkezet ezzel szemben azt írja le, hogyan szervezzük és tároljuk az adatokat, például tömbben, listában, veremben vagy kulcs-érték párok formájában.  
+> Az adattípus azt határozza meg, hogy milyen jellegű adatot kezelünk, például egész számot, szöveget vagy logikai  
+> értéket.  
+> Az adatszerkezet ezzel szemben azt írja le, hogyan szervezzük és tároljuk az adatokat, például tömbben, listában,  
+> veremben vagy kulcs-érték párok formájában.  
 > A megfelelő adattípus és adatszerkezet kiválasztása fontos a program helyes működése és teljesítménye szempontjából.
 
 ## Gyakori vizsgahibák

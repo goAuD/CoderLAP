@@ -57,7 +57,8 @@ KIÍR osszeg
 
 ## Vizsgán jól használható megfogalmazás
 
-> A pseudocode egy kódhoz hasonló, de nem futtatható leírás, amely egy algoritmus vagy programrész logikáját mutatja be.  
+> A pseudocode egy kódhoz hasonló, de nem futtatható leírás, amely egy algoritmus vagy programrész logikáját mutatja  
+> be.  
 > Célja, hogy nyelvfüggetlenül és jól olvashatóan lehessen megtervezni vagy elmagyarázni egy megoldást.  
 > A pseudocode különösen hasznos algoritmusok bemutatásánál és vizsgafeladatoknál.
 

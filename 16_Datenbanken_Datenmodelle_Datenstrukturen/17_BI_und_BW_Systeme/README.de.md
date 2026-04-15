@@ -64,8 +64,10 @@ Operative Systeme
 ## Prüfungstaugliche Formulierung
 
 > `BI`-Systeme dienen der Analyse, Visualisierung und Entscheidungsunterstützung auf Basis von Geschäftsdaten.  
-> `BW`- oder Data-Warehouse-Systeme hingegen sammeln Daten aus verschiedenen Quellen, vereinheitlichen sie und speichern sie in einer für Analysen geeigneten Form.  
-> Einfach ausgedrückt: das `BW` stellt die Datengrundlage bereit, und `BI` macht daraus verwertbare Informationen und geschäftliche Insights.
+> `BW`- oder Data-Warehouse-Systeme hingegen sammeln Daten aus verschiedenen Quellen, vereinheitlichen sie und  
+> speichern sie in einer für Analysen geeigneten Form.  
+> Einfach ausgedrückt: das `BW` stellt die Datengrundlage bereit, und `BI` macht daraus verwertbare Informationen und
+> geschäftliche Insights.
 
 ## Häufige Prüfungsfehler
 

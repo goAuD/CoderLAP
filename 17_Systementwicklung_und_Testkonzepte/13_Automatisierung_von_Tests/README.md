@@ -64,7 +64,8 @@ Tipikusan:
 ## Vizsgán jól használható megfogalmazás
 
 > A tesztautomatizálás során bizonyos teszteket eszközök és szkriptek futtatnak le automatikusan.  
-> Ez különösen hasznos ismétlődő, regressziós vagy `CI`-be illeszthető tesztek esetén, mert gyorsabb és gyakrabban végrehajtható ellenőrzést tesz lehetővé.  
+> Ez különösen hasznos ismétlődő, regressziós vagy `CI`-be illeszthető tesztek esetén, mert gyorsabb és gyakrabban  
+> végrehajtható ellenőrzést tesz lehetővé.  
 > Ugyanakkor nem minden teszt automatizálható ésszerűen, és az automatizált tesztek karbantartása is erőforrást igényel.
 
 ## Gyakori vizsgahibák

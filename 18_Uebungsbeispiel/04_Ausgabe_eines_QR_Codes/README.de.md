@@ -24,7 +24,8 @@ Bei einer einfachen Prüfungslösung:
 ## Prüfungstaugliche Formulierung
 
 > Laut Aufgabenstellung darf der Inhalt des generierten QR-Codes ausschließlich `Richtig` oder `Falsch` sein.  
-> Das bedeutet, dass das Programm zuerst die Gültigkeit der `SV-Nr` feststellen muss und dann entsprechend den QR-Code erstellen soll.  
+> Das bedeutet, dass das Programm zuerst die Gültigkeit der `SV-Nr` feststellen muss und dann entsprechend den QR-Code  
+> erstellen soll.  
 > Die einfachste Lösung ist eine im Browser laufende JavaScript-basierte QR-Generierung.
 
 ## Häufige Prüfungsfehler

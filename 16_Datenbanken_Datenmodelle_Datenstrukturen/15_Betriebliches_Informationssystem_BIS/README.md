@@ -53,7 +53,8 @@ Vagyis:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A vállalati információs rendszer olyan rendszer, amely a vállalat működéséhez szükséges információk gyűjtését, tárolását, feldolgozását és továbbítását támogatja.  
+> A vállalati információs rendszer olyan rendszer, amely a vállalat működéséhez szükséges információk gyűjtését,  
+> tárolását, feldolgozását és továbbítását támogatja.  
 > A `BIS` nemcsak technológiai elemekből, hanem emberekből, folyamatokból és üzleti szabályokból is áll.  
 > Célja az operatív munka és a döntéshozatal támogatása a vállalaton belül.
 
@@ -92,7 +93,8 @@ Vagyis:
 
 3. IBM - What is business intelligence (BI)?  
    https://www.ibm.com/topics/business-intelligence  
-   Használat: kiegészítő, megbízható forrás annak megértéséhez, hogy a `BI` hogyan illeszkedik tágabb vállalati információs környezetbe.
+   Használat: kiegészítő, megbízható forrás annak megértéséhez, hogy a `BI` hogyan illeszkedik tágabb vállalati
+   információs környezetbe.
 
 Megjegyzés: a `BIS` itt gyűjtőfogalomként van megfogalmazva, a fenti megbízható forrásokból levont összegzés alapján.
 

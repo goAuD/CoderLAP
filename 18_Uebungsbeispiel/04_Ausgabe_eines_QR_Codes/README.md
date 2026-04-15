@@ -24,7 +24,8 @@ Egyszerű vizsgamegoldásnál:
 ## Vizsgán jól használható megfogalmazás
 
 > A feladat szerint a generált QR-kód tartalma kizárólag `Richtig` vagy `Falsch` lehet.  
-> Ez azt jelenti, hogy a programnak először el kell döntenie az `SV-Nr` helyességét, majd ennek megfelelően kell létrehoznia a QR-kódot.  
+> Ez azt jelenti, hogy a programnak először el kell döntenie az `SV-Nr` helyességét, majd ennek megfelelően kell  
+> létrehoznia a QR-kódot.  
 > A legegyszerűbb megoldás egy böngészőben futó JavaScript-alapú QR-generálás.
 
 ## Gyakori vizsgahibák

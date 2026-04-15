@@ -10,7 +10,8 @@
 
 ## Mi az index?
 
-Az index egy olyan adatstruktúra, amely segít gyorsabban megtalálni bizonyos rekordokat anélkül, hogy a teljes táblát végig kellene olvasni.
+Az index egy olyan adatstruktúra, amely segít gyorsabban megtalálni bizonyos rekordokat anélkül, hogy a teljes táblát
+végig kellene olvasni.
 
 Hasonlat:
 
@@ -63,7 +64,8 @@ Gyakran kapcsolódnak egymáshoz, de nem ugyanazok.
 ## Vizsgán jól használható megfogalmazás
 
 > Az index olyan adatbázis-struktúra, amely gyorsítja az adatok keresését és bizonyos lekérdezéseket.  
-> Előnye a jobb lekérdezési teljesítmény, hátránya pedig a többlet tárhelyigény és az, hogy a módosító műveleteknél karban kell tartani.  
+> Előnye a jobb lekérdezési teljesítmény, hátránya pedig a többlet tárhelyigény és az, hogy a módosító műveleteknél  
+> karban kell tartani.  
 > Ezért az indexek használata teljesítménynyereséget adhat, de csak megfelelő tervezéssel érdemes alkalmazni.
 
 ## Gyakori vizsgahibák

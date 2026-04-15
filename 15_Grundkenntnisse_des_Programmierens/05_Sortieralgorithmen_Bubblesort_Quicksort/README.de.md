@@ -31,7 +31,7 @@ Das ist typischerweise ein viel schnellerer Ansatz.
 
 ## Einfacher Funktionsunterschied
 
-### Bubble Sort
+### Bubble Sort in der Praxis
 
 ```text
 Vergleich benachbarter Elemente
@@ -39,7 +39,7 @@ Vergleich benachbarter Elemente
 -> erneuter Durchlauf
 ```
 
-### Quick Sort
+### Quick Sort in der Praxis
 
 ```text
 Pivot auswählen
@@ -75,7 +75,8 @@ Anmerkung:
 
 ## Prüfungstaugliche Formulierung
 
-> Bubble Sort ist ein einfacher Sortieralgorithmus, der die Liste durch wiederholtes Vergleichen und Tauschen benachbarter Elemente sortiert.  
+> Bubble Sort ist ein einfacher Sortieralgorithmus, der die Liste durch wiederholtes Vergleichen und Tauschen  
+> benachbarter Elemente sortiert.  
 > Quick Sort hingegen teilt die Daten um ein Pivot-Element auf und sortiert die Teile rekursiv.  
 > Quick Sort ist in der Praxis in der Regel deutlich effizienter, während Bubble Sort eher zu Lernzwecken nützlich ist.
 

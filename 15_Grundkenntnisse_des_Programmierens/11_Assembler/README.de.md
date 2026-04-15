@@ -10,7 +10,8 @@
 
 ## Was ist die Assembly-Sprache?
 
-Assembly ist eine Sprache, in der die Maschinenanweisungen mit kurzen, für Menschen besser lesbaren Mnemoniks geschrieben werden.
+Assembly ist eine Sprache, in der die Maschinenanweisungen mit kurzen, für Menschen besser lesbaren Mnemoniks
+geschrieben werden.
 
 Zum Beispiel:
 
@@ -57,8 +58,10 @@ Das Assembler-Programm:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Assembler ist einerseits ein mit einer niedrigen Programmiersprache verbundener Begriff, andererseits das Übersetzungswerkzeug, das Assembly-Anweisungen in maschinennahen Code umwandelt.  
-> Die Assembly-Sprache steht nahe am Befehlssatz des Prozessors und ist deshalb hardwareabhängiger und schwerer handhabbar als Hochsprachen.  
+> Der Assembler ist einerseits ein mit einer niedrigen Programmiersprache verbundener Begriff, andererseits das  
+> Übersetzungswerkzeug, das Assembly-Anweisungen in maschinennahen Code umwandelt.  
+> Die Assembly-Sprache steht nahe am Befehlssatz des Prozessors und ist deshalb hardwareabhängiger und schwerer  
+> handhabbar als Hochsprachen.  
 > Der Vorteil ist die präzise Kontrolle, der Nachteil die Komplexität und die geringere Portabilität.
 
 ## Häufige Prüfungsfehler

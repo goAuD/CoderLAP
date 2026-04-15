@@ -57,7 +57,8 @@ Beides zusammen ist am stärksten.
 ## Prüfungstaugliche Formulierung
 
 > Integrität bedeutet die Korrektheit und Konsistenz der in der Datenbank gespeicherten Daten.  
-> Das `DBMS` kann dies durch verschiedene Regeln sicherstellen, zum Beispiel durch `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `UNIQUE` und `CHECK`-Constraints.  
+> Das `DBMS` kann dies durch verschiedene Regeln sicherstellen, zum Beispiel durch `PRIMARY KEY`, `FOREIGN KEY`, `NOT  
+> NULL`, `UNIQUE` und `CHECK`-Constraints.  
 > Ziel der Integrität ist es, dass die Datenbank nicht in einen fehlerhaften oder widersprüchlichen Zustand geraten kann.
 
 ## Häufige Prüfungsfehler

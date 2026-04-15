@@ -75,7 +75,8 @@ Megjegyzés:
 
 > A változó egy névvel ellátott programozási elem, amely egy értéket vagy arra mutató hivatkozást jelöl.  
 > Az adattípus meghatározza, hogy milyen jellegű adatot kezelünk, és milyen műveletek végezhetők rajta.  
-> A programozásban fontos megkülönböztetni a deklarációt, a definíciót és az inicializálást, még akkor is, ha ezek pontos jelentése nyelvenként eltérhet.
+> A programozásban fontos megkülönböztetni a deklarációt, a definíciót és az inicializálást, még akkor is, ha ezek
+> pontos jelentése nyelvenként eltérhet.
 
 ## Gyakori vizsgahibák
 

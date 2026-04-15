@@ -86,7 +86,8 @@ Egy nyelvhez gyakran tartozik:
 
 > Egy programozási nyelv felépítését a szintaxis, a szemantika és a nyelvi elemek összessége adja.  
 > Ide tartoznak például a kulcsszavak, azonosítók, literálok, adattípusok, operátorok és vezérlési szerkezetek.  
-> A szintaxis azt határozza meg, hogyan kell helyesen leírni a kódot, a szemantika pedig azt, hogy az mit jelent és hogyan viselkedik végrehajtáskor.
+> A szintaxis azt határozza meg, hogyan kell helyesen leírni a kódot, a szemantika pedig azt, hogy az mit jelent és
+> hogyan viselkedik végrehajtáskor.
 
 ## Gyakori vizsgahibák
 

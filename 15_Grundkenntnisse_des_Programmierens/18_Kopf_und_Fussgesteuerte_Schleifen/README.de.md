@@ -49,8 +49,10 @@ Wenn mindestens eine Eingabe sicher benötigt wird, ist die fußgesteuerte Logik
 
 ## Prüfungstaugliche Formulierung
 
-> Die kopfgesteuerte Schleife prüft die Bedingung vor der Ausführung des Schleifenkörpers, daher kann es vorkommen, dass die Schleife kein einziges Mal durchläuft.  
-> Die fußgesteuerte Schleife hingegen prüft die Bedingung nach dem Schleifenkörper, sodass er mindestens einmal sicher ausgeführt wird.  
+> Die kopfgesteuerte Schleife prüft die Bedingung vor der Ausführung des Schleifenkörpers, daher kann es vorkommen,  
+> dass die Schleife kein einziges Mal durchläuft.  
+> Die fußgesteuerte Schleife hingegen prüft die Bedingung nach dem Schleifenkörper, sodass er mindestens einmal sicher  
+> ausgeführt wird.  
 > Der Unterschied zwischen den beiden Typen liegt hauptsächlich in der minimalen Ausführungsanzahl und im Ort der Bedingungsprüfung.
 
 ## Häufige Prüfungsfehler

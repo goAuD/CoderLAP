@@ -58,7 +58,8 @@ Die beiden hängen zusammen, sind aber nicht dasselbe.
 
 ## Prüfungstaugliche Formulierung
 
-> Der Gültigkeitsbereich von Variablen bestimmt, in welchen Teilen des Programms eine bestimmte Variable erreichbar ist.  
+> Der Gültigkeitsbereich von Variablen bestimmt, in welchen Teilen des Programms eine bestimmte Variable erreichbar  
+> ist.  
 > Man kann zum Beispiel von globalem, lokalem und blockbezogenem Scope sprechen.  
 > Die korrekte Scope-Handhabung ist wichtig für die Fehlervermeidung, die Übersichtlichkeit und die Wartbarkeit.
 

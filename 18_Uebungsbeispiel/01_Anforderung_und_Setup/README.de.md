@@ -47,8 +47,10 @@ Musterloesung_Minimal/
 
 ## Prüfungstaugliche Formulierung
 
-> Bei dieser praktischen Aufgabe ist das minimale Ziel, ein funktionierendes, responsives HTML-Formular zu erstellen, das die Gültigkeit der österreichischen `SV-Nr` prüft und basierend auf dem Ergebnis einen `QR`-Code generiert.  
-> Die einfachste Lösung ist ein frontend-basierter Ansatz mit `HTML`, `Bootstrap` und `JavaScript`, mit einer lokalen QR-Library.  
+> Bei dieser praktischen Aufgabe ist das minimale Ziel, ein funktionierendes, responsives HTML-Formular zu erstellen,  
+> das die Gültigkeit der österreichischen `SV-Nr` prüft und basierend auf dem Ergebnis einen `QR`-Code generiert.  
+> Die einfachste Lösung ist ein frontend-basierter Ansatz mit `HTML`, `Bootstrap` und `JavaScript`, mit einer lokalen  
+> QR-Library.  
 > Da die PDF keine Datenspeicherung verlangt, sind Datenbank und Backend kein Pflichtbestandteil der minimalen Lösung.
 
 ## Häufige Prüfungsfehler

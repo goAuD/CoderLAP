@@ -55,9 +55,11 @@ Weil mit Klassen:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Klasse ist einer der Grundbegriffe der objektorientierten Programmierung, die die Eigenschaften und Operationen eines Objekttyps beschreibt.  
+> Die Klasse ist einer der Grundbegriffe der objektorientierten Programmierung, die die Eigenschaften und Operationen  
+> eines Objekttyps beschreibt.  
 > Die Klasse ist ein Plan oder eine Vorlage, aus der konkrete Objekte instanziiert werden können.  
-> Mit ihrer Hilfe lässt sich das Programm besser strukturieren, und Elemente der realen Welt oder Geschäftsbegriffe können gut modelliert werden.
+> Mit ihrer Hilfe lässt sich das Programm besser strukturieren, und Elemente der realen Welt oder Geschäftsbegriffe
+> können gut modelliert werden.
 
 ## Häufige Prüfungsfehler
 

@@ -41,7 +41,7 @@ Ezért sokkal gyorsabb lehet.
 
 Keresett érték: `42`
 
-### Szekvenciális keresés
+### Szekvenciális keresés a gyakorlatban
 
 ```text
 5 -> 11 -> 19 -> 42
@@ -49,7 +49,7 @@ Keresett érték: `42`
 
 Végig kell menni az elemeken sorban.
 
-### Bináris keresés
+### Bináris keresés a gyakorlatban
 
 ```text
 rendezett lista
@@ -80,8 +80,10 @@ Ez vizsgán kulcspont:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A szekvenciális keresés az elemeket sorban vizsgálja meg, amíg meg nem találja a keresett értéket vagy a lista végére nem ér.  
-> A bináris keresés ezzel szemben mindig megfelezi a keresési tartományt, ezért gyorsabb, de csak rendezett adatok esetén használható.  
+> A szekvenciális keresés az elemeket sorban vizsgálja meg, amíg meg nem találja a keresett értéket vagy a lista  
+> végére nem ér.  
+> A bináris keresés ezzel szemben mindig megfelezi a keresési tartományt, ezért gyorsabb, de csak rendezett adatok  
+> esetén használható.  
 > A két algoritmus közti legfontosabb különbség a működési elv és a rendezettségi feltétel.
 
 ## Gyakori vizsgahibák

@@ -54,7 +54,8 @@ Dient zum Löschen von Zeilen.
 ## Prüfungstaugliche Formulierung
 
 > Die grundlegenden Datenbankoperationen sind das Erstellen, Abfragen, Ändern und Löschen von Datensätzen.  
-> In einer relationalen Datenbank werden diese typischerweise mit den SQL-Befehlen `INSERT`, `SELECT`, `UPDATE` und `DELETE` durchgeführt.  
+> In einer relationalen Datenbank werden diese typischerweise mit den SQL-Befehlen `INSERT`, `SELECT`, `UPDATE` und  
+> `DELETE` durchgeführt.  
 > Diese Operationen bilden die Grundlage für den Betrieb der meisten datenbankbasierten Anwendungen.
 
 ## Häufige Prüfungsfehler

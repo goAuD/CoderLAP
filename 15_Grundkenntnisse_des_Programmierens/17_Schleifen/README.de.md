@@ -63,7 +63,8 @@ Gut, wenn:
 ## Prüfungstaugliche Formulierung
 
 > Eine Schleife ist eine Kontrollstruktur, die eine Anweisung oder einen Anweisungsblock mehrmals ausführt.  
-> Die Ausführung wird in der Regel durch eine Bedingung, einen Zähler oder eine zu durchlaufende Elementfolge gesteuert.  
+> Die Ausführung wird in der Regel durch eine Bedingung, einen Zähler oder eine zu durchlaufende Elementfolge  
+> gesteuert.  
 > Ziel der Schleifen ist die Reduzierung von Codewiederholung und die effiziente Behandlung wiederholender Aufgaben.
 
 ## Häufige Prüfungsfehler

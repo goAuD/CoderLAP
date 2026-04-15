@@ -48,7 +48,8 @@ Das kann auf verschiedene Weisen interpretiert werden:
 - lokale und globale Variablen
 - veränderbare und nicht veränderbare Bindungen
 
-Da die konkreten Details je nach Sprache unterschiedlich sind, sollte man bei der Prüfung den begrifflichen Kern sicher beherrschen.
+Da die konkreten Details je nach Sprache unterschiedlich sind, sollte man bei der Prüfung den begrifflichen Kern sicher
+beherrschen.
 
 ## Deklaration, Definition, Initialisierung
 
@@ -73,9 +74,11 @@ Anmerkung:
 
 ## Prüfungstaugliche Formulierung
 
-> Eine Variable ist ein mit einem Namen versehenes Programmierelement, das einen Wert oder einen darauf zeigenden Verweis bezeichnet.  
+> Eine Variable ist ein mit einem Namen versehenes Programmierelement, das einen Wert oder einen darauf zeigenden  
+> Verweis bezeichnet.  
 > Der Datentyp bestimmt, welche Art von Daten wir verarbeiten und welche Operationen darauf ausgeführt werden können.  
-> In der Programmierung ist es wichtig, Deklaration, Definition und Initialisierung zu unterscheiden, auch wenn deren genaue Bedeutung je nach Sprache unterschiedlich sein kann.
+> In der Programmierung ist es wichtig, Deklaration, Definition und Initialisierung zu unterscheiden, auch wenn deren
+> genaue Bedeutung je nach Sprache unterschiedlich sein kann.
 
 ## Häufige Prüfungsfehler
 

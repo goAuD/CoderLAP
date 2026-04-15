@@ -64,8 +64,10 @@ Operatív rendszerek
 ## Vizsgán jól használható megfogalmazás
 
 > A `BI` rendszerek az üzleti adatok elemzését, vizualizálását és döntéstámogatását szolgálják.  
-> A `BW` vagy adattárház-rendszerek ezzel szemben az adatokat különböző forrásokból összegyűjtik, egységesítik és elemzésre alkalmas formában tárolják.  
-> Egyszerűen fogalmazva: a `BW` biztosítja az adatalapot, a `BI` pedig értelmezhető információt és üzleti insightot készít belőle.
+> A `BW` vagy adattárház-rendszerek ezzel szemben az adatokat különböző forrásokból összegyűjtik, egységesítik és  
+> elemzésre alkalmas formában tárolják.  
+> Egyszerűen fogalmazva: a `BW` biztosítja az adatalapot, a `BI` pedig értelmezhető információt és üzleti insightot
+> készít belőle.
 
 ## Gyakori vizsgahibák
 

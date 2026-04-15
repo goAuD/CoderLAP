@@ -66,7 +66,8 @@ Vizsgán jó válasz, ha kimondod:
 ## Vizsgán jól használható megfogalmazás
 
 > A redundancia adatbázisban azt jelenti, hogy ugyanaz az információ feleslegesen több helyen is tárolódik.  
-> Ez növeli a tárhelyigényt és adatinkonzisztenciához vezethet, például akkor, ha egy módosítást nem végzünk el minden előfordulási helyen.  
+> Ez növeli a tárhelyigényt és adatinkonzisztenciához vezethet, például akkor, ha egy módosítást nem végzünk el minden  
+> előfordulási helyen.  
 > A relációs adatbázistervezés egyik célja a felesleges redundancia csökkentése, például normalizálással.
 
 ## Gyakori vizsgahibák

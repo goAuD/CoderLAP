@@ -29,7 +29,8 @@
 
 ## Vizsgán jól használható megfogalmazás
 
-> A gyakorlati feladat első része egy egyszerű, responsive HTML-űrlap készítése `Vorname`, `Nachname` és `SV-NR` mezőkkel.  
+> A gyakorlati feladat első része egy egyszerű, responsive HTML-űrlap készítése `Vorname`, `Nachname` és `SV-NR`  
+> mezőkkel.  
 > A `Bootstrap` használata azért előnyös, mert gyorsan biztosít rendezett és mobilbarát megjelenést.  
 > Fontos, hogy a releváns mezők kitöltése ellenőrizve legyen a gomb megnyomásakor.
 

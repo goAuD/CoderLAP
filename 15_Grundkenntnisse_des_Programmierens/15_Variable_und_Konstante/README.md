@@ -59,7 +59,8 @@ Ez vizsgán plusz pontot érhet, ha jól fogalmazod meg.
 
 > A változó olyan programozási elem, amelynek értéke a program futása során megváltozhat.  
 > A konstans ezzel szemben olyan elem, amelynek értékét vagy kötését nem kívánjuk módosítani.  
-> A konstansok használata növeli a kód olvashatóságát és csökkenti a véletlen hibák kockázatát, bár a pontos viselkedés nyelvenként eltérhet.
+> A konstansok használata növeli a kód olvashatóságát és csökkenti a véletlen hibák kockázatát, bár a pontos viselkedés
+> nyelvenként eltérhet.
 
 ## Gyakori vizsgahibák
 
