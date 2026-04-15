@@ -43,6 +43,7 @@ Read only when relevant:
 - `docs/project/architecture-adoption.md`
 - `docs/project/private-rollout-access.md`
 - `docs/project/pre-public-checklist.md`
+- `docs/project/next-improvements-checklist.md`
 - `docs/project/github-release-hygiene.md`
 - `docs/project/release-notes-v0.1.0-private-beta.1.md`
 - `docs/process/editorial-workflow.md`
