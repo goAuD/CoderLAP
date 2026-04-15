@@ -67,8 +67,11 @@ python -m unittest discover -s tests -v
 Local preview:
 
 ```powershell
-python -m http.server 4173 --bind 127.0.0.1 --directory dist
+python -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
+
+If `8000` is busy or returns an empty response, retry with another free port
+such as `8001` and use the matching URL.
 
 ## Most Likely Next Work
 

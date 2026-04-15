@@ -38,6 +38,11 @@ For this corpus, the stricter rule created churn faster than it created value.
 The current policy keeps `MD013` useful by focusing it on genuinely overlong
 running prose.
 
+Historical planning/spec notes under `docs/plans/` and
+`docs/superpowers/specs/` are intentionally excluded from the default
+repository-wide lint scope. They are archival continuity documents, not active
+runtime, corpus, or delivery docs.
+
 ## What Counts As Success
 
 - warning count trends down in predictable batches
