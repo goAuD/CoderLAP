@@ -54,8 +54,11 @@ In der Praxis nutzen viele Projekte **beide**, denn:
 
 ## Prüfungstaugliche Formulierung
 
-> Beim Black-Box-Test wird das externe Verhalten des Systems anhand von Eingaben und Ausgaben geprüft, ohne die interne Implementierung im Detail zu berücksichtigen.  
-> Der White-Box-Test stützt sich hingegen auch auf die interne Struktur, beispielsweise Verzweigungen, Bedingungen und Codepfade.  
+> Beim Black-Box-Test wird das externe Verhalten des Systems
+> anhand von Eingaben und Ausgaben geprüft,
+> ohne die interne Implementierung im Detail zu berücksichtigen.  
+> Der White-Box-Test stützt sich hingegen auch auf die interne Struktur,
+> beispielsweise Verzweigungen, Bedingungen und Codepfade.  
 > Die beiden Ansätze werden nicht als Ersatz, sondern ergänzend zueinander eingesetzt.
 
 ## Häufige Prüfungsfehler
