@@ -49,6 +49,11 @@
   gap: var(--space-5);
 }
 
+.page-shell > * {
+  width: 100%;
+  min-width: 0;
+}
+
 .catalog-shell {
   display: grid;
   gap: var(--space-5);
@@ -193,8 +198,8 @@ body.sidebar-open .catalog-sidebar [data-sidebar-panel] {
 
   .topic-article,
   .legal-article {
-    max-width: var(--max-content-width);
-    margin-inline: auto;
+    max-width: none;
+    margin-inline: 0;
   }
 }
 
