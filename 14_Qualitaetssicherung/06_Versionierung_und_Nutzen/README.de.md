@@ -53,7 +53,9 @@ Dies ist die bekannteste Form der semantischen Versionierung (`Semantic Versioni
 
 > Versionierung bezeichnet die bewusste Vergabe von Versionsnummern für Softwarereleases.  
 > Ziel ist es, ein bestimmtes Release eindeutig zu identifizieren und das Ausmaß der Änderung sichtbar zu machen.  
-> In der Praxis ist das Schema `major.minor.patch` verbreitet, das bei der Verwaltung von Kompatibilität, Fehlerverfolgung und Updates hilft.
+> In der Praxis ist das Schema `major.minor.patch` verbreitet,
+> das bei der Verwaltung von Kompatibilität,
+> Fehlerverfolgung und Updates hilft.
 
 ## Häufige Prüfungsfehler
 

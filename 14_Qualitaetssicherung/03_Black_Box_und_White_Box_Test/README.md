@@ -54,7 +54,9 @@ A gyakorlatban sok projekt **mindkettőt** használja, mert:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A black-box tesztelés során a rendszer külső viselkedését vizsgáljuk a bemenetek és kimenetek alapján, anélkül hogy a belső megvalósítást részletesen figyelembe vennénk.  
+> A black-box tesztelés során a rendszer külső viselkedését vizsgáljuk
+> a bemenetek és kimenetek alapján,
+> anélkül hogy a belső megvalósítást részletesen figyelembe vennénk.  
 > A white-box tesztelés ezzel szemben a belső szerkezetre, például elágazásokra, feltételekre és kódutakra is épít.  
 > A két megközelítés nem egymás helyett, hanem egymást kiegészítve használható.
 

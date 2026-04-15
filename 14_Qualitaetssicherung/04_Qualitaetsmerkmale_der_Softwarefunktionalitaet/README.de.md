@@ -63,8 +63,13 @@ Es gibt einen Zusammenhang, aber es ist nicht dasselbe.
 
 ## Prüfungstaugliche Formulierung
 
-> Die Qualität der Softwarefunktionalität drückt aus, ob das System die erforderlichen Funktionen vollständig, korrekt und in Bezug auf die Aufgabe angemessen bereitstellt.  
-> In der ISO 25010-Terminologie gehört dies zum Bereich Functional Suitability, dessen Hauptbestandteile Functional Completeness, Functional Correctness und Functional Appropriateness sind.  
+> Die Qualität der Softwarefunktionalität drückt aus,
+> ob das System die erforderlichen Funktionen vollständig,
+> korrekt und in Bezug auf die Aufgabe angemessen bereitstellt.  
+> In der ISO 25010-Terminologie gehört dies
+> zum Bereich Functional Suitability,
+> dessen Hauptbestandteile Functional Completeness,
+> Functional Correctness und Functional Appropriateness sind.  
 > Gute Software verfügt also nicht nur über viele Funktionen, sondern bietet diese auch präzise und zweckmäßig an.
 
 ## Häufige Prüfungsfehler

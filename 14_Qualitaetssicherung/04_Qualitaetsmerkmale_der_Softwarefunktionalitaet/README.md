@@ -63,8 +63,12 @@ Van köztük kapcsolat, de nem ugyanaz.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A szoftver funkcionalitásának minősége azt fejezi ki, hogy a rendszer a szükséges funkciókat teljes körűen, helyesen és a feladat szempontjából megfelelő módon biztosítja-e.  
-> Az ISO 25010 terminológiájában ez a functional suitability területéhez kapcsolódik, amelynek fő részei a functional completeness, functional correctness és functional appropriateness.  
+> A szoftver funkcionalitásának minősége azt fejezi ki,
+> hogy a rendszer a szükséges funkciókat teljes körűen,
+> helyesen és a feladat szempontjából megfelelő módon biztosítja-e.  
+> Az ISO 25010 terminológiájában ez a functional suitability területéhez kapcsolódik,
+> amelynek fő részei a functional completeness,
+> functional correctness és functional appropriateness.  
 > Egy jó szoftver tehát nemcsak sok funkcióval rendelkezik, hanem azokat pontosan és célszerűen is nyújtja.
 
 ## Gyakori vizsgahibák

@@ -51,9 +51,13 @@ Ez egy folyamat arra, hogy a változások:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A change management célja, hogy a rendszert érintő változtatások tervezetten, jóváhagyott módon és kockázatkezeléssel történjenek.  
+> A change management célja,
+> hogy a rendszert érintő változtatások tervezetten,
+> jóváhagyott módon és kockázatkezeléssel történjenek.  
 > Segítségével csökkenthető a kiesések, hibák és nem kívánt mellékhatások esélye.  
-> A folyamat tipikusan tartalmazza a változtatási igény rögzítését, értékelését, jóváhagyását, végrehajtását és utólagos ellenőrzését.
+> A folyamat tipikusan tartalmazza a változtatási igény rögzítését,
+> értékelését, jóváhagyását,
+> végrehajtását és utólagos ellenőrzését.
 
 ## Gyakori vizsgahibák
 
