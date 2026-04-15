@@ -87,13 +87,18 @@ class SiteCssAssetsTests(unittest.TestCase):
 
     def test_layout_css_covers_catalog_shell_and_responsive_sidebar(self) -> None:
         self.assertIn(".page-shell {", self.layout_css)
+        self.assertIn(".page-shell > * {", self.layout_css)
+        self.assertIn("width: 100%;", self.layout_css)
+        self.assertIn("min-width: 0;", self.layout_css)
         self.assertIn("gap: var(--space-5);", self.layout_css)
         self.assertIn(".catalog-shell {", self.layout_css)
         self.assertIn(".catalog-sidebar {", self.layout_css)
         self.assertIn(".catalog-main {", self.layout_css)
         self.assertIn("body.sidebar-open .catalog-sidebar {", self.layout_css)
         self.assertIn("grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);", self.layout_css)
-        self.assertIn("max-width: var(--max-content-width);", self.layout_css)
+        self.assertIn("width: min(100%, var(--max-content-width));", self.layout_css)
+        self.assertIn("max-width: none;", self.layout_css)
+        self.assertIn("margin-inline: 0;", self.layout_css)
 
     def test_components_css_covers_task9_catalog_and_topic_surfaces(self) -> None:
         self.assertIn(".catalog-controls {", self.components_css)
