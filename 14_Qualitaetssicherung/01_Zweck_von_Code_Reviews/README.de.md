@@ -51,9 +51,15 @@ Beide ergänzen sich, ersetzen sich aber nicht.
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel des Code Reviews ist es, dass der Quellcode vor dem produktiven Einsatz oder dem Merge von einem anderen Entwickler überprüft wird.  
-> Dadurch können Fehler frühzeitig erkannt, die Codequalität verbessert und der Wissensaustausch im Team gestärkt werden.  
-> Das Code Review ist somit nicht nur ein Werkzeug zur Fehlersuche, sondern auch ein Instrument der Qualitätssicherung und Zusammenarbeit.
+> Ziel des Code Reviews ist es,
+> dass der Quellcode vor dem produktiven Einsatz oder dem Merge
+> von einem anderen Entwickler überprüft wird.  
+> Dadurch können Fehler frühzeitig erkannt,
+> die Codequalität verbessert
+> und der Wissensaustausch im Team gestärkt werden.  
+> Das Code Review ist somit nicht nur ein Werkzeug zur Fehlersuche,
+> sondern auch ein Instrument
+> der Qualitätssicherung und Zusammenarbeit.
 
 ## Häufige Prüfungsfehler
 

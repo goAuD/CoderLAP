@@ -51,9 +51,13 @@ Es ist ein Prozess, damit Änderungen:
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel des Change Managements ist es, dass Änderungen am System geplant, genehmigt und mit Risikomanagement durchgeführt werden.  
+> Ziel des Change Managements ist es,
+> dass Änderungen am System geplant, genehmigt
+> und mit Risikomanagement durchgeführt werden.  
 > Dadurch kann die Wahrscheinlichkeit von Ausfällen, Fehlern und unerwünschten Nebenwirkungen reduziert werden.  
-> Der Prozess umfasst typischerweise die Erfassung, Bewertung, Genehmigung, Durchführung und nachträgliche Überprüfung der Änderungsanforderung.
+> Der Prozess umfasst typischerweise die Erfassung, Bewertung, Genehmigung,
+> Durchführung und nachträgliche Überprüfung
+> der Änderungsanforderung.
 
 ## Häufige Prüfungsfehler
 

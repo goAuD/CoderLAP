@@ -51,7 +51,9 @@ A kettő kiegészíti egymást, nem helyettesíti.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A code review célja, hogy a forráskódot egy másik fejlesztő is átnézze még az éles használat vagy a beolvasztás előtt.  
+> A code review célja,
+> hogy a forráskódot egy másik fejlesztő is átnézze
+> még az éles használat vagy a beolvasztás előtt.  
 > Ennek során korán felismerhetők a hibák, javítható a kód minősége, és erősödik a tudásmegosztás a csapaton belül.  
 > A code review tehát nemcsak hibakeresés, hanem minőségbiztosítási és együttműködési eszköz is.
 

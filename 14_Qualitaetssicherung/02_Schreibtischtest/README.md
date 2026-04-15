@@ -52,7 +52,9 @@ Gyakran nevezik:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Schreibtischtest egy kézi logikai ellenőrzés, amely során a programot vagy algoritmust futtatás nélkül, lépésről lépésre végigkövetjük.  
+> A Schreibtischtest egy kézi logikai ellenőrzés,
+> amely során a programot vagy algoritmust futtatás nélkül,
+> lépésről lépésre végigkövetjük.  
 > Ilyenkor a bemenetek, elágazások, ciklusok és változóértékek alapján ellenőrizzük, hogy helyes eredmény várható-e.  
 > Ez jó módszer a korai logikai hibák felismerésére, de nem helyettesíti a tényleges tesztelést.
 
@@ -89,6 +91,8 @@ Gyakran nevezik:
    https://api.glossary.istqb.org/storage/help/DavkaLpvYMRH8Qu6LWaJxSPu7qKDHf9LpUgHTP1F.pdf  
    Használat: hivatalos fogalmi háttér a statikus ellenőrzési technikákhoz.
 
-Megjegyzés: a `Schreibtischtest` megfogalmazása itt a vizsgagyakorlatban használt, kézi `dry run` / logikai végigkövetés értelmezését követi.
+Megjegyzés: a `Schreibtischtest` megfogalmazása itt
+a vizsgagyakorlatban használt,
+kézi `dry run` / logikai végigkövetés értelmezését követi.
 
 Megnyitva: `2026-04-08`

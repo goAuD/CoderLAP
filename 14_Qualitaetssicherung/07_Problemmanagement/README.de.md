@@ -45,8 +45,10 @@ Ein Incident muss schnell behandelt werden, das Problem Management untersucht hi
 
 ## Prüfungstaugliche Formulierung
 
-> Ziel des Problem Managements ist die Aufdeckung der Grundursache von Problemen und die Prävention ähnlicher Fehler in der Zukunft.  
-> Es konzentriert sich nicht nur auf die schnelle Behandlung von Symptomen, sondern auch auf die Analyse der zugrunde liegenden Ursachen.  
+> Ziel des Problem Managements ist die Aufdeckung der Grundursache von Problemen
+> und die Prävention ähnlicher Fehler in der Zukunft.  
+> Es konzentriert sich nicht nur auf die schnelle Behandlung von Symptomen,
+> sondern auch auf die Analyse der zugrunde liegenden Ursachen.  
 > Daher ist das Problem Management ein wichtiger Bestandteil der nachhaltigen Qualitätsverbesserung und des stabilen Betriebs.
 
 ## Häufige Prüfungsfehler
