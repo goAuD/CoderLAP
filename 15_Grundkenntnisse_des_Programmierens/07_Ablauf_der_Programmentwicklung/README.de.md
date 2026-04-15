@@ -86,8 +86,10 @@ Bei der Prüfung lohnt es sich zu sagen:
 
 ## Prüfungstaugliche Formulierung
 
-> Der praktische Ablauf der Programmentwicklung beginnt in der Regel mit dem Verstehen der Aufgabe, gefolgt vom Entwurf der Lösung, der Codierung, der Ausführung oder Kompilierung, der Fehlersuche, dem Testen und der Korrektur.  
-> Dieser Prozess ist in der Praxis oft iterativ, da der Entwickler aufgrund von Tests und Fehlern zu früheren Schritten zurückkehren kann.  
+> Der praktische Ablauf der Programmentwicklung beginnt in der Regel mit dem Verstehen der Aufgabe, gefolgt vom  
+> Entwurf der Lösung, der Codierung, der Ausführung oder Kompilierung, der Fehlersuche, dem Testen und der Korrektur.  
+> Dieser Prozess ist in der Praxis oft iterativ, da der Entwickler aufgrund von Tests und Fehlern zu früheren  
+> Schritten zurückkehren kann.  
 > Das Ziel ist nicht nur ein lauffähiges Programm, sondern ein korrektes und zuverlässiges Programm.
 
 ## Häufige Prüfungsfehler

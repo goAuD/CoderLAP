@@ -55,7 +55,8 @@ De a leszármazott osztály:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az öröklés az objektumorientált programozás egyik alapelve, amely lehetővé teszi, hogy egy osztály tulajdonságokat és műveleteket vegyen át egy másik osztálytól.  
+> Az öröklés az objektumorientált programozás egyik alapelve, amely lehetővé teszi, hogy egy osztály tulajdonságokat  
+> és műveleteket vegyen át egy másik osztálytól.  
 > Ez támogatja az újrafelhasználhatóságot és a közös viselkedés kiemelését.  
 > Ugyanakkor a túlzott vagy rosszul megtervezett öröklés bonyolult és nehezen karbantartható rendszert eredményezhet.
 

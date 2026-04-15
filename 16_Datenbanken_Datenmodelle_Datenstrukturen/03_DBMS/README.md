@@ -55,8 +55,10 @@ Ismert `DBMS`-ek:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A `DBMS`, vagyis Database Management System az a szoftver, amely az adatbázis létrehozását, kezelését, lekérdezését, védelmét és adminisztrációját végzi.  
-> A `DBMS` közvetít az alkalmazások és a tárolt adatok között, valamint biztosítja például az integritást, a többfelhasználós működést és az adatkezelés szabályait.  
+> A `DBMS`, vagyis Database Management System az a szoftver, amely az adatbázis létrehozását, kezelését, lekérdezését,  
+> védelmét és adminisztrációját végzi.  
+> A `DBMS` közvetít az alkalmazások és a tárolt adatok között, valamint biztosítja például az integritást, a  
+> többfelhasználós működést és az adatkezelés szabályait.  
 > Ezért a `DBMS` az adatbázisrendszer központi eleme.
 
 ## Gyakori vizsgahibák

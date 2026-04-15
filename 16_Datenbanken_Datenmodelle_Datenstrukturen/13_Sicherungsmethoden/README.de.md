@@ -70,7 +70,8 @@ Bei der Prüfung ist es gut zu sagen:
 
 ## Prüfungstaugliche Formulierung
 
-> Sicherungsmethoden dienen dazu, eine Datenbank nach einem Fehler, Datenverlust oder Angriff wiederherstellen zu können.  
+> Sicherungsmethoden dienen dazu, eine Datenbank nach einem Fehler, Datenverlust oder Angriff wiederherstellen zu  
+> können.  
 > Gängige Lösungen sind die Vollsicherung, die inkrementelle Sicherung sowie die logische und physische Sicherung.  
 > Für einen effektiven Datenschutz ist nicht nur ein Backup, sondern auch ein geplantes Wiederherstellungsverfahren erforderlich.
 

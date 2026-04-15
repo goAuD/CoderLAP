@@ -10,7 +10,8 @@
 
 ## Was ist ein Index?
 
-Ein Index ist eine Datenstruktur, die dabei hilft, bestimmte Datensätze schneller zu finden, ohne die gesamte Tabelle durchlesen zu müssen.
+Ein Index ist eine Datenstruktur, die dabei hilft, bestimmte Datensätze schneller zu finden, ohne die gesamte Tabelle
+durchlesen zu müssen.
 
 Analogie:
 
@@ -63,7 +64,8 @@ Sie hängen häufig zusammen, sind aber nicht dasselbe.
 ## Prüfungstaugliche Formulierung
 
 > Ein Index ist eine Datenbankstruktur, die die Suche nach Daten und bestimmte Abfragen beschleunigt.  
-> Sein Vorteil ist die bessere Abfrageleistung, sein Nachteil der zusätzliche Speicherbedarf und die Tatsache, dass er bei Änderungsoperationen gewartet werden muss.  
+> Sein Vorteil ist die bessere Abfrageleistung, sein Nachteil der zusätzliche Speicherbedarf und die Tatsache, dass er  
+> bei Änderungsoperationen gewartet werden muss.  
 > Daher können Indizes Leistungsgewinne bringen, sollten aber nur mit sorgfältiger Planung eingesetzt werden.
 
 ## Häufige Prüfungsfehler

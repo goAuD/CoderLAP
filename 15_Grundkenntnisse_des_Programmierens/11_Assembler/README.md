@@ -57,8 +57,10 @@ Az assembler program:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az assembler egyrészt egy alacsony szintű programnyelvhez kapcsolódó fogalom, másrészt az a fordítóeszköz, amely az assembly utasításokat gépközeli kóddá alakítja.  
-> Az assembly nyelv közel áll a processzor utasításkészletéhez, ezért hardverfüggőbb és nehezebben kezelhető, mint a magas szintű programozási nyelvek.  
+> Az assembler egyrészt egy alacsony szintű programnyelvhez kapcsolódó fogalom, másrészt az a fordítóeszköz, amely az  
+> assembly utasításokat gépközeli kóddá alakítja.  
+> Az assembly nyelv közel áll a processzor utasításkészletéhez, ezért hardverfüggőbb és nehezebben kezelhető, mint a  
+> magas szintű programozási nyelvek.  
 > Előnye a pontos vezérlés, hátránya a bonyolultság és a gyengébb hordozhatóság.
 
 ## Gyakori vizsgahibák

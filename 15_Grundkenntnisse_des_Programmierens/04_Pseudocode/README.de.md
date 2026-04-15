@@ -57,7 +57,8 @@ AUSGABE summe
 
 ## Prüfungstaugliche Formulierung
 
-> Pseudocode ist eine codeähnliche, aber nicht ausführbare Beschreibung, die die Logik eines Algorithmus oder Programmteils darstellt.  
+> Pseudocode ist eine codeähnliche, aber nicht ausführbare Beschreibung, die die Logik eines Algorithmus oder  
+> Programmteils darstellt.  
 > Sein Zweck ist es, sprachunabhängig und gut lesbar eine Lösung zu entwerfen oder zu erklären.  
 > Pseudocode ist besonders nützlich bei der Darstellung von Algorithmen und bei Prüfungsaufgaben.
 

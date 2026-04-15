@@ -55,7 +55,8 @@ Mert osztályokkal:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az osztály az objektumorientált programozás egyik alapfogalma, amely egy objektumtípus tulajdonságait és műveleteit írja le.  
+> Az osztály az objektumorientált programozás egyik alapfogalma, amely egy objektumtípus tulajdonságait és műveleteit  
+> írja le.  
 > Az osztály egy terv vagy sablon, amelyből konkrét objektumok példányosíthatók.  
 > Segítségével a program jobban strukturálható, és a valós világ elemei vagy üzleti fogalmai jól modellezhetők.
 

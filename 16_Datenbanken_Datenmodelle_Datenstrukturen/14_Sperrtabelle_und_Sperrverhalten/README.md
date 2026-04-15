@@ -57,7 +57,8 @@ Rontja a párhuzamos teljesítményt.
 ## Vizsgán jól használható megfogalmazás
 
 > A zárolás célja, hogy több felhasználó egyidejű adatkezelése mellett is megmaradjon az adatkonzisztencia.  
-> A `DBMS` különböző lock-mechanizmusokat alkalmazhat, és ezek viselkedése befolyásolja a várakozást, a párhuzamosságot és a teljesítményt.  
+> A `DBMS` különböző lock-mechanizmusokat alkalmazhat, és ezek viselkedése befolyásolja a várakozást, a  
+> párhuzamosságot és a teljesítményt.  
 > A helytelen vagy túl erős zárolás problémákhoz vezethet, például várakozáshoz vagy deadlockhoz.
 
 ## Gyakori vizsgahibák

@@ -54,8 +54,10 @@ Auswahl aus mehreren konkreten Fällen.
 
 ## Prüfungstaugliche Formulierung
 
-> Mit Verzweigungen und Fallunterscheidungen kann das Programm auf Basis von Bedingungen zwischen verschiedenen Ausführungszweigen wählen.  
-> Die häufigste Lösung ist `if / else`, für die Behandlung mehrerer konkreter Fälle wird oft `switch / case` verwendet.  
+> Mit Verzweigungen und Fallunterscheidungen kann das Programm auf Basis von Bedingungen zwischen verschiedenen  
+> Ausführungszweigen wählen.  
+> Die häufigste Lösung ist `if / else`, für die Behandlung mehrerer konkreter Fälle wird oft `switch / case`  
+> verwendet.  
 > Diese Kontrollstrukturen dienen der Umsetzung der Entscheidungslogik.
 
 ## Häufige Prüfungsfehler

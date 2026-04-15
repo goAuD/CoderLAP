@@ -64,7 +64,8 @@ Egy `CMS` gyakran használ egy `DBMS`-t a háttérben.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A `CMS`, vagyis Content Management System olyan alkalmazásrendszer, amely digitális tartalmak létrehozását, szerkesztését, tárolását és közzétételét támogatja.  
+> A `CMS`, vagyis Content Management System olyan alkalmazásrendszer, amely digitális tartalmak létrehozását,  
+> szerkesztését, tárolását és közzétételét támogatja.  
 > A háttérben sok esetben adatbázist használ a tartalom, felhasználók, jogosultságok és beállítások kezelésére.  
 > Ezért a `CMS` jó példa arra, hogyan használ egy alkalmazás adatbázist strukturált információk kezelésére.
 

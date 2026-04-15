@@ -86,8 +86,10 @@ Vizsgán érdemes kimondani:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A programfejlesztés gyakorlati menete általában a feladat megértésével kezdődik, majd következik a megoldás megtervezése, a kódolás, a futtatás vagy fordítás, a hibakeresés, a tesztelés és a javítás.  
-> Ez a folyamat a gyakorlatban sokszor iteratív, mert a fejlesztő a tesztek és hibák alapján visszaléphet korábbi lépésekhez is.  
+> A programfejlesztés gyakorlati menete általában a feladat megértésével kezdődik, majd következik a megoldás  
+> megtervezése, a kódolás, a futtatás vagy fordítás, a hibakeresés, a tesztelés és a javítás.  
+> Ez a folyamat a gyakorlatban sokszor iteratív, mert a fejlesztő a tesztek és hibák alapján visszaléphet korábbi  
+> lépésekhez is.  
 > A cél nemcsak a futó program, hanem a helyes és megbízható program elkészítése.
 
 ## Gyakori vizsgahibák

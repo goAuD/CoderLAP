@@ -59,7 +59,8 @@ Például:
 ## Vizsgán jól használható megfogalmazás
 
 > A tesztkoncepció azt határozza meg, hogyan kívánjuk a szoftver minőségét ellenőrizni.  
-> Leírja a tesztelés célját, a tesztszinteket, a teszttípusokat, a használt módszereket és az eredményértékelés alapját.  
+> Leírja a tesztelés célját, a tesztszinteket, a teszttípusokat, a használt módszereket és az eredményértékelés  
+> alapját.  
 > A jó tesztkoncepció biztosítja, hogy a tesztelés ne véletlenszerűen, hanem tudatos és tervezett módon történjen.
 
 ## Gyakori vizsgahibák

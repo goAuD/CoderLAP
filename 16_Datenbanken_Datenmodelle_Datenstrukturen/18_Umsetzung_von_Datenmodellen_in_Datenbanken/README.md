@@ -70,8 +70,10 @@ Mert itt dől el, hogy:
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az adatmodellek adatbázisba történő megvalósítása során a fogalmi vagy logikai modell elemeit konkrét adatbázis-struktúrává alakítjuk.  
-> Az entitásokból táblák, az attribútumokból oszlopok, a kapcsolatokból pedig elsődleges és idegen kulcsok, illetve szükség esetén kapcsolótáblák lesznek.  
+> Az adatmodellek adatbázisba történő megvalósítása során a fogalmi vagy logikai modell elemeit konkrét  
+> adatbázis-struktúrává alakítjuk.  
+> Az entitásokból táblák, az attribútumokból oszlopok, a kapcsolatokból pedig elsődleges és idegen kulcsok, illetve  
+> szükség esetén kapcsolótáblák lesznek.  
 > Emellett ekkor kerülnek meghatározásra az adattípusok, integritási szabályok és más technikai részletek is.
 
 ## Gyakori vizsgahibák

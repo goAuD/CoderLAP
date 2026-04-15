@@ -58,8 +58,10 @@ Im Prüfungskontext bedeutet das in der Regel eine Datenbanklösung, die:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Vorteil von Freeware- oder Community-Datenbanken sind die niedrigen Kosten, die leichte Zugänglichkeit und die breite Einsetzbarkeit.  
-> Ihr Nachteil kann sein, dass professioneller Support, bestimmte Unternehmensfunktionen oder komfortabler Betrieb eingeschränkter sein können als bei Enterprise-Lösungen.  
+> Der Vorteil von Freeware- oder Community-Datenbanken sind die niedrigen Kosten, die leichte Zugänglichkeit und die  
+> breite Einsetzbarkeit.  
+> Ihr Nachteil kann sein, dass professioneller Support, bestimmte Unternehmensfunktionen oder komfortabler Betrieb  
+> eingeschränkter sein können als bei Enterprise-Lösungen.  
 > Daher hängt die Wahl der richtigen Datenbank immer von der Aufgabe, der Belastung und dem Supportbedarf ab.
 
 ## Häufige Prüfungsfehler
@@ -103,6 +105,7 @@ Im Prüfungskontext bedeutet das in der Regel eine Datenbanklösung, die:
    https://www.mongodb.com/what-is-mongodb  
    Verwendung: offizielle Quelle als Beispiel für eine dokumentenorientierte, community-basierte Datenbank.
 
-Hinweis: Die konkreten Vor- und Nachteile sind teilweise aus den offiziellen Produktbeschreibungen abgeleitete praktische Schlussfolgerungen.
+Hinweis: Die konkreten Vor- und Nachteile sind teilweise aus den offiziellen Produktbeschreibungen abgeleitete
+praktische Schlussfolgerungen.
 
 Abgerufen: `2026-04-09`

@@ -52,7 +52,8 @@ Az `ERP` gyakran a `BIS` egyik legfontosabb része.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az `ERP` rendszer egy integrált vállalatirányítási rendszer, amely több üzleti terület, például a pénzügy, beszerzés, raktározás vagy HR folyamatait közös rendszerben kezeli.  
+> Az `ERP` rendszer egy integrált vállalatirányítási rendszer, amely több üzleti terület, például a pénzügy,  
+> beszerzés, raktározás vagy HR folyamatait közös rendszerben kezeli.  
 > Az `ERP` célja az egységes adatkezelés, a folyamatok összehangolása és a jobb átláthatóság.  
 > Adatbázis-szempontból az `ERP` rendszerek nagy, integrált és konzisztensen kezelt adatkörnyezetre épülnek.
 

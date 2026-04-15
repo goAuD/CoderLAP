@@ -60,9 +60,12 @@ Daher ein guter Prüfungssatz:
 
 ## Prüfungstaugliche Formulierung
 
-> Bei `call by value` arbeitet die Funktion mit einer Kopie des Parameterwerts, daher beeinflusst die Änderung in der Regel nicht direkt die Originalvariable.  
-> Bei `call by reference` greift die Funktion über eine Referenz auf die Daten zu, daher kann auch der Originalwert geändert werden.  
-> Die genaue Implementierung kann je nach Programmiersprache unterschiedlich sein, aber der grundlegende Unterschied liegt zwischen Kopie und direkterem Zugriff.
+> Bei `call by value` arbeitet die Funktion mit einer Kopie des Parameterwerts, daher beeinflusst die Änderung in der  
+> Regel nicht direkt die Originalvariable.  
+> Bei `call by reference` greift die Funktion über eine Referenz auf die Daten zu, daher kann auch der Originalwert  
+> geändert werden.  
+> Die genaue Implementierung kann je nach Programmiersprache unterschiedlich sein, aber der grundlegende Unterschied
+> liegt zwischen Kopie und direkterem Zugriff.
 
 ## Häufige Prüfungsfehler
 
@@ -95,6 +98,7 @@ Daher ein guter Prüfungssatz:
 
 2. Oracle - Pass-By-Value Example  
    https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html  
-   Verwendung: offizielle Quelle dafür, dass die sprachliche Implementierung und der allgemeine begriffliche Unterschied nicht immer dasselbe sind.
+   Verwendung: offizielle Quelle dafür, dass die sprachliche Implementierung und der allgemeine begriffliche Unterschied
+   nicht immer dasselbe sind.
 
 Abgerufen: `2026-04-09`

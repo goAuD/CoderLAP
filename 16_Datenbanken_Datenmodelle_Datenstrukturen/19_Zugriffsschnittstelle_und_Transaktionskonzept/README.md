@@ -81,8 +81,10 @@ Nem mindig kell mélyen kifejteni, de jó, ha tudod, hogy a tranzakciók klasszi
 
 ## Vizsgán jól használható megfogalmazás
 
-> A hozzáférési interfész biztosítja, hogy egy alkalmazás kapcsolatba tudjon lépni az adatbázissal, SQL-parancsokat küldjön és eredményeket kapjon vissza.  
-> A tranzakciós koncepció pedig azt jelenti, hogy az összetartozó adatbázis-műveleteket egy egységként kezeljük, amelyek vagy teljes egészében végrehajtódnak, vagy hiba esetén visszagörgethetők.  
+> A hozzáférési interfész biztosítja, hogy egy alkalmazás kapcsolatba tudjon lépni az adatbázissal, SQL-parancsokat  
+> küldjön és eredményeket kapjon vissza.  
+> A tranzakciós koncepció pedig azt jelenti, hogy az összetartozó adatbázis-műveleteket egy egységként kezeljük,  
+> amelyek vagy teljes egészében végrehajtódnak, vagy hiba esetén visszagörgethetők.  
 > Ez a megbízható és konzisztens adatkezelés alapja.
 
 ## Gyakori vizsgahibák

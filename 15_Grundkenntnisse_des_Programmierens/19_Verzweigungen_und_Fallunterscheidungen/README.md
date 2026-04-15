@@ -54,8 +54,10 @@ Több konkrét eset közül választunk.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az elágazások és fallunterscheidungok segítségével a program különböző végrehajtási ágak közül választhat feltételek alapján.  
-> A leggyakoribb megoldás az `if / else`, több konkrét eset kezelésére pedig gyakran használunk `switch / case` szerkezetet.  
+> Az elágazások és fallunterscheidungok segítségével a program különböző végrehajtási ágak közül választhat feltételek  
+> alapján.  
+> A leggyakoribb megoldás az `if / else`, több konkrét eset kezelésére pedig gyakran használunk `switch / case`  
+> szerkezetet.  
 > Ezek a vezérlési szerkezetek a döntési logika megvalósítására szolgálnak.
 
 ## Gyakori vizsgahibák

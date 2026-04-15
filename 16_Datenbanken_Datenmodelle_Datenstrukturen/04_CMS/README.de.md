@@ -64,9 +64,12 @@ Ein `CMS` verwendet häufig ein `DBMS` im Hintergrund.
 
 ## Prüfungstaugliche Formulierung
 
-> Ein `CMS`, also Content Management System, ist ein Anwendungssystem, das die Erstellung, Bearbeitung, Speicherung und Veröffentlichung digitaler Inhalte unterstützt.  
-> Im Hintergrund verwendet es in vielen Fällen eine Datenbank zur Verwaltung von Inhalten, Benutzern, Berechtigungen und Einstellungen.  
-> Daher ist ein `CMS` ein gutes Beispiel dafür, wie eine Anwendung eine Datenbank zur Verwaltung strukturierter Informationen nutzt.
+> Ein `CMS`, also Content Management System, ist ein Anwendungssystem, das die Erstellung, Bearbeitung, Speicherung  
+> und Veröffentlichung digitaler Inhalte unterstützt.  
+> Im Hintergrund verwendet es in vielen Fällen eine Datenbank zur Verwaltung von Inhalten, Benutzern, Berechtigungen  
+> und Einstellungen.  
+> Daher ist ein `CMS` ein gutes Beispiel dafür, wie eine Anwendung eine Datenbank zur Verwaltung strukturierter
+> Informationen nutzt.
 
 ## Häufige Prüfungsfehler
 

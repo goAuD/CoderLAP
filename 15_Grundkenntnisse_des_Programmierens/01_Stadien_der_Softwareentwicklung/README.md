@@ -105,7 +105,8 @@ Ide tartozik:
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverfejlesztés több egymásra épülő szakaszból áll.  
-> A tipikus lépések az igényfelmérés, követelményelemzés, tervezés, implementáció, tesztelés, bevezetés és karbantartás.  
+> A tipikus lépések az igényfelmérés, követelményelemzés, tervezés, implementáció, tesztelés, bevezetés és  
+> karbantartás.  
 > Ennek a felosztásnak az a célja, hogy a fejlesztés átláthatóbb, ellenőrizhetőbb és biztonságosabb legyen.
 
 ## Gyakori vizsgahibák

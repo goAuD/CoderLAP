@@ -54,7 +54,8 @@ Például:
 ## Vizsgán jól használható megfogalmazás
 
 > A standard library a programozási nyelvhez tartozó szabványos függvények, modulok és osztályok gyűjteménye.  
-> Célja, hogy a fejlesztő gyakori feladatokat kész megoldásokkal tudjon megvalósítani, például fájlkezelést, adatkezelést, szövegfeldolgozást vagy matematikai műveleteket.  
+> Célja, hogy a fejlesztő gyakori feladatokat kész megoldásokkal tudjon megvalósítani, például fájlkezelést,  
+> adatkezelést, szövegfeldolgozást vagy matematikai műveleteket.  
 > A standard library használata gyorsabb, egységesebb és megbízhatóbb fejlesztést tesz lehetővé.
 
 ## Gyakori vizsgahibák

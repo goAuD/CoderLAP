@@ -60,7 +60,9 @@ Ha egy `Products` táblában van:
 ## Vizsgán jól használható megfogalmazás
 
 > Az első három normálforma a relációs adatbázistervezés alapelvei közé tartozik.  
-> Az első normálforma szerint egy mezőben csak egy érték szerepelhet, a második normálforma kizárja a részleges függéseket összetett kulcs esetén, a harmadik normálforma pedig megtiltja, hogy nem kulcsmezők más nem kulcsmezőktől függjenek.  
+> Az első normálforma szerint egy mezőben csak egy érték szerepelhet, a második normálforma kizárja a részleges  
+> függéseket összetett kulcs esetén, a harmadik normálforma pedig megtiltja, hogy nem kulcsmezők más nem kulcsmezőktől  
+> függjenek.  
 > Ezek a szabályok csökkentik a redundanciát és javítják az adatkonzisztenciát.
 
 ## Gyakori vizsgahibák

@@ -86,7 +86,8 @@ Zu einer Sprache gehört häufig:
 
 > Der Aufbau einer Programmiersprache wird durch die Gesamtheit von Syntax, Semantik und Sprachelementen bestimmt.  
 > Dazu gehören beispielsweise Schlüsselwörter, Bezeichner, Literale, Datentypen, Operatoren und Kontrollstrukturen.  
-> Die Syntax bestimmt, wie der Code korrekt geschrieben werden muss, die Semantik hingegen, was er bedeutet und wie er sich bei der Ausführung verhält.
+> Die Syntax bestimmt, wie der Code korrekt geschrieben werden muss, die Semantik hingegen, was er bedeutet und wie er
+> sich bei der Ausführung verhält.
 
 ## Häufige Prüfungsfehler
 

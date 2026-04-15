@@ -57,7 +57,8 @@ Typische Beispiele:
 
 ## Prüfungstaugliche Formulierung
 
-> Ein Datenbanksystem ist das Gesamtsystem bestehend aus den gespeicherten Daten, dem Datenbankmanagementsystem und den zugehörigen Anwendungen.  
+> Ein Datenbanksystem ist das Gesamtsystem bestehend aus den gespeicherten Daten, dem Datenbankmanagementsystem und  
+> den zugehörigen Anwendungen.  
 > Sein Zweck ist die strukturierte Speicherung, Abfrage, Änderung und sichere Verwaltung von Daten.  
 > Ein Datenbanksystem umfasst also nicht nur die Daten selbst, sondern auch deren gesamte Betriebsumgebung.
 

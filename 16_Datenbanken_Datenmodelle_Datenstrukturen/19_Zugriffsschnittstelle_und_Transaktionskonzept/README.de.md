@@ -45,7 +45,8 @@ Beispiel:
 - Bestellung erfassen
 - Lagerbestand verringern
 
-Wenn das eine gelingt und das andere nicht, könnte das System in einen fehlerhaften Zustand geraten - deshalb braucht man eine Transaktion.
+Wenn das eine gelingt und das andere nicht, könnte das System in einen fehlerhaften Zustand geraten - deshalb braucht
+man eine Transaktion.
 
 ## Grundbegriffe
 
@@ -77,12 +78,15 @@ Bei der Prüfung kann das Extrapunkte bringen:
 - `Isolation`
 - `Durability`
 
-Man muss es nicht immer ausführlich erklären, aber es ist gut zu wissen, dass dies die klassischen Qualitätsprinzipien von Transaktionen sind.
+Man muss es nicht immer ausführlich erklären, aber es ist gut zu wissen, dass dies die klassischen Qualitätsprinzipien
+von Transaktionen sind.
 
 ## Prüfungstaugliche Formulierung
 
-> Die Zugriffsschnittstelle stellt sicher, dass eine Anwendung sich mit der Datenbank verbinden, SQL-Befehle senden und Ergebnisse zurückerhalten kann.  
-> Das Transaktionskonzept bedeutet, dass zusammengehörige Datenbankoperationen als Einheit behandelt werden, die entweder vollständig ausgeführt oder im Fehlerfall zurückgerollt werden können.  
+> Die Zugriffsschnittstelle stellt sicher, dass eine Anwendung sich mit der Datenbank verbinden, SQL-Befehle senden  
+> und Ergebnisse zurückerhalten kann.  
+> Das Transaktionskonzept bedeutet, dass zusammengehörige Datenbankoperationen als Einheit behandelt werden, die  
+> entweder vollständig ausgeführt oder im Fehlerfall zurückgerollt werden können.  
 > Das ist die Grundlage einer zuverlässigen und konsistenten Datenverarbeitung.
 
 ## Häufige Prüfungsfehler
