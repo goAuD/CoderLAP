@@ -179,8 +179,11 @@ Local verification:
 ```powershell
 python .\scripts\build_site.py
 python -m unittest discover -s tests -v
-python -m http.server 4173 --bind 127.0.0.1 --directory dist
+python -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
+
+If `8000` is unavailable locally or returns an empty response, choose another
+free port such as `8001` and adjust the URL used for manual verification.
 
 ## Current Hardening And Launch Follow-ups
 
