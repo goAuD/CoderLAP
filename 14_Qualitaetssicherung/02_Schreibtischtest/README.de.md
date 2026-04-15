@@ -52,7 +52,9 @@ Häufig auch bezeichnet als:
 
 ## Prüfungstaugliche Formulierung
 
-> Der Schreibtischtest ist eine manuelle logische Überprüfung, bei der das Programm oder der Algorithmus ohne Ausführung Schritt für Schritt nachverfolgt wird.  
+> Der Schreibtischtest ist eine manuelle logische Überprüfung,
+> bei der das Programm oder der Algorithmus ohne Ausführung
+> Schritt für Schritt nachverfolgt wird.  
 > Dabei werden anhand von Eingaben, Verzweigungen, Schleifen und Variablenwerten die erwarteten Ergebnisse überprüft.  
 > Dies ist eine gute Methode zur Früherkennung logischer Fehler, ersetzt aber nicht das eigentliche Testen.
 
@@ -89,6 +91,8 @@ Häufig auch bezeichnet als:
    https://api.glossary.istqb.org/storage/help/DavkaLpvYMRH8Qu6LWaJxSPu7qKDHf9LpUgHTP1F.pdf  
    Verwendung: offizieller begrifflicher Hintergrund zu statischen Prüftechniken.
 
-Anmerkung: Die Formulierung `Schreibtischtest` folgt hier der in der Prüfungspraxis verwendeten Bedeutung eines manuellen `Dry Run` / logischen Nachverfolgens.
+Anmerkung: Die Formulierung `Schreibtischtest` folgt hier
+der in der Prüfungspraxis verwendeten Bedeutung
+eines manuellen `Dry Run` / logischen Nachverfolgens.
 
 Abgerufen: `2026-04-08`
