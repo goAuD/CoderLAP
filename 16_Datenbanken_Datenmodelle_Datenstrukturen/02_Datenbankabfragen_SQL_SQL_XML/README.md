@@ -81,7 +81,8 @@ Ez főleg olyan rendszereknél fontos, ahol eltérő rendszerek adatot cserélne
 
 > Az adatbázis-lekérdezésekhez a relációs rendszerekben általában `SQL`-t használunk.  
 > A `SQL` segítségével adatokat kérdezhetünk le, szúrhatunk be, módosíthatunk és törölhetünk.  
-> A `SQL/XML` ezzel szemben az `XML` adatok és az SQL-alapú adatkezelés összekapcsolására szolgál, például XML adatok kiolvasására vagy SQL eredmények XML-formába alakítására.
+> A `SQL/XML` ezzel szemben az `XML` adatok és az SQL-alapú adatkezelés összekapcsolására szolgál, például XML adatok
+> kiolvasására vagy SQL eredmények XML-formába alakítására.
 
 ## Gyakori vizsgahibák
 

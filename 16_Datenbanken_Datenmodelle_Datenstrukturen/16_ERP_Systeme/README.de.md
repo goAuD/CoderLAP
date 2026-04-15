@@ -52,7 +52,8 @@ Das Hauptziel eines `ERP` ist, dass die verschiedenen Bereiche eines Unternehmen
 
 ## Prüfungstaugliche Formulierung
 
-> Ein `ERP`-System ist ein integriertes Unternehmenssteuerungssystem, das die Prozesse mehrerer Geschäftsbereiche wie Finanzen, Beschaffung, Lager oder HR in einem gemeinsamen System verwaltet.  
+> Ein `ERP`-System ist ein integriertes Unternehmenssteuerungssystem, das die Prozesse mehrerer Geschäftsbereiche wie  
+> Finanzen, Beschaffung, Lager oder HR in einem gemeinsamen System verwaltet.  
 > Ziel des `ERP` ist eine einheitliche Datenverwaltung, die Abstimmung der Prozesse und bessere Transparenz.  
 > Aus Datenbanksicht basieren `ERP`-Systeme auf einer großen, integrierten und konsistent verwalteten Datenumgebung.
 

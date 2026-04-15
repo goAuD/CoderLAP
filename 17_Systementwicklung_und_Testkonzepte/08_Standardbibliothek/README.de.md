@@ -53,8 +53,10 @@ Zum Beispiel:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Standard Library ist die Sammlung von standardmäßigen Funktionen, Modulen und Klassen, die zur Programmiersprache gehören.  
-> Ihr Zweck ist es, dass der Entwickler häufige Aufgaben mit fertigen Lösungen umsetzen kann, zum Beispiel Dateiverwaltung, Datenverarbeitung, Textverarbeitung oder mathematische Operationen.  
+> Die Standard Library ist die Sammlung von standardmäßigen Funktionen, Modulen und Klassen, die zur  
+> Programmiersprache gehören.  
+> Ihr Zweck ist es, dass der Entwickler häufige Aufgaben mit fertigen Lösungen umsetzen kann, zum Beispiel  
+> Dateiverwaltung, Datenverarbeitung, Textverarbeitung oder mathematische Operationen.  
 > Die Verwendung der Standard Library ermöglicht eine schnellere, einheitlichere und zuverlässigere Entwicklung.
 
 ## Häufige Prüfungsfehler

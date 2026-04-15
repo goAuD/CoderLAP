@@ -55,7 +55,8 @@ Aber die abgeleitete Klasse kann:
 
 ## Prüfungstaugliche Formulierung
 
-> Die Vererbung ist eines der Grundprinzipien der objektorientierten Programmierung, das es ermöglicht, dass eine Klasse Eigenschaften und Operationen von einer anderen Klasse übernimmt.  
+> Die Vererbung ist eines der Grundprinzipien der objektorientierten Programmierung, das es ermöglicht, dass eine  
+> Klasse Eigenschaften und Operationen von einer anderen Klasse übernimmt.  
 > Dies unterstützt die Wiederverwendbarkeit und das Herausziehen gemeinsamen Verhaltens.  
 > Allerdings kann übermäßige oder schlecht geplante Vererbung zu einem komplexen und schwer wartbaren System führen.
 

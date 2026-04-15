@@ -65,7 +65,8 @@ Kapcsolat:
 ## Vizsgán jól használható megfogalmazás
 
 > Az adatmodell az adatok szerkezetének és kapcsolatainak leírása.  
-> Meghatározza, hogy milyen entitásokat, attribútumokat és relációkat kell kezelni, valamint milyen szabályok és kulcsok érvényesek rájuk.  
+> Meghatározza, hogy milyen entitásokat, attribútumokat és relációkat kell kezelni, valamint milyen szabályok és  
+> kulcsok érvényesek rájuk.  
 > Az adatmodell a jól felépített adatbázis és adatkezelő rendszer egyik legfontosabb tervezési alapja.
 
 ## Gyakori vizsgahibák

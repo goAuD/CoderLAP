@@ -105,7 +105,8 @@ Dazu gehört:
 ## Prüfungstaugliche Formulierung
 
 > Die Softwareentwicklung besteht aus mehreren aufeinander aufbauenden Phasen.  
-> Die typischen Schritte sind Anforderungserhebung, Anforderungsanalyse, Entwurf, Implementierung, Testen, Einführung und Wartung.  
+> Die typischen Schritte sind Anforderungserhebung, Anforderungsanalyse, Entwurf, Implementierung, Testen, Einführung  
+> und Wartung.  
 > Der Zweck dieser Aufteilung ist, die Entwicklung übersichtlicher, kontrollierbarer und sicherer zu machen.
 
 ## Häufige Prüfungsfehler

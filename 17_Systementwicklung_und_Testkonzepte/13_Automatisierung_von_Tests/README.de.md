@@ -64,7 +64,8 @@ Typischerweise:
 ## Prüfungstaugliche Formulierung
 
 > Bei der Testautomatisierung werden bestimmte Tests automatisch durch Werkzeuge und Skripte ausgeführt.  
-> Dies ist besonders nützlich bei wiederkehrenden, Regressions- oder in `CI` integrierbaren Tests, da es eine schnellere und häufiger durchführbare Prüfung ermöglicht.  
+> Dies ist besonders nützlich bei wiederkehrenden, Regressions- oder in `CI` integrierbaren Tests, da es eine  
+> schnellere und häufiger durchführbare Prüfung ermöglicht.  
 > Allerdings lässt sich nicht jeder Test sinnvoll automatisieren, und auch die Wartung automatisierter Tests erfordert Ressourcen.
 
 ## Häufige Prüfungsfehler

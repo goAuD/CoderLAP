@@ -58,8 +58,10 @@ Vizsgakörnyezetben ez általában olyan adatbázis-megoldást jelent, amely:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A freeware vagy community adatbázisok előnye az alacsony költség, a könnyű hozzáférhetőség és a széles körű használhatóság.  
-> Hátrányuk lehet, hogy a professzionális támogatás, bizonyos vállalati funkciók vagy a kényelmes üzemeltetés korlátozottabb lehet, mint enterprise megoldásoknál.  
+> A freeware vagy community adatbázisok előnye az alacsony költség, a könnyű hozzáférhetőség és a széles körű  
+> használhatóság.  
+> Hátrányuk lehet, hogy a professzionális támogatás, bizonyos vállalati funkciók vagy a kényelmes üzemeltetés  
+> korlátozottabb lehet, mint enterprise megoldásoknál.  
 > Ezért a megfelelő adatbázis kiválasztása mindig a feladattól, terheléstől és támogatási igénytől függ.
 
 ## Gyakori vizsgahibák

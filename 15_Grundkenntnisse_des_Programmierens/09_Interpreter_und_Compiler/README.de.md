@@ -62,7 +62,8 @@ Deshalb sollte man bei der Prüfung das Grundprinzip kennen, nicht einen vereinf
 
 > Der Compiler übersetzt den Quellcode vorab in eine andere Form, häufig Maschinencode oder Zwischencode.  
 > Der Interpreter hingegen führt die Code-Ausführung auf unmittelbarere Weise, zusammen mit der Interpretation, durch.  
-> In modernen Systemen vermischen sich die beiden Ansätze häufig, aber der grundlegende Unterschied liegt weiterhin zwischen Vorausübersetzung und unmittelbarerer Interpretation.
+> In modernen Systemen vermischen sich die beiden Ansätze häufig, aber der grundlegende Unterschied liegt weiterhin
+> zwischen Vorausübersetzung und unmittelbarerer Interpretation.
 
 ## Häufige Prüfungsfehler
 

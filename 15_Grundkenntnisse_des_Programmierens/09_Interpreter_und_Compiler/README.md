@@ -62,7 +62,8 @@ Ezért vizsgán az alapelvet kell tudni, nem egy leegyszerűsítő mítoszt.
 
 > A compiler a forráskódot előre lefordítja egy másik formára, gyakran gépi kódra vagy köztes kódra.  
 > Az interpreter ezzel szemben a kód végrehajtását közvetlenebb módon, az értelmezéssel együtt végzi.  
-> A modern rendszerekben a két megközelítés gyakran keveredik, de az alapvető különbség továbbra is az előre fordítás és a közvetlenebb értelmezés között van.
+> A modern rendszerekben a két megközelítés gyakran keveredik, de az alapvető különbség továbbra is az előre fordítás és
+> a közvetlenebb értelmezés között van.
 
 ## Gyakori vizsgahibák
 

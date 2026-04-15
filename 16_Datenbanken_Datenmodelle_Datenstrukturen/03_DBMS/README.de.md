@@ -55,8 +55,10 @@ Bekannte `DBMS`:
 
 ## Prüfungstaugliche Formulierung
 
-> Das `DBMS`, also Database Management System, ist die Software, die die Erstellung, Verwaltung, Abfrage, den Schutz und die Administration der Datenbank durchführt.  
-> Das `DBMS` vermittelt zwischen Anwendungen und den gespeicherten Daten und gewährleistet unter anderem die Integrität, den Mehrbenutzerbetrieb und die Regeln der Datenverwaltung.  
+> Das `DBMS`, also Database Management System, ist die Software, die die Erstellung, Verwaltung, Abfrage, den Schutz  
+> und die Administration der Datenbank durchführt.  
+> Das `DBMS` vermittelt zwischen Anwendungen und den gespeicherten Daten und gewährleistet unter anderem die  
+> Integrität, den Mehrbenutzerbetrieb und die Regeln der Datenverwaltung.  
 > Daher ist das `DBMS` das zentrale Element des Datenbanksystems.
 
 ## Häufige Prüfungsfehler

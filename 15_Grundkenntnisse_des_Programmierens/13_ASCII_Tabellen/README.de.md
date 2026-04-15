@@ -60,7 +60,8 @@ Die meisten modernen Systeme verwenden heute Unicode, aber die Grundlagen von AS
 
 > Die ASCII-Tabelle zeigt die numerischen Codes, die den Zeichen des ASCII-Zeichensatzes zugeordnet sind.  
 > ASCII ist eine 7-Bit-Zeichenkodierung, die 128 Zeichen umfasst, darunter Steuerzeichen und druckbare Zeichen.  
-> Obwohl heute hauptsächlich Unicode-basierte Systeme verwendet werden, bleibt ASCII von grundlegender Bedeutung für das Verständnis der Zeichenkodierung.
+> Obwohl heute hauptsächlich Unicode-basierte Systeme verwendet werden, bleibt ASCII von grundlegender Bedeutung für das
+> Verständnis der Zeichenkodierung.
 
 ## Häufige Prüfungsfehler
 

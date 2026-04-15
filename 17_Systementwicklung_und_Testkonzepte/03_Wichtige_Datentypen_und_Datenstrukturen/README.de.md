@@ -77,8 +77,10 @@ Die Datenstruktur beschreibt, wie wir Daten so organisieren, dass:
 ## Prüfungstaugliche Formulierung
 
 > Der Datentyp bestimmt, welche Art von Daten wir verarbeiten, zum Beispiel Ganzzahl, Text oder logischen Wert.  
-> Die Datenstruktur beschreibt hingegen, wie wir Daten organisieren und speichern, zum Beispiel in einem Array, einer Liste, einem Stack oder als Schlüssel-Wert-Paare.  
-> Die Wahl des richtigen Datentyps und der richtigen Datenstruktur ist wichtig für die korrekte Funktion und Leistung des Programms.
+> Die Datenstruktur beschreibt hingegen, wie wir Daten organisieren und speichern, zum Beispiel in einem Array, einer  
+> Liste, einem Stack oder als Schlüssel-Wert-Paare.  
+> Die Wahl des richtigen Datentyps und der richtigen Datenstruktur ist wichtig für die korrekte Funktion und Leistung
+> des Programms.
 
 ## Häufige Prüfungsfehler
 

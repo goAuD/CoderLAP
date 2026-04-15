@@ -63,7 +63,8 @@ A kettő együtt a leghasznosabb.
 ## Vizsgán jól használható megfogalmazás
 
 > A debugger egy hibakereső eszköz, amely lehetővé teszi a program futásának megfigyelését és vezérlését.  
-> Segítségével breakpointokat állíthatunk be, lépésenként futtathatjuk a kódot, megfigyelhetjük a változók értékét és elemezhetjük a hívási láncot.  
+> Segítségével breakpointokat állíthatunk be, lépésenként futtathatjuk a kódot, megfigyelhetjük a változók értékét és  
+> elemezhetjük a hívási láncot.  
 > Ez különösen hasznos logikai hibák és futás közbeni problémák feltárásában.
 
 ## Gyakori vizsgahibák

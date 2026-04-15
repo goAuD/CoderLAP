@@ -41,7 +41,7 @@ Deshalb kann sie viel schneller sein.
 
 Gesuchter Wert: `42`
 
-### Sequenzielle Suche
+### Sequenzielle Suche in der Praxis
 
 ```text
 5 -> 11 -> 19 -> 42
@@ -49,7 +49,7 @@ Gesuchter Wert: `42`
 
 Man muss die Elemente der Reihe nach durchgehen.
 
-### Binäre Suche
+### Binäre Suche in der Praxis
 
 ```text
 sortierte Liste
@@ -80,8 +80,10 @@ Das ist ein Schlüsselpunkt bei der Prüfung:
 
 ## Prüfungstaugliche Formulierung
 
-> Die sequenzielle Suche untersucht die Elemente der Reihe nach, bis sie den gesuchten Wert findet oder das Listenende erreicht.  
-> Die binäre Suche hingegen halbiert stets den Suchbereich und ist daher schneller, aber nur bei sortierten Daten anwendbar.  
+> Die sequenzielle Suche untersucht die Elemente der Reihe nach, bis sie den gesuchten Wert findet oder das Listenende  
+> erreicht.  
+> Die binäre Suche hingegen halbiert stets den Suchbereich und ist daher schneller, aber nur bei sortierten Daten  
+> anwendbar.  
 > Der wichtigste Unterschied zwischen den beiden Algorithmen liegt im Funktionsprinzip und in der Sortierungsvoraussetzung.
 
 ## Häufige Prüfungsfehler

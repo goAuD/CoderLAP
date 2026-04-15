@@ -49,8 +49,10 @@ Ha legalább egy bekérés biztosan kell, sokszor a lábvezérelt logika termés
 
 ## Vizsgán jól használható megfogalmazás
 
-> A fejvezérelt ciklus a feltételt a ciklusmag végrehajtása előtt ellenőrzi, ezért előfordulhat, hogy a ciklus egyszer sem fut le.  
-> A lábvezérelt ciklus ezzel szemben a feltételt a ciklusmag után vizsgálja, így legalább egyszer biztosan végrehajtódik.  
+> A fejvezérelt ciklus a feltételt a ciklusmag végrehajtása előtt ellenőrzi, ezért előfordulhat, hogy a ciklus egyszer  
+> sem fut le.  
+> A lábvezérelt ciklus ezzel szemben a feltételt a ciklusmag után vizsgálja, így legalább egyszer biztosan  
+> végrehajtódik.  
 > A két típus közötti különbség főként a minimális futásszámban és a feltétel ellenőrzésének helyében van.
 
 ## Gyakori vizsgahibák

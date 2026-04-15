@@ -59,7 +59,8 @@ Das kann bei der Prüfung Bonuspunkte bringen, wenn man es gut formuliert.
 
 > Eine Variable ist ein Programmierelement, dessen Wert sich während der Programmausführung ändern kann.  
 > Eine Konstante hingegen ist ein Element, dessen Wert oder Bindung nicht geändert werden soll.  
-> Die Verwendung von Konstanten erhöht die Lesbarkeit des Codes und verringert das Risiko versehentlicher Fehler, obwohl das genaue Verhalten je nach Sprache unterschiedlich sein kann.
+> Die Verwendung von Konstanten erhöht die Lesbarkeit des Codes und verringert das Risiko versehentlicher Fehler, obwohl
+> das genaue Verhalten je nach Sprache unterschiedlich sein kann.
 
 ## Häufige Prüfungsfehler
 

@@ -71,7 +71,8 @@ Sok feladat megoldható mindkét módon, de nem mindig ugyanolyan jól.
 
 > A rekurzív függvény olyan függvény, amely önmagát hívja meg egy kisebb részprobléma megoldására.  
 > A helyes működéshez mindig szükség van alapesetre és rekurzív esetre.  
-> A rekurzió különösen hasznos hierarchikus vagy felosztásos problémáknál, de túl mély hívás esetén erőforrásgondokat is okozhat.
+> A rekurzió különösen hasznos hierarchikus vagy felosztásos problémáknál, de túl mély hívás esetén erőforrásgondokat is
+> okozhat.
 
 ## Gyakori vizsgahibák
 

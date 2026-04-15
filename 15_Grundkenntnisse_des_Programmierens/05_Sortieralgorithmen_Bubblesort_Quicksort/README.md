@@ -31,7 +31,7 @@ Ez tipikusan sokkal gyorsabb megközelítés.
 
 ## Egyszerű működési különbség
 
-### Bubble Sort
+### Bubble Sort a gyakorlatban
 
 ```text
 szomszédos elemek összehasonlítása
@@ -39,7 +39,7 @@ szomszédos elemek összehasonlítása
 -> újabb végigmenet
 ```
 
-### Quick Sort
+### Quick Sort a gyakorlatban
 
 ```text
 pivot kiválasztása
@@ -75,7 +75,8 @@ Megjegyzés:
 
 ## Vizsgán jól használható megfogalmazás
 
-> A Bubble Sort egy egyszerű rendezési algoritmus, amely a szomszédos elemek ismételt összehasonlításával és cseréjével rendezi a listát.  
+> A Bubble Sort egy egyszerű rendezési algoritmus, amely a szomszédos elemek ismételt összehasonlításával és  
+> cseréjével rendezi a listát.  
 > A Quick Sort ezzel szemben egy pivot elem köré osztja fel az adatokat, majd a részeket rekurzívan rendezi.  
 > A Quick Sort a gyakorlatban általában jóval hatékonyabb, míg a Bubble Sort inkább tanulási célra hasznos.
 

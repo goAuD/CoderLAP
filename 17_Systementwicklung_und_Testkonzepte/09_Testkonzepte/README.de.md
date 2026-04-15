@@ -59,7 +59,8 @@ Zum Beispiel:
 ## Prüfungstaugliche Formulierung
 
 > Das Testkonzept legt fest, wie wir die Qualität der Software überprüfen wollen.  
-> Es beschreibt das Testziel, die Teststufen, die Testtypen, die verwendeten Methoden und die Grundlage der Ergebnisbewertung.  
+> Es beschreibt das Testziel, die Teststufen, die Testtypen, die verwendeten Methoden und die Grundlage der  
+> Ergebnisbewertung.  
 > Ein gutes Testkonzept stellt sicher, dass das Testen nicht zufällig, sondern bewusst und geplant erfolgt.
 
 ## Häufige Prüfungsfehler

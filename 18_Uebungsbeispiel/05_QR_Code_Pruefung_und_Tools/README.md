@@ -20,7 +20,10 @@ Ez arra jó, hogy:
 - képernyőn megjelenő QR-kódot is ellenőrizni lehessen
 - telefon nélkül is visszaolvasható legyen a generált kód
 
-> **Fontos (2026):** A `CodeTwo QR Code Desktop Reader` a gyártó oldalán **deprecated** státuszú — már nem elérhető letöltésre, és nem kap frissítéseket. A PDF még ezt a toolt nevezi meg, ezért vizsgán érdemes ismerni a nevét, de a gyakorlatban alternatív QR-olvasóra is szükség lehet, például mobiltelefon kamerája, böngészős online dekóder vagy más ingyenes desktop scanner.
+> **Fontos (2026):** A `CodeTwo QR Code Desktop Reader` a gyártó oldalán **deprecated** státuszú — már nem elérhető
+> letöltésre, és nem kap frissítéseket. A PDF még ezt a toolt nevezi meg, ezért vizsgán érdemes ismerni a nevét, de a
+> gyakorlatban alternatív QR-olvasóra is szükség lehet, például mobiltelefon kamerája, böngészős online dekóder vagy más
+> ingyenes desktop scanner.
 
 ## Mit kell ellenőrizni?
 

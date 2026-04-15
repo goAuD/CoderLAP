@@ -47,7 +47,8 @@ Musterloesung_Minimal/
 
 ## Vizsgán jól használható megfogalmazás
 
-> Ennél a gyakorlati feladatnál a minimális cél egy működő, responsive HTML-űrlap létrehozása, amely ellenőrzi az osztrák `SV-Nr` érvényességét, és ennek eredménye alapján `QR`-kódot generál.  
+> Ennél a gyakorlati feladatnál a minimális cél egy működő, responsive HTML-űrlap létrehozása, amely ellenőrzi az  
+> osztrák `SV-Nr` érvényességét, és ennek eredménye alapján `QR`-kódot generál.  
 > A legegyszerűbb megoldás frontend-alapú `HTML`, `Bootstrap` és `JavaScript` használata, helyi QR-library-val.  
 > Mivel a PDF nem kér adattárolást, az adatbázis és a backend nem kötelező része a minimális megoldásnak.
 
