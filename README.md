@@ -55,6 +55,7 @@ Architecture and delivery notes are documented in:
 - [docs/project/architecture-adoption.md](./docs/project/architecture-adoption.md)
 - [docs/project/deploy-strategy.md](./docs/project/deploy-strategy.md)
 - [docs/project/public-repo-flip-checklist.md](./docs/project/public-repo-flip-checklist.md)
+- [docs/project/github-security-settings-checklist.md](./docs/project/github-security-settings-checklist.md)
 - [docs/project/github-release-hygiene.md](./docs/project/github-release-hygiene.md)
 - [docs/project/private-rollout-access.md](./docs/project/private-rollout-access.md)
 - [docs/project/access-hygiene-playbook.md](./docs/project/access-hygiene-playbook.md)
