@@ -202,7 +202,6 @@ def render_markdown(
         extensions=["extra", "tables", "fenced_code", "sane_lists"],
         output_format="html5",
     )
-    md.preprocessors.deregister("html_block")
     md.inlinePatterns.deregister("html")
     rendered_html = md.convert(normalized_markdown)
     sanitizer = _RenderedMarkdownSanitizer()
