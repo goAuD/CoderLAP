@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import time
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -10,6 +12,31 @@ from .loaders import load_registry_items, load_topic_markdown
 from .navigation import build_navigation
 from .render import build_template_environment, render_markdown
 from .settings import BuildSettings, LanguageConfig
+
+SEARCH_ALIASES_RELATIVE_PATH = Path("site/content/search/search_aliases.json")
+MARKDOWN_HEADING_PATTERN = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
+GENERIC_SEARCH_HEADINGS = {
+    "lenyeg 30 masodpercben",
+    "gyors vizualis kep",
+    "mi az",
+    "miert fontos",
+    "mit nem tud mire kell figyelni",
+    "mire kell figyelni",
+    "vizsgan jol hasznalhato megfogalmazas",
+    "gyakori vizsgahibak",
+    "gyors onellenorzes",
+    "rovid valaszok az onellenorzeshez",
+    "forrasok",
+    "schneller visueller uberblick",
+    "zusammenfassung in 30 sekunden",
+    "warum ist das wichtig",
+    "worauf muss man achten",
+    "prufungstaugliche formulierung",
+    "haufige prufungsfehler",
+    "schnelle selbstkontrolle",
+    "kurzantworten zur selbstkontrolle",
+    "quellen",
+}
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -25,7 +52,94 @@ def _write_text(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
-def _topic_index_entry(topic) -> dict[str, Any]:
+def _normalize_search_text(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value or "")
+    without_marks = "".join(char for char in normalized if not unicodedata.combining(char))
+    cleaned = without_marks.lower().replace("ß", "ss")
+    cleaned = re.sub(r"[_/\\.-]+", " ", cleaned)
+    cleaned = re.sub(r"[`*_>#:+|()\[\]{}\"'?!,;]+", " ", cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
+def _display_label(label: str) -> str:
+    return re.sub(r"^\d+_", "", str(label or "")).replace("_", " ").strip()
+
+
+def _dedupe_terms(terms: list[str]) -> list[str]:
+    unique_terms: list[str] = []
+    seen: set[str] = set()
+    for term in terms:
+        cleaned = re.sub(r"\s+", " ", str(term or "").strip())
+        normalized = _normalize_search_text(cleaned)
+        if not cleaned or not normalized or normalized in seen:
+            continue
+        seen.add(normalized)
+        unique_terms.append(cleaned)
+    return unique_terms
+
+
+def _extract_search_headings(markdown_text: str) -> list[str]:
+    headings: list[str] = []
+    for _, raw_heading in MARKDOWN_HEADING_PATTERN.findall(markdown_text):
+        cleaned = re.sub(r"\s+", " ", raw_heading.replace("`", "").strip())
+        normalized = _normalize_search_text(cleaned)
+        if not normalized or normalized in GENERIC_SEARCH_HEADINGS:
+            continue
+        headings.append(cleaned)
+    return headings
+
+
+def _topic_markdown_variants(topic, repo_root: Path) -> list[Path]:
+    base_path = topic.absolute_markdown_path(repo_root)
+    candidates = [base_path]
+    for lang_code in ("de", "hu"):
+        lang_path = base_path.with_suffix(f".{lang_code}.md")
+        if lang_path not in candidates:
+            candidates.append(lang_path)
+    return [candidate for candidate in candidates if candidate.is_file()]
+
+
+def _topic_search_terms(topic, repo_root: Path) -> list[str]:
+    terms = [
+        topic.id,
+        topic.title,
+        topic.slug.replace("-", " "),
+        topic.main_topic_number,
+        topic.main_topic_dir,
+        _display_label(topic.main_topic_dir),
+        topic.subtopic_number,
+        topic.subtopic_dir,
+        _display_label(topic.subtopic_dir),
+    ]
+    for markdown_path in _topic_markdown_variants(topic, repo_root):
+        markdown_text = load_topic_markdown(markdown_path)
+        terms.extend(_extract_search_headings(markdown_text))
+    return _dedupe_terms(terms)
+
+
+def _load_search_alias_groups(repo_root: Path) -> list[list[str]]:
+    alias_path = repo_root / SEARCH_ALIASES_RELATIVE_PATH
+    if not alias_path.is_file():
+        return []
+
+    payload = json.loads(alias_path.read_text(encoding="utf-8"))
+    groups = payload.get("groups", [])
+    if not isinstance(groups, list):
+        raise ValueError("Search alias payload must contain a 'groups' list.")
+
+    normalized_groups: list[list[str]] = []
+    for group in groups:
+        if not isinstance(group, list):
+            raise ValueError("Each search alias group must be a list.")
+        if not all(isinstance(term, str) for term in group):
+            raise ValueError("Search alias groups may only contain strings.")
+        deduped = _dedupe_terms(group)
+        if len(deduped) >= 2:
+            normalized_groups.append(deduped)
+    return normalized_groups
+
+
+def _topic_index_entry(topic, repo_root: Path) -> dict[str, Any]:
     return {
         "id": topic.id,
         "title": topic.title,
@@ -36,6 +150,7 @@ def _topic_index_entry(topic) -> dict[str, Any]:
         "source_count": topic.source_count,
         "review_status": topic.review_status,
         "translation_status": topic.translation_status,
+        "search_terms": _topic_search_terms(topic, repo_root),
     }
 
 
@@ -83,6 +198,8 @@ def _build_language(
     settings: BuildSettings,
     all_languages: tuple[LanguageConfig, ...],
     topics: list,
+    topic_index: list[dict[str, Any]],
+    search_alias_groups: list[list[str]],
     navigation: dict,
     env: Any,
     cache_bust: str,
@@ -102,8 +219,6 @@ def _build_language(
         site_root = f"/{lang_config.code}/"
 
     lang_output.mkdir(parents=True, exist_ok=True)
-
-    topic_index = [_topic_index_entry(topic) for topic in topics]
 
     common_ctx = {
         "ui_lang": ui_lang,
@@ -145,6 +260,7 @@ def _build_language(
         page_title=ui_strings.get("home_title", "CoderLAP"),
         body_class="home-page",
         topic_index=topic_index,
+        search_alias_groups=search_alias_groups,
         lang_switcher=_build_lang_switcher(all_languages, lang_config.code),
     )
     _write_text(lang_output / "index.html", home_html)
@@ -173,6 +289,8 @@ def build_site(
     topics = load_registry_items(settings.registry_path)
     navigation = build_navigation(topics)
     env = build_template_environment(settings.template_dir)
+    topic_index = [_topic_index_entry(topic, settings.repo_root) for topic in topics]
+    search_alias_groups = _load_search_alias_groups(settings.repo_root)
 
     _recreate_output_dir(settings.output_dir)
     shutil.copytree(settings.asset_dir, settings.output_dir / "assets")
@@ -185,7 +303,7 @@ def build_site(
         for lang_config in settings.languages:
             _build_language(
                 lang_config, settings, settings.languages,
-                topics, navigation, env, cache_bust,
+                topics, topic_index, search_alias_groups, navigation, env, cache_bust,
             )
     else:
         # Legacy single-language fallback
@@ -193,7 +311,7 @@ def build_site(
             raise ValueError("ui_strings and legal_pages are required for single-language builds")
         _build_single_language(
             settings, ui_strings, legal_pages,
-            topics, navigation, env, cache_bust,
+            topics, topic_index, search_alias_groups, navigation, env, cache_bust,
         )
 
     return settings.output_dir
@@ -204,6 +322,8 @@ def _build_single_language(
     ui_strings: dict[str, Any],
     legal_pages: dict[str, str],
     topics: list,
+    topic_index: list[dict[str, Any]],
+    search_alias_groups: list[list[str]],
     navigation: dict,
     env: Any,
     cache_bust: str,
@@ -211,7 +331,6 @@ def _build_single_language(
     """Legacy single-language build path for backward compatibility."""
     ui_lang = str(ui_strings.get("lang", "en"))
     asset_prefix = "/assets"
-    topic_index = [_topic_index_entry(topic) for topic in topics]
 
     for topic in topics:
         markdown_text = load_topic_markdown(topic.absolute_markdown_path(settings.repo_root))
@@ -246,6 +365,7 @@ def _build_single_language(
         ui=ui_strings,
         navigation=navigation,
         topic_index=topic_index,
+        search_alias_groups=search_alias_groups,
         cache_bust=cache_bust,
         site_root="/",
         lang_switcher=[],

@@ -24,6 +24,7 @@ with:
 - clean, visual-first Markdown documents
 - explicit source lists at the end of each topic
 - a working static site generator with i18n support
+- generated bilingual search terms with shorthand alias support
 - planned domain: `coderlap.com`
 - static site default language: German at `/`, Hungarian at `/hu/`
 

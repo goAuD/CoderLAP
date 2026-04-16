@@ -12,6 +12,7 @@ class SiteContentAssetsTests(unittest.TestCase):
         ui_path = repo_root / "site" / "i18n" / "en.json"
         imprint_path = repo_root / "site" / "content" / "legal" / "en" / "imprint.md"
         privacy_path = repo_root / "site" / "content" / "legal" / "en" / "privacy.md"
+        search_aliases_path = repo_root / "site" / "content" / "search" / "search_aliases.json"
         robots_path = repo_root / "site" / "content" / "static" / "root" / "robots.txt"
         security_txt_path = repo_root / "site" / "content" / "static" / "root" / ".well-known" / "security.txt"
 
@@ -31,6 +32,10 @@ class SiteContentAssetsTests(unittest.TestCase):
         self.assertEqual(ui_strings["topic_pagination_label"], "Topic pagination")
         self.assertEqual(ui_strings["imprint_label"], "Imprint")
         self.assertEqual(ui_strings["privacy_label"], "Privacy")
+
+        search_aliases = json.loads(search_aliases_path.read_text(encoding="utf-8"))
+        self.assertIn(["os", "operating system", "betriebssystem", "operacios rendszer"], search_aliases["groups"])
+        self.assertIn(["db", "database", "datenbank", "adatbazis"], search_aliases["groups"])
 
         imprint_text = imprint_path.read_text(encoding="utf-8")
         self.assertIn("# Imprint", imprint_text)
