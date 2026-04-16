@@ -66,18 +66,18 @@ Damit die Aufgabe auch unter Prüfungsbedingungen realistisch umsetzbar bleibt, 
 
 ### Theoretische und prüfungsvorbereitende Aufteilung
 
-- [01_Anforderung_und_Setup/README.de.md](./01_Anforderung_und_Setup/README.de.md)
-- [02_Eingabe_Formular_mit_Framework/README.de.md](./02_Eingabe_Formular_mit_Framework/README.de.md)
-- [03_Gueltigkeitspruefung_der_SV_Nummer/README.de.md](./03_Gueltigkeitspruefung_der_SV_Nummer/README.de.md)
-- [04_Ausgabe_eines_QR_Codes/README.de.md](./04_Ausgabe_eines_QR_Codes/README.de.md)
-- [05_QR_Code_Pruefung_und_Tools/README.de.md](./05_QR_Code_Pruefung_und_Tools/README.de.md)
+- `01_Anforderung_und_Setup`
+- `02_Eingabe_Formular_mit_Framework`
+- `03_Gueltigkeitspruefung_der_SV_Nummer`
+- `04_Ausgabe_eines_QR_Codes`
+- `05_QR_Code_Pruefung_und_Tools`
 
 ### Konkrete Musterlösung
 
-- [06_Musterloesung_Minimal/README.de.md](./06_Musterloesung_Minimal/README.de.md)
-- [06_Musterloesung_Minimal/index.html](./06_Musterloesung_Minimal/index.html)
-- [06_Musterloesung_Minimal/styles.css](./06_Musterloesung_Minimal/styles.css)
-- [06_Musterloesung_Minimal/app.js](./06_Musterloesung_Minimal/app.js)
+- `06_Musterloesung_Minimal/index.html`
+- `06_Musterloesung_Minimal/styles.css`
+- `06_Musterloesung_Minimal/app.js`
+- `06_Musterloesung_Minimal/vendor/qrcode.js`
 
 ## Prüfungsstrategie
 

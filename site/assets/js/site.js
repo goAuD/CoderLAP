@@ -718,7 +718,7 @@
           openOverlay();
         })
         .catch(function () {
-          window.location.href = root + "#catalog-title";
+          // Fail silently — do not redirect away from the current page.
         });
     });
   }
