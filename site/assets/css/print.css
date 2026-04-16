@@ -78,7 +78,10 @@
 
   /* ── Content panels ─────────────────────────────────────────── */
   .topic-article,
-  .legal-article {
+  .legal-article,
+  .module-pack-header,
+  .module-pack-outline,
+  .module-pack-topic {
     display: block !important;
     background: #ffffff !important;
     border: none !important;
@@ -88,6 +91,24 @@
     overflow: visible !important;
     width: 100% !important;
     max-width: none !important;
+  }
+
+  .module-pack-topics {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .module-pack-outline__list {
+    display: block !important;
+    margin: 0 !important;
+    padding-left: 16pt !important;
+  }
+
+  .module-pack-topic__meta {
+    font-size: 8.5pt !important;
+    letter-spacing: 0.06em !important;
+    color: #2d6f6a !important;
   }
 
   /* ── Typography — compact for paper ─────────────────────────── */

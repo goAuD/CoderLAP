@@ -25,7 +25,8 @@ with:
 - explicit source lists at the end of each topic
 - a working static site generator with i18n support
 - generated bilingual search terms with shorthand alias support
-- planned domain: `coderlap.com`
+- module-level print packs for combined teacher-friendly exports
+- live restricted-access delivery at `coderlap.com`
 - static site default language: German at `/`, Hungarian at `/hu/`
 
 German is the public default language of the generated site. Hungarian remains
@@ -132,7 +133,8 @@ Completed so far:
 - i18n infrastructure complete: German (default at `/`) and Hungarian (`/hu/`)
 - all `233` subtopic documents translated to German as `README.de.md`
 - static site generator built with Jinja2, producing bilingual output to `dist/`
-- registered production domain: `coderlap.com`
+- module-level print pack pages generated for all `18` modules
+- restricted live delivery active at `coderlap.com`
 - GitHub-ready active working copy defined as `C:\GitHub\CoderLAP`
 
 ## Content principles
@@ -200,8 +202,10 @@ What was deliberately deferred:
 4. ~~Create translated variants.~~ Done — all `233` subtopics translated to
    German.
 5. ~~Build a simple HTML/CSS/JS frontend for browsing the full catalog.~~ Done.
-6. Deploy the static result through Caddy on `coderlap.com` with a single clean
-   delivery path.
+6. ~~Deploy the static result through Caddy on `coderlap.com` with a single
+   clean delivery path.~~ Done.
+7. Continue with operational hardening, print workflow polish, and maintenance
+   improvements without changing the static-first architecture.
 
 ## Static frontend build
 
@@ -218,6 +222,13 @@ python scripts/build_site.py
 ```
 
 The generated static frontend is written to `dist/` (git-ignored).
+
+Key generated routes include:
+
+- `/` for the German catalog
+- `/hu/` for the Hungarian catalog
+- `/module-packs/<module-slug>/` for combined module print packs
+- `/hu/module-packs/<module-slug>/` for Hungarian module print packs
 
 Start a local preview server on a free local port. Example:
 

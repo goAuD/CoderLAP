@@ -3,6 +3,7 @@
 {% set topic_nav = navigation.get("topics", {}).get(topic.id, {}) %}
 {% set prev_ref = namespace(item=None) %}
 {% set next_ref = namespace(item=None) %}
+{% set module_ref = namespace(item=None) %}
 {% for item in topic_index %}
   {% if item.id == topic_nav.get("previous_id") %}
     {% set prev_ref.item = item %}
@@ -11,10 +12,18 @@
     {% set next_ref.item = item %}
   {% endif %}
 {% endfor %}
+{% for main_topic in navigation.get("main_topics", []) %}
+  {% if main_topic.number == topic.main_topic_number %}
+    {% set module_ref.item = main_topic %}
+  {% endif %}
+{% endfor %}
 <section class="page-shell" aria-label="{{ topic.title }}">
   <section class="topic-actions">
     <a class="site-nav-link site-nav-link--button" href="{{ site_root | default('/', true) }}">{{ ui.get("back_to_catalog", "") }}</a>
     <button type="button" class="site-nav-link site-nav-link--button" data-print-trigger>{{ ui.get("print_label", "") }}</button>
+    {% if module_ref.item %}
+    <a class="site-nav-link site-nav-link--button" href="{{ site_root | default('/', true) }}module-packs/{{ module_ref.item.pack_slug }}/">{{ ui.get("module_pack_print_label", "") }}</a>
+    {% endif %}
   </section>
 
   <article class="topic-article">{{ content_html | safe }}</article>
@@ -36,7 +45,8 @@
     {{ {
       "mark_done_label": ui.get("mark_done_label", "Done"),
       "mark_undo_label": ui.get("mark_undo_label", "Undo"),
-      "site_root": site_root | default("/", true)
+      "site_root": site_root | default("/", true),
+      "module_pack_label": ui.get("module_pack_label", "")
     } | tojson }}
   </script>
 </section>

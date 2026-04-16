@@ -15,7 +15,7 @@ for teachers and students.
 2. Access hygiene for the private rollout
 3. Lightweight feedback loop for teachers and students
 4. ~~Search quality improvements~~ Done
-5. Module-level print packs
+5. ~~Module-level print packs~~ Done
 6. Simple uptime and expiry monitoring
 7. Final Austrian legal review before wider release
 
@@ -148,6 +148,14 @@ Possible shape:
 Done when:
 
 - at least one module can be exported in a teacher-friendly printable format
+
+Current state:
+
+- done via generated module pack routes for all `18` main modules
+- topic pages link directly to the current module pack
+- sidebar groups expose the same print-pack entry point
+- module pack pages keep the existing surface/button/layout language instead of
+  introducing a separate visual pattern
 
 ## 6. Simple Uptime And Expiry Monitoring
 

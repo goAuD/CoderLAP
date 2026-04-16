@@ -74,6 +74,11 @@
   gap: var(--space-5);
 }
 
+.module-pack-topics {
+  display: grid;
+  gap: var(--space-5);
+}
+
 .catalog-results {
   display: grid;
   gap: var(--space-4);
