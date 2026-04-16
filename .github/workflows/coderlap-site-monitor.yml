@@ -1,0 +1,38 @@
+name: CoderLAP Site Monitor
+
+'on':
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coderlap-site-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    name: Public health check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run site health check
+        env:
+          CODERLAP_BASIC_AUTH_USER: ${{ secrets.CODERLAP_BASIC_AUTH_USER }}
+          CODERLAP_BASIC_AUTH_PASSWORD: ${{ secrets.CODERLAP_BASIC_AUTH_PASSWORD }}
+        run: |
+          python scripts/check_site_health.py \
+            --base-url https://coderlap.com \
+            --www-url https://www.coderlap.com \
+            --min-cert-days 21

@@ -33,6 +33,8 @@ Last updated: `2026-04-16`
 - SSL/TLS mode is `Full (strict)`
 - Caddy serves a Cloudflare Origin Certificate for `coderlap.com`
 - temporary `basic_auth` protects the site during private rollout
+- uptime/expiry monitoring now exists through `scripts/check_site_health.py`
+  and `.github/workflows/coderlap-site-monitor.yml`
 - `robots.txt` currently blocks indexing
 - `.well-known/security.txt` is shipped from the repo
 
@@ -52,6 +54,8 @@ Read only when relevant:
 - `docs/project/next-improvements-checklist.md`
 - `docs/project/backup-restore-playbook.md`
 - `docs/project/feedback-loop-playbook.md`
+- `docs/project/uptime-expiry-monitoring.md`
+- `docs/project/final-austrian-legal-review.md`
 - `docs/project/github-release-hygiene.md`
 - `docs/project/release-notes-v0.1.0-private-beta.1.md`
 - `site/content/search/search_aliases.json`
@@ -85,8 +89,6 @@ such as `8001` and use the matching URL.
 
 ## Most Likely Next Work
 
-- optional Cloudflare Authenticated Origin Pull hardening
-- simple uptime / expiry monitoring
 - final Austrian legal/imprint pass before public launch
 - switch `robots.txt` to an indexable version when `basic_auth` is removed
 - optional MX/mail routing for `coderlap.com`
@@ -111,3 +113,6 @@ such as `8001` and use the matching URL.
   Origin Certificate is active
 - the stricter Caddy `client_auth` block for Cloudflare Authenticated Origin
   Pulls is not active at the moment
+- GitHub monitoring secrets expected by the health-check workflow:
+  - `CODERLAP_BASIC_AUTH_USER`
+  - `CODERLAP_BASIC_AUTH_PASSWORD`

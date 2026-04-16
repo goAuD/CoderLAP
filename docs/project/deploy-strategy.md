@@ -189,14 +189,19 @@ free port such as `8001` and adjust the URL used for manual verification.
 
 1. Re-introduce Cloudflare Authenticated Origin Pulls only after explicit
    end-to-end verification.
-2. Do one final Austrian legal/imprint review before removing `basic_auth` for
+2. Keep the site health workflow wired with current `basic_auth` secrets:
+   - `CODERLAP_BASIC_AUTH_USER`
+   - `CODERLAP_BASIC_AUTH_PASSWORD`
+3. Do one final Austrian legal/imprint review before removing `basic_auth` for
    public access.
-3. Replace the restrictive `robots.txt` with an indexable version once the site
+4. Replace the restrictive `robots.txt` with an indexable version once the site
    is ready for search engines.
-4. Add MX/mail routing later if the domain should receive operational or contact
+5. Add MX/mail routing later if the domain should receive operational or contact
    email.
 
 Related documents:
 
 - [private-rollout-access.md](./private-rollout-access.md)
 - [pre-public-checklist.md](./pre-public-checklist.md)
+- [uptime-expiry-monitoring.md](./uptime-expiry-monitoring.md)
+- [final-austrian-legal-review.md](./final-austrian-legal-review.md)
