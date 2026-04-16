@@ -37,6 +37,7 @@ Also confirm:
 - `.github/CODEOWNERS` exists
 - `.github/PULL_REQUEST_TEMPLATE.md` exists
 - `.github/ISSUE_TEMPLATE/` contains the intended issue types
+- `.github/dependabot.yml` exists
 
 ## GitHub Settings
 
@@ -49,6 +50,10 @@ Recommended first-pass settings:
 - wiki: optional, usually unnecessary here
 - projects: optional
 - pages: not needed because deployment is already external
+- dependency graph: enabled
+- Dependabot alerts/security updates: enabled
+- private vulnerability reporting: enabled
+- secret scanning alerts and push protection: enabled when available
 
 Reasoning:
 
@@ -56,6 +61,8 @@ Reasoning:
 - discussions are only useful if you want open-ended community conversation
 - this repo does not need GitHub Pages because delivery already happens through
   Cloudflare + Caddy
+- dependency and secret visibility become more important immediately in a public
+  repo
 
 ## Metadata
 
@@ -109,6 +116,7 @@ the repo visibility flip.
 Related doc:
 
 - [feedback-loop-playbook.md](./feedback-loop-playbook.md)
+- [github-security-settings-checklist.md](./github-security-settings-checklist.md)
 
 ## Site Separation Rule
 
