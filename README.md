@@ -55,6 +55,7 @@ Architecture and delivery notes are documented in:
 - [docs/project/github-release-hygiene.md](./docs/project/github-release-hygiene.md)
 - [docs/project/release-notes-v0.1.0-private-beta.1.md](./docs/project/release-notes-v0.1.0-private-beta.1.md)
 - [docs/project/private-rollout-access.md](./docs/project/private-rollout-access.md)
+- [docs/project/access-hygiene-playbook.md](./docs/project/access-hygiene-playbook.md)
 - [docs/project/pre-public-checklist.md](./docs/project/pre-public-checklist.md)
 - [docs/project/next-improvements-checklist.md](./docs/project/next-improvements-checklist.md)
 - [docs/project/backup-restore-playbook.md](./docs/project/backup-restore-playbook.md)
