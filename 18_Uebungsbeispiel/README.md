@@ -74,10 +74,10 @@ Azért, hogy ez vizsgán is reálisan megoldható legyen, itt egy **tudatosan eg
 
 ### Konkrét mintamegoldás
 
-- [Musterloesung_Minimal/README.md](./Musterloesung_Minimal/README.md)
-- [Musterloesung_Minimal/index.html](./Musterloesung_Minimal/index.html)
-- [Musterloesung_Minimal/styles.css](./Musterloesung_Minimal/styles.css)
-- [Musterloesung_Minimal/app.js](./Musterloesung_Minimal/app.js)
+- [06_Musterloesung_Minimal/README.md](./06_Musterloesung_Minimal/README.md)
+- [06_Musterloesung_Minimal/index.html](./06_Musterloesung_Minimal/index.html)
+- [06_Musterloesung_Minimal/styles.css](./06_Musterloesung_Minimal/styles.css)
+- [06_Musterloesung_Minimal/app.js](./06_Musterloesung_Minimal/app.js)
 
 ## Vizsgastratégia
 

@@ -35,8 +35,13 @@ def build_output_path(output_dir: Path, family_slug: str, source_url: str) -> Pa
 
 def fetch_css(css_url: str) -> str:
     request = urllib.request.Request(css_url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT_SECONDS) as response:
-        return response.read().decode("utf-8")
+    try:
+        with urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT_SECONDS) as response:
+            return response.read().decode("utf-8")
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"Failed to fetch font CSS from {css_url}: {exc}") from exc
+    except UnicodeDecodeError as exc:
+        raise RuntimeError(f"Unexpected encoding in font CSS response from {css_url}: {exc}") from exc
 
 
 def extract_font_urls(css_text: str) -> list[str]:
@@ -68,14 +73,14 @@ def download_font(font_url: str, target_path: Path) -> None:
             temp_path = Path(temp_file.name)
             try:
                 shutil.copyfileobj(response, temp_file)
-            except Exception:
+            except Exception:  # re-raises immediately; catches network + I/O errors
                 temp_file.close()
                 temp_path.unlink(missing_ok=True)
                 raise
 
     try:
         os.replace(temp_path, target_path)
-    except Exception:
+    except OSError:
         temp_path.unlink(missing_ok=True)
         raise
 

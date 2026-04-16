@@ -330,11 +330,7 @@ def _build_language(
     write_json(lang_output / "data" / "navigation.json", navigation)
 
 
-def build_site(
-    settings: BuildSettings,
-    ui_strings: dict[str, Any] | None = None,
-    legal_pages: dict[str, str] | None = None,
-) -> Path:
+def build_site(settings: BuildSettings) -> Path:
     topics = load_registry_items(settings.registry_path)
     navigation = build_navigation(topics)
     env = build_template_environment(settings.template_dir)
@@ -348,139 +344,10 @@ def build_site(
 
     cache_bust = str(int(time.time()))
 
-    if settings.languages:
-        for lang_config in settings.languages:
-            _build_language(
-                lang_config, settings, settings.languages,
-                topics, topic_index, search_alias_groups, navigation, env, cache_bust,
-            )
-    else:
-        # Legacy single-language fallback
-        if ui_strings is None or legal_pages is None:
-            raise ValueError("ui_strings and legal_pages are required for single-language builds")
-        _build_single_language(
-            settings, ui_strings, legal_pages,
+    for lang_config in settings.languages:
+        _build_language(
+            lang_config, settings, settings.languages,
             topics, topic_index, search_alias_groups, navigation, env, cache_bust,
         )
 
     return settings.output_dir
-
-
-def _build_single_language(
-    settings: BuildSettings,
-    ui_strings: dict[str, Any],
-    legal_pages: dict[str, str],
-    topics: list,
-    topic_index: list[dict[str, Any]],
-    search_alias_groups: list[list[str]],
-    navigation: dict,
-    env: Any,
-    cache_bust: str,
-) -> None:
-    """Legacy single-language build path for backward compatibility."""
-    ui_lang = str(ui_strings.get("lang", "en"))
-    asset_prefix = "/assets"
-
-    for topic in topics:
-        markdown_text = _load_topic_markdown_for_language(topic, settings.repo_root, ui_lang)
-        content_html = render_markdown(
-            markdown_text,
-            suppress_redundant_summary_heading=True,
-        )
-        rendered = env.get_template("topic.html").render(
-            ui_lang=ui_lang,
-            page_lang=topic.lang,
-            page_title=topic.title,
-            asset_prefix=asset_prefix,
-            body_class="topic-page",
-            ui=ui_strings,
-            topic=topic,
-            content_html=content_html,
-            navigation=navigation,
-            topic_index=topic_index,
-            cache_bust=cache_bust,
-            site_root="/",
-            lang_switcher=[],
-            current_lang=ui_lang,
-        )
-        _write_text(settings.output_dir / "topics" / topic.slug / "index.html", rendered)
-
-    topics_by_main_number = _topics_by_main_topic_number(topics)
-    for main_topic in navigation["main_topics"]:
-        module_topics = []
-        for topic in topics_by_main_number.get(main_topic["number"], []):
-            markdown_text = _load_topic_markdown_for_language(topic, settings.repo_root, ui_lang)
-            module_topics.append(
-                {
-                    "id": topic.id,
-                    "title": topic.title,
-                    "slug": topic.slug,
-                    "subtopic_number": topic.subtopic_number,
-                    "content_html": render_markdown(
-                        markdown_text,
-                        suppress_redundant_summary_heading=True,
-                    ),
-                }
-            )
-
-        module_pack = {
-            "number": main_topic["number"],
-            "label": main_topic["label"],
-            "display_label": _display_label(main_topic["label"]),
-            "pack_slug": main_topic["pack_slug"],
-            "topic_count": len(module_topics),
-            "topics": module_topics,
-        }
-        rendered = env.get_template("module_pack.html").render(
-            ui_lang=ui_lang,
-            page_lang=ui_lang,
-            page_title=f"{module_pack['number']} · {module_pack['display_label']}",
-            asset_prefix=asset_prefix,
-            body_class="module-pack-page",
-            ui=ui_strings,
-            module_pack=module_pack,
-            navigation=navigation,
-            cache_bust=cache_bust,
-            site_root="/",
-            lang_switcher=[],
-            current_lang=ui_lang,
-        )
-        _write_text(settings.output_dir / "module-packs" / module_pack["pack_slug"] / "index.html", rendered)
-
-    home_html = env.get_template("home.html").render(
-        ui_lang=ui_lang,
-        page_lang=ui_lang,
-        page_title=ui_strings.get("home_title", "CoderLAP"),
-        asset_prefix=asset_prefix,
-        body_class="home-page",
-        ui=ui_strings,
-        navigation=navigation,
-        topic_index=topic_index,
-        search_alias_groups=search_alias_groups,
-        cache_bust=cache_bust,
-        site_root="/",
-        lang_switcher=[],
-        current_lang=ui_lang,
-    )
-    _write_text(settings.output_dir / "index.html", home_html)
-
-    for slug, markdown_text in legal_pages.items():
-        rendered = env.get_template("legal.html").render(
-            ui_lang=ui_lang,
-            page_lang=ui_lang,
-            page_title=slug.title(),
-            asset_prefix=asset_prefix,
-            body_class="legal-page",
-            ui=ui_strings,
-            legal_slug=slug,
-            content_html=render_markdown(markdown_text),
-            navigation=navigation,
-            cache_bust=cache_bust,
-            site_root="/",
-            lang_switcher=[],
-            current_lang=ui_lang,
-        )
-        _write_text(settings.output_dir / slug / "index.html", rendered)
-
-    write_json(settings.output_dir / "data" / "topic-index.json", topic_index)
-    write_json(settings.output_dir / "data" / "navigation.json", navigation)

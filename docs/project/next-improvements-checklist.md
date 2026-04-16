@@ -11,9 +11,9 @@ for teachers and students.
 
 ## Priority Order
 
-1. Backup and restore playbook
-2. Access hygiene for the private rollout
-3. Lightweight feedback loop for teachers and students
+1. ~~Backup and restore playbook~~ Done
+2. ~~Access hygiene for the private rollout~~ Done
+3. ~~Lightweight feedback loop for teachers and students~~ Done
 4. ~~Search quality improvements~~ Done
 5. ~~Module-level print packs~~ Done
 6. Simple uptime and expiry monitoring

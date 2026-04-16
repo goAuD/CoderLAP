@@ -67,6 +67,13 @@ def get_opened_at(markdown: str) -> str | None:
     return None
 
 
+def _read_markdown(path: Path) -> str:
+    try:
+        return path.read_text(encoding="utf-8")
+    except UnicodeDecodeError as exc:
+        raise ValueError(f"Invalid UTF-8 in {path}: {exc}") from exc
+
+
 def build_registry() -> list[RegistryItem]:
     items: list[RegistryItem] = []
 
@@ -74,6 +81,31 @@ def build_registry() -> list[RegistryItem]:
         topic_match = TOPIC_PATTERN.match(topic_dir.name)
         if not topic_match:
             continue
+
+        main_number = topic_match.group("main")
+
+        # Main-topic-level README.md registered as subtopic "00"
+        main_readme = topic_dir / "README.md"
+        if main_readme.exists():
+            markdown = _read_markdown(main_readme)
+            slug = f"{main_number}-00-{topic_dir.name[3:].lower().replace(' ', '-')}"
+            item = RegistryItem(
+                id=f"LAP-{main_number}-00",
+                lang="hu",
+                title=get_markdown_title(markdown, topic_dir.name[3:].replace("_", " ")),
+                path=str(main_readme.relative_to(ROOT)).replace("\\", "/"),
+                main_topic_number=main_number,
+                main_topic_dir=topic_dir.name,
+                subtopic_number="00",
+                subtopic_dir=topic_dir.name,
+                slug=slug,
+                review_status="draft",
+                translation_status=get_translation_status(topic_dir),
+                source_count=count_sources(markdown),
+                opened_at=get_opened_at(markdown),
+                canonical=True,
+            )
+            items.append(item)
 
         for subtopic_dir in sorted(p for p in topic_dir.iterdir() if p.is_dir()):
             subtopic_match = SUBTOPIC_PATTERN.match(subtopic_dir.name)
@@ -84,8 +116,7 @@ def build_registry() -> list[RegistryItem]:
             if not readme.exists():
                 continue
 
-            markdown = readme.read_text(encoding="utf-8")
-            main_number = topic_match.group("main")
+            markdown = _read_markdown(readme)
             sub_number = subtopic_match.group("sub")
             slug = f"{main_number}-{sub_number}-{subtopic_dir.name[3:].lower()}"
             slug = slug.replace(" ", "-")

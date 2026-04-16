@@ -4,7 +4,7 @@
 ![Content](https://img.shields.io/badge/content-DE%20default%20%2F%20HU%20canonical-1f883d)
 ![Folders](https://img.shields.io/badge/folders-German-6f42c1)
 ![Sources](https://img.shields.io/badge/sources-modern%20%26%20reliable-0969da)
-![Registry](https://img.shields.io/badge/registry-233%20items-0a7ea4)
+![Registry](https://img.shields.io/badge/registry-235%20items-0a7ea4)
 ![i18n](https://img.shields.io/badge/i18n-DE%20%2B%20HU%20complete-1f883d)
 ![Frontend](https://img.shields.io/badge/frontend-HTML%2FCSS%2FJS%20built-1f883d)
 ![Backend](https://img.shields.io/badge/backend-Python%20%2B%20Jinja2-0969da)
@@ -20,7 +20,7 @@ with:
 
 - German folder and file names
 - bilingual content: German (default) and Hungarian
-- `233` subtopic documents fully translated to German (`README.de.md`)
+- `235` registered topic documents, all translated to German (`README.de.md`)
 - clean, visual-first Markdown documents
 - explicit source lists at the end of each topic
 - a working static site generator with i18n support
@@ -69,7 +69,7 @@ Architecture and delivery notes are documented in:
 The root contains:
 
 - `18` main topic folders
-- `233` subtopic folders
+- `235` registered topic documents (subtopics + module overviews)
 - one `README.md` per subtopic folder as the canonical Hungarian source file
 - one `README.de.md` translation sidecar per subtopic folder
 - generated registry files for all canonical topic documents
@@ -126,12 +126,12 @@ Completed so far:
 - `13 / 13` subtopic documents created for topic `17`
 - main topic `18_Uebungsbeispiel` completed
 - `5 / 5` subtopic documents created for topic `18`
-- practical reference solution added under
-  `18_Uebungsbeispiel/Musterloesung_Minimal`
-- total completed topic documents so far: `233`
-- stable metadata registry generated for all `233` canonical topic documents
+- module overview (`LAP-18-00`) and practical reference solution (`LAP-18-06`)
+  registered under `18_Uebungsbeispiel/`
+- total registered topic documents: `235`
+- stable metadata registry generated for all `235` canonical topic documents
 - i18n infrastructure complete: German (default at `/`) and Hungarian (`/hu/`)
-- all `233` subtopic documents translated to German as `README.de.md`
+- all `235` topic documents translated to German as `README.de.md`
 - static site generator built with Jinja2, producing bilingual output to `dist/`
 - module-level print pack pages generated for all `18` modules
 - restricted live delivery active at `coderlap.com`
@@ -199,7 +199,7 @@ What was deliberately deferred:
 2. ~~Continue from the GitHub-ready copy under `C:\GitHub\CoderLAP`.~~ Done.
 3. ~~Add i18n-ready structure on top of the registry and current Markdown
    files.~~ Done.
-4. ~~Create translated variants.~~ Done — all `233` subtopics translated to
+4. ~~Create translated variants.~~ Done — all `235` topics translated to
    German.
 5. ~~Build a simple HTML/CSS/JS frontend for browsing the full catalog.~~ Done.
 6. ~~Deploy the static result through Caddy on `coderlap.com` with a single
