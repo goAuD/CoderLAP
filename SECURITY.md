@@ -30,6 +30,8 @@ Repository owner and code owner:
 - do not paste credentials, hashes, or server-only details into issues,
   screenshots, or docs
 - keep GitHub secrets and deploy credentials current for automation
+- keep Dependabot, dependency visibility, and repository security features on
+  when the repo is public
 - treat repository visibility and site access control as separate decisions
 - prefer one clean deployment path
 - review Caddy and Cloudflare configuration before wider exposure

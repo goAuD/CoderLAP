@@ -53,6 +53,7 @@ Read only when relevant:
 - `docs/project/access-hygiene-playbook.md`
 - `docs/project/pre-public-checklist.md`
 - `docs/project/public-repo-flip-checklist.md`
+- `docs/project/github-security-settings-checklist.md`
 - `docs/project/next-improvements-checklist.md`
 - `docs/project/backup-restore-playbook.md`
 - `docs/project/feedback-loop-playbook.md`
