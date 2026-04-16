@@ -629,14 +629,14 @@
     var panel = null;
     var ready = false;
 
-    function buildSidebar(mainTopics, modulePackLabel) {
+    function buildSidebar(mainTopics, modulePackLabel, navLabel) {
       sidebar = document.createElement("aside");
       sidebar.className = "catalog-sidebar";
       sidebar.hidden = true;
 
       panel = document.createElement("div");
       panel.setAttribute("data-sidebar-panel", "");
-      panel.setAttribute("aria-label", (uiCopyQV && uiCopyQV.primary_navigation_label) || "Navigation");
+      panel.setAttribute("aria-label", navLabel || "Navigation");
 
       mainTopics.forEach(function (mainTopic) {
         panel.appendChild(createSidebarSection(mainTopic, modulePackLabel || ""));
@@ -713,7 +713,7 @@
             return;
           }
           SITE_ROOT = root;
-          buildSidebar(nav.main_topics, uiCopyQV.module_pack_label || "");
+          buildSidebar(nav.main_topics, uiCopyQV.module_pack_label || "", uiCopyQV.primary_navigation_label || "");
           ready = true;
           openOverlay();
         })
