@@ -3,6 +3,7 @@
 
   /* ── Progress persistence (localStorage) ────────────────────────── */
   var PROGRESS_KEY = "coderlap_progress";
+  var _lastSaveFailed = false;
 
   function loadProgress() {
     try {
@@ -15,8 +16,9 @@
   function saveProgress(data) {
     try {
       localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
+      _lastSaveFailed = false;
     } catch (e) {
-      // quota exceeded — silently ignore
+      _lastSaveFailed = true;
     }
   }
 
@@ -72,6 +74,46 @@
     while (node.firstChild) {
       node.removeChild(node.firstChild);
     }
+  }
+
+  /* ── Focus trap for overlays ──────────────────────────────────── */
+  var _activeTrap = null;
+
+  function _trapKeyHandler(event) {
+    if (event.key !== "Tab" || !_activeTrap) {
+      return;
+    }
+    var focusable = _activeTrap.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    if (!focusable.length) {
+      return;
+    }
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (event.shiftKey) {
+      if (document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
+  function enableFocusTrap(container) {
+    _activeTrap = container;
+    document.addEventListener("keydown", _trapKeyHandler);
+    var firstFocusable = container.querySelector('a[href], button:not([disabled])');
+    if (firstFocusable) {
+      firstFocusable.focus();
+    }
+  }
+
+  function disableFocusTrap() {
+    _activeTrap = null;
+    document.removeEventListener("keydown", _trapKeyHandler);
   }
 
   function formatMainTopicLabel(label) {
@@ -228,6 +270,7 @@
   function createSidebarSection(mainTopic, modulePackLabel) {
     var section = document.createElement("section");
     section.className = "sidebar-group";
+    var currentTopicId = document.body.getAttribute("data-topic-id") || "";
 
     var header = document.createElement("div");
     header.className = "sidebar-group__header";
@@ -256,6 +299,10 @@
       link.className = "sidebar-group__link";
       link.textContent = topic.subtopic_number + " · " + topic.title;
       link.setAttribute("href", SITE_ROOT + "topics/" + topic.slug + "/");
+
+      if (topic.id === currentTopicId) {
+        link.setAttribute("aria-current", "page");
+      }
 
       var status = getStatus(topic.id);
       if (status === "done") {
@@ -326,10 +373,16 @@
     function openOverlay() {
       panel.hidden = false;
       document.body.classList.add("sidebar-open");
+      enableFocusTrap(container);
     }
 
     function closeOverlay() {
+      disableFocusTrap();
       document.body.classList.remove("sidebar-open");
+      var trigger = document.querySelector("[data-quick-view-link]");
+      if (trigger) {
+        trigger.focus();
+      }
     }
 
     // Close overlay when clicking a link inside the panel
@@ -473,7 +526,11 @@
       });
     }
 
-    searchInput.addEventListener("input", renderResults);
+    var searchDebounceTimer = null;
+    searchInput.addEventListener("input", function () {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(renderResults, 250);
+    });
     moduleFilter.addEventListener("change", renderResults);
     renderResults();
   }
@@ -509,11 +566,13 @@
     var uiCopy = parseJsonScript("[data-ui-copy-json]") || {};
     var doneLabel = uiCopy.mark_done_label || "Done";
     var undoLabel = uiCopy.mark_undo_label || "Undo";
+    var storageWarning = uiCopy.storage_warning_label || "Not saved";
 
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "site-nav-link site-nav-link--button topic-done-btn";
     btn.setAttribute("data-done-toggle", "");
+    var warningTimer = null;
 
     function updateButton() {
       var status = getStatus(topicId);
@@ -526,6 +585,16 @@
       }
     }
 
+    function flashWarning() {
+      clearTimeout(warningTimer);
+      btn.textContent = "⚠ " + storageWarning;
+      btn.classList.add("topic-done-btn--warning");
+      warningTimer = setTimeout(function () {
+        btn.classList.remove("topic-done-btn--warning");
+        updateButton();
+      }, 3000);
+    }
+
     btn.addEventListener("click", function () {
       var status = getStatus(topicId);
       if (status === "done") {
@@ -533,7 +602,11 @@
       } else {
         markDone(topicId);
       }
-      updateButton();
+      if (_lastSaveFailed) {
+        flashWarning();
+      } else {
+        updateButton();
+      }
     });
 
     updateButton();
@@ -563,6 +636,7 @@
 
       panel = document.createElement("div");
       panel.setAttribute("data-sidebar-panel", "");
+      panel.setAttribute("aria-label", (uiCopyQV && uiCopyQV.primary_navigation_label) || "Navigation");
 
       mainTopics.forEach(function (mainTopic) {
         panel.appendChild(createSidebarSection(mainTopic, modulePackLabel || ""));
@@ -588,12 +662,17 @@
       }
       sidebar.hidden = false;
       document.body.classList.add("sidebar-open");
+      enableFocusTrap(sidebar);
     }
 
     function closeOverlay() {
+      disableFocusTrap();
       document.body.classList.remove("sidebar-open");
       if (sidebar) {
         sidebar.hidden = true;
+      }
+      if (quickViewLink) {
+        quickViewLink.focus();
       }
     }
 
@@ -627,7 +706,7 @@
 
       var uiCopyQV = parseJsonScript("[data-ui-copy-json]") || {};
       var root = uiCopyQV.site_root || SITE_ROOT;
-      fetch(root + "data/navigation.json")
+      fetch(root + "data/navigation.json", { signal: AbortSignal.timeout(5000) })
         .then(function (res) { return res.json(); })
         .then(function (nav) {
           if (!nav || !Array.isArray(nav.main_topics)) {
@@ -647,7 +726,7 @@
   function setupProgressCounter() {
     var heroPill = document.querySelector("[data-hero-progress]");
     var topicIndex = parseJsonScript("[data-topic-index-json]");
-    var totalTopics = Array.isArray(topicIndex) ? topicIndex.length : 233;
+    var totalTopics = Array.isArray(topicIndex) ? topicIndex.length : 235;
     var counts = countByStatus();
 
     if (heroPill) {

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Automated content review for all 233 subtopic README.md files.
+"""Automated content review for all 235 registered topic README.md files.
 
 Checks:
   1. Expected sections present

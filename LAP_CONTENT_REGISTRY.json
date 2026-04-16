@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-12",
+  "generated_at": "2026-04-16",
   "generator": "scripts/generate_content_registry.py",
   "id_format": "LAP-<MAIN>-<SUB>",
-  "item_count": 233,
+  "item_count": 235,
   "source_root": ".",
   "items": [
     {
@@ -289,7 +289,7 @@
       "slug": "03-01-smartphones_technische_merkmale",
       "review_status": "draft",
       "translation_status": "de_complete",
-      "source_count": 8,
+      "source_count": 3,
       "opened_at": "2026-04-08",
       "canonical": true
     },
@@ -3654,6 +3654,22 @@
       "canonical": true
     },
     {
+      "id": "LAP-18-00",
+      "lang": "hu",
+      "title": "Uebungsbeispiel",
+      "path": "18_Uebungsbeispiel/README.md",
+      "main_topic_number": "18",
+      "main_topic_dir": "18_Uebungsbeispiel",
+      "subtopic_number": "00",
+      "subtopic_dir": "18_Uebungsbeispiel",
+      "slug": "18-00-uebungsbeispiel",
+      "review_status": "draft",
+      "translation_status": "de_complete",
+      "source_count": 2,
+      "opened_at": "2026-04-09",
+      "canonical": true
+    },
+    {
       "id": "LAP-18-01",
       "lang": "hu",
       "title": "Anforderung und Setup",
@@ -3730,6 +3746,22 @@
       "review_status": "draft",
       "translation_status": "de_complete",
       "source_count": 2,
+      "opened_at": "2026-04-09",
+      "canonical": true
+    },
+    {
+      "id": "LAP-18-06",
+      "lang": "hu",
+      "title": "Musterloesung Minimal",
+      "path": "18_Uebungsbeispiel/06_Musterloesung_Minimal/README.md",
+      "main_topic_number": "18",
+      "main_topic_dir": "18_Uebungsbeispiel",
+      "subtopic_number": "06",
+      "subtopic_dir": "06_Musterloesung_Minimal",
+      "slug": "18-06-musterloesung_minimal",
+      "review_status": "draft",
+      "translation_status": "de_complete",
+      "source_count": 4,
       "opened_at": "2026-04-09",
       "canonical": true
     }

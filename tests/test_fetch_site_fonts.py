@@ -2,6 +2,7 @@ from io import BytesIO
 from pathlib import Path
 import tempfile
 import unittest
+import urllib.error
 from unittest.mock import MagicMock, patch
 
 from scripts.fetch_site_fonts import (
@@ -139,6 +140,26 @@ class FetchSiteFontsTest(unittest.TestCase):
 
         _, kwargs = urlopen_mock.call_args
         self.assertEqual(kwargs["timeout"], NETWORK_TIMEOUT_SECONDS)
+
+
+    def test_fetch_css_raises_runtime_error_on_network_failure(self) -> None:
+        with patch(
+            "scripts.fetch_site_fonts.urllib.request.urlopen",
+            side_effect=urllib.error.URLError("network unreachable"),
+        ):
+            with self.assertRaises(RuntimeError) as cm:
+                fetch_css("https://fonts.googleapis.com/css2?family=Manrope")
+            self.assertIn("network unreachable", str(cm.exception))
+
+    def test_fetch_css_raises_runtime_error_on_decode_failure(self) -> None:
+        fake_response = MagicMock()
+        fake_response.__enter__.return_value.read.return_value = b"\x80\x81\x82"
+        fake_response.__exit__.return_value = None
+
+        with patch("scripts.fetch_site_fonts.urllib.request.urlopen", return_value=fake_response):
+            with self.assertRaises(RuntimeError) as cm:
+                fetch_css("https://fonts.googleapis.com/css2?family=Manrope")
+            self.assertIn("encoding", str(cm.exception).lower())
 
 
 if __name__ == "__main__":

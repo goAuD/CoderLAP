@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from scripts.site_builder.build import build_site, write_json
-from scripts.site_builder.settings import BuildSettings
+from scripts.site_builder.settings import BuildSettings, LanguageConfig
 
 
 def _write_registry(registry_path: Path) -> None:
@@ -114,6 +114,32 @@ class BuildSiteTests(unittest.TestCase):
             )
             (output_dir / "stale.txt").write_text("remove me", encoding="utf-8")
 
+            i18n_dir = repo_root / "i18n"
+            i18n_dir.mkdir()
+            legal_dir = repo_root / "legal" / "en"
+            legal_dir.mkdir(parents=True)
+
+            (i18n_dir / "en.json").write_text(
+                json.dumps({
+                    "lang": "en",
+                    "project_tagline": "Study faster",
+                    "home_title": "CoderLAP",
+                    "home_intro": "A focused LAP study site.",
+                }),
+                encoding="utf-8",
+            )
+            (legal_dir / "imprint.md").write_text("# Imprint\n\nOwner", encoding="utf-8")
+            (legal_dir / "privacy.md").write_text("# Privacy\n\nRules", encoding="utf-8")
+
+            languages = (
+                LanguageConfig(
+                    code="en",
+                    i18n_file=i18n_dir / "en.json",
+                    legal_content_dir=legal_dir,
+                    is_default=True,
+                ),
+            )
+
             settings = BuildSettings(
                 repo_root=repo_root,
                 registry_path=registry_path,
@@ -121,22 +147,12 @@ class BuildSiteTests(unittest.TestCase):
                 asset_dir=asset_dir,
                 static_content_dir=static_content_dir,
                 output_dir=output_dir,
-                i18n_dir=repo_root / "i18n",
-                legal_content_dir=repo_root / "legal",
+                i18n_dir=i18n_dir,
+                legal_content_dir=legal_dir,
+                languages=languages,
             )
 
-            ui_strings = {
-                "lang": "en",
-                "project_tagline": "Study faster",
-                "home_title": "CoderLAP",
-                "home_intro": "A focused LAP study site.",
-            }
-            legal_pages = {
-                "imprint": "# Imprint\n\nOwner",
-                "privacy": "# Privacy\n\nRules",
-            }
-
-            result = build_site(settings, ui_strings, legal_pages)
+            result = build_site(settings)
 
             self.assertEqual(result, output_dir)
             self.assertFalse((output_dir / "stale.txt").exists())
