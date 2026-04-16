@@ -6,10 +6,10 @@ Ez egy tudatosan egyszerű, vizsgabarát mintamegoldás a `18_Uebungsbeispiel` b
 
 ## Fájlok
 
-- [index.html](./index.html)
-- [styles.css](./styles.css)
-- [app.js](./app.js)
-- [vendor/qrcode.js](./vendor/qrcode.js)
+- `index.html`
+- `styles.css`
+- `app.js`
+- `vendor/qrcode.js`
 
 ## Mit tud?
 
@@ -27,7 +27,7 @@ Ez egy tudatosan egyszerű, vizsgabarát mintamegoldás a `18_Uebungsbeispiel` b
 
 ## Futtatás
 
-1. Nyisd meg az [index.html](./index.html) fájlt böngészőben.
+1. Nyisd meg az `index.html` fájlt böngészőben.
 2. Töltsd ki a mezőket.
 3. Kattints a gombra.
 4. Ellenőrizd a megjelenő eredményt és a `QR`-kódot.
