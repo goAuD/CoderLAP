@@ -52,6 +52,10 @@ Recommended topic set:
 The topic set should stay concise and descriptive. Avoid topic churn unless the
 project direction changes materially.
 
+Release note source files live under:
+
+- [../releases/README.md](../releases/README.md)
+
 ## Release Intent
 
 The release list should communicate project maturity, not marketing hype.
@@ -65,7 +69,9 @@ Use private rollout milestones first:
 
 - `v0.1.0-private-beta.1` first stable private bilingual rollout behind
   `basic_auth`
-- `v0.2.0-reviewed-content` content, translation, and legal review materially
+- `v0.2.0-public-repo.1` repository made public while the site may still remain
+  access-restricted
+- `v0.3.0-reviewed-content` content, translation, and legal review materially
   improved
 - `v1.0.0-public` unrestricted public release candidate or public launch
 

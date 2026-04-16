@@ -3,8 +3,8 @@
 Last updated: `2026-04-16`
 
 This playbook defines how feedback should be collected and triaged during the
-current private rollout and how that process should evolve once direct GitHub
-issue intake is intentionally opened.
+current restricted rollout and how that process should evolve once direct
+GitHub issue intake is intentionally opened.
 
 The goal is to keep feedback lightweight and useful. The goal is not to build a
 backend system or add operational overhead that the project does not need.
@@ -158,3 +158,7 @@ This improvement is complete when:
 - the repo is ready for later direct GitHub issue intake
 - the legal text no longer overstates the current feedback openness
 - the next step to expose a public feedback link is obvious and low-risk
+
+Related checklist:
+
+- [public-repo-flip-checklist.md](./public-repo-flip-checklist.md)
