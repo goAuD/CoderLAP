@@ -9,11 +9,13 @@ Dies ist eine bewusst einfache, prüfungstaugliche Musterlösung für den Block 
 - `index.html`
 - `styles.css`
 - `app.js`
-- `vendor/qrcode.js` — Third-Party-Bibliothek, nicht zu bearbeiten
+- `vendor/qrcode.js` - Third-Party-Bibliothek, nicht zu bearbeiten
+  Quellcode: https://github.com/kazuhikoarase/qrcode-generator
 
 ## Quellcode
 
-### index.html
+<details>
+<summary>index.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -116,7 +118,10 @@ Dies ist eine bewusst einfache, prüfungstaugliche Musterlösung für den Block 
 </html>
 ```
 
-### styles.css
+</details>
+
+<details>
+<summary>styles.css</summary>
 
 ```css
 body {
@@ -152,7 +157,10 @@ body {
 }
 ```
 
-### app.js
+</details>
+
+<details>
+<summary>app.js</summary>
 
 ```javascript
 const form = document.getElementById("stammdaten-form");
@@ -376,6 +384,8 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;");
 }
 ```
+
+</details>
 
 ## Was kann sie?
 

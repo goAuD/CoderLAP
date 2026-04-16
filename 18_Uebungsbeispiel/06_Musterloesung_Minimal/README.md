@@ -9,11 +9,13 @@ Ez egy tudatosan egyszerű, vizsgabarát mintamegoldás a `18_Uebungsbeispiel` b
 - `index.html`
 - `styles.css`
 - `app.js`
-- `vendor/qrcode.js` — third-party library, nem módosítandó
+- `vendor/qrcode.js` - third-party library, nem módosítandó
+  Forráskód: https://github.com/kazuhikoarase/qrcode-generator
 
 ## Forráskód
 
-### index.html
+<details>
+<summary>index.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -116,7 +118,10 @@ Ez egy tudatosan egyszerű, vizsgabarát mintamegoldás a `18_Uebungsbeispiel` b
 </html>
 ```
 
-### styles.css
+</details>
+
+<details>
+<summary>styles.css</summary>
 
 ```css
 body {
@@ -152,7 +157,10 @@ body {
 }
 ```
 
-### app.js
+</details>
+
+<details>
+<summary>app.js</summary>
 
 ```javascript
 const form = document.getElementById("stammdaten-form");
@@ -376,6 +384,8 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;");
 }
 ```
+
+</details>
 
 ## Mit tud?
 
