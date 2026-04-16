@@ -118,14 +118,17 @@ class _RenderedMarkdownSanitizer(HTMLParser):
     def render(self) -> str:
         return "".join(self._parts)
 
+    def _escaped_starttag_text(self) -> str:
+        return escape(self.get_starttag_text() or "")
+
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if self._escaped_tag_stack:
-            self._parts.append(escape(self.get_starttag_text()))
+            self._parts.append(self._escaped_starttag_text())
             self._escaped_tag_stack.append(tag)
             return
 
         if tag not in _ALLOWED_TAGS:
-            self._parts.append(escape(self.get_starttag_text()))
+            self._parts.append(self._escaped_starttag_text())
             self._escaped_tag_stack.append(tag)
             return
 
@@ -133,7 +136,7 @@ class _RenderedMarkdownSanitizer(HTMLParser):
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if self._escaped_tag_stack or tag not in _ALLOWED_TAGS:
-            self._parts.append(escape(self.get_starttag_text()))
+            self._parts.append(self._escaped_starttag_text())
             return
 
         self._parts.append(self._build_tag(tag, attrs, self_closing=True))
@@ -200,7 +203,7 @@ def render_markdown(
     normalized_markdown = _linkify_plain_url_lines(markdown_text)
     md = Markdown(
         extensions=["extra", "tables", "fenced_code", "sane_lists"],
-        output_format="html5",
+        output_format="html",
     )
     md.inlinePatterns.deregister("html")
     rendered_html = md.convert(normalized_markdown)
