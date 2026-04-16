@@ -6,10 +6,10 @@ Dies ist eine bewusst einfache, prüfungstaugliche Musterlösung für den Block 
 
 ## Dateien
 
-- [index.html](./index.html)
-- [styles.css](./styles.css)
-- [app.js](./app.js)
-- [vendor/qrcode.js](./vendor/qrcode.js)
+- `index.html`
+- `styles.css`
+- `app.js`
+- `vendor/qrcode.js`
 
 ## Was kann sie?
 
@@ -27,7 +27,7 @@ Dies ist eine bewusst einfache, prüfungstaugliche Musterlösung für den Block 
 
 ## Ausführung
 
-1. Öffne die Datei [index.html](./index.html) im Browser.
+1. Öffne die Datei `index.html` im Browser.
 2. Fülle die Felder aus.
 3. Klicke auf den Button.
 4. Überprüfe das angezeigte Ergebnis und den `QR`-Code.
