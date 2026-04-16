@@ -47,6 +47,8 @@ class NavigationTests(unittest.TestCase):
             [main_topic["number"] for main_topic in navigation["main_topics"]],
             ["01", "02"],
         )
+        self.assertEqual(navigation["main_topics"][0]["pack_slug"], "01-grundlagen")
+        self.assertEqual(navigation["main_topics"][1]["pack_slug"], "02-betriebssysteme")
         self.assertEqual(
             [topic["id"] for topic in navigation["main_topics"][0]["topics"]],
             ["LAP-01-01", "LAP-01-02"],

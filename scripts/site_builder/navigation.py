@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import OrderedDict
 from collections import Counter
+import re
 
 from .models import TopicRecord
 
@@ -18,6 +19,11 @@ def _validate_unique_topic_ids(topics: list[TopicRecord]) -> None:
         raise ValueError(f"Duplicate topic ids are not allowed: {duplicate_list}")
 
 
+def _module_pack_slug(main_topic_number: str, label: str) -> str:
+    clean_label = re.sub(r"^\d+_", "", label or "")
+    return f"{main_topic_number}-{clean_label.lower()}"
+
+
 def build_navigation(topics: list[TopicRecord]) -> dict:
     _validate_unique_topic_ids(topics)
     ordered_topics = sorted(topics, key=_sort_key)
@@ -31,6 +37,7 @@ def build_navigation(topics: list[TopicRecord]) -> dict:
             {
                 "number": topic.main_topic_number,
                 "label": topic.main_topic_dir,
+                "pack_slug": _module_pack_slug(topic.main_topic_number, topic.main_topic_dir),
                 "topics": [],
             },
         )

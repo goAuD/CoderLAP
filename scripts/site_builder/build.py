@@ -168,6 +168,14 @@ def _load_legal_pages(legal_dir: Path) -> dict[str, str]:
     return pages
 
 
+def _load_topic_markdown_for_language(topic, repo_root: Path, lang_code: str) -> str:
+    markdown_path = topic.absolute_markdown_path(repo_root)
+    lang_markdown_path = markdown_path.with_suffix(f".{lang_code}.md")
+    if lang_markdown_path.is_file():
+        return load_topic_markdown(lang_markdown_path)
+    return load_topic_markdown(markdown_path)
+
+
 def _language_href(lang_config: LanguageConfig, relative_path: str = "") -> str:
     clean_path = relative_path.strip("/")
     if lang_config.is_default:
@@ -191,6 +199,13 @@ def _build_lang_switcher(
             }
         )
     return items
+
+
+def _topics_by_main_topic_number(topics: list) -> dict[str, list]:
+    grouped: dict[str, list] = {}
+    for topic in topics:
+        grouped.setdefault(topic.main_topic_number, []).append(topic)
+    return grouped
 
 
 def _build_language(
@@ -219,6 +234,7 @@ def _build_language(
         site_root = f"/{lang_config.code}/"
 
     lang_output.mkdir(parents=True, exist_ok=True)
+    topics_by_main_number = _topics_by_main_topic_number(topics)
 
     common_ctx = {
         "ui_lang": ui_lang,
@@ -231,13 +247,7 @@ def _build_language(
     }
 
     for topic in topics:
-        md_path = topic.absolute_markdown_path(settings.repo_root)
-        # Prefer language-specific file (e.g. README.de.md) over default README.md
-        lang_md_path = md_path.with_suffix(f".{lang_config.code}.md")
-        if lang_md_path.is_file():
-            markdown_text = load_topic_markdown(lang_md_path)
-        else:
-            markdown_text = load_topic_markdown(md_path)
+        markdown_text = _load_topic_markdown_for_language(topic, settings.repo_root, lang_config.code)
         content_html = render_markdown(
             markdown_text,
             suppress_redundant_summary_heading=True,
@@ -253,6 +263,45 @@ def _build_language(
             lang_switcher=_build_lang_switcher(all_languages, lang_config.code, f"topics/{topic.slug}"),
         )
         _write_text(lang_output / "topics" / topic.slug / "index.html", rendered)
+
+    for main_topic in navigation["main_topics"]:
+        module_topics = []
+        for topic in topics_by_main_number.get(main_topic["number"], []):
+            markdown_text = _load_topic_markdown_for_language(topic, settings.repo_root, lang_config.code)
+            module_topics.append(
+                {
+                    "id": topic.id,
+                    "title": topic.title,
+                    "slug": topic.slug,
+                    "subtopic_number": topic.subtopic_number,
+                    "content_html": render_markdown(
+                        markdown_text,
+                        suppress_redundant_summary_heading=True,
+                    ),
+                }
+            )
+
+        module_pack = {
+            "number": main_topic["number"],
+            "label": main_topic["label"],
+            "display_label": _display_label(main_topic["label"]),
+            "pack_slug": main_topic["pack_slug"],
+            "topic_count": len(module_topics),
+            "topics": module_topics,
+        }
+        rendered = env.get_template("module_pack.html").render(
+            **common_ctx,
+            page_lang=ui_lang,
+            page_title=f"{module_pack['number']} · {module_pack['display_label']}",
+            body_class="module-pack-page",
+            module_pack=module_pack,
+            lang_switcher=_build_lang_switcher(
+                all_languages,
+                lang_config.code,
+                f"module-packs/{module_pack['pack_slug']}",
+            ),
+        )
+        _write_text(lang_output / "module-packs" / module_pack["pack_slug"] / "index.html", rendered)
 
     home_html = env.get_template("home.html").render(
         **common_ctx,
@@ -333,7 +382,7 @@ def _build_single_language(
     asset_prefix = "/assets"
 
     for topic in topics:
-        markdown_text = load_topic_markdown(topic.absolute_markdown_path(settings.repo_root))
+        markdown_text = _load_topic_markdown_for_language(topic, settings.repo_root, ui_lang)
         content_html = render_markdown(
             markdown_text,
             suppress_redundant_summary_heading=True,
@@ -355,6 +404,48 @@ def _build_single_language(
             current_lang=ui_lang,
         )
         _write_text(settings.output_dir / "topics" / topic.slug / "index.html", rendered)
+
+    topics_by_main_number = _topics_by_main_topic_number(topics)
+    for main_topic in navigation["main_topics"]:
+        module_topics = []
+        for topic in topics_by_main_number.get(main_topic["number"], []):
+            markdown_text = _load_topic_markdown_for_language(topic, settings.repo_root, ui_lang)
+            module_topics.append(
+                {
+                    "id": topic.id,
+                    "title": topic.title,
+                    "slug": topic.slug,
+                    "subtopic_number": topic.subtopic_number,
+                    "content_html": render_markdown(
+                        markdown_text,
+                        suppress_redundant_summary_heading=True,
+                    ),
+                }
+            )
+
+        module_pack = {
+            "number": main_topic["number"],
+            "label": main_topic["label"],
+            "display_label": _display_label(main_topic["label"]),
+            "pack_slug": main_topic["pack_slug"],
+            "topic_count": len(module_topics),
+            "topics": module_topics,
+        }
+        rendered = env.get_template("module_pack.html").render(
+            ui_lang=ui_lang,
+            page_lang=ui_lang,
+            page_title=f"{module_pack['number']} · {module_pack['display_label']}",
+            asset_prefix=asset_prefix,
+            body_class="module-pack-page",
+            ui=ui_strings,
+            module_pack=module_pack,
+            navigation=navigation,
+            cache_bust=cache_bust,
+            site_root="/",
+            lang_switcher=[],
+            current_lang=ui_lang,
+        )
+        _write_text(settings.output_dir / "module-packs" / module_pack["pack_slug"] / "index.html", rendered)
 
     home_html = env.get_template("home.html").render(
         ui_lang=ui_lang,

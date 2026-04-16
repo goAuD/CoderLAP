@@ -40,6 +40,8 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn("--color-text: #1a1a1a;", self.print_css)
         self.assertIn("orphans: 3;", self.print_css)
         self.assertIn("page-break-inside: avoid;", self.print_css)
+        self.assertIn(".module-pack-header,", self.print_css)
+        self.assertIn(".module-pack-topic {", self.print_css)
 
     def test_base_html_includes_skip_link_and_main_landmark(self) -> None:
         self.assertIn('<a class="skip-link" href="#main-content">Skip to content</a>', self.base_html)
@@ -107,6 +109,9 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".site-nav-link--button {", self.components_css)
         self.assertIn(".topic-pagination {", self.components_css)
         self.assertIn(".topic-pagination__link {", self.components_css)
+        self.assertIn(".module-pack-header {", self.components_css)
+        self.assertIn(".module-pack-outline__list {", self.components_css)
+        self.assertIn(".module-pack-topic {", self.components_css)
         self.assertIn(".catalog-results__empty {", self.components_css)
         self.assertIn(".catalog-sidebar__toggle {", self.components_css)
         self.assertIn(".topic-actions {", self.components_css)
@@ -122,6 +127,8 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn("overflow-x: clip;", self.components_css)
         self.assertIn("scrollbar-gutter: stable;", self.components_css)
         self.assertIn("::-webkit-scrollbar-thumb {", self.components_css)
+        self.assertIn(".sidebar-group__header {", self.components_css)
+        self.assertIn(".sidebar-group__action {", self.components_css)
 
 
 if __name__ == "__main__":
