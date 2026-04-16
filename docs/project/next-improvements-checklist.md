@@ -44,6 +44,10 @@ Done when:
 - a new machine or rebuilt server can be restored from the document alone
 - the recovery steps have been tested at least once in a dry run
 
+Current document:
+
+- [backup-restore-playbook.md](./backup-restore-playbook.md)
+
 ## 2. Access Hygiene
 
 Why this matters:
