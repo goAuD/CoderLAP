@@ -16,7 +16,7 @@ for teachers and students.
 3. ~~Lightweight feedback loop for teachers and students~~ Done
 4. ~~Search quality improvements~~ Done
 5. ~~Module-level print packs~~ Done
-6. Simple uptime and expiry monitoring
+6. ~~Simple uptime and expiry monitoring~~ Done
 7. Final Austrian legal review before wider release
 
 ## 1. Backup And Restore Playbook
@@ -176,6 +176,21 @@ Done when:
 - someone gets notified before the site silently fails or an expiry becomes
   urgent
 
+Current state:
+
+- done via `scripts/check_site_health.py`
+- scheduled workflow: `.github/workflows/coderlap-site-monitor.yml`
+- checks:
+  - DNS resolve
+  - unauthenticated `401`
+  - authenticated `200`
+  - Basic auth challenge
+  - edge certificate lifetime
+
+Current document:
+
+- [uptime-expiry-monitoring.md](./uptime-expiry-monitoring.md)
+
 ## 7. Final Austrian Legal Review
 
 Why this matters:
@@ -197,6 +212,13 @@ Done when:
 
 - the legal texts are reviewed against the actual publication model in force at
   release time
+
+Current review baseline:
+
+- [final-austrian-legal-review.md](./final-austrian-legal-review.md)
+- current result: acceptable working baseline for the restricted-access rollout
+- still not a public-launch sign-off until the wider-release access model is
+  frozen
 
 ## What Not To Add Right Now
 
