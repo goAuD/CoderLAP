@@ -1,6 +1,6 @@
 # CoderLAP Next Improvements Checklist
 
-Last updated: `2026-04-15`
+Last updated: `2026-04-16`
 
 This document tracks the next improvements that are still worth doing after the
 static site, deploy path, and restricted-access production setup became stable.
@@ -14,7 +14,7 @@ for teachers and students.
 1. Backup and restore playbook
 2. Access hygiene for the private rollout
 3. Lightweight feedback loop for teachers and students
-4. Search quality improvements
+4. ~~Search quality improvements~~ Done
 5. Module-level print packs
 6. Simple uptime and expiry monitoring
 7. Final Austrian legal review before wider release
@@ -125,6 +125,12 @@ Done when:
 
 - representative cross-language and shorthand queries reliably find the intended
   topics
+
+Current state:
+
+- done via generated topic `search_terms`
+- topic-specific headings from `README.md` and `README.de.md` are indexed
+- curated alias groups cover common German, Hungarian, and shorthand terminology
 
 ## 5. Module-Level Print Packs
 

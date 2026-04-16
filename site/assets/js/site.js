@@ -81,6 +81,110 @@
       .trim();
   }
 
+  function normalizeSearchValue(value) {
+    var normalized = String(value || "").toLowerCase();
+    if (typeof normalized.normalize === "function") {
+      normalized = normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+    normalized = normalized
+      .replace(/ß/g, "ss")
+      .replace(/[_/\\.-]+/g, " ")
+      .replace(/[`*_>#:+|()[\]{}"'?!,;]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    return normalized;
+  }
+
+  function pushUniqueValue(target, value) {
+    if (value && target.indexOf(value) === -1) {
+      target.push(value);
+    }
+  }
+
+  function buildAliasLookup(groups) {
+    var lookup = Object.create(null);
+
+    if (!Array.isArray(groups)) {
+      return lookup;
+    }
+
+    groups.forEach(function (group) {
+      if (!Array.isArray(group)) {
+        return;
+      }
+
+      var normalizedGroup = [];
+      group.forEach(function (term) {
+        var normalizedTerm = normalizeSearchValue(term);
+        if (normalizedTerm) {
+          pushUniqueValue(normalizedGroup, normalizedTerm);
+        }
+      });
+
+      normalizedGroup.forEach(function (term) {
+        if (!lookup[term]) {
+          lookup[term] = [];
+        }
+
+        normalizedGroup.forEach(function (candidate) {
+          pushUniqueValue(lookup[term], candidate);
+        });
+
+        term.split(" ").forEach(function (token) {
+          if (token.length < 3) {
+            return;
+          }
+          if (!lookup[token]) {
+            lookup[token] = [];
+          }
+          normalizedGroup.forEach(function (candidate) {
+            pushUniqueValue(lookup[token], candidate);
+          });
+        });
+      });
+    });
+
+    return lookup;
+  }
+
+  function expandQueryTokens(query, aliasLookup) {
+    var normalizedQuery = normalizeSearchValue(query);
+    if (!normalizedQuery) {
+      return [];
+    }
+
+    return normalizedQuery.split(/\s+/).filter(Boolean).map(function (word) {
+      var candidates = [word];
+      var aliasCandidates = aliasLookup[word] || [];
+      aliasCandidates.forEach(function (candidate) {
+        pushUniqueValue(candidates, candidate);
+      });
+      return candidates;
+    });
+  }
+
+  function buildTopicSearchHaystack(item) {
+    var sourceTerms = Array.isArray(item.search_terms) && item.search_terms.length
+      ? item.search_terms
+      : [
+          item.id,
+          item.title,
+          item.main_topic_label,
+          item.subtopic_label,
+          item.main_topic_number
+        ];
+    var normalizedTerms = [];
+
+    sourceTerms.forEach(function (term) {
+      var normalized = normalizeSearchValue(term);
+      if (normalized) {
+        pushUniqueValue(normalizedTerms, normalized);
+      }
+    });
+
+    return " " + normalizedTerms.join(" ") + " ";
+  }
+
   /* ── Resolve site root from embedded JSON (language-aware) ──── */
   var SITE_ROOT = "/";
 
@@ -265,6 +369,7 @@
 
     var topicIndex = parseJsonScript("[data-topic-index-json]");
     var navigation = parseJsonScript("[data-navigation-json]");
+    var searchAliasGroups = parseJsonScript("[data-search-aliases-json]");
     var uiCopy = parseJsonScript("[data-ui-copy-json]") || {};
     if (!Array.isArray(topicIndex) || !navigation || !Array.isArray(navigation.main_topics)) {
       return;
@@ -272,7 +377,11 @@
 
     SITE_ROOT = uiCopy.site_root || "/";
 
-    var topics = Array.isArray(topicIndex) ? topicIndex.slice() : [];
+    var aliasLookup = buildAliasLookup(searchAliasGroups);
+    var topics = Array.isArray(topicIndex) ? topicIndex.slice().map(function (item) {
+      item._searchHaystack = buildTopicSearchHaystack(item);
+      return item;
+    }) : [];
     var mainTopics = navigation.main_topics.slice();
     var cardTemplateRoot = document.querySelector("#topic-card-template");
 
@@ -306,7 +415,7 @@
     }
 
     function renderResults() {
-      var query = (searchInput.value || "").trim().toLowerCase();
+      var tokenGroups = expandQueryTokens(searchInput.value || "", aliasLookup);
       var selectedModule = moduleFilter.value;
       var filtered = topics.filter(function (item) {
         var matchesModule = !selectedModule || item.main_topic_number === selectedModule;
@@ -314,21 +423,22 @@
           return false;
         }
 
-        if (!query) {
+        if (!tokenGroups.length) {
           return true;
         }
 
-        var haystack = [
-          item.id,
-          item.title,
-          item.main_topic_label,
-          item.subtopic_label,
-          item.main_topic_number
-        ].join(" ").toLowerCase().replace(/_/g, " ");
-
-        var words = query.split(/\s+/);
-        for (var w = 0; w < words.length; w++) {
-          if (words[w] && haystack.indexOf(words[w]) === -1) {
+        var haystack = item._searchHaystack || "";
+        for (var g = 0; g < tokenGroups.length; g++) {
+          var group = tokenGroups[g];
+          var matched = false;
+          for (var c = 0; c < group.length; c++) {
+            var candidate = group[c] ? " " + group[c] + " " : "";
+            if (candidate && haystack.indexOf(candidate) !== -1) {
+              matched = true;
+              break;
+            }
+          }
+          if (!matched) {
             return false;
           }
         }

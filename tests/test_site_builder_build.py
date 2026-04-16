@@ -81,6 +81,7 @@ class BuildSiteTests(unittest.TestCase):
             static_content_dir = repo_root / "static-src"
             output_dir = repo_root / "dist"
             markdown_path = repo_root / "01_Grundlagen" / "01_ASCII" / "README.md"
+            markdown_de_path = repo_root / "01_Grundlagen" / "01_ASCII" / "README.de.md"
 
             template_dir.mkdir()
             asset_dir.mkdir()
@@ -91,7 +92,11 @@ class BuildSiteTests(unittest.TestCase):
             _write_registry(registry_path)
             _write_templates(template_dir)
             markdown_path.write_text(
-                "# ASCII\n\n## Lényeg 30 másodpercben\n\nAz ASCII egy karakterkodolas.",
+                "# ASCII\n\n## Mi az ASCII?\n\nAz ASCII egy karakterkodolas.",
+                encoding="utf-8",
+            )
+            markdown_de_path.write_text(
+                "# ASCII\n\n## Was ist ASCII?\n\nASCII ist eine Zeichenkodierung.",
                 encoding="utf-8",
             )
             (asset_dir / "site.css").write_text("body { color: black; }", encoding="utf-8")
@@ -166,6 +171,17 @@ class BuildSiteTests(unittest.TestCase):
                         "source_count": 2,
                         "review_status": "draft",
                         "translation_status": "not_started",
+                        "search_terms": [
+                            "LAP-01-01",
+                            "ASCII",
+                            "01 01 ascii",
+                            "01",
+                            "01_Grundlagen",
+                            "Grundlagen",
+                            "01_ASCII",
+                            "Mi az ASCII?",
+                            "Was ist ASCII?",
+                        ],
                     }
                 ],
             )

@@ -62,6 +62,7 @@ class TemplateHookTests(unittest.TestCase):
                 "source_count": 2,
                 "review_status": "draft",
                 "translation_status": "not_started",
+                "search_terms": ["ASCII", "karakterkodolas"],
             },
             {
                 "id": "LAP-01-02",
@@ -73,6 +74,7 @@ class TemplateHookTests(unittest.TestCase):
                 "source_count": 2,
                 "review_status": "draft",
                 "translation_status": "not_started",
+                "search_terms": ["Binaris", "binary"],
             },
             {
                 "id": "LAP-01-03",
@@ -84,6 +86,7 @@ class TemplateHookTests(unittest.TestCase):
                 "source_count": 2,
                 "review_status": "draft",
                 "translation_status": "not_started",
+                "search_terms": ["Hexadezimalis", "hexadecimal"],
             },
         ]
         self.navigation = {
@@ -156,6 +159,7 @@ class TemplateHookTests(unittest.TestCase):
             ui=self.ui,
             navigation=self.navigation,
             topic_index=self.topic_index,
+            search_alias_groups=[["api", "schnittstelle", "programozasi felulet"]],
         )
 
         self.assertIn("data-search-input", html)
@@ -166,6 +170,7 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn("data-sidebar-panel", html)
         self.assertIn("data-topic-index-json", html)
         self.assertIn("data-navigation-json", html)
+        self.assertIn("data-search-aliases-json", html)
         self.assertIn("data-ui-copy-json", html)
         self.assertIn(">Temakorok<", html)
         self.assertIn(">Kereses<", html)
@@ -220,10 +225,15 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn('[data-catalog-controls]', self.site_js)
         self.assertIn('[data-topic-index-json]', self.site_js)
         self.assertIn('[data-navigation-json]', self.site_js)
+        self.assertIn('[data-search-aliases-json]', self.site_js)
         self.assertIn('[data-ui-copy-json]', self.site_js)
         self.assertIn('[data-sidebar-container]', self.site_js)
         self.assertIn('[data-sidebar-panel]', self.site_js)
         self.assertIn('function formatMainTopicLabel(label)', self.site_js)
+        self.assertIn('function normalizeSearchValue(value)', self.site_js)
+        self.assertIn('function buildAliasLookup(groups)', self.site_js)
+        self.assertIn('function expandQueryTokens(query, aliasLookup)', self.site_js)
+        self.assertIn('item._searchHaystack = buildTopicSearchHaystack(item);', self.site_js)
         self.assertIn('.replace(/^\\d+_/, "")', self.site_js)
         self.assertIn('button.setAttribute("data-sidebar-toggle", "")', self.site_js)
         self.assertIn('button.textContent = sidebarLabel;', self.site_js)

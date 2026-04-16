@@ -1,6 +1,6 @@
 # Next Thread Handoff
 
-Last updated: `2026-04-12`
+Last updated: `2026-04-16`
 
 ## Active Repository
 
@@ -18,6 +18,8 @@ Last updated: `2026-04-12`
   - `LAP_CONTENT_REGISTRY.json`
   - `LAP_CONTENT_REGISTRY.csv`
 - static site generator working
+- generated search index now includes bilingual topic-specific search terms
+- curated alias groups support shorthand and cross-language search queries
 - language routing working:
   - German default at `/`
   - Hungarian at `/hu/`
@@ -49,6 +51,7 @@ Read only when relevant:
 - `docs/project/feedback-loop-playbook.md`
 - `docs/project/github-release-hygiene.md`
 - `docs/project/release-notes-v0.1.0-private-beta.1.md`
+- `site/content/search/search_aliases.json`
 - `docs/process/editorial-workflow.md`
 - `docs/process/md013-cleanup-strategy.md`
 - `docs/process/review-workflow.md`
