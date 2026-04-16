@@ -77,7 +77,7 @@ Completed already:
 
 - Full folder structure created from the PDF.
 - `18` main folders created.
-- `233` subtopic folders created.
+- `235` registered topic documents (subtopics + module overviews) created.
 - Main topic `01_Grundlagen_in_der_Informationstechnik` completed.
 - `7 / 7` subtopic documents exist for main topic `01`.
 - Main topic `02_Betriebssysteme_und_Software` completed.
@@ -114,16 +114,16 @@ Completed already:
 - Main topic `17_Systementwicklung_und_Testkonzepte` completed.
 - `13 / 13` subtopic documents exist for main topic `17`.
 - Main topic `18_Uebungsbeispiel` completed.
-- `5 / 5` subtopic documents exist for main topic `18`.
-- A practical reference implementation was also added under
-  `18_Uebungsbeispiel\Musterloesung_Minimal`.
-- Total completed subtopic documents so far: `233`.
-- Stable registry files were generated for all `233` canonical subtopic
-  documents.
+- `5 / 5` numbered subtopic documents exist for main topic `18`.
+- Module overview (`LAP-18-00`) registered as `18_Uebungsbeispiel/README.md`.
+- Practical reference implementation registered as
+  `18_Uebungsbeispiel\06_Musterloesung_Minimal` (`LAP-18-06`).
+- Total registered topic documents: `235`.
+- Stable registry files were generated for all `235` canonical topic documents.
 - Internal architecture/deployment docs now live under `docs/project/`.
 - i18n infrastructure fully built: German default (`/`), Hungarian secondary
   (`/hu/`).
-- All `233` subtopics translated to German as `README.de.md` files.
+- All `235` registered topics translated to German as `README.de.md` files.
 - Static site generator (Jinja2) outputs bilingual site to `dist/`.
 - Planned production domain: `coderlap.com`.
 

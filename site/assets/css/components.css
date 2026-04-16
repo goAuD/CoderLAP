@@ -755,6 +755,11 @@ a.lang-switcher__item:focus-visible {
   border-color: rgba(200, 180, 90, 0.6);
 }
 
+.topic-done-btn--warning {
+  border-color: rgba(200, 120, 60, 0.5);
+  color: #c8783c;
+}
+
 /* Hero progress counter */
 .hero-progress {
   margin: 0;

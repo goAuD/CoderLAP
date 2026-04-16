@@ -87,4 +87,9 @@ def load_registry_items(registry_path: Path) -> list[TopicRecord]:
 
 
 def load_topic_markdown(markdown_path: Path) -> str:
-    return markdown_path.read_text(encoding="utf-8")
+    try:
+        return markdown_path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Topic markdown not found: {markdown_path}") from None
+    except UnicodeDecodeError as exc:
+        raise ValueError(f"Invalid UTF-8 in {markdown_path}: {exc}") from exc
