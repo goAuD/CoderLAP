@@ -2,7 +2,8 @@
 
 ## Supported scope
 
-`CoderLAP` is currently a Markdown-first content repository with a future static-site delivery path.
+`CoderLAP` is currently a Markdown-first content repository with a live static
+site delivered behind Cloudflare + Caddy.
 
 At this stage, the most relevant security areas are:
 
@@ -25,8 +26,10 @@ Repository owner and code owner:
 
 ## Expected practices
 
-- keep the repository private until publication is intentionally decided
 - do not commit secrets
-- use GitHub secrets or deploy keys for automation later
+- do not paste credentials, hashes, or server-only details into issues,
+  screenshots, or docs
+- keep GitHub secrets and deploy credentials current for automation
+- treat repository visibility and site access control as separate decisions
 - prefer one clean deployment path
-- review Caddy configuration before exposure
+- review Caddy and Cloudflare configuration before wider exposure
