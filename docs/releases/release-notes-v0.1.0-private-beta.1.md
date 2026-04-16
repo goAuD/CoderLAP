@@ -13,8 +13,8 @@ This is not a public launch.
 - bilingual static site is live on `coderlap.com`
 - German is the default language at `/`
 - Hungarian is available at `/hu/`
-- all `233` canonical Hungarian topic files exist
-- all `233` German translation sidecars exist
+- all `235` registered Hungarian topic documents exist
+- all `235` German translation sidecars exist
 - search, filter, topic navigation, language routing, and print views are
   working
 - legal pages exist for `de`, `hu`, and editorial fallback `en`

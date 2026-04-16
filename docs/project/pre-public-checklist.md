@@ -1,6 +1,6 @@
 # CoderLAP Pre-Public Checklist
 
-Last updated: `2026-04-12`
+Last updated: `2026-04-16`
 
 Use this checklist before removing `basic_auth` or allowing unrestricted access
 to `coderlap.com`.
@@ -50,6 +50,8 @@ to `coderlap.com`.
 
 ## Repo And Release Hygiene
 
+- [ ] Repository visibility and collaboration settings reviewed against
+      [public-repo-flip-checklist.md](./public-repo-flip-checklist.md)
 - [ ] Root README reflects the current live language model and deploy shape
 - [ ] Deploy docs reflect the current Cloudflare + Caddy model
 - [ ] GitHub repository description, topics, and first release tags are set when

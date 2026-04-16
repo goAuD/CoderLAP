@@ -52,13 +52,16 @@ Read only when relevant:
 - `docs/project/private-rollout-access.md`
 - `docs/project/access-hygiene-playbook.md`
 - `docs/project/pre-public-checklist.md`
+- `docs/project/public-repo-flip-checklist.md`
 - `docs/project/next-improvements-checklist.md`
 - `docs/project/backup-restore-playbook.md`
 - `docs/project/feedback-loop-playbook.md`
 - `docs/project/uptime-expiry-monitoring.md`
 - `docs/project/final-austrian-legal-review.md`
 - `docs/project/github-release-hygiene.md`
-- `docs/project/release-notes-v0.1.0-private-beta.1.md`
+- `docs/releases/README.md`
+- `docs/releases/release-notes-v0.1.0-private-beta.1.md`
+- `docs/releases/release-notes-v0.2.0-public-repo.1.md`
 - `site/content/search/search_aliases.json`
 - `docs/process/editorial-workflow.md`
 - `docs/process/md013-cleanup-strategy.md`
