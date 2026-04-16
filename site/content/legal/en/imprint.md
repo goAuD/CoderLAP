@@ -12,7 +12,10 @@
 ## Contact
 
 - Public profile: `https://github.com/goAuD`
-- Public feedback channel: issues or pull requests in the project repository
+- Current feedback channel during the restricted rollout: direct contact within
+  the trusted review group and maintainer-mediated GitHub issue triage
+- If the repository is opened publicly later, issues or pull requests in the
+  project repository may become the public feedback channel
 - Note: before any unrestricted public launch, a direct electronic contact path
   should be added explicitly
 

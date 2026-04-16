@@ -99,6 +99,10 @@ Done when:
 - at least one low-friction reporting path exists
 - feedback can be triaged without ad hoc chat history
 
+Current document:
+
+- [feedback-loop-playbook.md](./feedback-loop-playbook.md)
+
 ## 4. Search Quality Improvements
 
 Why this matters:

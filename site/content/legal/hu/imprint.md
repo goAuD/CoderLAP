@@ -12,8 +12,11 @@
 ## Kapcsolat
 
 - Nyilvános profil: `https://github.com/goAuD`
-- Nyilvános visszajelzési csatorna: issue vagy pull request a projekt
-  repository-jában
+- Jelenlegi visszajelzési csatorna a korlátozott tesztfázis alatt: közvetlen
+  kapcsolat a megbízható tesztkörön belül, valamint maintainer oldali GitHub
+  issue-triage
+- Ha a repository később nyilvánossá válik, akkor a projekt repository-jában
+  lévő issue vagy pull request lehet a nyilvános visszajelzési csatorna
 - Megjegyzés: korlátozás nélküli nyilvános indulás előtt közvetlen elektronikus
   kapcsolatfelvételi utat is kifejezetten meg kell adni
 
