@@ -16,6 +16,7 @@ The repository is primarily:
 2. Keep the numbered German folder structure intact.
 3. Treat the topic `README.md` files as the canonical content layer.
 4. Treat `LAP_CONTENT_REGISTRY.json` and `LAP_CONTENT_REGISTRY.csv` as generated metadata outputs.
+5. Follow [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) in all repo interactions.
 
 ## Content rules
 
