@@ -2,6 +2,7 @@
 {% block body %}
 {% set safe_topic_index = topic_index | default([], true) %}
 {% set safe_navigation = navigation | default({}, true) %}
+{% set safe_search_alias_groups = search_alias_groups | default([], true) %}
 <section class="page-shell" aria-labelledby="home-hero-title">
   <section class="hero-panel" aria-labelledby="home-hero-title">
     <div class="hero-panel__content">
@@ -60,6 +61,7 @@
 
   <script type="application/json" data-topic-index-json>{{ safe_topic_index | tojson }}</script>
   <script type="application/json" data-navigation-json>{{ safe_navigation | tojson }}</script>
+  <script type="application/json" data-search-aliases-json>{{ safe_search_alias_groups | tojson }}</script>
   <script type="application/json" data-ui-copy-json>
     {{ {
       "empty_state_label": ui.get("empty_state_label", ""),
