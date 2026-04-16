@@ -69,6 +69,10 @@ Done when:
 - password rotation can be done in a few minutes without guesswork
 - the reset steps are documented in one place
 
+Current document:
+
+- [access-hygiene-playbook.md](./access-hygiene-playbook.md)
+
 ## 3. Lightweight Feedback Loop
 
 Why this matters:

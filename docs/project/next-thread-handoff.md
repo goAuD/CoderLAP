@@ -42,6 +42,7 @@ Read only when relevant:
 
 - `docs/project/architecture-adoption.md`
 - `docs/project/private-rollout-access.md`
+- `docs/project/access-hygiene-playbook.md`
 - `docs/project/pre-public-checklist.md`
 - `docs/project/next-improvements-checklist.md`
 - `docs/project/backup-restore-playbook.md`

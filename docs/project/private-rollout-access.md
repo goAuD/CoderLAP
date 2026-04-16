@@ -29,6 +29,10 @@ and avoids introducing a backend user system.
 - Keep `basic_auth` enabled until legal text, content QA, and launch readiness
   are explicitly approved.
 
+Detailed operating procedure:
+
+- [access-hygiene-playbook.md](./access-hygiene-playbook.md)
+
 ## Current Security Tradeoff
 
 Strengths:
