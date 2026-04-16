@@ -59,6 +59,7 @@ Architecture and delivery notes are documented in:
 - [docs/project/pre-public-checklist.md](./docs/project/pre-public-checklist.md)
 - [docs/project/next-improvements-checklist.md](./docs/project/next-improvements-checklist.md)
 - [docs/project/backup-restore-playbook.md](./docs/project/backup-restore-playbook.md)
+- [docs/project/feedback-loop-playbook.md](./docs/project/feedback-loop-playbook.md)
 - [docs/process/md013-cleanup-strategy.md](./docs/process/md013-cleanup-strategy.md)
 
 ## Project layout
