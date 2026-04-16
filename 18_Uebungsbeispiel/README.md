@@ -66,18 +66,18 @@ Azért, hogy ez vizsgán is reálisan megoldható legyen, itt egy **tudatosan eg
 
 ### Elméleti és vizsgafelkészítő bontás
 
-- [01_Anforderung_und_Setup/README.md](./01_Anforderung_und_Setup/README.md)
-- [02_Eingabe_Formular_mit_Framework/README.md](./02_Eingabe_Formular_mit_Framework/README.md)
-- [03_Gueltigkeitspruefung_der_SV_Nummer/README.md](./03_Gueltigkeitspruefung_der_SV_Nummer/README.md)
-- [04_Ausgabe_eines_QR_Codes/README.md](./04_Ausgabe_eines_QR_Codes/README.md)
-- [05_QR_Code_Pruefung_und_Tools/README.md](./05_QR_Code_Pruefung_und_Tools/README.md)
+- `01_Anforderung_und_Setup`
+- `02_Eingabe_Formular_mit_Framework`
+- `03_Gueltigkeitspruefung_der_SV_Nummer`
+- `04_Ausgabe_eines_QR_Codes`
+- `05_QR_Code_Pruefung_und_Tools`
 
 ### Konkrét mintamegoldás
 
-- [06_Musterloesung_Minimal/README.md](./06_Musterloesung_Minimal/README.md)
-- [06_Musterloesung_Minimal/index.html](./06_Musterloesung_Minimal/index.html)
-- [06_Musterloesung_Minimal/styles.css](./06_Musterloesung_Minimal/styles.css)
-- [06_Musterloesung_Minimal/app.js](./06_Musterloesung_Minimal/app.js)
+- `06_Musterloesung_Minimal/index.html`
+- `06_Musterloesung_Minimal/styles.css`
+- `06_Musterloesung_Minimal/app.js`
+- `06_Musterloesung_Minimal/vendor/qrcode.js`
 
 ## Vizsgastratégia
 
