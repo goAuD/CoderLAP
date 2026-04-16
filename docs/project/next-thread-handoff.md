@@ -20,6 +20,9 @@ Last updated: `2026-04-16`
 - static site generator working
 - generated search index now includes bilingual topic-specific search terms
 - curated alias groups support shorthand and cross-language search queries
+- module-level print pack pages are generated for all `18` modules:
+  - German at `/module-packs/<module-slug>/`
+  - Hungarian at `/hu/module-packs/<module-slug>/`
 - language routing working:
   - German default at `/`
   - Hungarian at `/hu/`
@@ -83,6 +86,7 @@ such as `8001` and use the matching URL.
 ## Most Likely Next Work
 
 - optional Cloudflare Authenticated Origin Pull hardening
+- simple uptime / expiry monitoring
 - final Austrian legal/imprint pass before public launch
 - switch `robots.txt` to an indexable version when `basic_auth` is removed
 - optional MX/mail routing for `coderlap.com`

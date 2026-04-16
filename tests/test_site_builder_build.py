@@ -56,6 +56,13 @@ def _write_templates(template_dir: Path) -> None:
         "{% extends \"base.html\" %}{% block body %}<section class=\"legal\">{{ content_html | safe }}</section>{% endblock %}",
         encoding="utf-8",
     )
+    (template_dir / "module_pack.html").write_text(
+        "{% extends \"base.html\" %}{% block body %}<section class=\"module-pack\">"
+        "<h1>{{ module_pack.display_label }}</h1>"
+        "{% for item in module_pack.topics %}<article id=\"{{ item.slug }}\">{{ item.content_html | safe }}</article>{% endfor %}"
+        "</section>{% endblock %}",
+        encoding="utf-8",
+    )
 
 
 class BuildHelpersTests(unittest.TestCase):
@@ -138,11 +145,13 @@ class BuildSiteTests(unittest.TestCase):
             self.assertTrue((output_dir / ".well-known" / "security.txt").exists())
             self.assertTrue((output_dir / "index.html").exists())
             self.assertTrue((output_dir / "topics" / "01-01-ascii" / "index.html").exists())
+            self.assertTrue((output_dir / "module-packs" / "01-grundlagen" / "index.html").exists())
             self.assertTrue((output_dir / "imprint" / "index.html").exists())
             self.assertTrue((output_dir / "privacy" / "index.html").exists())
 
             topic_html = (output_dir / "topics" / "01-01-ascii" / "index.html").read_text(encoding="utf-8")
             home_html = (output_dir / "index.html").read_text(encoding="utf-8")
+            module_pack_html = (output_dir / "module-packs" / "01-grundlagen" / "index.html").read_text(encoding="utf-8")
             imprint_html = (output_dir / "imprint" / "index.html").read_text(encoding="utf-8")
             privacy_html = (output_dir / "privacy" / "index.html").read_text(encoding="utf-8")
 
@@ -152,6 +161,8 @@ class BuildSiteTests(unittest.TestCase):
             self.assertNotIn("Lényeg 30 másodpercben", topic_html)
             self.assertIn('<html lang="en">', home_html)
             self.assertIn("CoderLAP", home_html)
+            self.assertIn("<h1>Grundlagen</h1>", module_pack_html)
+            self.assertIn('id="01-01-ascii"', module_pack_html)
             self.assertIn("<h1>Imprint</h1>", imprint_html)
             self.assertIn("<h1>Privacy</h1>", privacy_html)
 
@@ -185,6 +196,7 @@ class BuildSiteTests(unittest.TestCase):
                     }
                 ],
             )
+            self.assertEqual(navigation["main_topics"][0]["pack_slug"], "01-grundlagen")
             self.assertEqual(navigation["main_topics"][0]["number"], "01")
             self.assertEqual(navigation["topics"]["LAP-01-01"]["slug"], "01-01-ascii")
 

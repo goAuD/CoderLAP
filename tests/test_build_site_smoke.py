@@ -28,6 +28,7 @@ class BuildSiteSmokeTests(unittest.TestCase):
         self.assertTrue((dist_dir / "index.html").exists())
         self.assertTrue((dist_dir / "data" / "topic-index.json").exists())
         self.assertTrue((dist_dir / "topics" / "01-01-zeichensatz_ascii" / "index.html").exists())
+        self.assertTrue((dist_dir / "module-packs" / "01-grundlagen_in_der_informationstechnik" / "index.html").exists())
         self.assertTrue((dist_dir / "imprint" / "index.html").exists())
         self.assertTrue((dist_dir / "privacy" / "index.html").exists())
         self.assertTrue((dist_dir / "robots.txt").exists())
@@ -35,11 +36,14 @@ class BuildSiteSmokeTests(unittest.TestCase):
         # Hungarian under /hu/
         self.assertTrue((dist_dir / "hu" / "index.html").exists())
         self.assertTrue((dist_dir / "hu" / "topics" / "01-01-zeichensatz_ascii" / "index.html").exists())
+        self.assertTrue((dist_dir / "hu" / "module-packs" / "01-grundlagen_in_der_informationstechnik" / "index.html").exists())
 
         de_topic_html = (dist_dir / "topics" / "01-01-zeichensatz_ascii" / "index.html").read_text(encoding="utf-8")
         hu_topic_html = (dist_dir / "hu" / "topics" / "01-01-zeichensatz_ascii" / "index.html").read_text(encoding="utf-8")
+        de_module_pack_html = (dist_dir / "module-packs" / "01-grundlagen_in_der_informationstechnik" / "index.html").read_text(encoding="utf-8")
         self.assertIn('href="/hu/topics/01-01-zeichensatz_ascii/"', de_topic_html)
         self.assertIn('href="/topics/01-01-zeichensatz_ascii/"', hu_topic_html)
+        self.assertIn('href="/hu/module-packs/01-grundlagen_in_der_informationstechnik/"', de_module_pack_html)
 
 
 if __name__ == "__main__":

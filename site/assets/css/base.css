@@ -314,22 +314,26 @@ td {
 /* ── Mobile adjustments ── */
 @media (max-width: 47.99rem) {
   .topic-article,
-  .legal-article {
+  .legal-article,
+  .module-pack-topic__content {
     font-size: 0.94rem;
   }
 
   .topic-article h1,
-  .legal-article h1 {
+  .legal-article h1,
+  .module-pack-topic__content h1 {
     font-size: clamp(1.4rem, 5.5vw, 2rem);
   }
 
   .topic-article h2,
-  .legal-article h2 {
+  .legal-article h2,
+  .module-pack-topic__content h2 {
     font-size: clamp(1.2rem, 4.5vw, 1.6rem);
   }
 
   .topic-article h3,
-  .legal-article h3 {
+  .legal-article h3,
+  .module-pack-topic__content h3 {
     font-size: clamp(1.05rem, 3.5vw, 1.3rem);
   }
 

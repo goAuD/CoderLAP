@@ -45,6 +45,10 @@ class TemplateHookTests(unittest.TestCase):
             "content_label": "Temakorok",
             "back_to_catalog": "Vissza a katalogushoz",
             "print_label": "Tema nyomtatasa",
+            "module_pack_label": "Modulcsomag",
+            "module_pack_print_label": "Modulcsomag nyomtatasa",
+            "module_pack_contents_label": "A csomag temai",
+            "module_pack_intro": "Egybefuzott nyomtathato modulnezet.",
             "previous_label": "Elozo",
             "next_label": "Kovetkezo",
             "topic_pagination_label": "Temak kozotti lapozas",
@@ -94,6 +98,7 @@ class TemplateHookTests(unittest.TestCase):
                 {
                     "number": "01",
                     "label": "01_Grundlagen",
+                    "pack_slug": "01-grundlagen",
                     "topics": [
                         {
                             "id": "LAP-01-01",
@@ -189,6 +194,7 @@ class TemplateHookTests(unittest.TestCase):
         self.assertEqual(ui_copy["search_label"], self.ui["search_label"])
         self.assertEqual(ui_copy["filter_label"], self.ui["filter_label"])
         self.assertEqual(ui_copy["sidebar_label"], self.ui["sidebar_label"])
+        self.assertEqual(ui_copy["module_pack_label"], self.ui["module_pack_label"])
 
     def test_topic_template_exposes_print_trigger(self) -> None:
         html = self.env.get_template("topic.html").render(
@@ -211,6 +217,7 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn("data-print-trigger", html)
         self.assertIn(">Vissza a katalogushoz<", html)
         self.assertIn(">Tema nyomtatasa<", html)
+        self.assertIn(">Modulcsomag nyomtatasa<", html)
         self.assertIn('class="site-nav-link site-nav-link--button"', html)
         self.assertIn('aria-label="Temak kozotti lapozas"', html)
         self.assertRegex(html, r'>\s*Elozo: ASCII\s*<')
@@ -218,8 +225,53 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn('href="/topics/01-01-ascii/"', html)
         self.assertIn('href="/topics/01-03-hexadezimalis/"', html)
         self.assertIn('href="/hu/topics/01-02-binaris/"', html)
+        self.assertIn('href="/module-packs/01-grundlagen/"', html)
         self.assertNotIn('<nav class="topic-pagination" aria-label="Sidebar">', html)
         self.assertNotIn('<main class="page-shell">', html)
+
+    def test_module_pack_template_exposes_print_trigger_and_topic_outline(self) -> None:
+        html = self.env.get_template("module_pack.html").render(
+            ui_lang="hu",
+            page_lang="hu",
+            page_title="01 · Grundlagen",
+            asset_prefix="/assets",
+            body_class="module-pack-page",
+            ui=self.ui,
+            module_pack={
+                "number": "01",
+                "display_label": "Grundlagen",
+                "topics": [
+                    {
+                        "id": "LAP-01-01",
+                        "title": "ASCII",
+                        "slug": "01-01-ascii",
+                        "subtopic_number": "01",
+                        "content_html": "<h1>ASCII</h1><p>Tartalom</p>",
+                    },
+                    {
+                        "id": "LAP-01-02",
+                        "title": "Binaris",
+                        "slug": "01-02-binaris",
+                        "subtopic_number": "02",
+                        "content_html": "<h1>Binaris</h1><p>Tartalom</p>",
+                    },
+                ],
+            },
+            navigation=self.navigation,
+            site_root="/",
+            lang_switcher=[
+                {"code": "de", "label": "DE", "href": "/module-packs/01-grundlagen/", "is_current": True},
+                {"code": "hu", "label": "HU", "href": "/hu/module-packs/01-grundlagen/", "is_current": False},
+            ],
+        )
+
+        self.assertIn("data-print-trigger", html)
+        self.assertIn(">Modulcsomag nyomtatasa<", html)
+        self.assertIn(">A csomag temai<", html)
+        self.assertIn('href="#01-01-ascii"', html)
+        self.assertIn('href="#01-02-binaris"', html)
+        self.assertIn('href="/hu/module-packs/01-grundlagen/"', html)
+        self.assertIn('class="module-pack-topic"', html)
 
     def test_site_js_wires_progressive_enhancement_hooks(self) -> None:
         self.assertIn('[data-catalog-controls]', self.site_js)
@@ -234,6 +286,9 @@ class TemplateHookTests(unittest.TestCase):
         self.assertIn('function buildAliasLookup(groups)', self.site_js)
         self.assertIn('function expandQueryTokens(query, aliasLookup)', self.site_js)
         self.assertIn('item._searchHaystack = buildTopicSearchHaystack(item);', self.site_js)
+        self.assertIn('function createSidebarSection(mainTopic, modulePackLabel)', self.site_js)
+        self.assertIn('uiCopy.module_pack_label || ""', self.site_js)
+        self.assertIn('mainTopic.pack_slug', self.site_js)
         self.assertIn('.replace(/^\\d+_/, "")', self.site_js)
         self.assertIn('button.setAttribute("data-sidebar-toggle", "")', self.site_js)
         self.assertIn('button.textContent = sidebarLabel;', self.site_js)
