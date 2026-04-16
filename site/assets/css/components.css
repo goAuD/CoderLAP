@@ -270,6 +270,7 @@ a.lang-switcher__item:focus-visible {
   scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: rgba(95, 167, 162, 0.45) rgba(255, 255, 255, 0.02);
+  padding: 0.18rem 0.28rem 0.42rem 0.08rem;
 }
 
 .catalog-sidebar [data-sidebar-panel]::-webkit-scrollbar {
@@ -358,6 +359,8 @@ a.lang-switcher__item:focus-visible {
 .sidebar-group__action {
   min-height: 2rem;
   padding: 0.35rem 0.65rem;
+  margin-top: 0.08rem;
+  margin-right: 0.04rem;
   font-size: 0.72rem;
   line-height: 1.1;
   white-space: nowrap;
@@ -528,6 +531,23 @@ a.lang-switcher__item:focus-visible {
 
 .module-pack-topic__content > :last-child {
   margin-bottom: 0;
+}
+
+.module-pack-topic__content {
+  min-width: 0;
+}
+
+.module-pack-topic__content,
+.module-pack-topic__content :where(p, li, a, td, th, code) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.module-pack-topic__content .table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .topic-pagination {
