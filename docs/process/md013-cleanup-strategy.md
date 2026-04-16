@@ -1,6 +1,6 @@
 # CoderLAP MD013 Cleanup Strategy
 
-Last updated: `2026-04-12`
+Last updated: `2026-04-16`
 
 ## Purpose
 
@@ -52,7 +52,7 @@ runtime, corpus, or delivery docs.
 
 ## What Not To Do
 
-- do not mass-reflow all `233` topic files in one commit
+- do not mass-reflow all `235` topic files in one commit
 - do not combine `MD013` cleanup with legal, deploy, search, or frontend changes
 - do not rewrite exam wording just to shorten lines
 - do not aggressively wrap Markdown tables or code fences if that hurts

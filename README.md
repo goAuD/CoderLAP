@@ -186,14 +186,16 @@ restructuring the finished corpus:
 - Markdown remains the source of truth
 - the current numbered German folder tree remains unchanged
 - stable IDs are provided through the generated content registry
-- `.gitignore` and deployment planning are in place for private GitHub use
+- repo hygiene and deployment planning are in place for public-safe GitHub
+  visibility
 - the bilingual static site already ships from the current repository
 
 What was deliberately deferred:
 
 - rewriting all topic files with front matter
 - migrating to `content/hu` and `content/de`
-- building a full validation or static-site pipeline before it is needed
+- building a CMS, database-backed workflow, or heavier validation layer beyond
+  the current static pipeline
 
 ## Roadmap
 
@@ -286,5 +288,6 @@ Short cross-machine continuation note:
 ## Notes
 
 This is a long-running working project, not just a static notes dump.  
-The goal is to end up with a complete, consistent, reusable exam knowledge base
-that can later be translated and rendered on the web.
+The goal is to maintain a complete, consistent, reusable exam knowledge base
+that already renders as a live bilingual study site while staying easy to
+maintain as Markdown.

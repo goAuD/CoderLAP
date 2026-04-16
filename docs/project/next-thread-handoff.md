@@ -12,8 +12,8 @@ Last updated: `2026-04-16`
 ## Current Project State
 
 - `18` main topic folders complete
-- `233` canonical Hungarian topic files complete as `README.md`
-- `233` German translation sidecars complete as `README.de.md`
+- `235` canonical Hungarian topic files complete as `README.md`
+- `235` German translation sidecars complete as `README.de.md`
 - metadata registry present:
   - `LAP_CONTENT_REGISTRY.json`
   - `LAP_CONTENT_REGISTRY.csv`
@@ -33,6 +33,7 @@ Last updated: `2026-04-16`
 - SSL/TLS mode is `Full (strict)`
 - Caddy serves a Cloudflare Origin Certificate for `coderlap.com`
 - temporary `basic_auth` protects the site during private rollout
+- repo-facing docs are being kept safe for public visibility
 - uptime/expiry monitoring now exists through `scripts/check_site_health.py`
   and `.github/workflows/coderlap-site-monitor.yml`
 - `robots.txt` currently blocks indexing

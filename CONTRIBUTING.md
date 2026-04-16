@@ -7,7 +7,7 @@
 The repository is primarily:
 
 - a Markdown content project
-- a future static-site source
+- a live static-site source
 - a long-running study/reference corpus
 
 ## Before you change anything

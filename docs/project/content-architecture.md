@@ -1,6 +1,6 @@
 # CoderLAP Content and Build Architecture
 
-Last updated: `2026-04-12`
+Last updated: `2026-04-16`
 
 ## Purpose
 
@@ -9,7 +9,8 @@ This document describes the **current** content architecture of `CoderLAP`.
 It reflects the repository after:
 
 - the Hungarian source corpus was completed
-- all `233` subtopics were translated to German as `README.de.md`
+- all `235` registered topic documents were translated to German as
+  `README.de.md`
 - the static frontend and i18n layer were implemented
 
 ## Canonical Sources
@@ -119,11 +120,16 @@ Generated output shape:
 dist/
   index.html        # German default
   topics/...
+  module-packs/...
   imprint/
   privacy/
+  robots.txt
+  .well-known/
+    security.txt
   hu/
     index.html      # Hungarian
     topics/...
+    module-packs/...
     imprint/
     privacy/
   assets/
@@ -191,10 +197,11 @@ Current metadata semantics worth remembering:
 
 The architecture is now stable enough for:
 
-1. final content/UI QA
-2. deployment to `coderlap.com`
-3. Debian + Caddy delivery
+1. content/UI QA and maintenance
+2. restricted live delivery at `coderlap.com`
+3. Debian + Caddy delivery behind Cloudflare
 4. low-attack-surface hosting with a single deploy path
+5. public-safe repository visibility without changing the static-first model
 
 This document should be updated whenever the on-disk structure, language
 routing, or build pipeline changes.

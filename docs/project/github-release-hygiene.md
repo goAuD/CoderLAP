@@ -1,6 +1,6 @@
 # CoderLAP GitHub Metadata and Release Hygiene
 
-Last updated: `2026-04-12`
+Last updated: `2026-04-16`
 
 ## Purpose
 
@@ -13,7 +13,7 @@ It is intentionally separate from deployment and content architecture notes.
 
 CoderLAP is currently:
 
-- a private repository
+- a repository that should be safe for public visibility
 - a live but access-restricted study platform on `coderlap.com`
 - a bilingual static site with German as the public default and Hungarian as the
   canonical authoring source
@@ -93,8 +93,8 @@ Avoid:
 - `main` remains the release branch
 - release tags should point at `main`, not `dev`
 
-Even if the repo owner bypasses branch protection in a private repo, the release
-story should still treat `main` as the stable milestone line.
+Even if the repo owner bypasses branch protection temporarily, the release story
+should still treat `main` as the stable milestone line.
 
 ## Immediate Hygiene Rule
 
