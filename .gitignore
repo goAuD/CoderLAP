@@ -4,6 +4,7 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+.claude/
 *.code-workspace
 
 # Python
@@ -38,7 +39,6 @@ docs/tmp/
 /docs/*
 !/docs/releases/
 !/docs/assets/
-/.claude/
 /.codex/
 /.sam/
 /AGENTS.md
