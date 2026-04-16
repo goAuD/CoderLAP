@@ -206,7 +206,10 @@ a.lang-switcher__item:focus-visible {
 
 .hero-panel,
 .topic-article,
-.legal-article {
+.legal-article,
+.module-pack-header,
+.module-pack-outline,
+.module-pack-topic {
   position: relative;
   min-width: 0;
   padding: clamp(1.25rem, 3vw, 2rem);
@@ -335,13 +338,30 @@ a.lang-switcher__item:focus-visible {
   border-top: 1px solid rgba(201, 209, 217, 0.08);
 }
 
-.sidebar-group__title {
+.sidebar-group__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin-bottom: 0.8rem;
+}
+
+.sidebar-group__title {
+  margin-bottom: 0;
   color: var(--color-accent);
   font-size: 0.8rem;
   line-height: 1.35;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.sidebar-group__action {
+  min-height: 2rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .sidebar-group__list {
@@ -469,6 +489,47 @@ a.lang-switcher__item:focus-visible {
   justify-content: center;
 }
 
+.module-pack-header {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.module-pack-outline__list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.module-pack-outline__list a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.module-pack-outline__list a:hover,
+.module-pack-outline__list a:focus-visible {
+  color: var(--color-accent);
+}
+
+.module-pack-topic {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.module-pack-topic__meta {
+  margin: 0;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.module-pack-topic__content > :last-child {
+  margin-bottom: 0;
+}
+
 .topic-pagination {
   display: grid;
   gap: 0.9rem;
@@ -571,6 +632,11 @@ a.lang-switcher__item:focus-visible {
     margin-inline: auto;
     max-width: var(--max-content-width);
   }
+
+  .module-pack-outline__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-4);
+  }
 }
 
 @media (max-width: 35rem) {
@@ -582,6 +648,15 @@ a.lang-switcher__item:focus-visible {
   .topic-actions .site-nav-link,
   .topic-actions button,
   .catalog-sidebar__toggle {
+    width: 100%;
+  }
+
+  .sidebar-group__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar-group__action {
     width: 100%;
   }
 }

@@ -225,14 +225,27 @@
     return article;
   }
 
-  function createSidebarSection(mainTopic) {
+  function createSidebarSection(mainTopic, modulePackLabel) {
     var section = document.createElement("section");
     section.className = "sidebar-group";
+
+    var header = document.createElement("div");
+    header.className = "sidebar-group__header";
 
     var heading = document.createElement("h3");
     heading.className = "sidebar-group__title";
     heading.textContent = mainTopic.number + " · " + formatMainTopicLabel(mainTopic.label);
-    section.appendChild(heading);
+    header.appendChild(heading);
+
+    if (modulePackLabel && mainTopic.pack_slug) {
+      var action = document.createElement("a");
+      action.className = "sidebar-group__action site-nav-link site-nav-link--button";
+      action.textContent = modulePackLabel;
+      action.setAttribute("href", SITE_ROOT + "module-packs/" + mainTopic.pack_slug + "/");
+      header.appendChild(action);
+    }
+
+    section.appendChild(header);
 
     var list = document.createElement("ul");
     list.className = "sidebar-group__list";
@@ -406,7 +419,7 @@
     if (sidebarPanel) {
       clearChildren(sidebarPanel);
       mainTopics.forEach(function (mainTopic) {
-        sidebarPanel.appendChild(createSidebarSection(mainTopic));
+        sidebarPanel.appendChild(createSidebarSection(mainTopic, uiCopy.module_pack_label || ""));
       });
       if (sidebarContainer) {
         sidebarContainer.hidden = false;
@@ -543,7 +556,7 @@
     var panel = null;
     var ready = false;
 
-    function buildSidebar(mainTopics) {
+    function buildSidebar(mainTopics, modulePackLabel) {
       sidebar = document.createElement("aside");
       sidebar.className = "catalog-sidebar";
       sidebar.hidden = true;
@@ -552,7 +565,7 @@
       panel.setAttribute("data-sidebar-panel", "");
 
       mainTopics.forEach(function (mainTopic) {
-        panel.appendChild(createSidebarSection(mainTopic));
+        panel.appendChild(createSidebarSection(mainTopic, modulePackLabel || ""));
       });
 
       sidebar.appendChild(panel);
@@ -621,7 +634,7 @@
             return;
           }
           SITE_ROOT = root;
-          buildSidebar(nav.main_topics);
+          buildSidebar(nav.main_topics, uiCopyQV.module_pack_label || "");
           ready = true;
           openOverlay();
         })

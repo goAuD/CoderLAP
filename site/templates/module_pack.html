@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="page-shell module-pack-shell" aria-labelledby="module-pack-title">
+  <section class="topic-actions module-pack-actions">
+    <a class="site-nav-link site-nav-link--button" href="{{ site_root | default('/', true) }}">{{ ui.get("back_to_catalog", "") }}</a>
+    <button type="button" class="site-nav-link site-nav-link--button" data-print-trigger>{{ ui.get("module_pack_print_label", "") }}</button>
+  </section>
+
+  <header class="module-pack-header">
+    <p class="eyebrow">{{ ui.project_tagline }}</p>
+    <h1 id="module-pack-title">{{ module_pack.number }} · {{ module_pack.display_label }}</h1>
+    <p class="hero-copy">{{ ui.get("module_pack_intro", "") }}</p>
+  </header>
+
+  <section class="module-pack-outline" aria-labelledby="module-pack-outline-title">
+    <h2 id="module-pack-outline-title">{{ ui.get("module_pack_contents_label", "") }}</h2>
+    <ol class="module-pack-outline__list">
+      {% for item in module_pack.topics %}
+      <li><a href="#{{ item.slug }}">{{ item.subtopic_number }} · {{ item.title }}</a></li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="module-pack-topics" aria-label="{{ module_pack.display_label }}">
+    {% for item in module_pack.topics %}
+    <article class="module-pack-topic" id="{{ item.slug }}">
+      <p class="module-pack-topic__meta">{{ module_pack.number }} · {{ item.subtopic_number }}</p>
+      <div class="module-pack-topic__content">{{ item.content_html | safe }}</div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <script type="application/json" data-ui-copy-json>
+    {{ {
+      "site_root": site_root | default("/", true),
+      "module_pack_label": ui.get("module_pack_label", "")
+    } | tojson }}
+  </script>
+</section>
+{% endblock %}
