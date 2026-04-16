@@ -47,7 +47,11 @@ _ALLOWED_ATTRIBUTES = {
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _STANDALONE_URL_PATTERN = re.compile(r"^(https?://[^\s<]+)$")
 _REDUNDANT_TOPIC_HEADING_PATTERN = re.compile(
-    r"<h2>\s*(?:Lényeg 30 másodpercben|Lenyeg 30 masodpercben)\s*</h2>",
+    r"<h2>\s*(?:"
+    r"Lényeg 30 másodpercben"
+    r"|Lenyeg 30 masodpercben"
+    r"|Zusammenfassung in 30 Sekunden"
+    r")\s*</h2>",
     re.IGNORECASE,
 )
 

@@ -457,3 +457,20 @@ class LoaderTests(unittest.TestCase):
             markdown_path.write_text("# Cím\n\nÁrvíztűrő tükörfúrógép", encoding="utf-8")
 
             self.assertEqual(load_topic_markdown(markdown_path), "# Cím\n\nÁrvíztűrő tükörfúrógép")
+
+    def test_load_topic_markdown_raises_file_not_found_for_missing_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            missing_path = Path(tmpdir) / "does_not_exist.md"
+
+            with self.assertRaises(FileNotFoundError) as cm:
+                load_topic_markdown(missing_path)
+            self.assertIn("does_not_exist.md", str(cm.exception))
+
+    def test_load_topic_markdown_raises_value_error_for_invalid_utf8(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            bad_path = Path(tmpdir) / "README.md"
+            bad_path.write_bytes(b"\x80\x81\x82 invalid bytes")
+
+            with self.assertRaises(ValueError) as cm:
+                load_topic_markdown(bad_path)
+            self.assertIn("Invalid UTF-8", str(cm.exception))

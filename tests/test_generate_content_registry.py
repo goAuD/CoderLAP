@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import scripts.generate_content_registry as registry_module
-from scripts.generate_content_registry import RegistryItem, get_translation_status, write_json
+from scripts.generate_content_registry import RegistryItem, _read_markdown, get_translation_status, write_json
 
 
 class GenerateContentRegistryTests(unittest.TestCase):
@@ -53,6 +53,16 @@ class GenerateContentRegistryTests(unittest.TestCase):
             payload = output_path.read_text(encoding="utf-8")
             self.assertIn('"source_root": "."', payload)
             self.assertIn('"translation_status": "de_complete"', payload)
+
+
+    def test_read_markdown_raises_value_error_for_invalid_utf8(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            bad_path = Path(tmpdir) / "README.md"
+            bad_path.write_bytes(b"\x80\x81\x82 invalid bytes")
+
+            with self.assertRaises(ValueError) as cm:
+                _read_markdown(bad_path)
+            self.assertIn("Invalid UTF-8", str(cm.exception))
 
 
 if __name__ == "__main__":
