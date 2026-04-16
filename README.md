@@ -62,6 +62,8 @@ Architecture and delivery notes are documented in:
 - [docs/project/next-improvements-checklist.md](./docs/project/next-improvements-checklist.md)
 - [docs/project/backup-restore-playbook.md](./docs/project/backup-restore-playbook.md)
 - [docs/project/feedback-loop-playbook.md](./docs/project/feedback-loop-playbook.md)
+- [docs/project/uptime-expiry-monitoring.md](./docs/project/uptime-expiry-monitoring.md)
+- [docs/project/final-austrian-legal-review.md](./docs/project/final-austrian-legal-review.md)
 - [docs/process/md013-cleanup-strategy.md](./docs/process/md013-cleanup-strategy.md)
 
 ## Project layout
