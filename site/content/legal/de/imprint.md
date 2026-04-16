@@ -12,7 +12,11 @@
 ## Kontakt
 
 - Öffentliches Profil: `https://github.com/goAuD`
-- Öffentlicher Feedback-Kanal: Issues oder Pull Requests im Projekt-Repository
+- Aktueller Feedback-Kanal während des zugriffsbeschränkten Rollouts: direkter
+  Kontakt innerhalb des vertrauenswürdigen Testkreises und maintainerseitige
+  Übernahme in GitHub-Issues
+- Falls das Repository später öffentlich freigegeben wird, können Issues oder
+  Pull Requests im Projekt-Repository zum öffentlichen Feedback-Kanal werden
 - Hinweis: Vor einer uneingeschränkt öffentlichen Freischaltung sollte ein
   direkter elektronischer Kontaktweg ausdrücklich ergänzt werden
 
