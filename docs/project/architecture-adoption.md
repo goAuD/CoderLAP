@@ -1,6 +1,6 @@
 # CoderLAP Architecture Adoption Notes
 
-Last updated: `2026-04-12`
+Last updated: `2026-04-16`
 
 ## Purpose
 
@@ -30,7 +30,7 @@ The project uses:
 - `LAP_CONTENT_REGISTRY.json`
 - `LAP_CONTENT_REGISTRY.csv`
 
-This keeps metadata centralized without forcing front matter into all `233`
+This keeps metadata centralized without forcing front matter into all `235`
 topic folders.
 
 ### The numbered folder tree stays unchanged
@@ -80,12 +80,12 @@ Those ideas are still unnecessary for the current project stage.
 
 The following are now true and should be treated as current-state facts:
 
-- all `233` subtopics exist in Hungarian
-- all `233` subtopics exist in German translation form
+- all `235` registered topic documents exist in Hungarian
+- all `235` registered topic documents exist in German translation form
 - German is the default site language
 - Hungarian is available under `/hu/`
 - the static frontend is already built
-- the next major engineering phase is deployment, not frontend invention
+- the current engineering phase is maintenance, hardening, and release hygiene
 
 ## Documentation Layout Decision
 
@@ -114,6 +114,7 @@ For future work, optimize for:
 2. keeping the build deterministic
 3. deploying only the static result
 4. avoiding unnecessary structural rewrites
+5. keeping repository-facing docs safe for public visibility
 
 If the architecture changes again, update this file and
 `docs/project/content-architecture.md` together.
