@@ -126,9 +126,18 @@ class SiteCssAssetsTests(unittest.TestCase):
         self.assertIn(".catalog-sidebar [data-sidebar-panel] {", self.components_css)
         self.assertIn("overflow-x: clip;", self.components_css)
         self.assertIn("scrollbar-gutter: stable;", self.components_css)
+        self.assertIn("padding: 0.18rem 0.28rem 0.42rem 0.08rem;", self.components_css)
         self.assertIn("::-webkit-scrollbar-thumb {", self.components_css)
         self.assertIn(".sidebar-group__header {", self.components_css)
         self.assertIn(".sidebar-group__action {", self.components_css)
+        self.assertIn("margin-top: 0.08rem;", self.components_css)
+        self.assertIn("margin-right: 0.04rem;", self.components_css)
+
+    def test_components_css_keeps_module_pack_content_wrapped_like_topic_view(self) -> None:
+        self.assertIn(".module-pack-topic__content {", self.components_css)
+        self.assertIn(".module-pack-topic__content .table-wrap {", self.components_css)
+        self.assertIn("overflow-wrap: anywhere;", self.components_css)
+        self.assertIn("-webkit-overflow-scrolling: touch;", self.components_css)
 
 
 if __name__ == "__main__":
