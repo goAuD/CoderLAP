@@ -1,6 +1,6 @@
 # CoderLAP Releases
 
-Last updated: `2026-04-16`
+Last updated: `2026-05-24`
 
 This folder stores release-note source files that describe milestone states of
 the repository and the live site.
@@ -12,6 +12,7 @@ are historical milestone records, not evergreen architecture or process notes.
 
 - [release-notes-v0.1.0-private-beta.1.md](./release-notes-v0.1.0-private-beta.1.md)
 - [release-notes-v0.2.0-public-repo.1.md](./release-notes-v0.2.0-public-repo.1.md)
+- [release-notes-v0.2.1-maintenance.1.md](./release-notes-v0.2.1-maintenance.1.md)
 
 ## Naming Rule
 
