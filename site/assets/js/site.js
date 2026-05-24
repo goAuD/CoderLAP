@@ -229,6 +229,52 @@
 
   /* ── Resolve site root from embedded JSON (language-aware) ──── */
   var SITE_ROOT = "/";
+  var SAFE_PATH_SEGMENT_PATTERN = /^[a-z0-9][a-z0-9_-]*$/;
+
+  function normalizeSiteRoot(value) {
+    var root = typeof value === "string" ? value.trim() : "/";
+    if (!root) {
+      return "/";
+    }
+    root = root.replace(/\\/g, "/");
+    if (!/^\/[a-z0-9/_-]*$/i.test(root)) {
+      return "/";
+    }
+    root = root.replace(/\/+/g, "/");
+    if (root.charAt(0) !== "/") {
+      root = "/" + root;
+    }
+    if (root.charAt(root.length - 1) !== "/") {
+      root += "/";
+    }
+    return root;
+  }
+
+  function sanitizePathSegment(value) {
+    var segment = String(value || "").trim().toLowerCase();
+    if (!SAFE_PATH_SEGMENT_PATTERN.test(segment)) {
+      return "";
+    }
+    return segment;
+  }
+
+  function buildTopicHref(slug) {
+    var safeSlug = sanitizePathSegment(slug);
+    var siteRoot = normalizeSiteRoot(SITE_ROOT);
+    if (!safeSlug) {
+      return siteRoot;
+    }
+    return siteRoot + "topics/" + safeSlug + "/";
+  }
+
+  function buildModulePackHref(packSlug) {
+    var safePackSlug = sanitizePathSegment(packSlug);
+    var siteRoot = normalizeSiteRoot(SITE_ROOT);
+    if (!safePackSlug) {
+      return siteRoot;
+    }
+    return siteRoot + "module-packs/" + safePackSlug + "/";
+  }
 
   function createCard(item, templateRoot) {
     var article;
@@ -255,7 +301,7 @@
 
     meta.textContent = item.main_topic_number + " · " + formatMainTopicLabel(item.main_topic_label);
     titleLink.textContent = item.title;
-    titleLink.setAttribute("href", SITE_ROOT + "topics/" + item.slug + "/");
+    titleLink.href = buildTopicHref(item.slug);
 
     var status = getStatus(item.id);
     if (status === "done") {
@@ -284,7 +330,7 @@
       var action = document.createElement("a");
       action.className = "sidebar-group__action site-nav-link site-nav-link--button";
       action.textContent = modulePackLabel;
-      action.setAttribute("href", SITE_ROOT + "module-packs/" + mainTopic.pack_slug + "/");
+      action.href = buildModulePackHref(mainTopic.pack_slug);
       header.appendChild(action);
     }
 
@@ -298,7 +344,7 @@
       var link = document.createElement("a");
       link.className = "sidebar-group__link";
       link.textContent = topic.subtopic_number + " · " + topic.title;
-      link.setAttribute("href", SITE_ROOT + "topics/" + topic.slug + "/");
+      link.href = buildTopicHref(topic.slug);
 
       if (topic.id === currentTopicId) {
         link.setAttribute("aria-current", "page");
@@ -441,7 +487,7 @@
       return;
     }
 
-    SITE_ROOT = uiCopy.site_root || "/";
+    SITE_ROOT = normalizeSiteRoot(uiCopy.site_root || "/");
 
     var aliasLookup = buildAliasLookup(searchAliasGroups);
     var topics = Array.isArray(topicIndex) ? topicIndex.slice().map(function (item) {
@@ -705,7 +751,7 @@
       }
 
       var uiCopyQV = parseJsonScript("[data-ui-copy-json]") || {};
-      var root = uiCopyQV.site_root || SITE_ROOT;
+      var root = normalizeSiteRoot(uiCopyQV.site_root || SITE_ROOT);
       fetch(root + "data/navigation.json", { signal: AbortSignal.timeout(5000) })
         .then(function (res) { return res.json(); })
         .then(function (nav) {
