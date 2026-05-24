@@ -38,6 +38,7 @@ STRING_FIELDS = {
 }
 
 TOPIC_NUMBER_PATTERN = re.compile(r"^\d{2}$")
+SLUG_PATTERN = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
 
 
 def _load_registry_payload(registry_path: Path) -> dict:
@@ -66,6 +67,8 @@ def _build_topic_record(item: dict) -> TopicRecord:
     for field_name in STRING_FIELDS:
         if not isinstance(item[field_name], str):
             raise ValueError(f"Registry item field '{field_name}' must be a string.")
+    if not SLUG_PATTERN.fullmatch(item["slug"]):
+        raise ValueError("Registry item field 'slug' must use only lowercase ASCII letters, numbers, underscores, and hyphens.")
     if not isinstance(item["source_count"], int) or isinstance(item["source_count"], bool):
         raise ValueError("Registry item field 'source_count' must be an integer.")
     if item["opened_at"] is not None and not isinstance(item["opened_at"], str):

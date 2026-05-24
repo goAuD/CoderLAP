@@ -13,6 +13,21 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.venv/
+venv/
+env/
+.python-version
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+pip-wheel-metadata/
+*.egg-info/
 
 # Node / frontend build output
 node_modules/
@@ -30,7 +45,17 @@ coverage/
 *.tmp
 *.bak
 *.swp
+*.log
+*.local
+.cache/
+.envrc
 
 # Local-only docs scratch space
 docs/_local/
 docs/tmp/
+
+# Agents
+/.claude/
+/.codex/
+/AGENTS.md
+docs/superpowers/

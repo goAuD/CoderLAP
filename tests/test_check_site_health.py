@@ -5,9 +5,13 @@ import unittest
 from unittest.mock import patch
 
 from scripts.check_site_health import (
+    CF_CHALLENGE_HEADER,
+    CF_CHALLENGE_VALUE,
     HttpCheckResult,
     _build_basic_auth_header,
+    _build_tls_context,
     _days_until,
+    _is_cloudflare_challenge_response,
     _parse_not_after,
     _require_authenticated_access,
     _require_unauthenticated_protection,
@@ -34,12 +38,32 @@ class CheckSiteHealthTests(unittest.TestCase):
         self.assertEqual(_days_until(datetime(2026, 4, 20, tzinfo=UTC), now=now), 4)
         self.assertEqual(_days_until(datetime(2026, 4, 10, tzinfo=UTC), now=now), 0)
 
+    def test_build_tls_context_requires_tls_1_2_or_newer(self) -> None:
+        context = _build_tls_context()
+        self.assertEqual(context.minimum_version.name, "TLSv1_2")
+
+    def test_is_cloudflare_challenge_response_detects_expected_edge_block(self) -> None:
+        self.assertTrue(
+            _is_cloudflare_challenge_response(
+                HttpCheckResult(status=403, headers={CF_CHALLENGE_HEADER: CF_CHALLENGE_VALUE}, body="")
+            )
+        )
+
     def test_require_unauthenticated_protection_rejects_missing_basic_challenge(self) -> None:
         with self.assertRaisesRegex(RuntimeError, "Basic auth"):
             _require_unauthenticated_protection(
                 HttpCheckResult(status=401, headers={}, body=""),
                 "https://coderlap.com",
             )
+
+    def test_require_unauthenticated_protection_accepts_cloudflare_challenge(self) -> None:
+        self.assertEqual(
+            _require_unauthenticated_protection(
+                HttpCheckResult(status=403, headers={CF_CHALLENGE_HEADER: CF_CHALLENGE_VALUE}, body=""),
+                "https://coderlap.com",
+            ),
+            "cloudflare_challenge",
+        )
 
     def test_require_authenticated_access_rejects_missing_body_token(self) -> None:
         with self.assertRaisesRegex(RuntimeError, "expected body token"):
@@ -54,7 +78,7 @@ class CheckSiteHealthTests(unittest.TestCase):
             patch("scripts.check_site_health._resolve_host", return_value=["203.0.113.10"]) as resolve_host,
             patch(
                 "scripts.check_site_health._fetch_cert_expiry",
-                return_value=datetime(2026, 5, 30, tzinfo=UTC),
+                return_value=datetime(2099, 5, 30, tzinfo=UTC),
             ) as fetch_cert_expiry,
             patch(
                 "scripts.check_site_health._fetch_url",
@@ -79,6 +103,33 @@ class CheckSiteHealthTests(unittest.TestCase):
         self.assertEqual(fetch_cert_expiry.call_count, 2)
         self.assertEqual(fetch_url.call_count, 4)
         self.assertEqual(len(lines), 8)
+
+    def test_run_checks_accepts_cloudflare_challenge_without_auth_step(self) -> None:
+        with (
+            patch("scripts.check_site_health._resolve_host", return_value=["203.0.113.10"]) as resolve_host,
+            patch(
+                "scripts.check_site_health._fetch_cert_expiry",
+                return_value=datetime(2099, 5, 30, tzinfo=UTC),
+            ) as fetch_cert_expiry,
+            patch(
+                "scripts.check_site_health._fetch_url",
+                side_effect=[
+                    HttpCheckResult(status=403, headers={CF_CHALLENGE_HEADER: CF_CHALLENGE_VALUE}, body=""),
+                    HttpCheckResult(status=403, headers={CF_CHALLENGE_HEADER: CF_CHALLENGE_VALUE}, body=""),
+                ],
+            ) as fetch_url,
+        ):
+            lines = run_checks(
+                urls=["https://coderlap.com", "https://www.coderlap.com"],
+                timeout=10,
+                min_cert_days=7,
+                body_token="CoderLAP",
+            )
+
+        self.assertEqual(resolve_host.call_count, 2)
+        self.assertEqual(fetch_cert_expiry.call_count, 2)
+        self.assertEqual(fetch_url.call_count, 2)
+        self.assertEqual(len(lines), 6)
 
 
 if __name__ == "__main__":

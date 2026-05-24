@@ -17,6 +17,8 @@ from urllib.request import Request, urlopen
 DEFAULT_BODY_TOKEN = "CoderLAP"
 DEFAULT_TIMEOUT_SECONDS = 10
 DEFAULT_MIN_CERT_DAYS = 21
+CF_CHALLENGE_HEADER = "cf-mitigated"
+CF_CHALLENGE_VALUE = "challenge"
 
 
 @dataclass(frozen=True)
@@ -30,6 +32,12 @@ def _build_basic_auth_header(username: str, password: str) -> str:
     raw = f"{username}:{password}".encode("utf-8")
     encoded = base64.b64encode(raw).decode("ascii")
     return f"Basic {encoded}"
+
+
+def _build_tls_context() -> ssl.SSLContext:
+    context = ssl.create_default_context()
+    context.minimum_version = ssl.TLSVersion.TLSv1_2
+    return context
 
 
 def _parse_not_after(not_after: str) -> datetime:
@@ -76,7 +84,7 @@ def _fetch_url(url: str, *, timeout: int, authorization: str | None = None) -> H
 
 
 def _fetch_cert_expiry(hostname: str, *, timeout: int) -> datetime:
-    context = ssl.create_default_context()
+    context = _build_tls_context()
     with socket.create_connection((hostname, 443), timeout=timeout) as sock:
         with context.wrap_socket(sock, server_hostname=hostname) as tls_sock:
             cert = tls_sock.getpeercert()
@@ -86,12 +94,21 @@ def _fetch_cert_expiry(hostname: str, *, timeout: int) -> datetime:
     return _parse_not_after(not_after)
 
 
-def _require_unauthenticated_protection(result: HttpCheckResult, url: str) -> None:
-    if result.status != 401:
-        raise RuntimeError(f"{url} returned {result.status} instead of 401 for unauthenticated access")
-    challenge = result.headers.get("www-authenticate", "")
-    if "basic" not in challenge.lower():
-        raise RuntimeError(f"{url} did not advertise Basic auth in WWW-Authenticate")
+def _is_cloudflare_challenge_response(result: HttpCheckResult) -> bool:
+    return result.status == 403 and result.headers.get(CF_CHALLENGE_HEADER, "").strip().lower() == CF_CHALLENGE_VALUE
+
+
+def _require_unauthenticated_protection(result: HttpCheckResult, url: str) -> str:
+    if result.status == 401:
+        challenge = result.headers.get("www-authenticate", "")
+        if "basic" not in challenge.lower():
+            raise RuntimeError(f"{url} did not advertise Basic auth in WWW-Authenticate")
+        return "basic_auth"
+    if _is_cloudflare_challenge_response(result):
+        return "cloudflare_challenge"
+    raise RuntimeError(
+        f"{url} returned {result.status} instead of a supported protection response (401 Basic auth or 403 Cloudflare challenge)"
+    )
 
 
 def _require_authenticated_access(result: HttpCheckResult, url: str, body_token: str) -> None:
@@ -114,14 +131,14 @@ def _write_summary(lines: Iterable[str]) -> None:
 def run_checks(
     *,
     urls: list[str],
-    username: str,
-    password: str,
+    username: str = "",
+    password: str = "",
     timeout: int,
     min_cert_days: int,
     body_token: str,
 ) -> list[str]:
     lines: list[str] = []
-    authorization = _build_basic_auth_header(username, password)
+    authorization = _build_basic_auth_header(username, password) if username and password else None
 
     for url in urls:
         parsed = urlparse(url)
@@ -143,8 +160,16 @@ def run_checks(
         lines.append(f"TLS OK: {hostname} expires {expires_at.date().isoformat()} ({days_remaining} days left)")
 
         unauthenticated = _fetch_url(url, timeout=timeout)
-        _require_unauthenticated_protection(unauthenticated, url)
+        protection_mode = _require_unauthenticated_protection(unauthenticated, url)
+        if protection_mode == "cloudflare_challenge":
+            lines.append(f"Edge gate OK: {url} returned 403 Cloudflare challenge")
+            continue
+
         lines.append(f"Auth gate OK: {url} returned 401 with Basic challenge")
+        if not authorization:
+            raise RuntimeError(
+                "CODERLAP_BASIC_AUTH_USER and CODERLAP_BASIC_AUTH_PASSWORD must be set when the site returns a Basic auth challenge"
+            )
 
         authenticated = _fetch_url(url, timeout=timeout, authorization=authorization)
         _require_authenticated_access(authenticated, url, body_token)
@@ -167,8 +192,6 @@ def main() -> int:
     args = parse_args()
     username = os.environ.get("CODERLAP_BASIC_AUTH_USER", "").strip()
     password = os.environ.get("CODERLAP_BASIC_AUTH_PASSWORD", "").strip()
-    if not username or not password:
-        raise RuntimeError("CODERLAP_BASIC_AUTH_USER and CODERLAP_BASIC_AUTH_PASSWORD must be set")
 
     urls = [args.base_url]
     if args.www_url and args.www_url != args.base_url:
