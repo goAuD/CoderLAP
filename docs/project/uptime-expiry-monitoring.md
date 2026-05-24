@@ -34,7 +34,8 @@ The script checks:
 3. edge TLS answers and the presented certificate is not near expiry
 4. unauthenticated request returns either:
    - `401` with `WWW-Authenticate: Basic`, or
-   - `403` with `cf-mitigated: challenge` when Cloudflare blocks the bot at the edge
+   - `403` with Cloudflare-managed edge block headers such as
+     `cf-mitigated: challenge` or `server: cloudflare` plus `cf-ray`
 5. if the edge still reaches Caddy Basic auth, the script also checks:
    - authenticated request returns `200`
    - authenticated body still contains the expected `CoderLAP` token

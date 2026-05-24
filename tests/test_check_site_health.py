@@ -7,6 +7,9 @@ from unittest.mock import patch
 from scripts.check_site_health import (
     CF_CHALLENGE_HEADER,
     CF_CHALLENGE_VALUE,
+    CF_RAY_HEADER,
+    CF_SERVER_HEADER,
+    CF_SERVER_VALUE,
     HttpCheckResult,
     _build_basic_auth_header,
     _build_tls_context,
@@ -49,6 +52,17 @@ class CheckSiteHealthTests(unittest.TestCase):
             )
         )
 
+    def test_is_cloudflare_challenge_response_accepts_cloudflare_403_without_cf_mitigated_header(self) -> None:
+        self.assertTrue(
+            _is_cloudflare_challenge_response(
+                HttpCheckResult(
+                    status=403,
+                    headers={CF_SERVER_HEADER: CF_SERVER_VALUE, CF_RAY_HEADER: "abc123-VIE"},
+                    body="",
+                )
+            )
+        )
+
     def test_require_unauthenticated_protection_rejects_missing_basic_challenge(self) -> None:
         with self.assertRaisesRegex(RuntimeError, "Basic auth"):
             _require_unauthenticated_protection(
@@ -60,6 +74,19 @@ class CheckSiteHealthTests(unittest.TestCase):
         self.assertEqual(
             _require_unauthenticated_protection(
                 HttpCheckResult(status=403, headers={CF_CHALLENGE_HEADER: CF_CHALLENGE_VALUE}, body=""),
+                "https://coderlap.com",
+            ),
+            "cloudflare_challenge",
+        )
+
+    def test_require_unauthenticated_protection_accepts_cloudflare_edge_403_without_cf_mitigated_header(self) -> None:
+        self.assertEqual(
+            _require_unauthenticated_protection(
+                HttpCheckResult(
+                    status=403,
+                    headers={CF_SERVER_HEADER: CF_SERVER_VALUE, CF_RAY_HEADER: "abc123-VIE"},
+                    body="",
+                ),
                 "https://coderlap.com",
             ),
             "cloudflare_challenge",

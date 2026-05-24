@@ -19,6 +19,9 @@ DEFAULT_TIMEOUT_SECONDS = 10
 DEFAULT_MIN_CERT_DAYS = 21
 CF_CHALLENGE_HEADER = "cf-mitigated"
 CF_CHALLENGE_VALUE = "challenge"
+CF_RAY_HEADER = "cf-ray"
+CF_SERVER_HEADER = "server"
+CF_SERVER_VALUE = "cloudflare"
 
 
 @dataclass(frozen=True)
@@ -95,7 +98,16 @@ def _fetch_cert_expiry(hostname: str, *, timeout: int) -> datetime:
 
 
 def _is_cloudflare_challenge_response(result: HttpCheckResult) -> bool:
-    return result.status == 403 and result.headers.get(CF_CHALLENGE_HEADER, "").strip().lower() == CF_CHALLENGE_VALUE
+    if result.status != 403:
+        return False
+
+    challenge_header = result.headers.get(CF_CHALLENGE_HEADER, "").strip().lower()
+    if challenge_header == CF_CHALLENGE_VALUE:
+        return True
+
+    server_header = result.headers.get(CF_SERVER_HEADER, "").strip().lower()
+    cf_ray_header = result.headers.get(CF_RAY_HEADER, "").strip()
+    return server_header == CF_SERVER_VALUE and bool(cf_ray_header)
 
 
 def _require_unauthenticated_protection(result: HttpCheckResult, url: str) -> str:
