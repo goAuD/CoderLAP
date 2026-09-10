@@ -834,8 +834,8 @@
 
       heroPill.innerHTML =
         '<svg class="hero-progress-pill__ring" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">' +
-          '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2.5"/>' +
-          '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="#c8b45a" stroke-width="2.5"' +
+          '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="currentColor" stroke-width="2.5"/>' +
+          '<circle cx="11" cy="11" r="' + radius + '" fill="none" stroke="currentColor" stroke-width="2.5"' +
             ' stroke-dasharray="' + circ.toFixed(1) + '" stroke-dashoffset="' + offset.toFixed(1) + '"' +
             ' stroke-linecap="round" transform="rotate(-90 11 11)"/>' +
         '</svg>' +
