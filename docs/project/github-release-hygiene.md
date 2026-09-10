@@ -1,6 +1,6 @@
 # CoderLAP GitHub Metadata and Release Hygiene
 
-Last updated: `2026-04-16`
+Last updated: `2026-09-10`
 
 ## Purpose
 
@@ -71,7 +71,9 @@ Use private rollout milestones first:
   `basic_auth`
 - `v0.2.0-public-repo.1` repository made public while the site may still remain
   access-restricted
-- `v0.3.0-reviewed-content` content, translation, and legal review materially
+- `v0.2.1-maintenance.1` delivery and monitoring maintenance checkpoint
+- `v0.3.0-workshop.1` shared Workshop frontend, mobile polish and upcoming tools
+- `v0.4.0-reviewed-content` planned content, translation, and legal review materially
   improved
 - `v1.0.0-public` unrestricted public release candidate or public launch
 
