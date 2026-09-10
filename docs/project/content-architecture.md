@@ -184,6 +184,8 @@ HTML requests the current assets. This does not invalidate cached HTML or
 override a CDN cache rule that ignores query strings.
 On narrow screens the navigation fills its grid row, aligning its first button
 with the brand icon instead of inheriting desktop right alignment.
+The language switcher and the GitHub button above it share the right edge;
+the GitHub button retains a full touch target around its smaller icon.
 
 For a temporary phone preview on the same trusted LAN, build the site and bind
 the static server to the development computer's LAN address (replace the example
