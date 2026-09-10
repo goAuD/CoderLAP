@@ -141,6 +141,122 @@ The site builder prefers a language-specific Markdown file when it exists:
 - German build prefers `README.de.md`
 - Hungarian build falls back to `README.md`
 
+### Műhely frontend
+
+The selected visual direction is the light Műhely design. It uses the existing
+static templates and local Manrope / Source Sans 3 fonts, with no new runtime
+dependencies. The normal build applies it to both languages, every topic,
+module print packs and legal pages.
+
+- `site/assets/css/base.css`: shared palette, typography, spacing and reading
+  width. Adjust these variables before adding page-specific overrides.
+- `layout.css`: responsive page structure and navigation placement.
+- `components.css`: catalogue groups, controls and the static loop illustration.
+- `print.css`: printable content without navigation or decoration.
+- `site/i18n/*.json`: interface wording, including Regex's caption.
+- `site/templates/workshop-visual.html`: the homepage loop illustration.
+
+The catalogue initially groups topics by module. Search and module filtering
+continue to use the existing bilingual terms and aliases, displaying matching
+topics directly. JavaScript-disabled browsers retain the static topic links.
+Topic pages derive their chapter navigation from the rendered H2 headings;
+the navigation is collapsible on mobile. Quick view supports its close button,
+Escape and a keyboard focus loop that excludes collapsed topic links.
+
+The existing `coderlap_progress` data format and completion behavior are
+preserved. This change introduces no new progression system, authentication,
+analytics or Quiz/Coaster deployment. Language roots and the quick-view close
+label are passed once by the shared base template. Translated topic pages
+declare the translation language; missing translations retain the source
+language declaration.
+
+Review locally before promotion: homepage search/filter, topic completion and
+undo, language switching, quick view with keyboard, a long topic title, module
+printing and legal pages. Browser emulation supplements the Python tests;
+physical mobile and printer checks remain separate release validation.
+
+The header and favicon share `site/assets/favicon.svg`; its standalone colors
+match `--color-accent` and `--color-accent-contrast` in `base.css`. Update that
+single SVG when changing the brand. The progress pill uses the shared accent,
+spacing and radius tokens; progress storage and counting stay unchanged.
+CSS, JavaScript and the icon URLs carry the existing build version so refreshed
+HTML requests the current assets. This does not invalidate cached HTML or
+override a CDN cache rule that ignores query strings.
+On narrow screens the navigation fills its grid row, aligning its first button
+with the brand icon instead of inheriting desktop right alignment.
+The language switcher and the GitHub button above it share the right edge;
+the GitHub button retains a full touch target around its smaller icon.
+CoderQuiz and CoderCoaster are introduced below the homepage hero in the shared
+`coder-tools.html` template. Every page links to each app's stable `#coderquiz` or
+`#codercoaster` anchor from its localized footer. Native details show their
+development status and a short explanation on
+tap, including without JavaScript; there are no placeholder app URLs or extra
+header rows. Copy lives in the existing language dictionaries. Add real app
+destinations only when those releases and their access protection are ready.
+The shared header height token is measured with ResizeObserver, so anchor links
+and quick-view panels clear wrapped mobile navigation. CSS provides fallback
+heights when JavaScript or ResizeObserver is unavailable.
+The footer separates tools and legal links, with a GitHub link alongside the
+brand. Links stack vertically within each group and have full touch targets.
+Each tool's development status stays on its own line below the project name.
+Its right gutter reserves the floating back-to-top button's width plus spacing,
+so even during scrolling the button cannot cover a footer link.
+
+`viewport-fit=cover` is paired with central `--safe-*` tokens from CSS
+`env(safe-area-inset-*)`. Shared page gutters, header top padding, footer bottom
+padding, quick view and the floating button respect those insets. Keep this
+pairing when changing full-screen layout; verify portrait and landscape on a
+physical iPhone as well as simulated nonzero insets. The calmer homepage title
+is maintained in the existing HU/DE/EN dictionaries.
+Keep document and site-shell ancestors of the sticky header free of clipping
+layers. Nested `overflow-x: clip` was removed after iPhone scroll jitter was
+reported; physical Safari validation is required for this rendering issue.
+Wide tables and code blocks scroll inside their own containers, rather than
+relying on clipping the whole page to hide overflow.
+The no-JavaScript catalogue uses the same card classes and long-word wrapping
+as the interactive catalogue, so narrow screens do not overflow.
+
+Motion is controlled by the `--motion-*` tokens in `base.css`. The hero, topic
+article and initial catalogue groups get one subtle 360 ms reveal when entering
+the viewport. Content is never hidden while awaiting JavaScript or an observer.
+No reveal or skeleton animation runs in print or with reduced motion enabled.
+Search results do not repeatedly animate as the learner types.
+
+On topic and legal pages, quick view shows skeleton rows only while its navigation
+request is pending, without a minimum display delay. The close button works during
+loading; a late response cannot reopen the overlay or steal focus. A failed request
+(including the existing five-second timeout) removes the skeleton, shows a localized
+message and links to the catalogue. Close and reopen quick view to retry. The
+homepage already embeds its navigation and does not need a loading placeholder.
+
+Run `node --test tests/site-interactions.test.cjs` with Node.js 18+ alongside the
+Python suite. These dependency-free tests exercise pending/closed/ready/error/retry
+states and reduced-motion/observer fallbacks with a small DOM test double. They do
+not replace browser layout, keyboard or animation checks. The existing CI workflow
+currently runs the Python suite; run this Node command explicitly during review.
+
+For a temporary phone preview on the same trusted LAN, build the site and bind
+the static server to the development computer's LAN address (replace the example
+address with its actual IPv4 address):
+
+```powershell
+python scripts/build_site.py
+python -m http.server 8767 --bind 192.168.0.50 --directory dist
+```
+
+Open `http://192.168.0.50:8767/` (German) or `/hu/` (Hungarian) on the phone.
+`127.0.0.1` on a phone refers to the phone itself. Stop the foreground server
+with Ctrl+C after review. This preview serves only `dist/`, has no Basic Auth,
+and must not be exposed to the internet. If the computer responds but a phone
+cannot connect, check Wi-Fi client isolation and a narrowly scoped private-LAN
+firewall allowance; do not disable the firewall.
+
+Before promotion, verify lesson → Startseite navigation at normal zoom and with
+user zoom enabled, warm-cache refresh of the CSS/icon, and the existing completion
+state. Retain production Basic Auth and the documented previous-build rollback.
+DevTools page/pinch zoom can crop an otherwise responsive page: compare
+`visualViewport.scale` with 1 before diagnosing missing CSS; keep user zoom enabled.
+
 ## Registry Model
 
 Registry generator:
