@@ -166,6 +166,9 @@ The DOM and keyboard order remain 01–18; mobile retains the same single-column
 order. Searching or filtering disconnects the old observations and restores
 the regular result-card grid. Without ResizeObserver the ordinary grid remains
 usable. Print does not use the independently measured row spans.
+Catalogue summaries suppress the native WebKit tap overlay, which can flash as
+a filled rectangle on iOS. The shared `:focus-visible` outline remains
+available for keyboard navigation.
 
 Regression check: open and close module 02, then 06, and verify that modules
 03/05/07 in the left column retain their document positions. Repeat on the left,
