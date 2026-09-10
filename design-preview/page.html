@@ -64,7 +64,12 @@
 </aside>
 <main id="main" class="home-main" tabindex="-1">
   <section class="hero">
-    <div class="hero-copy"><p class="context">{{ ui.exam }}</p><h1>{{ ui.hero }}</h1><p class="intro">{{ ui.intro }}</p><a class="button primary" href="{{ skin }}-{{ lang }}-lesson.html">{{ ui.start }} {{ icon('arrow') }}</a><a class="browse-link" href="#catalog">{{ ui.browse }}</a></div>
+    <div class="hero-copy"><p class="context">{{ ui.exam }}</p><h1>{{ ui.hero }}</h1><p class="intro">{{ ui.intro }}</p>
+      <div class="hero-progress" hidden data-total="{{ total }}" data-label="{{ 'Kész témák' if lang == 'hu' else 'Abgeschlossene Themen' }}" role="status">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle class="progress-track" cx="11" cy="11" r="8"/><circle class="progress-value" cx="11" cy="11" r="8" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" transform="rotate(-90 11 11)"/></svg>
+        <span data-progress-count></span>
+      </div>
+      <a class="button primary" href="{{ skin }}-{{ lang }}-lesson.html">{{ ui.start }} {{ icon('arrow') }}</a><a class="browse-link" href="#catalog">{{ ui.browse }}</a></div>
     <div class="hero-visual" aria-label="{{ ui.sample }}">
       <div class="code-window"><div class="code-window-head"><span class="file-tab">schleifen.js</span><span>JavaScript</span></div><pre><code><span class="code-line"><i>1</i><b>for</b> (<b>let</b> i = <em>0</em>; i &lt; <em>3</em>; i++) {</span><span class="code-line highlighted"><i>2</i>  console.log(i);</span><span class="code-line"><i>3</i>}</span></code></pre><div class="code-output"><span>console</span><code>0&nbsp;&nbsp; 1&nbsp;&nbsp; 2</code><span class="output-check">{{ icon('check') }}</span></div></div>
       <div class="loop-diagram"><span class="loop-dot">0</span><span class="loop-rail"></span><span class="loop-dot">1</span><span class="loop-rail"></span><span class="loop-dot">2</span><span class="loop-rail"></span><span class="loop-end">{{ icon('check') }}</span></div>
