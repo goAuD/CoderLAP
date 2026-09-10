@@ -232,6 +232,22 @@ body.sidebar-open .catalog-sidebar [data-sidebar-panel] {
   }
 }
 
+@media screen and (min-width: 48rem) {
+  /* Fixed columns pack independently; item order stays 01–18 in the DOM. */
+  .catalog-results--independent {
+    grid-auto-flow: row dense;
+    grid-auto-rows: 1px;
+    row-gap: 0;
+  }
+  .catalog-results--independent > .catalog-module {
+    grid-column: 1;
+    grid-row-end: span var(--module-row-span, 1);
+  }
+  .catalog-results--independent > .catalog-module:nth-child(even) {
+    grid-column: 2;
+  }
+}
+
 @media (min-width: 64rem) {
   .catalog-shell {
     grid-template-columns: 16rem minmax(0, 1fr);
