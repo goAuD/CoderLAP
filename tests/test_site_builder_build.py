@@ -216,6 +216,16 @@ class BuildSiteTests(unittest.TestCase):
             self.assertEqual(navigation["main_topics"][0]["number"], "01")
             self.assertEqual(navigation["topics"]["LAP-01-01"]["slug"], "01-01-ascii")
 
+            # A translated document declares its own language; a missing
+            # translation above retains the canonical Hungarian language.
+            markdown_path.with_name("README.en.md").write_text(
+                "# ASCII\n\nEnglish translation.", encoding="utf-8"
+            )
+            build_site(settings)
+            translated_html = (output_dir / "topics" / "01-01-ascii" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('<html lang="en">', translated_html)
+            self.assertIn("English translation.", translated_html)
+
 
 if __name__ == "__main__":
     unittest.main()
