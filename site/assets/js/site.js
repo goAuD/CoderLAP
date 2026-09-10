@@ -914,6 +914,15 @@
     });
   }
 
+  function setupHeaderSize() {
+    var header = document.querySelector(".site-topbar");
+    if (!header || !("ResizeObserver" in window)) return;
+    var observer = new ResizeObserver(function () {
+      document.documentElement.style.setProperty("--topbar-height", Math.ceil(header.getBoundingClientRect().height) + "px");
+    });
+    observer.observe(header);
+  }
+
   function setupSectionReveal() {
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (reducedMotion.matches || !("IntersectionObserver" in window)) return;
@@ -939,5 +948,6 @@
   setupTopicProgress();
   setupProgressCounter();
   setupBackToTop();
+  setupHeaderSize();
   setupSectionReveal();
 })();

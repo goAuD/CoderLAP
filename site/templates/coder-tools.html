@@ -1,0 +1,17 @@
+<section class="coder-tools" id="coder-tools" aria-labelledby="coder-tools-title">
+  <div class="coder-tools__heading">
+    <h2 id="coder-tools-title">{{ ui.get('coder_tools_label', 'Coder tools') }}</h2>
+    <p>{{ ui.get('coder_tools_intro', '') }}</p>
+  </div>
+  <div class="coder-tools__items">
+    {% for key, name in [('quiz', 'CoderQuiz'), ('coaster', 'CoderCoaster')] %}
+    <details class="coder-tool">
+      <summary>
+        <span class="coder-tool__name">{{ name }}</span>
+        <span class="coder-tool__status">{{ ui.get('coming_soon_label', 'In development') }}</span>
+      </summary>
+      <p>{{ ui.get('coder_' ~ key ~ '_description', '') }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
