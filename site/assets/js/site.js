@@ -730,19 +730,16 @@
     var sidebar = null;
     var panel = null;
     var ready = false;
+    var loading = false;
 
-    function buildSidebar(mainTopics, modulePackLabel, navLabel) {
+    function buildSidebar() {
       sidebar = document.createElement("aside");
       sidebar.className = "catalog-sidebar";
       sidebar.hidden = true;
 
       panel = document.createElement("div");
       panel.setAttribute("data-sidebar-panel", "");
-      panel.setAttribute("aria-label", navLabel || "Navigation");
-
-      mainTopics.forEach(function (mainTopic) {
-        panel.appendChild(createSidebarSection(mainTopic, modulePackLabel || ""));
-      });
+      panel.setAttribute("aria-label", quickViewLink.textContent);
 
       sidebar.appendChild(panel);
       addQuickViewClose(sidebar, closeOverlay);
@@ -779,6 +776,37 @@
       }
     }
 
+    function showLoading() {
+      panel.replaceChildren();
+      panel.setAttribute("aria-busy", "true");
+      var status = document.createElement("p");
+      status.className = "quick-view-status";
+      status.setAttribute("role", "status");
+      status.textContent = document.body.dataset.loadingLabel;
+      var skeleton = document.createElement("div");
+      skeleton.className = "quick-view-skeleton";
+      skeleton.setAttribute("aria-hidden", "true");
+      for (var i = 0; i < 5; i++) {
+        var bar = document.createElement("div");
+        bar.className = "quick-view-skeleton__bar";
+        skeleton.appendChild(bar);
+      }
+      panel.append(status, skeleton);
+    }
+
+    function showLoadError() {
+      panel.replaceChildren();
+      var status = document.createElement("p");
+      status.className = "quick-view-status";
+      status.setAttribute("role", "status");
+      status.textContent = document.body.dataset.loadErrorLabel;
+      var home = document.createElement("a");
+      home.className = "quick-view-status";
+      home.href = quickViewLink.href;
+      home.textContent = document.body.dataset.homeLabel;
+      panel.append(status, home);
+    }
+
     document.addEventListener("click", function (event) {
       if (!document.body.classList.contains("sidebar-open")) {
         return;
@@ -796,26 +824,37 @@
         return;
       }
 
-      if (ready) {
+      if (ready || loading) {
         openOverlay();
         return;
       }
 
       var uiCopyQV = parseJsonScript("[data-ui-copy-json]") || {};
       var root = normalizeSiteRoot(uiCopyQV.site_root || SITE_ROOT);
+      if (!sidebar) buildSidebar();
+      loading = true;
+      showLoading();
+      openOverlay();
       fetch(root + "data/navigation.json", { signal: AbortSignal.timeout(5000) })
-        .then(function (res) { return res.json(); })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Navigation request failed");
+          return res.json();
+        })
         .then(function (nav) {
           if (!nav || !Array.isArray(nav.main_topics)) {
-            return;
+            throw new Error("Invalid navigation response");
           }
           SITE_ROOT = root;
-          buildSidebar(nav.main_topics, uiCopyQV.module_pack_label || "", uiCopyQV.primary_navigation_label || "");
+          panel.replaceChildren();
+          nav.main_topics.forEach(function (mainTopic) {
+            panel.appendChild(createSidebarSection(mainTopic, uiCopyQV.module_pack_label || ""));
+          });
           ready = true;
-          openOverlay();
         })
-        .catch(function () {
-          // Fail silently — do not redirect away from the current page.
+        .catch(showLoadError)
+        .finally(function () {
+          loading = false;
+          panel.removeAttribute("aria-busy");
         });
     });
   }
@@ -875,6 +914,24 @@
     });
   }
 
+  function setupSectionReveal() {
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reducedMotion.matches || !("IntersectionObserver" in window)) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        // Never hide unread content while waiting for an observer callback.
+        if (!reducedMotion.matches) entry.target.classList.add("workshop-reveal");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0 });
+
+    document.querySelectorAll(".hero-panel__content, .workshop-visual, .catalog-module, .topic-article").forEach(function (section) {
+      observer.observe(section);
+    });
+  }
+
   setupHomeCatalog();
   setupQuickViewAnywhere();
   setupPrintTrigger();
@@ -882,4 +939,5 @@
   setupTopicProgress();
   setupProgressCounter();
   setupBackToTop();
+  setupSectionReveal();
 })();
