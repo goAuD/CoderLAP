@@ -141,6 +141,40 @@ The site builder prefers a language-specific Markdown file when it exists:
 - German build prefers `README.de.md`
 - Hungarian build falls back to `README.md`
 
+### Műhely frontend
+
+The selected visual direction is the light Műhely design. It uses the existing
+static templates and local Manrope / Source Sans 3 fonts, with no new runtime
+dependencies. The normal build applies it to both languages, every topic,
+module print packs and legal pages.
+
+- `site/assets/css/base.css`: shared palette, typography, spacing and reading
+  width. Adjust these variables before adding page-specific overrides.
+- `layout.css`: responsive page structure and navigation placement.
+- `components.css`: catalogue groups, controls and the static loop illustration.
+- `print.css`: printable content without navigation or decoration.
+- `site/i18n/*.json`: interface wording, including Regex's caption.
+- `site/templates/workshop-visual.html`: the homepage loop illustration.
+
+The catalogue initially groups topics by module. Search and module filtering
+continue to use the existing bilingual terms and aliases, displaying matching
+topics directly. JavaScript-disabled browsers retain the static topic links.
+Topic pages derive their chapter navigation from the rendered H2 headings;
+the navigation is collapsible on mobile. Quick view supports its close button,
+Escape and a keyboard focus loop that excludes collapsed topic links.
+
+The existing `coderlap_progress` data format and completion behavior are
+preserved. This change introduces no new progression system, authentication,
+analytics or Quiz/Coaster deployment. Language roots and the quick-view close
+label are passed once by the shared base template. Translated topic pages
+declare the translation language; missing translations retain the source
+language declaration.
+
+Review locally before promotion: homepage search/filter, topic completion and
+undo, language switching, quick view with keyboard, a long topic title, module
+printing and legal pages. Browser emulation supplements the Python tests;
+physical mobile and printer checks remain separate release validation.
+
 ## Registry Model
 
 Registry generator:

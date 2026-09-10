@@ -254,7 +254,11 @@ def _build_language(
         )
         rendered = env.get_template("topic.html").render(
             **common_ctx,
-            page_lang=topic.lang,
+            page_lang=(
+                lang_config.code
+                if topic.absolute_markdown_path(settings.repo_root).with_suffix(f".{lang_config.code}.md").is_file()
+                else topic.lang
+            ),
             page_title=topic.title,
             body_class="topic-page",
             topic=topic,

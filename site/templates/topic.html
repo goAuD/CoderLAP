@@ -17,7 +17,14 @@
     {% set module_ref.item = main_topic %}
   {% endif %}
 {% endfor %}
-<section class="page-shell" aria-label="{{ topic.title }}">
+<section class="page-shell topic-layout" aria-label="{{ topic.title }}">
+  <aside class="topic-sidebar" data-topic-toc hidden>
+    <details>
+      <summary>{{ ui.get('topic_contents_label', 'In this topic') }}</summary>
+      <nav aria-label="{{ ui.get('topic_contents_label', 'In this topic') }}"></nav>
+    </details>
+  </aside>
+  <div class="topic-reading">
   <section class="topic-actions">
     <a class="site-nav-link site-nav-link--button" href="{{ site_root | default('/', true) }}">{{ ui.get("back_to_catalog", "") }}</a>
     <button type="button" class="site-nav-link site-nav-link--button" data-print-trigger>{{ ui.get("print_label", "") }}</button>
@@ -26,7 +33,7 @@
     {% endif %}
   </section>
 
-  <article class="topic-article">{{ content_html | safe }}</article>
+  <article class="topic-article"><div class="topic-prose">{{ content_html | safe }}</div></article>
 
   <nav class="topic-pagination" aria-label="{{ ui.get('topic_pagination_label', '') }}">
     {% if prev_ref.item %}
@@ -40,6 +47,7 @@
     </a>
     {% endif %}
   </nav>
+  </div>
 
   <script type="application/json" data-ui-copy-json>
     {{ {

@@ -27,5 +27,15 @@
   "imprint_label": "Imprint",
   "privacy_label": "Privacy",
   "language_label": "Language",
-  "language_switcher_label": "Switch language"
+  "language_switcher_label": "Switch language",
+  "workshop_tagline": "Prepare for the Austrian LAP exam",
+  "workshop_title": "Your next aha moment starts here.",
+  "start_loops_label": "Start with loops",
+  "browse_label": "Browse topics",
+  "modules_count_label": "modules",
+  "topics_count_label": "topics",
+  "regex_quote": "“i++ is not decoration. It gets us home eventually.”",
+  "loop_sample_label": "A snapshot of a for loop",
+  "topic_contents_label": "In this topic",
+  "close_label": "Close"
 }
