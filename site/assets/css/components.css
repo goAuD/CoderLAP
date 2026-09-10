@@ -667,6 +667,16 @@ a.lang-switcher__item:focus-visible {
     justify-content: flex-start;
   }
 
+  .site-topbar__nav .lang-switcher {
+    margin-inline-start: auto;
+  }
+
+  .site-topbar .site-github-link {
+    justify-self: end;
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
+  }
+
   .topic-actions .site-nav-link,
   .topic-actions button,
   .catalog-sidebar__toggle {
