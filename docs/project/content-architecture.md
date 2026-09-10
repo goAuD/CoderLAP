@@ -186,6 +186,11 @@ On narrow screens the navigation fills its grid row, aligning its first button
 with the brand icon instead of inheriting desktop right alignment.
 The language switcher and the GitHub button above it share the right edge;
 the GitHub button retains a full touch target around its smaller icon.
+Keep document and site-shell ancestors of the sticky header free of clipping
+layers. Nested `overflow-x: clip` was removed after iPhone scroll jitter was
+reported; physical Safari validation is required for this rendering issue.
+Wide tables and code blocks scroll inside their own containers, rather than
+relying on clipping the whole page to hide overflow.
 
 Motion is controlled by the `--motion-*` tokens in `base.css`. The hero, topic
 article and initial catalogue groups get one subtle 360 ms reveal when entering
