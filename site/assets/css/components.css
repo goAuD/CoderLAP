@@ -1109,6 +1109,8 @@ a.lang-switcher__item:focus-visible {
   display: contents;
 }
 .catalog-module > summary {
+  /* The native tap overlay flashes across the panel on iOS. Keep :focus-visible. */
+  -webkit-tap-highlight-color: transparent;
   padding: 1.35rem;
   font-family: var(--font-heading);
   font-weight: 750;
