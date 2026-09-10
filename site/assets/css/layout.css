@@ -263,12 +263,12 @@ body.sidebar-open .catalog-sidebar [data-sidebar-panel] {
   .home-page .catalog-shell {
     display: contents;
   }
-  .home-page .hero-panel, .home-page .catalog-main {
+  .home-page .hero-panel, .home-page .coder-tools, .home-page .catalog-main {
     grid-column: 2;
   }
   .home-page .catalog-sidebar {
     grid-column: 1;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
     align-self: start;
     position: sticky;
     top: 6rem;

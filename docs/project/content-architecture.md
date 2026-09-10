@@ -186,6 +186,15 @@ On narrow screens the navigation fills its grid row, aligning its first button
 with the brand icon instead of inheriting desktop right alignment.
 The language switcher and the GitHub button above it share the right edge;
 the GitHub button retains a full touch target around its smaller icon.
+CoderQuiz and CoderCoaster are introduced below the homepage hero in the shared
+`coder-tools.html` template. Every page links to this block from its localized
+footer. Native details show their development status and a short explanation on
+tap, including without JavaScript; there are no placeholder app URLs or extra
+header rows. Copy lives in the existing language dictionaries. Add real app
+destinations only when those releases and their access protection are ready.
+The shared header height token is measured with ResizeObserver, so anchor links
+and quick-view panels clear wrapped mobile navigation. CSS provides fallback
+heights when JavaScript or ResizeObserver is unavailable.
 Keep document and site-shell ancestors of the sticky header free of clipping
 layers. Nested `overflow-x: clip` was removed after iPhone scroll jitter was
 reported; physical Safari validation is required for this rendering issue.
