@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset_prefix }}/css/components.css?v={{ cache_bust | default('0') }}">
     <link rel="stylesheet" href="{{ asset_prefix }}/css/print.css?v={{ cache_bust | default('0') }}" media="print">
   </head>
-  <body class="{{ body_class }}" data-site-root="{{ site_root | default('/', true) }}" data-close-label="{{ ui.get('close_label', 'Close') }}"{% if topic is defined and topic %} data-topic-id="{{ topic.id }}"{% endif %}>
+  <body class="{{ body_class }}" data-site-root="{{ site_root | default('/', true) }}" data-close-label="{{ ui.get('close_label', 'Close') }}" data-loading-label="{{ ui.get('loading_label', 'Loading topics…') }}" data-load-error-label="{{ ui.get('load_error_label', 'Topics could not be loaded. Please try again.') }}" data-home-label="{{ ui.get('home_label', 'Home') }}"{% if topic is defined and topic %} data-topic-id="{{ topic.id }}"{% endif %}>
     <div class="site-shell">
       <a class="skip-link" href="#main-content">Skip to content</a>
       <header class="site-topbar">

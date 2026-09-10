@@ -37,5 +37,7 @@
   "regex_quote": "„Az i++ nem dekoráció. Attól jutunk egyszer haza.”",
   "loop_sample_label": "A ciklus egy pillanatképe",
   "topic_contents_label": "Ebben a témában",
-  "close_label": "Bezárás"
+  "close_label": "Bezárás",
+  "loading_label": "Témák betöltése…",
+  "load_error_label": "A témák betöltése nem sikerült. Próbáld újra."
 }
