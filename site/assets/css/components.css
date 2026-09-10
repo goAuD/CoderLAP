@@ -135,6 +135,41 @@ a.lang-switcher__item:focus-visible {
 }
 
 /* ── Hero progress pill ─────────────────────────────────────────── */
+/* Content stays visible by default, including without JavaScript and in print. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .workshop-reveal {
+    animation: workshop-reveal var(--motion-reveal-duration) var(--motion-ease);
+  }
+  .quick-view-skeleton__bar {
+    animation: workshop-skeleton var(--motion-skeleton-duration) ease-in-out infinite;
+  }
+}
+
+@keyframes workshop-reveal {
+  from { opacity: 0.65; transform: translateY(var(--motion-reveal-offset)); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes workshop-skeleton {
+  50% { opacity: 0.45; }
+}
+
+.quick-view-status, .quick-view-skeleton {
+  margin: var(--space-4);
+}
+.quick-view-skeleton {
+  display: grid;
+  gap: var(--space-4);
+}
+.quick-view-skeleton__bar {
+  height: var(--touch-target);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+}
+.quick-view-skeleton__bar:nth-child(even) {
+  width: 80%;
+}
+
 .hero-progress-pill {
   display: inline-flex;
   align-items: center;
