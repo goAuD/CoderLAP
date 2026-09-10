@@ -5,7 +5,7 @@
   </div>
   <div class="coder-tools__items">
     {% for key, name in [('quiz', 'CoderQuiz'), ('coaster', 'CoderCoaster')] %}
-    <details class="coder-tool">
+    <details class="coder-tool" id="{{ name | lower }}">
       <summary>
         <span class="coder-tool__name">{{ name }}</span>
         <span class="coder-tool__status">{{ ui.get('coming_soon_label', 'In development') }}</span>

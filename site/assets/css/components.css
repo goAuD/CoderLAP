@@ -214,6 +214,9 @@ a.lang-switcher__item:focus-visible {
   padding: 0 var(--space-4) var(--space-4);
   margin: 0;
 }
+.coder-tool:target {
+  border-color: var(--color-accent);
+}
 
 .hero-progress-pill {
   display: inline-flex;
@@ -865,14 +868,14 @@ a.lang-switcher__item:focus-visible {
 /* ── Back to top button ──────────────────────────────────────────── */
 .back-to-top {
   position: fixed;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  right: var(--floating-button-right);
+  bottom: var(--floating-button-bottom);
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: var(--touch-target);
+  height: var(--touch-target);
   border: 1px solid var(--color-border);
   border-radius: 50%;
   background: var(--color-surface-raised);
