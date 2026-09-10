@@ -532,6 +532,22 @@
       setupResponsiveSidebar(sidebarContainer, sidebarPanel, uiCopy.sidebar_label || "");
     }
 
+    // Size each accordion independently while preserving DOM and keyboard order.
+    // CSS applies these one-pixel row spans only in the two-column module view.
+    var moduleLayoutObserver = typeof window.ResizeObserver === "function"
+      ? new ResizeObserver(function (entries) {
+        var layout = window.getComputedStyle(resultsContainer);
+        var gap = parseFloat(layout.columnGap) || 0;
+        // Browser zoom can round a nominal 1px track; use its actual size.
+        var rowHeight = layout.gridAutoRows === "1px"
+          ? parseFloat(layout.gridTemplateRows) || 1 : 1;
+        entries.forEach(function (entry) {
+          var height = entry.target.getBoundingClientRect().height;
+          entry.target.style.setProperty("--module-row-span", Math.ceil((height + gap) / rowHeight));
+        });
+      })
+      : null;
+
     function renderResults() {
       var tokenGroups = expandQueryTokens(searchInput.value || "", aliasLookup);
       var selectedModule = moduleFilter.value;
@@ -563,6 +579,8 @@
         return true;
       });
 
+      if (moduleLayoutObserver) moduleLayoutObserver.disconnect();
+      resultsContainer.classList.remove("catalog-results--independent");
       clearChildren(resultsContainer);
 
       if (!filtered.length) {
@@ -588,7 +606,9 @@
           group.appendChild(summary);
           items.forEach(function (item) { group.appendChild(createCard(item, cardTemplateRoot)); });
           resultsContainer.appendChild(group);
+          if (moduleLayoutObserver) moduleLayoutObserver.observe(group, { box: "border-box" });
         });
+        if (moduleLayoutObserver) resultsContainer.classList.add("catalog-results--independent");
       } else {
         filtered.forEach(function (item) {
           resultsContainer.appendChild(createCard(item, cardTemplateRoot));
