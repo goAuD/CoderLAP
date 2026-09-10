@@ -15,42 +15,37 @@
 }
 
 :root {
-  color-scheme: dark;
-  --color-bg: #15181c;
-  --color-surface: #1d2329;
-  --color-surface-raised: #232a31;
-  --color-surface-soft: #20272d;
-  --color-text: #c9d1d9;
-  --color-text-muted: #93a0aa;
-  --color-heading: #e6edf3;
-  --color-accent: #5fa7a2;
-  --color-accent-soft: rgba(95, 167, 162, 0.16);
-  --color-progress: #c8b45a;
-  --color-progress-soft: rgba(200, 180, 90, 0.18);
-  --color-border: rgba(201, 209, 217, 0.12);
-  --color-shadow: rgba(5, 8, 10, 0.42);
-  --color-shadow-inset: rgba(255, 255, 255, 0.03);
-  --divider-line: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(95, 167, 162, 0.6) 16%,
-    rgba(201, 209, 217, 0.22) 50%,
-    rgba(95, 167, 162, 0.6) 84%,
-    transparent 100%
-  );
+  color-scheme: light;
+  --color-bg: #f3f6fb;
+  --color-surface: #ffffff;
+  --color-surface-raised: #e8eef8;
+  --color-surface-soft: #f7f9fd;
+  --color-text: #1e3047;
+  --color-text-muted: #5c6c83;
+  --color-heading: #1e3047;
+  --color-accent: #345ee8;
+  --color-accent-soft: #e8edff;
+  --color-accent-border: #bbc9f8;
+  --color-accent-contrast: #ffffff;
+  --color-secondary: #f5c76c;
+  --color-progress: #806014;
+  --color-progress-soft: #fff8e8;
+  --color-progress-border: #e0cc99;
+  --color-warning: #9b4c14;
+  --color-border: #dce3ee;
+  --color-shadow: #1e30470d;
+  --color-shadow-inset: transparent;
+  --color-overlay: #1e304766;
+  --divider-line: var(--color-border);
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
   --font-heading: "Manrope", "Segoe UI", sans-serif;
-  --shadow-panel:
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 2px 8px -2px rgba(0, 0, 0, 0.25),
-    0 12px 28px -12px rgba(0, 0, 0, 0.35);
-  --shadow-button:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 6px 14px -10px rgba(0, 0, 0, 0.5);
+  --shadow-panel: none;
+  --shadow-button: none;
   --radius-sm: 0.5rem;
   --radius-md: 0.8rem;
   --radius-lg: 1rem;
-  --max-content-width: 72rem;
+  --max-content-width: 96rem;
+  --reading-width: 72ch;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -59,6 +54,7 @@
   --space-6: 2rem;
   --space-7: 3rem;
   --touch-target: 2.75rem;
+  --topbar-height: 5rem;
 }
 
 *,
@@ -70,33 +66,24 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  scroll-padding-top: 8rem;
+  overflow-x: clip;
   scrollbar-gutter: stable;
 }
 
 body {
   position: relative;
   margin: 0;
-  min-width: 20rem;
-  overflow-x: hidden;
+  min-width: 0;
+  overflow-x: clip;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle at center, rgba(95, 167, 162, 0.18) 0.045rem, transparent 0.055rem);
-  background-size: 1.25rem 1.25rem;
-  opacity: 0.6;
-  z-index: 0;
-}
 
 img,
 svg,
@@ -120,7 +107,7 @@ button,
 .button,
 [role="button"] {
   min-height: var(--touch-target);
-  border: 1px solid rgba(95, 167, 162, 0.35);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-surface-raised);
   color: var(--color-heading);
@@ -143,8 +130,8 @@ button:hover,
 button:focus-visible,
 .button:focus-visible,
 [role="button"]:focus-visible {
-  border-color: rgba(95, 167, 162, 0.6);
-  background: #283138;
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
   transform: translateY(-1px);
 }
 
@@ -153,8 +140,7 @@ button:active,
 [role="button"]:active {
   transform: translateY(1px);
   box-shadow:
-    inset 0 2px 4px rgba(0, 0, 0, 0.35),
-    0 6px 12px -10px rgba(0, 0, 0, 0.6);
+    inset 0 1px 3px var(--color-shadow);
 }
 
 h1,
@@ -183,22 +169,6 @@ h3 {
   font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
-h2,
-h3 {
-  position: relative;
-  padding-bottom: 0.75rem;
-}
-
-h2::after,
-h3::after,
-.decorated-separator::after {
-  content: "";
-  display: block;
-  width: min(14rem, 44%);
-  height: 1px;
-  margin-top: 0.7rem;
-  background: var(--divider-line);
-}
 
 p,
 ul,
@@ -227,7 +197,7 @@ kbd {
 code {
   padding: 0.12rem 0.35rem;
   border-radius: 0.4rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--color-surface-raised);
   color: var(--color-heading);
 }
 
@@ -236,7 +206,7 @@ pre {
   padding: 1rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgba(0, 0, 0, 0.18);
+  background: var(--color-surface-soft);
   box-shadow: var(--shadow-panel);
 }
 
@@ -244,17 +214,17 @@ blockquote {
   padding: 1rem 1.1rem;
   border-left: 3px solid var(--color-accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  background: rgba(95, 167, 162, 0.08);
+  background: var(--color-accent-soft);
   color: var(--color-heading);
 }
 
 table {
-  width: auto;
+  width: 100%;
   max-width: 100%;
   border-collapse: collapse;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--color-surface);
   box-shadow: var(--shadow-panel);
 }
 
@@ -267,12 +237,12 @@ td {
 }
 
 th {
-  white-space: nowrap;
+  white-space: normal;
   color: var(--color-heading);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.88em;
-  background: rgba(95, 167, 162, 0.08);
+  background: var(--color-accent-soft);
 }
 
 td {
@@ -281,12 +251,12 @@ td {
 }
 
 :focus-visible {
-  outline: 2px solid rgba(95, 167, 162, 0.9);
+  outline: 2px solid var(--color-accent);
   outline-offset: 0.2rem;
 }
 
 ::selection {
-  background: rgba(95, 167, 162, 0.28);
+  background: var(--color-accent-soft);
   color: var(--color-heading);
 }
 
@@ -316,7 +286,7 @@ td {
   .topic-article,
   .legal-article,
   .module-pack-topic__content {
-    font-size: 0.94rem;
+    font-size: 1.0625rem;
   }
 
   .topic-article h1,
@@ -355,7 +325,7 @@ td {
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
   scrollbar-width: thin;
-  scrollbar-color: rgba(95, 167, 162, 0.35) transparent;
+  scrollbar-color: var(--color-accent-border) transparent;
 }
 
 .table-wrap::-webkit-scrollbar {
@@ -363,11 +333,27 @@ td {
 }
 
 .table-wrap::-webkit-scrollbar-thumb {
-  background: rgba(95, 167, 162, 0.35);
+  background: var(--color-accent-border);
   border-radius: 999px;
 }
 
 /* Fade hint on right edge when table overflows (future JS hook) */
 .table-wrap {
   position: relative;
+}
+
+[hidden] {
+  display: none !important;
+}
+pre code {
+  padding: 0;
+  background: transparent;
+}
+summary {
+  cursor: pointer;
+}
+@media (max-width: 35rem) {
+  :root {
+    --topbar-height: 8rem;
+  }
 }

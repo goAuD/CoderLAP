@@ -3,14 +3,21 @@
 {% set safe_topic_index = topic_index | default([], true) %}
 {% set safe_navigation = navigation | default({}, true) %}
 {% set safe_search_alias_groups = search_alias_groups | default([], true) %}
+{% set featured = namespace(topic=None) %}
+{% for item in safe_topic_index %}{% if item.id == 'LAP-15-17' %}{% set featured.topic = item %}{% endif %}{% endfor %}
 <section class="page-shell" aria-labelledby="home-hero-title">
   <section class="hero-panel" aria-labelledby="home-hero-title">
     <div class="hero-panel__content">
-      <p class="eyebrow">{{ ui.project_tagline }}</p>
-      <h1 id="home-hero-title">{{ ui.home_title }}</h1>
+      <p class="eyebrow">{{ ui.get('workshop_tagline', ui.project_tagline) }}</p>
+      <h1 id="home-hero-title">{{ ui.get('workshop_title', ui.home_title) }}</h1>
       <p class="hero-copy">{{ ui.home_intro }}</p>
       <span class="hero-progress-pill" data-hero-progress hidden aria-label="Progress"></span>
+      <div class="hero-actions">
+        {% if featured.topic %}<a class="button button-primary" href="{{ site_root | default('/', true) }}topics/{{ featured.topic.slug }}/">{{ ui.get('start_loops_label', featured.topic.title) }} <span aria-hidden="true">→</span></a>{% endif %}
+        <a href="#catalog-title">{{ ui.get('browse_label', ui.get('content_label', '')) }}</a>
+      </div>
     </div>
+    {% include "workshop-visual.html" %}
   </section>
 
   <section class="catalog-shell">
@@ -22,10 +29,11 @@
     </aside>
 
     <section class="catalog-main" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <h2 id="catalog-title">{{ ui.get("content_label", "") }}</h2>
+        <p class="catalog-intro">{{ safe_navigation.get('main_topics', []) | length }} {{ ui.get('modules_count_label', '') }} / {{ safe_topic_index | length }} {{ ui.get('topics_count_label', '') }}</p>
+      </div>
       <header class="catalog-controls" data-catalog-controls hidden>
-        <div>
-          <h2 id="catalog-title">{{ ui.get("search_label", "") }}</h2>
-        </div>
         <div class="catalog-controls__fields">
           <label class="catalog-field">
             <span>{{ ui.get("search_label", "") }}</span>
@@ -70,6 +78,7 @@
       "filter_label": ui.get("filter_label", ""),
       "sidebar_label": ui.get("sidebar_label", ""),
       "module_pack_label": ui.get("module_pack_label", ""),
+      "topics_count_label": ui.get("topics_count_label", ""),
       "site_root": site_root | default("/", true)
     } | tojson }}
   </script>
