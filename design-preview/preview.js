@@ -1,4 +1,26 @@
-// Preview-only behavior. No production progress keys or remote requests.
+// Preview-only behavior. Existing progress is read only; no remote requests.
+const progressPill = document.querySelector('.hero-progress');
+function showProgress() {
+  if (!progressPill) return;
+  let progress = {};
+  try {
+    const saved = JSON.parse(localStorage.getItem('coderlap_progress'));
+    if (saved && typeof saved === 'object' && !Array.isArray(saved)) progress = saved;
+  } catch { /* Unavailable or invalid storage leaves the counter at zero. */ }
+  const total = Number(progressPill.dataset.total);
+  const done = Math.min(total, Object.values(progress).filter(entry => entry?.status === 'done').length);
+  const count = `${done} / ${total}`;
+  progressPill.querySelector('[data-progress-count]').textContent = count;
+  progressPill.setAttribute('aria-label', `${progressPill.dataset.label}: ${count}`);
+  progressPill.querySelector('.progress-value').setAttribute('stroke-dashoffset', String(total ? 100 - done / total * 100 : 100));
+  progressPill.hidden = false;
+}
+showProgress();
+window.addEventListener('pageshow', showProgress);
+window.addEventListener('storage', event => {
+  if (event.key === 'coderlap_progress' || event.key === null) showProgress();
+});
+
 const search = document.querySelector('#search');
 const cards = [...document.querySelectorAll('.module-card')];
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();

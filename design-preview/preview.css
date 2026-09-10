@@ -33,6 +33,10 @@ h1, h2, h3, p { margin: 0; }
 .app-link.is-current { color: var(--accent); background: var(--accent-soft); }
 .app-link:hover { background: var(--raised); color: var(--ink); }
 .header-bottom { margin-left: auto; }
+.hero-progress { display: flex; align-items: center; gap: 9px; width: fit-content; margin: -8px 0 24px; padding: 8px 16px; border: 1px solid var(--progress-border); border-radius: 14px; color: var(--progress-ink); background: var(--progress-bg); font-family: var(--font-title); font-size: 15px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.hero-progress circle { fill: none; stroke-width: 2.5; }
+.progress-track { stroke: var(--progress-border); }
+.progress-value { stroke: currentColor; }
 .header-bottom p { display: none; }
 .languages { display: flex; gap: 4px; font-size: 13px; font-weight: 700; }
 .languages a { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; }
@@ -374,7 +378,7 @@ dialog p { color: var(--muted); margin-bottom: 25px; }
   html { color-scheme: light; }
   body, [data-skin='campus'] body { background: white; color: black; font-size: 11pt; }
   .preview-bar, .app-header, .lesson-sidebar, .module-sidebar, .lesson-actions,
-  .practice-aside, .footer, .source-note, .lesson-topline, .context, .mobile-toc, dialog { display: none !important; }
+  .practice-aside, .footer, .source-note, .lesson-topline, .context, .mobile-toc, .hero-progress, dialog { display: none !important; }
   .workspace, [data-skin='campus'] .workspace, [data-skin='campus'] .page-lesson .workspace { display: block; margin: 0; max-width: none; background: white; }
   .lesson-main, [data-skin='campus'] .lesson-main { padding: 0; }
   .article-layout { display: block; }

@@ -21,6 +21,9 @@
   --accent-ink: #fff;
   --accent-soft: #e8edff;
   --secondary: #f5c76c;
+  --progress-ink: #806014;
+  --progress-bg: #fff8e8;
+  --progress-border: #e0cc99;
   --border: #dce3ee;
   --dog-face: #f5c76c;
   --dog-ink: #1e3047;
@@ -40,6 +43,9 @@
   --accent-ink: #211c35;
   --accent-soft: #42375a;
   --secondary: #ffc39f;
+  --progress-ink: #f5c76c;
+  --progress-bg: #3b3342;
+  --progress-border: #796746;
   --border: #4c405e;
   --dog-face: #ffc39f;
   --dog-ink: #211c35;
