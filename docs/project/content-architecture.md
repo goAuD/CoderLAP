@@ -159,6 +159,17 @@ module print packs and legal pages.
 The catalogue initially groups topics by module. Search and module filtering
 continue to use the existing bilingual terms and aliases, displaying matching
 topics directly. JavaScript-disabled browsers retain the static topic links.
+At widths of 48rem and above, catalogue accordions pack independently into
+fixed odd/even columns. A ResizeObserver measures each block and sets CSS grid
+row spans using the actual track height (including browser zoom rounding).
+The DOM and keyboard order remain 01–18; mobile retains the same single-column
+order. Searching or filtering disconnects the old observations and restores
+the regular result-card grid. Without ResizeObserver the ordinary grid remains
+usable. Print does not use the independently measured row spans.
+
+Regression check: open and close module 02, then 06, and verify that modules
+03/05/07 in the left column retain their document positions. Repeat on the left,
+check a long open module, resize to mobile and back, and clear a search/filter.
 Topic pages derive their chapter navigation from the rendered H2 headings;
 the navigation is collapsible on mobile. Quick view supports its close button,
 Escape and a keyboard focus loop that excludes collapsed topic links.
