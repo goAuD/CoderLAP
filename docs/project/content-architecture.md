@@ -191,6 +191,8 @@ layers. Nested `overflow-x: clip` was removed after iPhone scroll jitter was
 reported; physical Safari validation is required for this rendering issue.
 Wide tables and code blocks scroll inside their own containers, rather than
 relying on clipping the whole page to hide overflow.
+The no-JavaScript catalogue uses the same card classes and long-word wrapping
+as the interactive catalogue, so narrow screens do not overflow.
 
 Motion is controlled by the `--motion-*` tokens in `base.css`. The hero, topic
 article and initial catalogue groups get one subtle 360 ms reveal when entering

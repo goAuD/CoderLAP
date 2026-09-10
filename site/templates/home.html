@@ -58,8 +58,8 @@
         <noscript>
           {% for item in safe_topic_index %}
           <article class="topic-card">
-            <p>{{ item.main_topic_number }} · {{ item.main_topic_label }}</p>
-            <h3><a href="{{ site_root | default('/', true) }}topics/{{ item.slug }}/">{{ item.title }}</a></h3>
+            <p class="topic-card__meta">{{ item.main_topic_number }} · {{ item.main_topic_label }}</p>
+            <h3 class="topic-card__title"><a class="topic-card__link" href="{{ site_root | default('/', true) }}topics/{{ item.slug }}/">{{ item.title }}</a></h3>
           </article>
           {% endfor %}
         </noscript>
