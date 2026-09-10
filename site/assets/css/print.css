@@ -46,11 +46,13 @@
 
   /* ── Hide non-content elements ──────────────────────────────── */
   .site-topbar,
+  .skip-link,
   .site-footer,
   .catalog-sidebar,
   .catalog-sidebar__toggle,
   .catalog-controls,
   .topic-actions,
+  .topic-sidebar,
   .topic-pagination,
   .hero-panel,
   .hero-progress,
@@ -74,6 +76,13 @@
     width: 100% !important;
     max-width: none !important;
     overflow: visible !important;
+  }
+  .topic-reading {
+    display: block !important;
+    max-width: none;
+  }
+  .topic-prose, .module-pack-topic__content {
+    max-width: none;
   }
 
   /* ── Content panels ─────────────────────────────────────────── */
