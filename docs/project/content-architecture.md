@@ -175,6 +175,40 @@ undo, language switching, quick view with keyboard, a long topic title, module
 printing and legal pages. Browser emulation supplements the Python tests;
 physical mobile and printer checks remain separate release validation.
 
+The header and favicon share `site/assets/favicon.svg`; its standalone colors
+match `--color-accent` and `--color-accent-contrast` in `base.css`. Update that
+single SVG when changing the brand. The progress pill uses the shared accent,
+spacing and radius tokens; progress storage and counting stay unchanged.
+CSS, JavaScript and the icon URLs carry the existing build version so refreshed
+HTML requests the current assets. This does not invalidate cached HTML or
+override a CDN cache rule that ignores query strings.
+On narrow screens the navigation fills its grid row, aligning its first button
+with the brand icon instead of inheriting desktop right alignment.
+The language switcher and the GitHub button above it share the right edge;
+the GitHub button retains a full touch target around its smaller icon.
+
+For a temporary phone preview on the same trusted LAN, build the site and bind
+the static server to the development computer's LAN address (replace the example
+address with its actual IPv4 address):
+
+```powershell
+python scripts/build_site.py
+python -m http.server 8767 --bind 192.168.0.50 --directory dist
+```
+
+Open `http://192.168.0.50:8767/` (German) or `/hu/` (Hungarian) on the phone.
+`127.0.0.1` on a phone refers to the phone itself. Stop the foreground server
+with Ctrl+C after review. This preview serves only `dist/`, has no Basic Auth,
+and must not be exposed to the internet. If the computer responds but a phone
+cannot connect, check Wi-Fi client isolation and a narrowly scoped private-LAN
+firewall allowance; do not disable the firewall.
+
+Before promotion, verify lesson → Startseite navigation at normal zoom and with
+user zoom enabled, warm-cache refresh of the CSS/icon, and the existing completion
+state. Retain production Basic Auth and the documented previous-build rollback.
+DevTools page/pinch zoom can crop an otherwise responsive page: compare
+`visualViewport.scale` with 1 before diagnosing missing CSS; keep user zoom enabled.
+
 ## Registry Model
 
 Registry generator:

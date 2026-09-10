@@ -99,11 +99,26 @@ class RenderTests(unittest.TestCase):
             },
         )
 
-        self.assertIn('<link rel="stylesheet" href="/assets/css/base.css">', html)
-        self.assertIn('<link rel="stylesheet" href="/assets/css/print.css" media="print">', html)
+        self.assertIn('<link rel="stylesheet" href="/assets/css/base.css?v=0">', html)
+        self.assertIn('<link rel="stylesheet" href="/assets/css/print.css?v=0" media="print">', html)
         self.assertIn('<script src="/assets/js/site.js?v=0" defer></script>', html)
         self.assertIn("Kezdőlap", html)
         self.assertIn('<html lang="hu">', html)
+
+    def test_shared_assets_use_the_current_build_version(self) -> None:
+        templates = Path(__file__).resolve().parents[1] / "site" / "templates"
+        env = build_template_environment(templates)
+        html = env.get_template("base.html").render(
+            ui_lang="de", page_title="CoderLAP", asset_prefix="/assets",
+            body_class="home-page", ui={}, cache_bust="release-42",
+        )
+
+        for asset in ("favicon.svg", "css/base.css", "css/layout.css",
+                      "css/components.css", "css/print.css", "js/site.js"):
+            with self.subTest(asset=asset):
+                self.assertIn(f'/assets/{asset}?v=release-42"', html)
+                self.assertNotIn(f'/assets/{asset}"', html)
+        self.assertIn('src="/assets/favicon.svg?v=release-42"', html)
 
     def test_legal_template_uses_shared_main_landmark_only(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
