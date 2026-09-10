@@ -39,5 +39,10 @@
   "topic_contents_label": "In diesem Thema",
   "close_label": "Schließen",
   "loading_label": "Themen werden geladen…",
-  "load_error_label": "Die Themen konnten nicht geladen werden. Bitte erneut versuchen."
+  "load_error_label": "Die Themen konnten nicht geladen werden. Bitte erneut versuchen.",
+  "coder_tools_label": "Coder-Werkzeuge",
+  "coder_tools_intro": "Hier entstehen neue Möglichkeiten, dein Wissen auszuprobieren.",
+  "coming_soon_label": "In Entwicklung",
+  "coder_quiz_description": "Wissen testen, Lücken entdecken, gezielt üben. CoderQuiz wird für den gemeinsamen Auftritt überarbeitet und ist hier noch nicht verfügbar.",
+  "coder_coaster_description": "Programmieren spielerisch entdecken – mit Regex an deiner Seite. CoderCoaster entsteht gerade. Regex prüft noch die Schienen."
 }
