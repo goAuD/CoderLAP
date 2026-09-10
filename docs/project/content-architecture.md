@@ -187,6 +187,25 @@ with the brand icon instead of inheriting desktop right alignment.
 The language switcher and the GitHub button above it share the right edge;
 the GitHub button retains a full touch target around its smaller icon.
 
+Motion is controlled by the `--motion-*` tokens in `base.css`. The hero, topic
+article and initial catalogue groups get one subtle 360 ms reveal when entering
+the viewport. Content is never hidden while awaiting JavaScript or an observer.
+No reveal or skeleton animation runs in print or with reduced motion enabled.
+Search results do not repeatedly animate as the learner types.
+
+On topic and legal pages, quick view shows skeleton rows only while its navigation
+request is pending, without a minimum display delay. The close button works during
+loading; a late response cannot reopen the overlay or steal focus. A failed request
+(including the existing five-second timeout) removes the skeleton, shows a localized
+message and links to the catalogue. Close and reopen quick view to retry. The
+homepage already embeds its navigation and does not need a loading placeholder.
+
+Run `node --test tests/site-interactions.test.cjs` with Node.js 18+ alongside the
+Python suite. These dependency-free tests exercise pending/closed/ready/error/retry
+states and reduced-motion/observer fallbacks with a small DOM test double. They do
+not replace browser layout, keyboard or animation checks. The existing CI workflow
+currently runs the Python suite; run this Node command explicitly during review.
+
 For a temporary phone preview on the same trusted LAN, build the site and bind
 the static server to the development computer's LAN address (replace the example
 address with its actual IPv4 address):

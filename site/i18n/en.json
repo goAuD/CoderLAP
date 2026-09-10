@@ -37,5 +37,7 @@
   "regex_quote": "“i++ is not decoration. It gets us home eventually.”",
   "loop_sample_label": "A snapshot of a for loop",
   "topic_contents_label": "In this topic",
-  "close_label": "Close"
+  "close_label": "Close",
+  "loading_label": "Loading topics…",
+  "load_error_label": "Topics could not be loaded. Please try again."
 }

@@ -37,5 +37,7 @@
   "regex_quote": "„i++ ist keine Deko. Damit kommen wir irgendwann nach Hause.”",
   "loop_sample_label": "Eine Momentaufnahme der Schleife",
   "topic_contents_label": "In diesem Thema",
-  "close_label": "Schließen"
+  "close_label": "Schließen",
+  "loading_label": "Themen werden geladen…",
+  "load_error_label": "Die Themen konnten nicht geladen werden. Bitte erneut versuchen."
 }
