@@ -39,5 +39,10 @@
   "topic_contents_label": "In this topic",
   "close_label": "Close",
   "loading_label": "Loading topics…",
-  "load_error_label": "Topics could not be loaded. Please try again."
+  "load_error_label": "Topics could not be loaded. Please try again.",
+  "coder_tools_label": "Coder tools",
+  "coder_tools_intro": "New ways to put your knowledge into practice are taking shape.",
+  "coming_soon_label": "In development",
+  "coder_quiz_description": "Test your knowledge, find the gaps and practise with purpose. CoderQuiz is being updated for the shared design and is not available here yet.",
+  "coder_coaster_description": "Explore programming through play, with Regex by your side. CoderCoaster is still being built. Regex is checking the rails."
 }

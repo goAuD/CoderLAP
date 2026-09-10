@@ -70,7 +70,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  scroll-padding-top: calc(var(--topbar-height) + var(--space-4));
   scrollbar-gutter: stable;
 }
 
@@ -357,5 +357,10 @@ summary {
 @media (max-width: 35rem) {
   :root {
     --topbar-height: 8rem;
+  }
+}
+@media (max-width: 22rem) {
+  :root {
+    --topbar-height: 11rem;
   }
 }
