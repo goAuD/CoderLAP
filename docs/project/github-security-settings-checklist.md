@@ -52,6 +52,7 @@ Current hardening:
 - both ecosystems wait seven days before proposing newly published versions
   through Dependabot's `cooldown` option
 - GitHub security updates are not delayed by this version-update cooldown
+- option reference: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown
 
 Recommended behavior:
 
@@ -96,7 +97,7 @@ Current good signs already present:
 
 Semgrep is kept local for this rollout (decision: 2026-09-11). The prepared
 cloud workflow is not committed or enabled. Local scans do not upload findings;
-see `docs/project/semgrep-audit.md` after updating to the current release.
+see [the local audit notes](semgrep-audit.md).
 Any future cloud CI or managed-scan configuration needs a separate decision
 about uploads, token scope and duplicate scans.
 

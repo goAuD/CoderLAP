@@ -171,6 +171,10 @@ The deploy job must:
 - rotate the current release into `/srv/www/coderlap/dist.backup`
 - promote `dist.incoming` into `/srv/www/coderlap/dist`
 
+Manual dispatch can deploy only `main`. For an older version, prepare a
+reviewed revert/recovery PR into `main`, then use the normal pipeline. A
+temporary recovery branch can be built but cannot be manually deployed.
+
 If restore requires a manual deploy check:
 
 1. confirm the self-hosted runner is online in GitHub
