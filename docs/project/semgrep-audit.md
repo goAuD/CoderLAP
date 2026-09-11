@@ -72,3 +72,26 @@ files.
 Cloud Semgrep CI remains a separate follow-up: preserve the prepared workflow
 in the original working copy and review its token and upload settings before
 enabling it.
+
+
+## Workshop release repeat — 2026-09-11
+
+The assembled release tree (maintenance commit `19cef04`, tree identical to
+`e289105` on dev) was scanned locally with the commands above. No cloud
+workflow was included; raw reports remain in the local temporary directory.
+
+- Code audit: 570 scanned paths, 20 audit warnings, 2 partial-parsing errors.
+- Secret-pattern scan: 570 scanned paths, 0 findings, 0 errors.
+- The four additional warnings are one generated footer home URL and three in
+  the newly integrated, manual-only design prototype: two generated local URLs
+  and the trusted repository lesson HTML passed to `safe`. The prototype
+  renderer has no sanitizer and must not accept untrusted Markdown. The normal
+  production build excludes these preview pages; its sanitizer is unchanged.
+- The previous 16 warning paths retain the same trust boundaries described
+  above. The workflow parser gaps moved to line 117, still the commit-summary
+  echo containing a GitHub expression.
+- 83 Python tests, 35 JavaScript tests and the bilingual build passed. The
+  main-only deploy condition and YAML parsing were checked separately.
+
+No warning was globally suppressed. These results are an audit with the noted
+coverage gaps, not an exhaustive clean-security claim.
