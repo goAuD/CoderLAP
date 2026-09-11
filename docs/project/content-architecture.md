@@ -352,6 +352,9 @@ CoderQuiz is the reference for the footer's brand/tools/project columns. CoderLA
 retains its imprint and privacy links, with a reserved bottom strip keeping the
 floating button clear. The header places navigation, GitHub and languages in that
 order on desktop; mobile uses brand/GitHub above navigation/languages.
+Footer brand and group headings share a touch-target-height title row and the
+same line height. Link text starts at the top of its touch target so single-line
+legal links align with the two-line development links and the brand description.
 
 Manrope and Source Sans 3 each require both local Latin and Latin Extended WOFF2
 subsets. Their `unicode-range` declarations match the bundled font character maps;
