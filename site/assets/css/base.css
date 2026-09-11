@@ -338,6 +338,15 @@ td {
   scrollbar-color: var(--color-accent-border) transparent;
 }
 
+@media screen {
+  /* Keep words readable; wide tables scroll inside their wrapper. */
+  .table-wrap :is(th, td),
+  .table-wrap :is(th, td) * {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
 .table-wrap::-webkit-scrollbar {
   height: 0.45rem;
 }
