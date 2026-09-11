@@ -21,7 +21,7 @@ USER_AGENT = (
 )
 NETWORK_TIMEOUT_SECONDS = 20.0
 
-FONT_URL_PATTERN = re.compile(r"url\((https://fonts\.gstatic\.com[^)]+)\)")
+FONT_URL_PATTERN = re.compile(r"url\((https://fonts\.gstatic\.com/[^)]+)\)")
 
 
 def build_output_path(output_dir: Path, family_slug: str, source_url: str) -> Path:

@@ -7,6 +7,33 @@ from scripts.site_builder.render import build_template_environment, render_markd
 
 
 class RenderTests(unittest.TestCase):
+    def test_topic_output_omits_exam_mistakes_and_nested_content_in_both_languages(self):
+        for heading in ("Gyakori vizsgahibák", "Häufige Prüfungsfehler"):
+            with self.subTest(heading=heading):
+                source = (
+                    "# Topic\n\nKeep before.\n\n## " + heading
+                    + "\n\nOmit this paragraph.\n\n### " + heading
+                    + "\n\nOmit nested section.\n\n### Nested detail\n\n- Omit this list."
+                    + "\n\n## Self-check\n\nKeep after."
+                )
+                html = render_markdown(source, suppress_exam_mistakes=True)
+                self.assertNotIn(heading, html)
+                self.assertNotIn("Omit", html)
+                self.assertNotIn("Nested detail", html)
+                self.assertIn("Keep before.", html)
+                self.assertIn("Keep after.", html)
+                self.assertIn(heading, render_markdown(source))
+
+    def test_topic_section_filter_handles_end_of_document_and_keeps_code_examples(self):
+        source = (
+            "```markdown\n## Gyakori vizsgahibák\nExample heading only.\n```"
+            "\n\n## Gyakori vizsgahibák\n\nOmit through the end."
+        )
+        html = render_markdown(source, suppress_exam_mistakes=True)
+        self.assertIn("## Gyakori vizsgahibák", html)
+        self.assertIn("Example heading only.", html)
+        self.assertNotIn("Omit through the end.", html)
+
     def test_render_markdown_linkifies_standalone_plain_url_lines(self) -> None:
         html = render_markdown("Source title\nhttps://example.com/path\nUsage note")
 
@@ -99,11 +126,26 @@ class RenderTests(unittest.TestCase):
             },
         )
 
-        self.assertIn('<link rel="stylesheet" href="/assets/css/base.css">', html)
-        self.assertIn('<link rel="stylesheet" href="/assets/css/print.css" media="print">', html)
+        self.assertIn('<link rel="stylesheet" href="/assets/css/base.css?v=0">', html)
+        self.assertIn('<link rel="stylesheet" href="/assets/css/print.css?v=0" media="print">', html)
         self.assertIn('<script src="/assets/js/site.js?v=0" defer></script>', html)
         self.assertIn("Kezdőlap", html)
         self.assertIn('<html lang="hu">', html)
+
+    def test_shared_assets_use_the_current_build_version(self) -> None:
+        templates = Path(__file__).resolve().parents[1] / "site" / "templates"
+        env = build_template_environment(templates)
+        html = env.get_template("base.html").render(
+            ui_lang="de", page_title="CoderLAP", asset_prefix="/assets",
+            body_class="home-page", ui={}, cache_bust="release-42",
+        )
+
+        for asset in ("favicon.svg", "css/base.css", "css/layout.css",
+                      "css/components.css", "css/print.css", "js/site.js"):
+            with self.subTest(asset=asset):
+                self.assertIn(f'/assets/{asset}?v=release-42"', html)
+                self.assertNotIn(f'/assets/{asset}"', html)
+        self.assertIn('src="/assets/favicon.svg?v=release-42"', html)
 
     def test_legal_template_uses_shared_main_landmark_only(self) -> None:
         repo_root = Path(__file__).resolve().parents[1]
