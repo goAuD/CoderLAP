@@ -46,6 +46,9 @@ jobs:
       - name: Run test suite
         run: python -m unittest discover -s tests -v
 
+      - name: Verify JavaScript interactions and learning examples
+        run: node --test tests/site-interactions.test.cjs tests/learning-examples.test.cjs
+
       - name: Build static site
         run: python scripts/build_site.py
 
