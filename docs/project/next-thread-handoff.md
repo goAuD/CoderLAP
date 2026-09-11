@@ -41,6 +41,26 @@ Last updated: `2026-09-11`
 - `robots.txt` currently blocks indexing
 - `.well-known/security.txt` is shipped from the repo
 
+## Latest Delivery — 2026-09-11
+
+- The shared Műhely header/footer and local Lucide navigation icons are merged
+  through PR #34 into `dev` and PR #35 into `main`.
+- Deployed commit: `6d6343b6848713e0d559831e04a9eda34eb6ba97`.
+  [Build and deployment](https://github.com/goAuD/CoderLAP/actions/runs/34623457337)
+  succeeded with 83 Python and 35 JavaScript tests and the bilingual build.
+- The refreshed production browser loaded the new `workshop-frame.css`;
+  no horizontal overflow or console errors were observed.
+- [Site monitoring](https://github.com/goAuD/CoderLAP/actions/runs/34623565032)
+  passed DNS/TLS checks and received Cloudflare challenges on both hostnames.
+  That monitor run did not exercise authenticated page access.
+- The frame source is `site/assets/css/workshop-frame.css`; keep the Quiz and
+  Coaster copies byte-identical. See the frame maintenance section in
+  [architecture-adoption.md](architecture-adoption.md).
+- CoderQuiz and CoderCoaster frame changes are approved and merged in their own
+  repositories. Neither has a production hosting target yet. Hosting, DNS and
+  shared sign-in are the next session's agreed planning/setup task; do not infer
+  that publishing source code has deployed either app.
+
 ## Read These First In A New Thread
 
 1. `AGENTS.md`
@@ -96,6 +116,8 @@ such as `8001` and use the matching URL.
 
 ## Most Likely Next Work
 
+- plan Quiz/Coaster hosting, DNS and shared sign-in with the user; preserve the
+  existing protected LAP production deployment
 - final Austrian legal/imprint pass before public launch
 - switch `robots.txt` to an indexable version when `basic_auth` is removed
 - optional MX/mail routing for `coderlap.com`
