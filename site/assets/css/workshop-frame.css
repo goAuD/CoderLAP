@@ -1,0 +1,247 @@
+/* Műhely frame v1. Canonical: CoderLAP/site/assets/css/workshop-frame.css.
+   Keep the copies in CoderQuiz/assets and CoderCoaster/assets identical.
+   Only the page frame is shared; each app owns its content and navigation. */
+:root {
+  --frame-left: max(1rem, env(safe-area-inset-left, 0px));
+  --frame-right: max(1rem, env(safe-area-inset-right, 0px));
+  --frame-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  --frame-touch: 2.75rem;
+}
+:is(.site-topbar, .site-header), .site-footer {
+  font: 400 1.0625rem/1.6 var(--font-body);
+  letter-spacing: normal;
+}
+:is(.site-topbar, .site-header) {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: env(safe-area-inset-top, 0px) 0 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+:is(.site-topbar__inner, .header-inner, .site-footer__inner, .footer-inner) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding-inline: var(--frame-left) var(--frame-right);
+}
+:is(.site-topbar__inner, .header-inner) {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  min-height: 6rem;
+  padding-block: 1rem;
+}
+:is(.site-brand, .brand) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--frame-touch);
+  gap: .7rem;
+  color: var(--color-text);
+  font: 800 1.7rem/1.6 var(--font-heading);
+  letter-spacing: -.04em;
+  text-decoration: none;
+}
+.site-brand__row { display: inline-flex; align-items: center; gap: .7rem; }
+.site-brand__title { font: inherit; color: inherit; letter-spacing: inherit; }
+:is(.site-brand__icon, .brand img) { display: block; flex: none; width: 40px; height: 40px; }
+:is(.site-topbar__nav, .header-actions) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  justify-self: end;
+  align-items: center;
+  gap: 1.5rem;
+}
+:is(.site-page-links, .frame-page-links) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+:is(.site-topbar, .site-header) :is(.site-nav-link, .lap-link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: var(--frame-touch);
+  padding: .7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: .8rem;
+  font: inherit;
+  color: var(--color-text);
+  text-decoration: none;
+}
+:is(.site-topbar, .site-header) :is(.site-nav-link, .lap-link):hover {
+  color: var(--color-accent);
+  background: var(--color-accent-soft, #e8edff);
+}
+:is(.site-topbar, .site-header) .site-nav-link[aria-current="page"] {
+  color: var(--color-accent);
+  border-color: var(--color-accent-border, #bbc9f8);
+  background: var(--color-accent-soft, #e8edff);
+}
+:is(.site-github-link, .github-link) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  width: var(--frame-touch);
+  height: var(--frame-touch);
+  min-width: var(--frame-touch);
+  padding: .35rem;
+  color: var(--color-text-muted);
+  border-radius: .5rem;
+  text-decoration: none;
+}
+:is(.site-github-link, .github-link) svg { display: block; width: 20px; height: 20px; flex: none; }
+:is(.site-topbar, .site-header) .lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 3px;
+  background: var(--color-surface-soft, #f7f9fd);
+  border: 1px solid var(--color-border);
+  border-radius: .8rem;
+}
+:is(.site-topbar, .site-header) :is(.lang-switcher__item, .lang-btn) {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--frame-touch);
+  min-height: var(--frame-touch);
+  padding: .35rem .65rem;
+  border: 0;
+  border-radius: .6rem;
+  font: 600 .9rem/1.6 var(--font-body);
+  color: var(--color-text-muted);
+  background: transparent;
+  text-decoration: none;
+}
+:is(.site-topbar, .site-header) :is(.lang-switcher__item--active, .lang-btn.active) {
+  color: var(--color-accent);
+  background: var(--color-accent-soft, #e8edff);
+}
+.frame-icon { display: inline-block; flex: none; width: 18px; height: 18px; vertical-align: middle; }
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: .95rem;
+  padding: 0 0 calc(var(--frame-bottom) + var(--frame-touch) + 1rem);
+}
+:is(.site-footer__inner, .footer-inner) {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.5rem 3rem;
+  padding-block: 2rem;
+}
+.site-footer :is(.site-footer__brand, .footer-about, .site-footer__group, .footer-group) { min-width: 0; }
+.site-footer :is(.site-footer__meta, .footer-brand) {
+  color: var(--color-text);
+  font: 750 1.15rem/1.5rem var(--font-heading);
+  letter-spacing: normal;
+  text-decoration: none;
+}
+.site-footer :is(.site-footer__note, .footer-about p) { max-width: 38ch; margin: .5rem 0 0; }
+.site-footer :is(.site-footer__group, .footer-group) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.site-footer :is(.site-footer__group, .footer-group) h2 {
+  display: flex;
+  align-items: center;
+  min-height: var(--frame-touch);
+  margin: 0 0 .5rem;
+  color: var(--color-text);
+  font: 650 1rem/1.5rem var(--font-body);
+  letter-spacing: normal;
+}
+.site-footer a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: var(--frame-touch);
+  max-width: 100%;
+  gap: .5rem;
+  overflow-wrap: anywhere;
+}
+.site-footer :is(.site-footer__links, .footer-links) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.site-footer :is(.site-footer__links, .footer-group) a {
+  align-items: flex-start;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.site-footer :is(.site-footer__tool, .footer-tool) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0;
+}
+.site-footer small { color: var(--color-text-muted); font-size: .85em; }
+.site-footer a:hover { color: var(--color-text); text-decoration: underline; }
+.site-footer :is(.site-footer__sources, .sources) {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+  padding-top: 1.5rem;
+  font: 400 .85rem/1.6 var(--font-body);
+}
+.site-footer :is(.site-footer__sources, .sources) a { color: var(--color-accent); text-underline-offset: .2em; }
+:is(.site-topbar, .site-header, .site-footer) :is(a, button):focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+:is(.site-topbar, .site-header, .site-footer) :is(a, button) {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+#module-title, #setup-heading, #question-text, #result-heading, #game {
+  scroll-margin-top: calc(7rem + env(safe-area-inset-top, 0px));
+}
+@media (max-width: 35rem) {
+  #module-title, #setup-heading, #question-text, #result-heading, #game {
+    scroll-margin-top: calc(10rem + env(safe-area-inset-top, 0px));
+  }
+  :is(.site-topbar__inner, .header-inner) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: .75rem .5rem;
+    grid-template-rows: var(--frame-touch) minmax(3.25rem, auto);
+  }
+  :is(.site-topbar__nav, .header-actions) { display: contents; }
+  :is(.site-brand, .brand) {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    font-size: 1.5rem;
+  }
+  :is(.site-page-links, .frame-page-links) { grid-column: 1; grid-row: 2; }
+  :is(.site-github-link, .github-link) { grid-column: 2; grid-row: 1; justify-self: end; }
+  :is(.site-topbar, .site-header) .lang-switcher {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: start;
+  }
+  :is(.site-topbar, .site-header) :is(.site-nav-link, .lap-link) { padding: .5rem .65rem; }
+  :is(.site-footer__inner, .footer-inner) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  :is(.site-footer__brand, .footer-about) { grid-column: 1 / -1; }
+}
+@media (max-width: 22.5rem) {
+  :is(.site-brand, .brand) { font-size: 1.3rem; }
+}
+@media print {
+  :is(.site-topbar, .site-header) { position: static; }
+}

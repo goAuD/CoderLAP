@@ -232,6 +232,11 @@ python scripts/build_site.py
 
 The generated static frontend is written to `dist/` (git-ignored).
 
+The shared CoderLAP / CoderQuiz / CoderCoaster header and footer are maintained
+in `site/assets/css/workshop-frame.css`; see the
+[frame maintenance notes](docs/project/architecture-adoption.md#shared-műhely-header-and-footer).
+Local Lucide navigation icons include notices in `site/assets/LICENSE-Lucide.txt`.
+
 Key generated routes include:
 
 - `/` for the German catalog
