@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Manrope;
+  src: url('/assets/fonts/manrope-xn7gYHE41ni1AdIRggexSg.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/assets/fonts/source-sans-3-nwpStKy2OAdR1K-IwhWudF-R3wEaZfrc.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --bg: #f3f6fb;
+  --surface: #fff;
+  --raised: #e8eef8;
+  --ink: #1e3047;
+  --muted: #63738b;
+  --accent: #345ee8;
+  --accent-ink: #fff;
+  --accent-soft: #e8edff;
+  --secondary: #f5c76c;
+  --progress-ink: #806014;
+  --progress-bg: #fff8e8;
+  --progress-border: #e0cc99;
+  --border: #dce3ee;
+  --dog-face: #f5c76c;
+  --dog-ink: #1e3047;
+  --font-title: Manrope, 'Segoe UI', sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --radius: 14px;
+  --space: 8px;
+}
+[data-skin='campus'] {
+  color-scheme: dark;
+  --bg: #211c35;
+  --surface: #302943;
+  --raised: #3b3351;
+  --ink: #f7f3ff;
+  --muted: #b5a8c8;
+  --accent: #d4c5f9;
+  --accent-ink: #211c35;
+  --accent-soft: #42375a;
+  --secondary: #ffc39f;
+  --progress-ink: #f5c76c;
+  --progress-bg: #3b3342;
+  --progress-border: #796746;
+  --border: #4c405e;
+  --dog-face: #ffc39f;
+  --dog-ink: #211c35;
+  --radius: 22px;
+}

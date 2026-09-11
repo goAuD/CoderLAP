@@ -99,7 +99,8 @@ class BuildSiteTests(unittest.TestCase):
             _write_registry(registry_path)
             _write_templates(template_dir)
             markdown_path.write_text(
-                "# ASCII\n\n## Mi az ASCII?\n\nAz ASCII egy karakterkodolas.",
+                "# ASCII\n\n## Mi az ASCII?\n\nAz ASCII egy karakterkodolas."
+                "\n\n## Gyakori vizsgahibák\n\nHidden mistake marker.",
                 encoding="utf-8",
             )
             markdown_de_path.write_text(
@@ -179,6 +180,10 @@ class BuildSiteTests(unittest.TestCase):
             self.assertIn("CoderLAP", home_html)
             self.assertIn("<h1>Grundlagen</h1>", module_pack_html)
             self.assertIn('id="01-01-ascii"', module_pack_html)
+            for generated in (topic_html, module_pack_html):
+                self.assertNotIn("Gyakori vizsgahibák", generated)
+                self.assertNotIn("Hidden mistake marker.", generated)
+            self.assertIn("Hidden mistake marker.", markdown_path.read_text(encoding="utf-8"))
             self.assertIn("<h1>Imprint</h1>", imprint_html)
             self.assertIn("<h1>Privacy</h1>", privacy_html)
 
@@ -215,6 +220,16 @@ class BuildSiteTests(unittest.TestCase):
             self.assertEqual(navigation["main_topics"][0]["pack_slug"], "01-grundlagen")
             self.assertEqual(navigation["main_topics"][0]["number"], "01")
             self.assertEqual(navigation["topics"]["LAP-01-01"]["slug"], "01-01-ascii")
+
+            # A translated document declares its own language; a missing
+            # translation above retains the canonical Hungarian language.
+            markdown_path.with_name("README.en.md").write_text(
+                "# ASCII\n\nEnglish translation.", encoding="utf-8"
+            )
+            build_site(settings)
+            translated_html = (output_dir / "topics" / "01-01-ascii" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('<html lang="en">', translated_html)
+            self.assertIn("English translation.", translated_html)
 
 
 if __name__ == "__main__":

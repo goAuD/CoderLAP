@@ -4,10 +4,12 @@ from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import unicodedata
 from urllib.parse import urlsplit
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markdown import Markdown
+from markdown.treeprocessors import Treeprocessor
 
 
 _ALLOWED_TAGS = {
@@ -47,6 +49,28 @@ _ALLOWED_ATTRIBUTES = {
 }
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
+_HIDDEN_TOPIC_SECTIONS = {"gyakori vizsgahibak", "haufige prufungsfehler"}
+
+
+class _TopicSectionFilter(Treeprocessor):
+    """Omit selected sections from output without changing source Markdown."""
+
+    def run(self, root):
+        hidden_level = None
+        for element in list(root):
+            level = int(element.tag[1]) if re.fullmatch(r"h[1-6]", element.tag) else None
+            if level is not None:
+                if hidden_level is not None and level <= hidden_level:
+                    hidden_level = None
+                heading = unicodedata.normalize("NFKD", "".join(element.itertext()))
+                heading = "".join(char for char in heading if not unicodedata.combining(char))
+                if hidden_level is None and " ".join(heading.casefold().split()) in _HIDDEN_TOPIC_SECTIONS:
+                    hidden_level = level
+            if hidden_level is not None:
+                root.remove(element)
+        return root
+
+
 _STANDALONE_URL_PATTERN = re.compile(r"^(https?://[^\s<]+)$")
 _REDUNDANT_TOPIC_HEADING_PATTERN = re.compile(
     r"<h2>\s*(?:"
@@ -199,6 +223,7 @@ def render_markdown(
     markdown_text: str,
     *,
     suppress_redundant_summary_heading: bool = False,
+    suppress_exam_mistakes: bool = False,
 ) -> str:
     normalized_markdown = _linkify_plain_url_lines(markdown_text)
     md = Markdown(
@@ -206,6 +231,8 @@ def render_markdown(
         output_format="html",
     )
     md.inlinePatterns.deregister("html")
+    if suppress_exam_mistakes:
+        md.treeprocessors.register(_TopicSectionFilter(md), "topic_sections", 15)
     rendered_html = md.convert(normalized_markdown)
     sanitizer = _RenderedMarkdownSanitizer()
     sanitizer.feed(rendered_html)
