@@ -37,26 +37,89 @@ Lépései:
 
 Ezért sokkal gyorsabb lehet.
 
-## Egyszerű példa
+## Kidolgozott példák JavaScriptben
 
-Keresett érték: `42`
+Feladat: keressük meg a 42-t az `[5, 11, 19, 42, 70]` számtömbben.
+A függvények a megtalált elem **indexét** adják vissza. Az indexelés 0-tól indul,
+ezért a 42 indexe 3. Ha a keresés találat nélkül fejeződik be, az eredmény `-1`.
+A példák véges számokkal dolgoznak, a tömböt változatlanul hagyják.
+Mindkét JavaScript-blokk önállóan futtatható, például `node pelda.js` paranccsal
+egy telepített Node.js környezetben.
 
-### Szekvenciális keresés a gyakorlatban
+### Lineáris keresés: elemenként haladunk
 
-```text
-5 -> 11 -> 19 -> 42
+```javascript
+function linearSearch(values, target) {
+  for (let index = 0; index < values.length; index++) {
+    if (values[index] === target) {
+      return index;
+    }
+  }
+  return -1;
+}
+
+console.log(linearSearch([5, 11, 19, 42, 70], 42));
+console.log(linearSearch([5, 11, 19, 42, 70], 8));
 ```
 
-Végig kell menni az elemeken sorban.
-
-### Bináris keresés a gyakorlatban
+Kimenet:
 
 ```text
-rendezett lista
--> középső elem
--> bal vagy jobb fél
--> új közép
+3
+-1
 ```
+
+A keresés először az 5-öt, majd a 11-et, a 19-et és a 42-t vizsgálja meg.
+A `return index` a találatnál az egész függvényt befejezi. A 8 keresésekor mind
+az öt elem sorra kerül, majd a ciklus utáni `return -1` fut le.
+Több azonos értéknél ez a változat az első előfordulás indexét adja vissza.
+
+### Bináris keresés: a vizsgált tartomány felezése
+
+Előfeltétel: a `values` tömb **növekvően rendezett**, azonos értékek is lehetnek
+benne. A függvény ezt a rendezettséget adottnak veszi. A `left` és `right`
+a még vizsgált tartomány első és utolsó indexe, mindkét határ beleértendő.
+
+```javascript
+function binarySearch(values, target) {
+  let left = 0;
+  let right = values.length - 1;
+  while (left <= right) {
+    const middle = left + Math.floor((right - left) / 2);
+    if (values[middle] === target) {
+      return middle;
+    }
+    if (values[middle] < target) {
+      left = middle + 1;
+    } else {
+      right = middle - 1;
+    }
+  }
+  return -1;
+}
+
+console.log(binarySearch([5, 11, 19, 42, 70], 42));
+console.log(binarySearch([5, 11, 19, 42, 70], 8));
+```
+
+Kimenet:
+
+```text
+3
+-1
+```
+
+| Lépés a 42 keresésekor | `left` | `right` | `middle` | Döntés |
+|---|---|---|---|---|
+| 1. | 0 | 4 | 2 | a 19 kisebb a 42-nél, ezért `left = 3` |
+| 2. | 3 | 4 | 3 | a középső érték 42, visszatérünk a 3-as indexszel |
+
+A `Math.floor` lefelé kerekít, így egész indexet kapunk. Az összehasonlított
+középső elemet a következő körből kizárjuk a `+ 1` vagy `- 1` lépéssel, ezért
+a tartomány folyamatosan szűkül. Amikor `left > right`, a tartomány üres:
+a keresés eredménye `-1`. Üres bemenetnél ez már az első feltételvizsgálatkor igaz.
+Ismétlődő értéknél ez a változat egy egyező elem indexét adja vissza; az első
+előfordulás megkeresése külön keresési változat feladata.
 
 ## Mikor melyiket?
 
@@ -72,11 +135,13 @@ rendezett lista
 - ha az adatok rendezettek
 - ha sok keresést kell végezni
 
-## Bináris keresés: fontos feltétel
+## A rendezettség és a teljes munkaigény
 
-Ez vizsgán kulcspont:
-
-- ha az adatok nincsenek rendezve, a bináris keresés nem alkalmazható közvetlenül
+A bináris keresés előnye a már rendezett, indexelhető tömbön érvényesül.
+Ha előbb rendezni kell az adatokat, annak költsége is a teljes feladathoz tartozik.
+Egyetlen kereséshez a lineáris bejárás gyakran egyszerűbb; sok keresésnél
+a rendezettség fenntartása megtérülhet. A bináris keresés itt indexhatárokat mozgat
+egy tömbön; a bináris fa önálló, csomópontokból álló adatszerkezet.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -86,28 +151,21 @@ Ez vizsgán kulcspont:
 > esetén használható.  
 > A két algoritmus közti legfontosabb különbség a működési elv és a rendezettségi feltétel.
 
-## Gyakori vizsgahibák
-
-- Elfelejteni, hogy a bináris kereséshez rendezett lista kell.
-- Azt állítani, hogy a bináris keresés mindig jobb.
-- Nem megemlíteni a lineáris keresés egyszerűségét.
-- Összekeverni a bináris keresést a bináris fával.
-
 ## Gyors önellenőrzés
 
-1. Hogyan működik a szekvenciális keresés?
-2. Mi a bináris keresés alapötlete?
-3. Mi a bináris keresés feltétele?
-4. Melyik egyszerűbb?
-5. Melyik gyorsabb nagy rendezett listán?
+1. Mit jelent a példákban a 3-as visszatérési érték?
+2. Melyik elemet vizsgálja először a bináris keresés a megadott ötelemű tömbben?
+3. Miért lesz `left = middle + 1`, ha a középső érték kisebb a keresettnél?
+4. Mit adnak vissza a függvények üres tömbre?
+5. Miért érdemes az előzetes rendezés költségét is mérlegelni?
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. Sorban végigvizsgálja az elemeket
-2. Mindig megfelezi a keresési tartományt
-3. Rendezett adatok
-4. A szekvenciális keresés
-5. A bináris keresés
+1. Az elem indexét: a 42 a negyedik helyen, a 3-as indexen található.
+2. A 2-es indexű 19-et.
+3. A rendezett tömbben a közép és a tőle balra lévő értékek túl kicsik; a következő jelölt a közép utáni elem.
+4. `-1`-et, mert nincs vizsgálható elem.
+5. A teljes munka a rendezést és a kereséseket együtt tartalmazza; egy kereséshez a lineáris bejárás kedvezőbb is lehet.
 
 ## Források
 
@@ -119,4 +177,4 @@ Ez vizsgán kulcspont:
    https://xlinux.nist.gov/dads/HTML/binarySearch.html  
    Használat: hivatalos definíció és működési háttér a bináris kereséshez.
 
-Megnyitva: `2026-04-09`
+Megnyitva: `2026-09-11`
