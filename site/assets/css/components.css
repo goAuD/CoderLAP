@@ -16,7 +16,7 @@
 .site-brand__row {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.7rem;
 }
 
 .site-brand__icon {
@@ -51,9 +51,9 @@
 .site-brand__title {
   color: var(--color-heading);
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.04em;
   text-transform: none;
 }
 
@@ -68,7 +68,14 @@
   justify-content: flex-end;
   justify-self: end;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-5);
+}
+
+.site-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 /* ── Language switcher ──────────────────────────────────────────── */
@@ -76,29 +83,26 @@
   display: inline-flex;
   align-items: center;
   gap: 0;
-  margin-left: 0.25rem;
+  padding: 3px;
+  background: var(--color-surface-soft);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  overflow: hidden;
 }
 
 .lang-switcher__item {
-  min-height: 2.2rem;
+  min-height: var(--touch-target);
+  min-width: var(--touch-target);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.35rem 0.65rem;
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.6rem;
   color: var(--color-text-muted);
   text-decoration: none;
   transition: background-color 140ms ease, color 140ms ease;
-}
-
-.lang-switcher__item + .lang-switcher__item {
-  border-left: 1px solid var(--color-border);
 }
 
 a.lang-switcher__item:hover,
@@ -119,6 +123,8 @@ a.lang-switcher__item:focus-visible {
   justify-content: center;
   justify-self: center;
   padding: 0.35rem;
+  min-width: var(--touch-target);
+  min-height: var(--touch-target);
   color: var(--color-text-muted);
   text-decoration: none;
   transition: color 140ms ease;
@@ -745,13 +751,11 @@ a.lang-switcher__item:focus-visible {
 
 @media (max-width: 35rem) {
   .site-topbar__nav {
-    grid-column: 1 / -1;
-    justify-self: stretch;
-    justify-content: flex-start;
+    display: contents;
   }
 
-  .site-topbar__nav .lang-switcher {
-    margin-inline-start: auto;
+  .site-brand__title {
+    font-size: 1.5rem;
   }
 
   .site-topbar .site-github-link {

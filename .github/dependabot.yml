@@ -7,6 +7,8 @@ updates:
       day: "monday"
       time: "05:30"
       timezone: "Europe/Vienna"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     labels:
       - "dependencies"
@@ -26,6 +28,8 @@ updates:
       day: "monday"
       time: "05:45"
       timezone: "Europe/Vienna"
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     labels:
       - "dependencies"

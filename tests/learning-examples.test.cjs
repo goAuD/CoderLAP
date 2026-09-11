@@ -12,7 +12,7 @@ const topics = [
 ];
 
 function examplesIn(topic, filename) {
-  const markdown = fs.readFileSync(path.join(moduleRoot, topic, filename), 'utf8');
+  const markdown = fs.readFileSync(path.join(moduleRoot, topic, filename), 'utf8').replace(/\r\n/g, '\n');
   const fences = Array.from(markdown.matchAll(/^```([^\r\n]*)\r?\n([\s\S]*?)^```\s*$/gm));
   const examples = [];
   for (let index = 0; index < fences.length; index++) {

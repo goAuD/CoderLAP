@@ -1,0 +1,7 @@
+# Keep repository text deterministic across Windows development and Linux deploys.
+* text=auto eol=lf
+
+# Binary assets must never receive line-ending conversion.
+*.pdf binary
+*.png binary
+*.woff2 binary
