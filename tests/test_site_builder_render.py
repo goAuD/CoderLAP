@@ -12,7 +12,8 @@ class RenderTests(unittest.TestCase):
             with self.subTest(heading=heading):
                 source = (
                     "# Topic\n\nKeep before.\n\n## " + heading
-                    + "\n\nOmit this paragraph.\n\n### Nested detail\n\n- Omit this list."
+                    + "\n\nOmit this paragraph.\n\n### " + heading
+                    + "\n\nOmit nested section.\n\n### Nested detail\n\n- Omit this list."
                     + "\n\n## Self-check\n\nKeep after."
                 )
                 html = render_markdown(source, suppress_exam_mistakes=True)
