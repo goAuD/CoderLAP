@@ -1,10 +1,10 @@
 # Next Thread Handoff
 
-Last updated: `2026-04-16`
+Last updated: `2026-09-11`
 
 ## Active Repository
 
-- Local path: `C:\GitHub\CoderLAP`
+- Local path: machine-specific; use the active clone's repository root
 - GitHub repo: `https://github.com/goAuD/CoderLAP`
 - Stable branch: `main`
 - Active branch: `dev`
@@ -36,6 +36,8 @@ Last updated: `2026-04-16`
 - repo-facing docs are being kept safe for public visibility
 - uptime/expiry monitoring now exists through `scripts/check_site_health.py`
   and `.github/workflows/coderlap-site-monitor.yml`
+- Semgrep remains local; the prepared cloud workflow is intentionally excluded
+  from this rollout (decision: 2026-09-11).
 - `robots.txt` currently blocks indexing
 - `.well-known/security.txt` is shipped from the repo
 

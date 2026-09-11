@@ -141,7 +141,7 @@ Completed so far:
 - static site generator built with Jinja2, producing bilingual output to `dist/`
 - module-level print pack pages generated for all `18` modules
 - restricted live delivery active at `coderlap.com`
-- GitHub-ready active working copy defined as `C:\GitHub\CoderLAP`
+- GitHub-ready active working copy; its absolute local path is machine-specific
 
 ## Content principles
 
@@ -204,7 +204,7 @@ What was deliberately deferred:
 ## Roadmap
 
 1. ~~Keep the Markdown corpus stable and review-ready.~~ Done.
-2. ~~Continue from the GitHub-ready copy under `C:\GitHub\CoderLAP`.~~ Done.
+2. ~~Continue from a GitHub-ready local clone.~~ Done.
 3. ~~Add i18n-ready structure on top of the registry and current Markdown
    files.~~ Done.
 4. ~~Create translated variants.~~ Done — all `235` topics translated to
@@ -278,7 +278,7 @@ If you continue this project in a new Codex thread:
 
 1. Read [AGENTS.md](./AGENTS.md).
 2. Check the registry and `docs/project/` notes.
-3. Use `C:\GitHub\CoderLAP` as the active working copy.
+3. Use the current clone's repository root as the active working copy.
 4. Check what topic folders already contain a `README.md`.
 5. Continue within the existing structure.
 6. Preserve the German naming + bilingual content structure, with Hungarian as

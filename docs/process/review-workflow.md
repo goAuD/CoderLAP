@@ -20,7 +20,7 @@ next.
 You are reviewing the study material in the CoderLAP repository — an
 Austrian LAP exam knowledge base (Applikationsentwicklung – Coding).
 
-REPOSITORY ROOT: C:\GitHub\CoderLAP
+REPOSITORY ROOT: <active CoderLAP checkout>
 (or the path where the repo is checked out)
 BRANCH: dev
 (always work on dev, merge to main after push)

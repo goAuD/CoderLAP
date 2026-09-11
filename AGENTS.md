@@ -2,7 +2,8 @@
 
 ## Project Identity
 
-This project is now actively maintained at `C:\GitHub\CoderLAP`.
+This project is actively maintained from the current `goAuD/CoderLAP` Git
+checkout. The absolute local path is machine-specific.
 
 Project name:
 
@@ -10,7 +11,8 @@ Project name:
 
 Preferred working location going forward:
 
-- `C:\GitHub\CoderLAP`
+- the repository root of the active `goAuD/CoderLAP` clone
+- do not mix changes from multiple local clones in one task
 
 Purpose:
 
@@ -131,7 +133,7 @@ When continuing work in a new thread:
 
 - Check existing progress before creating new files.
 - Extend the existing structure instead of inventing a new one.
-- Use `C:\GitHub\CoderLAP` as the only active working copy.
+- Use the current repository root as the only active working copy for the task.
 
 ## Content Language Rules
 
@@ -311,7 +313,8 @@ Do not leave sources implied. Make them explicit.
 When continuing this project:
 
 1. Read this `AGENTS.md`.
-2. Check whether the active working copy is `C:\GitHub\CoderLAP`.
+2. Check that the current directory is the root of the intended
+   `goAuD/CoderLAP` clone.
 3. Read the project architecture notes: `docs/project/content-architecture.md`,
    `docs/project/architecture-adoption.md`, `docs/project/deploy-strategy.md`
 4. Check the registry files before large structural work:
@@ -329,7 +332,7 @@ When continuing this project:
 
 For a completely new Codex thread on another machine, use this startup order:
 
-1. Open the repository root `C:\GitHub\CoderLAP`.
+1. Open the repository root of the local `goAuD/CoderLAP` clone.
 2. Read `AGENTS.md` first.
 3. Read `README.md` for the high-level state.
 4. Read `docs/project/deploy-strategy.md` if the task involves Git, GitHub,
@@ -433,7 +436,7 @@ Current repo preparation state:
 - `.gitignore` exists
 - architecture adoption is documented under `docs/project/`
 - deployment direction is documented under `docs/project/`
-- project is already Git/GitHub-ready under `C:\GitHub\CoderLAP`
+- the project is already Git/GitHub-ready in the active checkout
 - the bilingual static frontend build is already implemented
 
 Recommended next technical phase after content completion:
@@ -502,7 +505,8 @@ What has already been validated by the user:
 Unless the user says otherwise:
 
 - create or edit files under the current repository root
-- treat `C:\GitHub\CoderLAP` as the canonical local working copy
+- treat the active repository root as the canonical local working copy for the
+  task
 - use `README.md` inside each topic folder
 - write in Hungarian
 - keep directory/file names in German
