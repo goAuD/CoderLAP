@@ -4,6 +4,8 @@ Két összehasonlítható arculati irány a meglévő kezdőlaphoz és a `LAP-15
 (Schleifen) tananyaghoz. Ez külön előnézet; a produkciós sablonokat és a
 Markdown-tananyagot nem módosítja.
 
+A kiválasztott további irány: **A: Műhely**. A Campus összehasonlításként marad.
+
 ## Tervezési alap
 
 | | A: Műhely | B: Campus |
@@ -61,6 +63,14 @@ A kereső csak a helyi regisztert szűri. A tananyag jelölése kizárólag az
 aktuális oldal munkamenetében él; az előnézet nem írja a produkciós haladást.
 Nincs hálózati API, analitika vagy külső betűletöltés.
 
+A kezdőlapi minimális haladásjelző a bevezető alatt mutatja a kész témák számát
+és arányát. Csak olvassa az adott címhez tartozó `coderlap_progress` helyi
+tároló `done` bejegyzéseit; az összes témaszám a regiszterből jön. A helyi demó
+és a coderlap.com tárolója különálló, ezért eltérő számot mutathatnak.
+Az ideiglenes előnézeti tananyagjelölés ezt a tárolót és számlálót nem módosítja.
+A tároló hibája vagy tiltása esetén a számláló nulla; másik lapon történt
+haladásváltozás és visszanavigálás után frissül.
+
 ## Ellenőrzés és folytatás
 
 - A meglévő 79 Python-teszt sikeres; a JavaScript szintaxisellenőrzése is sikeres.
@@ -71,6 +81,9 @@ Nincs hálózati API, analitika vagy külső betűletöltés.
 - Kipróbálva: találatos és üres keresés, keresés törlése témakörváltáskor,
   DE/HU váltás, mobil tartalomjegyzék, jelölés és visszavonás, alkalmazásdialog.
 - 1274 helyi link-, horgony- és betűfájl-hivatkozás ellenőrzése: 0 hiba.
+- A haladásjelző kiegészítésénél: 6 célzott Node-próba (üres, részleges,
+  teljes, hibás JSON, hibás adatforma, tiltott tároló), írás nélküli működés
+  és frissítési események; asztali és 390 pixeles mobil képi ellenőrzés.
 
 A rendes build és egyes meglévő tesztek újraépítik a `dist/` könyvtárat.
 Utánuk ismét futtatni kell a `python design-preview/build.py` parancsot.
