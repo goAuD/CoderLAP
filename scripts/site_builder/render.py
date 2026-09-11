@@ -64,7 +64,7 @@ class _TopicSectionFilter(Treeprocessor):
                     hidden_level = None
                 heading = unicodedata.normalize("NFKD", "".join(element.itertext()))
                 heading = "".join(char for char in heading if not unicodedata.combining(char))
-                if " ".join(heading.casefold().split()) in _HIDDEN_TOPIC_SECTIONS:
+                if hidden_level is None and " ".join(heading.casefold().split()) in _HIDDEN_TOPIC_SECTIONS:
                     hidden_level = level
             if hidden_level is not None:
                 root.remove(element)
