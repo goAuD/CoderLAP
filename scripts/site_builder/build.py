@@ -251,6 +251,7 @@ def _build_language(
         content_html = render_markdown(
             markdown_text,
             suppress_redundant_summary_heading=True,
+            suppress_exam_mistakes=True,
         )
         rendered = env.get_template("topic.html").render(
             **common_ctx,
@@ -281,6 +282,7 @@ def _build_language(
                     "content_html": render_markdown(
                         markdown_text,
                         suppress_redundant_summary_heading=True,
+                        suppress_exam_mistakes=True,
                     ),
                 }
             )

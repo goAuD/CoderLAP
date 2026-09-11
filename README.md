@@ -1,4 +1,8 @@
-# CoderLAP
+<p align="center">
+  <img src="site/assets/favicon.svg" width="128" height="128" alt="CoderLAP" />
+</p>
+
+<h1 align="center">CoderLAP</h1>
 
 ![Status](https://img.shields.io/badge/status-content%20complete-1f883d)
 ![Content](https://img.shields.io/badge/content-DE%20default%20%2F%20HU%20canonical-1f883d)
@@ -12,8 +16,6 @@
 
 `CoderLAP` is a study project for the Austrian `LAP` exam in
 `Applikationsentwicklung - Coding`.
-
-![CoderLAP homepage preview](./docs/assets/images/coderlap-homepage-desktop.png)
 
 This project turns the official topic catalog into a structured knowledge base
 with:

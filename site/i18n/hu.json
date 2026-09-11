@@ -42,10 +42,11 @@
   "load_error_label": "A témák betöltése nem sikerült. Próbáld újra.",
   "coder_tools_label": "Coder eszközök",
   "footer_tools_label": "Eszközök",
-  "footer_legal_label": "Jogi információk",
+  "footer_legal_label": "Projekt és jog",
   "back_to_top_label": "Vissza az oldal tetejére",
   "coder_tools_intro": "Új lehetőségek készülnek, hogy kipróbáld a tudásodat.",
   "coming_soon_label": "Készülőben",
   "coder_quiz_description": "Teszteld a tudásodat, fedezd fel a hiányosságokat, gyakorolj célzottan. A CoderQuiz közös megjelenéshez igazított változata készül; innen még nem érhető el.",
-  "coder_coaster_description": "Fedezd fel a programozást játék közben, Regex társaságában. A CoderCoaster még épül. Regex épp a síneket ellenőrzi."
+  "coder_coaster_description": "Fedezd fel a programozást játék közben, Regex társaságában. A CoderCoaster még épül. Regex épp a síneket ellenőrzi.",
+  "footer_note": "Tanuláshoz és ismétléshez. Reklám és nyomkövetés nélkül."
 }
