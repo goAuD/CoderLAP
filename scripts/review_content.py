@@ -30,7 +30,6 @@ REQUIRED_SECTIONS = [
 
 RECOMMENDED_SECTIONS = [
     "Vizsgán jól használható megfogalmazás",
-    "Gyakori vizsgahibák",
     "Gyors önellenőrzés",
     "Rövid válaszok az önellenőrzéshez",
 ]

@@ -66,17 +66,22 @@ C) FORMAT CONSISTENCY
      2. ## Gyors vizuális kép  (quick visual overview table)
      3. ## Mi az …? / core explanation
      4. ## Miért fontos?
-     5. ## …: ne keverd össze  (comparison table, if relevant)
-     6. ## Mit nem tud / mire kell figyelni?  (if relevant)
+     5. Descriptive comparison heading/table (if relevant)
+     6. Worked example with explanation (if relevant)
      7. ## Vizsgán jól használható megfogalmazás
-     8. ## Gyakori vizsgahibák
-     9. ## Gyors önellenőrzés  (self-check questions)
-    10. ## Rövid válaszok az önellenőrzéshez
+     8. ## Gyors önellenőrzés  (self-check questions)
+     9. ## Rövid válaszok az önellenőrzéshez
         (answers — must not be empty!)
-    11. ## Források
+    10. ## Források
         (must exist and must have at least one URL with usage note)
    - If "Rövid válaszok az önellenőrzéshez" is empty or missing, fill it in.
    - If "Források" is missing entirely, add it with relevant official sources.
+   - Follow AGENTS.md's worked-example guidance. Replace standalone exam-error
+     lists with correct explanations at the relevant point, preserving useful
+     prerequisites and technical limits. Remove repeated information.
+   - General programming examples use JavaScript; technology-specific topics
+     use their own language. Include task, complete code, expected output and
+     explanation. Execute runnable examples and synchronize the German sidecar.
 
 D) HUNGARIAN LANGUAGE QUALITY
    - Fix obvious grammar errors (e.g. "a" vs "az" before vowels).
