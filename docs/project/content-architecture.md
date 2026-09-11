@@ -244,6 +244,15 @@ is maintained in the existing HU/DE/EN dictionaries.
 Keep document and site-shell ancestors of the sticky header free of clipping
 layers. Nested `overflow-x: clip` was removed after iPhone scroll jitter was
 reported; physical Safari validation is required for this rendering issue.
+
+On screen, table cells and their inline content use normal word wrapping;
+sentences wrap at natural boundaries and long words remain readable. This
+overrides the article/print-pack container's emergency word-breaking rules,
+including nested lists and code in cells. The shared rule is language-independent
+and applies to topic pages and module packs. Print retains its existing compact
+wrapping rules. Check a narrow German table, a Hungarian counterpart and a module
+pack when changing these selectors.
+
 Wide tables and code blocks scroll inside their own containers, rather than
 relying on clipping the whole page to hide overflow.
 The no-JavaScript catalogue uses the same card classes and long-word wrapping
