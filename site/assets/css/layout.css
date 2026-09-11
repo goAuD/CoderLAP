@@ -29,11 +29,11 @@
 
 .site-topbar__inner {
   display: grid;
-  grid-template-columns: auto auto 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: var(--space-4);
-  min-height: 4.5rem;
-  padding-block: 0.8rem;
+  min-height: 6rem;
+  padding-block: var(--space-4);
 }
 
 .site-main {
@@ -88,40 +88,55 @@
 
 .site-footer {
   border-top: 1px solid var(--color-border);
-  background: var(--color-surface);
-  /* Keep every footer link clear of the floating button, even while scrolling. */
-  padding-right: calc(var(--floating-button-right) + var(--touch-target) + var(--space-4));
-  padding-bottom: var(--safe-bottom);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  /* Reserve a bottom strip for the floating button without narrowing columns. */
+  padding-bottom: calc(var(--floating-button-bottom) + var(--touch-target) + var(--space-4));
 }
 
 .site-footer__inner {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  grid-template-columns: 2fr 1fr 1fr;
   align-items: start;
-  gap: var(--space-6);
+  gap: var(--space-5) var(--space-7);
   padding-block: var(--space-6);
 }
 
 .site-footer__meta {
-  color: var(--color-accent);
+  color: var(--color-text);
   font-family: var(--font-heading);
   font-weight: 750;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.site-footer__note {
+  max-width: 38ch;
+  margin-top: var(--space-2);
+}
+
+.site-footer__sources {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-5);
+  font-size: 0.85rem;
 }
 
 .site-footer__links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-2);
+  gap: 0;
 }
 
 .site-footer__group, .site-footer__brand {
   min-width: 0;
 }
 .site-footer__group h2 {
-  font-size: 1rem;
-  margin-bottom: var(--space-3);
+  color: var(--color-text);
+  font: 650 1rem var(--font-body);
+  margin-bottom: var(--space-2);
 }
 .site-footer a {
   display: inline-flex;
@@ -349,15 +364,39 @@ body.sidebar-open .catalog-sidebar [data-sidebar-panel] {
 }
 @media (max-width: 35rem) {
   .site-topbar__inner {
-    grid-template-columns: 1fr auto;
-    gap: .3rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-3) var(--space-2);
   }
   .site-topbar__nav {
-    justify-self: stretch;
-    justify-content: space-between;
-    gap: .15rem;
+    display: contents;
+  }
+  .site-brand {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: start;
+  }
+  .site-page-links {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .site-github-link {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .site-topbar__nav .lang-switcher {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: start;
   }
   .site-nav-link {
     padding: .5rem .65rem;
+  }
+  .site-footer__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+  .site-footer__brand {
+    grid-column: 1 / -1;
   }
 }

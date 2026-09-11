@@ -7,6 +7,33 @@ from scripts.site_builder.render import build_template_environment, render_markd
 
 
 class RenderTests(unittest.TestCase):
+    def test_topic_output_omits_exam_mistakes_and_nested_content_in_both_languages(self):
+        for heading in ("Gyakori vizsgahibák", "Häufige Prüfungsfehler"):
+            with self.subTest(heading=heading):
+                source = (
+                    "# Topic\n\nKeep before.\n\n## " + heading
+                    + "\n\nOmit this paragraph.\n\n### " + heading
+                    + "\n\nOmit nested section.\n\n### Nested detail\n\n- Omit this list."
+                    + "\n\n## Self-check\n\nKeep after."
+                )
+                html = render_markdown(source, suppress_exam_mistakes=True)
+                self.assertNotIn(heading, html)
+                self.assertNotIn("Omit", html)
+                self.assertNotIn("Nested detail", html)
+                self.assertIn("Keep before.", html)
+                self.assertIn("Keep after.", html)
+                self.assertIn(heading, render_markdown(source))
+
+    def test_topic_section_filter_handles_end_of_document_and_keeps_code_examples(self):
+        source = (
+            "```markdown\n## Gyakori vizsgahibák\nExample heading only.\n```"
+            "\n\n## Gyakori vizsgahibák\n\nOmit through the end."
+        )
+        html = render_markdown(source, suppress_exam_mistakes=True)
+        self.assertIn("## Gyakori vizsgahibák", html)
+        self.assertIn("Example heading only.", html)
+        self.assertNotIn("Omit through the end.", html)
+
     def test_render_markdown_linkifies_standalone_plain_url_lines(self) -> None:
         html = render_markdown("Source title\nhttps://example.com/path\nUsage note")
 

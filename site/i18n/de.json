@@ -42,10 +42,11 @@
   "load_error_label": "Die Themen konnten nicht geladen werden. Bitte erneut versuchen.",
   "coder_tools_label": "Coder-Werkzeuge",
   "footer_tools_label": "Werkzeuge",
-  "footer_legal_label": "Rechtliches",
+  "footer_legal_label": "Projekt & Recht",
   "back_to_top_label": "Nach oben",
   "coder_tools_intro": "Hier entstehen neue Möglichkeiten, dein Wissen auszuprobieren.",
   "coming_soon_label": "In Entwicklung",
   "coder_quiz_description": "Wissen testen, Lücken entdecken, gezielt üben. CoderQuiz wird für den gemeinsamen Auftritt überarbeitet und ist hier noch nicht verfügbar.",
-  "coder_coaster_description": "Programmieren spielerisch entdecken – mit Regex an deiner Seite. CoderCoaster entsteht gerade. Regex prüft noch die Schienen."
+  "coder_coaster_description": "Programmieren spielerisch entdecken – mit Regex an deiner Seite. CoderCoaster entsteht gerade. Regex prüft noch die Schienen.",
+  "footer_note": "Zum Lernen und Nachschlagen. Ohne Werbung und ohne Tracking."
 }
