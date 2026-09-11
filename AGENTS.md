@@ -168,7 +168,7 @@ Prefer:
 
 - crisp definitions
 - practical examples
-- common exam pitfalls
+- worked examples that reinforce correct reasoning
 - short memory aids
 - direct exam-ready wording
 
@@ -214,13 +214,12 @@ Recommended structure:
 3. `## Gyors vizuális kép`
 4. `## Mi az ...?` or equivalent core explanation
 5. `## Miért fontos?`
-6. `## ...: ne keverd össze` or a comparison table when relevant
-7. `## Mit nem tud / mire kell figyelni?` when relevant
+6. A descriptive comparison heading or table when relevant
+7. A worked example and its explanation when relevant
 8. `## Vizsgán jól használható megfogalmazás`
-9. `## Gyakori vizsgahibák`
-10. `## Gyors önellenőrzés`
-11. `## Rövid válaszok az önellenőrzéshez`
-12. `## Források`
+9. `## Gyors önellenőrzés`
+10. `## Rövid válaszok az önellenőrzéshez`
+11. `## Források`
 
 Notes:
 
@@ -231,6 +230,25 @@ Notes:
 - Use short paragraphs.
 - Use bullet lists for distinct points.
 - Keep it Markdown-first so the content can later be reused for a website.
+
+### Worked examples and positive explanations
+
+- Omit standalone `Gyakori vizsgahibák` / `Häufige Prüfungsfehler` sections in
+  new or revised topics. Integrate useful prerequisites and limits into the
+  explanation as correct statements; remove duplicated points.
+- Prefer descriptive headings and questions about the actual execution or
+  reasoning. Retain technical limits and security requirements where relevant.
+- Use JavaScript for general programming examples, and the topic's own language
+  for technology-specific material (HTML, CSS, SQL, PHP, etc.).
+- Give each runnable example a concrete task, input assumptions, complete code,
+  expected output and a short execution walkthrough. Label illustrative
+  fragments and pseudocode explicitly when they need surrounding context.
+- Execute runnable examples and check their outputs before publishing. Include
+  meaningful boundary cases for algorithms, such as empty input and duplicates.
+- Keep Hungarian and German counterparts aligned, with identical executable
+  code and translated explanations. Preserve topic IDs and directory names.
+- Strengthen modules 15 and 11 in small reviewable batches. Track remaining
+  coverage in `docs/plans/2026-09-11-worked-learning-examples.md`.
 
 ## Markdown Style Rules
 

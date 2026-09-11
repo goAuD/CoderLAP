@@ -37,26 +37,89 @@ Schritte:
 
 Deshalb kann sie viel schneller sein.
 
-## Einfaches Beispiel
+## Ausgearbeitete Beispiele in JavaScript
 
-Gesuchter Wert: `42`
+Aufgabe: Suche die 42 im Zahlenarray `[5, 11, 19, 42, 70]`.
+Die Funktionen liefern den **Index** des gefundenen Elements. Die Indizierung
+beginnt bei 0; die 42 hat daher Index 3. Endet die Suche ohne Treffer, lautet
+das Ergebnis `-1`. Die Beispiele arbeiten mit endlichen Zahlen und lassen das
+Array unverändert. Jeder JavaScript-Block läuft eigenständig, beispielsweise
+mit `node beispiel.js` in einer installierten Node.js-Umgebung.
 
-### Sequenzielle Suche in der Praxis
+### Lineare Suche: Element für Element
 
-```text
-5 -> 11 -> 19 -> 42
+```javascript
+function linearSearch(values, target) {
+  for (let index = 0; index < values.length; index++) {
+    if (values[index] === target) {
+      return index;
+    }
+  }
+  return -1;
+}
+
+console.log(linearSearch([5, 11, 19, 42, 70], 42));
+console.log(linearSearch([5, 11, 19, 42, 70], 8));
 ```
 
-Man muss die Elemente der Reihe nach durchgehen.
-
-### Binäre Suche in der Praxis
+Ausgabe:
 
 ```text
-sortierte Liste
--> mittleres Element
--> linke oder rechte Hälfte
--> neue Mitte
+3
+-1
 ```
+
+Die Suche prüft zuerst 5, dann 11, 19 und 42. `return index` beendet beim Treffer
+die gesamte Funktion. Bei der Suche nach 8 werden alle fünf Elemente untersucht;
+anschließend wird `return -1` nach der Schleife ausgeführt. Bei mehrfach gleichen
+Werten liefert diese Variante den Index des ersten Vorkommens.
+
+### Binäre Suche: den Suchbereich halbieren
+
+Voraussetzung: `values` ist **aufsteigend sortiert**; gleiche Werte sind erlaubt.
+Die Funktion setzt diese Sortierung voraus. `left` und `right` sind der erste
+und letzte Index des verbleibenden Bereichs, jeweils einschließlich der Grenze.
+
+```javascript
+function binarySearch(values, target) {
+  let left = 0;
+  let right = values.length - 1;
+  while (left <= right) {
+    const middle = left + Math.floor((right - left) / 2);
+    if (values[middle] === target) {
+      return middle;
+    }
+    if (values[middle] < target) {
+      left = middle + 1;
+    } else {
+      right = middle - 1;
+    }
+  }
+  return -1;
+}
+
+console.log(binarySearch([5, 11, 19, 42, 70], 42));
+console.log(binarySearch([5, 11, 19, 42, 70], 8));
+```
+
+Ausgabe:
+
+```text
+3
+-1
+```
+
+| Schritt bei der Suche nach 42 | `left` | `right` | `middle` | Entscheidung |
+|---|---|---|---|---|
+| 1. | 0 | 4 | 2 | 19 ist kleiner als 42, daher `left = 3` |
+| 2. | 3 | 4 | 3 | der mittlere Wert ist 42, Rückgabe von Index 3 |
+
+`Math.floor` rundet ab und liefert einen ganzzahligen Index. Mit `+ 1` oder
+`- 1` wird das bereits verglichene mittlere Element im nächsten Durchlauf
+ausgeschlossen; so schrumpft der Bereich laufend. Bei `left > right` ist er leer,
+und das Ergebnis lautet `-1`. Bei leerer Eingabe gilt das bereits bei der ersten
+Bedingungsprüfung. Bei wiederholten Werten liefert diese Variante einen passenden
+Index; die Suche nach dem ersten Vorkommen benötigt eine angepasste Suchvariante.
 
 ## Wann welche?
 
@@ -72,11 +135,14 @@ sortierte Liste
 - wenn die Daten sortiert sind
 - wenn viele Suchvorgänge durchgeführt werden müssen
 
-## Binäre Suche: wichtige Voraussetzung
+## Sortierung und Gesamtaufwand
 
-Das ist ein Schlüsselpunkt bei der Prüfung:
-
-- wenn die Daten nicht sortiert sind, ist die binäre Suche nicht direkt anwendbar
+Der Vorteil der binären Suche gilt für ein bereits sortiertes, indizierbares
+Array. Muss zunächst sortiert werden, gehören diese Kosten zum Gesamtaufwand.
+Für eine einzelne Suche ist der lineare Durchlauf oft einfacher; bei vielen
+Suchvorgängen kann sich die Sortierung lohnen. Die binäre Suche verschiebt hier
+Indexgrenzen in einem Array; ein binärer Baum ist eine eigene Datenstruktur
+aus Knoten.
 
 ## Prüfungstaugliche Formulierung
 
@@ -86,28 +152,21 @@ Das ist ein Schlüsselpunkt bei der Prüfung:
 > anwendbar.  
 > Der wichtigste Unterschied zwischen den beiden Algorithmen liegt im Funktionsprinzip und in der Sortierungsvoraussetzung.
 
-## Häufige Prüfungsfehler
-
-- Zu vergessen, dass die binäre Suche eine sortierte Liste erfordert.
-- Zu behaupten, dass die binäre Suche immer besser ist.
-- Die Einfachheit der linearen Suche nicht zu erwähnen.
-- Die binäre Suche mit dem binären Baum zu verwechseln.
-
 ## Schnelle Selbstkontrolle
 
-1. Wie funktioniert die sequenzielle Suche?
-2. Was ist die Grundidee der binären Suche?
-3. Was ist die Voraussetzung der binären Suche?
-4. Welche ist einfacher?
-5. Welche ist schneller bei einer großen sortierten Liste?
+1. Was bedeutet der Rückgabewert 3 in den Beispielen?
+2. Welches Element prüft die binäre Suche im gegebenen Array mit fünf Elementen zuerst?
+3. Warum wird `left = middle + 1` gesetzt, wenn der mittlere Wert kleiner als der gesuchte ist?
+4. Was liefern die Funktionen bei einem leeren Array?
+5. Warum sollten auch die Kosten einer vorherigen Sortierung berücksichtigt werden?
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Sie untersucht die Elemente der Reihe nach
-2. Den Suchbereich stets halbieren
-3. Sortierte Daten
-4. Die sequenzielle Suche
-5. Die binäre Suche
+1. Den Index: Die 42 steht an vierter Stelle, also bei Index 3.
+2. Die 19 bei Index 2.
+3. In einem sortierten Array sind die Mitte und alle Werte links davon zu klein; der nächste Kandidat liegt direkt rechts von der Mitte.
+4. `-1`, weil kein Element untersucht werden kann.
+5. Zum Gesamtaufwand gehören Sortierung und Suchvorgänge zusammen; für eine einzelne Suche kann ein linearer Durchlauf günstiger sein.
 
 ## Quellen
 
@@ -119,4 +178,4 @@ Das ist ein Schlüsselpunkt bei der Prüfung:
    https://xlinux.nist.gov/dads/HTML/binarySearch.html  
    Verwendung: offizielle Definition und Funktionshintergrund zur binären Suche.
 
-Abgerufen: `2026-04-09`
+Abgerufen: `2026-09-11`

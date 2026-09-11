@@ -114,6 +114,25 @@ Build characteristics:
 - local font assets bundled in the repo
 - output written to `dist/`
 
+### Local fonts and licenses
+
+Manrope and Source Sans 3 are committed as WOFF2 files in `site/assets/fonts/`.
+The `@font-face` rules in `site/assets/css/base.css` use relative asset URLs;
+visitors do not contact Google Fonts. The normal build and CI copy these assets
+without downloading fonts. Both families use the SIL Open Font License 1.1;
+their copyright notices and full licenses are shipped alongside the font files:
+
+- [Manrope license](../../site/assets/fonts/OFL-Manrope.txt), from
+  [Google Fonts](https://github.com/google/fonts/blob/main/ofl/manrope/OFL.txt)
+- [Source Sans 3 license](../../site/assets/fonts/OFL-Source-Sans-3.txt), from
+  [Google Fonts](https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt)
+
+`python scripts/fetch_site_fonts.py` is an optional developer download helper,
+not a build step or browser dependency. It requests Google Fonts CSS and extracts
+HTTPS font URLs on the exact `fonts.gstatic.com` host. When updating the font
+assets, preserve their licenses and check that the CSS references the intended
+files. License texts checked against upstream on `2026-09-11`.
+
 Generated output shape:
 
 ```text
@@ -225,6 +244,15 @@ is maintained in the existing HU/DE/EN dictionaries.
 Keep document and site-shell ancestors of the sticky header free of clipping
 layers. Nested `overflow-x: clip` was removed after iPhone scroll jitter was
 reported; physical Safari validation is required for this rendering issue.
+
+On screen, table cells and their inline content use normal word wrapping;
+sentences wrap at natural boundaries and long words remain readable. This
+overrides the article/print-pack container's emergency word-breaking rules,
+including nested lists and code in cells. The shared rule is language-independent
+and applies to topic pages and module packs. Print retains its existing compact
+wrapping rules. Check a narrow German table, a Hungarian counterpart and a module
+pack when changing these selectors.
+
 Wide tables and code blocks scroll inside their own containers, rather than
 relying on clipping the whole page to hide overflow.
 The no-JavaScript catalogue uses the same card classes and long-word wrapping
