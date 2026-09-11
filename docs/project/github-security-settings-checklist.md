@@ -150,6 +150,7 @@ Re-check this checklist when any of the following changes:
 
 ## Related Docs
 
+- [Local Semgrep audit, 2026-09-11](./semgrep-audit.md)
 - [public-repo-flip-checklist.md](./public-repo-flip-checklist.md)
 - [github-release-hygiene.md](./github-release-hygiene.md)
 - [deploy-strategy.md](./deploy-strategy.md)
