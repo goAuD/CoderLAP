@@ -702,7 +702,7 @@ a.lang-switcher__item:focus-visible {
 .site-footer__links a {
   min-height: var(--touch-target);
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   color: var(--color-text-muted);
   text-decoration: none;
 }
