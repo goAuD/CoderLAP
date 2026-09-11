@@ -53,9 +53,11 @@ coverage/
 # Local-only docs scratch space
 docs/_local/
 docs/tmp/
+/themenkatalog-applikationsentwicklung-coding-v2-2024.pdf
 
-# Agents
+# Local agent state
 /.claude/
 /.codex/
+/.sam/
 /AGENTS.md
 docs/superpowers/

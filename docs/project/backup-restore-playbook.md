@@ -1,6 +1,6 @@
 # CoderLAP Backup And Restore Playbook
 
-Last updated: `2026-04-16`
+Last updated: `2026-09-11`
 
 This playbook documents how to recover the currently working CoderLAP setup
 without relying on memory.
@@ -61,7 +61,7 @@ It does not cover:
 
 Repository:
 
-- local working copy: `C:\GitHub\CoderLAP`
+- local working copy: the active clone's repository root (`<repo-root>`)
 - stable branch: `main`
 - active working branch: `dev`
 
@@ -161,7 +161,8 @@ dev review
 Workflow behavior:
 
 - CI runs on `push` to `dev` and `main`
-- deploy runs only on `push` to `main` or manual `workflow_dispatch`
+- deploy runs only on `push` to `main` or a manual `workflow_dispatch` started
+  from the `main` ref
 
 The deploy job must:
 
@@ -169,6 +170,10 @@ The deploy job must:
 - stage into `/srv/www/coderlap/dist.incoming`
 - rotate the current release into `/srv/www/coderlap/dist.backup`
 - promote `dist.incoming` into `/srv/www/coderlap/dist`
+
+Manual dispatch can deploy only `main`. For an older version, prepare a
+reviewed revert/recovery PR into `main`, then use the normal pipeline. A
+temporary recovery branch can be built but cannot be manually deployed.
 
 If restore requires a manual deploy check:
 
