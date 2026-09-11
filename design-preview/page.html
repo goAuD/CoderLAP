@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="{{ lang }}" data-skin="{{ skin }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>{{ ui[skin] }} – {{ ui[page] }} – CoderLAP</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="preview.css">
+  <script src="preview.js" defer></script>
+</head>
+<body class="page-{{ page }}">
+{% macro icon(name, cls='icon') -%}
+<svg class="{{ cls }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{% if name == 'book' %}<path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1v15"/>
+{% elif name == 'quiz' %}<rect x="4" y="3" width="16" height="18" rx="4"/><path d="m8 12 3 3 5-6"/>
+{% elif name == 'coaster' %}<path d="M2 17c4 0 3-11 8-11s5 12 1 12S8 8 13 8s5 9 9 9"/><path d="M2 21h20"/>
+{% elif name == 'search' %}<circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/>
+{% elif name == 'arrow' %}<path d="M5 12h14m-5-5 5 5-5 5"/>
+{% elif name == 'chevron' %}<path d="m9 5 7 7-7 7"/>
+{% elif name == 'code' %}<path d="m7 6-6 6 6 6m10-12 6 6-6 6M14 3l-4 18"/>
+{% elif name == 'print' %}<path d="M6 9V3h12v6M6 17H3V9h18v8h-3M6 14h12v7H6z"/><path d="M17 11h1"/>
+{% elif name == 'check' %}<path d="m5 12 4 4L19 6"/>
+{% elif name == 'grid' %}<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>
+{% endif %}</svg>
+{%- endmacro %}
+{% macro dog() -%}
+<svg class="bugdog" viewBox="0 0 100 100" aria-hidden="true"><path d="M24 26 12 14l-5 34 17 8m52-30 12-12 5 34-17 8" fill="currentColor"/><rect x="20" y="21" width="60" height="62" rx="24" fill="var(--dog-face)"/><path d="M30 41h13m14 0h13" stroke="var(--dog-ink)" stroke-width="6" stroke-linecap="round"/><rect x="39" y="53" width="22" height="13" rx="6" fill="var(--dog-ink)"/><path d="M50 66v8m-8 0h16" stroke="var(--dog-ink)" stroke-width="3" stroke-linecap="round"/><path d="m67 26 8 8-8 8" stroke="var(--dog-ink)" fill="none" stroke-width="2"/></svg>
+{%- endmacro %}
+<a class="skip" href="#main">{{ ui.skip }}</a>
+<div class="preview-bar" aria-label="{{ ui.preview }}">
+  <span class="preview-label">{{ ui.preview }}</span>
+  <nav class="switch-group" aria-label="Design">
+    <a href="studio-{{ lang }}-{{ page }}.html" {% if skin == 'studio' %}aria-current="page"{% endif %}>{{ ui.studio }}</a>
+    <a href="campus-{{ lang }}-{{ page }}.html" {% if skin == 'campus' %}aria-current="page"{% endif %}>{{ ui.campus }}</a>
+  </nav>
+  <nav class="preview-pages" aria-label="{{ ui.preview }}: {{ ui.home }}, {{ ui.lesson }}">
+    <a href="{{ skin }}-{{ lang }}-home.html" {% if page == 'home' %}aria-current="page"{% endif %}>{{ ui.home }}</a>
+    <a href="{{ skin }}-{{ lang }}-lesson.html" {% if page == 'lesson' %}aria-current="page"{% endif %}>{{ ui.lesson }}</a>
+  </nav>
+  <a class="original-link" href="{{ root }}{% if page == 'lesson' %}topics/{{ lesson.slug }}/{% endif %}">{{ ui.original }}</a>
+</div>
+<header class="app-header">
+  <a class="brand" href="{{ skin }}-{{ lang }}-home.html"><span class="brand-mark">{{ icon('code') }}</span><span>Coder<span class="brand-lap">LAP</span></span></a>
+  <nav class="app-nav" aria-label="Coder platform">
+    <a class="app-link is-current" href="{{ skin }}-{{ lang }}-home.html" aria-current="true">{{ icon('book') }}<span>CoderLAP<small>{{ ui.learn }}</small></span></a>
+    <button class="app-link" data-app="CoderQuiz">{{ icon('quiz') }}<span>CoderQuiz<small>{{ ui.practice }}</small></span></button>
+    <button class="app-link" data-app="CoderCoaster">{{ icon('coaster') }}<span>CoderCoaster<small>{{ ui.experience }}</small></span></button>
+  </nav>
+  <div class="header-bottom"><p>{{ ui.suite }}</p><nav class="languages" aria-label="{{ ui.language }}">
+    {% for language in ['de','hu'] %}<a href="{{ skin }}-{{ language }}-{{ page }}.html" lang="{{ language }}" {% if lang == language %}aria-current="page"{% endif %}>{{ language | upper }}</a>{% endfor %}
+  </nav></div>
+</header>
+<div class="workspace">
+{% if page == 'home' %}
+<aside class="module-sidebar" aria-label="{{ ui.topics }}">
+  <p class="sidebar-heading">{{ ui.topics }} <span>{{ modules | length }}</span></p>
+  <a class="sidebar-all" href="#catalog">{{ icon('grid') }} {{ ui.all }}</a>
+  <nav>{% for module in modules %}<a href="#module-{{ module.number }}" data-module-jump="{{ module.number }}"><span>{{ module.number }}</span>{{ module.title }}</a>{% endfor %}</nav>
+  <div class="sidebar-note">{{ dog() }}<p>{{ ui.dog }}<br><strong>{{ ui.dog_quote }}</strong></p></div>
+</aside>
+<main id="main" class="home-main" tabindex="-1">
+  <section class="hero">
+    <div class="hero-copy"><p class="context">{{ ui.exam }}</p><h1>{{ ui.hero }}</h1><p class="intro">{{ ui.intro }}</p>
+      <div class="hero-progress" hidden data-total="{{ total }}" data-label="{{ 'Kész témák' if lang == 'hu' else 'Abgeschlossene Themen' }}" role="status">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle class="progress-track" cx="11" cy="11" r="8"/><circle class="progress-value" cx="11" cy="11" r="8" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" transform="rotate(-90 11 11)"/></svg>
+        <span data-progress-count></span>
+      </div>
+      <a class="button primary" href="{{ skin }}-{{ lang }}-lesson.html">{{ ui.start }} {{ icon('arrow') }}</a><a class="browse-link" href="#catalog">{{ ui.browse }}</a></div>
+    <div class="hero-visual" aria-label="{{ ui.sample }}">
+      <div class="code-window"><div class="code-window-head"><span class="file-tab">schleifen.js</span><span>JavaScript</span></div><pre><code><span class="code-line"><i>1</i><b>for</b> (<b>let</b> i = <em>0</em>; i &lt; <em>3</em>; i++) {</span><span class="code-line highlighted"><i>2</i>  console.log(i);</span><span class="code-line"><i>3</i>}</span></code></pre><div class="code-output"><span>console</span><code>0&nbsp;&nbsp; 1&nbsp;&nbsp; 2</code><span class="output-check">{{ icon('check') }}</span></div></div>
+      <div class="loop-diagram"><span class="loop-dot">0</span><span class="loop-rail"></span><span class="loop-dot">1</span><span class="loop-rail"></span><span class="loop-dot">2</span><span class="loop-rail"></span><span class="loop-end">{{ icon('check') }}</span></div>
+      <div class="dog-caption">{{ dog() }}<p>{{ ui.dog_quote }}<span>Regex</span></p></div>
+    </div>
+  </section>
+  <section class="featured" aria-labelledby="featured-title"><span class="featured-icon">{{ icon('coaster') }}</span><div><p>{{ ui.recommend }}</p><h2 id="featured-title"><a href="{{ skin }}-{{ lang }}-lesson.html">{{ ui.loops }} <span>{{ ui.loops_note }}</span></a></h2></div><a class="round-link" href="{{ skin }}-{{ lang }}-lesson.html" aria-label="{{ ui.start }}">{{ icon('arrow') }}</a></section>
+  <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+    <div class="section-heading"><div><h2 id="catalog-title">{{ ui.topics }}</h2><p>{{ ui.catalog_intro }}</p></div><span class="catalog-total">{{ modules | length }} {{ ui.modules_count }} / {{ total }} {{ ui.topics_count }}</span></div>
+    <label class="search-field">{{ icon('search') }}<span class="sr-only">{{ ui.search }}</span><input type="search" id="search" placeholder="{{ ui.placeholder }}" autocomplete="off"><kbd>/</kbd></label>
+    <p class="search-status" id="search-status" role="status" hidden></p>
+    <p id="no-results" hidden>{{ ui.no_results }}</p>
+    <div class="module-grid">
+    {% for module in modules %}
+      <details class="module-card" id="module-{{ module.number }}">
+        <summary><span class="module-number">{{ module.number }}</span><span class="module-title">{{ module.title }}<small>{{ module['items'] | length }} {{ ui.topics_count }}</small></span>{{ icon('chevron') }}</summary>
+        <ul>{% for item in module['items'] %}<li data-search="{{ item.title }} {{ item.id }} {{ item.subtopic_dir | replace('_', ' ') }}"><a href="{% if item.id == lesson.id %}{{ skin }}-{{ lang }}-lesson.html{% else %}{{ root }}topics/{{ item.slug }}/{% endif %}">{{ item.title }}{{ icon('arrow') }}</a></li>{% endfor %}</ul>
+      </details>
+    {% endfor %}
+    </div>
+  </section>
+  <section class="suite-section" id="tools" aria-labelledby="suite-title"><h2 id="suite-title">{{ ui.learning_path }}</h2><div class="suite-grid">
+    <a class="suite-item" href="{{ skin }}-{{ lang }}-lesson.html">{{ icon('book') }}<h3>CoderLAP</h3><p>{{ ui.lap_note }}</p><span>{{ ui.lesson }}</span></a>
+    <button class="suite-item" data-app="CoderQuiz">{{ icon('quiz') }}<h3>CoderQuiz</h3><p>{{ ui.quiz_note }}</p><span>{{ ui.soon }}</span></button>
+    <button class="suite-item" data-app="CoderCoaster">{{ icon('coaster') }}<h3>CoderCoaster</h3><p>{{ ui.coaster_note }}</p><span>{{ ui.soon }}</span></button>
+  </div></section>
+</main>
+{% else %}
+<aside class="lesson-sidebar"><a class="back-link" href="{{ skin }}-{{ lang }}-home.html">{{ icon('arrow') }} {{ ui.back }}</a><p class="sidebar-heading">{{ ui.toc }}</p><nav aria-label="{{ ui.toc }}">{% for section in toc %}<a href="#{{ section.id }}">{{ section.name | striptags }}</a>{% endfor %}</nav><a class="module-label" href="{{ skin }}-{{ lang }}-home.html#module-15"><span>15</span>{{ ui.module }}</a></aside>
+<main class="lesson-main" id="main" tabindex="-1">
+  <div class="lesson-topline"><a href="{{ skin }}-{{ lang }}-home.html#module-15">{{ ui.module }}</a><span>LAP-15-17</span></div>
+  <header class="lesson-heading"><p class="context">{{ ui.lesson }}</p><h1>{{ ui.loops }}</h1><p>{{ ui.lesson_note }}</p><div class="lesson-actions"><button class="button primary" data-done data-label="{{ ui.done }}" data-undo="{{ ui.undo }}" aria-pressed="false">{{ icon('check') }}<span>{{ ui.done }}</span></button><button class="button secondary" data-print>{{ icon('print') }} {{ ui.print }}</button><span class="done-note" role="status" hidden>{{ ui.done_note }}</span></div></header>
+  <details class="mobile-toc"><summary>{{ ui.toc }}</summary><nav aria-label="{{ ui.toc }}">{% for section in toc %}<a href="#{{ section.id }}">{{ section.name | striptags }}</a>{% endfor %}</nav></details>
+  <div class="article-layout"><article class="article">{{ lesson_html | safe }}</article><aside class="practice-aside"><div class="practice-card"><span class="practice-icon">{{ icon('coaster') }}</span><p>CoderCoaster</p><h2>{{ ui.bridge }}</h2><p>{{ ui.bridge_note }}</p><div class="mini-track" aria-hidden="true"><span>i = 0</span><i></i><span>return 3</span></div><button class="button secondary" data-app="CoderCoaster">{{ ui.open_app }}</button></div><div class="regex-note">{{ dog() }}<p><strong>Regex</strong><br>{{ ui.dog_quote }}</p></div></aside></div>
+  <p class="source-note">{{ ui.sources }}</p>
+</main>
+{% endif %}
+</div>
+<footer class="footer"><a class="footer-brand" href="{{ skin }}-{{ lang }}-home.html">CoderLAP</a><span>{{ ui.footer }}</span><a href="{{ root }}imprint/">{{ 'Impresszum' if lang == 'hu' else 'Impressum' }}</a><a href="{{ root }}privacy/">{{ 'Adatvédelem' if lang == 'hu' else 'Datenschutz' }}</a></footer>
+<dialog id="app-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="{{ ui.close }}" data-close>×</button><span class="dialog-symbol">{{ icon('code') }}</span><h2 id="dialog-title">Coder platform</h2><p>{{ ui.dialog }}</p><button class="button primary" data-close>{{ ui.close }}</button></dialog>
+</body>
+</html>

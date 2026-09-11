@@ -335,6 +335,30 @@ Current metadata semantics worth remembering:
 - `de_complete` means the German sidecar exists
 - `de_missing` means the German sidecar is missing
 
+## Topic output and shared presentation
+
+The topic renderer omits `Gyakori vizsgahibák` / `Häufige Prüfungsfehler` and
+their content from topic pages and module print packs. Filtering happens in the
+Markdown tree, so nested subsections are omitted while code examples containing
+heading-like text remain intact. The next heading at the same or higher level
+ends the omitted section.
+
+Source Markdown, registry IDs and topic URLs are unchanged. This is a delivery
+rule, not a content rewrite; a future replacement can reuse the existing topic
+location. The renderer keeps the section unless the topic-specific option is
+enabled, so legal-page rendering is unaffected.
+
+CoderQuiz is the reference for the footer's brand/tools/project columns. CoderLAP
+retains its imprint and privacy links, with a reserved bottom strip keeping the
+floating button clear. The header places navigation, GitHub and languages in that
+order on desktop; mobile uses brand/GitHub above navigation/languages.
+
+Manrope and Source Sans 3 each require both local Latin and Latin Extended WOFF2
+subsets. Their `unicode-range` declarations match the bundled font character maps;
+omitting a subset mixes system glyphs with the intended font, notably Hungarian
+`ő/ű`. Keep the font files and their OFL licenses together. README branding uses
+the shared code-bracket logo instead of a dated screenshot.
+
 ## What Is Intentionally Preserved
 
 - the numbered German folder tree

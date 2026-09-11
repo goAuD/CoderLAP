@@ -1,6 +1,6 @@
 # CoderLAP GitHub Security Settings Checklist
 
-Last updated: `2026-04-16`
+Last updated: `2026-09-11`
 
 Use this checklist when the repository becomes public or whenever the GitHub
 security posture is reviewed.
@@ -47,6 +47,13 @@ Current update scope:
 - Python dependencies from `requirements.txt`
 - GitHub Actions workflow dependencies
 
+Current hardening:
+
+- both ecosystems wait seven days before proposing newly published versions
+  through Dependabot's `cooldown` option
+- GitHub security updates are not delayed by this version-update cooldown
+- option reference: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown
+
 Recommended behavior:
 
 - keep weekly updates enabled
@@ -85,6 +92,14 @@ Current good signs already present:
 - CI runs on GitHub-hosted Ubuntu
 - deploy uses the self-hosted runner only on trusted events
 - workflow permissions are already `contents: read`
+- third-party Actions are pinned to full commit SHAs
+- the manual deploy path is restricted to the `main` ref
+
+Semgrep is kept local for this rollout (decision: 2026-09-11). The prepared
+cloud workflow is not committed or enabled. Local scans do not upload findings;
+see [the local audit notes](semgrep-audit.md).
+Any future cloud CI or managed-scan configuration needs a separate decision
+about uploads, token scope and duplicate scans.
 
 Still recommended:
 
