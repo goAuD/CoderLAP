@@ -180,7 +180,6 @@ Typical sections include:
 - core explanation
 - comparison or distinction section
 - exam-ready wording
-- common mistakes
 - self-check questions
 - source list
 
