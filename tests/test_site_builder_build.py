@@ -99,7 +99,8 @@ class BuildSiteTests(unittest.TestCase):
             _write_registry(registry_path)
             _write_templates(template_dir)
             markdown_path.write_text(
-                "# ASCII\n\n## Mi az ASCII?\n\nAz ASCII egy karakterkodolas.",
+                "# ASCII\n\n## Mi az ASCII?\n\nAz ASCII egy karakterkodolas."
+                "\n\n## Gyakori vizsgahibák\n\nHidden mistake marker.",
                 encoding="utf-8",
             )
             markdown_de_path.write_text(
@@ -179,6 +180,10 @@ class BuildSiteTests(unittest.TestCase):
             self.assertIn("CoderLAP", home_html)
             self.assertIn("<h1>Grundlagen</h1>", module_pack_html)
             self.assertIn('id="01-01-ascii"', module_pack_html)
+            for generated in (topic_html, module_pack_html):
+                self.assertNotIn("Gyakori vizsgahibák", generated)
+                self.assertNotIn("Hidden mistake marker.", generated)
+            self.assertIn("Hidden mistake marker.", markdown_path.read_text(encoding="utf-8"))
             self.assertIn("<h1>Imprint</h1>", imprint_html)
             self.assertIn("<h1>Privacy</h1>", privacy_html)
 
