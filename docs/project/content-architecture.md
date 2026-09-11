@@ -114,6 +114,25 @@ Build characteristics:
 - local font assets bundled in the repo
 - output written to `dist/`
 
+### Local fonts and licenses
+
+Manrope and Source Sans 3 are committed as WOFF2 files in `site/assets/fonts/`.
+The `@font-face` rules in `site/assets/css/base.css` use relative asset URLs;
+visitors do not contact Google Fonts. The normal build and CI copy these assets
+without downloading fonts. Both families use the SIL Open Font License 1.1;
+their copyright notices and full licenses are shipped alongside the font files:
+
+- [Manrope license](../../site/assets/fonts/OFL-Manrope.txt), from
+  [Google Fonts](https://github.com/google/fonts/blob/main/ofl/manrope/OFL.txt)
+- [Source Sans 3 license](../../site/assets/fonts/OFL-Source-Sans-3.txt), from
+  [Google Fonts](https://github.com/google/fonts/blob/main/ofl/sourcesans3/OFL.txt)
+
+`python scripts/fetch_site_fonts.py` is an optional developer download helper,
+not a build step or browser dependency. It requests Google Fonts CSS and extracts
+HTTPS font URLs on the exact `fonts.gstatic.com` host. When updating the font
+assets, preserve their licenses and check that the CSS references the intended
+files. License texts checked against upstream on `2026-09-11`.
+
 Generated output shape:
 
 ```text
