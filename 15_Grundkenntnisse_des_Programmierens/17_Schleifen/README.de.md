@@ -7,7 +7,7 @@
 | `for` | wenn wir wissen, wie viele Wiederholungen nötig sind |
 | `while` | wenn wir auf Basis einer Bedingung wiederholen |
 | `do...while` | wenn die Schleife mindestens einmal laufen soll |
-| `for...each`-artig | zum Durchlaufen von Elementen |
+| `for...of` in JavaScript | zum Verarbeiten der Werte einer iterierbaren Folge |
 
 ## Was ist eine Schleife?
 
@@ -24,36 +24,122 @@ Das Wesentliche einer Schleife ist:
 - leichter wartbar
 - ermöglicht effizientere Lösungen bei wiederholenden Operationen
 
-## Typische Schleifen
+## Ausgearbeitete Beispiele in JavaScript
 
-### `for`
+Jeder Codeblock läuft eigenständig: Speichere ihn beispielsweise als `beispiel.js`
+und starte ihn mit `node beispiel.js` in einer installierten Node.js-Umgebung.
+`console.log` schreibt in die Ausgabe. Sage zuerst das Ergebnis voraus und führe
+den Code anschließend aus.
 
-Gut, wenn:
+### Zählen mit `for`
 
-- wir zählen
-- wir in einem bekannten Bereich arbeiten
-- wir indexbasiert vorgehen
+Aufgabe: Gib die Zahlen 1, 2 und 3 jeweils in einer eigenen Zeile aus.
 
-### `while`
+```javascript
+for (let number = 1; number <= 3; number++) {
+  console.log(number);
+}
+```
 
-Gut, wenn:
+Ausgabe:
 
-- wir vorher nicht wissen, wie viele Wiederholungen nötig sind
-- solange eine Bedingung wahr ist
+```text
+1
+2
+3
+```
 
-### `do...while`
+Der Kopf enthält Startwert (`let number = 1`), Fortsetzungsbedingung
+(`number <= 3`) und Aktualisierung (`number++`). Der Startwert wird einmal gesetzt;
+die Bedingung wird vor jedem Durchlauf, die Aktualisierung nach jedem Schleifenkörper
+ausgeführt.
 
-Gut, wenn:
+| `number` bei der Prüfung | `number <= 3` | Was passiert? |
+|---|---|---|
+| 1 | wahr | 1 ausgeben, dann auf 2 erhöhen |
+| 2 | wahr | 2 ausgeben, dann auf 3 erhöhen |
+| 3 | wahr | 3 ausgeben, dann auf 4 erhöhen |
+| 4 | falsch | Ausführung nach der Schleife fortsetzen |
 
-- der Schleifenkörper mindestens einmal sicher laufen soll
+### Zustand verfolgen mit `while`
 
-## Worauf muss man achten?
+Aufgabe: Starte mit drei verbleibenden Runden und verringere ihre Anzahl nach
+jeder Runde.
 
-- die Abbruchbedingung muss korrekt sein
-- die Schleife darf nicht endlos laufen
-- der Zähler oder Zustand muss entsprechend aktualisiert werden
+```javascript
+let remaining = 3;
+while (remaining > 0) {
+  console.log(remaining);
+  remaining--;
+}
+```
 
-## Schleife und Rekursion: nicht verwechseln
+Ausgabe:
+
+```text
+3
+2
+1
+```
+
+`remaining` verändert sich im Schleifenkörper. Bei 0 ist die Bedingung falsch,
+und die Schleife endet. `while` lässt sich auch verwenden, wenn der Startzustand
+etwa aus einem Funktionsparameter stammt: Über die Fortsetzung entscheidet
+immer der aktuelle Zustand.
+
+### Zeitpunkt der Prüfung: `while` und `do...while`
+
+Aufgabe: Beobachte die Anzahl der Durchläufe, wenn die Bedingung bereits zu
+Beginn falsch ist. `runs++` zählt jeweils einen Durchlauf.
+
+```javascript
+let runs = 0;
+while (runs < 0) {
+  runs++;
+}
+console.log(runs);
+
+runs = 0;
+do {
+  runs++;
+} while (runs < 0);
+console.log(runs);
+```
+
+Ausgabe:
+
+```text
+0
+1
+```
+
+`while` prüft zuerst; hier entstehen 0 Durchläufe. `do...while` führt zuerst den
+Schleifenkörper aus und prüft anschließend; hier entsteht 1 Durchlauf. Das Beispiel
+macht gezielt diese beiden Prüfzeitpunkte sichtbar.
+
+### Werte durchlaufen mit `for...of`
+
+Aufgabe: Addiere die Punkte eines Arrays mit drei Elementen.
+
+```javascript
+const scores = [3, 5, 7];
+let total = 0;
+for (const score of scores) {
+  total += score;
+}
+console.log(total);
+```
+
+Ausgabe:
+
+```text
+15
+```
+
+`score` erhält nacheinander die Werte 3, 5 und 7. Die Summe entwickelt sich als
+0 → 3 → 8 → 15. Bei einem leeren Array gibt es 0 Durchläufe; die Summe bleibt 0.
+
+## Schleife und Rekursion im Vergleich
 
 | Begriff | Kern |
 |---|---|
@@ -67,28 +153,21 @@ Gut, wenn:
 > gesteuert.  
 > Ziel der Schleifen ist die Reduzierung von Codewiederholung und die effiziente Behandlung wiederholender Aufgaben.
 
-## Häufige Prüfungsfehler
-
-- Die Abbruchbedingung nicht zu erwähnen.
-- Den Unterschied zwischen `while` und `do...while` auszulassen.
-- Zu glauben, dass eine Schleife immer aus einer bekannten Anzahl von Wiederholungen besteht.
-- Die Gefahr einer Endlosschleife nicht zu nennen.
-
 ## Schnelle Selbstkontrolle
 
-1. Was ist das Wesentliche einer Schleife?
-2. Wofür ist die `for`-Schleife gut?
-3. Wann ist `while` besser?
-4. Warum ist eine fehlerhafte Abbruchbedingung gefährlich?
-5. Was ist der Unterschied zwischen Schleife und Rekursion?
+1. Wie oft läuft der Schleifenkörper im ersten Beispiel, und wie oft wird die Bedingung geprüft?
+2. Welchen Wert hat `remaining` am Ende des `while`-Beispiels?
+3. Warum eignet sich `do...while` für eine Operation, die auf jeden Fall einmal ausgeführt wird?
+4. Was gibt das Summenbeispiel aus, wenn `scores` den Wert `[]` hat?
+5. Welche Operation wiederholt die Arbeit bei Rekursion?
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Wiederholte Ausführung
-2. Bei bekannter Wiederholungsanzahl oder Zählung
-3. Wenn die Wiederholung bedingungsbasiert ist
-4. Weil es zu einer Endlosschleife führen kann
-5. Die Schleife ist eine Kontrollstruktur, die Rekursion ein Selbstaufruf
+1. 3 Durchläufe und 4 Bedingungsprüfungen, zuletzt beim Wert 4.
+2. 0; dann ist die Bedingung `remaining > 0` falsch.
+3. Der Schleifenkörper steht vor der ersten Prüfung und läuft deshalb mindestens einmal.
+4. 0: Die Summe beginnt bei 0, und es gibt kein zu verarbeitendes Element.
+5. Der Selbstaufruf der Funktion; bei einer Schleife wiederholt die Kontrollstruktur den Schleifenkörper.
 
 ## Quellen
 
@@ -100,4 +179,4 @@ Gut, wenn:
    https://developer.mozilla.org/en-US/docs/Glossary/Control_flow  
    Verwendung: Hintergrundquelle zum größeren Kontext der Kontrollstrukturen.
 
-Abgerufen: `2026-04-09`
+Abgerufen: `2026-09-11`
