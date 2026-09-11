@@ -43,6 +43,17 @@ class FetchSiteFontsTest(unittest.TestCase):
             ],
         )
 
+    def test_extract_font_urls_rejects_other_hosts_and_schemes(self) -> None:
+        for source_url in (
+            "https://fonts.gstatic.com.attacker.invalid/font.woff2",
+            "https://fonts.gstatic.com@attacker.invalid/font.woff2",
+            "https://attacker.invalid/font.woff2",
+            "http://fonts.gstatic.com/font.woff2",
+            "file:///font.woff2",
+        ):
+            with self.subTest(source_url=source_url):
+                self.assertEqual(extract_font_urls(f"url({source_url})"), [])
+
     def test_copy_local_fonts_copies_only_woff2_files(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
