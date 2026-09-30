@@ -58,6 +58,8 @@ a fiókkezelés nem igényli a tananyag adatbázisba költöztetését.
 | Cloudflare Access | Több domain közös belépése saját auth-szerver nélkül. | Az ellenőrzött Free csomag 50 felhasználós; külső azonosítás és naplózás adatfolyamát, feltételeit is értékelni kell. |
 
 A saját üzemeltetés iránti igényhez első próbaként az Authelia illeszkedik.
+A 20–30 tanuló egyetlen iskola jelenlegi becslése, nem a platform felső
+határa; ezért a Cloudflare 50 fős Free kerete nem hosszú távú méretezési alap.
 Tárolóként a már futó MariaDB külön adatbázissal és saját, korlátozott
 jogosultságú felhasználóval használható; a meglévő adatbázisokhoz nem nyúlunk.
 Az Authelia belépési fiókforrása és működési adatbázisa külön fogalom:
@@ -68,7 +70,9 @@ az inaktivitás miatti szüneteltetés nem az SQL-adatbázis általános tulajdo
 
 - [x] Viktor visszajelzése: jelenleg saját, önkéntesen használható kiegészítő
   tanulóprojekt felnőttképzéshez, kiskorúak nélkül. Évente körülbelül 20–30
-  tanuló és néhány tanár várható; nem kötelező feladatok vagy osztályozás rendszere.
+  tanuló és néhány tanár várható egy iskolából; nem kötelező feladatok vagy
+  osztályozás rendszere. További iskolák bevonása előtt a fiókkezelési folyamatot
+  és az adatkezelői szerepeket is felülvizsgáljuk.
 - [ ] Az iskola/tanárok későbbi üzemeltetői átvétele még csak lehetőség.
   Átadás előtt külön tisztázzuk a felelősséget, hozzáféréseket és adattovábbítást.
   A fiókok életciklusát is tervezzük meg: az évente új csoport nem jelenti,
