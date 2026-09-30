@@ -17,6 +17,11 @@ nem új funkciók vagy infrastruktúra elkészültének igazolása.
   történetének; helyben ignorált fájlok. A karbantartott átadás a README.
 - [x] SkillDisplay: a bejelentkezett felület és a SkillSet-katalógus olvasva.
   Nem történt önértékelés, igazoláskérés, fiókmódosítás vagy üzenetküldés.
+- [x] Szerver: olvasási SSH-ellenőrzés alapján Debian, működő Caddy és MariaDB;
+  16 GB RAM és két közel 500 GB-os SSD, az új lemez `/srv/data` alatt csatolva.
+  A LAP Caddy-konfigurációjában Basic Auth és hozzáférési naplózás szerepel;
+  Quiz-, Coaster- és auth-hostnév, illetve `forward_auth` még nem szerepel benne.
+  Ez kapacitás- és konfigurációs pillanatkép, nem teljes biztonsági audit.
 - [ ] A Quiz/Coaster élő DNS-, szerver-, TLS- és belépési beállításait még
   ellenőrizni kell; a nyitott Cloudflare-lap önmagában nem bizonyít telepítést.
 
@@ -28,6 +33,7 @@ viheti át; pusztán emiatt nincs sürgős weboldal-deploy.
 
 | Sorrend | Feladat | Repo | Késznek tekintjük, ha… |
 | --- | --- | --- | --- |
+| 0 | Közös belépés és adatkezelés megtervezése | közös infrastruktúra + LAP | Üzemeltető, felhasználói kör, választott belépés, adatfolyam, megőrzés és visszaállítás tisztázott; még nincs éles fiókmigráció. |
 | 1 | Publikálható Quiz-kezdőlap és statikus csomag | Quiz | A LAP-programozási kérdések normál indítással elérhetők, külön Python-előnézeti trükk nélkül; a régi mentések nem keverednek az új bankkal. |
 | 2 | Védett Quiz/Coaster élesítés és keresztlinkek | mindhárom | DNS, TLS, szerverútvonal, belépés, visszaállítás és mobilos elérés ellenőrzött; csak ezután élnek a LAP eszközlinkjei. |
 | 3 | Főoldali haladásjelölés és állapotszűrő | LAP | Egy téma a kártyán jelölhető és visszaállítható; a számlálók és a témaoldal azonos mentést használnak. |
@@ -35,9 +41,66 @@ viheti át; pusztán emiatt nincs sürgős weboldal-deploy.
 | 5 | Következő tananyagrész és vegyes gyakorlás | Quiz | A következő főtéma kis, forrásolt DE/HU adagokban ellenőrzött; a témák csoportosítása pontosan tisztázott. |
 | 6 | Öt tanulási célból álló SkillDisplay-próba | LAP + tanári egyeztetés | Aktív készségazonosítók, tanulási célok és igazolási szerepek tisztázottak; első körben csak hivatkozások készülnek. |
 
-Az 1. feladat és a 2. feladat olvasási előkészítése most indítható. Ha az infra
-döntésre vár, a 3. feladat külön ágon haladhat. A tanári kérdések összegyűjtése
-közben is végezhető; a SkillDisplay-integráció nem feltétele a helyi tanulásnak.
+A 0. feladatot az élesítés előtt lezárjuk; az 1. feladat közben is végezhető.
+Ha az infra döntésre vár, a 3. feladat külön ágon haladhat. A tanári kérdések
+összegyűjtése közben is végezhető; a SkillDisplay-integráció nem feltétele a helyi tanulásnak.
+
+### 0. Közös belépés és későbbi szerveres mentés
+
+**Javaslat, még nem elfogadott architektúra:** először egy közös belépési kapu
+a három alkalmazás elé, később külön kis API a felhasználó által kért
+haladásszinkronhoz. A Markdown-tananyag és a három önálló repo megmaradhat;
+a fiókkezelés nem igényli a tananyag adatbázisba költöztetését.
+
+| Lehetőség | Előny | Mérlegelendő |
+| --- | --- | --- |
+| Saját Authelia a Caddy mellett | Saját üzemeltetésű közös belépés; dokumentált Caddy-integráció és MariaDB/SQLite-tárolás. | Frissítés, fiókkezelés, helyreállítás, értesítés és mentés üzemeltetése ránk marad. |
+| Cloudflare Access | Több domain közös belépése saját auth-szerver nélkül. | Az ellenőrzött Free csomag 50 felhasználós; külső azonosítás és naplózás adatfolyamát, feltételeit is értékelni kell. |
+
+A saját üzemeltetés iránti igényhez első próbaként az Authelia illeszkedik.
+Tárolóként a már futó MariaDB külön adatbázissal és saját, korlátozott
+jogosultságú felhasználóval használható; a meglévő adatbázisokhoz nem nyúlunk.
+Az Authelia belépési fiókforrása és működési adatbázisa külön fogalom:
+kis zárt körben fájlalapú fióklista is lehetséges, a MariaDB önmagában nem
+ad regisztrációs felületet. Az értesítési és fiók-helyreállítási mód a próba része.
+Saját szerveren a PostgreSQL/MariaDB nem szolgáltatói Free-csomagként fut;
+az inaktivitás miatti szüneteltetés nem az SQL-adatbázis általános tulajdonsága.
+
+- [ ] Tisztázzuk: magánkezdeményezés vagy iskolai szolgáltatás, önkéntes vagy
+  kötelező használat, felhasználószám és kiskorúak érintettsége. Ezek még nyitott kérdések.
+- [ ] Két tesztfiókkal ellenőrizzük az egyszeri belépést, mindhárom céloldalt,
+  kijelentkezést, lejáratot, visszavont hozzáférést és iPhone-os működést.
+  A kapu kihagyásával az origin vagy az API ne legyen elérhető; a szolgáltatás
+  kiesése se tegye nyilvánossá a védett tartalmat. Legyen kipróbált visszaállítás.
+- [ ] Első körben csak meghívott fiókokat javaslunk; a tanulási haladás
+  továbbra is helyi. A belépés nem indít automatikus eredményfeltöltést.
+- [ ] Későbbi API esetén a felhasználói azonosságot a szerver hitelesítse;
+  ne a böngésző által küldött azonosítót fogadja el. A tanulási adatok külön
+  adatbázisba kerüljenek, felhasználónként ellenőrzött hozzáféréssel.
+- [ ] Az adatfolyamterv sorolja fel a fiókadatokat, szükséges belépési sütiket,
+  biztonsági naplókat, későbbi haladásadatokat, címzetteket és szolgáltatókat.
+  Minden célhoz jogalap, tényleges megőrzési idő, törlési mód és felelős kell.
+  Becenév/felhasználóazonosító sem jelent automatikusan anonim adatot.
+- [ ] Belépésváltás előtt a jelenlegi adatvédelmi tájékoztató, impresszum és
+  üzemeltetési dokumentáció érintett részeit igazítsuk a tényleges rendszerhez.
+  A rövid szükséges munkamenetsüti önmagában nem jelent kötelező sütibannert;
+  az összes tényleges süti és böngészőtárolás célját külön ellenőrizzük.
+- [ ] A tanári átnézés mellett kérdezzünk rá az intézmény adatvédelmi
+  kapcsolattartójára. Ez a terv nem jogi megfelelőségi igazolás; a régi
+  „privát rollout” minősítés sem igazolja automatikusan az új fiókrendszert.
+- [ ] Szerveres személyes adatok előtt legyen korlátozott hozzáférésű,
+  titkosított, gépen kívüli mentés és visszaállítási próba. A második belső SSD
+  önmagában nem véd a teljes gép elvesztése ellen. A meglévő mentést még nem auditáltuk.
+
+Ellenőrzött források, 2026-09-30:
+
+- [Authelia + Caddy](https://www.authelia.com/integration/proxies/caddy/),
+  [MariaDB-tárolás](https://www.authelia.com/configuration/storage/mysql/),
+  [fájlalapú fiókok](https://www.authelia.com/configuration/first-factor/file/).
+- [Cloudflare többdomaines belépés](https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/authorization-cookie/)
+  és [aktuális csomagok](https://www.cloudflare.com/plans/zero-trust-services/).
+- [EU Bizottság: adatkezelői kötelezettségek és tájékoztatás](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/obligations_en).
+- [Osztrák DSB: adatvédelem és sütik](https://dsb.gv.at/faqs/datenschutz-cookies).
 
 ### 1–2. Publikálás
 
@@ -48,9 +111,9 @@ közben is végezhető; a SkillDisplay-integráció nem feltétele a helyi tanul
   ne teljes repó, `.git`, helyi jegyzet vagy fejlesztői szerver.
 - [ ] Célként javasolt `quiz.coderlap.com` és `coaster.coderlap.com`; ellenőrizzük
   a tényleges DNS-rekordokat és a meglévő Debian/Caddy kapacitást, beállításokat.
-- [ ] Belépési döntés telepítés előtt: átmeneti Basic Auth külön originenként,
-  vagy közös bejelentkezés. Azonos jelszó nem jelent automatikusan egy belépést.
-  Új auth-szolgáltató és felhasználói adatbázis még nincs kiválasztva.
+- [ ] Belépési döntés a 0. lépés alapján, telepítés előtt. A cél a közös
+  belépés; azonos Basic Auth-jelszó nem jelent automatikusan egy munkamenetet.
+  A végleges auth-megoldás még nincs kiválasztva vagy telepítve.
 - [ ] Ellenőrizzük a TLS-t, a védett elérést, a kiadási/rollback útvonalat és
   mindkét app telefonos működését. A Coaster külső segédscriptjeit külön vegyük
   számba; teljes offline működést ne ígérjünk ellenőrzés nélkül.
