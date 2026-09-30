@@ -1,6 +1,6 @@
 # Next Thread Handoff
 
-Last updated: `2026-09-11`
+Last updated: `2026-09-30`
 
 ## Active Repository
 
@@ -61,6 +61,19 @@ Last updated: `2026-09-11`
   shared sign-in are the next session's agreed planning/setup task; do not infer
   that publishing source code has deployed either app.
 
+## Planning Checkpoint — 2026-09-30
+
+The documentation PRs are now merged: LAP #36, Quiz #13, Coaster #4.
+LAP `origin/dev` (`aa366ba`) differs from `origin/main` (`6d6343b`) only in
+this handoff document; the website code is identical. There is no missing UI
+release. Carry documentation forward with the next normal release PR.
+
+The canonical cross-project order and acceptance checks are in
+[the learning-platform roadmap](../plans/2026-09-30-learning-platform-roadmap.md).
+Start with the Quiz production entry point and hosting preparation; progress
+controls and search follow in small independent changes. SkillDisplay begins
+with teacher questions and an active-skill mapping, without learner-data sync.
+
 ## Read These First In A New Thread
 
 1. `AGENTS.md`
@@ -116,8 +129,8 @@ such as `8001` and use the matching URL.
 
 ## Most Likely Next Work
 
-- plan Quiz/Coaster hosting, DNS and shared sign-in with the user; preserve the
-  existing protected LAP production deployment
+- follow the ordered [learning-platform roadmap](../plans/2026-09-30-learning-platform-roadmap.md)
+  for Quiz/Coaster publication, progress controls, search and the SkillDisplay pilot
 - final Austrian legal/imprint pass before public launch
 - switch `robots.txt` to an indexable version when `basic_auth` is removed
 - optional MX/mail routing for `coderlap.com`

@@ -35,7 +35,8 @@ Validation on 2026-09-11: 83 Python and 35 Node tests and the bilingual build pa
 Browser measurements compare all three apps at 320/390/844/1920px: matching
 gutters, footer columns and typography, no page overflow or brand/GitHub collision.
 At 390px all three headers have the same height and both language switchers align.
-Physical iPhone review of this frame is pending.
+The user subsequently approved the shared frame; LAP PRs #34/#35 were merged
+and deployed. See `next-thread-handoff.md` for the release evidence and current plan.
 
 ### Markdown remains the source of truth
 
