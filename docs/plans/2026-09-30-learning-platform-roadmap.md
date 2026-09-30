@@ -66,8 +66,13 @@ ad regisztrációs felületet. Az értesítési és fiók-helyreállítási mód
 Saját szerveren a PostgreSQL/MariaDB nem szolgáltatói Free-csomagként fut;
 az inaktivitás miatti szüneteltetés nem az SQL-adatbázis általános tulajdonsága.
 
-- [ ] Tisztázzuk: magánkezdeményezés vagy iskolai szolgáltatás, önkéntes vagy
-  kötelező használat, felhasználószám és kiskorúak érintettsége. Ezek még nyitott kérdések.
+- [x] Viktor visszajelzése: jelenleg saját, önkéntesen használható kiegészítő
+  tanulóprojekt felnőttképzéshez, kiskorúak nélkül. Évente körülbelül 20–30
+  tanuló és néhány tanár várható; nem kötelező feladatok vagy osztályozás rendszere.
+- [ ] Az iskola/tanárok későbbi üzemeltetői átvétele még csak lehetőség.
+  Átadás előtt külön tisztázzuk a felelősséget, hozzáféréseket és adattovábbítást.
+  A fiókok életciklusát is tervezzük meg: az évente új csoport nem jelenti,
+  hogy a korábbi csoportok fiókjai vagy adatai automatikusan megszűnnek.
 - [ ] Két tesztfiókkal ellenőrizzük az egyszeri belépést, mindhárom céloldalt,
   kijelentkezést, lejáratot, visszavont hozzáférést és iPhone-os működést.
   A kapu kihagyásával az origin vagy az API ne legyen elérhető; a szolgáltatás
