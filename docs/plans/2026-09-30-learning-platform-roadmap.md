@@ -5,6 +5,28 @@ karbantartott listája; a részletes megvalósítási jegyzetek a saját repóju
 maradnak. Egy feladat = külön ág és ellenőrizhető PR. Ez tervezési állapot,
 nem új funkciók vagy infrastruktúra elkészültének igazolása.
 
+## Elfogadott irány és a következő kis lépés
+
+- Az új Quiz/Coaster DNS-rekordok beállításával várunk a belépési próba és
+  az élesítési terv elkészültéig. Ha a próba HTTPS-hostnevet igényel, azt külön
+  tesztcélként kezeljük; ez nem a tanulói szolgáltatás éles megnyitása.
+- Meghívásos hozzáféréssel indulunk. A meghívás, fiókaktiválás, helyreállítás
+  és visszavonás konkrét folyamata még tervezendő; az Authelia továbbra is
+  jelölt, nem elfogadott vagy már elkészült meghívórendszer.
+- Az alkalmazások és adataik saját üzemeltetésű tárhelyre kerülnek.
+  Cloudflare-tárhelyre vagy adatbázisra nem építünk; a meglévő DNS/proxy
+  szerep ettől különálló és megmaradhat.
+- A későbbi költöztethetőség követelmény akkor is, ha a szerver gazdája változik,
+  de Viktor marad az üzemeltető. A szerver tulajdonosa és az üzemeltetést végző
+  személy nem feltétlenül ugyanaz.
+- A gép más alkalmazásokat is kiszolgál. A tanulóplatform külön
+  szolgáltatásfiókot, adatbázis-jogosultságokat és saját adatkönyvtárakat kapjon;
+  a kapacitást a többi szolgáltatással együtt mérjük fel. A streamapp és a
+  tervezett személyes Nextcloud külön projekt, itt nem módosítjuk őket.
+
+Most a meghívásos belépés és az adatfolyam rövid tervét készítjük elő,
+utána két tesztfiókkal próbáljuk ki. A szerveres haladásszinkron későbbi lépés.
+
 ## Ellenőrzött kiinduló állapot
 
 - [x] A három dokumentációs PR összevonva: LAP #36, Quiz #13, Coaster #4.
@@ -81,8 +103,9 @@ az inaktivitás miatti szüneteltetés nem az SQL-adatbázis általános tulajdo
   kijelentkezést, lejáratot, visszavont hozzáférést és iPhone-os működést.
   A kapu kihagyásával az origin vagy az API ne legyen elérhető; a szolgáltatás
   kiesése se tegye nyilvánossá a védett tartalmat. Legyen kipróbált visszaállítás.
-- [ ] Első körben csak meghívott fiókokat javaslunk; a tanulási haladás
+- [x] Elfogadott indulási elv: csak meghívott fiókok; a tanulási haladás
   továbbra is helyi. A belépés nem indít automatikus eredményfeltöltést.
+  Ez követelmény, a fiókrendszer még nincs megvalósítva.
 - [ ] Későbbi API esetén a felhasználói azonosságot a szerver hitelesítse;
   ne a böngésző által küldött azonosítót fogadja el. A tanulási adatok külön
   adatbázisba kerüljenek, felhasználónként ellenőrzött hozzáféréssel.
@@ -100,6 +123,14 @@ az inaktivitás miatti szüneteltetés nem az SQL-adatbázis általános tulajdo
 - [ ] Szerveres személyes adatok előtt legyen korlátozott hozzáférésű,
   titkosított, gépen kívüli mentés és visszaállítási próba. A második belső SSD
   önmagában nem véd a teljes gép elvesztése ellen. A meglévő mentést még nem auditáltuk.
+- [ ] Költöztetési próba külön célgépre: verziózott telepítési leírás,
+  konfigurációs minta titkok nélkül, az adatbázisok exportja/visszaállítása és
+  a szükséges fájlok, auth-állapot és kulcsok védett átvitele. A gépfüggő címek
+  és útvonalak konfigurációban legyenek. Az adatbázismentés önmagában nem teljes
+  szolgáltatásmentés; a visszaállított belépést és jogosultságokat is teszteljük.
+- [ ] Átköltözéskor legyen írásleállítás vagy más, ellenőrzött adategyeztetés,
+  DNS/TLS átállási terv és visszaállási lehetőség. A régi példány és mentések
+  megőrzéséről/törléséről az adatkezelési terv alapján döntünk.
 
 Ellenőrzött források, 2026-09-30:
 
