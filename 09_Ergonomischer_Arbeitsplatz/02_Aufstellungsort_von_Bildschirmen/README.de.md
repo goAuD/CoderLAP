@@ -45,6 +45,14 @@ Weil Spiegelungen:
 - die Lesbarkeit verschlechtern
 - zu einer schlechten Körperhaltung zwingen können
 
+## Lichtverhältnisse bei tatsächlicher Nutzung prüfen
+
+Die 90-Grad-Anordnung bedeutet: Die Blickrichtung verläuft ungefähr parallel zur Fensterebene, das Fenster liegt seitlich. So schauen wir weder in ein helles Fenster hinter dem Monitor, noch spiegelt sich ein Fenster hinter unserem Rücken im Display.
+
+Prüfe Reflexionen aus der tatsächlichen Arbeitshaltung auch bei dunklem Bildschirm. Vormittags und nachmittags können die Bedingungen unterschiedlich sein. Passe bei Bedarf Anordnung und Beschattung an. Bei zwei Displays steht das häufiger benutzte vorn. Bei ähnlicher Nutzungsdauer liegt ihre gemeinsame Mitte vor der Person, sodass beide mit kleinen Kopfdrehungen erreichbar sind.
+
+Schriftgröße und passende Helligkeit unterstützen die Lesbarkeit. Eine ungünstige Position sollte nicht durch dauerhaft verdrehtes Sitzen ausgeglichen werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Monitor muss so aufgestellt werden, dass möglichst wenig Spiegelung und Blendung entstehen.  
@@ -52,13 +60,6 @@ Weil Spiegelungen:
 > den Bildschirm nicht direkt vor oder hinter das Fenster zu stellen,
 > sondern seitlich, oft etwa 90 Grad zum Fenster.  
 > Die richtige Monitorposition reduziert die Augenbelastung und Zwangshaltungen.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass der beste Platz für den Monitor immer direkt vor dem Fenster ist.
-- Spiegelung und Reflexion nicht zu erwähnen.
-- Auszulassen, dass bei mehreren Monitoren die Position des Hauptmonitors besonders wichtig ist.
-- Die Monitorplatzierung nur als ästhetische Frage zu betrachten.
 
 ## Schnelle Selbstkontrolle
 
@@ -78,8 +79,13 @@ Weil Spiegelungen:
 
 ## Quellen
 
+- [Arbeitsinspektion: Bildschirmarbeitsplätze](https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html)  
+  Arbeitsplatzeinstellung und Voraussetzungen der Bildschirmarbeit.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Verwendung: offizielle österreichische Quelle zur 90°-Aufstellung des Monitors zum Fenster und zur blendfreien Einstellung.
 
 2. AUVA - Checkliste Homeoffice für Arbeitnehmer:innen  
@@ -87,7 +93,7 @@ Weil Spiegelungen:
    Verwendung: praktische, offizielle AUVA-Checkliste zu Monitorposition und Lichtverhältnissen.
 
 3. Arbeitsinspektion - Bildschirmarbeitsplätze  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Verwendung: Arbeitsschutz-Zusammenfassung zu den ergonomischen Anforderungen an Bildschirmarbeitsplätze.
 
 Abgerufen: `2026-04-08`
