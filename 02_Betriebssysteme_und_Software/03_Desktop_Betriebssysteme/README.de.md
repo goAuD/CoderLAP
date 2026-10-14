@@ -76,7 +76,7 @@ Merkmale:
 Merkmale:
 
 - von Apple entwickeltes Desktop-System
-- läuft nur auf Apple-Hardware
+- die offiziell unterstützte Nutzung ist an kompatible Apple-Hardware gebunden
 - einheitliches, stark integriertes Benutzererlebnis
 
 ## 3. Linux Desktop-Systeme
@@ -118,6 +118,19 @@ Merkmale:
 | GUI wichtig             | häufig CLI oder Admin-Konsole im Vordergrund |
 | lokale tägliche Nutzung | Netzwerkdienste, Bedienung vieler Clients    |
 
+## Durchgearbeitete Auswahl: ein Entwicklungsarbeitsplatz
+
+Neben dem Anwendungsnamen werden Version und Prozessorarchitektur geprüft. Ein für `x86-64` entwickeltes Programm wird nicht automatisch zu einer nativen `ARM64`-Anwendung. Emulation kann helfen; Leistung und Gerätetreiber müssen trotzdem gesondert geprüft werden.
+
+| Prüfung | Geeigneter Nachweis |
+| --- | --- |
+| benötigte IDE und Datenbankclient | Installation und Durchführung einer Beispielaufgabe |
+| Netzwerk, Drucker, externer Bildschirm | getestete Funktion mit der gewählten OS-Version |
+| Wartung | Sicherheitsupdates und Supportzeitraum sind bekannt |
+| Umstellung | erprobte Wiederherstellung und erforderliche Lizenzen |
+
+**Stand 2026-10-14:** Der allgemeine Windows-10-Support endete am 2025-10-14. Für das ESU-Programm und bestimmte LTSC-Ausgaben gelten eigene Bedingungen beziehungsweise Lebenszyklen. Der Supportstatus wird deshalb anhand der genauen Ausgabe und Berechtigung geprüft, nicht allein anhand des Namens „Windows 10”.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Desktop-Betriebssystem ist ein Allzweck-Betriebssystem,
@@ -127,14 +140,6 @@ Merkmale:
 > und die Ausführung mehrerer Anwendungen.  
 > Typische Desktop-Betriebssysteme sind Windows, macOS
 > und verschiedene Linux-Desktop-Systeme.
-
-## Häufige Prüfungsfehler
-
-- Desktop- und mobile Betriebssysteme vermischen.
-- Behaupten, dass jedes Linux ein Serversystem ist und nicht als Desktop verwendet werden kann.
-- ChromeOS als moderneres Desktop-Beispiel komplett auslassen.
-- Die Rolle der GUI unterschätzen.
-- Den Zweck von Desktop und Server verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -171,3 +176,9 @@ Merkmale:
    Verwendung: Kontext zur heutigen Verbreitung der Desktop-Betriebssysteme.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Windows 10 release information](https://learn.microsoft.com/en-us/windows/release-health/release-information): Support und ausgabenspezifischer Lebenszyklus.
+
+Geprüft: `2026-10-14`.

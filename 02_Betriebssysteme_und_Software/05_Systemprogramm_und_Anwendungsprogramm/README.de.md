@@ -107,6 +107,14 @@ In der Prüfung ist jedoch das Grundprinzip wichtig:
 - Systemprogramm = steht im Zusammenhang mit dem Systembetrieb
 - Anwendungsprogramm = löst eine Benutzeraufgabe
 
+## Durchgearbeiteter Fall: Welche Programme braucht das Drucken?
+
+In einem PDF-Reader wird Drucken gewählt. Der Reader ist ein Anwendungsprogramm: Er zeigt das Dokument an und bearbeitet die Benutzeraufgabe. Der Druckdienst des OS verwaltet die Warteschlange, der Treiber unterstützt die Zusammenarbeit mit dem konkreten Gerät. Die Firmware des Druckers steuert das Gerät selbst.
+
+Damit lässt sich eine Störung nach Verantwortungsbereich eingrenzen: Scheitert das Drucken aus allen Anwendungen oder nur bei einem Dokument? Erscheint der Auftrag in der Warteschlange? Ist das Gerät erreichbar? Das ist gezielter, als alle Komponenten neu zu installieren.
+
+Die Einordnung als Systemprogramm beschreibt den **Zweck**. Sie bedeutet nicht automatisch Kernelmodus oder Administratorrechte. Eine Shell ist ein systemnahes Werkzeug und kann trotzdem mit einem normalen Benutzerkonto arbeiten.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Systemprogramm ist Software, die den Grundbetrieb des Computers
@@ -115,14 +123,6 @@ In der Prüfung ist jedoch das Grundprinzip wichtig:
 > Ein Anwendungsprogramm hingegen erledigt eine konkrete Benutzeraufgabe,
 > zum Beispiel Textverarbeitung, Webbrowsing oder Medienwiedergabe.  
 > Anwendungsprogramme nutzen die Dienste des Betriebssystems.
-
-## Häufige Prüfungsfehler
-
-- PowerShell nur als Anwendung behandeln, ohne Systembezug.
-- Einen Treiber als Anwendungsprogramm bezeichnen.
-- Einen Browser als Systemprogramm bezeichnen.
-- Behaupten, dass jedes sichtbare Programm ein Anwendungsprogramm ist.
-- Nicht mindestens je 2 Beispiele für beide Kategorien nennen können.
 
 ## Schnelle Selbstkontrolle
 
@@ -159,3 +159,9 @@ In der Prüfung ist jedoch das Grundprinzip wichtig:
    Verwendung: Kontext zu Systemfunktionen und der OS-abhängigen Funktionsweise von Anwendungen.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: User mode and kernel mode](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode): Schutzebenen und Trennung.
+
+Geprüft: `2026-10-14`.
