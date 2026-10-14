@@ -47,6 +47,38 @@ Ha nincs governance, akkor:
 - A visszagörgetésnek is tervezettnek kell lennie.
 - A szabályok legyenek világosak és következetesen betartottak.
 
+## Konkrét előírásból ellenőrizhető bizonyíték
+
+Egy kis csapat szabályai is lehetnek rövidek és számonkérhetők. A következő
+példa nem a jelenlegi repository-beállítások leírása, hanem egy lehetséges
+szabályrendszer:
+
+| Előírás | Miből látszik, hogy teljesült? |
+|---|---|
+| változtatás PR-on át | a commit és a hozzá tartozó review visszakereshető |
+| kötelező teszt és build | az adott összevonandó változathoz tartozó eredmény sikeres |
+| függőség és eszköz verziója ismert | lockfile és rögzített futtatókörnyezet |
+| éles telepítés korlátozott | csak engedett branch és telepítési identitás éri el |
+| kiadás visszakövethető | commit, artifact, időpont és célkörnyezet rögzítve |
+| helyreállítás tervezett | működési próba és kipróbált visszaállítási eljárás |
+
+**A CI is kódot futtat.** Egy külső PR tesztje nem kaphat éles titkokat vagy
+írható hozzáférést a kiszolgálóhoz. A telepítési lépés kapja csak a szükséges,
+legkisebb jogosultságot. A GitHub Actions külső actionje teljes commit-SHA-ra
+rögzíthető; ez rögzített kódot jelöl, de a kód megbízhatóságát és későbbi
+frissítését továbbra is értékelni kell. A PR címét és más külső szöveget adatként
+kezeljük, nem illesztjük ellenőrizetlenül shellparancsba.
+
+A „zöld” ellenőrzés mögött tényleges munka legyen: vizsgáljuk meg, hogy a teszt
+valóban lefutott-e, és nem lett-e feltétellel kihagyva vagy a hibája elnyelve.
+A kötelező check neve, az adminisztrátori megkerülés és az érvényes szabályok
+együtt határozzák meg, mennyit véd a beállítás. Naplóba a diagnózishoz szükséges
+adat kerül, jelszó és token nem.
+
+Az elvárásokat a projekt kockázatához igazítjuk. Egy statikus tananyag és egy
+fizetéseket kezelő szolgáltatás nem ugyanolyan telepítési kapukat kíván, de
+mindkettőnél érthetőnek kell lennie, mi futott, mi került ki és hogyan javítható.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A CI/CD előírások olyan szabályok,
@@ -58,13 +90,6 @@ Ha nincs governance, akkor:
 > a környezetvédelem, a titkok biztonságos kezelése
 > és a rollback lehetősége.  
 > Ezek a szabályok azért fontosak, mert az automatizálást kontrollal és minőségbiztosítással kell összekapcsolni.
-
-## Gyakori vizsgahibák
-
-- Azt gondolni, hogy ha van pipeline, akkor nincs szükség szabályokra.
-- Nem megemlíteni a branch protectiont vagy status checket.
-- Nem beszélni a secrets és approval szerepéről.
-- A rollback és naplózás kihagyása.
 
 ## Gyors önellenőrzés
 
@@ -83,6 +108,12 @@ Ha nincs governance, akkor:
 5. Mert biztonsági kockázat
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [GitHub: Secure use reference](https://docs.github.com/en/actions/reference/security/secure-use): legkisebb jogosultság, PR-kód, titkok és rögzített action-verzió.
+- [GitHub: Protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches): kötelező ellenőrzések és megkerülési szabályok.
+
 
 1. GitHub Docs - About protected branches  
    https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches  

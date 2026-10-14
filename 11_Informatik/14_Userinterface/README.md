@@ -60,7 +60,7 @@ Egy rossz UI:
 | UI | maga a felület és annak elemei |
 | UX | a teljes felhasználói élmény |
 
-A UI inkább a "mit lát és mivel kattint", a UX inkább a "milyen érzés és mennyire hatékony" oldal.
+A UI a kezelhető felület, beleértve a billentyűzetes és segítő technológiás használatot is. A UX a teljes használati élményt és hatékonyságot vizsgálja.
 
 ## Mire kell figyelni fejlesztőként?
 
@@ -70,6 +70,44 @@ A UI inkább a "mit lát és mivel kattint", a UX inkább a "milyen érzés és 
 - A mobil és desktop nézet eltéréseit tervezni kell.
 - Az akadálymentesség nem opcionális extra, hanem minőségi követelmény.
 
+## Egy kis felület, teljes visszajelzéssel
+
+A következő HTML-részletet egy böngészőben megnyitott dokumentum `body` részébe
+tehetjük. Csak megjelenít egy célt, nem menti adatbázisba:
+
+```html
+<form id="goal-form">
+  <label for="minutes">Lernzeit in Minuten (1 bis 120)</label>
+  <input id="minutes" name="minutes" type="number" min="1" max="120" required>
+  <button type="submit">Lernziel anzeigen</button>
+</form>
+<p id="goal-status" role="status"></p>
+<script>
+  const form = document.querySelector("#goal-form");
+  const minutes = document.querySelector("#minutes");
+  const status = document.querySelector("#goal-status");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    status.textContent = `Lernziel: ${minutes.valueAsNumber} Minuten`;
+  });
+</script>
+```
+
+`25` beírása és a gomb aktiválása után `Lernziel: 25 Minuten` jelenik meg.
+Üres mezőt, `0` vagy `121` értéket a böngésző normál űrlapküldése visszautasít;
+ekkor a `submit` kezelő nem fut le. Szerverhez küldött adatnál ugyanezeket
+a feltételeket szerveroldalon is ellenőrizni kell.
+
+A látható `label` a `for` és `id` egyezése révén a mezőhöz tartozik.
+A natív gomb billentyűzettel is aktiválható; nincs kattintható `div`-re szükség.
+A `role="status"` a frissülő eredményt segítő technológiának is jelzi.
+Az ellenőrzéshez csak Tab, Shift+Tab és Enter használatával is végigmegyünk
+az űrlapon, és megőrizzük a látható fókuszjelzést.
+
+Ez UI-feladat: címke, beviteli korlát, művelet és visszajelzés együtt működik.
+A teljes UX értékeléséhez azt is vizsgáljuk, érthető-e a cél, mennyi munkát
+igényel a megadása, és valóban segíti-e a tanulást.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A user interface a rendszer azon része,
@@ -78,13 +116,6 @@ A UI inkább a "mit lát és mivel kattint", a UX inkább a "milyen érzés és 
 > Ide tartoznak például a gombok, menük,
 > űrlapok, ikonok és visszajelző elemek.  
 > Egy jó felhasználói felület érthető, következetes, könnyen kezelhető és támogatja a hibamentes használatot.
-
-## Gyakori vizsgahibák
-
-- A UI-t összekeverni a UX-szel.
-- Csak "kinézetként" beszélni róla.
-- Nem megemlíteni a visszajelzés szerepét.
-- Nem hozni rá konkrét elempéldát.
 
 ## Gyors önellenőrzés
 
@@ -103,6 +134,13 @@ A UI inkább a "mit lát és mivel kattint", a UX inkább a "milyen érzés és 
 5. Mert többféle felhasználó számára használhatóvá teszi a rendszert
 
 ## Források
+
+- [W3C: role=status](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA22): a dinamikus állapotüzenet szemantikus jelölése. Ellenőrizve: `2026-10-14`.
+
+Ellenőrizve: `2026-10-14`.
+
+- [W3C WAI: Labeling controls](https://www.w3.org/WAI/tutorials/forms/labels/): látható, programozottan összekapcsolt címkék.
+
 
 1. NIST CSRC Glossary - User interface  
    https://csrc.nist.gov/glossary/term/user_interface  

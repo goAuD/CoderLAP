@@ -59,6 +59,46 @@ A mai központi irány a `.NET` és `ASP.NET Core`, mert:
 - A régebbi `ASP.NET` és a mai `ASP.NET Core` nem ugyanaz.
 - Vizsgán érdemes megemlíteni az API, webapp és valós idejű kommunikáció szerepét is.
 
+## Minimális HTTP-végpont és a futtatás helye
+
+**Környezet:** ASP.NET Core 10 üres webprojekt, telepített .NET 10 SDK-val,
+a websablon alapértelmezett implicit importjaival. A következő a teljes
+`Program.cs` tartalma; a projektfájl és az SDK továbbra is szükséges.
+Indítás után az alkalmazás által kiírt helyi címen kérd le az `/api/course`
+útvonalat. A várt eredmény `200 OK`, JSON médiatípus és az alábbi adattartalom:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.MapGet("/api/course", () => new { id = 15, title = "Schleifen" });
+
+app.Run();
+```
+
+```json
+{"id":15,"title":"Schleifen"}
+```
+
+A `CreateBuilder` összeállítja az alkalmazás szolgáltatásait és konfigurációját.
+A `MapGet` egy GET-útvonalhoz rendel kezelőt. Az objektumot a framework JSON-ná
+alakítja; az `app.Run()` elindítja a kiszolgálást. A példa rögzített, nyilvános
+adatot szolgáltat, nem kész hitelesített adatbázis-API.
+
+| Blazor-mód | Hol történik az interakcióhoz tartozó .NET-kód futása? |
+|---|---|
+| Static Server | a szerver HTML-t készít; nincs automatikus interaktív Blazor-kezelés |
+| Interactive Server | szerveren, a böngészővel valós idejű kapcsolaton át |
+| Interactive WebAssembly | a letöltött kliensalkalmazásban, a böngészőben |
+| Interactive Auto | kezdetben szerveren, későbbi látogatásnál a letöltött kliensben is |
+
+Ezért a „Blazorban minden C# a szerveren fut” és a „Blazor mindig WebAssembly”
+állítás sem írja le az összes módot. Kliensoldali kódba nem kerülhet szervertitok;
+a szerver továbbra is ellenőrzi az API-jogosultságokat. SignalR élő kapcsolatot
+segít kezelni, nem azonos egy bezárt alkalmazásnak küldött operációsrendszeres
+push értesítéssel. A modern .NET és ASP.NET Core több platformot támogat;
+a régi, Windows-központú .NET Framework ettől külön termékvonal.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A .NET webes technológiái közé tartoznak azok a megoldások,
@@ -66,13 +106,6 @@ A mai központi irány a `.NET` és `ASP.NET Core`, mert:
 > fejleszthetünk a Microsoft ökoszisztémában.  
 > A mai fő irány az ASP.NET Core, amely modern, cross-platform és nagy teljesítményű alapot ad.  
 > Ehhez kapcsolódik például a Web API, a Blazor és a SignalR is.
-
-## Gyakori vizsgahibák
-
-- Az ASP.NET-et és az ASP.NET Core-t ugyanannak venni.
-- Nem megemlíteni, hogy a .NET ma már cross-platform.
-- A .NET-et csak desktop technológiának nevezni.
-- Nem hozni webes példát, például API vagy Blazor esetet.
 
 ## Gyors önellenőrzés
 
@@ -91,6 +124,12 @@ A mai központi irány a `.NET` és `ASP.NET Core`, mert:
 5. Mert modern, gyors és jó ökoszisztémája van
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Microsoft: ASP.NET Core APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis?view=aspnetcore-10.0): Minimal API és HTTP-kezelő.
+- [Microsoft: Blazor render modes](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0): szerveroldali és kliensoldali végrehajtás.
+
 
 1. ASP.NET Web Apps  
    https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps  

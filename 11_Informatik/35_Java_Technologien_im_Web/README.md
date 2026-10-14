@@ -5,7 +5,7 @@
 | Technológia | Szerep |
 |---|---|
 | Servlet | HTTP-kérések kezelése |
-| JSP | szerveroldali nézetkészítés, inkább történeti jelentőség |
+| JSP / Jakarta Pages | karbantartott szerveroldali sablontechnológia |
 | Spring Boot | modern Java backend és webapp fejlesztés |
 | Jakarta EE | enterprise Java platform |
 
@@ -18,12 +18,12 @@
 
 ## Történeti és modern rétegek
 
-### Régebbi alapok
+### Klasszikus, továbbra is karbantartott alapok
 
 - `Servlet`
 - `JSP`
 
-Ezek fontosak megérteni, mert sok mai megoldás ezekre is épül történetileg.
+Ezek ma is létező szerveroldali technológiák; szerepük és használatuk projektfüggő.
 
 ### Mai tipikus irányok
 
@@ -49,8 +49,62 @@ Ezek fontosak megérteni, mert sok mai megoldás ezekre is épül történetileg
 ## Mire kell figyelni?
 
 - A Java webes szerepe főleg backend oldalon erős.
-- A `JSP` ma már inkább történetileg fontos, nem ez a modern fő irány.
+- A `JSP` Jakarta Pages néven továbbra is karbantartott; a nézettechnológia választása a projekt feladata.
 - Vizsgán érdemes külön beszélni a régebbi és a mai technológiákról.
+
+## Egy Java-webkérés útja és a mai Servlet szerepe
+
+```text
+Browser: GET /api/course
+  -> Webserver / Servlet-Container
+  -> Spring-Controller
+  -> Java-Objekt
+  -> JSON-Antwort
+```
+
+**Szemléltető controller:** egy már létrehozott, kompatibilis JDK-val futó
+Spring Boot Web MVC-projekt `example.learning` csomagjában helyezhető el.
+A Spring alkalmazás komponenskeresése érje el ezt a csomagot, és legyen
+beállítva a szokásos JSON-szerializálás. Ez önmagában nem teljes indítható projekt.
+A `GET /api/course` kérés várt válasza `200 OK` és az alábbi JSON-törzs:
+
+```java
+package example.learning;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CourseController {
+    public record Course(int id, String title) {}
+
+    @GetMapping("/api/course")
+    public Course course() {
+        return new Course(15, "Schleifen");
+    }
+}
+```
+
+```json
+{"id":15,"title":"Schleifen"}
+```
+
+A `GetMapping` az útvonalat kapcsolja a metódushoz. A `RestController` miatt a
+visszatérő rekordot a framework válaszadatként szerializálja; a böngésző JSON-t
+kap, nem Java-osztályt futtat. A példa rögzített nyilvános adatot ad vissza;
+adatbázist, bejelentkezést és jogosultságvizsgálatot nem tartalmaz.
+
+A Servlet nem pusztán történeti előzmény: a Jakarta Servlet jelenleg is
+fejlesztett szerveroldali API. A JSP utódneve **Jakarta Pages**, amely szintén
+karbantartott specifikáció; sablonból Servletet készít. A projekt igénye alapján
+választunk ilyen szerveroldali nézetet vagy JSON API-t és külön frontendet.
+Spring Web MVC Servletre épít, de nem minden Java-webes megoldás Servlet-alapú.
+
+Jakarta EE 9-től az érintett vállalati API-k `javax.*` csomagnevei `jakarta.*`
+névre váltottak. Régi függőségek migrációjánál ezért a kódot, a szervert és a
+librarykat együtt kell ellenőrizni. Ez nem jelenti minden Java SE `javax.*`
+csomag átnevezését. Egy jól felépített monolit is lehet megfelelő Java-backend;
+a Java használatából nem következik, hogy microservice-ekre kell bontani.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -61,13 +115,6 @@ Ezek fontosak megérteni, mert sok mai megoldás ezekre is épül történetileg
 > míg a modern gyakorlatban a Spring Boot
 > és a Jakarta EE a legfontosabb irányok közé tartoznak.  
 > A Java különösen erős stabilitás, skálázhatóság és enterprise használat terén.
-
-## Gyakori vizsgahibák
-
-- A Java-t összekeverni a JavaScripttel.
-- A JSP-t mai főtechnológiának beállítani.
-- Nem megemlíteni a backend szerepet.
-- Nem hozni modern példát, például Spring Bootot.
 
 ## Gyors önellenőrzés
 
@@ -86,6 +133,14 @@ Ezek fontosak megérteni, mert sok mai megoldás ezekre is épül történetileg
 5. Két külön nyelv, eltérő fő szereppel
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Spring: Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/): controller és JSON-válasz, teljes mintaprojekt előfeltételei.
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/): aktív Servlet-specifikáció.
+- [Jakarta Pages](https://jakarta.ee/specifications/pages/): a JSP karbantartott utódneve és működése.
+- [Jakarta EE FAQ](https://jakarta.ee/about/faq/): EE 9 névtérváltás.
+
 
 1. Oracle Java  
    https://www.oracle.com/java/  

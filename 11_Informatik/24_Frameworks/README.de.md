@@ -52,6 +52,30 @@ Dazu sagt man häufig:
 - Für kleinere Projekte kann es manchmal zu schwer sein.
 - Man muss seine Konventionen kennen, sonst wird die Entwicklung mühsam.
 
+## Wer steuert die Verarbeitung einer Anfrage?
+
+In einem serverseitigen Framework kann `GET /courses/15` folgenden Weg nehmen:
+
+1. Der Router findet den Endpunkt und liest den Parameter `id` aus.
+2. Middleware oder Filter erledigen gemeinsame Aufgaben, etwa Authentifizierung.
+3. Der eigene Handler prüft Eingabe und Berechtigung für den Kurs.
+4. Die Service-/Datenzugriffsschicht lädt den Kurs.
+5. Das Framework verwandelt den Rückgabewert in JSON oder erzeugt HTML aus einem
+   Template.
+
+Die Anwendung registriert ihren Handler; beim Eintreffen der Anfrage ruft das
+Framework ihn auf. Dies ist ein Beispiel für **Inversion of Control**, die
+Umkehrung der Steuerung. Eine Datumsformatierungsfunktion aus einer Library ruft
+dagegen unser eigener Code an der benötigten Stelle auf. Die Unterscheidung
+hängt nicht einfach von der Paketgröße ab.
+
+Bei der Auswahl vergleichen wir für dieselbe konkrete Aufgabe Dokumentation,
+unterstützte Laufzeit, Aktualisierungsmöglichkeiten, Lizenz und Teamwissen.
+Für eine statische Informationsseite kann HTML/CSS genügen. Bei komplexen
+Formularsystemen helfen fertige Validierungs- und Testwerkzeuge. Integrierte
+Schutzfunktionen müssen trotzdem richtig konfiguriert werden. Das Framework
+entscheidet nicht selbst, welche Person welches Lernergebnis lesen darf.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Framework ist ein Rahmenwerk,
@@ -63,13 +87,6 @@ Dazu sagt man häufig:
 > Ein Framework ist mehr als eine einfache Library,
 > weil es nicht nur Funktionen bereitstellt,
 > sondern auch den Aufbau und die Arbeitsweise des Programms beeinflusst.
-
-## Häufige Prüfungsfehler
-
-- Framework und Library gleichsetzen.
-- Die strukturelle und konventionelle Rolle nicht erwähnen.
-- Behaupten, dass mit einem Framework alles immer schneller ist.
-- Kein Frontend- oder Backend-Beispiel nennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -88,6 +105,11 @@ Dazu sagt man häufig:
 5. Lern- und Komplexitätsmehraufwand
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Server-side web frameworks](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks): Routing, Middleware, Templates und Auswahlkriterien.
+
 
 1. MDN - Server-side web frameworks
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks

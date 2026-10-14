@@ -73,21 +73,42 @@ Ezért gyakran fontos a `sandbox` és más korlátozó attribútumok használata
 | `frameset` | a régi keretkiosztó elem |
 | `iframe` | modern, beágyazó elem |
 
+## Beágyazás minimális jogosultsággal
+
+Ez a HTML-részlet helyben is megnyitható, és nem tölt be külső szolgáltatást:
+
+```html
+<iframe
+  title="Isolierte Textvorschau"
+  sandbox
+  srcdoc="<p>Nur lesen</p>">
+</iframe>
+```
+
+A keretben a `Nur lesen` szöveg jelenik meg. A `title` a keret célját nevezi meg
+segítő technológiák számára. A `srcdoc` itt rögzített mintatartalom; felhasználói
+HTML beszúrásához külön biztonságos tartalomkezelés szükséges. Az üres `sandbox`
+a korlátozásokat bekapcsolja: például nincs szkriptfuttatás és űrlapküldés.
+Csak a valóban szükséges képességet engedjük vissza.
+
+Az `allow-scripts` és `allow-same-origin` együttes engedélyezése azonos eredetű
+tartalomnál alááshatja az elkülönítést. A beágyazott oldal saját szervere
+`Content-Security-Policy: frame-ancestors` fejléccel korlátozhatja, ki ágyazhatja
+be; ezt az oldal használója nem írhatja felül egy HTML-attribútummal.
+
+A régi teljes oldalas `frameset` elrendezést CSS Grid/Flexbox és normál
+navigáció váltja ki. Az `iframe` külön dokumentum beágyazására való, nem az
+elavult frame-es oldalfelosztás általános utódja. Külső beágyazásnál a hálózati
+adatküldést és a betöltési költséget is megvizsgáljuk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A frame fogalom a régi HTML-ben több keretre osztott oldalakat jelentett, de ez a megoldás ma már elavult.  
-> A modern weben helyette az `iframe` használható,
+> Másik dokumentum beágyazására a modern weben az `iframe` használható,
 > amellyel egy másik dokumentumot lehet az aktuális oldalba beágyazni.  
 > Az `iframe` hasznos lehet például videók
 > vagy külső szolgáltatások megjelenítésére,
 > de biztonsági és használhatósági szempontból körültekintően kell alkalmazni.
-
-## Gyakori vizsgahibák
-
-- A régi `frame` és a modern `iframe` összekeverése.
-- Azt állítani, hogy a frame ma is ajánlott alapoldalszerkezet.
-- Nem megemlíteni az elavultságot.
-- Nem beszélni a biztonsági szempontokról.
 
 ## Gyors önellenőrzés
 
@@ -106,6 +127,12 @@ Ezért gyakran fontos a `sandbox` és más korlátozó attribútumok használata
 5. Videó és térkép
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe): sandbox, srcdoc, címke és eredet.
+- [MDN: frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors): a beágyazást a tartalom szervere is korlátozhatja.
+
 
 1. MDN - `<iframe>`: The Inline Frame element  
    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe  

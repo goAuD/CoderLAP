@@ -75,6 +75,34 @@ Mert vizsgán gyakori kérdés:
 | CSS | HTML megjelenésének formázása |
 | JSON | másik adatcsere-formátum, nem markup nyelv |
 
+## Jól formált dokumentum és érvényes adat
+
+Ez egy teljes, UTF-8-kódolású XML-dokumentum:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<course id="15">
+  <title>Code &amp; Practice</title>
+  <lessons>20</lessons>
+</course>
+```
+
+Egyetlen gyökéreleme a `course`. A nyitó- és zárónevek kis- és nagybetűje is
+egyezik, az elemek szabályosan egymásba ágyazódnak, az attribútum idézőjelben van.
+A cím feldolgozott szövege `Code & Practice`, mert az `&amp;` egy `&` jelet jelöl.
+A `lessons` szövege `20`; attól még nem válik automatikusan ellenőrzött egész számmá.
+
+A **jól formáltság** az XML szerkezeti szabályainak teljesülése. Egy séma
+további megkötéseket adhat, például hogy `lessons` nemnegatív egész legyen,
+és a `title` kötelező. A dokumentum lehet jól formált, mégis a választott sémának
+nem megfelelő. Az alkalmazás üzleti szabálya, például a kurzusazonosító létezése,
+ezen felül is ellenőrzést igényelhet.
+
+HTML-ben a böngésző a `h1`, `p` vagy `button` ismert jelentését használja.
+Az XML általános szintaxis; az elemnevek jelentését az alkalmazás vagy egy
+XML-alapú formátum határozza meg. Az SVG például XML-alapú és grafikát ír le,
+ezért az XML feladata nem korlátozódik adatbázisok közötti adatcserére.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A HTML és az XML egyaránt jelölőnyelvek, de eltérő céllal használjuk őket.  
@@ -82,13 +110,6 @@ Mert vizsgán gyakori kérdés:
 > míg az XML strukturált adatok leírására
 > és cseréjére használható.  
 > A HTML előre definiált elemekkel dolgozik, az XML pedig rugalmasabban alakítható adatszerkezetet tesz lehetővé.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a HTML adatcsere-formátum.
-- Az XML-t megjelenítő nyelvnek tekinteni.
-- A CSS-t a HTML részeként kezelni.
-- Nem megemlíteni, hogy XML-ben saját elemeket is lehet definiálni.
 
 ## Gyors önellenőrzés
 
@@ -107,6 +128,11 @@ Mert vizsgán gyakori kérdés:
 5. Az XML-nél
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [W3C: XML 1.0](https://www.w3.org/TR/xml/): jól formáltság, gyökérelem, entitáshivatkozás és validitás.
+
 
 1. MDN - HTML basics  
    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics  

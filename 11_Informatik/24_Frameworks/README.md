@@ -52,6 +52,28 @@ Erre gyakran azt mondják:
 - Kisebb projekthez néha túl nehéz lehet.
 - Ismerni kell a konvencióit, különben nehézkes lesz a fejlesztés.
 
+## Ki irányítja a kérés feldolgozását?
+
+Egy szerveroldali keretrendszerben a `GET /courses/15` útja például:
+
+1. A router megtalálja a megfelelő végpontot, és kinyeri az `id` paramétert.
+2. A middleware vagy filter elvégzi a közös feladatot, például a hitelesítést.
+3. A saját kezelőfüggvény ellenőrzi a bemenetet és a kurzushoz való jogosultságot.
+4. A szolgáltatás/adatelérési réteg betölti a kurzust.
+5. A keretrendszer a visszaadott értéket JSON-ná vagy sablonból HTML-lé alakítja.
+
+Az alkalmazás a kezelőt regisztrálja, de a kérés érkezésekor a keretrendszer
+hívja meg. Ez a vezérlés megfordításának, az **inversion of controlnak** egy
+példája. Egy külön dátumformázó library függvényét ezzel szemben a saját kódunk
+hívja meg ott, ahol szüksége van rá. A határ nem pusztán a csomag mérete.
+
+Választáskor ugyanarra a konkrét feladatra ellenőrizzük a dokumentációt,
+támogatott futtatókörnyezetet, frissítési lehetőséget, licencet és a csapat
+tudását. Egy statikus tájékoztatóhoz lehet, hogy elég a HTML/CSS, egy összetett
+űrlapos rendszerhez a kész validálási és tesztelési eszközök sokat segítenek.
+A keretrendszer beépített védelmeit is helyesen kell konfigurálni; nem dönti el
+helyettünk, melyik tanuló melyik eredményt olvashatja.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A framework egy olyan keretrendszer,
@@ -63,13 +85,6 @@ Erre gyakran azt mondják:
 > A framework több, mint egy egyszerű library,
 > mert nemcsak funkciókat ad,
 > hanem a program felépítését és működési mintáját is befolyásolja.
-
-## Gyakori vizsgahibák
-
-- A frameworköt és a libraryt ugyanannak nevezni.
-- Nem megemlíteni a szerkezeti és konvenciós szerepet.
-- Azt állítani, hogy frameworkkel mindig gyorsabb minden.
-- Nem hozni rá frontend vagy backend példát.
 
 ## Gyors önellenőrzés
 
@@ -88,6 +103,11 @@ Erre gyakran azt mondják:
 5. Tanulási és komplexitási többlet
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Server-side web frameworks](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks): routing, middleware, sablon és választási feltételek.
+
 
 1. MDN - Server-side web frameworks  
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks  

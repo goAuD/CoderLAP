@@ -8,10 +8,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Oldal címe</title>
+    <title>Lernwerkstatt</title>
   </head>
   <body>
-    Tartalom
+    Willkommen!
   </body>
 </html>
 ```
@@ -86,6 +86,34 @@ Fontos:
 | `title` | oldal címe, nem azonos a főcímmel (`h1`) |
 | `doctype` | dokumentumtípus-jelölés, nem maga a tartalom |
 
+## A vázból egy megnyitható oldal
+
+A fenti váz mindkét nyelvi változatban német mintatartalmat használ, ezért
+`lang="de"` a helyes nyelvjelölés. Magyar oldalon a tartalommal együtt ezt is
+`hu` értékre módosítjuk. A képernyőolvasó kiejtéséhez ez lényeges.
+
+A `body` tartalmát cseréljük erre a HTML-részletre, és a teljes dokumentumot
+mentsük `index.html` néven, UTF-8-kódolással. Közvetlenül böngészőben megnyitható:
+
+```html
+<main>
+  <h1>Lernwerkstatt</h1>
+  <section aria-labelledby="loops-title">
+    <h2 id="loops-title">Schleifen</h2>
+    <p>Eine Schleife wiederholt Anweisungen.</p>
+  </section>
+</main>
+```
+
+A böngészőlap címe `Lernwerkstatt`, a dokumentum főcíme szintén `Lernwerkstatt`,
+alatta egy `Schleifen` szakasz és egy mondat jelenik meg. A két cím két külön
+elem; bármelyik szövege önállóan változtatható. A `main` a fő tartalmat jelöli,
+a címsorok a szerkezetet adják, nem pusztán betűméretek.
+
+A viewport-beállítás a mobilos méretezést alapozza meg, a rugalmas elrendezést
+majd a CSS biztosítja. A kézi nagyítást hagyjuk elérhetőnek. A „HTML5” a katalógus
+elnevezése; a folyamatosan karbantartott specifikáció a HTML Living Standard.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A HTML5 alapváz egy szabványos dokumentumszerkezet, amely `doctype`, `html`, `head` és `body` részekből áll.  
@@ -93,13 +121,6 @@ Fontos:
 > például a karakterkódolást, a viewport beállítást és a címet,
 > míg a `body` tartalmazza a felhasználó számára látható tartalmat.  
 > A helyes alapváz segíti a szabványos működést, a mobilos megjelenést és a karbantarthatóságot.
-
-## Gyakori vizsgahibák
-
-- A `title` elemet a `body` részbe tenni.
-- Azt hinni, hogy a `title` ugyanaz, mint a főcím (`h1`).
-- Kihagyni a `doctype`-ot.
-- Nem használni `charset` vagy `viewport` meta elemet modern oldalnál.
 
 ## Gyors önellenőrzés
 
@@ -118,6 +139,11 @@ Fontos:
 5. A mobilos és reszponzív megjelenés támogatására
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [WHATWG: HTML Standard](https://html.spec.whatwg.org/): dokumentumszerkezet és a mai HTML-szabvány.
+
 
 1. MDN - Doctype  
    https://developer.mozilla.org/en-US/docs/Glossary/Doctype  

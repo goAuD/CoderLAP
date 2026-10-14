@@ -74,18 +74,57 @@ Tehát:
 - A queue nem csak várakozási sor, hanem sok feldolgozási modell alapja.
 - Vizsgán gyakran kérik a műveletek nevét vagy legalább a működésüket.
 
+## Mire jó a műveletkészlet? Zárójelpárok ellenőrzése
+
+**Feladat:** egy szöveg kerek zárójelei legyenek kiegyensúlyozottak. Minden
+nyitás betesz egy elemet, minden zárás kivesz egyet. A többi karaktert ez az
+egyszerű ellenőrző figyelmen kívül hagyja. Nem teljes JavaScript-elemző,
+idézőjeleket és megjegyzéseket sem értelmez. Futtatás: Node.js.
+
+<!-- example:run -->
+
+```javascript
+function balancedParentheses(text) {
+  const stack = [];
+  for (const character of text) {
+    if (character === "(") stack.push(character);
+    if (character === ")") {
+      if (stack.length === 0) return false;
+      stack.pop();
+    }
+  }
+  return stack.length === 0;
+}
+console.log(balancedParentheses("(a + (b))"));
+console.log(balancedParentheses(")("));
+console.log(balancedParentheses("((a)"));
+console.log(balancedParentheses(""));
+```
+
+```text
+true
+false
+false
+true
+```
+
+Az első példánál a verem mélysége a zárójeleknél `1, 2, 1, 0`. A `)(` azonnal
+elutasításra kerül, mert üres veremből kellene kivenni. A `((a)` végén marad
+egy nyitás. Az üres szövegben nincs párosítatlan zárójel, ezért az eredmény igaz.
+A bejárás ideje a szöveg hosszával arányos, a verem legfeljebb annyi elemet tárol,
+ahány egymásba ágyazott nyitó zárójel van.
+
+A queue-nál más szerződés kell: a `peek` nem vesz ki elemet, a `dequeue` igen.
+Üres tárolónál dokumentáljuk a visszatérési értéket vagy a kivételt. A JavaScript
+`shift()` üres tömbre `undefined` értéket ad. Tömb elejéről törölve indexeket
+kell átrendezni; nagy forgalmú sorhoz körkörös puffer vagy megfelelő könyvtári
+queue lehet jobb. A FIFO-elv önmagában nem mondja meg a műveletek költségét.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A stack és a queue alapvető adatszerkezeti modellek.  
 > A stack veremelven működik, ezért az utoljára betett elem kerül ki először, vagyis LIFO.  
 > A queue ezzel szemben sorelven működik, ezért a legrégebben betett elem kerül feldolgozásra először, vagyis FIFO.
-
-## Gyakori vizsgahibák
-
-- A stacket és queue-t csak hétköznapi példával elmagyarázni, műveletek nélkül.
-- A LIFO/FIFO-t nem kötni hozzájuk.
-- A `push/pop` és `enqueue/dequeue` fogalmak összekeverése.
-- Azt mondani, hogy a stack mindig gyorsabb vagy jobb.
 
 ## Gyors önellenőrzés
 
@@ -104,6 +143,12 @@ Tehát:
 5. A stack tipikusan LIFO szerint működik
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Array.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift): üres tömb és átrendezési szemantika.
+- [MDN: Call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack): a verem egy konkrét alkalmazása.
+
 
 1. Oracle Java SE - `Deque` Interface  
    https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Deque.html  

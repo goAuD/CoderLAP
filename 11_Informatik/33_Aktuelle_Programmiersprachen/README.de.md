@@ -74,21 +74,60 @@ Wenn die Frage "aktuelle Sprachen" lautet, sollte man:
 - sie an Bereiche knüpfen
 - zeigen, dass heute mehrere Hauptrichtungen gleichzeitig vorhanden sind
 
+## Sprache, Laufzeit und Framework haben verschiedene Aufgaben
+
+| Element | Was ist es? | Beispiel für den Zusammenhang |
+|---|---|---|
+| JavaScript | Programmiersprache auf Grundlage des ECMAScript-Standards | läuft beispielsweise in Node.js oder im Browser |
+| Node.js | JavaScript-Laufzeitumgebung | etwa für serverseitigen Code |
+| TypeScript | Sprache auf JavaScript-Basis mit statischer Typprüfung | Typangaben bleiben normalerweise nicht im ausgeführten JavaScript |
+| React / Angular | UI-Library / Webframework | Werkzeuge für JavaScript- oder TypeScript-Projekte |
+
+**Illustrativer TypeScript-Quelltext**, beispielsweise im TypeScript Playground
+übersetzbar:
+
+```typescript
+function greet(name: string): string {
+  return `Hallo ${name}`;
+}
+console.log(greet("Ada"));
+```
+
+Die JavaScript-Fassung ohne Typangaben läuft eigenständig in Node.js:
+
+<!-- example:run -->
+
+```javascript
+function greet(name) {
+  return `Hallo ${name}`;
+}
+console.log(greet("Ada"));
+```
+
+```text
+Hallo Ada
+```
+
+`name: string` hilft während der Entwicklung, Aufrufe zu prüfen. JSON aus dem
+Netzwerk muss trotzdem zur Laufzeit geprüft werden: Ein TypeScript-Typ wandelt
+externe Daten weder um noch bestätigt er ihre Gültigkeit. Typprüfung, Tests
+und Eingabevalidierung beantworten unterschiedliche Fragen.
+
+**Begründete Wahl:** Bei der Erweiterung eines Formulars auf einer kleinen
+bestehenden PHP-Seite kann das Beibehalten einer gepflegten PHP-Umgebung einfach
+sein. Für Android-spezifische Gerätefunktionen können Kotlin und die Plattform-API
+passen. Unterstützte Versionen, Teamwissen, Betrieb und Aufgabe sind aussagekräftiger
+als eine einzelne Beliebtheitsrangliste. Die Aufzählung hier ist weder vollständig
+noch eine Rangfolge.
+
 ## Prüfungstaugliche Formulierung
 
-> Laut Stand `2026. April 8.` zählen zu den aktuellen Programmiersprachen jene,
+> Mit Stand `14. Oktober 2026` zählen zu den aktuellen Programmiersprachen jene,
 > die heute noch weit verbreitet und aktiv unterstützt werden.
 > In der Web-, Mobil- und Unternehmensentwicklung
 > sind beispielsweise JavaScript, TypeScript, Python, Java,
 > C#, PHP, Kotlin und Swift besonders wichtig.
 > Es gibt keine einzige "beste" Sprache, die Wahl hängt immer von der Aufgabe, der Plattform und dem Ökosystem ab.
-
-## Häufige Prüfungsfehler
-
-- Eine einzelne Sprache als "die beste" hervorheben.
-- Alte oder bereits marginale Sprachen ohne Begründung als heutige Hauptrichtung bezeichnen.
-- Die Sprachen nicht mit dem Einsatzbereich verbinden.
-- Den Begriff "aktuell" mit "neu" verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -108,9 +147,15 @@ Wenn die Frage "aktuelle Sprachen" lautet, sollte man:
 
 ## Quellen
 
+Geprüft: `2026-10-14`.
+
+- [TypeScript Handbook: The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html): Typprüfung und Entfernen von Typangaben beim Übersetzen.
+- [Android Developers: Kotlin-first](https://developer.android.com/kotlin/first): Beispiel einer aufgaben- und plattformabhängigen Sprachwahl.
+
+
 1. Stack Overflow Developer Survey 2025 - Technology
    https://survey.stackoverflow.co/2025/technology/
-   Verwendung: aktueller `2025`-er Usage-Snapshot der weit verbreiteten Programmiersprachen.
+   Verwendung: historische Momentaufnahme der Nutzung unter den Befragten von 2025, keine vollständige Marktrangliste oder Bestätigung des heutigen Supports.
 
 2. TypeScript
    https://www.typescriptlang.org/

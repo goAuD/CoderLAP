@@ -20,7 +20,7 @@ Wesentlich:
 Wesentlich:
 
 - wenn die Pipeline-Bedingungen erfüllt sind
-- installiert das System die neue Version automatisch in der Zielumgebung
+- installiert das System die neue Version automatisch in der Produktionsumgebung
 
 Das erfordert hohe Automatisierung und großes Vertrauen in die Tests.
 
@@ -44,6 +44,43 @@ Weil in der Prüfung häufig genau das gefragt wird:
 - bei schlechter Pipeline kann auch eine fehlerhafte Version durchgehen
 - Rollback und Monitoring sind nötig
 
+## Dieselbe Version vom Test in die Produktion bringen
+
+**Beispiel:** Ein Paket `quiz-1.4.0` entsteht aus einem bekannten Commit. Die
+Testumgebung erhält dieses Paket. Bei der Auslieferung wird dasselbe geprüfte
+Artefakt produktiv installiert, nicht zufällig eine neu gebaute Variante mit
+inzwischen veränderten Abhängigkeiten.
+
+```text
+Commit -> Build -> Tests -> versioniertes Artefakt -> Staging
+  -> Prüfung -> [menschliche Freigabe] -> Produktion
+```
+
+Das kann **Continuous Delivery** sein: Die Installation ist automatisiert und
+wiederholbar, über den produktiven Einsatzzeitpunkt entscheidet ein Mensch.
+Bei **Continuous Deployment** entfällt nach den automatischen Prüfungen auch
+diese menschliche Freigabestufe. Automatisches Deployment nach Staging allein
+bedeutet noch keine automatische Produktivstellung.
+
+| Begriff | In diesem Beispiel |
+|---|---|
+| Build | das Artefakt entsteht |
+| Deployment | das Artefakt wird in der Zielumgebung installiert |
+| Release | die Funktion wird für Benutzer verfügbar |
+| Rollback | Wechsel auf eine vorherige funktionierende Version, soweit der Systemzustand es erlaubt |
+
+Deployment und Release können durch Feature Flags getrennt werden: Code ist
+bereits installiert, eine Funktion aber noch deaktiviert. Konfiguration und
+Geheimnisse werden je Umgebung verwaltet, nicht in das an Clients gelieferte
+Paket eingebaut.
+
+Nach dem Deployment prüfen wir die wichtigsten Abläufe und beobachten
+Fehlersignale. Eine gelöschte Datenbankspalte kommt durch Zurückkopieren der
+alten Anwendung nicht zurück. Dafür braucht es vorausgeplante kompatible
+Migrationen, erprobte Sicherungen und gegebenenfalls eine korrigierende neue
+Version. Ein Rollbackplan berücksichtigt deshalb neben dem Code auch Daten
+und Konfiguration.
+
 ## Prüfungstaugliche Formulierung
 
 > Continuous Delivery bedeutet,
@@ -53,15 +90,7 @@ Weil in der Prüfung häufig genau das gefragt wird:
 > Continuous Deployment geht einen Schritt weiter:
 > wenn alle Bedingungen der Pipeline erfüllt sind,
 > wird die neue Version automatisch installiert.
-> Der Hauptunterschied zwischen den beiden Begriffen ist also,
-> dass bei Deployment auch die Produktivstellung automatisiert ist.
-
-## Häufige Prüfungsfehler
-
-- Delivery und Deployment gleichsetzen.
-- Die Möglichkeit der manuellen Freigabe bei Delivery nicht erwähnen.
-- Glauben, dass ohne Automatisierung derselbe Begriff gilt.
-- Nicht über die Wichtigkeit von Tests und Rollback sprechen.
+> Der Hauptunterschied liegt in der menschlichen Freigabe: Bei Continuous Deployment folgt nach erfolgreichen automatischen Prüfungen keine separate manuelle Produktivfreigabe. Die technischen Installationsschritte können auch bei Continuous Delivery automatisiert sein.
 
 ## Schnelle Selbstkontrolle
 
@@ -75,11 +104,17 @@ Weil in der Prüfung häufig genau das gefragt wird:
 
 1. Die Software wird immer in einem auslieferbaren Zustand gehalten
 2. Es installiert auch automatisch
-3. Deployment automatisiert auch die Produktivstellung
+3. Bei Continuous Deployment folgt nach automatischen Prüfungen keine menschliche Produktivfreigabe je Version
 4. Weil sonst eine fehlerhafte Version weitergehen kann
 5. Damit man im Fehlerfall schnell zurückkehren kann
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Microsoft: Continuous delivery](https://learn.microsoft.com/en-us/devops/deliver/what-is-continuous-delivery): Auslieferbarer Zustand, Umgebungen und automatisierter Ablauf.
+- [GitHub: Reviewing deployments](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/review-deployments): Konkrete menschliche Freigabestufe.
+
 
 1. GitHub Docs - Continuous deployment
    https://docs.github.com/en/actions/get-started/continuous-deployment

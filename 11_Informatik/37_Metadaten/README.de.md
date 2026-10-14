@@ -62,19 +62,51 @@ Das HTML-`meta`-Element ist also nur ein spezielles Werkzeug für eine Art von M
 - Falsche Metadaten können irreführend sein.
 - Fehlende Metadaten verschlechtern die Durchsuchbarkeit und Verarbeitbarkeit.
 
+## Durchgearbeitetes Beispiel: Lerninhalt und seine Beschreibung
+
+Der Lerntext erklärt eine Schleife. Das folgende illustrative JSON beschreibt
+den zugehörigen Katalogeintrag, nicht das derzeitige Registry-Schema der Website:
+
+```json
+{
+  "id": "LAP-15-17",
+  "title": "Schleifen",
+  "language": "de",
+  "modified": "2026-10-14",
+  "format": "text/markdown"
+}
+```
+
+Die Suche erhält den Titel, die Sprachwahl die Sprache und die Änderungsliste
+das Datum. Eine stabile ID kann erhalten bleiben, wenn sich der angezeigte
+Titel ändert. Das ISO-formatierte Datum ist maschinell sortierbar, beschreibt
+hier aber nur einen Tag. Für einen genauen Zeitpunkt würden wir auch Zeitzone
+oder UTC-Offset festhalten.
+
+| Art von Metadaten | Beispiel | Nutzen |
+|---|---|---|
+| beschreibend | Titel, Thema, Sprache | Auffinden und Identifizieren |
+| technisch | Medientyp, Auflösung, Kodierung | Verarbeitung und Darstellung |
+| administrativ | Lizenz, Berechtigung, Version | Nutzung und Verwaltung |
+| strukturell | Reihenfolge und Beziehungen von Kapiteln | Zusammensetzen komplexer Inhalte |
+
+HTTP `Content-Type: application/json` beschreibt die übertragene Repräsentation.
+Das bestätigt noch nicht, dass der Inhalt dem Anwendungsschema entspricht.
+Ebenso reichen Dateiname, Endung und der vom Hochladenden angegebene Typ nicht
+als Sicherheitsprüfung. Wir prüfen Metadaten zusammen mit dem tatsächlichen
+Inhalt.
+
+Vor dem Teilen prüfen wir, ob ein Foto persönliche Ortsdaten oder ein Dokument
+einen Autorennamen enthält. Das Entfernen von GPS-Metadaten entfernt keine im
+Bild sichtbare Adresse oder Person. Auch bei Metadaten speichern wir nur,
+was für den Zweck gebraucht wird.
+
 ## Prüfungstaugliche Formulierung
 
 > Metadaten sind Daten, die andere Daten beschreiben.
 > Nicht der Hauptinhalt selbst, sondern seine ergänzende Beschreibung,
 > zum Beispiel Titel, Autor, Datum, Dateigröße oder Webseitenbeschreibung.
 > Metadaten sind wichtig für die Systematisierung, Suche, Darstellung und automatisierte Verarbeitung.
-
-## Häufige Prüfungsfehler
-
-- Metadaten nur auf das Web beschränken.
-- Metadaten mit dem tatsächlichen Inhalt verwechseln.
-- Die Datei-, Datenbank- oder Medienbeispiele nicht erwähnen.
-- Das `<meta>`-Element mit dem allgemeinen Begriff gleichsetzen.
 
 ## Schnelle Selbstkontrolle
 
@@ -93,6 +125,13 @@ Das HTML-`meta`-Element ist also nur ein spezielles Werkzeug für eine Art von M
 5. Sie können auch sensible Informationen enthalten
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [W3C: DCAT 3](https://www.w3.org/TR/vocab-dcat-3/): Kataloge und beschreibende Metadaten.
+- [MDN: Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Type): Typangabe einer HTTP-Repräsentation.
+- [Apple: Manage location metadata in Photos](https://support.apple.com/en-gb/guide/personal-safety/ips0d7a5df82/1.0/web/1.0): Umgang mit Ortsdaten beim Teilen.
+
 
 1. MDN - Metadata
    https://developer.mozilla.org/en-US/docs/Glossary/Metadata

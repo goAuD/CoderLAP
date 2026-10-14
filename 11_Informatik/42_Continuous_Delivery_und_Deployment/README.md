@@ -20,7 +20,7 @@ Lényege:
 Lényege:
 
 - ha a pipeline feltételei teljesülnek
-- a rendszer automatikusan telepíti az új verziót a célkörnyezetbe
+- a rendszer automatikusan telepíti az új verziót az éles környezetbe
 
 Ez nagy automatizáltságot és nagy bizalmat igényel a tesztekben.
 
@@ -44,6 +44,41 @@ Mert vizsgán gyakran ezt kérdezik:
 - rossz pipeline esetén hibás verzió is kijuthat
 - kell rollback és monitorozás
 
+## Ugyanaz a kiadás menjen a tesztből az éles rendszerbe
+
+**Példa:** elkészül egy `quiz-1.4.0` nevű csomag, ismert commitból. A tesztkörnyezet
+ezt a csomagot kapja meg. A kiadáskor ugyanennek az ellenőrzött artifactnak
+az éles telepítése történik, nem egy új, közben megváltozott függőségekből
+véletlenszerűen újraépített változaté.
+
+```text
+commit -> build -> tesztek -> verziózott artifact -> staging
+  -> ellenőrzés -> [emberi kiadási döntés] -> production
+```
+
+Ez **Continuous Delivery** lehet: a telepítés automatizált és ismételhető,
+de az éles kiadás időpontjáról ember dönt. **Continuous Deployment** esetén
+a megfelelő automatikus ellenőrzések után ez az emberi kiadási kapu is elmarad.
+Attól, hogy stagingre automatikusan telepítünk, még nem lesz automatikus az
+éles kiadás.
+
+| Fogalom | Ebben a példában |
+|---|---|
+| build | létrejön az artifact |
+| deployment | az artifact a célkörnyezetbe kerül |
+| release | a funkciót elérhetővé tesszük a felhasználóknak |
+| rollback | korábbi működő változatra váltunk, ha a rendszer állapota ezt megengedi |
+
+Deployment és release feature flaggel szétválasztható: a kód már települt,
+de egy funkció még nincs bekapcsolva. A konfigurációt és titkokat környezetenként
+kezeljük, nem építjük az ügyfélnek küldött csomagba.
+
+Telepítés után rövid működési próbával és a hibajelzések figyelésével ellenőrizzük
+a rendszert. Egy adatbázis-oszlop törlését a régi alkalmazás visszamásolása nem
+fordítja vissza. Ilyenkor előre tervezett, kompatibilis migráció, kipróbált mentés
+és szükség esetén javító új kiadás kell. A rollback terv tehát a kód mellett az
+adatok és konfiguráció állapotát is figyelembe veszi.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Continuous Delivery azt jelenti,
@@ -52,14 +87,7 @@ Mert vizsgán gyakran ezt kérdezik:
 > A Continuous Deployment ennél tovább megy:
 > ha a pipeline minden feltétele teljesül,
 > a rendszer automatikusan telepíti az új verziót.  
-> A két fogalom közötti fő különbség tehát az, hogy deployment esetén az élesbe juttatás is automatizált.
-
-## Gyakori vizsgahibák
-
-- A deliveryt és deploymentet ugyanannak nevezni.
-- Nem megemlíteni a manuális jóváhagyás lehetőségét delivery esetén.
-- Azt hinni, hogy automation nélkül is ugyanaz a fogalom.
-- Nem beszélni a tesztelés és rollback fontosságáról.
+> A fő különbség az emberi kiadási döntés: Continuous Deployment esetén a sikeres automatikus ellenőrzések után nincs külön manuális élesítési kapu. A telepítés technikai lépései Continuous Delivery mellett is lehetnek automatizáltak.
 
 ## Gyors önellenőrzés
 
@@ -73,11 +101,17 @@ Mert vizsgán gyakran ezt kérdezik:
 
 1. Mindig kiadható állapotban tartja a szoftvert
 2. Automatikusan telepít is
-3. A deployment az élesbe jutást is automatizálja
+3. Continuous Deploymentnél az automatikus ellenőrzések után nincs kiadásonkénti emberi élesítési kapu
 4. Mert különben hibás verzió mehet tovább
 5. Hogy hiba esetén gyorsan vissza lehessen állni
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Microsoft: Continuous delivery](https://learn.microsoft.com/en-us/devops/deliver/what-is-continuous-delivery): szállítható állapot, környezetek és automatizált folyamat.
+- [GitHub: Reviewing deployments](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/review-deployments): konkrét emberi jóváhagyási kapu.
+
 
 1. GitHub Docs - Continuous deployment  
    https://docs.github.com/en/actions/get-started/continuous-deployment  
