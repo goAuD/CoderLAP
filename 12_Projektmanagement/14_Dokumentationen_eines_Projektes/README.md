@@ -43,6 +43,14 @@
 
 Mert a projektdokumentáció nem egyetlen fájl, hanem **dokumentumrendszer**.
 
+## A dokumentumok egymást kapcsolják össze
+
+Egy hozzáférés-kezelési igény útja például: `K-07 követelmény -> D-02 jogosultsági döntés -> megvalósítás -> T-07 teszt -> elfogadási feljegyzés`. A jelölések segítségével megállapítható, mi alapján épült a funkció, és milyen ellenőrzés támasztja alá az átadását.
+
+A tesztterv már a követelmények tisztázásakor készülhet, a teszteredmények pedig fejlesztés közben gyűlnek. A kockázati, döntési és változásnapló is végig él. A lezárás ezeket összegzi, nem akkor kezdi meg az ellenőrzés dokumentálását.
+
+Kis projekthez néhány jól tagolt fájl is elég lehet. Nem a dokumentumok száma a cél, hanem az azonosítható, aktuális és összekapcsolt információ. Átadáskor legyen egyértelmű, melyik változat érvényes, hol található és ki tartja karban.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Egy projekt dokumentációjához többféle dokumentum tartozik,
@@ -51,13 +59,6 @@ Mert a projektdokumentáció nem egyetlen fájl, hanem **dokumentumrendszer**.
 > a jegyzőkönyvek, valamint a teszt-
 > és átadási dokumentációk.  
 > Ezek együtt biztosítják, hogy a projekt indítása, tervezése, megvalósítása és lezárása átlátható és visszakövethető legyen.
-
-## Gyakori vizsgahibák
-
-- A projektdokumentációt egyetlen végdokumentumnak tekinteni.
-- Nem megemlíteni az indítási és zárási dokumentumokat.
-- Kihagyni a státusz- és változáskövetést.
-- Nem szétválasztani a dokumentumok szerepét.
 
 ## Gyors önellenőrzés
 
@@ -76,6 +77,11 @@ Mert a projektdokumentáció nem egyetlen fájl, hanem **dokumentumrendszer**.
 5. Mert mutatják a haladást és problémákat
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Munkaterv, kockázati napló, projektmegbízás és átadási dokumentumok.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Master project documentation template  
    https://www.atlassian.com/software/confluence/templates/master-project-documentation  

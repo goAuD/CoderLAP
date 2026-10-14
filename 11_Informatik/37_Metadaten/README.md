@@ -62,18 +62,47 @@ Tehát a HTML `meta` elem csak egy speciális eszköz a metaadatok egyik fajtáj
 - A hibás metaadat félrevezető lehet.
 - A hiányos metaadat rontja a kereshetőséget és feldolgozhatóságot.
 
+## Kidolgozott eset: egy tananyag és a leíró adatai
+
+A tananyag szövege elmagyarázza a ciklust. A következő szemléltető JSON pedig
+a tananyaghoz tartozó katalógusbejegyzés; nem az oldal jelenlegi registry-sémája:
+
+```json
+{
+  "id": "LAP-15-17",
+  "title": "Schleifen",
+  "language": "de",
+  "modified": "2026-10-14",
+  "format": "text/markdown"
+}
+```
+
+Ebből a kereső címet, a nyelvválasztó nyelvet, a frissítési lista dátumot kap.
+Az állandó azonosító akkor is használható maradhat, ha a megjelenített cím
+változik. Az ISO-formátumú dátum géppel rendezhető, de itt csak napot jelöl;
+pontos időponthoz időzónát vagy UTC-eltolást is rögzítenénk.
+
+| Metaadattípus | Példa | Mit segít? |
+|---|---|---|
+| leíró | cím, téma, nyelv | megtalálás és azonosítás |
+| technikai | médiatípus, felbontás, kódolás | feldolgozás és megjelenítés |
+| adminisztratív | licenc, jogosultság, változat | felhasználás és kezelés |
+| szerkezeti | fejezetek sorrendje és kapcsolata | összetett anyag összeállítása |
+
+A HTTP `Content-Type: application/json` a küldött reprezentációt írja le;
+nem bizonyítja, hogy a törzs valóban megfelel az alkalmazás sémájának. Hasonlóan
+egy fájl neve, kiterjesztése és a feltöltő által küldött típusjelzés nem elegendő
+biztonsági ellenőrzés. A metaadatot és a tényleges tartalmat együtt vizsgáljuk.
+
+Megosztás előtt nézzük meg, nem kerül-e személyes helyadat a fényképbe vagy
+szerzőnév a dokumentumba. A GPS-metaadat eltávolítása nem tünteti el a képen
+látható címet vagy arcot. Metaadatból sem tárolunk többet a szükségesnél.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A metaadat olyan adat, amely más adatot ír le.  
 > Nem maga a fő tartalom, hanem annak kiegészítő leírása, például cím, szerző, dátum, fájlméret vagy weboldal-leírás.  
 > A metaadatok fontosak a rendszerezés, keresés, megjelenítés és automatizált feldolgozás szempontjából.
-
-## Gyakori vizsgahibák
-
-- A metaadatot csak a webre leszűkíteni.
-- A metaadatot összekeverni a tényleges tartalommal.
-- Nem megemlíteni a fájl-, adatbázis- vagy média példákat.
-- A `<meta>` elemet magával a fogalommal azonosnak venni.
 
 ## Gyors önellenőrzés
 
@@ -92,6 +121,13 @@ Tehát a HTML `meta` elem csak egy speciális eszköz a metaadatok egyik fajtáj
 5. Érzékeny információt is hordozhat
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [W3C: DCAT 3](https://www.w3.org/TR/vocab-dcat-3/): katalógusok és leíró metaadatok.
+- [MDN: Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Type): HTTP-reprezentáció típusjelölése.
+- [Apple: Manage location metadata in Photos](https://support.apple.com/en-gb/guide/personal-safety/ips0d7a5df82/1.0/web/1.0): helyadatok kezelése megosztáskor.
+
 
 1. MDN - Metadata  
    https://developer.mozilla.org/en-US/docs/Glossary/Metadata  

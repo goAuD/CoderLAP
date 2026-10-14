@@ -142,6 +142,14 @@ Fontos, hogy látszódjon:
 - legyen naprakész
 - tartalmazzon reprodukálható lépéseket
 
+## Ugyanaz a rendszer, három használható dokumentum
+
+Egy időpontfoglaló alkalmazásnál a felhasználói útmutató a foglalást és a lemondást mutatja be. A fejlesztői dokumentáció az adatmodellt, az API-kéréseket és a tesztelést írja le. Az üzemeltetési útmutató a telepítéshez, mentéshez és helyreállításhoz ad ellenőrizhető lépéseket.
+
+Egy mentési fejezetben a „készíts mentést” helyett megadjuk, mely adatokról, milyen jogosultsággal, hová és milyen megőrzési idővel készül mentés. A visszaállítás külön eljárást és próbát kap: egy üres tesztkörnyezetben ellenőrizzük a rekordok számát és egy foglalás megnyithatóságát. A dokumentáció megnevezi a tesztelt verziót és az eljárás felelősét is.
+
+Így a dokumentum teljesítési feltétele kézzelfogható: egy másik kolléga a leírást követve, szóbeli segítség nélkül végre tudja hajtani a feladatot. A titkok értéke helyett a biztonságos titoktárra hivatkozunk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Egy technikai dokumentáció célja,
@@ -150,14 +158,6 @@ Fontos, hogy látszódjon:
 > a rendszerleírás, a telepítési vagy használati lépések,
 > a hibaelhárítás és a verzióinformációk.  
 > A dokumentáció csak akkor hasznos, ha pontos, célcsoportnak megfelelő és naprakész.
-
-## Gyakori vizsgahibák
-
-- Nincs megnevezve a célcsoport.
-- Nincs előfeltétel vagy környezetleírás.
-- Nincsenek lépésről lépésre leírt műveletek.
-- Hiányzik a hibakezelési rész.
-- A dokumentum nem verziózott vagy nem frissített.
 
 ## Gyors önellenőrzés
 
@@ -176,6 +176,11 @@ Fontos, hogy látszódjon:
 5. Hogy tudni lehessen, melyik állapotra érvényes a dokumentum
 
 ## Források
+
+- [Google Technical Writing: Documents](https://developers.google.com/tech-writing/one/documents)  
+  Hatókör és célcsoport szerinti dokumentáció.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Google Technical Writing - Organizing large documents  
    https://developers.google.com/tech-writing/two/large-docs  

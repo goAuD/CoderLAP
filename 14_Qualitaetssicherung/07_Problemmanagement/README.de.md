@@ -14,7 +14,7 @@ Incident / wiederkehrender Fehler
 
 Es ist ein Prozess, der:
 
-- wiederkehrende Probleme sammelt
+- tatsächliche oder mögliche Ursachen eines oder mehrerer Incidents identifiziert
 - die Ursachen untersucht
 - die Grundursache ermittelt
 - eine dauerhafte Behebung oder vorbeugende Maßnahme einleitet
@@ -43,6 +43,14 @@ Ein Incident muss schnell behandelt werden, das Problem Management untersucht hi
 - Workaround oder endgültige Lösung
 - Dokumentation und Lessons Learned
 
+## Die Ursache wiederkehrender Speicherprobleme untersuchen
+
+Der Dienst fällt aus, weil die Festplatte voll ist. Incident Management stellt zunächst den Dienst sicher wieder her und bewahrt notwendige Nachweise. Problem Management untersucht, warum der Speicherverbrauch unbegrenzt gewachsen ist.
+
+Messungen zeigen: Ein fehlerhafter Import wiederholt dieselbe Meldung, die Logs werden nicht rotiert und die Warnung kommt zu spät. Es gibt mehrere beitragende Ursachen. Dauerhafte Maßnahmen sind die Importkorrektur, passend begrenzte Logrotation und frühere Kapazitätswarnungen. Jede erhält Zuständigkeit und Prüftermin. Einfaches Abschalten der Logs würde spätere Untersuchungsmöglichkeiten verlieren lassen.
+
+Ein Workaround lindert Auswirkungen vorläufig, beseitigt aber nicht unbedingt die Ursache. Die Analyse muss nicht auf mehrere gleiche Incidents warten: Auch ein einzelner schwerer Fall oder eine vorab erkannte mögliche Ursache kann sie rechtfertigen. Die Erkenntnisse verbessern das System, statt einer Person die Schuld zuzuweisen.
+
 ## Prüfungstaugliche Formulierung
 
 > Ziel des Problem Managements ist die Aufdeckung der Grundursache von Problemen
@@ -50,13 +58,6 @@ Ein Incident muss schnell behandelt werden, das Problem Management untersucht hi
 > Es konzentriert sich nicht nur auf die schnelle Behandlung von Symptomen,
 > sondern auch auf die Analyse der zugrunde liegenden Ursachen.  
 > Daher ist das Problem Management ein wichtiger Bestandteil der nachhaltigen Qualitätsverbesserung und des stabilen Betriebs.
-
-## Häufige Prüfungsfehler
-
-- Problem Management mit Incident Management gleichsetzen.
-- Nur die Fehlerbehebung erwähnen, nicht die Ursachenforschung.
-- Die Prävention nicht erwähnen.
-- Die Rolle der Grundursachenanalyse weglassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -75,6 +76,14 @@ Ein Incident muss schnell behandelt werden, das Problem Management untersucht hi
 5. Workaround, endgültige Behebung oder vorbeugende Maßnahme
 
 ## Quellen
+
+- [Atlassian: Problem and incident management](https://www.atlassian.com/incident-management/devops/incident-vs-problem-management)  
+  Umgang mit tatsächlichen oder möglichen Ursachen eines oder mehrerer Incidents.
+
+- [Google SRE: Postmortem culture](https://sre.google/sre-book/postmortem-culture/)  
+  Mehrere beitragende Ursachen und nachverfolgbare Maßnahmen ohne Schuldzuweisung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Problem management in Jira Service Management  
    https://www.atlassian.com/software/jira/service-management/product-guide/getting-started/problem-management  

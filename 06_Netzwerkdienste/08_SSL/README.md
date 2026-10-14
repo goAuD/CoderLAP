@@ -4,8 +4,9 @@
 
 | Fogalom | Mai helyzet |
 |---|---|
-| SSL 2.0 / 3.0 | elavult, nem ajánlott |
-| TLS 1.2 / 1.3 | modern, használatos |
+| SSL 2.0 / 3.0, TLS 1.0 / 1.1 | elavult, nem használható korszerű biztonsági beállításban |
+| TLS 1.2 | meglévő rendszereknél megfelelő konfigurációval még használatos |
+| TLS 1.3 | előnyben részesített korszerű változat |
 | "SSL certificate" | hétköznapi, de technikailag pontatlan megnevezés |
 
 ## Mi volt az SSL?
@@ -58,18 +59,19 @@ A jó válasz lényege:
 | HTTPS | HTTP TLS-sel védve |
 | tanúsítvány | hitelesítési lánc része, nem maga a protokoll |
 
+## Kidolgozott példa: mit ellenőriz a böngésző?
+
+Egy `https://shop.example.org` kapcsolathoz a kliens a névhez illő, időben érvényes tanúsítványt és megbízható hitelesítési láncot vár. A kézfogás során létrejönnek a forgalom védelméhez szükséges kulcsok. A tanúsítvány nyilvános adat; a hozzá tartozó magánkulcsot a kiszolgáló védi. A nagy mennyiségű alkalmazási adat védelméhez szimmetrikus titkosítás szolgál.
+
+Ha a tanúsítvány más névre szól vagy lejárt, az okot javítjuk. A tanúsítvány-ellenőrzés kikapcsolása nem helyettesíti a helyes konfigurációt. Az érvényes tanúsítvány a domain feletti jogosultságot támaszthatja alá, nem igazolja például egy webshop tisztességes üzleti működését.
+
+**Aktualitás, 2026-10-14:** az RFC 9852 az új, TLS-t használó protokolloknál TLS 1.3-at követel meg alapértelmezésként. TLS 1.2 indokolt kompatibilitási opcióként megmaradhat. Ez nem jelenti azt, hogy egyetlen dátummal minden meglévő TLS 1.2-kapcsolat automatikusan használhatatlanná válik.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az SSL a Secure Sockets Layer rövidítése, de ma már elavult technológia.  
 > A modern rendszerekben helyette a TLS használatos, ezért a HTTPS valójában HTTP TLS-védelemmel.  
 > A hétköznapokban az "SSL" szó még gyakran megmaradt, de technikailag a TLS a helyes mai fogalom.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy az SSL ma is a korszerű standard.
-- A TLS-t és az SSL-t pontosan ugyanannak tekinteni.
-- A tanúsítványt összekeverni a teljes protokollal.
-- Azt hinni, hogy az SSL csak weboldalaknál létezik.
 
 ## Gyors önellenőrzés
 
@@ -106,3 +108,10 @@ A jó válasz lényege:
    Használat: gyakorlati háttér a TLS működéséhez és a webes biztonsághoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 9325: Secure TLS use](https://www.rfc-editor.org/rfc/rfc9325.html): verziók és biztonságos konfiguráció.
+- [RFC 9852: New protocols and TLS 1.3](https://www.rfc-editor.org/rfc/rfc9852.html): 2026-os módosítás új protokollokhoz.
+
+Ellenőrizve: `2026-10-14`.

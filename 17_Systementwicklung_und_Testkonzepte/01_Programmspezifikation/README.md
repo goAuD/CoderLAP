@@ -60,6 +60,26 @@ Tipikusan:
 - nem önellentmondó
 - a célt és a szabályokat is leírja
 
+## Ellenőrizhető szerződés egy foglaláshoz
+
+A „rendszer gyors és biztonságos legyen” kívánságot konkrét feltételekre bontjuk.
+Példa egy tanfolyami férőhely foglalására:
+
+| Rész | Megállapodás |
+|---|---|
+| Előfeltétel | bejelentkezett felhasználó, létező tanfolyam |
+| Bemenet | tanfolyamazonosító; a felhasználót a szerver azonosítja |
+| Siker | egy foglalás keletkezik, a visszaigazolás ezt azonosítja |
+| Betelt tanfolyam | érthető elutasítás, foglalás nem keletkezik |
+| Ismételt kérés | ugyanarra a tanfolyamra nem keletkezik újabb foglalás |
+| Teljesítmény | előre megadott tesztgépen, adatmennyiségen és terhelésen mérjük |
+
+Az utófeltétel írja le, mi legyen igaz a sikeres művelet végén. A követelményhez
+azonosítót rendelhetünk, például `FOG-01`, és a teszteset erre hivatkozhat. Így
+változáskor kiderül, mely teszteket kell újragondolni. A homályos időelvárást a
+megrendelővel pontosítjuk, például a kérések 95%-a egy megadott terhelés mellett
+egy másodpercen belül válaszoljon. Ez a példában választott cél, nem általános előírás.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A programspecifikáció olyan leírás, amely rögzíti, hogy a programnak milyen feladatot kell ellátnia, milyen  
@@ -67,13 +87,6 @@ Tipikusan:
 > A specifikáció célja a követelmények egyértelmű rögzítése, hogy a fejlesztés és a tesztelés ugyanarra az elvárt  
 > működésre épülhessen.  
 > A specifikáció tehát nem a kódot, hanem az elvárt viselkedést írja le.
-
-## Gyakori vizsgahibák
-
-- A specifikációt magával a programkóddal azonosítani.
-- Nem megemlíteni a bemenet és kimenet szerepét.
-- Azt hinni, hogy a specifikáció csak hosszú vállalati dokumentum lehet.
-- Nem különválasztani a “mit” és a “hogyan” kérdést.
 
 ## Gyors önellenőrzés
 
@@ -92,6 +105,11 @@ Tipikusan:
 5. Mert ez alapján ellenőrizhető a helyes működés
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Atlassian: Product specifications](https://www.atlassian.com/agile/product-management/product-specification): mérhető cél és hatókör; saját foglalási példa.
+
 
 1. IEEE SA - IEEE/ISO/IEC P29148  
    https://standards.ieee.org/ieee/29148/12262  

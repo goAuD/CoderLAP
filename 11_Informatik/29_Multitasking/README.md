@@ -46,6 +46,33 @@ Ez történhet:
 - Rossz terhelésnél a rendszer lassulhat.
 - Fejlesztésnél figyelni kell a szálbiztonságra és a megosztott erőforrásokra.
 
+## Időosztás, várakozás és közös állapot
+
+Képzeljünk el egyetlen processzormagot és két futásra kész feladatot. Egy
+szemléltető, egyenlő időszeletes ütemezés így alakulhat:
+
+| Időszelet | Futó feladat | A másik feladat |
+|---|---|---|
+| 1 | A számol | B futásra kész, de vár |
+| 2 | B számol | A futásra kész, de vár |
+| 3 | A számol | B futásra kész, de vár |
+
+Ez időosztás, nem egyszerre végzett két CPU-művelet. A váltáskor a rendszer
+megőrzi és visszaállítja a végrehajtási állapotot; a kontextusváltásnak költsége
+van. Ha A háttértárra vagy hálózatra vár, a processzor közben B-vel foglalkozhat.
+Preemptív ütemezésnél az operációs rendszer megszakíthatja a futó feladatot,
+kooperatív modellben a feladatnak át kell adnia a vezérlést.
+
+A folyamatok általában elkülönített címtérrel rendelkeznek. Egy folyamat szálai
+közös memóriát is használnak, ezért az „olvasás, növelés, visszaírás” lépések
+összeakadhatnak: két szál `0`-t olvas, mindkettő `1`-et ír, és egy növelés
+elveszik. Zárolás vagy megfelelő atomi művelet teszi rendezetté a hozzáférést.
+
+A böngésző egy JavaScript-végrehajtási szálán egy hosszú szinkron számítás
+feltartja a felületet. Az `async` szó vagy egy Promise nem helyezi automatikusan
+másik szálra. Számításigényes feladatnál Worker, darabolás vagy más algoritmus
+lehet indokolt; hálózati várakozásnál az aszinkron API lehet elég.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A multitasking azt jelenti,
@@ -53,13 +80,6 @@ Ez történhet:
 > hogy azok a felhasználó számára egyidejűnek tűnnek.  
 > Ez megvalósulhat gyors időosztással vagy több processzormag használatával.  
 > Célja, hogy a rendszer több alkalmazást és háttérműveletet is hatékonyan tudjon kezelni.
-
-## Gyakori vizsgahibák
-
-- A multitaskingot valódi párhuzamossággal teljesen azonosnak venni.
-- Nem megemlíteni az operációs rendszer szerepét.
-- Azt hinni, hogy egyetlen processzormagon nincs multitasking.
-- Nem beszélni az erőforrásmegosztásról.
 
 ## Gyors önellenőrzés
 
@@ -78,6 +98,12 @@ Ez történhet:
 5. Erőforrás-kezelés és szálbiztonság
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: JavaScript execution model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model): futási szál, eseményhurok és megosztott állapot.
+- [Microsoft: Processes and threads](https://learn.microsoft.com/en-us/windows/win32/procthread/processes-and-threads): folyamat, szál és ütemezés.
+
 
 1. Microsoft Support - How to multitask in Windows  
    https://support.microsoft.com/en-us/windows/how-to-multitask-in-windows-b4fa0333-98f8-ef43-e25c-06d4fb1d6960  

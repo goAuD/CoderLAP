@@ -73,6 +73,32 @@ Das ist bei Prüfungen ein typischer Grundbegriff.
 | TLD | der oberste, letzte Teil |
 | URL | vollständige Webadresse, nicht nur die Domain |
 
+## Durchgearbeitetes Beispiel: URL und DNS-Eintrag
+
+In `https://api.example.org:8443/topics?id=7#answer` ist `api.example.org` der Host, `8443` der Port und `/topics` der Pfad. Port und Pfad gehören nicht zum Domainnamen. Mit dem eingebauten JavaScript-URL-Parser lässt sich die Adresse ohne Netzwerkanfrage untersuchen:
+
+<!-- example:run -->
+```javascript
+const address = new URL('https://api.example.org:8443/topics?id=7#answer');
+console.log(address.hostname);
+console.log(address.port);
+console.log(address.pathname);
+console.log(address.searchParams.get('id'));
+```
+
+Erwartete Ausgabe:
+
+```text
+api.example.org
+8443
+/topics
+7
+```
+
+Im DNS kann ein `A`-Eintrag eine IPv4-, ein `AAAA`-Eintrag eine IPv6-Adresse liefern. `CNAME` ist ein Alias auf einen anderen Namen, `MX` bezeichnet den Ziel-Mailserver. Ein neuer DNS-Eintrag konfiguriert noch keinen Webserver und kein TLS-Zertifikat. Die TTL regelt die Zwischenspeicherung, weshalb Änderungen nicht bei allen Clients sofort sichtbar werden.
+
+Die Grenze der registrierbaren Domain lässt sich nicht immer aus den letzten zwei Labels ableiten: `co.uk` ist beispielsweise ein öffentlicher Namensraum aus mehreren Labels.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Domainname ist ein hierarchischer Name im Internet,
@@ -80,14 +106,7 @@ Das ist bei Prüfungen ein typischer Grundbegriff.
 > Eine Domain kann aus mehreren Teilen bestehen:
 > Der oberste Teil ist die TLD,
 > und unterhalb der Domain können weitere Subdomains erstellt werden.  
-> Zum Beispiel ist im Namen `developer.mozilla.org` das `org` die TLD, `mozilla` der Domainteil und `developer` die Subdomain.
-
-## Häufige Prüfungsfehler
-
-- URL und Domainname als dasselbe betrachten.
-- Glauben, dass `www` immer Pflicht ist.
-- Nicht erkennen, dass die Subdomain Teil der Domain ist.
-- Die TLD mit der gesamten Domain verwechseln.
+> Zum Beispiel ist im Namen `developer.mozilla.org` das `org` die TLD, `mozilla` der Domainteil und `developer` das zusätzliche Label; der vollständige Subdomainname lautet `developer.mozilla.org`.
 
 ## Schnelle Selbstkontrolle
 
@@ -100,7 +119,7 @@ Das ist bei Prüfungen ein typischer Grundbegriff.
 ## Kurzantworten zur Selbstkontrolle
 
 1. `at`
-2. `developer`
+2. `developer.mozilla.org` ist eine Subdomain von `mozilla.org`; `developer` ist das zusätzliche Label
 3. Für menschenfreundliche Internetadressierung
 4. Nein
 5. Nein
@@ -128,3 +147,10 @@ Das ist bei Prüfungen ein typischer Grundbegriff.
    Verwendung: offizielle Quelle zur Rolle der TLDs und der Root-Zone.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 9499: DNS Terminology](https://www.rfc-editor.org/rfc/rfc9499.html): Labels, Hierarchie und DNS-Cache.
+- [MDN: URL](https://developer.mozilla.org/en-US/docs/Web/API/URL): URL-Verarbeitung.
+
+Geprüft: `2026-10-14`.

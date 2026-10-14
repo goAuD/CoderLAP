@@ -35,7 +35,7 @@ Weil es in der frühen modernen Frontend-Ära ein großer Schritt war:
 
 ## Wie sieht es heute aus?
 
-Aus Sicht von `2026. April 8.`:
+Stand: `14. Oktober 2026`.
 
 - AngularJS gilt als alte Technologie
 - die offizielle Unterstützung wurde bereits eingestellt
@@ -60,6 +60,38 @@ In solchen Fällen ist die Aufgabe häufig nicht Neuentwicklung, sondern:
 | AngularJS | alt, 1.x-Linie, nicht mehr unterstützt |
 | Angular | neuer, aktiv unterstütztes Framework |
 
+## Eine ältere Vorlage erkennen
+
+Das folgende **Lesebeispiel** zeigt AngularJS-1.x-Syntax. Es würde nur in einer
+Umgebung mit bereits geladenem AngularJS funktionieren. Es ist keine eigenständige
+HTML-Demo und kein Anlass, die nicht mehr unterstützte Bibliothek in einem neuen
+Projekt zu installieren.
+
+```html
+<div ng-app>
+  <label for="legacy-name">Name</label>
+  <input id="legacy-name" ng-model="name">
+  <p>Hallo {{ name }}</p>
+</div>
+```
+
+`ng-app` kennzeichnet den Anwendungsbereich. `ng-model` verbindet den Feldwert
+mit dem Modellwert `name`. Das Framework wertet `{{ name }}` aus. Gibt die
+Person `Anna` ein, wird der Absatz zu `Hallo Anna`. Dafür ist keine eigene
+`textContent`-Änderung nötig.
+
+Das zeigt den Vorteil von Data Binding. Das clientseitige Modell befindet sich
+aber weiterhin in der Umgebung der Benutzer. Der Server muss Eingaben und
+Berechtigungen unabhängig prüfen.
+
+Bei Wartung erfassen wir zunächst Routen, Formulare, Abhängigkeiten und
+API-Verträge. Wichtige Verhaltensweisen werden durch Tests festgehalten.
+Danach lässt sich die Oberfläche schrittweise ablösen. Das heutige Angular ist
+ein anderes, komponentenbasiertes Framework. Der Umstieg ist nicht nur eine
+Erhöhung der AngularJS-Paketversion. Für den Prüfungskatalog erkennen und
+erklären wir die ältere Technik. Unterstützungsentscheidungen richten sich
+jedoch nach dem Herstellerlebenszyklus.
+
 ## Prüfungstaugliche Formulierung
 
 > AngularJS ist ein älteres JavaScript-basiertes Frontend-Framework,
@@ -68,13 +100,6 @@ In solchen Fällen ist die Aufgabe häufig nicht Neuentwicklung, sondern:
 > bei der Entstehung der modernen Frontend-Entwicklung,
 > aber die offizielle Unterstützung endete im Januar 2022.
 > Daher wird es für neue Projekte heute nicht mehr empfohlen, man trifft es eher bei der Wartung alter Systeme an.
-
-## Häufige Prüfungsfehler
-
-- AngularJS mit dem heutigen Angular gleichsetzen.
-- Darüber sprechen, als wäre es heute noch eine primär empfohlene Technologie.
-- Den Legacy-Status nicht erwähnen.
-- Nicht sagen, dass es hauptsächlich für SPAs verwendet wurde.
 
 ## Schnelle Selbstkontrolle
 
@@ -94,6 +119,12 @@ In solchen Fällen ist die Aufgabe häufig nicht Neuentwicklung, sondern:
 
 ## Quellen
 
+Geprüft: `2026-10-14`.
+
+- [AngularJS: official status](https://angularjs.org/): offizielles Supportende seit Januar 2022 und Data Binding.
+- [Angular: overview](https://angular.dev/overview): heutiges Angular als separates komponentenbasiertes Framework.
+
+
 1. AngularJS official site
    https://angularjs.org/
    Verwendung: offizieller Status und Beschreibung der Rolle von AngularJS;
@@ -102,8 +133,6 @@ In solchen Fällen ist die Aufgabe häufig nicht Neuentwicklung, sondern:
 
 2. Stack Overflow Developer Survey 2025 - Technology
    https://survey.stackoverflow.co/2025/technology/
-   Verwendung: aktuelle Technologieübersicht und Usage-Snapshot,
-   in dem AngularJS bereits mit geringerer Präsenz,
-   typischerweise als Legacy-Technologie sichtbar ist.
+   Verwendung: historische Nutzungsumfrage von 2025. Quelle für den Supportstatus ist die offizielle AngularJS-Seite.
 
 Abgerufen: `2026-04-08`

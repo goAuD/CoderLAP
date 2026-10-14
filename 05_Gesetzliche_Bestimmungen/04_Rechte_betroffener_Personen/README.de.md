@@ -31,7 +31,7 @@ Die betroffene Person kann fragen:
 - ob Daten über sie verarbeitet werden
 - welche Daten verarbeitet werden
 
-In bestimmten Fällen kann sie auch eine Kopie verlangen.
+Das Auskunftsrecht umfasst auch eine Kopie der verarbeiteten personenbezogenen Daten; die erste Kopie ist grundsätzlich kostenlos, Rechte anderer sind zu berücksichtigen.
 
 ## 3. Recht auf Berichtigung
 
@@ -101,7 +101,32 @@ In bestimmten Fällen kann diese Frist verlängert werden.
 - die Rechte sind nicht unbeschränkt
 - bei einzelnen Rechten gibt es Ausnahmen
 - die betroffene Person wendet sich in der Regel zunächst an den Verantwortlichen
-- wenn das nicht zum Ergebnis führt, kommt die Beschwerde bei der Behörde
+- bei vermuteten Rechtsverletzungen ist auch eine direkte Beschwerde möglich; für eine verweigerte Auskunft muss zuvor Auskunft beim Verantwortlichen verlangt worden sein
+
+## Einen Antrag praktisch bearbeiten
+
+Ein Kunde verlangt eine Kopie seiner Kontodaten und die Berichtigung einer falschen Adresse.
+Wir erfassen den Eingang, prüfen die Identität soweit erforderlich und verhältnismäßig
+und suchen die Daten in den betroffenen Systemen. Der Export darf weder Daten anderer
+Kunden noch deren Passwörter enthalten.
+
+Grundsätzlich antworten wir **unverzüglich, spätestens innerhalb eines Monats**.
+Bei komplexen oder zahlreichen Anträgen ist eine Verlängerung um höchstens zwei weitere
+Monate möglich. Darüber und über die Gründe informieren wir innerhalb des ersten Monats.
+Ein Monat entspricht nicht in jedem Fall 30 Tagen.
+
+Datenübertragbarkeit ist enger als Auskunft: Sie betrifft bereitgestellte Daten bei
+**automatisierter** Verarbeitung auf Grundlage einer Einwilligung oder eines Vertrags.
+Eine direkte Übermittlung hängt auch von der technischen Machbarkeit ab.
+Nach einem Widerspruch gegen Direktwerbung verarbeiten wir die Daten nicht weiter für diesen Zweck.
+
+**Entscheidungsbeispiel:** Kontolöschung und gesetzliche Rechnungsaufbewahrung sind verschiedene
+Zwecke. Nicht mehr benötigte Kontodaten können gelöscht werden; aufbewahrungspflichtige
+Rechnungen verbleiben mit begrenztem Zugriff nur für den begründeten Aufbewahrungszweck.
+Die Antwort erklärt, was gelöscht wurde und was aus welchem Grund weiter gespeichert wird.
+
+Quelle: [EDPB: Betroffenenrechte](https://www.edpb.europa.eu/sme/be-compliant/respect-individuals-rights_en),
+Art. 12, 15, 17, 20 und 21 DSGVO. Geprüft: 2026-10-14.
 
 ## Prüfungstaugliche Formulierung
 
@@ -111,14 +136,6 @@ In bestimmten Fällen kann diese Frist verlängert werden.
 > Der Verantwortliche muss auf diese Anträge grundsätzlich innerhalb eines Monats reagieren.
 > Wenn die betroffene Person eine Rechtsverletzung feststellt,
 > kann sie eine Beschwerde bei der österreichischen Datenschutzbehörde einreichen.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, das Recht auf Löschung sei immer unbeschränkt.
-- Die Datenübertragbarkeit zu vergessen.
-- Die Möglichkeit der Beschwerde bei der Behörde nicht zu erwähnen.
-- Die Ein-Monats-Grundregel nicht zu kennen.
-- Das Recht auf Information mit dem Recht auf Auskunft zu verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -133,7 +150,7 @@ In bestimmten Fällen kann diese Frist verlängert werden.
 1. Information, Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch
 2. Man kann fragen, welche Daten über einen verarbeitet werden
 3. Die Korrektur ungenauer oder unvollständiger Daten
-4. An den Verantwortlichen, und bei Bedarf an die DSB
+4. An den Verantwortlichen; bei einer Rechtsverletzung kann sie sich auch bei der DSB beschweren
 5. Grundsätzlich ein Monat
 
 ## Quellen

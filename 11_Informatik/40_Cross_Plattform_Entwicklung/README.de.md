@@ -52,6 +52,41 @@
 - wenn plattformspezifische UI der Schlüssel ist
 - wenn maximale Leistung an erster Stelle steht
 
+## Was teilen wir, und was prüfen wir je Plattform?
+
+Punkteberechnung und Fragenmodell eines Quiz lassen sich gut teilen. Oberfläche,
+lokaler Speicher, Benachrichtigungen und Zurücknavigation können dagegen je
+Plattform unterschiedlich sein. Gemeinsame Regeln lassen sich von der Plattform-API
+trennen:
+
+```text
+gemeinsame Quizlogik
+  -> abstrakte Speicheroperation
+     -> Web: Browser-Speicher
+     -> Android/iOS: passende lokale Speicher-API
+```
+
+Dies ist eine illustrative Schichtung, keine Pflicht zu einem neuen Framework.
+Zwei kleine, verständliche Plattformdateien können einfacher sein als eine
+Riesenfunktion voller Bedingungen. React Native unterstützt beispielsweise
+`.ios`- und `.android`-Dateivarianten; Aufrufer können dieselbe Schnittstelle nutzen.
+
+| Prüfung | Warum auch bei derselben Funktion nötig? |
+|---|---|
+| Dateiname und Pfad | Groß-/Kleinschreibung kann je Dateisystem anders behandelt werden |
+| UTF-8 und Zeilenenden | Exporte mit Umlauten und Texte aus verschiedenen Systemen |
+| Zeitpunkt | Zeitzone und Sommerzeit beeinflussen die lokale Anzeige |
+| verweigerte Berechtigung | auch ohne Kamera oder Benachrichtigung ist ein verständlicher Zustand nötig |
+| Tastatur und Navigation | Bildschirmtastatur, Zurücknavigation und Desktop-Fokus unterscheiden sich |
+| schwaches Gerät und Netzwerk | gemessen wird tatsächliche Leistung, nicht der Frameworkname |
+
+Für Dateisystempfade verwenden wir in Node.js passende Werkzeuge aus `node:path`.
+Eine HTTP-URL bauen wir dagegen nicht wie einen Dateisystempfad auf. Cross-Platform
+ist nicht zwangsläufig langsam, nativ ist nicht automatisch schnell. Aufgabe,
+Implementierung und Messung entscheiden. Auch eine Webapp kann auf mehreren
+Plattformen laufen; responsives Design bezeichnet darin die Layoutanpassung,
+nicht die Lösung sämtlicher Plattformunterschiede.
+
 ## Prüfungstaugliche Formulierung
 
 > Ziel der Cross-Platform-Entwicklung ist es,
@@ -62,13 +97,6 @@
 > dass in bestimmten Fällen Kompromisse beim nativen Erlebnis,
 > bei der Leistung oder bei plattformspezifischen Funktionen nötig sind.
 > Typische Beispiele sind Flutter, React Native und .NET MAUI.
-
-## Häufige Prüfungsfehler
-
-- Cross-Platform mit responsiver Webseite verwechseln.
-- Behaupten, dass es die native Entwicklung immer vollständig ersetzt.
-- Die Kompromisse nicht erwähnen.
-- Kein konkretes technologisches Beispiel nennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,9 +112,15 @@
 2. Weniger Duplikation und schnellere Entwicklung
 3. Kompromisse beim nativen Erlebnis oder bei Funktionen
 4. Flutter, React Native, .NET MAUI
-5. Das eine ist Anwendungsentwicklung, das andere Web-Layout
+5. Cross-Platform unterstützt mehrere Plattformen; Responsive Design behandelt die Anpassung des Web-Layouts
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [React Native: Platform-specific code](https://reactnative.dev/docs/platform-specific-code): Umgang mit gemeinsamem und unterschiedlichem Plattformcode.
+- [Node.js: Path](https://nodejs.org/api/path.html): Unterschiedliche Behandlung von Windows- und POSIX-Dateipfaden.
+
 
 1. Flutter
    https://flutter.dev/

@@ -70,20 +70,29 @@ Például nem oldja meg önmagában:
 | TLS | a kapcsolatot védő biztonsági protokoll |
 | SSL | régi, elavult elődnév |
 
+## Kidolgozott kérés-válasz példa
+
+Az alábbi HTTP/1.1-részlet egy feladat lekérdezését szemlélteti. HTTPS használatakor ez az alkalmazási adat a védett kapcsolaton halad; a példa nem élő szervernek küldendő parancs.
+
+```http
+GET /api/tasks/7 HTTP/1.1
+Host: example.org
+Accept: application/json
+```
+
+Siker esetén `200 OK` és például `{"id":7,"done":false}` JSON-törzs érkezhet, `Content-Type: application/json` fejléccel. Nem létező feladatnál `404`, hiányzó vagy nem megfelelő hitelesítésnél `401`, tiltott műveletnél `403` lehet a megfelelő válasz a konkrét API szabályai szerint.
+
+A `GET` olvasásra szolgál; a `POST` gyakran létrehozást vagy műveletet indít. A `PUT` és `DELETE` szemantikája idempotens: ugyanazt a kérést ismételve a kívánt szerveroldali hatás nem halmozódik. Ez nem garantál azonos válaszszöveget vagy státuszkódot.
+
+Az állapotmentes HTTP mellett az alkalmazás sütivel vagy tokennel fenntarthat munkamenetet. A HTTPS a kapcsolatot védi és megfelelő tanúsítvány-ellenőrzéssel a kiszolgáló nevét hitelesíti; a weboldal állításainak igazságát nem igazolja. HTTP/3 esetén a szállítás QUIC-ra épül, TLS 1.3 integrációval.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A HTTP (Hypertext Transfer Protocol) a weben használt alapvető kérés-válasz protokoll.  
 > A HTTPS (Hypertext Transfer Protocol Secure) ugyanez a protokoll TLS-védelemmel,
 > ezért biztosítja az adatforgalom titkosítását,
-> sértetlenégét és a szerver hitelesítését.  
+> sértetlenségét és a szerver hitelesítését.
 > Gyakorlatban a modern webes szolgáltatásoknál a HTTPS a standard.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a HTTPS teljesen más protokoll, mint a HTTP.
-- A HTTP-t titkosítottnak gondolni.
-- A TLS-t és az SSL-t mai értelemben szinonimaként kezelni.
-- Elfelejteni a portokat.
 
 ## Gyors önellenőrzés
 
@@ -128,3 +137,10 @@ Például nem oldja meg önmagában:
    Használat: hivatalos portregiszter a `80` és `443` portokhoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html): metódusok, idempotencia és válaszkódok.
+- [RFC 9114: HTTP/3](https://www.rfc-editor.org/rfc/rfc9114.html): QUIC-alapú HTTP.
+
+Ellenőrizve: `2026-10-14`.

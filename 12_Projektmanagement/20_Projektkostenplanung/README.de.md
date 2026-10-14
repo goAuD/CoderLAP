@@ -45,6 +45,23 @@
 - Änderungen betreffen auch die Kosten
 - Plan und Realität müssen regelmäßig abgeglichen werden
 
+## Berechneter Kostenplan und aktualisierte Prognose
+
+Fiktives Planungsbeispiel ohne Steuern:
+
+| Posten | Berechnung | Betrag |
+|---|---|---:|
+| Entwicklung | 40 Stunden × 35 EUR | 1 400 EUR |
+| Prüfung | 10 Stunden × 30 EUR | 300 EUR |
+| einmalige Umgebungseinrichtung | Festbetrag | 120 EUR |
+| geschätzte Basiskosten | Summe der Positionen | 1 820 EUR |
+| beispielhafte Risikoreserve | 10% × 1 820 EUR | 182 EUR |
+| geplanter Rahmen | 1 820 + 182 EUR | 2 002 EUR |
+
+Die 10 % sind lediglich eine Übungsannahme. Reale Reserven werden durch erkannte Risiken und Schätzunsicherheit begründet und sind kein frei verfügbares Budget für Zusatzfunktionen. Der Kostenplan nennt Steuerbehandlung, Annahmen zu internen Stundensätzen und Zeitraum der Betriebskosten. Die Zeit eigener Beschäftigter wird nicht kostenlos, nur weil keine gesonderte Rechnung entsteht.
+
+Sind bereits 900 EUR angefallen und werden für die Restarbeit neu 1 250 EUR erwartet, beträgt die Gesamtprognose 2 150 EUR. Sie übersteigt den Rahmen von 2 002 EUR um 148 EUR. Das erfordert eine Entscheidung und Plananpassung.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Projektkostenplanung werden
@@ -54,13 +71,6 @@
 > Ihr Ziel ist es, dass das Projekt mit einem realistischen Kostenrahmen startet,
 > finanzielle Risiken sichtbar sind
 > und die Kosten im Projektverlauf nachverfolgbar bleiben.
-
-## Häufige Prüfungsfehler
-
-- Nur mit Entwicklerstundensätzen rechnen.
-- Lizenzen, Infrastruktur oder Reserve nicht erwähnen.
-- Den Kostenplan als einmaliges Papier betrachten.
-- Kosten nicht mit Scope und Zeit verknüpfen.
 
 ## Schnelle Selbstkontrolle
 
@@ -79,6 +89,14 @@
 5. Damit Abweichungen rechtzeitig sichtbar werden
 
 ## Quellen
+
+- [PMI: Contingency, Are You Covered?](https://www.pmi.org/learning/library/contingency-are-covered-6099)  
+  Zusammenhang zwischen Reserve und Schätzunsicherheit.
+
+- [PMI: Earned value management and risk management](https://www.pmi.org/learning/library/earned-value-risk-management-competence-8296)  
+  Kostenprognose aus bereits entstandenen Kosten und verbleibendem Aufwand.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Budget proposal template  
    https://www.atlassian.com/software/confluence/templates/budget-proposal  

@@ -2,36 +2,15 @@
 
 ## Schneller visueller Überblick
 
-### Weltweiter Desktop-Markt
+### Zuerst den Markt in Bereiche aufteilen
 
-**StatCounter Global Stats, März 2026** basierend:
+| Umgebung | Wichtige Systemfamilien | Sinnvolle Vergleichskriterien |
+| --- | --- | --- |
+| Desktop und Laptop | Windows, macOS, Linux, ChromeOS | Anwendungen, Hardware, Support |
+| Smartphone | Android, iOS | Geräte, Updates, App-Angebot |
+| Server | Linux-Distributionen, Windows Server | Dienste, Betrieb, Lizenzen |
 
-| System   |   Anteil |
-| -------- | -------: |
-| Windows  |  `60.8%` |
-| OS X     |  `9.52%` |
-| macOS    |  `5.24%` |
-| Linux    |  `3.16%` |
-| ChromeOS |  `1.62%` |
-| Unknown  | `19.67%` |
-
-Anmerkung:
-
-- StatCounter listet die Apple-Desktop-Systeme getrennt als `OS X` und `macOS` auf
-- diese sollten zusammen als Apple-Desktop-Familie betrachtet werden
-
-### Weltweit alle Plattformen
-
-**StatCounter Global Stats, Februar 2026** basierend:
-
-| System  |   Anteil |
-| ------- | -------: |
-| Android | `35.87%` |
-| Windows | `31.37%` |
-| iOS     | `17.01%` |
-| OS X    |  `3.43%` |
-| macOS   |  `2.31%` |
-| Unknown |  `7.81%` |
+Ein Marktanteil hängt von der Messung ab. StatCounter erfasst Seitenaufrufe in seinem eigenen Website-Netzwerk und zählt nicht alle installierten Rechner. Aus den Daten der Client-Browser lässt sich auch kein unmittelbarer Marktanteil der Serverbetriebssysteme ableiten. Aktuelle Diagramme sind bei den Quellen verlinkt.
 
 ## Was bedeutet marktführend?
 
@@ -115,6 +94,14 @@ Denn hier reicht es nicht, nur Namen zu nennen, man muss wissen:
 - was der Unterschied zwischen Desktop- und Mobilmarkt ist
 - warum „marktführend" nicht in jeder Kategorie dasselbe bedeutet
 
+## Durchgearbeiteter Vergleich
+
+Bei der Beschaffung von Schulrechnern sind zwei Fragen zu trennen: Welches System ist verbreitet, und welches unterstützt die notwendige Prüfungssoftware? Eine allgemeine Rangliste beantwortet die zweite Frage nicht.
+
+Zuerst werden Pflichtanwendungen, vorhandene Peripheriegeräte und die benötigte Supportdauer festgehalten. Anschließend wird der konkrete Arbeitsablauf auf dem vorgesehenen System getestet. Eine begründete Antwort lautet: „Wir wählen dieses System wegen der Unterstützung unserer Anwendung und unseres Druckers; die Verbreitung ist ein ergänzender Gesichtspunkt.”
+
+Zu einer Prozentangabe gehören Quelle, Zeitraum, Land oder Region und Gerätekategorie. Zahlen aus unterschiedlichen Zeiträumen oder Stichproben sind nicht unmittelbar vergleichbar.
+
 ## Prüfungstaugliche Formulierung
 
 > Die marktführenden Betriebssysteme hängen von der Kategorie ab.  
@@ -124,14 +111,6 @@ Denn hier reicht es nicht, nur Namen zu nennen, man muss wissen:
 > Die genaue Marktsituation kann sich im Laufe der Zeit ändern,
 > deshalb muss man immer angeben,
 > über welche Plattform und welchen Zeitpunkt man spricht.
-
-## Häufige Prüfungsfehler
-
-- Desktop- und Mobilmarkt verwechseln.
-- Behaupten, dass Linux überall marktführend ist.
-- Behaupten, dass macOS hardwareseitig genauso universell ist wie Windows.
-- Nicht angeben, dass die Marktsituation zeitabhängig ist.
-- Android als Desktop-Betriebssystem nennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -153,11 +132,11 @@ Denn hier reicht es nicht, nur Namen zu nennen, man muss wissen:
 
 1. StatCounter Global Stats - Desktop Operating System Market Share Worldwide  
    https://gs.statcounter.com/os-market-share/desktop/worldwide/  
-   Verwendung: Desktop-Marktverbreitung, Daten von `März 2026`.
+   Verwendung: laufend aktualisierte Daten zur Desktop-Webnutzung.
 
 2. StatCounter Global Stats - Operating System Market Share Worldwide  
    https://gs.statcounter.com/os-market-share/all/worldwide  
-   Verwendung: Daten über alle Plattformen, `Februar 2026`.
+   Verwendung: Webnutzungsdaten über alle Plattformen.
 
 3. Microsoft - Windows help and learning  
    https://support.microsoft.com/en-us/windows  
@@ -172,3 +151,9 @@ Denn hier reicht es nicht, nur Namen zu nennen, man muss wissen:
    Verwendung: moderne, offizielle Referenz einer Linux-Desktop-Umgebung.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [StatCounter: FAQ](https://gs.statcounter.com/faq): Messmethode und Grenzen der Webnutzungsdaten.
+
+Geprüft: `2026-10-14`.

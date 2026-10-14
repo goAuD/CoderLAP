@@ -46,7 +46,7 @@ Deshalb sollte man bei der Prüfung das Grundprinzip kennen, nicht einen vereinf
 | Aspekt | Interpreter | Compiler |
 |---|---|---|
 | schnelles Ausprobieren | oft Vorteil | variiert |
-| vorherige Übersetzung | nicht das Hauptprinzip | ja |
+| Übersetzungszeitpunkt | direkte interpretierende Ausführung | vor der Ausführung (AOT) oder dabei (JIT) |
 | Laufzeitleistung | variiert | oft günstig |
 | Fehlererkennung | oft auch zur Laufzeit | viele Fehler schon beim Kompilieren |
 
@@ -58,19 +58,31 @@ Deshalb sollte man bei der Prüfung das Grundprinzip kennen, nicht einen vereinf
 | Interpreter | interpretiert und führt unmittelbarer aus |
 | Assembler | wandelt Assembly-Sprache in maschinennahe Form um |
 
+## Übersetzung und Ausführung sind getrennte Schritte
+
+| Beispiel | Typische Verarbeitung |
+|---|---|
+| Natives C-Programm | Vorverarbeitung, Übersetzung, Assembly, Objektdatei, Linken |
+| Java | Quelltext wird Bytecode; die JVM führt ihn aus und kann JIT einsetzen |
+| JavaScript in V8 | Analyse, Bytecode, Interpreter und Übersetzungsstufen zur Laufzeit |
+
+Der **Linker** verbindet Objektdateien und löst deren gegenseitige Verweise auf.
+Das fertige Programm kann weiterhin eine Laufzeitumgebung oder dynamische
+Bibliotheken benötigen. Ein **JIT-Compiler** ist ein echter Compiler, der während
+der Ausführung arbeitet. „Ein Compiler übersetzt immer im Voraus“ ist deshalb
+zu eng formuliert.
+
+Eine erfolgreiche Übersetzung gibt Auskunft über Sprachprüfungen, beweist aber
+nicht die Richtigkeit einer Geschäftsregel. Ein korrekt übersetztes Programm
+kann trotzdem falsche Versandkosten berechnen. Syntaxprüfung, Laufzeitprüfung
+und Tests erwarteter Ergebnisse ergänzen einander.
+
 ## Prüfungstaugliche Formulierung
 
-> Der Compiler übersetzt den Quellcode vorab in eine andere Form, häufig Maschinencode oder Zwischencode.  
+> Der Compiler übersetzt Code in eine andere Darstellung, etwa Maschinen- oder Bytecode; dies kann vor oder während der Ausführung geschehen.  
 > Der Interpreter hingegen führt die Code-Ausführung auf unmittelbarere Weise, zusammen mit der Interpretation, durch.  
 > In modernen Systemen vermischen sich die beiden Ansätze häufig, aber der grundlegende Unterschied liegt weiterhin
-> zwischen Vorausübersetzung und unmittelbarerer Interpretation.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, dass jede Sprache rein kompiliert oder rein interpretiert ist.
-- Den Assembler mit dem Compiler gleichzusetzen.
-- Die Möglichkeit von Zwischencode nicht zu erwähnen.
-- Moderne Laufzeitumgebungen zu stark zu vereinfachen.
+> zwischen Übersetzung in eine andere Darstellung und unmittelbarer Ausführung.
 
 ## Schnelle Selbstkontrolle
 
@@ -89,6 +101,12 @@ Deshalb sollte man bei der Prüfung das Grundprinzip kennen, nicht einen vereinf
 5. Syntaktische und bestimmte strukturelle Fehler
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [V8: Ignition](https://v8.dev/docs/ignition): Interpreter in einer modernen JavaScript-Engine.
+- [V8: Sparkplug](https://v8.dev/blog/sparkplug): Übersetzungsstufe zur Laufzeit.
+
 
 1. Python Docs - Using the Python Interpreter  
    https://docs.python.org/3/tutorial/interpreter.html  

@@ -56,6 +56,14 @@ Mert vizsgán gyakori kérdés:
 | IMAP | szerveren tárolt levelek szinkronizálása |
 | POP3 | levelek letöltése |
 
+## Kidolgozott útvonal: Anna levele Bélának
+
+Anna a `anna@example.org` címről a `bela@example.net` címre ír. Kliensét a saját szolgáltató submission szerveréhez állítja be. A szolgáltató a címzett `example.net` domainjének DNS `MX` rekordja alapján választ kézbesítési célt. A kisebb MX-preferenciaszám az előnyben részesített cél; a rekord kiszolgálónevet tartalmaz, nem közvetlenül a postaládát.
+
+Átmeneti hiba esetén a küldő szerver sorba állíthatja a levelet és később újrapróbálhatja a továbbítást. A sikeres átvétel nem jelenti azt, hogy Béla már elolvasta. A címzett postafiókját IMAP-kliensből vagy webmailből nézheti meg. Webmailnél a böngésző és a webalkalmazás között tipikusan HTTPS van.
+
+A levél fejlécében látható `From` és a szállítási boríték feladója külön adat. A feladónév megjelenése önmagában nem bizonyítja a küldő személyazonosságát. A TLS az egyes kapcsolati szakaszokat védi; végpontok közötti tartalomtitkosításhoz külön megoldás, például S/MIME szükséges.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A levelezőrendszer több komponensből áll.  
@@ -63,12 +71,6 @@ Mert vizsgán gyakori kérdés:
 > a levél beküldése és továbbítása SMTP-vel történik,
 > a bejövő levelek elérésére pedig jellemzően IMAP vagy POP3 szolgál.  
 > A mail server tehát nemcsak tárol, hanem fogad, továbbít és kiszolgál is.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy az SMTP-vel "olvasunk" levelet.
-- Az IMAP-ot és a POP3-at küldési protokollnak gondolni.
-- Nem felismerni, hogy több szerver is részt vehet a továbbításban.
 
 ## Gyors önellenőrzés
 
@@ -105,3 +107,10 @@ Mert vizsgán gyakori kérdés:
    Használat: a POP3 klasszikus alapdefiníciója.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 5321: SMTP](https://www.rfc-editor.org/rfc/rfc5321.html): MX-kézbesítés és válaszosztályok.
+- [RFC 8551: S/MIME](https://www.rfc-editor.org/rfc/rfc8551.html): üzenettartalom titkosítása és aláírása.
+
+Ellenőrizve: `2026-10-14`.

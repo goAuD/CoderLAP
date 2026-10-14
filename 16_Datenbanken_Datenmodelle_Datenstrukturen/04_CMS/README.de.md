@@ -62,6 +62,16 @@ Ein `CMS` verwendet häufig ein `DBMS` im Hintergrund.
 - `Drupal`
 - `Joomla`
 
+## Durchgearbeiteter Ablauf: Lernmaterial veröffentlichen
+
+Eine Redaktion erstellt einen Artikel in der Administrationsoberfläche des CMS, prüft den Entwurf in der Vorschau und lässt ihn von einer berechtigten Person freigeben. Danach wird veröffentlicht. Besucher sehen im Frontend die freigegebene Fassung. Ob frühere Versionen wiederhergestellt oder Veröffentlichungszeiten geplant werden können, ist am konkreten CMS zu prüfen.
+
+Auch **TYPO3** ist ein CMS. Das Backend dient Redaktion und Administration, das Frontend ist die für Besucher sichtbare Website. Ein Theme gestaltet die Darstellung, eine Erweiterung ergänzt Funktionen. Beides ist vom gespeicherten Inhalt zu unterscheiden.
+
+Für den Betrieb können neben dem Datenbank-Dump auch hochgeladene Bilder, Konfiguration und passende Code-/Erweiterungsversionen erforderlich sein. Eine erfolgreich eingespielte Datenbank beweist noch nicht, dass Bilder und Website funktionieren. Prüfe bei der Abnahme Erstellung, Berechtigungen, Veröffentlichung und Wiederherstellung eines Inhalts.
+
+Es gibt auch dateibasierte CMS und CMS mit statischer Ausgabe. Ein eigener Datenbankserver ist daher keine Voraussetzung für den CMS-Begriff.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein `CMS`, also Content Management System, ist ein Anwendungssystem, das die Erstellung, Bearbeitung, Speicherung  
@@ -70,13 +80,6 @@ Ein `CMS` verwendet häufig ein `DBMS` im Hintergrund.
 > und Einstellungen.  
 > Daher ist ein `CMS` ein gutes Beispiel dafür, wie eine Anwendung eine Datenbank zur Verwaltung strukturierter
 > Informationen nutzt.
-
-## Häufige Prüfungsfehler
-
-- Das `CMS` als Datenbankmanagementsystem bezeichnen.
-- Vergessen, dass im Hintergrund in der Regel eine Datenbank vorhanden ist.
-- Das `CMS` nur als Blog-Engine darstellen.
-- Die Berechtigungs- und Inhaltsverwaltung nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -109,3 +112,10 @@ Ein `CMS` verwendet häufig ein `DBMS` im Hintergrund.
    Verwendung: praktische Erklärung zu den Hauptbestandteilen und der Funktionsweise eines CMS.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [TYPO3: Concepts](https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Concepts/Index.html): Backend/Frontend und CMS-Struktur
+- [MDN: CMS](https://developer.mozilla.org/en-US/docs/Glossary/CMS): Begriff der Inhaltsverwaltung
+
+Geprüft: `2026-10-14`.

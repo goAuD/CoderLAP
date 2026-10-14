@@ -136,6 +136,14 @@ Mert itt nem elég azt mondani, hogy „zárt = rossz” vagy „zárt = jó”.
 - miért lehet hátrány a korlátozás
 - hogy a biztonság és a szabadság között gyakran kompromisszum van
 
+## Kidolgozott döntés: hogyan terjesszünk egy tanulói appot?
+
+Először a szükséges képességeket írjuk le: offline tananyag, kamera, értesítés, vásárlás vagy csak böngészős felület? Egy böngészőből elérhető webalkalmazás több platformot is kiszolgálhat; a natív app viszont más rendszerképességeket és külön terjesztési folyamatot kínálhat. A döntést kipróbált követelmények alapján hozzuk meg.
+
+Az **ellenőrzés**, a **kódaláírás** és a **sandbox** külön réteg. A review a beküldött appot és szabálykövetést vizsgálja, az aláírás a kód eredetének és változatlanságának ellenőrzését segíti, a sandbox pedig futás közben korlátozza a hozzáférést. Egyik sem teljes garancia a hibamentességre.
+
+A zártság nem igen/nem tulajdonság: külön értékelhető a forráskód, a telepítés és a hardvertámogatás. Az EU-ban az Apple-platformon is léteznek feltételes alternatív terjesztési csatornák. A választásnál a frissítés, támogatás, exportálható adatok és a szolgáltatás megszűnésének következményei is legyenek világosak.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A zárt rendszer olyan ökoszisztéma,
@@ -143,14 +151,6 @@ Mert itt nem elég azt mondani, hogy „zárt = rossz” vagy „zárt = jó”.
 > a hardvert, az operációs rendszert és az alkalmazásterjesztést.  
 > Ennek előnye lehet az egységesebb működés, a jobb integráció és a szigorúbb minőségellenőrzés.  
 > Hátránya lehet a kisebb szabadság, a gyártói függőség és a korlátozottabb appterjesztési lehetőség.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy a zárt rendszer csak hátrányos.
-- Azt állítani, hogy a zárt rendszer csak előnyös.
-- Nem tudni példát mondani zárt és nyitottabb modellre.
-- Kihagyni az App Store szerepét.
-- Nem felismerni a platform lock-in problémát.
 
 ## Gyors önellenőrzés
 
@@ -191,3 +191,10 @@ Mert itt nem elég azt mondani, hogy „zárt = rossz” vagy „zárt = jó”.
    Használat: biztonsági kontrollok és platformvédelem összevetési alapként.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Apple: Alternative app distribution](https://support.apple.com/en-us/118110): aktuális terjesztési csatornák és feltételek.
+- [Apple: Runtime security](https://support.apple.com/guide/security/security-of-runtime-process-sec15bfe098e/web): a futás közbeni elkülönítés önálló védelmi réteg.
+
+Ellenőrizve: `2026-10-14`.

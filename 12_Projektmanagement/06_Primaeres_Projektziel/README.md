@@ -2,83 +2,62 @@
 
 ## Gyors vizuális kép
 
-| Elem | Szerepe |
+| Fogalom | Példa |
 |---|---|
-| elsődleges cél | milyen eredményt kell elérni |
-| korlátok | idő, költség, erőforrás |
-| minőség | milyen szinten kell az eredményt teljesíteni |
+| eredmény | bevezetett rendeléskezelő rendszer |
+| várt haszon | rövidebb ügyintézési idő |
+| sikerkritérium | mérhető használati eredmény, elfogadott minőség és keretek |
 
 ## Mi a projekt elsődleges célja?
 
-A projekt lényege mindig az, hogy létrejöjjön egy előre meghatározott:
+A projekt célja az a kívánt eredmény vagy változás, amelyért a munkát elindítják. Ezt a megrendelővel tisztázzuk, és ellenőrizhető sikerkritériumokra bontjuk. Egy elkészült alkalmazás önmagában még nem bizonyítja, hogy az üzleti igény is teljesült.
 
-- eredmény
-- megoldás
-- változás
-- üzleti vagy szervezeti érték
+## Hogyan kapcsolódik hozzá az idő és a költség?
 
-Példák:
+A határidő és a költség gyakran keretfeltétel, de a projekt jellegétől függően kiemelt cél is lehet. Egy rendezvény beléptetőrendszerének az esemény kezdetére működnie kell. Egy költségcsökkentő projektben pedig éppen a működési kiadás csökkentése lehet a várt haszon.
 
-- új rendszer bevezetése
-- új alkalmazás elkészítése
-- folyamat javítása
-- infrastruktúra modernizálása
+Ezért nincs minden projektre érvényes sorrend, amely szerint a határidő soha nem lehet elsődleges. A célok prioritását és a megengedett eltéréseket a projektmegbízásban kell tisztázni.
 
-## Miért nem a határidő az elsődleges cél?
+## Mit egyeztessünk a cél meghatározásakor?
 
-Mert a határidő, költség és erőforrás fontos, de ezek azt mondják meg:
+- kinek milyen problémáját oldjuk meg;
+- milyen eredményt adunk át;
+- hogyan és mikor mérjük a hasznot;
+- ki dönt az elfogadásról;
+- milyen minőségi, időbeli és költségbeli feltételek kötelezők.
 
-- milyen keretek között kell megvalósítani a célt
+## Kidolgozott cél: kevesebb ügyintézési idő
 
-Ha például minden időben elkészül, de a megoldás nem azt tudja, amire szükség volt, akkor a projekt valójában nem sikeres.
+Az „új rendeléskezelő” termékleírás. Mérhető cél például: „December végére a pilot öt munkatársánál az egyszerű rendelések medián ügyintézési ideje 10 percről legfeljebb 6 percre csökken, változatlan adatpontosság mellett.” A medián a sorba rendezett idők középső értéke, így egy-egy nagyon hosszú eset kevésbé torzítja.
 
-## Mit jelent ez gyakorlatban?
-
-Projektvezetésnél mindig tisztázni kell:
-
-- mi a projekt tényleges célja
-- mi számít elfogadható eredménynek
-- honnan tudjuk, hogy sikeres lett
-
-## Elsődleges cél és projekt-háromszög: ne keverd össze
-
-| Fogalom | Jelentés |
-|---|---|
-| elsődleges projektcél | a kívánt eredmény vagy érték |
-| idő / költség / erőforrás | a megvalósítás keretei |
+Előre megállapodunk abban, mit jelent az egyszerű rendelés és honnan mérjük az időt. Az indulás előtti mérést azonos feltételekkel megismételjük a két hetes pilot után. A rendszer átadása eredmény, a kimutatott időnyereség haszon. A haszonhoz betanítás és tényleges használat is kell; nem következik automatikusan a kód elkészültéből.
 
 ## Vizsgán jól használható megfogalmazás
 
-> A projekt elsődleges célja a meghatározott eredmény vagy haszon elérése.  
-> A határidő, költség és erőforrás nagyon fontos,
-> de ezek a megvalósítás korlátait jelentik,
-> nem magát a projekt lényegét.  
-> Egy projekt akkor tekinthető igazán sikeresnek, ha a kitűzött célt megfelelő minőségben teljesíti.
-
-## Gyakori vizsgahibák
-
-- A határidőt vagy költséget elsődleges célnak nevezni.
-- Nem megkülönböztetni a célt és a korlátokat.
-- Nem említeni az eredményt vagy értéket.
-- A projekt sikert kizárólag időre és költségre szűkíteni.
+> A projekt elsődleges célját a megrendelő igénye és az elérendő érték alapján határozzuk meg. A megvalósítandó eredményhez mérhető sikerkritériumokat rendelünk. Az idő, a költség és a minőség szerepét az adott projektben kell tisztázni; egy kötött határidő is lehet meghatározó sikertényező.
 
 ## Gyors önellenőrzés
 
-1. Mi a projekt elsődleges célja?
-2. Miért nem a határidő a fő cél?
-3. Mit jelentenek az idő és költség ebben a logikában?
-4. Mitől lesz valóban sikeres egy projekt?
-5. Mondj egy példát elsődleges projektcélra.
+1. Mi a projekt célja és az elkészítendő termék közötti különbség?
+2. Lehet-e a határidő meghatározó sikertényező?
+3. Miért hasznos a mérhető cél?
+4. Ki tisztázza a célok prioritását?
+5. Mondj példát eredményre és a hozzá kapcsolódó haszonra.
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. A kívánt eredmény elérése
-2. Mert az csak keretfeltétel
-3. A megvalósítás korlátai
-4. Ha a célt jó minőségben teljesíti
-5. Például új rendszer bevezetése
+1. A termék egy átadandó eredmény; a cél az általa elérni kívánt változást vagy hasznot is kifejezheti.
+2. Igen, például egy rendezvény indulásához kötött rendszernél.
+3. Megállapítható, hogy teljesült-e, és milyen bizonyíték alapján.
+4. A megrendelő és a döntésre jogosult szereplők, a projektcsapattal egyeztetve.
+5. Rendeléskezelő bevezetése; rövidebb és követhetőbb ügyintézés.
 
 ## Források
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Projektcélok, felelősségek és folyamatos irányítás; a példa saját tanulási eset.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - Lexicon of Terms  
    https://www.pmi.org/standards/lexicon  

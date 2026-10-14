@@ -50,7 +50,7 @@ Bei einer Webshop-Warenkorbfunktion:
 
 - **completeness**: Produkt hinzufügen, löschen, ändern möglich
 - **correctness**: der Gesamtbetrag ist korrekt
-- **appropriateness**: schnell und verständlich benutzbar
+- **appropriateness**: Rabatt und Versand lassen sich innerhalb der Kaufaufgabe berechnen
 
 ## Funktionalität und Benutzerfreundlichkeit: nicht verwechseln
 
@@ -60,6 +60,14 @@ Bei einer Webshop-Warenkorbfunktion:
 | Benutzerfreundlichkeit | wie einfach es zu benutzen ist |
 
 Es gibt einen Zusammenhang, aber es ist nicht dasselbe.
+
+## Vollständigkeit, Korrektheit und Angemessenheit getrennt prüfen
+
+Ein Verleih benötigt neben Reservierung auch Verlängerung und Rücknahme. Fehlt eine dieser Funktionen, ist die funktionale Vollständigkeit unzureichend. Sind alle vorhanden, aber eine Rücknahme gibt das falsche Gerät frei, betrifft das die funktionale Korrektheit.
+
+Angemessenheit betrachtet, wie die verfügbaren Funktionen die gezielte Aufgabenerledigung unterstützen. Eine Sammelrücknahme verarbeitet etwa die Geräte einer ganzen Klasse, ohne Hilfsberechnungen in einer externen Tabelle zu verlangen. Lesbarkeit des Knopfs und Erlernbarkeit gehören eher zur Interaktionsqualität, Antwortzeiten zur Leistungseffizienz.
+
+Das Produktqualitätsmodell ISO/IEC 25010:2023 enthält neun Hauptmerkmale; Functional Suitability ist eines davon. Seine drei Untermerkmale bleiben Completeness, Correctness und Appropriateness. Die Gruppe Usability aus 2011 wird im Modell von 2023 durch Interaction Capability mit veränderten Einzelheiten abgelöst.
 
 ## Prüfungstaugliche Formulierung
 
@@ -71,13 +79,6 @@ Es gibt einen Zusammenhang, aber es ist nicht dasselbe.
 > dessen Hauptbestandteile Functional Completeness,
 > Functional Correctness und Functional Appropriateness sind.  
 > Gute Software verfügt also nicht nur über viele Funktionen, sondern bietet diese auch präzise und zweckmäßig an.
-
-## Häufige Prüfungsfehler
-
-- Nur auf der Ebene "diese Funktion existiert" stehen bleiben.
-- Korrektheit und Vollständigkeit verwechseln.
-- Funktionalität mit Benutzerfreundlichkeit gleichsetzen.
-- Die drei Grundbestandteile nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -96,6 +97,14 @@ Es gibt einen Zusammenhang, aber es ist nicht dasselbe.
 5. Das eine prüft die Angemessenheit der Funktionen, das andere die einfache Bedienung
 
 ## Quellen
+
+- [ISO/IEC 25010:2023](https://www.iso.org/standard/78176.html)  
+  Offizielle Beschreibung des aktuellen Produktqualitätsmodells.
+
+- [ISTQB: Advanced Level Test Analyst v4.0, Appendix A](https://istqb.org/?download_id=5745&sdm_process_download=1)  
+  Offizielle prüfungsfachliche Gegenüberstellung der Qualitätsmerkmale von 2011 und 2023.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. ISO/IEC 25010:2023 - Product quality model  
    https://www.iso.org/standard/78176.html  

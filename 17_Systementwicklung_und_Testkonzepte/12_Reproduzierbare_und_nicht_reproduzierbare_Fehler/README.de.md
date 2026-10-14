@@ -5,7 +5,8 @@
 | Fehlertyp | Merkmal |
 |---|---|
 | reproduzierbar | mit denselben Schritten erneut auslösbar |
-| nicht reproduzierbar / intermittierend | zeitweilig, unsicher, "flaky" |
+| derzeit nicht reproduzierbar | Bedingungen zur Wiederholung sind noch unbekannt |
+| intermittierend | tritt nur bei bestimmten Läufen auf |
 
 ## Was ist ein reproduzierbarer Fehler?
 
@@ -19,16 +20,11 @@ erneut derselbe Fehler auftritt, dann ist der Fehler reproduzierbar.
 
 ## Was ist ein nicht reproduzierbarer Fehler?
 
-In diesem Fall:
-
-- tritt der Fehler nicht immer auf
-- Umgebungsfaktoren können ihn beeinflussen
-- Timing, Zustand, Netzwerk, Parallelität können ebenfalls eine Rolle spielen
-
-In der Praxis wird dies häufig auch als:
-
-- intermittierender Fehler
-- oder bei Tests als `flaky` Problem bezeichnet
+Die beobachtete Abweichung lässt sich mit den derzeit bekannten Schritten nicht
+zuverlässig erneut auslösen. Möglicherweise fehlt noch eine Umgebungsbedingung,
+ein Zustand oder eine Timinginformation. Tritt die Abweichung gelegentlich
+wieder auf, ist sie intermittierend. Bei Tests heißt ein wechselnd erfolgreiches
+und fehlgeschlagenes Ergebnis häufig `flaky`.
 
 ## Warum ist dieser Unterschied wichtig?
 
@@ -49,23 +45,36 @@ In der Praxis wird dies häufig auch als:
 | Begriff | Bedeutung |
 |---|---|
 | echter Softwarefehler | fehlerhafte Funktionsweise des Systems |
-| instabiler Test | die Testumgebung oder der Testaufbau selbst ist unsicher |
+| instabiles Testergebnis | Ursache kann Timing/Zustand in Anwendung, Test oder Umgebung sein |
+
+## Wiederholbare Bedingungen schaffen
+
+Aus der Meldung „speichert manchmal doppelt“ machen wir eine konkrete Prüfung:
+Zwei schnelle Anfragen starten denselben Speichervorgang. Wir dokumentieren
+Version, Reihenfolge der Anfragen, anonymisierte Testdaten und beide Antworten.
+Den Doppelklick der Oberfläche und parallele Serveranfragen untersuchen wir
+getrennt, weil sie unterschiedliche Schichten betreffen.
+
+„Derzeit nicht reproduzierbar“ beschreibt den Untersuchungsstand: Uns fehlt
+noch eine zuverlässige Schrittfolge. **Intermittierend** bedeutet, dass die
+Erscheinung nur zeitweise auftritt. Auch ein intermittierender Fehler kann durch
+kontrolliertes Timing reproduzierbar werden.
+
+Im Test helfen ein fester Startwert des Zufallsgenerators, eine übergebene Uhr,
+getrennte Testdaten und das Warten auf einen beobachtbaren Bereitschaftszustand.
+Eine längere blinde Wartezeit kann ein Timingproblem lediglich verdecken.
+Wir behalten Ergebnisse wiederholter Läufe; ein späterer Erfolg löscht den
+Nachweis einer früheren Abweichung nicht. Protokolle enthalten die notwendigen
+Diagnosedaten, aber keine Passwörter oder Sitzungstokens.
 
 ## Prüfungstaugliche Formulierung
 
 > Ein reproduzierbarer Fehler ist ein Fehler, der mit denselben Eingaben und Schritten zuverlässig erneut ausgelöst  
 > werden kann.  
-> Ein nicht reproduzierbarer oder intermittierender Fehler tritt hingegen nicht jedes Mal auf, weshalb er schwieriger  
-> zu analysieren und zu beheben ist.  
+> Bei einem derzeit nicht reproduzierbaren Fehler sind die Bedingungen zur Wiederholung noch unbekannt. Ein  
+> intermittierender Fehler tritt nur zeitweise auf und kann unter passenden Bedingungen reproduzierbar werden.  
 > Bei solchen Fehlern ist eine detaillierte Fehlerdokumentation, die Logs und die Dokumentation der Umgebungsbedingungen
 > besonders wichtig.
-
-## Häufige Prüfungsfehler
-
-- Denken, dass ein nicht reproduzierbarer Fehler "kein echter Fehler" ist.
-- Umgebungsfaktoren nicht erwähnen.
-- Einen flaky Test automatisch als Anwendungsfehler betrachten.
-- Die Rolle der detaillierten Dokumentation auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -78,12 +87,17 @@ In der Praxis wird dies häufig auch als:
 ## Kurzantworten zur Selbstkontrolle
 
 1. Ein stabil erneut auslösbarer Fehler
-2. Ein Fehler, der nicht vorhersehbar auftritt
+2. Ein beobachteter Fehler, den wir mit den derzeit bekannten Schritten nicht zuverlässig wiederholen können
 3. Weil er schwerer zuverlässig zu beobachten ist
 4. Timing, Zustand, Netzwerk, Parallelität
 5. Logs, genaue Schritte, Dokumentation der Umgebung
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Selenium: Avoid sharing state](https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/): isolierte Testdaten und Ausführung.
+
 
 1. ISTQB Standard Glossary of Terms Used in Software Testing  
    https://api.glossary.istqb.org/storage/help/DavkaLpvYMRH8Qu6LWaJxSPu7qKDHf9LpUgHTP1F.pdf  

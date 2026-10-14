@@ -59,6 +59,34 @@ Ha ezt leadás előtt nem töröljük megfelelően, az adatvédelmi és biztons�
 | újrahasznosítás | anyagok visszanyerése |
 | vegyes hulladék | ide nem való az elektronikai eszköz |
 
+## Selejtezési menet adattörléssel
+
+Egy céges laptop továbbadásakor először ellenőrizzük, hogy a szükséges adatok mentése
+visszaállítható-e. Ezután megszüntetjük a hozzá kötött vállalati hozzáféréseket,
+és a tároló típusához, érzékenységéhez és következő felhasználásához választunk
+ellenőrizhető törlési eljárást. A fájlok lomtárba helyezése nem biztonságos törlés.
+
+SSD-n a hagyományos fájlfelülírás nem feltétlenül éri el az összes korábbi fizikai
+adatblokkot. Megfelelő, támogatott törlési vagy kriptográfiai törlési eljárást használunk,
+utóbbinál a titkosítás és a kulcskezelés előfeltételeit is ellenőrizve.
+Hibás, biztonságosan nem törölhető adathordozónál ellenőrzött megsemmisítés lehet szükséges.
+Ez szakmai átadási folyamat, nem házi fúrási vagy akkumulátorbontási feladat.
+
+Rögzítjük az eszközazonosítót, az eljárást, az ellenőrzés eredményét és az átvevőt.
+Újrahasználható készüléknél a megfelelő előkészítés utáni továbbadás is lehet út;
+a hulladék külön gyűjtőhelyre vagy szabályos visszavételi rendszerbe kerül.
+A sérült vagy felpúposodott akkumulátor kezelését a gyűjtőhely útmutatása szerint szervezzük.
+
+**2026-os változás:** október 1-jétől az EAG-VO 5. § (2a) szerinti, elemet vagy
+akkumulátort tartalmazó, háztartási eredetű, legfeljebb 25 cm külső méretű nagyon kis
+eszközökre külön, új vásárlástól független visszavétel vonatkozik a legalább 25 m²-es
+üzlethelyiségű végforgalmazóknál. A kötelezettség a forgalmazott eszközfajtákra és
+szokásos mennyiségre korlátozott; nem minden hulladékra általános átvételi szabály.
+
+Források: [RIS: EAG-VO 5. §](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20004052&Paragraf=5),
+[NIST SP 800-88 Rev. 2: adathordozók törlése](https://csrc.nist.gov/pubs/sp/800/88/r2/final).
+Ellenőrizve: 2026-10-14.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az elektronikai hulladékot külön kell gyűjteni
@@ -68,13 +96,6 @@ Ha ezt leadás előtt nem töröljük megfelelően, az adatvédelmi és biztons�
 > hanem adatvédelmi szempontból is fontos
 > a megfelelő adattörlés és az eszköz előkészítése.  
 > Akkumulátorokat és elemeket szintén nem szabad egyszerűen a vegyes hulladékba dobni.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a régi telefont vagy akkumulátort lehet simán kidobni.
-- Kihagyni a külön gyűjtés fontosságát.
-- Elfelejteni az adattörlést.
-- Összekeverni a környezetvédelmi és adatvédelmi szempontokat.
 
 ## Gyors önellenőrzés
 

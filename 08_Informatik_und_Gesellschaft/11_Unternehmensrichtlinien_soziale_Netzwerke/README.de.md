@@ -73,6 +73,14 @@ Weil in der Praxis notwendig sind:
 | Comment Policy | öffentliche Regel für Follower/Kommentierende |
 | IT Security Policy | umfassendere Sicherheitsrichtlinie, von der Social Media nur ein Teil ist |
 
+## Ein Unternehmenskonto vom Eintritt bis zum Austritt betreiben
+
+In einem kleinen Team bereitet eine Redakteurin den Produktbeitrag vor. Eine benannte Person prüft Fakten, Bildrechte und Veröffentlichungszeitpunkt. Zugriffe sind personenbezogen, sofern die Plattform dies unterstützt; statt ein gemeinsames Passwort zu verteilen, nutzen wir Rollen. Die Wiederherstellung bleibt unter Kontrolle der Organisation, einschließlich benannter Vertretung.
+
+Beim Austritt entziehen wir Zugriff und zugehörige Berechtigungen externer Anwendungen. Nach einer Kontoübernahme stoppen wir gemäß freigegebenem Ablauf geplante Veröffentlichungen, sichern das Konto, erhalten Beweise und informieren über den festgelegten Kanal.
+
+Die Richtlinie unterscheidet persönliche Meinung und offizielle Unternehmenskommunikation. Auch Fotos vom Arbeitsplatz werden geprüft: Auf einem Monitor im Hintergrund könnten Kundendaten oder Zugangsinformationen sichtbar sein.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine Social-Media-Richtlinie für Unternehmen legt fest,
@@ -82,13 +90,6 @@ Weil in der Praxis notwendig sind:
 > Eine gute Richtlinie enthält Berechtigungsmanagement,
 > inhaltliche Regeln, Kontosicherheitsvorschriften
 > sowie Schritte für das Vorfallmanagement.
-
-## Häufige Prüfungsfehler
-
-- Zu glauben, dass es sich nur um eine Marketingfrage handelt.
-- Die Sicherheitsseite nicht zu erwähnen.
-- MFA und Berechtigungsmanagement auszulassen.
-- Persönliche und offizielle Kommunikation nicht zu unterscheiden.
 
 ## Schnelle Selbstkontrolle
 
@@ -107,6 +108,11 @@ Weil in der Praxis notwendig sind:
 5. Weil es das Konto vor unbefugtem Zugriff schützt
 
 ## Quellen
+
+- [CISA: Social Media Account Protection](https://www.cisa.gov/sites/default/files/publications/CISA_CEG_Social_Media_Account_Protection_508.pdf)  
+  Zugriffe, externe Werkzeuge und Wiederherstellung bei Organisationskonten.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. CISA - CISA Releases Guidance on Protecting Organization-Run Social Media Accounts  
    https://www.cisa.gov/news-events/alerts/2021/12/09/cisa-releases-guidance-protecting-organization-run-social-media-accounts  

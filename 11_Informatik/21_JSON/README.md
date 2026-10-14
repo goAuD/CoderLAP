@@ -84,18 +84,62 @@ Fontos különbségek:
 | olvashatóság | gyakran egyszerűbb | sokszor részletesebb |
 | tipikus mai webes API | nagyon gyakori | ritkább, de még előfordul |
 
+## Parsing, ellenőrzés és szerializálás
+
+**Feladat:** egy témához `0..5` közötti egész pontszámot olvasunk. A JSON-szintaxis
+és az alkalmazás elvárása két külön ellenőrzés. Node.js-ben futtatható:
+
+<!-- example:run -->
+
+```javascript
+function parseProgress(text) {
+  const value = JSON.parse(text);
+  if (value === null || Array.isArray(value) || typeof value !== "object" ||
+      typeof value.topic !== "string" || !Number.isInteger(value.score) ||
+      value.score < 0 || value.score > 5) {
+    throw new Error("Invalid progress");
+  }
+  return { topic: value.topic, score: value.score };
+}
+const progress = parseProgress('{"topic":"loops","score":4}');
+console.log(progress.topic, progress.score + 1);
+console.log(JSON.stringify(progress));
+for (const text of ['null', '{"topic":"loops","score":"4"}']) {
+  try {
+    parseProgress(text);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+```
+
+```text
+loops 5
+{"topic":"loops","score":4}
+Invalid progress
+Invalid progress
+```
+
+A `JSON.parse` szövegből futásidejű értéket készít. A `JSON.stringify` ennek
+fordított irányát végzi. A pontszám számként összeadható; a `"4"` viszont sztring,
+ezért az itt választott szerződés elutasítja. A `null` teljesen szabályos JSON,
+de nem a várt rekord. A feldolgozott adatot használjuk, nem `eval`-lal futtatjuk.
+
+A JSON legfelső értéke nem csak objektum vagy tömb lehet, hanem például szám,
+logikai érték vagy `null` is. Az objektumkulcsok és szövegértékek dupla
+idézőjelet használnak. `undefined`, függvény és `BigInt` nem JSON-értéktípus;
+egy dátum átvitelének formátumáról külön megállapodunk, gyakran ISO-formátumú
+sztringet használva.
+
+A számokat a fogadó nyelv saját számábrázolása korlátozhatja. Nagy, pontos
+azonosítót ezért gyakran sztringként adunk át. Azonos objektumon belül egyedi
+kulcsneveket használjunk, mert az ismétlődő nevek kezelése rendszerenként eltérhet.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A JSON egy könnyű, szöveges adatcsere-formátum, amely kulcs-érték párok és tömbök segítségével írja le az adatokat.  
 > Gyakran használják webes API-kban, mert egyszerű, jól olvasható és sok programnyelv könnyen feldolgozza.  
 > A szabványos JSON-ban például a kulcsokat idézőjelbe kell tenni, és kommentek nem használhatók.
-
-## Gyakori vizsgahibák
-
-- A JSON-t programozási nyelvnek nevezni.
-- A JavaScript objektummal teljesen azonosnak tekinteni.
-- Kommentes vagy lazább szintaxist szabványos JSON-nak nevezni.
-- Nem megemlíteni az API-kban való használatát.
 
 ## Gyors önellenőrzés
 
@@ -114,6 +158,12 @@ Fontos különbségek:
 5. Mert egyszerű és széles körben támogatott
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [IETF: JSON RFC8259](https://www.rfc-editor.org/rfc/rfc8259): értéktípusok, egyedi kulcsok és interoperabilitás.
+- [MDN: JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): szövegből futásidejű érték.
+
 
 1. RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format  
    https://www.rfc-editor.org/rfc/rfc8259  

@@ -5,7 +5,7 @@
 | Adattípus | Példa | Védelmi szint |
 |---|---|---|
 | személyes adat | név, e-mail, IP-cím | védett |
-| különleges kategóriájú személyes adat | egészségügyi adat, biometria, vallás | fokozottan védett |
+| különleges kategóriájú személyes adat | egészségügyi adat, egyedi azonosítást szolgáló biometria, vallás | fokozottan védett |
 | bűnügyi adat | büntetőítéletre vagy bűncselekményre vonatkozó adat | külön szabályok alá esik |
 
 ## Mi a személyes adat?
@@ -45,7 +45,7 @@ Ide tartozhat például:
 Fontos:
 
 - ezek kezelése főszabály szerint **tilos**
-- csak külön jogalappal vagy kivétellel kezelhetők
+- a 6. cikk szerinti jogalap mellett a 9. cikk (2) bekezdésének megfelelő kivétel is szükséges
 
 ## Mi a helyzet a bűnügyi adatokkal?
 
@@ -53,7 +53,7 @@ A büntetőítéletekre és bűncselekményekre vonatkozó adatok nem ugyanazok,
 
 Ezekre a GDPR **10. cikke** vonatkozik.
 
-Ez vizsgán tipikus csapda:
+A két kategóriához eltérő jogszabályhely tartozik:
 
 - **Art. 9** = különleges kategóriák
 - **Art. 10** = büntetőítéletek és bűncselekményekhez kapcsolódó adatok
@@ -81,22 +81,38 @@ Példa:
 | anonim adat | már nem köthető személyhez |
 | álnevesített adat | még visszaköthető lehet, ezért továbbra is adatvédelmi szabály alá eshet |
 
+## Besorolási feladat: név helyett azonosító
+
+Egy gyakorló adatbázisban `Anna` helyett `user-42` szerepel, de egy külön táblában
+megmarad az összerendelés. Ez **álnevesítés**, nem teljes anonimizálás: az összerendelést
+ismerő adatkezelő vissza tudja azonosítani az érintettet. Az összerendelő táblát külön
+hozzáféréssel védjük, és az álnevesített adathalmazt is személyes adatként kezeljük.
+
+Az anonim adatnál az azonosítás az észszerűen valószínű eszközökkel sem lehetséges.
+A név törlése önmagában ehhez kevés lehet: ritka munkakör, pontos születési dátum
+és kis település együtt visszavezethet valakihez. Az azonosíthatóságot a környezetben
+rendelkezésre álló további információval együtt vizsgáljuk.
+
+Egy egyszerű profilfotó lehet személyes adat, de nem automatikusan a 9. cikk szerinti
+biometrikus különleges adat. Egy személy egyedi felismerésére készített és használt
+arcfelismerési sablon már más helyzet. A jelszó biztonsági szempontból érzékeny,
+de önmagában nem a 9. cikk felsorolt különleges adatkategóriáinak egyike.
+
+**Következtetés:** a technikai védelem igényét nem csak a jogi kategória neve határozza meg.
+Egy hétköznapi elérhetőségből is lehet komoly kár, ha veszélyeztetett személyhez tartozik.
+
+Forrás: [DSB: különleges adatkategóriák](https://dsb.gv.at/faqs/besondere-datenkategorien),
+GDPR 4., 6., 9., 10. cikk és (26), (51) preambulumbekezdés.
+Ellenőrizve: 2026-10-14.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Személyes adat minden olyan információ, amely egy azonosított vagy azonosítható természetes személyre vonatkozik.  
 > A különleges kategóriájú személyes adatok,
-> például az egészségügyi vagy biometrikus adatok,
+> például az egészségügyi vagy egyedi azonosításra kezelt biometrikus adatok,
 > fokozott védelem alatt állnak, és kezelésük főszabály szerint tilos,
 > csak meghatározott kivételek mellett megengedett.  
 > A büntetőítéletekre és bűncselekményekre vonatkozó adatok külön, a GDPR 10. cikke szerinti szabályozás alá tartoznak.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy csak a név és cím személyes adat.
-- Az IP-címet vagy az e-mail-címet nem személyes adatnak tekinteni.
-- A "sensible adat" fogalmat jogi kategóriának gondolni anélkül, hogy megemlítenénk a különleges kategóriákat.
-- Összekeverni az Art. 9 és Art. 10 szerinti adatokat.
-- Elfelejteni, hogy a különleges kategóriák kezelése főszabály szerint tilos.
 
 ## Gyors önellenőrzés
 
@@ -110,7 +126,7 @@ Példa:
 
 1. Személyhez köthető információ
 2. Név, e-mail-cím, IP-cím
-3. Például egészségügyi adat, biometrikus adat, vallási meggyőződés
+3. Például egészségügyi adat, egyedi azonosításra kezelt biometrikus adat, vallási meggyőződés
 4. A 9. cikk
 5. Nem, a bűnügyi adatot külön a 10. cikk szabályozza
 

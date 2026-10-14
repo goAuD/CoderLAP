@@ -83,22 +83,13 @@ Például:
 
 ## Kapcsolódó fogalmak
 
-### Display server
+### Megjelenítési protokoll és kiszolgáló
 
-A grafikus megjelenítés mögött álló technikai réteg.
+Az `X11` és a `Wayland` protokollokat ír le a grafikus kliensek és a megjelenítési rendszer közötti kommunikációhoz. Egy Wayland-kiszolgálót **kompozitornak** nevezünk: összerakja a megjelenő képet és kezeli a bemenet továbbítását. A protokoll és a konkrét implementáció külön fogalom.
 
-Gyakori nevek:
+### Ablakkezelő és bejelentkezéskezelő
 
-- `X11`
-- `Wayland`
-
-Vizsgán elég tudni:
-
-- ezek a grafikus működés technikai hátteréhez tartoznak
-
-### Window manager
-
-Az ablakok viselkedését, elhelyezését kezeli.
+Az **ablakkezelő** az ablakok elhelyezésével és viselkedésével foglalkozik. A **display manager** a grafikus bejelentkezést és a munkamenet indítását kezeli. A teljes desktop environment ezeknél több, például panelt, fájlkezelőt és beállításokat is tartalmaz.
 
 ## Linux GUI vs Windows / macOS
 
@@ -108,20 +99,18 @@ Az ablakok viselkedését, elhelyezését kezeli.
 | erős testreszabhatóság       | általában kötöttebb alapélmény         |
 | disztribúciótól is függ      | gyártó által szorosabban meghatározott |
 
+## Kidolgozott választás: régebbi tanulói laptop
+
+A feladat böngésző, szövegszerkesztő és terminál használata. Ugyanazon disztribúción kipróbálunk egy könnyebb és egy teljesebb asztali környezetet. Megmérjük a belépés utáni memóriaigényt, majd megnyitjuk ugyanazokat az alkalmazásokat. A böngésző lapjai több erőforrást is igényelhetnek, mint a felületek közötti különbség.
+
+A döntéshez a képernyőméretezést, billentyűzetkiosztást, akadálymentességet és a szükséges képernyőmegosztó működését is kipróbáljuk. Az, hogy egy környezet „könnyű”, relatív tulajdonság, nem garancia az összes feladat sebességére. A disztribúció, desktop environment és Wayland/X11-munkamenet nevét külön rögzítjük a tesztjegyzetben.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Linux alatt többféle grafikus felület, más néven desktop environment használható.  
 > Ilyen például a GNOME, a KDE Plasma, az Xfce vagy a Cinnamon.  
 > Ezek biztosítják az ablakkezelést, a paneleket, a fájlkezelőt és a grafikus beállítási lehetőségeket.  
 > A Linux egyik előnye, hogy a felhasználó többféle grafikus környezet közül választhat.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy Linux alatt csak terminál van.
-- A Linuxot és a GNOME-ot ugyanannak tekinteni.
-- Nem tudni legalább 2-3 Linuxos grafikus felületet felsorolni.
-- A window managert és a teljes desktop environmentet összekeverni.
-- Nem tudni, hogy Wayland és X11 a grafikus háttérréteghez kapcsolódik.
 
 ## Gyors önellenőrzés
 
@@ -141,8 +130,8 @@ Az ablakok viselkedését, elhelyezését kezeli.
 
 ## Források
 
-1. Ubuntu Help - Visual overview of GNOME  
-   https://help.ubuntu.com/stable/ubuntu-help/shell-introduction  
+1. GNOME Help - Visual overview of GNOME
+   https://help.gnome.org/gnome-help/shell-introduction.html
    Használat: GNOME mint grafikus Linux desktop környezet.
 
 2. KDE - Plasma is a Desktop  
@@ -157,8 +146,14 @@ Az ablakok viselkedését, elhelyezését kezeli.
    https://fedoraproject.org/kde/  
    Használat: KDE Plasma Linux desktop környezet modern disztribúciós példája.
 
-5. Linux Mint Cinnamon projects  
-   https://projects.linuxmint.com/cinnamon/  
+5. Linux Mint - Cinnamon
+   https://github.com/linuxmint/cinnamon
    Használat: Cinnamon mint fontos Linux desktop felület.
 
-Megnyitva: `2026-04-08`
+Felülvizsgálva: `2026-10-14`
+
+### A bővítés ellenőrzött forrásai
+
+- [Wayland project](https://wayland.freedesktop.org/): protokoll, kliens és kompozitor.
+
+Ellenőrizve: `2026-10-14`.

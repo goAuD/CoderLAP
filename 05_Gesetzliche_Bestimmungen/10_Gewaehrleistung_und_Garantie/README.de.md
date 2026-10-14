@@ -67,6 +67,44 @@ insbesondere bei Waren und digitalen Leistungen.
 | Garantie | freiwillig abgegebenes Zusatzversprechen |
 | Schadensersatz | Ersatz eines Schadens, nicht dasselbe wie Gewährleistung |
 
+## Eine Laptop-Reklamation herleiten
+
+Eine Verbraucherin kauft bei einem Unternehmen einen neuen Laptop. Nach acht Monaten
+zeigt sich ein Mangel. Gesetzliche Gewährleistungsansprüche richtet sie grundsätzlich
+gegen den vertraglichen Verkäufer. Nach § 11 VGG wird bei einem innerhalb eines Jahres
+hervorkommenden Mangel vermutet, dass er bereits bei Übergabe vorhanden war, außer dies
+ist mit der Art der Ware oder des Mangels unvereinbar. Das ist eine Beweisregel,
+keine einjährige Gewährleistungsfrist.
+
+Bei Waren erfasst die Gewährleistung grundsätzlich bei Übergabe vorhandene Mängel,
+die innerhalb von zwei Jahren hervorkommen. Zunächst kommen regelmäßig Verbesserung
+oder Austausch infrage; Unmöglichkeit und unverhältnismäßiger Aufwand können die Wahl begrenzen.
+Preisminderung oder Vertragsauflösung setzen die weiteren Bedingungen des § 12 voraus.
+Eine sofortige Rückzahlung folgt daher nicht automatisch aus jedem Mangel.
+
+### Aktualisierung: Verträge ab 1. Oktober 2026
+
+Wird der mangelfreie Zustand durch **Verbesserung** nach § 12 Abs. 2 VGG hergestellt,
+verlängert sich die Gewährleistungsfrist gemäß § 10 Abs. 2a **einmal um ein Jahr**.
+Vor der Abhilfe muss das Unternehmen über das Wahlrecht und die mögliche Verlängerung
+informieren. Nach § 29 Abs. 4 gilt die Änderung für Verträge, die nach dem 30. September
+2026 geschlossen werden. Auf einen früheren Kauf übertragen wir sie nicht automatisch.
+
+### Digitale Leistung und Aktualisierungen
+
+Bei fortlaufenden digitalen Leistungen sind auch Mängel relevant, die während der
+vereinbarten Bereitstellung auftreten, nicht nur der Zustand am ersten Tag.
+Bei Waren mit digitalen Elementen und digitalen Leistungen kann die Bereitstellung
+notwendiger Aktualisierungen zur Vertragskonformität gehören (§ 7 VGG).
+Das ist kein Versprechen, jede neue Funktion kostenlos zu entwickeln.
+
+Das Beispiel betrifft einen Vertrag zwischen Unternehmen und Verbraucher.
+Bei Privatverkäufen oder Geschäften zwischen Unternehmen sind andere Regeln mitzuprüfen.
+Gewährleistung, freiwillige Garantie und das Rücktrittsrecht bei Fernabsatz sind drei verschiedene Fragen.
+
+Quelle: [RIS: VGG, insbesondere §§ 7, 10–13, 18–20 und 29](https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011654).
+Rechtsstand geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Gewährleistung ist die gesetzliche Haftung bei mangelhafter Leistung,
@@ -75,13 +113,6 @@ insbesondere bei Waren und digitalen Leistungen.
 > Die Garantie hingegen ist ein freiwillig abgegebenes Zusatzversprechen,
 > das in der Regel vom Hersteller oder Verkäufer gegeben wird.
 > Die Garantie ersetzt und beseitigt nicht die gesetzlichen Gewährleistungsrechte.
-
-## Häufige Prüfungsfehler
-
-- Gewährleistung und Garantie als Synonyme zu behandeln.
-- Zu behaupten, ohne Garantie gebe es keinerlei Rechte.
-- Zu vergessen, dass es auch für digitale Leistungen Regeln geben kann.
-- Die Garantie als verpflichtendes gesetzliches Element zu betrachten.
 
 ## Schnelle Selbstkontrolle
 
@@ -111,6 +142,6 @@ insbesondere bei Waren und digitalen Leistungen.
 
 3. RIS - Verbrauchergewährleistungsgesetz § 11
    https://ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011654&Paragraf=11&Uebergangsrecht=
-   Verwendung: rechtlicher Hintergrund der aus der Gewährleistung resultierenden primären Rechte.
+   Verwendung: Vermutung des Mangels bei Übergabe und Beweislast; die Rechtsbehelfe stehen in § 12.
 
 Abgerufen: `2026-04-08`

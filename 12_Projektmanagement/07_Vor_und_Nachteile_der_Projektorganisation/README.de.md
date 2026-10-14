@@ -37,6 +37,18 @@ Es bedeutet, dass dem Projekt:
 - bei der Zusammenarbeit mehrerer Teams oder Abteilungen
 - bei komplexeren, längeren Projekten
 
+## Drei Organisationsformen für dieselbe Aufgabe
+
+| Form | Wer steuert die Arbeit? | Typische Abwägung |
+|---|---|---|
+| Stabsprojektorganisation | Projektkoordination unterstützt, Weisungsrecht bleibt meist in der Linie | wenig Umbau, begrenzter direkter Einfluss |
+| Matrix | Projekt- und Fachleitung teilen Verantwortung | Fachwissen gemeinsam nutzbar, Prioritäten abzustimmen |
+| reine Projektorganisation | die Projektleitung führt ein zugeordnetes Team | starker Fokus, eigene Kapazität und spätere Rückgliederung nötig |
+
+In einer Matrix kann ein Entwickler am selben Tag für eine Störungsbehebung und das neue System eingeplant sein. Er muss den Konflikt nicht still durch Überstunden lösen: Die beiden Leitungen stimmen sich anhand vorher geklärter Prioritäts- und Eskalationsregeln ab.
+
+Die konkrete Organisation legt Befugnisse fest. Der Titel „Projektleiter“ allein belegt noch keine Budget- oder Personalentscheidungsrechte.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Vorteil der Projektorganisation ist,
@@ -45,13 +57,6 @@ Es bedeutet, dass dem Projekt:
 > Nachteilig kann jedoch der größere Organisationsaufwand sein,
 > Ressourcenkonflikte und die Entstehung paralleler Organisationsstrukturen.  
 > Bei komplexeren Projekten ist sie besonders nützlich, bei kleineren Aufgaben kann sie aber auch zu schwerfällig sein.
-
-## Häufige Prüfungsfehler
-
-- Nur Vorteile oder nur Nachteile nennen.
-- Die Klarheit der Verantwortlichkeiten nicht erwähnen.
-- Projektorganisation automatisch in jeder Situation als ideal bezeichnen.
-- Nicht über Ressourcenkonflikte sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -70,6 +75,11 @@ Es bedeutet, dass dem Projekt:
 5. Weil Projekt und Tagesgeschäft auf dieselben Personen zurückgreifen können
 
 ## Quellen
+
+- [PMI: Delegation and sharing of authority](https://www.pmi.org/learning/library/delegation-sharing-authority-matrix-organizations-1806)  
+  Befugnisse zwischen Projekt- und Linienleitung in einer Matrix abstimmen.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  

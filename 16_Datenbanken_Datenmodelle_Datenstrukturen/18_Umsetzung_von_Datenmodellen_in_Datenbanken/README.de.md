@@ -68,6 +68,50 @@ Weil hier entschieden wird, ob:
 - genaue Modellierung der Beziehungen
 - Vermeidung unnötiger Redundanz
 
+## Durchgearbeitetes Schema: das Anmeldemodell umsetzen
+
+**MySQL 8.0 / InnoDB.** Verwende eine leere Übungsdatenbank mit UTF-8 (`utf8mb4`). Nach dem vorherigen Modell darf eine Person je Kurs einmal angemeldet sein.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE students (
+  id INT PRIMARY KEY,
+  name VARCHAR(80) NOT NULL
+) ENGINE=InnoDB;
+CREATE TABLE courses (
+  id INT PRIMARY KEY,
+  title VARCHAR(80) NOT NULL
+) ENGINE=InnoDB;
+CREATE TABLE enrollments (
+  student_id INT NOT NULL,
+  course_id INT NOT NULL,
+  enrolled_on DATE NOT NULL,
+  PRIMARY KEY (student_id, course_id),
+  FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE RESTRICT,
+  FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE RESTRICT
+) ENGINE=InnoDB;
+INSERT INTO students VALUES (1, 'Anna');
+INSERT INTO courses VALUES (10, 'SQL'), (20, 'JavaScript');
+INSERT INTO enrollments VALUES
+  (1, 10, '2026-01-10'), (1, 20, '2026-01-11');
+SELECT s.name, c.title, e.enrolled_on
+FROM enrollments AS e
+JOIN students AS s ON s.id = e.student_id
+JOIN courses AS c ON c.id = e.course_id
+ORDER BY c.id;
+```
+
+```text
+Anna SQL 2026-01-10
+Anna JavaScript 2026-01-11
+```
+
+Der zusammengesetzte Primärschlüssel verhindert doppelte Anmeldungen. Die Fremdschlüssel verhindern Verweise auf nicht vorhandene Personen oder Kurse. `RESTRICT` verhindert das Löschen betroffener Stammdaten, solange Anmeldungen darauf verweisen. Das ist eine bewusste Beispielregel; andere Aufbewahrungsanforderungen können ein anderes Verfahren verlangen.
+
+Datentypen folgen der Bedeutung: `DATE` für ein Datum, beispielsweise `DECIMAL` für Geld mit fester Genauigkeit und normalerweise Text für Telefonnummern. Eine Telefonnummer ist keine Rechengröße und kann mit `+` oder `0` beginnen. Auch Zeichensatz und Vergleichsregeln, die Collation, sind wichtig.
+
+Ändere das Schema mit versionierten Migrationen. Bei einer neuen Pflichtspalte müssen auch vorhandene Zeilen passende Werte erhalten. Prüfe neben erfolgreichem `CREATE TABLE` gültiges Einfügen, Ablehnung doppelter Schlüssel und ungültiger Verweise sowie die benötigte Abfrage.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Umsetzung von Datenmodellen in Datenbanken werden die Elemente des konzeptionellen oder logischen Modells in  
@@ -75,13 +119,6 @@ Weil hier entschieden wird, ob:
 > Aus Entitäten werden Tabellen, aus Attributen Spalten, aus Beziehungen Primär- und Fremdschlüssel sowie bei Bedarf  
 > Verknüpfungstabellen.  
 > Dabei werden auch die Datentypen, Integritätsregeln und weitere technische Details festgelegt.
-
-## Häufige Prüfungsfehler
-
-- Modellierung und Umsetzung als dasselbe betrachten.
-- Bei der `n:m`-Beziehung keine Verknüpfungstabelle verwenden.
-- Die Constraints nicht erwähnen.
-- Die Rolle der Datentypen weglassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -110,3 +147,10 @@ Weil hier entschieden wird, ob:
    Verwendung: offizielle Quelle dazu, wie Modelle in Tabellen, Schlüsseln und Constraints umgesetzt werden.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [MySQL: CREATE TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html): Schema, Datentypen und Constraints
+- [MySQL: FOREIGN KEY constraints](https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html): InnoDB-Fremdschlüssel und RESTRICT
+
+Geprüft: `2026-10-14`.

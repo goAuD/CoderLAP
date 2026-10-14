@@ -67,19 +67,51 @@ Itt:
 
 Sok feladat megoldható mindkét módon, de nem mindig ugyanolyan jól.
 
+## A hívások visszatérése is része a megoldásnak
+
+Feladat: a `0..12` tartomány egész számainak faktoriálisa. A tudatos korlát
+rövid hívási láncot és pontos egész eredményt ad. A JavaScript-példa Node.js-ben fut.
+
+<!-- example:run -->
+
+```javascript
+function factorial(n) {
+  if (!Number.isInteger(n) || n < 0 || n > 12) {
+    throw new RangeError("n must be an integer from 0 to 12");
+  }
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
+console.log(factorial(4));
+console.log(factorial(0));
+```
+
+```text
+24
+1
+```
+
+| Hívás | Mire vár? | Visszaadott érték |
+|---|---|---|
+| `factorial(0)` | semmire, alapeset | `1` |
+| `factorial(1)` | `1 * factorial(0)` | `1` |
+| `factorial(2)` | `2 * factorial(1)` | `2` |
+| `factorial(3)` | `3 * factorial(2)` | `6` |
+| `factorial(4)` | `4 * factorial(3)` | `24` |
+
+A hívások lefelé `4, 3, 2, 1, 0` sorrendben keletkeznek, az eredmények visszafelé
+épülnek fel. Minden hívásnak saját `n` paramétere van. Az alapeset mellett azt is
+igazoljuk, hogy a következő hívás közelebb kerül hozzá. A példában az egész `n`
+mindig eggyel csökken. Idő és hívási verem: `O(n)`. Iteratív megoldás ugyanezt
+egy akkumulátorral, `O(1)` segédmemóriával megoldhatja. Közvetett rekurzió is
+létezik, amikor egy függvény más függvényen keresztül jut vissza saját magához.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A rekurzív függvény olyan függvény, amely önmagát hívja meg egy kisebb részprobléma megoldására.  
 > A helyes működéshez mindig szükség van alapesetre és rekurzív esetre.  
 > A rekurzió különösen hasznos hierarchikus vagy felosztásos problémáknál, de túl mély hívás esetén erőforrásgondokat is
 > okozhat.
-
-## Gyakori vizsgahibák
-
-- Kihagyni az alapesetet.
-- Azt állítani, hogy a rekurzió mindig jobb, mint a ciklus.
-- Nem megemlíteni a stackhasználatot.
-- A rekurziót sima függvényhívással összekeverni.
 
 ## Gyors önellenőrzés
 
@@ -98,6 +130,11 @@ Sok feladat megoldható mindkét módon, de nem mindig ugyanolyan jól.
 5. Túl mély hívási lánc és nagy stackhasználat
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Recursion](https://developer.mozilla.org/en-US/docs/Glossary/Recursion): alapeset, hívási verem és visszatérés.
+
 
 1. MDN - Recursion  
    https://developer.mozilla.org/en-US/docs/Glossary/Recursion  

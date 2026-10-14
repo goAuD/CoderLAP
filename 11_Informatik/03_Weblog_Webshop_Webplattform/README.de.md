@@ -76,6 +76,29 @@ Beispiel:
 | Webshop | ist nicht nur eine einfache Produktliste |
 | Plattform | nicht jede Webseite ist eine Plattform |
 
+## Dasselbe Produkt, drei unterschiedliche Abläufe
+
+Bei einem Blogbeitrag über ein Buch schreibt die Redaktion den Text, gibt ihn
+frei und veröffentlicht ihn. Im Mittelpunkt steht der Inhaltslebenszyklus:
+Entwurf, veröffentlichte Fassung und spätere Überarbeitung.
+
+In einem Buch-Webshop ist ein Warenkorb noch keine Bestellung. Der Server prüft
+anhand von Produkt-ID und Menge den aktuellen Preis und Bestand. Anschließend
+entsteht eine Bestellung, die etwa die Zustände „Zahlung ausstehend“, „bezahlt“
+und „versendet“ durchläuft. Ein im Browser geänderter Preis darf nicht die Quelle
+des verbindlichen Zahlbetrags sein.
+
+Auf einem Marktplatz bieten mehrere Verkäufer Bücher an. Dafür werden etwa
+Verkäuferrechte, getrennte Angebote und Moderation benötigt. Ein Verkäufer darf
+den Bestand eines anderen nicht ändern. Hinter ähnlichen Weboberflächen stehen
+also unterschiedliche Geschäftsregeln.
+
+„Webplattform“ wird hier als allgemeiner technischer Begriff verwendet. Der
+Rechtsbegriff „Online-Plattform“ im DSA ist genauer abgegrenzt und umfasst unter
+anderem die Speicherung und öffentliche Verbreitung von Informationen auf
+Veranlassung eines Nutzers. Die rechtliche Einordnung ergibt sich daher nicht
+allein aus mehreren Benutzern oder Funktionen einer Website.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Weblog dient in erster Linie der Veröffentlichung von Inhalten und basiert auf Beiträgen.  
@@ -83,13 +106,6 @@ Beispiel:
 > Die Webplattform ist ein breiterer Begriff:
 > ein webbasiertes System, das mehrere Akteure, Dienste oder Prozesse verbindet,
 > zum Beispiel in Form eines Marktplatzes oder einer Lernplattform.
-
-## Häufige Prüfungsfehler
-
-- Einen Blog automatisch mit einer einfachen Nachrichtenseite gleichsetzen.
-- Einen Webshop nur als "Katalog" bezeichnen.
-- Jede größere Webseite als Plattform bezeichnen.
-- Nicht zwischen Inhalts-, Handels- und Plattformlogik unterscheiden.
 
 ## Schnelle Selbstkontrolle
 
@@ -109,6 +125,12 @@ Beispiel:
 
 ## Quellen
 
+Geprüft: `2026-10-14`.
+
+- [OWASP: Business Logic Security](https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html): serverseitige Preise und Geschäftsabläufe.
+- [EUR-Lex: DSA, Artikel 3](https://eur-lex.europa.eu/eli/reg/2022/2065/oj): Abgrenzung des rechtlichen Plattformbegriffs.
+
+
 1. WordPress.org - Blog Tool, Publishing Platform, and CMS  
    https://wordpress.org/  
    Verwendung: offizielles, modernes Beispiel dafür, wie Blog und Publishing-Plattform in der Praxis erscheinen.
@@ -119,8 +141,7 @@ Beispiel:
 
 3. EUR-Lex - Regulation (EU) 2022/2065 (Digital Services Act)  
    https://eur-lex.europa.eu/eli/reg/2022/2065/oj  
-   Verwendung: offizieller EU-Hintergrund zum Begriff "Online-Plattform",
-   wenn die Plattform mehrere Benutzer und Dienste verbindet.
+   Verwendung: eigener Rechtsbegriff der Online-Plattform, insbesondere Artikel 3.
 
 4. MDN - Site  
    https://developer.mozilla.org/docs/Glossary/Site  

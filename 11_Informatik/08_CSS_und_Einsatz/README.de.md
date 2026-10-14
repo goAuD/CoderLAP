@@ -98,6 +98,36 @@ Hier:
 - Es reicht nicht, nur "schön" zu sein: es muss auch benutzbar und übersichtlich sein.
 - CSS ersetzt kein semantisches HTML.
 
+## Nachvollziehbares Beispiel: Kaskade und Boxmodell
+
+Der folgende HTML-Ausschnitt wird in einem HTML-Dokument im Browser verwendet:
+
+```html
+<style>
+  .card { box-sizing: border-box; width: 320px; padding: 16px; border: 2px solid; color: navy; }
+  p { color: green; }
+  .card { color: purple; }
+</style>
+<p class="card">Lernkarte</p>
+```
+
+Der Text ist violett. In diesem Beispiel ohne Ebenen und `!important` ist der
+Klassenselektor `.card` spezifischer als der Elementselektor `p`. Die beiden
+`.card`-Regeln sind gleich spezifisch, deshalb entscheidet das spätere `purple`.
+Allgemein berücksichtigt die Kaskade zuvor auch Ursprung, Wichtigkeit und
+Kaskadenebene. Eine Regel am Dateiende gewinnt daher nicht automatisch gegen
+alle anderen Regeln.
+
+Die Breite einschließlich Rahmen beträgt `320px`. Für den Inhalt bleiben
+`320 - 2 × 16 - 2 × 2 = 284px`. Bei `content-box` wären die `320px` nur die
+Inhaltsbreite; die äußere Breite betrüge dann `356px`. Der Außenabstand liegt
+in beiden Fällen außerhalb des Rahmens.
+
+Die Ansicht „Computed“ der DevTools zeigt die endgültige Farbe und Boxgröße.
+`color` wird normalerweise vom Elternelement geerbt, `padding` nicht.
+Vererbung erklärt, woher eine Eigenschaft einen Wert übernimmt. Die Kaskade
+wählt zwischen konkurrierenden Deklarationen. Das sind getrennte Mechanismen.
+
 ## Prüfungstaugliche Formulierung
 
 > CSS ist eine Stylesheet-Sprache zur Beschreibung des Erscheinungsbilds von Webseiten.  
@@ -105,13 +135,6 @@ Hier:
 > das Layout gesteuert
 > und responsive, einheitliche Benutzeroberflächen gestaltet werden.  
 > HTML liefert die Struktur, CSS das Erscheinungsbild und JavaScript die interaktive Funktionalität.
-
-## Häufige Prüfungsfehler
-
-- CSS als Programmiersprache bezeichnen.
-- Die Rollen von HTML und CSS vertauschen.
-- Responsive Darstellung nur an JavaScript binden.
-- Nicht erwähnen, dass CSS auch für das Layout verantwortlich ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -130,6 +153,12 @@ Hier:
 5. CSS formatiert, JavaScript gibt Verhalten
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Introduction): Entscheidungsreihenfolge der Kaskade.
+- [MDN: Box sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing): Berechnung von border-box und content-box.
+
 
 1. MDN - CSS: Cascading Style Sheets  
    https://developer.mozilla.org/en-US/docs/Web/CSS  

@@ -27,7 +27,7 @@ Azt, hogy a projekthez:
 ## Fő hátrányai
 
 - több meeting és adminisztráció lehet
-- erőforrásokért verseny alakulhat ki a lineáris működéssel
+- a projekt és a vonalas szervezet napi munkája ugyanazokért az erőforrásokért versenyezhet
 - túl merev szervezés lassíthat is
 - kisebb projektnél túlzás lehet
 
@@ -37,6 +37,18 @@ Azt, hogy a projekthez:
 - több csapat vagy részleg együttműködésénél
 - összetettebb, hosszabb projekteknél
 
+## Három szervezeti forma ugyanarra a feladatra
+
+| Forma | Ki irányítja a munkát? | Jellegzetes mérlegelés |
+|---|---|---|
+| törzskari, Stabsprojektorganisation | a projektkoordinátor támogat, az utasítási jog jellemzően a vonalas vezetőnél marad | kevés szervezeti átalakítás, korlátozott közvetlen ráhatás |
+| mátrix | a projekt- és szakmai vezetés megosztja a felelősséget | jól megosztható szakértelem, egyeztetendő prioritások |
+| tiszta projektszervezet | a projekthez rendelt csapatot a projektvezető irányítja | erős fókusz, külön kapacitás és visszaillesztési feladat |
+
+Mátrixban egy fejlesztőt ugyanarra a napra kérhet a hibajavítás és az új rendszer projektje. Az ütközést nem a fejlesztőnek kell csendben túlórával feloldania: a két vezető az előre tisztázott prioritási és eszkalációs szabály alapján egyeztet.
+
+A pontos jogosultságokat a szervezet határozza meg. A „projektvezető” cím önmagában nem bizonyít költségkeret- vagy személyzeti döntési jogot.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projektorganizáció előnye,
@@ -45,13 +57,6 @@ Azt, hogy a projekthez:
 > Hátránya lehet ugyanakkor a nagyobb szervezési ráfordítás,
 > az erőforrásütközés és a párhuzamos szervezeti struktúrák kialakulása.  
 > Különösen összetettebb projektnél hasznos, de kisebb feladatoknál túl nehézkes is lehet.
-
-## Gyakori vizsgahibák
-
-- Csak előnyöket vagy csak hátrányokat említeni.
-- Nem megemlíteni a felelősségi tisztaságot.
-- A projektorganizációt automatikusan minden helyzetben ideálisnak nevezni.
-- Nem beszélni az erőforráskonfliktusról.
 
 ## Gyors önellenőrzés
 
@@ -70,6 +75,11 @@ Azt, hogy a projekthez:
 5. Mert a projekt és a napi működés ugyanazokra az emberekre támaszkodhat
 
 ## Források
+
+- [PMI: Delegation and sharing of authority](https://www.pmi.org/learning/library/delegation-sharing-authority-matrix-organizations-1806)  
+  A projekt- és vonalas vezetés hatáskörének egyeztetése mátrixszervezetben.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  

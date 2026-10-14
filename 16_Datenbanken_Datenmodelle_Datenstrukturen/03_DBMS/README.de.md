@@ -53,6 +53,34 @@ Bekannte `DBMS`:
 - `Microsoft SQL Server`
 - `SQLite`
 
+## Wie verarbeitet das DBMS eine Anfrage?
+
+Das DBMS prüft Syntax, Existenz der Objekte und Berechtigungen. Der Abfrageplaner wählt einen Ausführungsplan, etwa Indexsuche oder Tabellendurchlauf. Die Speicherengine führt die Operation aus; Transaktionsverwaltung und Protokollierung sorgen entsprechend den Einstellungen für Nebenläufigkeit und Wiederherstellung.
+
+Die Anwendung beschreibt, welche Daten sie benötigt. Sie muss nicht wissen, auf welcher Datenträgerseite eine Zeile liegt. Das ist ein Vorteil der Unabhängigkeit von der physischen Speicherung.
+
+**MySQL 8.0 / InnoDB, leere Übungsdatenbank:** Das folgende Beispiel liest die Metadaten des DBMS. Das sind Daten über die Struktur anderer Daten.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE books (
+  id INT PRIMARY KEY,
+  title VARCHAR(80) NOT NULL
+) ENGINE=InnoDB;
+
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_schema = DATABASE() AND table_name = 'books'
+ORDER BY ordinal_position;
+```
+
+```text
+id int NO
+title varchar NO
+```
+
+phpMyAdmin oder ein grafischer SQL-Client sind Verwaltungsoberflächen; MySQL selbst ist das DBMS. Sicherungsplanung, Rechtevergabe und Updates bleiben Betriebsaufgaben.
+
 ## Prüfungstaugliche Formulierung
 
 > Das `DBMS`, also Database Management System, ist die Software, die die Erstellung, Verwaltung, Abfrage, den Schutz  
@@ -60,13 +88,6 @@ Bekannte `DBMS`:
 > Das `DBMS` vermittelt zwischen Anwendungen und den gespeicherten Daten und gewährleistet unter anderem die  
 > Integrität, den Mehrbenutzerbetrieb und die Regeln der Datenverwaltung.  
 > Daher ist das `DBMS` das zentrale Element des Datenbanksystems.
-
-## Häufige Prüfungsfehler
-
-- Das `DBMS` mit der Datenbank gleichsetzen.
-- Das `DBMS` lediglich als Abfrageprogramm bezeichnen.
-- Die Administrations- und Integritätsfunktionen nicht erwähnen.
-- Nicht erwähnen, dass es auch den Mehrbenutzerzugriff verwaltet.
 
 ## Schnelle Selbstkontrolle
 
@@ -95,3 +116,10 @@ Bekannte `DBMS`:
    Verwendung: moderne, gut lesbare Zusammenfassung zur Rolle des `DBMS`.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [MySQL: INFORMATION_SCHEMA COLUMNS](https://dev.mysql.com/doc/refman/8.0/en/information-schema-columns-table.html): Abfrage von Spaltenmetadaten
+- [MySQL: Introduction to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-introduction.html): Transaktionen und die Rolle der InnoDB-Speicherengine
+
+Geprüft: `2026-10-14`.

@@ -50,6 +50,14 @@ Deshalb umfasst Projektmanagement typischerweise:
 - Überwachung / Kontrolle
 - Abschluss
 
+## Wochenstatus in einem kleinen Softwareprojekt
+
+Am Freitag ist der Code eines Buchungsformulars fertig. Die Projektleitung fragt nicht nur nach erledigten Aufgaben: Funktioniert der Schutz gegen Doppelbuchungen, hat der Kunde die Anwendung erprobt und was fehlt für die Übergabe? „Implementiert“ und „abgenommen“ sind verschiedene Zustände.
+
+Im Plan für die nächste Woche erhalten Test, Benutzererprobung und Anleitung jeweils eine verantwortliche Person und einen Termin. Ist der Kunde erst eine Woche später verfügbar, wird diese Abhängigkeit erfasst und betroffene Arbeit neu geplant. Auch die Entscheidung zur Abweichung wird festgehalten.
+
+Überwachung und Anpassung begleiten somit das ganze Projekt; sie sind nicht erst nach der Umsetzung vorgesehen. In kleinen Teams kann dieselbe Person entwickeln und koordinieren. Die beiden Verantwortungen bleiben trotzdem unterscheidbar.
+
 ## Prüfungstaugliche Formulierung
 
 > Projektmanagement bedeutet die bewusste Planung, Steuerung, Koordination und Kontrolle eines Projekts.  
@@ -58,13 +66,6 @@ Deshalb umfasst Projektmanagement typischerweise:
 > Zum Projektmanagement gehören unter anderem Planung,
 > Kommunikation, Aufgabenverteilung, Risikomanagement
 > und laufende Überwachung.
-
-## Häufige Prüfungsfehler
-
-- Projektmanagement mit der fachlichen Umsetzung verwechseln.
-- Nur den Termin erwähnen, Kosten und Ziel nicht.
-- Die Rolle der Koordination und Kommunikation nicht erwähnen.
-- Projektmanagement als reine Administration bezeichnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +84,11 @@ Deshalb umfasst Projektmanagement typischerweise:
 5. Zeit, Kosten, Ergebnis / Umfang
 
 ## Quellen
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Projektziele, Verantwortlichkeiten und laufende Steuerung; das Beispiel ist ein eigener Übungsfall.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - Lexicon of Terms  
    https://www.pmi.org/standards/lexicon  

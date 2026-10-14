@@ -80,6 +80,12 @@ Függhet:
 - képernyőmérettől
 - munkafeladattól
 
+## A beállítás és a szoftver együtt számít
+
+A karnyújtásnyi távolság kiindulópont, nem mindenkire kötelező mérőszám. Ha ezen a távolságon előrehajolsz a szöveghez, növeld a betűméretet vagy a rendszer nagyítását, majd ellenőrizd újra a testhelyzetet. A távolságot, a kijelző méretét és a feladat részletigényét együtt kell megválasztani.
+
+Egy programozó például a szerkesztő betűméretét 12-ről 16-ra növeli, majd hátradől a szék támaszához. Ez egy személyre szabott próba, nem általános előírás. Progresszív szemüvegnél más magasság lehet kényelmes: a cél, hogy a kijelző élesen látható legyen a fej tartós hátrabillentése nélkül. A tartós látási vagy nyaki panasz munkahelyi értékelést és szükség szerint szakmai vizsgálatot indokol.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A monitor ideális beállításánál a tekintet enyhén lefelé irányuljon,
@@ -89,14 +95,6 @@ Függhet:
 > de még kényelmesen olvasható,
 > mert ez csökkenti a szem és a nyak terhelését.  
 > A pontos beállítás személyenként eltérhet, ezért a munkahelyet egyénileg kell igazítani.
-
-## Gyakori vizsgahibák
-
-- Pontos, mindenkire kötelező centiméterértéket mondani.
-- Azt állítani, hogy a képernyő felső széle mindig jóval szemmagasság fölött legyen.
-- Nem megemlíteni a lefelé irányuló tekintetet.
-- Elfelejteni a monitor dőlésszögét.
-- Elfelejteni, hogy a billentyűzet különállása segíti a jó távolságot.
 
 ## Gyors önellenőrzés
 
@@ -118,8 +116,13 @@ Függhet:
 
 ## Források
 
+- [Arbeitsinspektion: Bildschirmarbeitsplätze](https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html)  
+  Munkahelyi beállítások és képernyős munkavégzés feltételei.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Használat: hivatalos osztrák forrás a képernyőtávolság, a lefelé irányuló tekintet és a monitor dőlésszögének alapélveihez.
 
 2. AUVA - Telearbeitsplätze  

@@ -61,6 +61,39 @@ Operative Systeme
 | `BW` | zentrale, für Analysen vorbereitete Datenspeicherung |
 | `BI` | Reporting und Analyse |
 
+## Durchgearbeiteter Bericht und Datengranularität
+
+**BI** umfasst Business Intelligence und Analysewerkzeuge. **BW** begegnet häufig als Name der Produktfamilie SAP Business Warehouse; die allgemeine Bezeichnung lautet Data Warehouse oder DWH. Nicht jede BI-Lösung benötigt ein separates Warehouse, vereinheitlichte historische Daten unterstützen jedoch viele Analysen.
+
+Operative transaktionale Verarbeitung (**OLTP**) erfasst einzelne Bestellungen. Analytische Verarbeitung (**OLAP**) vergleicht Auswertungen vieler Bestellungen. Bei ETL folgen auf Extraktion erst Transformation und dann Laden; bei ELT erfolgt die Transformation nach dem Laden.
+
+**MySQL 8.0 / InnoDB, leere Übungsdatenbank:** Eine Zeile steht hier für eine Verkaufsposition. Ihr Betrag ergibt sich aus Menge mal Stückpreis.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE sales (
+  id INT PRIMARY KEY,
+  category VARCHAR(20) NOT NULL,
+  quantity INT NOT NULL,
+  unit_price DECIMAL(8,2) NOT NULL
+) ENGINE=InnoDB;
+INSERT INTO sales VALUES
+  (1, 'book', 2, 10.00), (2, 'book', 1, 20.00), (3, 'tool', 3, 5.00);
+SELECT category, SUM(quantity * unit_price) AS revenue
+FROM sales
+GROUP BY category
+ORDER BY category;
+```
+
+```text
+book 40.00
+tool 15.00
+```
+
+Die Faktentabelle eines Warehouses enthält Messwerte; Dimensionen beschreiben beispielsweise Produkt, Datum und Kategorie. Zuerst wird die Bedeutung einer Zeile, die **Granularität**, festgelegt. Wird der gesamte Bestellbetrag bei jeder Position wiederholt, kann einfaches Summieren denselben Umsatz mehrfach zählen.
+
+Zeitraum, Währung, Netto-/Bruttobedeutung und letzter Aktualisierungszeitpunkt müssen beim Bericht klar sein. Eine aggregierte Zahl erklärt die Ursache einer Abweichung nicht von selbst; dazu gehört eine überprüfbare fachliche Interpretation.
+
 ## Prüfungstaugliche Formulierung
 
 > `BI`-Systeme dienen der Analyse, Visualisierung und Entscheidungsunterstützung auf Basis von Geschäftsdaten.  
@@ -68,13 +101,6 @@ Operative Systeme
 > speichern sie in einer für Analysen geeigneten Form.  
 > Einfach ausgedrückt: das `BW` stellt die Datengrundlage bereit, und `BI` macht daraus verwertbare Informationen und
 > geschäftliche Insights.
-
-## Häufige Prüfungsfehler
-
-- `BI` nur als Dashboard bezeichnen.
-- `BW` als einfache Datenbank bezeichnen.
-- `ERP`, `BI` und `BW` als dasselbe betrachten.
-- Die historische und analyseoptimierte Speicherung nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -107,3 +133,11 @@ Operative Systeme
    Verwendung: zeitgemäße, offizielle Quelle zum `BW`-Begriff im unternehmerischen Kontext.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Star schema](https://learn.microsoft.com/en-us/power-bi/guidance/star-schema): Fakten, Dimensionen und Granularität
+- [IBM: Business Intelligence](https://www.ibm.com/think/topics/business-intelligence): Analyse und geschäftliche Interpretation
+- [SAP: Business Warehouse](https://www.sap.com/products/data-cloud/business-warehouse.html): BW als SAP-Produktbezeichnung
+
+Geprüft: `2026-10-14`.

@@ -31,7 +31,7 @@ Az érintett megkérdezheti:
 - kezelnek-e róla adatot
 - milyen adatokat kezelnek
 
-Bizonyos esetben másolatot is kérhet.
+A hozzáférési jog a kezelt személyes adatok másolatára is kiterjed; az első másolat főszabály szerint ingyenes, mások jogait figyelembe kell venni.
 
 ## 3. Helyesbítés joga
 
@@ -98,7 +98,32 @@ Bizonyos esetben ez meghosszabbítható.
 - a jogok nem korlátlanok
 - egyes jogoknál kivételek vannak
 - az érintett először általában az adatkezelőhöz fordul
-- ha ez nem vezet eredményre, jöhet a hatósági panasz
+- jogsértés gyanújánál közvetlenül is tehető hatósági panasz; egy nem teljesített hozzáférési kérelemhez előbb az adatkezelőtől kell kérni a hozzáférést
+
+## Kérelem kezelése a gyakorlatban
+
+Egy ügyfél kéri a fiókjában tárolt adatok másolatát és a hibás cím javítását.
+A kérelem beérkezését rögzítjük, a személyazonosságot szükséges és arányos módon
+ellenőrizzük, majd megkeressük az adatokat az érintett rendszerekben.
+Az adatexport nem tartalmazhatja egy másik ügyfél adatait vagy jelszavait.
+
+A válasz főszabály szerint **indokolatlan késedelem nélkül, egy hónapon belül** esedékes.
+Összetett vagy nagyszámú kérelemnél további legfeljebb két hónap hosszabbítás lehetséges,
+de erről és az okáról az első hónapon belül tájékoztatni kell az érintettet.
+Az egy hónap nem minden esetben azonos 30 nappal.
+
+Az adathordozhatóság szűkebb a hozzáférésnél: az érintett által rendelkezésre bocsátott
+adatokra, hozzájáruláson vagy szerződésen alapuló **automatizált** kezelésnél alkalmazható.
+A közvetlen továbbítás technikai megvalósíthatóságtól is függ.
+Direkt marketing elleni tiltakozás után az adatokat erre a célra tovább nem kezeljük.
+
+**Döntési példa:** a fiók törlése és a számla kötelező megőrzése külön cél.
+A megszüntetett fiók felesleges adatai törölhetők, míg a kötelezően őrzött számla
+csak a megőrzés indokolt céljára, korlátozott hozzáféréssel marad meg.
+A válaszban megmagyarázzuk, mit töröltünk és mit, miért őrzünk tovább.
+
+Forrás: [EDPB: érintetti jogok](https://www.edpb.europa.eu/sme/be-compliant/respect-individuals-rights_en),
+GDPR 12., 15., 17., 20. és 21. cikk. Ellenőrizve: 2026-10-14.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -107,14 +132,6 @@ Bizonyos esetben ez meghosszabbítható.
 > a korlátozáshoz, az adathordozhatósághoz és a tiltakozáshoz való jogot.  
 > Az adatkezelőnek ezekre a kérelmekre főszabály szerint egy hónapon belül reagálnia kell.  
 > Ha az érintett jogsértést észlel, panaszt tehet az osztrák adatvédelmi hatóságnál.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy a törléshez való jog mindig korlátlan.
-- Elfelejteni az adathordozhatóságot.
-- Nem említeni a hatósági panasz lehetőségét.
-- Nem tudni az egy hónapos alapszabályt.
-- Összekeverni a tájékoztatáshoz való jogot a hozzáférési joggal.
 
 ## Gyors önellenőrzés
 
@@ -129,7 +146,7 @@ Bizonyos esetben ez meghosszabbítható.
 1. Tájékoztatás, hozzáférés, helyesbítés, törlés, korlátozás, adathordozhatóság, tiltakozás
 2. Megkérdezhető, milyen adatot kezelnek róla
 3. A pontatlan vagy hiányos adat javítását
-4. Az adatkezelőhöz, majd szükség esetén a DSB-hez
+4. Az adatkezelőhöz fordulhat, jogsértés esetén a DSB-nél panaszt is tehet
 5. Főszabály szerint egy hónap
 
 ## Források

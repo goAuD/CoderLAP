@@ -58,6 +58,14 @@ Daher ist heute eine verschlüsselte Verbindung die erwartete Lösung.
 | IMAP | serverseitige Synchronisierung |
 | SMTP | Versand und Weiterleitung |
 
+## Durchgearbeiteter Fall: Wo bleibt die Nachricht?
+
+Ein Client lädt per POP3 drei Nachrichten herunter. Das Herunterladen erzwingt nicht automatisch das Löschen: Der Client kann eine Kopie auf dem Server belassen. `DELE` markiert eine Nachricht zum Löschen, die Aktualisierungsphase nach einem regulären `QUIT` führt die Löschung aus. Die Aufbewahrungsregeln des Anbieters sind eine zusätzliche Frage.
+
+Hat der Laptop die Nachricht bereits vom Server entfernt, kann ein später verbundenes Telefon sie dort nicht mehr herunterladen. Lokal gespeicherte Nachrichten benötigen ein eigenes Backup. Für gemeinsame Lesestatus und Ordner auf zwei Geräten ist daher normalerweise IMAP geeigneter.
+
+Bei POP3S beginnt auf Port `995` sofort TLS. Auf Port `110` kann die Erweiterung `STLS` auf TLS umstellen. Vor dem Senden von Anmeldedaten muss der Client erfolgreiches TLS mit gültigem Zertifikat verlangen; eine Portnummer allein ist keine vollständige Sicherheitseinstellung.
+
 ## Prüfungstaugliche Formulierung
 
 > POP3 ist ein E-Mail-Protokoll zum Herunterladen eingehender E-Mails.  
@@ -65,13 +73,6 @@ Daher ist heute eine verschlüsselte Verbindung die erwartete Lösung.
 > während IMAP für die Synchronisierung über mehrere Geräte
 > oft die bessere Wahl ist.  
 > POP3S ist die mit TLS geschützte Variante von POP3 und daher sicherer.
-
-## Häufige Prüfungsfehler
-
-- POP3 als Sendeprotokoll bezeichnen.
-- POP3S mit SMTPS verwechseln.
-- Nicht wissen, dass POP3 eher ein Download-orientiertes Modell ist.
-- Die Bedeutung der Verschlüsselung vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -86,7 +87,7 @@ Daher ist heute eine verschlüsselte Verbindung die erwartete Lösung.
 1. Zum Herunterladen eingehender E-Mails
 2. `110`
 3. `995`
-4. POP3S ist verschlüsselt
+4. Bei POP3S beginnt TLS sofort; POP3 auf Port 110 kann bei Unterstützung und verpflichtender Nutzung durch STLS geschützt werden
 5. IMAP
 
 ## Quellen
@@ -104,3 +105,10 @@ Daher ist heute eine verschlüsselte Verbindung die erwartete Lösung.
    Verwendung: offizielles Portregister für die Ports `110` und `995`.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 1939: POP3](https://www.rfc-editor.org/rfc/rfc1939.html): Abruf, Löschmarkierung und UPDATE-Zustand.
+- [RFC 2595: TLS with IMAP, POP3 and ACAP](https://www.rfc-editor.org/rfc/rfc2595.html): POP3-STLS-Mechanismus, zusammen mit aktuellen TLS-Vorgaben zu lesen.
+
+Geprüft: `2026-10-14`.

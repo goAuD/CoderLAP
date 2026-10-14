@@ -67,19 +67,49 @@ Es zählt nicht nur, ob es funktioniert, sondern auch:
 
 Deshalb sprechen wir auch vom Vergleich von Algorithmen.
 
+## Eingabebedingung, Ablaufspur und Ergebnis
+
+Wir setzen die Summierung in JavaScript um. Der Vertrag lautet: `n` ist eine
+ganze Zahl von `0..1000`; das Ergebnis ist die Summe von `1..n`. Die Grenze
+sorgt in diesem Lernbeispiel für kurze Laufzeit und exakt darstellbare ganze Ergebnisse.
+
+<!-- example:run -->
+
+```javascript
+function sumTo(n) {
+  if (!Number.isInteger(n) || n < 0 || n > 1000) {
+    throw new RangeError("n must be an integer from 0 to 1000");
+  }
+  let sum = 0;
+  for (let i = 1; i <= n; i++) sum += i;
+  return sum;
+}
+console.log(sumTo(4));
+console.log(sumTo(0));
+```
+
+```text
+10
+0
+```
+
+Für `n = 4` nimmt die Summe die Werte `1`, `3`, `6`, `10` an. Vor der Schleife
+ist sie null, nach jedem Durchlauf die Summe aller bisher verarbeiteten Zahlen.
+Diese Aussage hilft, die Korrektheit zu begründen. Bei `n = 0` gibt es keinen
+Durchlauf; die leere Summe ist sinnvoll als null definiert. Die Laufvariable
+wächst und die Obergrenze ist endlich, daher endet die Ausführung für gültige Eingaben.
+
+Die Schleife führt `n` Additionen aus: Zeitbedarf `O(n)`, zusätzlicher Speicher
+`O(1)`. Für diese Summe lässt sich auch `n * (n + 1) / 2` mit einer festen Anzahl
+von Operationen berechnen. Das nutzt eine mathematische Eigenschaft dieser
+konkreten Aufgabe; nicht jede Schleife lässt sich durch eine solche Formel ersetzen.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Algorithmus ist eine eindeutige, endliche Schrittfolge, die zur Lösung eines bestimmten Problems dient.  
 > Er verarbeitet Eingaben und liefert ein Ergebnis zurück.  
 > In der Programmierung ist der Algorithmus die Logik der Lösung, die später in einer konkreten Programmiersprache
 > umgesetzt wird.
-
-## Häufige Prüfungsfehler
-
-- Den Algorithmus sofort mit Code gleichzusetzen.
-- Die Endlichkeit nicht zu erwähnen.
-- Die Schritte zu vage zu formulieren.
-- Die Rolle von Eingabe und Ausgabe auszulassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -98,6 +128,11 @@ Deshalb sprechen wir auch vom Vergleich von Algorithmen.
 5. Weil ihre Effizienz unterschiedlich sein kann
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Algorithm](https://developer.mozilla.org/en-US/docs/Glossary/Algorithm): Algorithmusbegriff; eigenständiges Summierungsbeispiel.
+
 
 1. MDN - Algorithm  
    https://developer.mozilla.org/en-US/docs/Glossary/Algorithm  

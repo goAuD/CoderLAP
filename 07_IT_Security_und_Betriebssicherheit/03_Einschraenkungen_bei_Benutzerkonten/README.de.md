@@ -52,6 +52,22 @@ Aufgabe:
 | UAC | Mechanismus zur Erhöhungsgenehmigung |
 | Least Privilege | nur die minimal nötigen Rechte vergeben |
 
+## Durchgearbeitetes Berechtigungsbeispiel
+
+Bei einer Lernplattform weist die Anmeldung die Nutzung des zum Konto gehörenden Authentifikators nach (**Authentifizierung**). Anschließend wird getrennt entschieden, was das Konto ausführen darf (**Autorisierung**).
+
+| Rolle | Erforderlicher Zugriff |
+|---|---|
+| Lernende | Material lesen, eigene Lösungen bearbeiten |
+| Lehrende | Inhalte und Aufgaben eigener Kurse bearbeiten |
+| Betrieb | Installation, Sicherung und erforderliche Systemeinstellungen |
+
+Eine Rolle berechtigt nicht automatisch zum Zugriff auf sämtliche Daten aller Personen. Ändert etwa ein Lernender eine Kennung in der Adresszeile, muss der Server trotzdem seine Berechtigung prüfen. Das Verstecken eines Buttons hilft nur bei der Darstellung.
+
+Bei Eintritt werden erforderliche Rollen vergeben, bei Aufgabenwechsel überprüft und bei Austritt Zugänge sowie aktive Sitzungen widerrufen. Ein Dienstkonto erhält eine eigene Identität und auf seinen Zweck begrenzte Rechte.
+
+MFA kombiniert unterschiedliche Faktoren, etwa Passwort und Besitz eines Authentifizierungsgeräts. Zwei Passwörter sind keine zwei Faktoren. Windows UAC steuert die Rechteerhöhung einer Aktion; es macht ein Programm nicht automatisch vertrauenswürdig. Auch ein Standardkonto kann eigene Dateien löschen, weshalb Backups weiterhin nötig sind.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Ziel der Einschränkung von Benutzerkonten ist die Umsetzung des Prinzips der geringsten Berechtigung.  
@@ -59,13 +75,6 @@ Aufgabe:
 > ein Standard-User-Konto zu verwenden
 > und nur bei Bedarf auf Admin-Ebene zu erhöhen.  
 > Das reduziert das Ausmaß von Fehlern, unbefugten Systemänderungen und durch Malware verursachten Schäden.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass jeder Admin sein sollte, weil es einfacher ist.
-- UAC mit dem Admin-Konto selbst verwechseln.
-- Das Least-Privilege-Prinzip nicht erwähnen.
-- Glauben, dass die Benutzereinschränkung nur unbequem ist, aber keinen Sicherheitsvorteil bringt.
 
 ## Schnelle Selbstkontrolle
 
@@ -102,3 +111,11 @@ Aufgabe:
    Verwendung: offizielle CISA-Quelle zur modernen Sicherheitsbedeutung des Least-Privilege-Prinzips.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [OWASP: Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html): Trennung von Authentifizierung und Autorisierung, erforderliche Rechte
+- [Microsoft: User Account Control](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/): UAC und Rechteerhöhung
+- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html): Authentifizierungsfaktoren und Phishing-Resistenz
+
+Geprüft: `2026-10-14`.

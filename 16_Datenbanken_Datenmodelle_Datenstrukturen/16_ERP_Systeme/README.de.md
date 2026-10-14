@@ -50,19 +50,22 @@ Das Hauptziel eines `ERP` ist, dass die verschiedenen Bereiche eines Unternehmen
 
 `ERP` ist häufig einer der wichtigsten Bestandteile des `BIS`.
 
+## Durchgearbeiteter ERP-Prozess: vom Einkauf zum Bestand
+
+Ein Unternehmen bestellt zehn Netzwerkadapter. Der Einkauf erstellt die Bestellung anhand gemeinsamer Lieferanten- und Artikelstammdaten. Das Lager erfasst acht gelieferte Stück; zwei bleiben offen. Die Rechnung enthält zehn Stück. Der Abgleich von Bestellung, Wareneingang und Rechnung zeigt eine Abweichung. Der Prozess muss sie bearbeiten, statt einfach alle Module auf denselben Wert zu setzen.
+
+Die gemeinsame Artikelkennung verbindet Einkauf, Bestand und Rechnungswesen. Berechtigungen bleiben dennoch unterschiedlich: Nicht jede Person im Lager darf Lieferanten-Bankdaten ändern oder Zahlungen freigeben.
+
+Bei der Einführung werden doppelte Stammdaten bereinigt und Import, Schnittstellen sowie Schulung geplant. Ein sinnvoller Abnahmetest umfasst normale Bestellung, Teillieferung, Rückgabe und Korrektur fehlerhafter Daten. Bei Migrationen sind auch Mengen und abstimmbare Salden zu prüfen.
+
+Ein integriertes ERP erfordert nicht zwingend eine einzige physische Datenbank. Entscheidend sind konsistente fachliche Kennungen und abgestimmte Abläufe. Fehler zwischen mehreren Systemen benötigen eindeutige Zustände, erneute Versuche und Abstimmung.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein `ERP`-System ist ein integriertes Unternehmenssteuerungssystem, das die Prozesse mehrerer Geschäftsbereiche wie  
 > Finanzen, Beschaffung, Lager oder HR in einem gemeinsamen System verwaltet.  
 > Ziel des `ERP` ist eine einheitliche Datenverwaltung, die Abstimmung der Prozesse und bessere Transparenz.  
 > Aus Datenbanksicht basieren `ERP`-Systeme auf einer großen, integrierten und konsistent verwalteten Datenumgebung.
-
-## Häufige Prüfungsfehler
-
-- Das `ERP` als einfaches Buchhaltungsprogramm bezeichnen.
-- Die Integration nicht erwähnen.
-- Es vollständig mit dem `BIS` gleichsetzen.
-- Nicht erwähnen, dass es mehrere Unternehmensbereiche umfasst.
 
 ## Schnelle Selbstkontrolle
 
@@ -91,3 +94,10 @@ Das Hauptziel eines `ERP` ist, dass die verschiedenen Bereiche eines Unternehmen
    Verwendung: offizielle Quelle zur praktischen Darstellung der integrierten Unternehmensrolle von ERP.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [SAP: What is ERP?](https://www.sap.com/resources/what-is-erp): integrierte Geschäftsbereiche und Einführungsaspekte
+- [Oracle: Matching Invoice Lines](https://docs.oracle.com/en/cloud/saas/financials/25d/fappp/matching-invoice-lines.html): Abgleich von Bestellung, Wareneingang und Rechnung
+
+Geprüft: `2026-10-14`.

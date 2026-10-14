@@ -65,21 +65,24 @@ Vizsgán jó, ha kimondod:
 
 | Fogalom | Mire jó? |
 |---|---|
-| backup | visszaállítás későbbi időpontra |
+| backup | korábban mentett, használható adatállapot visszaállításának alapja |
 | replikáció | másolat fenntartása működés vagy rendelkezésre állás miatt |
+
+## Kidolgozott MySQL-mentési helyzet
+
+A **teljes/inkrementális** az adatmennyiség és a mentési lánc felosztása, a **logikai/fizikai** pedig a mentés megvalósításának másik szempontja. Egy teljes mentés tehát lehet logikai dump is.
+
+MySQL/InnoDB esetén a `mysqldump --single-transaction` konzisztens logikai pillanatképet tud készíteni a tranzakciós táblákról. Közben nem szabad a dumpot érintő táblaszerkezetet változtatni. A kapcsoló nem teszi ugyanígy konzisztenssé a közben változó MyISAM táblákat. A futó szerver adatkönyvtárának egyszerű másolása szintén nem általános mentési eljárás; fizikai backuphoz támogatott, konzisztenciát biztosító módszer kell.
+
+Példa: 02:00-kor készült egy teljes mentés, 10:15-kor véletlen törlés történt. Ha a megfelelő bináris naplók és kezdőpozíció rendelkezésre állnak, a mentés után a napló a törlés előtti pontig visszajátszható (**point-in-time recovery**). A törlést tartalmazó eseményt már nem kell visszajátszani. A mentés önmagában nem tartalmazza a 02:00 utáni adatokat.
+
+A próbavisszaállítás külön adatbázisba történjen. Ellenőrizd a sémát, darabszámokat, kulcsokat és legalább egy üzleti lekérdezést. Rutinok, események, jogosultságok, konfiguráció és kulcsok külön figyelmet igényelhetnek. A replikáció a véletlen törlést is továbbíthatja, ezért nem helyettesíti a korábbi állapotból történő helyreállítást.
 
 ## Vizsgán jól használható megfogalmazás
 
 > A mentési módszerek célja, hogy az adatbázis hiba, adatvesztés vagy támadás után helyreállítható legyen.  
 > Gyakori megoldás a teljes mentés, az inkrementális mentés, valamint a logikai és fizikai mentés.  
 > A hatékony adatvédelemhez nemcsak backup, hanem megtervezett visszaállítási eljárás is szükséges.
-
-## Gyakori vizsgahibák
-
-- A backupot a recoveryvel azonosítani.
-- Azt állítani, hogy a teljes mentés mindig a legjobb.
-- Nem megemlíteni a helyreállítás oldalát.
-- A replikációt teljesen backupnak tekinteni.
 
 ## Gyors önellenőrzés
 
@@ -112,3 +115,10 @@ Vizsgán jó, ha kimondod:
    Használat: hivatalos háttér a fejlettebb helyreállítási lehetőségekhez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [MySQL: mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html): single-transaction feltételei és dump-tartalom
+- [MySQL: Point-in-Time Recovery](https://dev.mysql.com/doc/refman/8.0/en/point-in-time-recovery.html): alapmentés és bináris napló visszajátszása
+
+Ellenőrizve: `2026-10-14`.

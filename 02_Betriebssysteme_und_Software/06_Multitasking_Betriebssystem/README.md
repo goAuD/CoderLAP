@@ -25,7 +25,7 @@ Az OS:
 - CPU-időt oszt
 - memóriát kezel
 - eldönti, melyik folyamat mikor fusson
-- biztosítja, hogy a folyamatok ne zavarják egymást
+- elkülönítéssel és erőforrás-kezeléssel korlátozza a folyamatok egymásra gyakorolt hatását
 
 ## Példa a gyakorlatból
 
@@ -90,6 +90,14 @@ A kettő kapcsolódik, de nem ugyanaz.
 | multitasking   | több folyamat / feladat kezelése rendszer-szinten |
 | multithreading | egy programon belüli több szál használata         |
 
+## Egy mag, három feladat
+
+Tegyük fel, hogy egy egyszerű modellben A és B számol, C pedig hálózati válaszra vár. Egy CPU-magon az ütemező először A egyik szálának ad időt, majd B-nek. C várakozás közben nem igényel folyamatos CPU-végrehajtást; a válasz megérkezése után ismét futásra kész lehet.
+
+**Preemptív ütemezésnél** az OS elveheti a futási időt egy száltól, és másiknak adhatja. **Kooperatív modellben** a résztvevő feladatoknak együtt kell működniük a vezérlés átadásában. A váltás állapotmentéssel jár, tehát van költsége.
+
+Két magon A és B valóban párhuzamosan is dolgozhat. A „fut a program” azonban nem jelenti, hogy minden szála éppen CPU-n fut. Közös adatoknál zárolásra vagy más szinkronizációra lehet szükség; az OS ütemezője nem oldja meg önmagában az alkalmazás versenyhelyzeteit.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A multitasking operációs rendszer képes több folyamat vagy feladat
@@ -98,14 +106,6 @@ A kettő kapcsolódik, de nem ugyanaz.
 > memóriát kezel
 > és koordinálja a háttér- és előtérfeladatokat.  
 > A modern desktop operációs rendszerek általában multitasking rendszerek.
-
-## Gyakori vizsgahibák
-
-- A multitaskingot összekeverni a többmagos processzorral.
-- Azt mondani, hogy multitasking csak valódi párhuzamosság lehet.
-- Nem tudni példát mondani háttérfolyamatra.
-- A folyamat és a program fogalmát teljesen azonosnak venni.
-- A multitaskingot összekeverni a multithreadinggel.
 
 ## Gyors önellenőrzés
 
@@ -138,3 +138,9 @@ A kettő kapcsolódik, de nem ugyanaz.
    Használat: általános OS-feladatok modern, közérthető összefoglalása.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Processes and threads](https://learn.microsoft.com/en-us/windows/win32/procthread/about-processes-and-threads): folyamat, szál, ütemezés.
+
+Ellenőrizve: `2026-10-14`.

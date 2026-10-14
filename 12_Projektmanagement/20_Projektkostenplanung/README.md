@@ -45,6 +45,23 @@
 - a változások a költséget is érintik
 - rendszeresen össze kell vetni a tervet a valósággal
 
+## Kiszámolt költségterv és frissített előrejelzés
+
+Kitalált, adók nélküli tervezési példa:
+
+| Tétel | Számítás | Összeg |
+|---|---|---:|
+| fejlesztés | 40 óra × 35 EUR | 1 400 EUR |
+| ellenőrzés | 10 óra × 30 EUR | 300 EUR |
+| egyszeri környezetbeállítás | rögzített összeg | 120 EUR |
+| becsült alapösszeg | a fenti tételek összege | 1 820 EUR |
+| példabeli kockázati tartalék | 10% × 1 820 EUR | 182 EUR |
+| tervezett keret | 1 820 + 182 EUR | 2 002 EUR |
+
+A 10% itt csak oktatási feltételezés. Valódi tartalékot az azonosított kockázatok és a becslési bizonytalanság indokolnak; nem szabadon elkölthető extra funkciókeret. A költségterv külön jelzi az adókezelést, a belső munkadíj feltételezését és az üzemeltetés időtávját. A saját munkatárs ideje nem válik ingyenessé attól, hogy nincs külön számla.
+
+Ha már 900 EUR költség felmerült, és a hátralévő munka új becslése 1 250 EUR, akkor a várható teljes költség 2 150 EUR. Ez 148 EUR-val meghaladja a 2 002 EUR keretet, ezért döntés és tervfrissítés szükséges.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projektköltség-tervezés során meghatározzuk
@@ -54,13 +71,6 @@
 > Célja, hogy a projekt reális költségkerettel induljon,
 > a pénzügyi kockázatok láthatók legyenek,
 > és a projekt során a költségek követhetők maradjanak.
-
-## Gyakori vizsgahibák
-
-- Csak a fejlesztői óradíjjal számolni.
-- Nem megemlíteni a licenceket, infrastruktúrát vagy tartalékot.
-- A költségtervet egyszeri papírnak tekinteni.
-- Nem kapcsolni össze a költséget a scope-pal és idővel.
 
 ## Gyors önellenőrzés
 
@@ -79,6 +89,14 @@
 5. Hogy időben látszódjon az eltérés
 
 ## Források
+
+- [PMI: Contingency, Are You Covered?](https://www.pmi.org/learning/library/contingency-are-covered-6099)  
+  A tartalék és a becslési bizonytalanság kapcsolata.
+
+- [PMI: Earned value management and risk management](https://www.pmi.org/learning/library/earned-value-risk-management-competence-8296)  
+  Felmerült költségek és hátralévő ráfordítás alapján készülő költség-előrejelzés.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Budget proposal template  
    https://www.atlassian.com/software/confluence/templates/budget-proposal  

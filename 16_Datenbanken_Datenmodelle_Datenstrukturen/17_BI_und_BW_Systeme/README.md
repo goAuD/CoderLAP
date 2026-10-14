@@ -61,6 +61,39 @@ Operatív rendszerek
 | `BW` | elemzésre előkészített központi adattárolás |
 | `BI` | riportolás és elemzés |
 
+## Kidolgozott riport és az adatok szemcsézettsége
+
+A **BI** üzleti intelligencia és elemzési eszközök összessége. A **BW** gyakran a SAP Business Warehouse termékcsalád nevében szerepel; az általános adattárház megnevezés a data warehouse vagy DWH. Nem minden BI-megoldásnak szükséges külön adattárház, de az egységesített történeti adatok sok elemzést segítenek.
+
+Az operatív, tranzakciós feldolgozás (**OLTP**) egy-egy rendelést rögzít. Az elemző feldolgozás (**OLAP**) sok rendelés összesítését hasonlítja össze. ETL esetén a kinyerés után az átalakítás, majd a betöltés következik; ELT-nél az átalakítás a betöltés után történik.
+
+**MySQL 8.0 / InnoDB, üres gyakorló adatbázis:** itt egy sor egy eladási tétel. Az összeg a mennyiség és egységár szorzatából adódik.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE sales (
+  id INT PRIMARY KEY,
+  category VARCHAR(20) NOT NULL,
+  quantity INT NOT NULL,
+  unit_price DECIMAL(8,2) NOT NULL
+) ENGINE=InnoDB;
+INSERT INTO sales VALUES
+  (1, 'book', 2, 10.00), (2, 'book', 1, 20.00), (3, 'tool', 3, 5.00);
+SELECT category, SUM(quantity * unit_price) AS revenue
+FROM sales
+GROUP BY category
+ORDER BY category;
+```
+
+```text
+book 40.00
+tool 15.00
+```
+
+Az adattárházi ténytábla mért adatokat, a dimenziók például terméket, dátumot és kategóriát írnak le. Először a sor jelentését, a **szemcsézettséget** kell rögzíteni. Ha tételszintű adathoz a teljes rendelési összeget is minden sorba másoljuk, egy egyszerű összegzés többször számolhatja ugyanazt a bevételt.
+
+A riport mellett legyen világos az időszak, pénznem, nettó/bruttó értelmezés és az utolsó frissítés ideje. Az aggregált szám önmagában nem mondja meg az eltérés okát; ahhoz ellenőrizhető üzleti értelmezés is kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A `BI` rendszerek az üzleti adatok elemzését, vizualizálását és döntéstámogatását szolgálják.  
@@ -68,13 +101,6 @@ Operatív rendszerek
 > elemzésre alkalmas formában tárolják.  
 > Egyszerűen fogalmazva: a `BW` biztosítja az adatalapot, a `BI` pedig értelmezhető információt és üzleti insightot
 > készít belőle.
-
-## Gyakori vizsgahibák
-
-- A `BI`-t pusztán dashboardnak nevezni.
-- A `BW`-t egyszerű adatbázisnak nevezni.
-- Az `ERP`-t, `BI`-t és `BW`-t ugyanannak tekinteni.
-- Nem megemlíteni a történeti és elemzésre optimalizált tárolást.
 
 ## Gyors önellenőrzés
 
@@ -107,3 +133,11 @@ Operatív rendszerek
    Használat: korszerű, hivatalos forrás a `BW` fogalom vállalati kontextusához.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Star schema](https://learn.microsoft.com/en-us/power-bi/guidance/star-schema): tények, dimenziók és szemcsézettség
+- [IBM: Business Intelligence](https://www.ibm.com/think/topics/business-intelligence): elemzés és üzleti értelmezés
+- [SAP: Business Warehouse](https://www.sap.com/products/data-cloud/business-warehouse.html): BW mint SAP terméknév
+
+Ellenőrizve: `2026-10-14`.

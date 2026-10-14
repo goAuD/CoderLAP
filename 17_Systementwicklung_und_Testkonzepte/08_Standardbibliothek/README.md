@@ -12,7 +12,7 @@
 
 ## Mi az a standard library?
 
-Minden komolyabb programozási nyelvhez tartozik egy alapkönyvtár vagy szabványos könyvtárkészlet.
+A legtöbb általános célú nyelv és futtatókörnyezet kínál alapkönyvtárat; ennek terjedelme platformonként eltér.
 
 Ez tipikusan biztosít:
 
@@ -51,19 +51,44 @@ Például:
 - nehezebb karbantartani
 - fölöslegesen duplikáljuk azt, ami már készen és jól megoldva létezik
 
+## Egy beépített művelet szerződését is elolvassuk
+
+Feladat: számokat növekvően rendezünk, megőrizve a bemenetet, majd megduplázzuk
+a rendezett értékeket. A példa Node.js-ben és modern böngészőkonzolban fut.
+
+<!-- example:run -->
+
+```javascript
+const values = [20, 3, 100];
+const sorted = [...values].sort((a, b) => a - b);
+console.log(JSON.stringify(sorted));
+console.log(JSON.stringify(values));
+console.log(JSON.stringify(sorted.map(value => value * 2)));
+```
+
+```text
+[3,20,100]
+[20,3,100]
+[6,40,200]
+```
+
+A `sort` az adott tömböt módosítja, ezért előbb másolunk. Az `(a, b) => a - b`
+numerikus összehasonlítást ad; negatív eredmény esetén `a` kerül előrébb.
+A `map` új tömböt készít a callback visszaadott értékeiből. A dokumentációból
+tehát a bemenet mellett a visszatérést, mellékhatást és előfeltételeket is ellenőrizzük.
+
+JavaScriptnél az `Array`, `Math` és `JSON` a nyelv része. A DOM és a böngésző
+fájlválasztója platformszolgáltatás, a Node.js `node:fs` modulja pedig a Node
+alapkönyvtárához tartozik. Nem minden környezetben ugyanazok az API-k érhetők el.
+Külső csomag akkor indokolt, ha valódi hiányt pótol; előbb megnézzük a meglévő
+eszközöket, a kompatibilitást és a karbantartási költséget.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A standard library a programozási nyelvhez tartozó szabványos függvények, modulok és osztályok gyűjteménye.  
 > Célja, hogy a fejlesztő gyakori feladatokat kész megoldásokkal tudjon megvalósítani, például fájlkezelést,  
 > adatkezelést, szövegfeldolgozást vagy matematikai műveleteket.  
 > A standard library használata gyorsabb, egységesebb és megbízhatóbb fejlesztést tesz lehetővé.
-
-## Gyakori vizsgahibák
-
-- A standard library-t bármilyen külső csomagnak nevezni.
-- Azt hinni, hogy csak “kényelmi extra”.
-- Nem megemlíteni a fejlesztési idő csökkenését.
-- A nyelv és a platform alapkönyvtárát összekeverni a projekt-specifikus kóddal.
 
 ## Gyors önellenőrzés
 
@@ -82,6 +107,11 @@ Például:
 5. Mert lassabb és hibásabb lehet
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort): numerikus rendezés és bemenetmódosítás.
+
 
 1. Python Docs - The Python Standard Library  
    https://docs.python.org/3/library/index.html  

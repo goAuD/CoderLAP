@@ -71,6 +71,14 @@ Weil sie helfen kann, Folgendes zu vermeiden:
 | Teure Möbel | nicht automatisch ergonomisch |
 | "Sieht bequem aus" | nicht unbedingt langfristig gesund |
 
+## Einstellreihenfolge an einem geteilten Arbeitsplatz
+
+Zuerst passen wir den Stuhl an die Person an: Die Füße sind abgestützt, die Sitzfläche drückt nicht in die Kniekehlen und die Lehne stützt den Rücken. Danach folgen Tisch und Eingabegeräte. Die Schultern bleiben entspannt, die Maus liegt nahe an der Tastatur. Zum Schluss stellen wir Monitorposition, Höhe und Schriftgröße ein.
+
+Bei einer kleineren Person kann ein hoher, nicht verstellbarer Tisch einen höher eingestellten Stuhl und zusätzlich eine Fußstütze erfordern. Einen Laptop nur anzuheben genügt nicht: Bei längerer Arbeit ermöglichen separate Tastatur und Maus die voneinander unabhängige Einstellung von Bildschirm und Handposition.
+
+Die nächste Person passt den Arbeitsplatz erneut an ihre Körpermaße an. Zur guten Einrichtung gehören auch wechselnde Körperhaltungen und passende Arbeitsorganisation.
+
 ## Prüfungstaugliche Formulierung
 
 > Ziel der ergonomischen Arbeitsplatzgestaltung ist es,
@@ -78,13 +86,6 @@ Weil sie helfen kann, Folgendes zu vermeiden:
 > an die Gegebenheiten des menschlichen Körpers angepasst werden.  
 > Wichtig sind der passende Stuhl, Tisch, Monitor, Tastatur, Maus, Beinfreiheit und gute Lichtverhältnisse.  
 > Die ergonomische Einrichtung reduziert Überlastung und kann Rücken-, Nacken- und Augenbeschwerden vorbeugen.
-
-## Häufige Prüfungsfehler
-
-- Ergonomie nur auf den Stuhl zu beschränken.
-- Zu glauben, dass alles, was bequem ist, auch ergonomisch ist.
-- Die Rolle von Monitor, Tastatur und Beinfreiheit nicht zu erwähnen.
-- Die Lichtverhältnisse zu vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -104,12 +105,17 @@ Weil sie helfen kann, Folgendes zu vermeiden:
 
 ## Quellen
 
+- [Arbeitsinspektion: Bildschirmarbeitsplätze](https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html)  
+  Arbeitsplatzeinstellung und Voraussetzungen der Bildschirmarbeit.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Verwendung: offizielle österreichische Grundquelle zur Ergonomie für Monitor-, Tisch-, Stuhl- und Tastaturanordnung.
 
 2. Arbeitsinspektion - Bildschirmarbeitsplätze  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Verwendung: offizielle österreichische Zusammenfassung zu Arbeitsschutzanforderungen und ergonomischen Mindeststandards.
 
 3. AUVA - Ergonomisch arbeiten am Telearbeitsplatz und im Homeoffice  

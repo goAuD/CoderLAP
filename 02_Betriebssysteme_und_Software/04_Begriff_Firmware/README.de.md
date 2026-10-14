@@ -72,7 +72,7 @@ Zum Beispiel:
 - Maus
 - Kamera
 
-## Firmware vs Software - nicht verwechseln
+## Firmware und allgemeine Anwendungssoftware
 
 | Firmware                     | „Normale" Software                      |
 | ---------------------------- | --------------------------------------- |
@@ -85,7 +85,7 @@ Zum Beispiel:
 
 | Firmware                                | Treiber                               |
 | --------------------------------------- | ------------------------------------- |
-| befindet sich auf dem Gerät             | typischerweise im Betriebssystem      |
+| steuert den Gerätebetrieb             | typischerweise im Betriebssystem      |
 | steuert den internen Betrieb des Geräts | vermittelt zwischen OS und Gerät      |
 | eng an die Hardware gebunden            | systemseitiges Schnittstellenprogramm |
 
@@ -115,20 +115,20 @@ Deshalb sollte Firmware nur:
 
 aktualisiert werden.
 
+## Start und Firmware-Update in der Praxis
+
+Firmware ist ebenfalls **Software**. Ein vollständiges Router-Firmwarepaket kann sogar ein Betriebssystem enthalten. Bei anderen Geräten lädt der Treiber des Hostsystems den Steuerungscode erst beim Start. Der Speicherort allein definiert daher den Begriff nicht.
+
+Die vereinfachte Startkette eines UEFI-PCs lautet: Firmware → Bootmanager / Bootloader → OS-Kernel → Dienste. Secure Boot prüft die Vertrauenswürdigkeit der Startkomponenten; die Verschlüsselung des Datenträgerinhalts ist eine eigene Aufgabe.
+
+**Beispiel:** Für einen Laptop erscheint ein UEFI-Update. Geprüft werden exaktes Modell, Versionshinweise und das Updateverfahren des Herstellers. Stabile Stromversorgung, Datensicherung und bei verschlüsselten Datenträgern ein verfügbarer Wiederherstellungsschlüssel werden vorbereitet. Abschließend werden die neue Version und der normale Systemstart kontrolliert.
+
 ## Prüfungstaugliche Formulierung
 
 > Firmware ist eine an die Hardware gebundene, eingebettete Steuerungssoftware.  
 > Sie befindet sich in der Regel im nichtflüchtigen Speicher des Geräts und steuert dessen Grundbetrieb.  
 > Ein typisches Beispiel ist das BIOS oder UEFI, aber auch in Routern, SSDs und Peripheriegeräten gibt es Firmware.  
 > Firmware ist nicht dasselbe wie ein Betriebssystem oder eine Anwendung.
-
-## Häufige Prüfungsfehler
-
-- Firmware mit einem Treiber verwechseln.
-- Firmware als Anwendung bezeichnen.
-- Behaupten, dass Firmware nur in PCs existiert.
-- Vergessen, dass es auch in Routern, SSDs und Druckern Firmware gibt.
-- Kein Beispiel für BIOS/UEFI nennen können.
 
 ## Schnelle Selbstkontrolle
 
@@ -142,7 +142,7 @@ aktualisiert werden.
 
 1. An die Hardware gebundene, eingebettete Steuerungssoftware
 2. Die Anwendung ist ein Benutzerprogramm, die Firmware steuert den Grundbetrieb des Geräts
-3. Die Firmware befindet sich auf dem Gerät, der Treiber vermittelt auf OS-Seite
+3. Firmware steuert die Hardware, der Treiber vermittelt auf OS-Seite; manche Firmware wird erst durch den Treiber geladen
 4. BIOS/UEFI, Router-Firmware, SSD-Firmware
 5. Zur Fehlerbehebung, Kompatibilität, Stabilität und Sicherheit
 
@@ -161,3 +161,10 @@ aktualisiert werden.
    Verwendung: Kontext zur Firmware-Update-Praxis auch in modernen Desktop-Umgebungen.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Linux Kernel: Firmware API](https://docs.kernel.org/driver-api/firmware/introduction.html): vom Hostsystem geladene Firmware.
+- [Microsoft: Secure the Windows boot process](https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process): Startkette und Secure Boot.
+
+Geprüft: `2026-10-14`.

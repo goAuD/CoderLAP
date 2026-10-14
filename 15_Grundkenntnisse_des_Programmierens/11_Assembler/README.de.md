@@ -56,6 +56,29 @@ Das Assembler-Programm:
 | Compiler | mit Hochsprache |
 | Interpreter | mit zur Laufzeit interpretiertem Code |
 
+## Register, Anweisung und Objektdatei
+
+Der folgende **illustrative Ausschnitt** verwendet x86 mit Intel-Syntax. Er ist
+kein vollständiges Programm; Einstiegspunkt und betriebssystemspezifischer
+Abschluss fehlen.
+
+```asm
+mov eax, 7
+add eax, 5
+```
+
+`eax` ist ein 32-Bit-Register. Die erste Anweisung lädt 7, die zweite addiert 5;
+der Registerinhalt ist danach 12. Dadurch erscheint noch keine Bildschirmausgabe.
+In Intel-Syntax steht das Ziel zuerst. Andere Syntaxformen können eine andere
+Reihenfolge verwenden; deshalb nennen wir Architektur und Schreibweise.
+
+Der Assembler codiert die Anweisungen und erstellt üblicherweise eine Objektdatei.
+Der Linker verbindet getrennt übersetzte Teile. Registernamen und Befehle lassen
+sich nicht unverändert auf ARM-Prozessoren übertragen. Bei Hochsprachen übernimmt
+der Compiler einen großen Teil dieser Anpassung an die Zielarchitektur. Ein
+Leistungsvorteil handgeschriebener Assembly muss gemessen werden; moderne
+Compiler führen ebenfalls Optimierungen durch.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Assembler ist einerseits ein mit einer niedrigen Programmiersprache verbundener Begriff, andererseits das  
@@ -63,13 +86,6 @@ Das Assembler-Programm:
 > Die Assembly-Sprache steht nahe am Befehlssatz des Prozessors und ist deshalb hardwareabhängiger und schwerer  
 > handhabbar als Hochsprachen.  
 > Der Vorteil ist die präzise Kontrolle, der Nachteil die Komplexität und die geringere Portabilität.
-
-## Häufige Prüfungsfehler
-
-- Den Assembler einfach als Compiler zu bezeichnen.
-- Zu behaupten, dass Assembly = Maschinencode ist.
-- Die Hardwareabhängigkeit nicht zu erwähnen.
-- Die Assembly-Sprache mit dem Assembler-Programm zu verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -88,6 +104,11 @@ Das Assembler-Programm:
 5. Schwere Wartung und geringe Portabilität
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [GNU as: x86 syntax](https://sourceware.org/binutils/docs/as/i386_002dSyntax.html): Intel-/AT&T-Syntax und Architekturabhängigkeit.
+
 
 1. GNU Binutils - Using as  
    https://sourceware.org/binutils/docs/as/  

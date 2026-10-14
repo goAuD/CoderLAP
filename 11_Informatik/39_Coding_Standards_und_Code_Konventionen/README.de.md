@@ -53,18 +53,51 @@ Weil schlecht vereinheitlichter Code:
 - die Fehlerwahrscheinlichkeit erhöht
 - das Onboarding erschwert
 
+## Ein kleines Team mit überprüfbaren Vereinbarungen
+
+**Beispiel:** Das Team verwendet für JavaScript zwei Leerzeichen Einrückung,
+UTF-8-Dateien und LF-Zeilenenden. Eine `.editorconfig` im Repository-Wurzelordner
+kann dies festhalten:
+
+```ini
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*.js]
+indent_style = space
+indent_size = 2
+```
+
+Ein Editor mit EditorConfig-Unterstützung sucht vom geöffneten Dokument nach
+oben nach Konfigurationen; `root = true` beendet diese Suche. Für eine `.js`-Datei
+gelten sowohl der allgemeine als auch der JavaScript-Abschnitt. Die Datei
+allein führt keine CI-Prüfung aus und korrigiert keine Geschäftslogik.
+
+| Werkzeug oder Regel | Welche Aussage liefert es? | Konkretes Beispiel |
+|---|---|---|
+| Formatter | vereinbartes Format | einheitliche Einrückung und Umbrüche |
+| Linter | Einhaltung aktivierter Regeln | ungenutzte Variable oder nicht definierter Name |
+| Typprüfung | Beziehungen gemäß beschriebenen Typen | ungeeignetes Argument für einen Zahlenparameter |
+| Test | erwartetes Verhalten für bestimmte Eingaben | 0 Minuten ergeben 0 Sekunden |
+| Review | menschliche Bewertung von Absicht und Umsetzung | Sind Datenverarbeitung und Änderungsgrund nachvollziehbar? |
+
+Namen sollen auch Einheiten ausdrücken: `durationSeconds` oder `priceCents`
+sind genauer als ein einzelnes `value`. Ein Kommentar erklärt bevorzugt einen
+nicht offensichtlichen Grund, statt die Anweisung zu wiederholen. Formatänderungen
+lassen sich von Verhaltensänderungen trennen, damit der Diff übersichtlich bleibt.
+Stilfragen werden einmal in der gemeinsamen Konfiguration geklärt; danach kann
+sich das Review auf die Aufgabe konzentrieren. Ein grünes Lintergebnis beweist
+nicht die allgemeine Korrektheit.
+
 ## Prüfungstaugliche Formulierung
 
 > Coding Standards und Code Conventions sind gemeinsame Regeln, die den Quellcode einheitlicher und besser lesbar machen.
 > Dazu gehören zum Beispiel Namensgebung, Formatierung, Struktur, Kommentierung und die Nutzung von Codequalitätsregeln.
 > Diese sind besonders bei Teamarbeit wichtig, weil sie Review, Wartung und Zusammenarbeit erleichtern.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass es nur eine ästhetische Frage ist.
-- Die Rolle der Teamarbeit nicht erwähnen.
-- Standard und Linter gleichsetzen.
-- Kein konkretes Beispiel nennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +116,13 @@ Weil schlecht vereinheitlichter Code:
 5. Weil weniger Rauschen bleibt und das Wesentliche besser sichtbar ist
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [EditorConfig](https://editorconfig.org/): Dateibezogene Konfiguration und Suchreihenfolge.
+- [ESLint: Core concepts](https://eslint.org/docs/latest/use/core-concepts/): Regelbasierte statische Prüfung.
+- [Prettier: Prettier vs. Linters](https://prettier.io/docs/comparison): Rolle von Formatierung und Qualitätsregeln.
+
 
 1. EditorConfig
    https://editorconfig.org/

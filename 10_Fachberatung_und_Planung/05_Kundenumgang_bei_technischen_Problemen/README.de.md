@@ -71,6 +71,14 @@ Wenn es keine sofortige Lösung gibt:
 - ungeduldiger Ton
 - Verschwinden oder Stille ohne Rückmeldung
 
+## Rückmeldetermin und Reparaturtermin unterscheiden
+
+Bei einem Kunden funktioniert die Anmeldung nicht. Wir fragen nach der Anzahl betroffener Personen, einer dringenden Frist und dem letzten erfolgreichen Versuch. So lässt sich nach Auswirkung und Dringlichkeit priorisieren. Wir verlangen weder Passwort noch MFA-Code zur Zusendung.
+
+Ein guter Status lautet beispielsweise: „Aktuell sind drei Benutzer betroffen. Wir untersuchen den Anmeldedienst. Die nächste Rückmeldung erfolgt um 10:30, auch wenn noch keine endgültige Lösung vorliegt.“ Das Symptom ist bekannt, die Ursache wird noch nicht als sicher dargestellt.
+
+Bei Verdacht auf Datenverlust oder Angriff eskalieren wir gemäß Vorfallprozess und bewahren Nachweise. Auch ein schneller Neustart erfolgt nur als begründeter und autorisierter Eingriff. Nach der Korrektur prüfen wir die betroffene Benutzeraufgabe erneut.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei einem technischen Problem muss man mit dem Kunden ruhig, strukturiert und verständlich kommunizieren.  
@@ -80,13 +88,6 @@ Wenn es keine sofortige Lösung gibt:
 > über die nächsten Schritte
 > und den voraussichtlichen Zeitrahmen informiert werden.  
 > Guter Kundenumgang bei technischen Problemen ist auch dann empathisch, sachlich und lösungsorientiert.
-
-## Häufige Prüfungsfehler
-
-- Zu schnell eine technische Schlussfolgerung ziehen.
-- Die Beschwerde des Kunden bagatellisieren.
-- In zu technischer Sprache erklären.
-- Nichts über den nächsten Schritt oder die Frist sagen.
 
 ## Schnelle Selbstkontrolle
 
@@ -105,6 +106,11 @@ Wenn es keine sofortige Lösung gibt:
 5. Ruhig, empathisch und sachlich
 
 ## Quellen
+
+- [NIST SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final)  
+  Rollen, Kommunikation und Wiederherstellung bei Vorfällen.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. GOV.UK Service Manual - Set up and manage user support  
    https://www.gov.uk/service-manual/operations/managing-user-support.html  

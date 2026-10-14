@@ -23,7 +23,7 @@ Laut der NIST-Definition ist Cloud Computing ein Modell, das:
 Einfach gesagt:
 
 - nicht unbedingt alles auf dem eigenen Rechner oder im eigenen Serverraum läuft
-- sondern man die Infrastruktur eines Dienstleisters nutzt
+- Ressourcen werden als Dienste genutzt, innerhalb der eigenen Organisation oder bei einem externen Anbieter
 
 ## Warum ist das gut?
 
@@ -65,6 +65,14 @@ Weiterhin wichtig:
 | SaaS | fertige Software als Dienst |
 | eigener Server | nicht Cloud, nur weil er aus der Ferne erreichbar ist |
 
+## Durchgearbeiteter Fall: zeitweise hohe Kursbelastung
+
+Eine Übungsanwendung hat im Alltag wenige, vor der Prüfung viele gleichzeitige Nutzer. Vertikales Skalieren gibt einer Instanz mehr Ressourcen; horizontales Skalieren startet mehrere Instanzen. Letzteres kann etwa gemeinsam erreichbare Datenhaltung und passende Lastverteilung erfordern.
+
+Elastizität bedeutet, Ressourcen an den Bedarf anzupassen und wieder zu reduzieren. Kapazitäten, Kontingente und Budgets bleiben trotzdem begrenzt. Die Beispielbelastung wird daher getestet, eine Obergrenze eingerichtet und die Antwortzeit gemessen.
+
+Bedarfsgesteuerte Selbstbedienung bedeutet mehr, als eine E-Mail für einen neuen Server zu schreiben. Ressourcen lassen sich automatisiert zuteilen und freigeben. Für eine kleine Anwendung mit gleichmäßiger Last kann dennoch ein einfacher eigener Server passend sein; die Cloudmerkmale machen dieses Modell nicht für jede Aufgabe verpflichtend.
+
 ## Prüfungstaugliche Formulierung
 
 > Cloud Computing ist ein Modell,
@@ -74,13 +82,6 @@ Weiterhin wichtig:
 > der gemeinsame Ressourcenpool, die schnelle Skalierbarkeit
 > und der messbare Dienstcharakter.  
 > Der Vorteil ist die Flexibilität, aber man muss auch auf Sicherheits-, Datenschutz- und Kostenaspekte achten.
-
-## Häufige Prüfungsfehler
-
-- Cloud einfach als "Internet" definieren.
-- Glauben, dass Cloud automatisch alles sicher macht.
-- Die Skalierbarkeit nicht erwähnen.
-- SaaS mit dem gesamten Cloud-Begriff verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -113,3 +114,9 @@ Weiterhin wichtig:
    Verwendung: aktuelle, praktische Cloud-Zusammenfassung aus Sicht eines Dienstleisters.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf): Cloudbegriff und Bereitstellungsmodelle.
+
+Geprüft: `2026-10-14`.

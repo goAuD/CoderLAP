@@ -35,6 +35,14 @@
 | Arbeitspaket | Arbeitseinheit |
 | Meilenstein | wichtiger Zustand oder Erfüllungspunkt |
 
+## Meilenstein: Die Abnahmebedingungen sind erfüllt
+
+Zum Meilenstein „Pilot kann starten“ gehören drei Nachweise: erfolgreiche Anmelde- und Berechtigungsprüfung, geprüfter Datenimport und übergebene Benutzeranleitung. Wer über den Start entscheidet, ist benannt. Das Datum markiert den geplanten Entscheidungspunkt und macht das Ergebnis nicht automatisch fertig.
+
+Im Terminplan hat der Meilenstein die Dauer null. Vorbereitung und Prüfbesprechung sind dagegen reale, zeitaufwendige Tätigkeiten und werden separat geplant. Erst ihre geeigneten Ergebnisse erfüllen den Meilenstein.
+
+Fehlt eine Voraussetzung, kann die Entscheidung eine Verschiebung oder eine ausdrücklich genehmigte und dokumentierte Einschränkung sein. Verbleibende Risiken und der nächste Schritt müssen sichtbar bleiben.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Meilenstein ist eine wichtige Station des Projekts,
@@ -42,13 +50,6 @@
 > oder Zustands anzeigt.  
 > Er steht nicht für einen längeren Arbeitsprozess, sondern eher für einen Kontroll- oder Kommunikationspunkt.  
 > Meilensteine helfen bei der Nachverfolgung des Projektfortschritts und bei der Stakeholder-Kommunikation.
-
-## Häufige Prüfungsfehler
-
-- Den Meilenstein als Aufgabe bezeichnen.
-- Nicht erwähnen, dass er einen Zustand oder ein Ergebnis anzeigt.
-- Ihn mit dem Arbeitspaket verwechseln.
-- Kein konkretes Beispiel dafür bringen.
 
 ## Schnelle Selbstkontrolle
 
@@ -67,6 +68,11 @@
 5. Das Arbeitspaket ist eine Arbeitseinheit, der Meilenstein ein Zustandsindikator
 
 ## Quellen
+
+- [PMI: Practice Standard for Scheduling](https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/practice-standard-scheduling.pdf)  
+  Abhängigkeiten, Dauer, Meilensteine und kritischer Pfad.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Project milestone template  
    https://www.atlassian.com/software/confluence/templates/project-milestone  

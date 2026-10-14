@@ -4,9 +4,9 @@
 
 | Modell | Was bekommt man? | Wofür hat man mehr eigene Verantwortung? |
 |---|---|---|
-| IaaS | VM, Netzwerk, Speicher | für vieles |
-| PaaS | Laufzeitplattform | für weniger |
-| SaaS | fertige Anwendung | für noch weniger |
+| IaaS | VM, Netzwerk, Speicher | Gast-OS, Anwendung, Daten, Berechtigungen |
+| PaaS | Laufzeitplattform | Anwendungscode, Abhängigkeiten, Daten, Berechtigungen |
+| SaaS | fertige Anwendung | Konten, Freigaben, Daten- und Aufbewahrungseinstellungen |
 
 ## Was ist IaaS?
 
@@ -46,7 +46,7 @@ Zum Beispiel:
 
 Hier nutzt der Benutzer typischerweise:
 
-- nur die fertige Software
+- die fertige Software und verwaltet eigene Konten, Daten und Freigaben
 
 ## Warum ist das wichtig?
 
@@ -64,6 +64,14 @@ Weil sich unterscheiden:
 | IaaS / PaaS / SaaS | Servicemodelle |
 | Private / Public / Hybrid | Deployment-Modelle |
 
+## Durchgearbeitetes Beispiel: dieselbe Verwaltungsaufgabe
+
+**IaaS:** Wir erhalten eine virtuelle Maschine und installieren OS und Anwendung. Updates des Gastbetriebssystems gehören zu unseren Aufgaben. **PaaS:** Der Anbieter betreibt wesentliche Teile der Laufzeitumgebung, wir stellen Anwendungscode bereit und konfigurieren Zugriffe. **SaaS:** Wir arbeiten mit einer fertigen Verwaltungsanwendung und haben üblicherweise weniger Freiheit für eigene Funktionen.
+
+In allen drei Fällen entscheiden wir, wer auf unsere Daten zugreifen darf. Eine irrtümliche Freigabe für alle wird nicht dadurch richtig, dass der Anbieter die Server wartet.
+
+Die Tabelle zeigt typische Zuständigkeiten. Der konkrete Vertrag muss klären, wer sichert, bis zu welchem Zeitpunkt wiederhergestellt werden kann, wer einzelne Abhängigkeiten aktualisiert und wie Daten exportiert werden. Das Servicemodell ist eine andere Einteilungsachse als Private/Public.
+
 ## Prüfungstaugliche Formulierung
 
 > IaaS, PaaS und SaaS sind die Servicemodelle der Cloud.  
@@ -71,13 +79,6 @@ Weil sich unterscheiden:
 > bei PaaS bietet er eine Plattform zum Betrieb von Anwendungen,
 > und bei SaaS nutzt der Benutzer fertige Software.  
 > Je höherstufig der Dienst, desto weniger technische Betriebsaufgaben verbleiben in der Regel beim Kunden.
-
-## Häufige Prüfungsfehler
-
-- Mit den Deployment-Modellen verwechseln.
-- Sagen, dass bei SaaS keinerlei kundenseitige Verantwortung besteht.
-- IaaS und PaaS als dasselbe betrachten.
-- Nicht erkennen, dass Kontrolle und Verantwortungsumfang je nach Modell variieren.
 
 ## Schnelle Selbstkontrolle
 
@@ -110,3 +111,9 @@ Weil sich unterscheiden:
    Verwendung: veranschaulicht gut, wie sich die Verantwortung mit der Abstraktionsebene des Dienstes ändert.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Shared responsibility](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility): konkrete Zuständigkeiten bei IaaS/PaaS/SaaS.
+
+Geprüft: `2026-10-14`.

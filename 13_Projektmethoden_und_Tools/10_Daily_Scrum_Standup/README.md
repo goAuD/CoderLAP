@@ -5,7 +5,7 @@
 | Jellemző | Daily Scrum |
 |---|---|
 | gyakoriság | naponta |
-| időtartam | rövid, tipikusan legfeljebb `15 perc` |
+| időtartam | `15 perces` időkeret |
 | cél | napi összehangolás |
 | fókusz | sprintcél felé haladás |
 
@@ -48,20 +48,21 @@ Fontos: ez hasznos minta, de a lényeg a sprintcél körüli napi újratervezés
 | Daily Scrum | a Scrum hivatalos napi eseménye |
 | standup | általánosabb napi rövid meeting neve |
 
+## Egy Daily Scrum kézzelfogható eredménye
+
+A Sprint Goal használható témakeresés. Reggel kiderül, hogy a keresési logika kész, de a billentyűzetes próba elakadt egy fókuszkezelési gondnál. A Developers áttekinti, ez hogyan érinti a célt, és úgy módosítja a napi tervet, hogy két résztvevő közösen befejezze a javítást. A részletes technikai egyeztetést az esemény után tartják.
+
+A Daily Scrum minden munkanapon 15 perces időkeretű esemény a Developers számára. A Scrum Master vagy Product Owner akkor vesz részt Developers minőségben, ha maga is a Sprint Backlog elemein dolgozik. A három hagyományos kérdés és az állva tartott megbeszélés nem kötelező forma.
+
+A jó eredmény egy friss, végrehajtható napi terv. Ha délután új akadály jelenik meg, a csapat akkor is egyeztethet; nem kell a következő Dailyig várnia.
+
 ## Vizsgán jól használható megfogalmazás
 
-> A Daily Scrum egy rövid, napi egyeztetés a Scrum csapat számára.  
+> A Daily Scrum a Developers 15 perces napi eseménye a Sprint Goal felé haladás vizsgálatára.  
 > Célja, hogy a csapat összehangolja a munkát,
 > lássa az akadályokat,
 > és a sprintcél érdekében szükség esetén módosítsa a napi tervet.  
 > Nem hosszú státuszmeeting, hanem fókuszált, rövid szinkronizálás.
-
-## Gyakori vizsgahibák
-
-- A Daily Scrumot vezetői riportmeetingnek nevezni.
-- Azt állítani, hogy itt oldanak meg minden problémát részletesen.
-- Nem megemlíteni a napi összehangolást.
-- Kihagyni a sprintcélhoz való kapcsolódást.
 
 ## Gyors önellenőrzés
 
@@ -74,12 +75,17 @@ Fontos: ez hasznos minta, de a lényeg a sprintcél körüli napi újratervezés
 ## Rövid válaszok az önellenőrzéshez
 
 1. Napi összehangolás és akadályok láthatóvá tétele
-2. Rövid, tipikusan legfeljebb `15 perc`
-3. Elsősorban a fejlesztőknek / csapatnak
+2. 15 perces időkeretben.
+3. A Developers számára; más Scrum-szereplő Developers minőségben vesz részt, ha a sprint munkáját végzi.
 4. Mert elveszíti a fókuszát
 5. A Daily Scrum a sprintmunkát hangolja össze, nem főnöki riport
 
 ## Források
+
+- [Scrum.org: What is a Daily Scrum?](https://www.scrum.org/resources/what-is-a-daily-scrum)  
+  Résztvevők, időkeret és a napi terv módosítása.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

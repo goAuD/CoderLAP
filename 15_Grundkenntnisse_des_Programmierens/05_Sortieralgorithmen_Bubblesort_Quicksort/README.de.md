@@ -157,6 +157,24 @@ Anmerkung:
 - schnell
 - erfordert Rekursion und Aufteilungsdenken
 
+## Sortierkriterien und Speicher
+
+Bei einer **stabilen** Sortierung behalten Datensätze mit gleichem Schlüssel
+ihre ursprüngliche Reihenfolge. Haben zwei Arbeiten jeweils 10 Punkte, bleibt
+die früher abgegebene vorne, sofern die Eingabe nach Abgabe geordnet war. Der
+obige Bubble Sort tauscht nur bei strikt größerem Wert und ist daher stabil.
+Klassischer, direkt im Array arbeitender Quick Sort ist im Allgemeinen nicht
+stabil; der Algorithmusname beschreibt nicht jede Variante vollständig.
+
+**In-place-Sortierung** verändert die ursprüngliche Datenstruktur. Der obige
+Bubble Sort kopiert absichtlich und benötigt deshalb `O(n)` zusätzlichen
+Speicher. Beim Quick-Sort-Beispiel brauchen Teilarrays und rekursive Aufrufe
+ebenfalls Speicher. Bei einer Bibliotheksfunktion klären wir deshalb neben der
+Laufzeit auch Stabilität, Kopierverhalten und Vergleichsregel.
+
+Verfolge `[2, 2, 1]` von Hand: Das Ergebnis ist `[1, 2, 2]`, mit weiterhin drei
+Elementen. Sortieren entfernt keine mehrfach vorkommenden Werte.
+
 ## Prüfungstaugliche Formulierung
 
 > Bubble Sort ist ein einfacher Sortieralgorithmus, der die Liste durch wiederholtes Vergleichen und Tauschen  
@@ -181,6 +199,12 @@ Anmerkung:
 5. Neue Arrays `[]` beziehungsweise `[7]`; die Eingabe bleibt unverändert.
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [NIST DADS: bubble sort](https://xlinux.nist.gov/dads/HTML/bubblesort.html): Stabilität und Sortiervariante.
+- [NIST DADS: quicksort](https://xlinux.nist.gov/dads/HTML/quicksort.html): Pivot und unterschiedliche Implementierungen.
+
 
 1. NIST DADS - bubble sort  
    https://xlinux.nist.gov/dads/HTML/bubblesort.html  

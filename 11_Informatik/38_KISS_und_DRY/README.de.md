@@ -68,6 +68,52 @@ Wenn dieselbe Berechnung oder Validierung an drei Stellen vorkommt, lohnt es sic
 - Nicht jede Ähnlichkeit ist eine echte Duplikation.
 - Manchmal ist eine kleine Wiederholung verständlicher als eine schlechte Abstraktion.
 
+## Dasselbe Wissen gehört an einen gemeinsamen Ort
+
+DRY bedeutet **Don't Repeat Yourself**. Es minimiert nicht die Zahl der
+Tastenanschläge, sondern vermeidet mehrere unabhängig veränderbare Umsetzungen
+derselben Regel. KISS wird üblicherweise als **Keep It Simple, Stupid**, höflicher
+auch als **Keep It Simple and Straightforward** ausgeschrieben. Gemeint ist
+begründete Einfachheit, nicht möglichst kurzer Code.
+
+**Eigene Übungsregel, keine offizielle LAP-Punktegrenze:** Bei einem Quiz mit
+zehn Punkten ist das Ergebnis ab 6 Punkten erfolgreich. Ergebnisansicht und
+Zusammenfassung verwenden dieselbe Regel. Die gemeinsame Funktion läuft in Node.js:
+
+<!-- example:run -->
+
+```javascript
+function isPassingScore(score) {
+  if (!Number.isInteger(score) || score < 0 || score > 10) {
+    throw new RangeError("score must be an integer from 0 to 10");
+  }
+  return score >= 6;
+}
+
+console.log(isPassingScore(5));
+console.log(isPassingScore(6));
+console.log(isPassingScore(10));
+```
+
+```text
+false
+true
+true
+```
+
+5 liegt unterhalb, 6 genau auf der Grenze und 10 am erlaubten Maximum. Ändert
+sich die Regel, ändern wir diese Funktion und die erwarteten Testwerte. Der
+Name erklärt die Absicht, die Bedingung ist direkt lesbar. Dafür brauchen wir
+noch keine allgemeine Regel-Engine oder Vererbungshierarchie.
+
+Auch eine Liste könnte gerade 6 Karten pro Seite anzeigen. Das ist aber eine
+andere Regel mit einem anderen Änderungsgrund. Wir koppeln sie nicht nur wegen
+derselben Zahl an die Quizgrenze. Notwendige Sicherheitsprüfungen in Client
+und Server entfallen ebenfalls nicht zur „Duplikationsvermeidung“: Der Server
+prüft seine Eingaben immer selbst. **YAGNI** ergänzt diese Sicht: Wir bauen
+die nachweislich benötigte Fähigkeit und erfüllen dabei die aktuellen
+Anforderungen vollständig.
+
 ## Prüfungstaugliche Formulierung
 
 > Das KISS-Prinzip besagt,
@@ -78,13 +124,6 @@ Wenn dieselbe Berechnung oder Validierung an drei Stellen vorkommt, lohnt es sic
 > sondern in eine gemeinsame Abstraktion
 > oder Funktion ausgelagert werden soll.
 > In guter Entwicklung sollten beide Prinzipien gemeinsam und im Gleichgewicht angewendet werden.
-
-## Häufige Prüfungsfehler
-
-- KISS mit "minimalistischem Design" verwechseln.
-- DRY als erzwungene Zusammenfassung jeder kleinen Ähnlichkeit interpretieren.
-- Nicht über das Gleichgewicht sprechen.
-- Copy-Paste als wartbare Lösung bezeichnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -104,13 +143,18 @@ Wenn dieselbe Berechnung oder Validierung an drei Stellen vorkommt, lohnt es sic
 
 ## Quellen
 
+Geprüft: `2026-10-14`.
+
+- [The Pragmatic Programmer: Tips](https://pragprog.com/tips/): Autorenquelle für DRY sowie einfache, veränderbare Lösungen.
+
+
 1. DevIQ - Keep It Simple
    https://deviq.com/principles/keep-it-simple/
    Verwendung: kurze, fachliche Erklärung des KISS-Prinzips.
 
 2. DevIQ - Don't Repeat Yourself
    https://deviq.com/principles/dont-repeat-yourself/
-   Verwendung: offizielle fachliche Beschreibung des DRY-Prinzips.
+   Verwendung: ergänzende fachliche Erklärung des DRY-Prinzips, keine Norm.
 
 3. DevIQ - Once and Only Once
    https://deviq.com/principles/once-and-only-once/

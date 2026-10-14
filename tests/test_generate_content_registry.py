@@ -10,6 +10,17 @@ from scripts.generate_content_registry import RegistryItem, _read_markdown, get_
 
 
 class GenerateContentRegistryTests(unittest.TestCase):
+    def test_source_count_includes_top_level_bullets_and_numbered_references(self):
+        markdown = (
+            "# Topic\n\n- Not a source\n\n## Források\n\n"
+            "- [Current documentation](https://example.org/current)\n"
+            "  - Explanatory note, not another source\n\n"
+            "1. Original reference\n   https://example.org/original\n\n"
+            "## Other section\n\n1. Not a source\n"
+        )
+        self.assertEqual(registry_module.count_sources(markdown), 2)
+        self.assertEqual(registry_module.count_sources("# No sources\n1. Example"), 0)
+
     def test_get_translation_status_returns_de_missing_without_german_sidecar(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             subtopic_dir = Path(tmpdir)

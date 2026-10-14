@@ -78,6 +78,14 @@ A böngészőben a "Do Not Track" vagy hasonló funkció:
 - nem mindig elég
 - nem minden weboldal tartja tiszteletben
 
+## Sütik nélkül is lehet követés
+
+Egy oldal böngésző-ujjlenyomatot képezhet a technikai jellemzőkből, vagy bejelentkezett fiókhoz kapcsolhatja az aktivitást. A `localStorage`, egy követőképpont vagy URL-ben átadott azonosító szintén része lehet követésnek. A „cookieless” ezért nem azonos azzal, hogy nincs személyes adatkezelés vagy szükség hozzájárulásra.
+
+Egy osztrák tanulói oldal bejelentkezési sütijénél megvizsgáljuk, valóban szükséges-e a kért szolgáltatáshoz. A reklámkövetés külön cél, nem válik szükségessé attól, hogy a fejlesztő hasznosnak tartja. A DSB szerint ha csak technikailag szükséges sütik vannak, önmagukban ezekhez nincs szükség hozzájárulási bannerre. A tájékoztatási és egyéb adatvédelmi kötelezettségeket ettől még vizsgálni kell.
+
+A privát böngészés főként a helyi előzményeket és a munkamenet tárolását kezeli. A szolgáltató számára nem tesz automatikusan névtelenné. Egy saját oldal ellenőrzésénél a hálózati kéréseket és a tényleges adattovábbítást is megnézzük, nem csak a sütik listáját.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A cookie tracking során a weboldalak vagy harmadik felek
@@ -88,13 +96,6 @@ A böngészőben a "Do Not Track" vagy hasonló funkció:
 > a böngésző privacy beállításai
 > és szükség esetén trackerblokkoló eszközök használata.  
 > Adatvédelmi szempontból különösen a marketing és cross-site követés problémás.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy minden cookie rossz.
-- Nem különbséget tenni szükséges és nem szükséges sütik között.
-- Azt hinni, hogy a böngésző privát módja teljes védelmet ad.
-- Elfelejteni a harmadik fél cookie-k szerepét.
 
 ## Gyors önellenőrzés
 
@@ -114,6 +115,11 @@ A böngészőben a "Do Not Track" vagy hasonló funkció:
 
 ## Források
 
+- [Datenschutzbehörde: Datenschutz & Cookies](https://dsb.gv.at/faqs/datenschutz-cookies)  
+  Osztrák követelmények és technikai szükségesség.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
 1. ICO - Cookies  
    https://ico.org.uk/for-the-public/online/cookies/  
    Használat: hivatalos, közérthető forrás arról, mik a cookie-k és hogyan lehet őket kezelni felhasználói oldalon.
@@ -126,8 +132,8 @@ A böngészőben a "Do Not Track" vagy hasonló funkció:
    https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_report_cookie_banner_taskforce_en.pdf  
    Használat: európai adatvédelmi hatósági közös álláspont a cookie bannerek tipikus hibáiról.
 
-4. European Commission - Privacy & Spam Policy Factsheet  
-   https://ec.europa.eu/information_society/doc/factsheets/024-privacy-and-spam-en.pdf  
-   Használat: EU-s háttér a cookiekhoz kapcsolódó ePrivacy logikához.
+4. EUR-Lex - ePrivacy-Richtlinie 2002/58/EG, Art. 5 Abs. 3  
+   https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A02002L0058-20091219  
+   Használat: a tárolás és hozzáférés hozzájárulási feltétele, valamint a szükséges működés kivétele a hatályos konszolidált szövegben; ellenőrizve 2026-10-14.
 
 Megnyitva: `2026-04-08`

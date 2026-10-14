@@ -25,7 +25,7 @@ Das OS:
 - teilt CPU-Zeit zu
 - verwaltet den Speicher
 - entscheidet, welcher Prozess wann laufen soll
-- stellt sicher, dass die Prozesse sich nicht gegenseitig stören
+- begrenzt durch Trennung und Ressourcenverwaltung gegenseitige Beeinträchtigungen
 
 ## Beispiel aus der Praxis
 
@@ -90,6 +90,14 @@ Beides hängt zusammen, ist aber nicht dasselbe.
 | Multitasking   | Verwaltung mehrerer Prozesse / Aufgaben auf Systemebene |
 | Multithreading | Nutzung mehrerer Threads innerhalb eines Programms      |
 
+## Ein Kern, drei Aufgaben
+
+In einem einfachen Modell rechnen A und B, während C auf eine Netzwerkantwort wartet. Auf einem CPU-Kern erhält zunächst ein Thread von A Rechenzeit, anschließend B. Während des Wartens benötigt C keine durchgehende CPU-Ausführung; nach Eingang der Antwort kann C wieder ausführungsbereit werden.
+
+Bei **präemptivem Scheduling** kann das OS einem Thread die CPU entziehen und einen anderen auswählen. Im **kooperativen Modell** müssen die Aufgaben bei der Übergabe zusammenarbeiten. Ein Wechsel benötigt das Sichern von Zustand und verursacht deshalb Aufwand.
+
+Auf zwei Kernen können A und B tatsächlich parallel arbeiten. „Das Programm läuft” bedeutet aber nicht, dass jeder seiner Threads gerade auf einer CPU ausgeführt wird. Gemeinsam verwendete Daten können Sperren oder andere Synchronisation benötigen; der OS-Scheduler verhindert nicht von selbst alle Race Conditions der Anwendung.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Multitasking-Betriebssystem ist in der Lage,
@@ -99,14 +107,6 @@ Beides hängt zusammen, ist aber nicht dasselbe.
 > verwaltet den Speicher
 > und koordiniert Hintergrund- und Vordergrundaufgaben.  
 > Moderne Desktop-Betriebssysteme sind in der Regel Multitasking-Systeme.
-
-## Häufige Prüfungsfehler
-
-- Multitasking mit dem Mehrkernprozessor verwechseln.
-- Behaupten, dass Multitasking nur echte Parallelität sein kann.
-- Kein Beispiel für einen Hintergrundprozess nennen können.
-- Die Begriffe Prozess und Programm als völlig identisch betrachten.
-- Multitasking mit Multithreading verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -139,3 +139,9 @@ Beides hängt zusammen, ist aber nicht dasselbe.
    Verwendung: allgemeinverständliche Zusammenfassung moderner OS-Aufgaben.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Processes and threads](https://learn.microsoft.com/en-us/windows/win32/procthread/about-processes-and-threads): Prozess, Thread und Scheduling.
+
+Geprüft: `2026-10-14`.

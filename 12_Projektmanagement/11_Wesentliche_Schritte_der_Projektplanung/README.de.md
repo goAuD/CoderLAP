@@ -54,6 +54,14 @@
 - verbessert die Koordination
 - macht Probleme früher sichtbar
 
+## Einen kleinen Terminplan aus Abhängigkeiten ableiten
+
+Die Schätzungen in Arbeitstagen lauten: Anforderungen klären 1 Tag, Datenbank 2 Tage, Oberfläche 3 Tage, Integration 1 Tag, Abnahmeprüfung 2 Tage. Datenbank und Oberfläche können nach den Anforderungen parallel entstehen; die Integration benötigt beide.
+
+Bei getrennten Personen für die parallele Arbeit beträgt die kürzeste Planung `1 + max(2, 3) + 1 + 2 = 7 Arbeitstage`. Der kritische Pfad verläuft über Anforderungen, Oberfläche, Integration und Prüfung. Eine Verzögerung auf diesem Pfad verschiebt ohne weitere Anpassung auch das Projektende. Die Datenbank kann in diesem einfachen Netz einen Tag später fertig werden, bis die Oberfläche bereitsteht.
+
+Erstellt dieselbe Person Datenbank und Oberfläche, gilt die Parallelitätsannahme nicht. Kapazität, Urlaub und Wartezeiten auf externe Freigaben müssen deshalb gemeinsam mit den fachlichen Abhängigkeiten betrachtet werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Zu den wichtigsten Schritten der Projektplanung gehören
@@ -62,13 +70,6 @@
 > die Ressourcen- und Kostenplanung sowie die Festlegung
 > von Risiken und Meilensteinen.  
 > Ein guter Projektplan ist deshalb wichtig, weil er die Umsetzung transparent und nachvollziehbar macht.
-
-## Häufige Prüfungsfehler
-
-- Nur die Terminplanung erwähnen.
-- Nicht über Scope oder Anforderungen sprechen.
-- Risiko- und Ressourcenplanung weglassen.
-- Glauben, dass die Planung einmalig ist und sich danach nicht ändern kann.
 
 ## Schnelle Selbstkontrolle
 
@@ -87,6 +88,11 @@
 5. Ziel, Anforderungen, Aufgabenaufgliederung, Zeitplanung, Kostenplan
 
 ## Quellen
+
+- [PMI: Practice Standard for Scheduling](https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/practice-standard-scheduling.pdf)  
+  Abhängigkeiten, Dauer, Meilensteine und kritischer Pfad.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Create a project roadmap  
    https://www.atlassian.com/agile/project-management/create-project-roadmap  

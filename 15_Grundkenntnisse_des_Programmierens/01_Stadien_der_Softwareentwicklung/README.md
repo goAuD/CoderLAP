@@ -102,19 +102,34 @@ Ide tartozik:
 - a tesztelést és karbantartást is mondd ki
 - ne keverd össze a szakaszokat a konkrét módszertanokkal, például `Scrum`-mal vagy vízesésmodellel
 
+## Egy követelmény végigkövetése
+
+Egy tanfolyamhoz férőhelyfoglalást készítünk. Az igény: „lehessen jelentkezni”.
+Ebből mérhető követelmény lesz: egy felhasználó egy alkalomra egyszer jelentkezhet,
+és a visszaigazolás csak sikeres mentés után jelenhet meg.
+
+| Szakasz | Ellenőrizhető eredmény |
+|---|---|
+| Elemzés | férőhelykorlát, jogosultságok és elfogadási feltételek |
+| Tervezés | felületterv, adatmodell, az egyidejű foglalások kezelése |
+| Implementáció | mentés és érthető visszajelzés |
+| Teszt | szabad hely, betelt alkalom, ismételt kattintás |
+| Bevezetés | kipróbált telepítés, mentés és visszaállítási terv |
+| Karbantartás | felhasználói visszajelzésből javítás, majd ismételt teszt |
+
+A szakaszok tevékenységeket jelölnek, nem kötelező egyszeri sorozatot. Iteratív
+fejlesztésben egy kisebb funkció többször végigjárhatja őket. A teszteseteket már
+a követelménynél megtervezhetjük. A validálás azt kérdezi, hogy a felhasználó
+valódi problémáját oldjuk-e meg; a verifikálás azt, hogy a megadott elvárásokat
+teljesíti-e a megoldás. A kettőhöz eltérő bizonyíték is tartozhat: felhasználói
+próba, illetve specifikáció alapján végrehajtott teszt.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverfejlesztés több egymásra épülő szakaszból áll.  
 > A tipikus lépések az igényfelmérés, követelményelemzés, tervezés, implementáció, tesztelés, bevezetés és  
 > karbantartás.  
 > Ennek a felosztásnak az a célja, hogy a fejlesztés átláthatóbb, ellenőrizhetőbb és biztonságosabb legyen.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a szoftverfejlesztés lényegében kódolás.
-- Kihagyni a követelményelemzést.
-- Nem megemlíteni a tesztelést.
-- Elfelejteni, hogy a karbantartás is a folyamat része.
 
 ## Gyors önellenőrzés
 
@@ -133,6 +148,11 @@ Ide tartozik:
 5. Igény, követelmény, tervezés, implementáció, teszt, bevezetés, karbantartás
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [IBM: Software Development Lifecycle](https://www.ibm.com/think/topics/sdlc): életciklus és visszacsatolás; a tanfolyamos példa saját.
+
 
 1. IBM - What is the Software Development Lifecycle (SDLC)?  
    https://www.ibm.com/think/topics/sdlc  

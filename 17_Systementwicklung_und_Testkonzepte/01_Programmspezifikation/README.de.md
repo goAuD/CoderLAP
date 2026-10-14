@@ -60,6 +60,27 @@ Typischerweise:
 - nicht widersprüchlich
 - beschreibt sowohl das Ziel als auch die Regeln
 
+## Ein überprüfbarer Vertrag für eine Buchung
+
+Den Wunsch „schnell und sicher“ zerlegen wir in konkrete Bedingungen. Beispiel
+für die Buchung eines Kursplatzes:
+
+| Teil | Vereinbarung |
+|---|---|
+| Vorbedingung | angemeldete Person, existierender Kurs |
+| Eingabe | Kurskennung; die Person identifiziert der Server |
+| Erfolg | eine Buchung entsteht und wird in der Bestätigung identifiziert |
+| Voller Kurs | verständliche Ablehnung, keine Buchung |
+| Wiederholte Anfrage | keine weitere Buchung derselben Person für denselben Kurs |
+| Leistung | Messung mit festgelegtem Testrechner, Datenbestand und Last |
+
+Die Nachbedingung beschreibt, was nach erfolgreicher Ausführung gelten soll.
+Eine Anforderung erhält beispielsweise die Kennung `FOG-01`, auf die ein Testfall
+verweist. Bei Änderungen werden betroffene Tests dadurch sichtbar. Eine vage
+Zeitvorgabe präzisieren wir gemeinsam, etwa: 95% der Anfragen antworten bei
+definierter Last innerhalb einer Sekunde. Das ist ein Ziel dieses Beispiels,
+keine allgemeine Vorschrift.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Programmspezifikation ist eine Beschreibung, die festhält, welche Aufgabe das Programm erfüllen muss, mit  
@@ -67,13 +88,6 @@ Typischerweise:
 > Das Ziel der Spezifikation ist die eindeutige Festlegung der Anforderungen, damit Entwicklung und Testen auf  
 > demselben erwarteten Verhalten aufbauen können.  
 > Die Spezifikation beschreibt also nicht den Code, sondern das erwartete Verhalten.
-
-## Häufige Prüfungsfehler
-
-- Die Spezifikation mit dem Programmcode gleichsetzen.
-- Die Rolle von Eingabe und Ausgabe nicht erwähnen.
-- Glauben, dass die Spezifikation nur ein langes Unternehmensdokument sein kann.
-- Die Frage "Was" und "Wie" nicht voneinander trennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -92,6 +106,11 @@ Typischerweise:
 5. Weil anhand dessen die korrekte Funktionsweise überprüft werden kann
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Atlassian: Product specifications](https://www.atlassian.com/agile/product-management/product-specification): messbares Ziel und Umfang; eigenes Buchungsbeispiel.
+
 
 1. IEEE SA - IEEE/ISO/IEC P29148  
    https://standards.ieee.org/ieee/29148/12262  

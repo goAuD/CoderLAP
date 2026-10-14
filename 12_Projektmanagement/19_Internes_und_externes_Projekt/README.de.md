@@ -50,6 +50,14 @@ Die folgenden Quellen beschreiben hauptsächlich die Projektumgebung,
 Stakeholder und organisatorische Zusammenhänge;
 daraus ergibt sich diese Unterscheidung.
 
+## Die Einordnung hängt vom Blickwinkel ab
+
+Eine Schule verbessert ihre eigene Geräteverwaltung und beauftragt dafür ein externes Unternehmen. Für die Schule ist dies ein internes Verbesserungsprojekt, weil es ihrem eigenen Betrieb dient. Für den Lieferanten ist dieselbe Arbeit ein externes Kundenprojekt. Ein externer Beteiligter macht ein Vorhaben somit nicht aus jeder Perspektive zu einem externen Projekt.
+
+Auf beiden Seiten braucht es Zuständigkeit, Ziel und Abnahmekriterien. Der Liefervertrag regelt Leistung und Übergabe; die Schule muss zusätzlich interne Einführung und Betrieb organisieren.
+
+Auch interne Projekte verbrauchen Arbeitszeit und Kapazität, selbst wenn keine externe Rechnung entsteht. Bei einer Prüfung sollte deshalb immer deutlich werden, aus Sicht welcher Organisation die Einordnung erfolgt.
+
 ## Prüfungstaugliche Formulierung
 
 > Als internes Projekt bezeichnet man ein Projekt,
@@ -59,13 +67,6 @@ daraus ergibt sich diese Unterscheidung.
 > Der Unterschied ist deshalb wichtig,
 > weil sich Kommunikation, Erwartungen, Genehmigung
 > und oft auch der vertragliche Rahmen unterscheiden.
-
-## Häufige Prüfungsfehler
-
-- Den Unterschied nur von der technischen Seite erklären.
-- Die Auftraggeber- oder Stakeholder-Perspektive nicht erwähnen.
-- Glauben, dass ein internes Projekt weniger ein „echtes" Projekt ist.
-- Kein konkretes Beispiel bringen.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,6 +85,11 @@ daraus ergibt sich diese Unterscheidung.
 5. Weil Adressat, Verantwortung und Genehmigung unterschiedlich sind
 
 ## Quellen
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Verantwortlichkeiten und Kontrollpunkte der Projektsteuerung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  

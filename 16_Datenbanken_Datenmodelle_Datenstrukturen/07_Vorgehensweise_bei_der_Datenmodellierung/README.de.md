@@ -81,6 +81,20 @@ Hier wird aus dem theoretischen Modell ein konkretes Datenbankschema.
 | logisches Modell | Tabellen, Schlüssel, Beziehungen |
 | physisches Modell | konkrete, an ein `DBMS` angepasste Umsetzung |
 
+## Durchgearbeitetes Modell: Lernende und Kurse
+
+Zuerst werden die Regeln festgelegt: Eine Person kann mehrere Kurse besuchen; ein Kurs kann mehrere Teilnehmende haben; pro ausgeschriebenem Kurs ist eine Anmeldung je Person erlaubt. Das Anmeldedatum gehört zur Beziehung, nicht allein zur Person.
+
+| Tabelle | Schlüssel und wesentliche Daten |
+|---|---|
+| students | Primärschlüssel `id`, Name |
+| courses | Primärschlüssel `id`, Titel |
+| enrollments | zusammengesetzter Schlüssel `student_id, course_id`; Anmeldedatum |
+
+Die beiden Fremdschlüssel in `enrollments` lösen die n:m-Beziehung auf. `0..n` erlaubt, dass ein neuer Kurs noch keine Teilnehmenden hat. Beide Verweise einer Anmeldung sind verpflichtend. Der Kurstitel eignet sich nicht als Kennung, weil er sich ändern und mehrfach vorkommen kann.
+
+Prüfe das Modell an konkreten Abläufen: Ist ein leerer Kurs möglich, dürfen zwei Personen gleich heißen, wird eine doppelte Anmeldung verhindert und was soll beim Löschen eines Kurses passieren? Findet ein Kurs jährlich erneut statt, benötigt man getrennte Kursdurchführungen, sofern die Anforderung das vorsieht. Auch Löschregeln und aufzubewahrende Historie gehören zur Modellierung.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Datenmodellierung werden die Daten realer oder geschäftlicher Prozesse in ein strukturiertes Modell  
@@ -88,13 +102,6 @@ Hier wird aus dem theoretischen Modell ein konkretes Datenbankschema.
 > Typische Schritte sind die Erhebung der Anforderungen, die Bestimmung von Entitäten und Attributen, die Festlegung  
 > von Beziehungen und Schlüsseln sowie die Normalisierung und die Erstellung des konkreten Datenbankschemas.  
 > Ziel ist die Schaffung einer übersichtlichen, erweiterbaren und konsistenten Datenstruktur.
-
-## Häufige Prüfungsfehler
-
-- Sofort mit Tabellen beginnen, ohne die Geschäftsbegriffe zu verstehen.
-- Die Modellierung nur als Zeichnen betrachten.
-- Schlüssel und Beziehungen nicht erwähnen.
-- Konzeptionelles und physisches Modell verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -123,3 +130,9 @@ Hier wird aus dem theoretischen Modell ein konkretes Datenbankschema.
    Verwendung: praktische, offizielle Quelle zu den Grundschritten des relationalen Entwurfsprozesses.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Database design basics](https://support.microsoft.com/en-us/access/database-design-basics): Anforderungen, Tabellen, Beziehungen und Normalisierung
+
+Geprüft: `2026-10-14`.

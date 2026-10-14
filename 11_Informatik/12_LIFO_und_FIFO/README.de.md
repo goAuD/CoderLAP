@@ -72,6 +72,46 @@ Wenn das falsche Prinzip gewählt wird, kann das System logisch fehlerhaft sein.
 - Dieselbe Datenstruktur kann in bestimmten Fällen auf verschiedene Weisen verwendet werden.
 - In der Prüfung wird oft auch ein Beispiel verlangt, nicht nur die Auflösung.
 
+## Einfügen und Entnehmen im Wechsel
+
+**Aufgabe:** `A` und danach `B` kommen an. Ein Element wird entnommen, dann kommt
+`C` hinzu, anschließend wird der Speicher geleert. Dies zeigt die Regel besser
+als eine bloß umgedrehte Liste. Eigenständig in Node.js ausführbar:
+
+<!-- example:run -->
+
+```javascript
+const lifo = [];
+const fifo = [];
+for (const task of ["A", "B"]) {
+  lifo.push(task);
+  fifo.push(task);
+}
+console.log(lifo.pop(), fifo.shift());
+lifo.push("C");
+fifo.push("C");
+console.log(lifo.pop(), fifo.shift());
+console.log(lifo.pop(), fifo.shift());
+console.log(lifo.length, fifo.length);
+```
+
+```text
+B A
+C B
+A C
+0 0
+```
+
+Zuerst verlässt bei LIFO `B`, bei FIFO dagegen `A` die Struktur. Das neue `C`
+liegt oben auf dem Stapel und ist dort sofort als Nächstes dran. In der Queue
+steht es hinter `B`. Somit ist die LIFO-Reihenfolge `B, C, A`, die
+FIFO-Reihenfolge `A, B, C`.
+
+Die Reihenfolge beschreibt die **Auswahl der Elemente**. Bei mehreren parallelen
+Verarbeitern kann trotz FIFO-Entnahme eine später gestartete kurze Aufgabe früher
+fertig sein. Eine Prioritätswarteschlange verwendet wiederum eine andere
+Auswahlregel. Nicht jeder Bibliothekstyp mit „Queue“ im Namen ist streng FIFO.
+
 ## Prüfungstaugliche Formulierung
 
 > LIFO und FIFO sind Verarbeitungsprinzipien,
@@ -79,19 +119,12 @@ Wenn das falsche Prinzip gewählt wird, kann das System logisch fehlerhaft sein.
 > Bei LIFO kommt das zuletzt eingefügte Element zuerst heraus, bei FIFO das am frühesten eingefügte.  
 > Die typische Umsetzung von LIFO ist der Stack, die von FIFO die Queue.
 
-## Häufige Prüfungsfehler
-
-- Die beiden Abkürzungen vertauschen.
-- Nur auf Englisch auflösen, ohne es zu erklären.
-- Kein informatisches Beispiel nennen.
-- Glauben, dass beide für denselben Zweck dienen.
-
 ## Schnelle Selbstkontrolle
 
 1. Was bedeutet LIFO?
 2. Was bedeutet FIFO?
-3. Welche Datenstruktur gehört eher zum Stack?
-4. Welche Datenstruktur gehört eher zur Queue?
+3. Welches Reihenfolgeprinzip gehört zum Stack?
+4. Welches Reihenfolgeprinzip gehört zur FIFO-Queue?
 5. Nenne je ein Beispiel für beide.
 
 ## Kurzantworten zur Selbstkontrolle
@@ -103,6 +136,12 @@ Wenn das falsche Prinzip gewählt wird, kann das System logisch fehlerhaft sein.
 5. LIFO: Aufruf-Stack. FIFO: Druckwarteschlange
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Array.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift): Entnahme am Anfang und verändertes Array.
+- [Oracle: Queue](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Queue.html): FIFO und andere Reihenfolgen bei Queues.
+
 
 1. Oracle Java SE - `Deque` Interface  
    https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Deque.html  

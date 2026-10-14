@@ -192,6 +192,54 @@ Matematikai vagy programozási környezetben lehetnek más jelek is, de vizsgán
 - bitműveleteknél
 - hibavizsgálatban
 
+## Összetett feltétel levezetése
+
+Egy művelet akkor engedélyezett, ha a felhasználó bejelentkezett (`A`),
+van szerkesztési joga (`B`), és a dokumentum nincs zárolva (`C` jelenti a zárolást).
+A szabály: `A AND B AND NOT C`. Három független logikai bemenethez `2³ = 8` sor kell.
+
+| A | B | C | A AND B AND NOT C |
+| - | - | - | ---------------- |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 0 |
+
+Az önálló JavaScriptben valódi logikai értékeket használunk:
+
+<!-- example:run -->
+```javascript
+const signedIn = true;
+const canEdit = true;
+const locked = false;
+console.log(signedIn && canEdit && !locked);
+console.log(!(signedIn && canEdit) === (!signedIn || !canEdit));
+console.log(true !== false);
+```
+
+Várt kimenet:
+
+```text
+true
+true
+true
+```
+
+A második sor De Morgan azonosságát szemlélteti: `NOT (A AND B)` ugyanaz,
+mint `(NOT A) OR (NOT B)`. A harmadik sor két boolean eltérésével fejez ki XOR-t.
+JavaScriptben a `^` bitenkénti művelet, ezért logikai feltételekhez itt nem azt használjuk.
+Az `&&` és `||` rövidzáras: a jobb oldalt csak akkor értékelik ki, ha az eredményhez kell.
+Egy kapcsolási rajz bemenetei ezzel szemben nem programutasítások végrehajtási sorrendjét jelentik.
+
+A kliensoldali feltétel csak a felület viselkedését szemlélteti. Valós rendszerben
+a szervernek a jogosultságot a művelet végrehajtásakor is ellenőriznie kell.
+
+Forrás: [MDN: kifejezések és operátorok](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators).
+
 ## Vizsgán jól használható megfogalmazás
 
 > A logikai kapcsolások bináris bemenetekkel dolgoznak, tehát a jelek 0 vagy 1 értékűek.  
@@ -200,14 +248,6 @@ Matematikai vagy programozási környezetben lehetnek más jelek is, de vizsgán
 > Az OR akkor ad 1-et, ha legalább az egyik bemenet 1.  
 > Az XOR akkor ad 1-et, ha a két bemenet különbözik.  
 > A NOT egy bemenetet invertál.
-
-## Gyakori vizsgahibák
-
-- Az OR és az XOR összekeverése.
-- Azt mondani, hogy az AND akkor is `1`, ha csak az egyik bemenet `1`.
-- Elfelejteni, hogy a NOT csak egy bemenetű.
-- Rosszul kitölteni az igazságtáblát.
-- Nem felismerni, hogy az XOR lényege a különbözőség.
 
 ## Gyors önellenőrzés
 

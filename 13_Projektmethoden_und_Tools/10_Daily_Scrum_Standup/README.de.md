@@ -5,7 +5,7 @@
 | Merkmal | Daily Scrum |
 |---|---|
 | Häufigkeit | täglich |
-| Dauer | kurz, typischerweise maximal `15 Minuten` |
+| Dauer | Zeitbox von `15 Minuten` |
 | Ziel | tägliche Abstimmung |
 | Fokus | Fortschritt in Richtung Sprintziel |
 
@@ -48,20 +48,21 @@ Wichtig: Das ist ein nützliches Muster, aber das Wesentliche ist die tägliche 
 | Daily Scrum | das offizielle tägliche Event in Scrum |
 | Standup | allgemeinerer Name für ein kurzes tägliches Meeting |
 
+## Ein greifbares Ergebnis des Daily Scrums
+
+Das Sprint Goal ist eine nutzbare Themensuche. Morgens zeigt sich: Die Suchlogik ist fertig, aber die Tastaturprüfung hängt an einem Fokusproblem. Die Developers betrachten die Auswirkung auf das Ziel und passen den Tagesplan so an, dass zwei Beteiligte die Korrektur gemeinsam abschließen. Die technische Detailbesprechung erfolgt nach dem Event.
+
+Das Daily Scrum ist an jedem Arbeitstag ein auf 15 Minuten begrenztes Event für die Developers. Scrum Master oder Product Owner nehmen als Developers teil, wenn sie selbst an Sprint-Backlog-Einträgen arbeiten. Die drei traditionellen Fragen und eine Durchführung im Stehen sind keine vorgeschriebene Form.
+
+Das Ergebnis ist ein aktueller, umsetzbarer Tagesplan. Taucht am Nachmittag ein neues Hindernis auf, darf sich das Team auch dann abstimmen und muss nicht bis zum nächsten Daily warten.
+
 ## Prüfungstaugliche Formulierung
 
-> Das Daily Scrum ist eine kurze, tägliche Abstimmung für das Scrum-Team.  
+> Das Daily Scrum ist ein tägliches 15-Minuten-Event der Developers zur Prüfung des Fortschritts zum Sprint Goal.  
 > Ziel ist es, dass das Team die Arbeit koordiniert,
 > Hindernisse erkennt und bei Bedarf
 > den täglichen Plan im Sinne des Sprintziels anpasst.  
 > Es ist kein langes Statusmeeting, sondern eine fokussierte, kurze Synchronisation.
-
-## Häufige Prüfungsfehler
-
-- Das Daily Scrum als Reportmeeting für das Management bezeichnen.
-- Behaupten, dass hier alle Probleme im Detail gelöst werden.
-- Die tägliche Abstimmung nicht erwähnen.
-- Den Bezug zum Sprintziel auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -74,12 +75,17 @@ Wichtig: Das ist ein nützliches Muster, aber das Wesentliche ist die tägliche 
 ## Kurzantworten zur Selbstkontrolle
 
 1. Tägliche Abstimmung und Sichtbarmachung von Hindernissen
-2. Kurz, typischerweise maximal `15 Minuten`
-3. Primär für die Entwickler / das Team
+2. In einer Zeitbox von 15 Minuten.
+3. Für die Developers; andere Scrum-Verantwortliche nehmen als Developers teil, wenn sie Sprintarbeit ausführen.
 4. Weil es seinen Fokus verliert
 5. Das Daily Scrum stimmt die Sprintarbeit ab, kein Chef-Report
 
 ## Quellen
+
+- [Scrum.org: What is a Daily Scrum?](https://www.scrum.org/resources/what-is-a-daily-scrum)  
+  Teilnehmende, Zeitrahmen und Anpassung des Tagesplans.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

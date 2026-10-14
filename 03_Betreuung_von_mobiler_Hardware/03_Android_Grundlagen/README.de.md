@@ -53,7 +53,7 @@ Das ist ein großer Vorteil, bedeutet aber auch Vielfalt und Unterschiede.
 
 Android-Apps sind typischerweise:
 
-- auf Entwicklerseite mit dem `APK`- oder `AAB`-Format verbunden
+- auch aus einem `AAB`-Veröffentlichungspaket verteilt werden; auf dem Gerät werden `APK`-Pakete installiert
 - am häufigsten über **Google Play** für den Nutzer erhältlich
 
 In der Android-Welt können aber auch andere Vertriebswege existieren.
@@ -133,6 +133,16 @@ Das ist flexibel, kann aber auch ein Sicherheitsrisiko darstellen.
 | verschiedene Geräte und Oberflächen | einheitlichere Hardware-Software-Kontrolle |
 | mehr Vertriebsmöglichkeiten         | stärker kontrollierter Vertrieb            |
 
+## Veröffentlichungspaket und installierte Anwendung
+
+Das **AAB** (`Android App Bundle`) ist ein Veröffentlichungsformat. Google Play kann daraus die für das Gerät geeigneten APKs erzeugen. Ein AAB ist daher nicht dasselbe wie eine unmittelbar installierbare APK-Datei. Die offene AOSP-Basis bedeutet außerdem nicht, dass jedes Gerät Google Play oder sämtliche Google-Dienste mitbringt.
+
+## Durchgearbeiteter Fall: QR-Scanner-App
+
+Der QR-Scanner benötigt ein Kamerabild. Beim Start der Kamerafunktion ist deshalb eine Kameraerlaubnis sinnvoll. Für das reine Einlesen eines Codes ist dagegen kein Zugriff auf das gesamte Adressbuch nötig. Im Test wird auch die Ablehnung der Erlaubnis geprüft: Die App erklärt die Folge und bleibt soweit möglich benutzbar.
+
+Die Sandbox des Systems unterstützt die Trennung der Apps. Eine erteilte Berechtigung kann aber tatsächlichen Datenzugriff ermöglichen; bewusste Zustimmung und datensparsames Verhalten gehören deshalb zusammen. Beim Gerätesupport werden neben der Android-Version auch der Sicherheits-Patchstand und der zugesagte Supportzeitraum des Herstellers kontrolliert.
+
 ## Prüfungstaugliche Formulierung
 
 > Android ist eine weit verbreitete mobile Betriebssystem-Plattform, die auf Open-Source-Grundlagen aufbaut.  
@@ -140,14 +150,6 @@ Das ist flexibel, kann aber auch ein Sicherheitsrisiko darstellen.
 > Wichtige Merkmale von Android sind die App-Ausführung,
 > die Berechtigungsverwaltung, das Google-Play-Ökosystem
 > sowie die größere Anpassbarkeit.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass Android nur auf Google-Telefonen läuft.
-- Die Begriffe AOSP und Google Play verwechseln.
-- Glauben, dass alle Android-Geräte gleich aktualisiert werden.
-- Die Offenheit nur als Vorteil behandeln, ohne die Risiken zu nennen.
-- Nicht wissen, dass Android auf verschiedenen Gerätetypen läuft.
 
 ## Schnelle Selbstkontrolle
 
@@ -184,3 +186,11 @@ Das ist flexibel, kann aber auch ein Sicherheitsrisiko darstellen.
    Verwendung: Play Protect / Integritätsschutz und Sicherheitsumgebung.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Android: App Bundles](https://developer.android.com/guide/app-bundle): AAB als Veröffentlichungsformat und APK-Erzeugung.
+- [Android: Permissions](https://developer.android.com/guide/topics/permissions/overview): funktionsbezogene Erlaubnis und Umgang mit Ablehnung.
+- [AOSP: Application Sandbox](https://source.android.com/docs/security/app-sandbox): Trennung der Anwendungen.
+
+Geprüft: `2026-10-14`.

@@ -40,6 +40,14 @@ Lehet:
 | prototípus | korai minta vagy modell |
 | kész termék | végleges, stabil megoldás |
 
+## A prototípusnak legyen megválaszolandó kérdése
+
+Kérdésünk: megtalálja-e a tanuló mobilon a következő gyakorlást segítség nélkül? Ehhez három kattintható képernyő elég lehet, valódi adatbázis nélkül. Megfigyeljük az útvonalat és az elakadást, majd módosítjuk az elrendezést. A szép képernyő még nem bizonyítja a használhatóságot.
+
+Más kérdéshez más minta kell: ha az adatimport sebessége bizonytalan, egy kis technikai próba valószerű, de személyes adatokat nem tartalmazó mintafájllal ad választ. A vizuális részletesség és a technikai teljesség külön szempont.
+
+Egy eldobható prototípus tanulságát visszük tovább, nem feltétlenül a kódját. Evolúciós prototípusnál a kód később termékké fejlődhet, de ehhez külön ellenőrizni kell többek között a jogosultságokat, hibakezelést és karbantarthatóságot. A próba célját és korlátait a résztvevőknek is elmondjuk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A prototípus a tervezett rendszer korai mintája,
@@ -47,13 +55,6 @@ Lehet:
 > vagy technikai megoldások kipróbálásában.  
 > Nem feltétlenül végleges vagy teljes funkcionalitású, de jól használható korai visszajelzésre és hibák megelőzésére.  
 > Segítségével az ügyfél és a fejlesztőcsapat könnyebben alakíthat ki közös képet a megoldásról.
-
-## Gyakori vizsgahibák
-
-- A prototípust kész terméknek nevezni.
-- Azt hinni, hogy csak grafikai vázlat lehet.
-- Nem megemlíteni a visszajelzés szerepét.
-- Kihagyni, hogy időt és költséget takaríthat meg.
 
 ## Gyors önellenőrzés
 
@@ -72,6 +73,11 @@ Lehet:
 5. Ügyfélnek, felhasználónak, fejlesztőcsapatnak
 
 ## Források
+
+- [GOV.UK: Making prototypes](https://www.gov.uk/service-manual/design/making-prototypes)  
+  Kipróbálási célhoz választott prototípus és az éles rendszer közötti határ.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Figma Learn - Guide to prototyping in Figma  
    https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma  

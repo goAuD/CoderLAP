@@ -69,6 +69,14 @@ Mert technikai munkában sokszor kell:
 - lekezelő hangnem
 - feleslegesen bonyolult mondatok
 
+## A hasonlat után térj vissza a valós működéshez
+
+A DNS telefonkönyvhöz hasonlítása jó kezdés: egy könnyen megjegyezhető névhez technikai adatot keresünk. Ezután pontosítunk: a DNS elosztott rendszer, többféle rekordot kezel, a válaszokat pedig a feloldók és kliensek gyorsítótárazhatják. Ez magyarázza, miért nem mindenkinél ugyanabban a pillanatban látszik egy módosítás.
+
+Ügyfélnek például így fogalmazhatunk: „Az új cím már be van állítva, de egyes eszközök még korábban eltárolt választ használhatnak. Ellenőrizzük a mérvadó beállítást és a kapott választ, majd megmondjuk, szükséges-e további lépés.” Ezzel megmagyarázzuk a bizonytalanság okát anélkül, hogy biztos javítási időt találnánk ki.
+
+A megértést konkrét kérdés ellenőrzi: „Ha a böngészőben még a régi oldal látszik, miért nem következik ebből önmagában, hogy az új szerver hibás?” A válasz megmutatja, melyik részt érdemes újra elmagyarázni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A technikai összefüggéseket úgy kell elmagyarázni,
@@ -78,13 +86,6 @@ Mert technikai munkában sokszor kell:
 > a szakkifejezéseket pedig egyszerű nyelven,
 > példával vagy hasonlattal tisztázni.  
 > A jó magyarázat végén ellenőrizni kell, hogy a másik fél valóban megértette-e a lényeget.
-
-## Gyakori vizsgahibák
-
-- Túl technikai zsargon használata.
-- Azt hinni, hogy az egyszerű magyarázat egyenlő a pontatlansággal.
-- Nem alkalmazkodni a hallgató szintjéhez.
-- Nem kérdezni vissza, hogy érthető volt-e.
 
 ## Gyors önellenőrzés
 
@@ -103,6 +104,14 @@ Mert technikai munkában sokszor kell:
 5. Először a célból és gyakorlati jelentésből indulj ki
 
 ## Források
+
+- [GOV.UK: Publishing accessible documents](https://www.gov.uk/guidance/publishing-accessible-documents)  
+  Szakkifejezések magyarázata és érthető dokumentumok.
+
+- [IETF RFC 1034: Domain Names, Concepts and Facilities](https://datatracker.ietf.org/doc/html/rfc1034)  
+  A DNS elosztott felépítése és gyorsítótárazása a hasonlat technikai hátteréhez.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. GOV.UK - Writing for GOV.UK  
    https://www.gov.uk/guidance/content-design/writing-for-gov-uk  

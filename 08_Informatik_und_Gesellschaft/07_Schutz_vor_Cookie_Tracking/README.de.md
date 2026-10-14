@@ -78,6 +78,14 @@ Die "Do Not Track"-Funktion oder ähnliche Funktionen im Browser:
 - reichen nicht immer aus
 - werden nicht von jeder Website respektiert
 
+## Tracking ist auch ohne Cookies möglich
+
+Eine Website kann aus technischen Merkmalen einen Browser-Fingerabdruck bilden oder Aktivitäten einem angemeldeten Konto zuordnen. Auch `localStorage`, ein Tracking-Pixel oder eine Kennung in einer URL können Teil des Trackings sein. „Cookieless“ bedeutet deshalb weder automatisch keine personenbezogene Verarbeitung noch keine Einwilligungspflicht.
+
+Bei einem Anmelde-Cookie einer österreichischen Lernwebsite prüfen wir, ob es für den angeforderten Dienst tatsächlich notwendig ist. Werbetracking verfolgt einen anderen Zweck und wird nicht notwendig, nur weil es dem Entwickler nützlich erscheint. Nach der DSB erfordern ausschließlich technisch notwendige Cookies für sich keinen Einwilligungsbanner. Informationspflichten und weitere Datenschutzanforderungen sind trotzdem zu prüfen.
+
+Privates Surfen betrifft vor allem lokale Chronik und Sitzungsspeicherung. Gegenüber dem Dienst macht es nicht automatisch anonym. Bei der Prüfung einer eigenen Website betrachten wir daher auch Netzwerkanfragen und tatsächliche Übertragungen, nicht nur die Cookie-Liste.
+
 ## Prüfungstaugliche Formulierung
 
 > Beim Cookie-Tracking können Websites oder Drittanbieter
@@ -88,13 +96,6 @@ Die "Do Not Track"-Funktion oder ähnliche Funktionen im Browser:
 > die Privacy-Einstellungen des Browsers zu nutzen
 > und bei Bedarf Trackerblocker-Tools einzusetzen.  
 > Aus Datenschutzsicht sind besonders Marketing und Cross-Site-Tracking problematisch.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, dass alle Cookies schlecht sind.
-- Nicht zwischen notwendigen und nicht notwendigen Cookies zu unterscheiden.
-- Zu glauben, dass der private Modus des Browsers vollständigen Schutz bietet.
-- Die Rolle der Drittanbieter-Cookies zu vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -114,6 +115,11 @@ Die "Do Not Track"-Funktion oder ähnliche Funktionen im Browser:
 
 ## Quellen
 
+- [Datenschutzbehörde: Datenschutz & Cookies](https://dsb.gv.at/faqs/datenschutz-cookies)  
+  Österreichische Anforderungen und technische Notwendigkeit.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
 1. ICO - Cookies  
    https://ico.org.uk/for-the-public/online/cookies/  
    Verwendung: offizielle, allgemein verständliche Quelle darüber,
@@ -127,8 +133,8 @@ Die "Do Not Track"-Funktion oder ähnliche Funktionen im Browser:
    https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_report_cookie_banner_taskforce_en.pdf  
    Verwendung: gemeinsame Position europäischer Datenschutzbehörden zu typischen Fehlern bei Cookie-Bannern.
 
-4. European Commission - Privacy & Spam Policy Factsheet  
-   https://ec.europa.eu/information_society/doc/factsheets/024-privacy-and-spam-en.pdf  
-   Verwendung: EU-Hintergrund zur ePrivacy-Logik im Zusammenhang mit Cookies.
+4. EUR-Lex - ePrivacy-Richtlinie 2002/58/EG, Art. 5 Abs. 3  
+   https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A02002L0058-20091219  
+   Verwendung: Einwilligung für Speicherung und Zugriff sowie die Ausnahme für notwendige Funktionen in der geltenden konsolidierten Fassung; geprüft am 2026-10-14.
 
 Abgerufen: `2026-04-08`

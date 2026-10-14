@@ -40,6 +40,27 @@ Das Wesentliche ist nicht die Form, sondern die logische Zerlegung.
 | PSP | woraus das Projekt besteht |
 | Zeitplan | wann etwas passiert |
 
+## Ein kleiner PSP mit sichtbarer Testarbeit
+
+Ein Projekt zur Geräteverwaltung könnte so gegliedert werden:
+
+```text
+1. Projekt Geräteverwaltung
+   1.1 Abgestimmte Anforderungen
+   1.2 Funktionsfähige Anwendung
+       1.2.1 Datenimport
+       1.2.2 Suche und Bearbeitung
+       1.2.3 Berechtigungen
+   1.3 Prüfung und Übergabe
+       1.3.1 Abnahmetests
+       1.3.2 Dokumentation und Schulung
+   1.4 Projektsteuerung
+```
+
+Nach der 100-Prozent-Regel decken die untergeordneten Elemente gemeinsam den gesamten Arbeitsumfang ihres übergeordneten Elements ab. Tests, Dokumentation und Management zählen dazu; dieselbe Arbeit wird nicht doppelt erfasst. Blattelemente lassen sich weiter zerlegen, bis gut schätzbare und zuordenbare Arbeitspakete entstehen.
+
+Die Nummerierung zeigt eine Hierarchie, keine Ausführungsreihenfolge. Abhängigkeiten und Termine werden im Terminplan festgelegt.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Projektstrukturplan ist die hierarchische Aufgliederung der gesamten Projektarbeit.  
@@ -48,13 +69,6 @@ Das Wesentliche ist nicht die Form, sondern die logische Zerlegung.
 > und damit die Grundlage für Zeitplanung, Kostenplanung
 > und Zuordnung von Verantwortlichkeiten zu schaffen.  
 > Der PSP ist also kein Zeitplan, sondern die logische Zerlegung des Projekts.
-
-## Häufige Prüfungsfehler
-
-- Den PSP als Gantt-Diagramm oder Zeitplan bezeichnen.
-- Die hierarchische Struktur nicht erwähnen.
-- Ihn nicht mit der Aufgabenaufgliederung und Schätzung verknüpfen.
-- Ihn mit dem Arbeitspaket gleichsetzen.
 
 ## Schnelle Selbstkontrolle
 
@@ -73,6 +87,11 @@ Das Wesentliche ist nicht die Form, sondern die logische Zerlegung.
 5. Für Kostenplanung und Verantwortlichkeiten
 
 ## Quellen
+
+- [PMI: Practice Standard for Work Breakdown Structures](https://www.pmi.org/learning/library/practice-standard-work-breakdown-structures-8063)  
+  Vollständiger PSP-Umfang, 100-Prozent-Regel und Einbeziehung der Projektsteuerung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Work breakdown structure template  
    https://www.atlassian.com/software/jira/templates/work-breakdown-structure  

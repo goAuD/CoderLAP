@@ -98,6 +98,30 @@ Aufgabe:
 - Im Team braucht man eine einheitliche Toolchain.
 - Versionskontrolle darf nicht weggelassen werden.
 
+## Einen Fehler mit passenden Werkzeugen verfolgen
+
+Angenommen, HTML erscheint, aber die Formatierung fehlt. Statt CSS auf Verdacht
+zu ändern, suchen wir Belege:
+
+1. In **Network** der DevTools laden wir die Seite neu. Eine `404`-Antwort auf
+   die CSS-Anfrage deutet auf einen falschen Pfad oder eine fehlende Datei hin.
+2. Ist die Datei angekommen, zeigt **Elements/Styles**, ob der Selektor passt
+   und welche Regel ihn überstimmt. **Computed** zeigt den endgültigen Wert.
+3. Die **Console** kann JavaScript-Laufzeitfehler melden. Eine leere Fehlerliste
+   beweist aber weder ein korrektes Layout noch korrekte Geschäftslogik.
+4. Eine in den DevTools erprobte Änderung wird in die Quelldatei übernommen.
+   Eine vorübergehende Browseränderung geht normalerweise beim Neuladen verloren.
+
+Ein Formatter vereinheitlicht die Form, ein Linter prüft Regeln, eine
+Typprüfung untersucht Typverträge und ein Test überprüft konkretes Verhalten.
+Die Werkzeuge ergänzen einander. Der Versionskontroll-Diff zeigt außerdem,
+welche Änderung die Aufgabe tatsächlich gelöst hat.
+
+In Node-Projekten unterstützen ein festgelegtes Lockfile und eine abgestimmte
+Node-Version eine vergleichbare Umgebung. `npm ci` installiert Abhängigkeiten
+sauber gemäß Lockfile und baut ein vorhandenes `node_modules` neu auf. Es ist
+deshalb kein allgemeiner Reparaturbefehl für beliebige Browserfehler.
+
 ## Prüfungstaugliche Formulierung
 
 > Für die Webentwicklung werden verschiedene Werkzeuge benötigt:
@@ -107,13 +131,6 @@ Aufgabe:
 > ein Paketmanager zur Verwaltung von Abhängigkeiten
 > sowie eine lokale Laufzeitumgebung
 > und Code-Qualitätswerkzeuge für einen stabilen Workflow.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass für Webentwicklung ein Texteditor ausreicht.
-- Git mit GitHub verwechseln.
-- Die Rolle der DevTools nur auf JavaScript-Fehler beschränken.
-- Die Rolle des Paketmanagers oder der lokalen Entwicklungsumgebung nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -132,6 +149,12 @@ Aufgabe:
 5. Sie sorgen für einheitlicheren und saubereren Code
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Chrome: JavaScript debugging](https://developer.chrome.com/docs/devtools/javascript): beleggestützte Fehlersuche im Browser.
+- [npm: npm ci](https://docs.npmjs.com/cli/commands/npm-ci/): Lockfile und saubere Installation.
+
 
 1. Chrome for Developers - DevTools  
    https://developer.chrome.com/docs/devtools  

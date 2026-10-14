@@ -11,15 +11,9 @@
 
 ## Mi az adatbázisrendszer?
 
-Az adatbázisrendszer általában ezekből áll:
+Szűk szakmai értelemben az adatbázisrendszer az **adatbázis és az azt kezelő DBMS együttese**. Tágabb működési környezetében szerepelnek az alkalmazások, a felhasználók, az üzemeltetők és a hardver is. Érdemes jelezni, melyik értelemben használod a fogalmat.
 
-- maga az adatbázis
-- az adatbáziskezelő rendszer (`DBMS`)
-- a kapcsolódó alkalmazások
-- a felhasználók és adminisztrátorok
-- a hardver és futási környezet
-
-Ezért fontos, hogy az adatbázisrendszer **több**, mint egy egyszerű adattároló fájl.
+A DBMS lehet külön kiszolgáló, például MySQL, vagy az alkalmazásba beépített könyvtár, például SQLite. Attól, hogy egy adatbázis egy fájlban tárolható, még lehet teljes értékű lekérdezés- és tranzakciókezelése.
 
 ## Miért fontos?
 
@@ -43,7 +37,7 @@ Ezért fontos, hogy az adatbázisrendszer **több**, mint egy egyszerű adattár
 |---|---|
 | adatbázis | strukturáltan tárolt adatok |
 | `DBMS` | szoftver, amely kezeli az adatokat |
-| adatbázisrendszer | adatbázis + `DBMS` + alkalmazások + környezet |
+| adatbázisrendszer | szűken: adatbázis + `DBMS`; tágabban: a működési környezet is |
 
 ## Hol találkozunk vele?
 
@@ -55,19 +49,17 @@ Tipikus példák:
 - tanulói vagy dolgozói nyilvántartás
 - tartalomkezelő rendszerek
 
+## Kidolgozott eset: könyvkölcsönzés
+
+Egy könyvtári alkalmazásban a `books` és `loans` táblák az adatbázis részei. A MySQL DBMS feldolgozza a lekérdezést, ellenőrzi a kulcsokat és összehangolja a párhuzamos módosításokat. Az alkalmazás mutatja az űrlapot, ellenőrzi a bejelentkezett személy üzleti jogosultságát, és elküldi a szükséges utasítást.
+
+Ha két pult egyszerre adná ki ugyanazt a példányt, a közös fájlba írás önmagában kevés. Egy jól megtervezett tranzakció és adatbázisszabály teszi ellenőrizhetővé, hogy egyetlen aktív kölcsönzés szülessen. A DBMS nem találja ki helyettünk ezt az üzleti szabályt.
+
+A relációs modell táblákkal, kulcsokkal és kapcsolatokkal dolgozik. Dokumentum-, kulcs-érték- és gráfadatbázisok más szerkezetet kínálnak. A választásnál a lekérdezések, az adatok kapcsolatai és a konzisztenciaigény fontosabb, mint önmagában az SQL vagy NoSQL címke.
+
 ## Vizsgán jól használható megfogalmazás
 
-> Az adatbázisrendszer a tárolt adatokból, az adatbáziskezelő rendszerből és a hozzájuk kapcsolódó alkalmazásokból  
-> álló teljes rendszer.  
-> Célja az adatok strukturált tárolása, lekérdezése, módosítása és biztonságos kezelése.  
-> Az adatbázisrendszer tehát nemcsak maga az adat, hanem annak teljes működési környezete is.
-
-## Gyakori vizsgahibák
-
-- Az adatbázisrendszert az adatbázissal azonosítani.
-- A `DBMS` fogalmát kihagyni.
-- Nem megemlíteni a többfelhasználós és adminisztrációs szerepet.
-- Úgy kezelni, mintha csak egyetlen fájl lenne az egész rendszer.
+> Az adatbázis strukturált adatokat tárol, a DBMS pedig kezeli a hozzáférést, a lekérdezéseket és a módosításokat. Együtt alkotják az adatbázisrendszer magját. Az alkalmazások és az üzemeltetési környezet erre épülnek.
 
 ## Gyors önellenőrzés
 
@@ -79,8 +71,8 @@ Tipikus példák:
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. A teljes adatkezelő környezet
-2. Adatbázis, `DBMS`, alkalmazások, felhasználók
+1. Szűken adatbázis és DBMS; tágabban a kapcsolódó működési környezet is
+2. A magja adatbázis és DBMS, körülötte alkalmazások és üzemeltetési környezet
 3. Az egyik adat, a másik kezelő szoftver
 4. Mert egységes és biztonságos hozzáférést ad
 5. Webshop, ügyfélnyilvántartó rendszer
@@ -96,3 +88,10 @@ Tipikus példák:
    Használat: hivatalos alapforrás a relációs adatbázisok és a `DBMS` szerepének pontosabb meghatározásához.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [SQLite: Appropriate Uses](https://www.sqlite.org/whentouse.html): beágyazott és kliens-szerver adatkezelés megkülönböztetése
+- [MySQL: Introduction to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-introduction.html): tranzakciók és az InnoDB tárolómotor szerepe
+
+Ellenőrizve: `2026-10-14`.

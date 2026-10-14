@@ -42,19 +42,20 @@ Egy munkacsomag tartalmazhat több kisebb feladatot is.
 - jól hozzárendelhető felelősökhöz
 - könnyebb nyomon követni az előrehaladást
 
+## Munkacsomag adatimporthoz
+
+Az AP-2.1 célja egy egyeztetett CSV 30 mintasorának importálása. Bemenete a jóváhagyott oszlopleírás. Felelőse egy megnevezett fejlesztő, becsült ráfordítása 8 óra. Kimenete az importáló funkció, a próba eredménye és a rövid használati leírás.
+
+Az elfogadási feltételek: mind a 30 érvényes sor bekerül, a kétszer szereplő azonosítót a rendszer a megállapodott szabály szerint visszautasítja és jelzi, a hibás sor nem hoz létre félkész rekordot. A felelős a határt is ismeri: régi táblázatok kézi tisztítása ebben a csomagban nincs.
+
+A ráfordítás és az időtartam eltér. Ha a fejlesztő naponta 4 órát dolgozhat ezen, a 8 órás csomag legalább 2 munkanapot igényel, és ehhez várakozás is társulhat. A kész állapotot az elfogadott eredmény, nem pusztán az eltöltött órák jelentik.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A munkacsomag a projekt olyan kezelhető méretű részegysége,
 > amelyhez konkrét cél, felelős
 > és idő- és erőforrásigény rendelhető.  
 > A projektstrukturaterv alsóbb szintjein jelenik meg, és alapja a részletes tervezésnek, a végrehajtásnak és az ellenőrzésnek.
-
-## Gyakori vizsgahibák
-
-- A munkacsomagot összekeverni az egész projektrésszel.
-- Nem megemlíteni a felelős és becsülhetőség szerepét.
-- A PSP-vel azonosnak tekinteni.
-- Túl általánosan fogalmazni.
 
 ## Gyors önellenőrzés
 
@@ -73,6 +74,11 @@ Egy munkacsomag tartalmazhat több kisebb feladatot is.
 5. Mert külön mérhető a haladása
 
 ## Források
+
+- [PMI: Practice Standard for Scheduling](https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/practice-standard-scheduling.pdf)  
+  Tevékenységek függősége, időtartam, mérföldkövek és kritikus út.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Work breakdown structure template  
    https://www.atlassian.com/software/jira/templates/work-breakdown-structure  
