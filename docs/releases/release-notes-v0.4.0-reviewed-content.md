@@ -29,8 +29,8 @@ It is an editorial and technical review, not official exam-board certification.
   remains restricted to `main`.
 
 The content changes are recorded in [PR #42](https://github.com/goAuD/CoderLAP/pull/42).
-The [content review record](../plans/2026-10-14-content-review.md) describes
-module coverage, source verification and validation limits in detail.
+The validation below records coverage and execution limits; each reviewed topic
+retains its own source list.
 
 ## Validation
 
@@ -70,4 +70,4 @@ The pre-release production commit is
 `ae3f957a364d2c714323ff21362db9d917575a5d`.
 Use a reviewed recovery/revert PR into `main` and the normal deployment
 pipeline. The previous deployed files are retained in `dist.backup` until the
-next deployment. See the [backup and restore playbook](../project/backup-restore-playbook.md).
+next deployment. Verify the selected backup before restoring it.

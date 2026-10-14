@@ -5,7 +5,7 @@
 
 ## Checklist
 
-- [ ] I read `AGENTS.md`
+- [ ] I read `README.md` and `CONTRIBUTING.md`
 - [ ] I preserved the existing numbered German folder structure
 - [ ] I kept Hungarian content and explicit sources where applicable
 - [ ] I regenerated `LAP_CONTENT_REGISTRY.json` and `LAP_CONTENT_REGISTRY.csv` if content files changed
