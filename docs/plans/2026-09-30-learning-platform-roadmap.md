@@ -9,9 +9,19 @@ nem új funkciók vagy infrastruktúra elkészültének igazolása.
 
 A távoli ágak rendezése és mind a 235 CoderLAP-téma kétnyelvű felülvizsgálata
 elkészült; a `v0.4.0-reviewed-content` kiadás éles. A részletes állapotot a
-[tartalmi felülvizsgálat](2026-10-14-content-review.md) követi. A következő kör
-a Quiz csomagválasztója, a friss LAP-forrással egyeztetett kérdések és a védett
-indulás a `quiz.coderlap.com` címen.
+[tartalmi felülvizsgálat](2026-10-14-content-review.md) követi. A Quiz
+[v0.1.0 kiadása](https://github.com/goAuD/CoderQuiz/releases/tag/v0.1.0)
+már a `quiz.coderlap.com` címen fut: négy csomag, 135 DE/HU kérdés,
+27 LAP-téma. A programozás 100 kérdését egyeztettük a friss tananyaggal;
+az Informatik első hét témájához 35 kérdés készült.
+
+A DNS, HTTPS, Basic Auth védelme és a telepített fájlok ellenőrzése kész.
+A belépés utáni éles böngészős próba még hátravan: az automatizált Vivaldi
+megnyitás `ERR_BLOCKED_BY_CLIENT` hibát adott, ezért kézi belépést kértünk.
+A LAP kezdőlapi és lábléc-linkje előkészítve, de még kikapcsolva marad.
+A két szolgáltatás adatvédelmi és impresszumoldala frissítve és telepítve:
+[LAP #46](https://github.com/goAuD/CoderLAP/pull/46),
+[sikeres deploy](https://github.com/goAuD/CoderLAP/actions/runs/38546816683).
 
 A SkillDisplay és a tanári válaszra épülő egyeztetés **szünetel**:
 2026-10-14-ig nem érkezett válasz. A korábbi kérdésvázlat megmarad;
@@ -21,9 +31,9 @@ belépés későbbi, külön feladat; az induláshoz nem készül fiók vagy ada
 
 ## Elfogadott irány és a következő kis lépés
 
-- A Quiz DNS-, TLS- és Caddy-beállítása most előkészíthető a jóváhagyott,
-  átmeneti Basic Auth induláshoz. A LAP eszközlinkje csak a működő, védett
-  Quiz ellenőrzése után aktiválható; a Coaster külön kiadási lépés marad.
+- A Quiz DNS-, TLS- és Caddy-beállítása elkészült az átmeneti Basic Auth
+  induláshoz. A LAP eszközlinkje a belépés utáni éles próba után aktiválható;
+  a Coaster külön kiadási lépés marad.
 - A későbbi közös belépés meghívásos lesz. A meghívás, fiókaktiválás, helyreállítás
   és visszavonás konkrét folyamata még tervezendő; az Authelia továbbra is
   jelölt, nem elfogadott vagy már elkészült meghívórendszer.
@@ -162,19 +172,21 @@ Ellenőrzött források, 2026-09-30:
 
 ### 1–2. Publikálás
 
-- [ ] Quiz-belépési pont: a LAP-alapú kérdéscsomagok
-  egyértelmű elérése közös kezdőlapról. A végleges navigációt kis előnézetben
-  ellenőrizzük. A régi DSGVO-bankot és a meglévő böngészős mentéseket őrizzük meg.
-- [ ] Ellenőrizzük, mi kerül a webgyökérbe: csak szükséges statikus fájlok,
-  ne teljes repó, `.git`, helyi jegyzet vagy fejlesztői szerver.
-- [ ] A Quiz célcíme `quiz.coderlap.com`; ellenőrizzük a tényleges DNS-t és a
-  Debian/Caddy beállításokat. A `coaster.coderlap.com` külön indulás marad.
+- [x] Quiz-belépési pont: négy LAP-alapú kérdéscsomag közös kezdőlapról.
+  A csomagok külön helyi mentést kapnak. A régi DSGVO-bank megmarad a repóban,
+  de a befejezetlen tartalmi felülvizsgálata miatt nem kerül élesbe.
+- [x] A webgyökér csak az engedélyezett statikus fájlokat tartalmazza;
+  mind a 27 telepített fájl egyezik a sikeres main CI kiadási csomagjával.
+- [x] A `quiz.coderlap.com` proxizott CNAME, külön Caddy-host, HTTPS és
+  Basic Auth működik. A `coaster.coderlap.com` külön indulás marad.
 - [x] Átmeneti Quiz-belépési döntés: HTTP Basic Auth, alkalmazásfiók és
   szerveres eredménytárolás nélkül. Azonos Basic Auth-jelszó nem jelent közös
   munkamenetet. A későbbi közös auth-megoldás még nincs kiválasztva vagy telepítve.
 - [ ] Ellenőrizzük a TLS-t, a védett elérést, a kiadási/rollback útvonalat és
   mindkét app telefonos működését. A Coaster külső segédscriptjeit külön vegyük
   számba; teljes offline működést ne ígérjünk ellenőrzés nélkül.
+  A Quiz TLS-, 401-, kiadási fájlegyezési és Linux telepítési próbái kész;
+  az éles bejelentkezés és telefonos próba még nincs igazolva.
 - [ ] Ezután cseréljük az „In Entwicklung” célokat valódi linkekre; maradjon
   egységes fejléc/lábléc és közvetlen visszaút a LAP-hez.
 
