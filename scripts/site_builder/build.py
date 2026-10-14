@@ -244,6 +244,7 @@ def _build_language(
         "cache_bust": cache_bust,
         "site_root": site_root,
         "current_lang": lang_config.code,
+        "quiz_url": settings.quiz_url,
     }
 
     for topic in topics:

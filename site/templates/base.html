@@ -58,7 +58,11 @@
           <nav class="site-footer__group" aria-labelledby="footer-tools-title">
             <h2 id="footer-tools-title">{{ ui.get('footer_tools_label', 'Tools') }}</h2>
             <div class="site-footer__links">
+              {% if quiz_url | default('', true) %}
+              <a class="site-footer__tool" href="{{ quiz_url }}"><span>CoderQuiz</span></a>
+              {% else %}
               <a class="site-footer__tool" href="{{ site_root | default('/', true) }}#coderquiz"><span>CoderQuiz</span> <small>{{ ui.get('coming_soon_label', 'In development') }}</small></a>
+              {% endif %}
               <a class="site-footer__tool" href="{{ site_root | default('/', true) }}#codercoaster"><span>CoderCoaster</span> <small>{{ ui.get('coming_soon_label', 'In development') }}</small></a>
             </div>
           </nav>

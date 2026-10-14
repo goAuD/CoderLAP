@@ -220,12 +220,20 @@ with the brand icon instead of inheriting desktop right alignment.
 The language switcher and the GitHub button above it share the right edge;
 the GitHub button retains a full touch target around its smaller icon.
 CoderQuiz and CoderCoaster are introduced below the homepage hero in the shared
-`coder-tools.html` template. Every page links to each app's stable `#coderquiz` or
-`#codercoaster` anchor from its localized footer. Native details show their
-development status and a short explanation on
-tap, including without JavaScript; there are no placeholder app URLs or extra
-header rows. Copy lives in the existing language dictionaries. Add real app
-destinations only when those releases and their access protection are ready.
+`coder-tools.html` template. Unpublished tools keep native details with a short
+development explanation and localized footer links to their stable `#coderquiz`
+or `#codercoaster` anchors, including without JavaScript.
+`BuildSettings.quiz_url` in `scripts/site_builder/settings.py` is the single
+Quiz destination switch. It remains empty until the protected Quiz deployment
+is verified. Setting it to `https://quiz.coderlap.com/` and rebuilding replaces
+both the homepage Quiz panel and all Quiz footer anchors with direct links;
+the Coaster panel stays unchanged. Clearing it and rebuilding restores the
+development state. Copy lives in the existing language dictionaries; no extra
+header row or client-side routing is needed.
+The DE/HU legal pages and EN editorial fallback cover both services under the
+same operator, temporary Basic Auth and separate origins. Quiz preferences and
+practice results stay in its own local browser storage; shared accounts and
+server-side progress synchronisation are not part of this release.
 The shared header height token is measured with ResizeObserver, so anchor links
 and quick-view panels clear wrapped mobile navigation. CSS provides fallback
 heights when JavaScript or ResizeObserver is unavailable.
