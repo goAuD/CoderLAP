@@ -5,7 +5,7 @@
 | Egység   | Jelölés | Mit jelent?        | Lehetséges értékek |
 | -------- | ------- | ------------------ | ------------------ |
 | **bit**  | `b`     | 1 bináris számjegy | `0` vagy `1`       |
-| **byte** | `B`     | 8 bit együtt       | `0-255`            |
+| **byte** | `B`     | 8 bit együtt       | `0-255` előjel nélkül            |
 
 ### Kapcsolatuk
 
@@ -93,7 +93,7 @@ Ha valaki érti a bit és byte közti különbséget, könnyebben megérti:
 Ezeket általában **byte-ban** mérjük:
 
 - `25 B`
-- `4 KB`
+- `4 kB`
 - `12 MB`
 - `256 GB`
 
@@ -172,20 +172,38 @@ Vizsgán ezt nagyon gyakran keverik.
 - Nem minden karakter fér el 1 byte-ban.
 - A nagyobb egységek (`KB`, `MB`, `GB`, illetve `KiB`, `MiB`, `GiB`) külön témakörhöz tartoznak.
 
+## Kidolgozott példa: adatméret és átviteli idő
+
+Egy `24 MB` méretű állományt `12 Mbit/s` hasznos adatsebességgel továbbítunk.
+Mindkét előtag decimális, így az egységek egyszerűen összevethetők.
+
+1. Byte-ból bit: `24 MB × 8 = 192 Mbit`.
+2. Idő: `192 Mbit / 12 Mbit/s = 16 s`.
+3. Visszaellenőrzés: `12 Mbit/s × 16 s / 8 = 24 MB`.
+
+A képlet: **idő = adatmennyiség / adatsebesség**, azonos egységekre átváltva.
+Ha a 12 Mbit/s csak a kapcsolat névleges sebessége, a tényleges idő több lehet
+a protokollok többletadatai, más forgalom és az ingadozó sebesség miatt.
+Az eredmény ilyenkor ideális alsó becslés, nem garantált letöltési idő.
+
+### A bitminta értelmezése
+
+Egy byte mindig 256 különböző bitmintát ad. Az értelmezését az adattípus határozza meg:
+előjel nélkül `0…255`, 8 bites kettes komplemens egész számként `−128…127` a tartomány.
+Így `11111111` előjel nélkül `255`, kettes komplemensben `−1`.
+Ugyanazok a bitek más típusban lehetnek egy karakterkód vagy egy színcsatorna részei is.
+
+**Gyakorlás:** `80 Mbit/s` hány `MB/s`? A válasz `10 MB/s`, mert a bitről byte-ra
+váltáskor nyolccal osztunk. Az előtag ebben a két egységben ugyanaz.
+
+Forrás az egységekhez: [NIST: decimális és bináris előtagok](https://physics.nist.gov/cuu/Units/binary.html).
+
 ## Vizsgán jól használható megfogalmazás
 
 > A bit a digitális információ legkisebb egysége, értéke 0 vagy 1 lehet.  
 > A byte 8 bitből álló egység, ezért 256 különböző értéket tud ábrázolni.  
 > A byte-ot főleg tárhely és fájlméret mérésére használjuk, míg a bit gyakran adatátviteli sebességnél jelenik meg.  
 > Fontos különbség, hogy a `b` bitet, a `B` pedig byte-ot jelent.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a bit és a byte ugyanaz.
-- Elfelejteni, hogy `1 byte = 8 bit`.
-- Összekeverni a `b` és `B` jelölést.
-- Azt állítani, hogy minden karakter mindig 1 byte.
-- Összemosni ezt a témát a `KB / MB / GB` és `KiB / MiB / GiB` témákkal.
 
 ## Gyors önellenőrzés
 

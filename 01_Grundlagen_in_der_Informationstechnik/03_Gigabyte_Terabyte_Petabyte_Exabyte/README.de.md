@@ -128,20 +128,34 @@ Weil hier oft abgefragt wird:
 - der Unterschied zwischen dezimalen und binären Präfixen
 - die scheinbare Abweichung bei Speicherangaben
 
+## Dimensionierung: Sicherungen für einen Monat
+
+Pro Tag entstehen `12 GB` neue Daten. Laut Aufgabe werden 30 voneinander getrennte
+Tagesmengen aufbewahrt. Die reine Datenmenge beträgt `12 × 30 = 360 GB = 0,36 TB`.
+Planen wir 25% Reserve **bezogen auf diese Datenmenge**, benötigen wir
+`360 × 1,25 = 450 GB = 0,45 TB` Kapazität.
+
+Eine andere Anforderung lautet: 25% des gesamten Speichers sollen frei bleiben.
+Dann dürfen die Daten nur 75% der Kapazität belegen:
+`360 / 0,75 = 480 GB`. Wir klären deshalb zuerst, worauf sich die Prozentangabe bezieht.
+
+Kompression, Deduplizierung, Dateisystem-Overhead und zusätzliche Kopien sind hier noch
+nicht berücksichtigt. Zwei vollständige Sicherungskopien auf getrennten Speichern
+benötigen jeweils die berechnete Kapazität. Für eine reale Planung erheben wir
+die tägliche Änderung und die Aufbewahrungsregel und rechnen mit diesen Werten.
+
+**Übung:** Wie viel sind `2,5 TB` in `GB`? `2500 GB`. Zwischen den dezimalen Präfixen
+liegt jeweils der Faktor 1000; die Datenmenge in Byte bleibt beim Umrechnen gleich.
+
+Quelle: [BIPM: SI-Präfixe](https://www.bipm.org/en/measurement-units/si-prefixes).
+Die Speicherplanung ist ein eigenes Rechenbeispiel mit ausdrücklich genannten Annahmen.
+
 ## Prüfungstaugliche Formulierung
 
 > Gigabyte, Terabyte, Petabyte und Exabyte sind dezimale Byte-Einheiten zur Bezeichnung großer Datenmengen.  
 > Sie basieren auf SI-Präfixen und wachsen daher in 1000er-Schritten.  
 > Zum Beispiel: 1 GB = 10^9 Byte, 1 TB = 10^12 Byte, 1 PB = 10^15 Byte, 1 EB = 10^18 Byte.  
 > Wichtig: Diese sind nicht identisch mit den binären Einheiten GiB, TiB, PiB und EiB.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass `1 GB = 1024 MB`.
-- Die Bedeutung von `GB` und `GiB` zu verwechseln.
-- Zu vergessen, dass `B` hier Byte bedeutet.
-- Zu glauben, dass jedes Betriebssystem den Speicher gleich anzeigt.
-- Nicht zu wissen, dass `Giga`, `Tera`, `Peta`, `Exa` SI-Präfixe sind.
 
 ## Schnelle Selbstkontrolle
 
@@ -174,7 +188,7 @@ Weil hier oft abgefragt wird:
    Verwendung: technische Verwendung der Bezeichnung `Byte` und `B`.
 
 4. NIST - Definitions of the SI units: The binary prefixes  
-   https://physics.nist.gov/cgi-bin/cuu/Info/Units/binary.html  
+   https://physics.nist.gov/cuu/Units/binary.html  
    Verwendung: klare Trennung von dezimalen und binären Datengrößen.
 
 Abgerufen: `2026-04-08`
