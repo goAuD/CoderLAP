@@ -59,6 +59,14 @@ Weil viele verwechseln:
 
 Dabei sind das nicht dasselbe.
 
+## Durchgearbeitete Fehlereingrenzung: Anmeldung geht, Auflisten nicht
+
+Bei FTP sind Steuer- und Datenverbindung getrennt. Daher kann nach erfolgreicher Anmeldung die Verzeichnisliste noch an einer Firewall scheitern. Im aktiven Modus beginnt der Server die Datenverbindung zum Client. Im passiven Modus verbindet sich der Client mit dem vom Server genannten Datenport; Server-Firewall und NAT-Konfiguration müssen diesen Weg berücksichtigen.
+
+Bei explizitem FTPS beginnt `AUTH TLS` normalerweise auf Steuerport `21` den geschützten Betrieb. Der Schutz der Datenverbindung wird gesondert eingestellt, beispielsweise mit `PROT P`. Verschlüsselte Anmeldung allein beweist noch keine Verschlüsselung der Dateidaten. Implizites FTPS startet gewöhnlich auf `990` direkt mit TLS.
+
+Im Test wird eine harmlose Beispieldatei hoch- und heruntergeladen; Inhalt und Zertifikat werden geprüft. SFTP ist dagegen ein anderes Protokoll über SSH, gewöhnlich auf Port `22`. Aus einer FTPS-Konfiguration wird deshalb durch bloßes Ändern des Ports noch keine SFTP-Konfiguration.
+
 ## Prüfungstaugliche Formulierung
 
 > FTP ist ein klassisches Dateiübertragungsprotokoll zwischen Client und Server.  
@@ -66,13 +74,6 @@ Dabei sind das nicht dasselbe.
 > daher ist FTPS die sicherere Alternative,
 > die die Verbindung mit TLS schützt.  
 > FTPS ist nicht dasselbe wie das SSH-basierte SFTP.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass FTP allein sicher ist.
-- FTPS und SFTP verwechseln.
-- Nicht erwähnen, dass FTP separate Daten- und Steuerverbindungen verwenden kann.
-- Den Port `21` vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -109,3 +110,10 @@ Dabei sind das nicht dasselbe.
    Verwendung: offizielles Portregister für die Ports `21` und `990`.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 4217: Securing FTP with TLS](https://www.rfc-editor.org/rfc/rfc4217): getrennter Schutz von Steuer- und Datenkanal.
+- [RFC 959: FTP](https://www.rfc-editor.org/rfc/rfc959): aktive und passive Datenverbindung.
+
+Geprüft: `2026-10-14`.

@@ -73,6 +73,14 @@ Ez modellenként eltérhet:
 - IaaS-nál több marad az ügyfélnél
 - SaaS-nál több feladatot visz a szolgáltató
 
+## Kidolgozott példa: mit jelent a 99,9%?
+
+Egy szemléltető, 30 napos hónap `30 × 24 × 60 = 43 200` perc. Ennek 0,1%-a `43,2` perc. A 99,9%-os rendelkezésre állás tehát ebben az egyszerű számításban ennyi kiesésnek felel meg. A tényleges SLA mérési módja, kizárásai, karbantartási szabályai és jóváírásai szerződésenként eltérnek. Az SLA nem ígéret arra, hogy minden kiesés 43 percnél rövidebb lesz.
+
+Egy tanulói alkalmazásnál előbb rögzítjük az elfogadható adatvesztést és helyreállítási időt. Ezután próbaexportot készítünk, másik tesztkörnyezetben visszaállítjuk, és ellenőrizzük a felhasználók, fájlok és jogosultságok épségét. Az „exportálható” állítás így kap bizonyítékot.
+
+A költségbecslésbe a számítás, tárhely, kimenő adatforgalom, mentés és naplózás is belekerül. Az adatvédelmi vizsgálatban a régió mellett a szerződéses szerepek, alvállalkozók, hozzáférések, törlés és esetleges harmadik országbeli adattovábbítás is számít. Az EU-s tárhely önmagában nem teljes megfelelőségi bizonyíték.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Cloud szolgáltatás választásánál nemcsak a funkcionalitást és az árat kell nézni,
@@ -82,13 +90,6 @@ Ez modellenként eltérhet:
 > Emellett fontos megérteni a shared responsibility modellt,
 > vagyis azt, hogy a biztonsági felelősség
 > a szolgáltató és az ügyfél között megoszlik.
-
-## Gyakori vizsgahibák
-
-- Csak az ár alapján dönteni.
-- Azt hinni, hogy cloudban minden biztonsági feladat a szolgáltatóé.
-- Nem megemlíteni az adatlokációt és compliance-t.
-- Elfelejteni a vendor lock-in problémát.
 
 ## Gyors önellenőrzés
 
@@ -129,3 +130,12 @@ Ez modellenként eltérhet:
    Használat: rendelkezésre állás és SLA szempontjának hivatalos példája.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [AWS: Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/): konfiguráció, adatok és hozzáférések felelőssége.
+- [Microsoft: Online Services SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1): szolgáltatásonkénti mérés és vállalás.
+
+- [EUR-Lex: GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj): adatfeldolgozói feltételek a 28. cikkben, harmadik országba irányuló adattovábbítás a 44. cikktől.
+
+Ellenőrizve: `2026-10-14`.

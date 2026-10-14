@@ -4,15 +4,15 @@
 
 | Modell | Lényeg |
 |---|---|
-| private cloud | egy szervezetnek dedikáltabb cloudkörnyezet |
-| public cloud | külső szolgáltató által nyújtott cloud |
+| private cloud | egy szervezet kizárólagos használatára szánt cloud |
+| public cloud | a széles nyilvánosság számára igénybe vehető cloudszolgáltatás |
 | hybrid cloud | private + public együtt |
 
 ## Mi a private cloud?
 
 A private cloud olyan cloudkörnyezet, amely:
 
-- egyetlen szervezethez kapcsolódik
+- egyetlen szervezet kizárólagos használatára van kialakítva
 - erősebben kontrollált
 - gyakran belső vagy dedikált erőforrásokra épül
 
@@ -25,7 +25,7 @@ Előny lehet:
 
 A public cloudnál:
 
-- egy külső szolgáltató biztosítja az infrastruktúrát
+- a szolgáltatás a széles nyilvánosság számára elérhető, megfelelő szerződéssel és fiókkal
 - az erőforrások hálózaton keresztül érhetők el
 - a szolgáltatás jellemzően rugalmasan bővíthető
 
@@ -39,7 +39,7 @@ Tipikus példák:
 
 A hybrid cloud azt jelenti, hogy:
 
-- egy szervezet private és public megoldásokat együtt használ
+- különálló cloudkörnyezeteket, például private és public cloudot, adat- vagy alkalmazáshordozhatóságot biztosító technológia kapcsol össze
 
 Például:
 
@@ -64,20 +64,21 @@ Mert a megfelelő modell kiválasztása függhet:
 | hybrid cloud | több modell kombinációja |
 | on-premises | helyben üzemeltetett rendszer, nem feltétlenül cloud |
 
+## A tulajdonos, a helyszín és a hozzáférés külön kérdés
+
+Private cloudot külső cég is üzemeltethet saját adatközpontjában, ha az adott környezet egy szervezet kizárólagos használatára szolgál. Az on-premises a helyszínre, a private/public a használati modellre utal. Public cloud esetén az ügyfél adatai és VM-jei ettől még nem nyilvánosan hozzáférhetők.
+
+**Kidolgozott eset:** az iskola saját private cloudban tartja a gyakorló adatbázist, és ellenőrzött kapcsolaton public cloud erőforrásokkal bővíti egy alkalmazás kapacitását. Itt a kapcsolat és a hordozható munkaterhelés adja a hibrid működés lényegét. Egy helyi fájlszerver és egy ettől független SaaS-előfizetés puszta megléte még nem bizonyít NIST szerinti hybrid cloudot.
+
+A NIST negyedik modellként **community cloudot** is megnevez: közös igényű szervezetek meghatározott közössége használja. A címben szereplő három modell tehát nem a teljes taxonómia.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A private, public és hybrid cloud a cloud telepítési modelljei.  
 > A private cloud egy szervezethez kötött, nagyobb kontrollt adó környezet,
-> a public cloud külső szolgáltató által biztosított megoldás,
+> a public cloud a széles nyilvánosság számára kínált szolgáltatás,
 > míg a hybrid cloud ezek kombinációja.  
 > A választásnál fontos szempont a költség, a rugalmasság, a biztonság és a compliance.
-
-## Gyakori vizsgahibák
-
-- A private cloudot sima lokális szervernek nevezni minden további nélkül.
-- A hybrid cloudot egyszerű backup-megoldásnak gondolni.
-- Nem felismerni, hogy a public cloudnál is marad ügyféloldali felelősség.
-- A deployment modellt összekeverni a szolgáltatási modellel.
 
 ## Gyors önellenőrzés
 
@@ -89,9 +90,9 @@ Mert a megfelelő modell kiválasztása függhet:
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. Dedikáltabb, szervezethez kötött cloudkörnyezet
+1. Egy szervezet kizárólagos használatára szánt cloudkörnyezet
 2. Külső szolgáltató által nyújtott cloud
-3. Private és public kombinációja
+3. Különálló cloudkörnyezetek technikailag összekapcsolt kombinációja
 4. Deployment modell
 5. Például költség és compliance
 
@@ -114,3 +115,9 @@ Mert a megfelelő modell kiválasztása függhet:
    Használat: gyakorlati magyarázat hybrid cloud használati mintákhoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf): a felhő fogalma és telepítési modelljei.
+
+Ellenőrizve: `2026-10-14`.

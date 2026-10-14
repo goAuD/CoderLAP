@@ -56,6 +56,14 @@ Weil bei Prüfungen häufig gefragt wird:
 | IMAP | Synchronisierung von am Server gespeicherten E-Mails |
 | POP3 | Herunterladen von E-Mails |
 
+## Durchgearbeiteter Weg: Annas Nachricht an Bela
+
+Anna schreibt von `anna@example.org` an `bela@example.net`. Ihr Client verwendet den Submission-Server ihres Anbieters. Der Anbieter bestimmt das Zustellziel anhand der DNS-`MX`-Einträge von `example.net`. Ein kleinerer MX-Präferenzwert wird bevorzugt; der Eintrag enthält einen Servernamen und nicht unmittelbar das Postfach.
+
+Bei einem vorübergehenden Fehler kann der sendende Server die Nachricht in eine Warteschlange legen und später erneut zustellen. Eine erfolgreiche Annahme bedeutet nicht, dass Bela schon gelesen hat. Das Postfach wird per IMAP-Client oder Webmail geöffnet. Zwischen Browser und Webmail-Anwendung wird gewöhnlich HTTPS verwendet.
+
+Das sichtbare `From`-Feld und der Absender des Transportumschlags sind getrennte Angaben. Ein angezeigter Absendername beweist für sich allein keine Identität. TLS schützt einzelne Verbindungsabschnitte; für Ende-zu-Ende-Inhaltsverschlüsselung wird eine zusätzliche Lösung wie S/MIME benötigt.
+
 ## Prüfungstaugliche Formulierung
 
 > Das E-Mail-System besteht aus mehreren Komponenten.  
@@ -63,12 +71,6 @@ Weil bei Prüfungen häufig gefragt wird:
 > das Einliefern und Weiterleiten erfolgt per SMTP,
 > und für den Zugriff auf eingehende E-Mails dient typischerweise IMAP oder POP3.  
 > Der Mailserver speichert also nicht nur, sondern empfängt, leitet weiter und stellt auch zu.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass man mit SMTP E-Mails "liest".
-- IMAP und POP3 für Sendeprotokolle halten.
-- Nicht erkennen, dass mehrere Server an der Weiterleitung beteiligt sein können.
 
 ## Schnelle Selbstkontrolle
 
@@ -105,3 +107,10 @@ Weil bei Prüfungen häufig gefragt wird:
    Verwendung: klassische Grunddefinition von POP3.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 5321: SMTP](https://www.rfc-editor.org/rfc/rfc5321.html): MX-Zustellung und Antwortklassen.
+- [RFC 8551: S/MIME](https://www.rfc-editor.org/rfc/rfc8551.html): Verschlüsselung und Signatur des Nachrichteninhalts.
+
+Geprüft: `2026-10-14`.
