@@ -67,6 +67,14 @@ Sondern auch:
 | Produktberatung | bedarfsgerechte Empfehlung |
 | aggressive Verkaufstaktik | nicht dasselbe wie gute fachliche Beratung |
 
+## Zwei Angebote unter gleichen Annahmen vergleichen
+
+Ein Büro mit zehn Personen möchte Dokumente teilen. Zunächst klären wir Sensibilität der Daten, Fernzugriff, vorhandene Geräte und Betriebsverantwortung. „Wir brauchen einen Server“ ist bereits eine Lösungsidee; der Bedarf besteht eher darin, dass alle auf die richtige Dokumentversion zugreifen können.
+
+Wir rechnen über denselben Zeitraum. Fiktives Beispiel: Angebot A kostet anfangs 600 Euro und monatlich 30 Euro. Für ein Jahr sind das `600 + 12 × 30 = 960 Euro`. Angebot B beginnt mit 120 Euro und kostet monatlich 60 Euro, also `120 + 12 × 60 = 840 Euro`. Support, Migration, Steuern und Arbeitsaufwand gelten nur dann als enthalten, wenn das Angebot dies ausdrücklich ausweist.
+
+Die kleinere Summe entscheidet nicht allein: Pflichtanforderungen und Möglichkeiten des Datenexports werden ebenfalls geprüft. Der Kunde erhält die Begründung der Empfehlung zusammen mit bekannten Einschränkungen.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Grundlage einer fachgerechten Produktberatung ist die Ermittlung der Kundenbedürfnisse.  
@@ -77,13 +85,6 @@ Sondern auch:
 > oder eine Software empfehlen.  
 > In einem guten Verkaufsgespräch müssen die technischen Merkmale
 > immer in für den Kunden verständliche Vorteile übersetzt werden.
-
-## Häufige Prüfungsfehler
-
-- Sofort ein Produkt empfehlen, ohne zu fragen.
-- Nur technische Daten aufzählen.
-- Die Lösung zu viel versprechen.
-- Den Verwendungszweck und die Umgebung nicht klären.
 
 ## Schnelle Selbstkontrolle
 
@@ -102,6 +103,11 @@ Sondern auch:
 5. Ein Feature ist ein technisches Merkmal, ein Benefit ist ein Kundenvorteil
 
 ## Quellen
+
+- [GOV.UK: Define user needs](https://www.gov.uk/guidance/define-user-needs)  
+  Bedarf, Kontext und betriebliche Anforderungen ermitteln.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. GOV.UK Service Standard - Understand users and their needs  
    https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs  

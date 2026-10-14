@@ -68,6 +68,38 @@ Einfach gesagt:
 | ECG | ein Teil der Regeln für Online-Dienste und E-Commerce |
 | Spam-Regeln | Bedingungen für den Versand von Werbenachrichten |
 
+## Beispiel: Auftragsnachricht und Werbung
+
+Eine Werkstatt meldet, dass die beauftragte Reparatur fertig ist.
+Diese Nachricht gehört zur Leistungserbringung. Das Laptopangebot der nächsten Woche
+ist dagegen Werbung. Im System führen wir Zwecke und Empfängerlisten getrennt.
+Enthält eine Auftragsnachricht auch Werbung, prüfen wir den Zweck der gesamten Nachricht.
+
+Für die Bestandskundenausnahme nach TKG § 174 Abs. 4 müssen **alle Voraussetzungen gemeinsam** vorliegen:
+
+1. Die Kontaktdaten wurden beim Verkauf oder bei einer Dienstleistung an den Kunden erhoben.
+2. Die Werbung betrifft eigene ähnliche Produkte oder Dienstleistungen.
+3. Bei der Erhebung und in jeder Nachricht besteht eine klare, kostenlose und einfache
+   Möglichkeit, diese Nutzung abzulehnen.
+4. Der Empfänger hat nicht bereits widersprochen; auch die ECG-Liste ist zu berücksichtigen.
+
+Eine öffentlich auffindbare Geschäftsadresse ist für sich keine Einwilligung.
+Für Werbung an Unternehmen gibt es keine allgemeine Ausnahme.
+Die DSGVO-Rechtsgrundlage für die Verarbeitung personenbezogener Daten prüfen wir zusätzlich.
+
+## Browserspeicher: Der Zweck entscheidet
+
+TKG § 165 Abs. 3 betrifft auch das Speichern von Informationen auf einem Endgerät
+und den Zugriff darauf. Nicht nur Cookies sind relevant: Auch `localStorage` kann betroffen sein.
+Für Vorgänge, die für einen ausdrücklich gewünschten Dienst unbedingt erforderlich sind,
+kann eine Ausnahme gelten. Werbetracking verfolgt einen anderen Zweck.
+Die Erforderlichkeit begründen wir für die konkrete Funktion; einwilligungspflichtiges
+Tracking starten wir erst nach der entsprechenden Einwilligung.
+
+Quellen: [TKG § 174](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011678&Paragraf=174),
+[DSB: Cookies und Endgerätezugriff](https://dsb.gv.at/faqs/datenschutz-cookies).
+Geprüft: `2026-10-14`.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Telekommunikationsgesetz 2021 ist eines der grundlegenden österreichischen Gesetze für elektronische Kommunikationsdienste.
@@ -75,13 +107,6 @@ Einfach gesagt:
 > der Schutz der Endnutzer, die Vertraulichkeit der Kommunikation
 > sowie die Regelung zu unerbetenen Werbenachrichten und Spam.
 > Wenn ein System E-Mail, SMS oder andere elektronische Kommunikation nutzt, ist das TKG 2021 häufig relevant.
-
-## Häufige Prüfungsfehler
-
-- Das TKG vollständig mit der GDPR gleichzusetzen.
-- Zu glauben, Werbe-E-Mails oder SMS könnten jederzeit versendet werden.
-- Zu vergessen, dass das Kommunikationsgeheimnis auch eine rechtliche Frage ist.
-- Nicht zu erkennen, dass bei Marketingkommunikation mehrere Rechtsgebiete gleichzeitig relevant sein können.
 
 ## Schnelle Selbstkontrolle
 
@@ -107,7 +132,7 @@ Einfach gesagt:
 
 2. RIS - Telekommunikationsgesetz 2021 § 174
    https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011678&Paragraf=174&Uebergangsrecht=
-   Verwendung: zentrale Vorschrift zu elektronischer Werbung per Post und Nachrichten.
+   Verwendung: zentrale Vorschrift zu elektronischer Direktwerbung einschließlich E-Mail und SMS.
 
 3. RTR - Belästigende Anrufe und Spam
    https://www.rtr.at/TKP/was_wir_tun/telekommunikation/konsumentenservice/information/informationen_fuer_konsumenten/TKKS_Spam.de.html

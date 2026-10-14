@@ -61,7 +61,7 @@ ASCII allein reicht für moderne, mehrsprachige Systeme nicht mehr aus, ist aber
 
 - viele technische Standards historisch darauf aufbauen
 - viele Dateiformate und Protokolle ASCII-kompatibel sind
-- die ersten `128` Zeichen von **UTF-8** genau mit ASCII übereinstimmen
+- **UTF-8** die Unicode-Codepunkte `U+0000–U+007F` mit denselben einzelnen Bytes wie ASCII kodiert
 - in der Programmierung, in Netzwerken, in Logs, HTTP-Headern und Konfigurationen ASCII immer noch häufig vorkommt
 
 ## ASCII, Unicode, UTF-8: nicht verwechseln
@@ -93,6 +93,45 @@ Wenn ein System daher nur ASCII erwartet, können solche Zeichen:
 - fehlerhaft dargestellt werden
 - zu Fragezeichen oder seltsamen Zeichen werden
 
+## Durchgerechnetes Beispiel: vom Zeichen zum Byte
+
+Wir speichern den Formulartext `Aő` in UTF-8. `A` liegt im ASCII-Bereich,
+der Unicode-Codepunkt von `ő` ist `U+0151`; für dieses Zeichen werden mehrere Bytes benötigt.
+Das eigenständige JavaScript läuft in einer Browserkonsole oder in aktuellem Node.js.
+
+<!-- example:run -->
+```javascript
+const text = "Aő";
+const bytes = new TextEncoder().encode(text);
+console.log([...bytes].join(" "));
+console.log(bytes.length);
+console.log([...text].length);
+```
+
+Erwartete Ausgabe:
+
+```text
+65 197 145
+3
+2
+```
+
+Zwei Codepunkte belegen drei Bytes: `A` hat den Code `65`, die UTF-8-Bytes von `ő`
+sind `197, 145`. Ein Codepunkt identifiziert ein Zeichen; die Kodierung legt fest,
+welche Bytefolge daraus wird. Zum Lesen verwenden wir dieselbe Kodierung wie beim Schreiben.
+
+JavaScripts `text.length` zählt UTF-16-Codeeinheiten. Hier sind es ebenfalls `2`,
+ein Emoji kann aber mehrere Codeeinheiten benötigen. `[...text].length` zählt Codepunkte;
+ein sichtbares Zeichen kann wiederum aus mehreren Codepunkten bestehen, etwa einem Buchstaben
+und einem kombinierenden Akzent. Für eine Dateigröße zählt die Anzahl der kodierten Bytes.
+
+**Anwendung:** 100 ASCII-`A` belegen in UTF-8 100 Bytes, 100 vorgefertigte `ő` dagegen
+200 Bytes. Zwei gleich lang wirkende Formularwerte können also bei der Übertragung
+unterschiedlich viel Platz benötigen.
+
+Quellen zum Beispiel: [MDN: TextEncoder.encode](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode)
+und [W3C: Zeichen und Kodierung](https://www.w3.org/International/articles/definitions-characters/index.en).
+
 ## Prüfungstaugliche Formulierung
 
 > ASCII ist ein 7-Bit-Zeichenkodierungsstandard, der 128 Zeichen umfasst.  
@@ -101,14 +140,6 @@ Wenn ein System daher nur ASCII erwartet, können solche Zeichen:
 > weshalb es in modernen Systemen allein nicht mehr ausreicht.  
 > In der heutigen Praxis verwenden wir eher Unicode-basierte Kodierungen wie
 > UTF-8, die rückwärtskompatibel mit ASCII sind.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass ASCII **8-Bit** ist.
-- Zu glauben, dass ASCII deutsche Umlaute oder Akzentbuchstaben kann.
-- ASCII mit Unicode oder UTF-8 zu verwechseln.
-- Zu behaupten, dass jede heutige Textdatei ASCII ist.
-- Kein Beispiel für ein Steuerzeichen nennen zu können.
 
 ## Schnelle Selbstkontrolle
 
@@ -124,7 +155,7 @@ Wenn ein System daher nur ASCII erwartet, können solche Zeichen:
 2. **128 Zeichen**
 3. Steuerzeichen steuern Operationen, druckbare Zeichen werden angezeigt
 4. Weil Umlaute und Sonderzeichen wie `ä`, `ö`, `ü`, `ß` nicht Teil von ASCII sind
-5. Die ersten 128 Zeichen von UTF-8 stimmen mit ASCII überein
+5. UTF-8 kodiert die 128 ASCII-Zeichen mit denselben einzelnen Bytes wie ASCII
 
 ## Quellen
 

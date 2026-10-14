@@ -28,7 +28,7 @@ Erre ismert elv:
 
 vagyis:
 
-- legalább 3 példány
+- legalább 3 példány összesen, az éles adatot is beleszámítva
 - 2 különböző adathordozó
 - 1 külön / offsite másolat
 
@@ -89,7 +89,7 @@ Előny:
 
 Hátrány:
 
-- idővel nagyobb lesz, mint az incremental
+- idővel általában nő a mérete; ez a változásoktól és a mentőprogramtól is függ
 
 ## Ne keverd össze
 
@@ -98,6 +98,20 @@ Hátrány:
 | backup | helyreállítási célú mentés |
 | sync | két hely tartalmának összehangolása, nem mindig valódi backup |
 | archive | hosszabb távú megőrzés, nem feltétlen gyors restore-ra |
+
+## Kidolgozott mentési lánc
+
+Vasárnap teljes mentés készül. Hétfőn az `A`, kedden a `B`, szerdán a `C` fájl változik. Az egyszerű példában nincs törlés, tömörítés vagy deduplikáció.
+
+| Nap | Napi inkrementális mentés | Napi differenciális mentés |
+|---|---|---|
+| hétfő | A változása | A változása |
+| kedd | B változása | A és B változása |
+| szerda | C változása | A, B és C változása |
+
+A szerdai állapothoz a hagyományos inkrementális láncnál **vasárnap + hétfő + kedd + szerda** szükséges. Differenciálisnál **vasárnap + szerda** elegendő. Ezért egy hiányzó keddi inkrementális tag a későbbi állapot visszaállítását is akadályozhatja. Egyes termékek szintetikus teljes mentést készítenek; ott a tényleges függőségeket a termék szerint kell ellenőrizni.
+
+A RAID egyes lemezhibák mellett fenntarthatja a rendelkezésre állást, de a törlést vagy a titkosított adatot is továbbviheti. A szinkronizálás ugyanezt több helyen is megismételheti. A backup értékét a korábbi, konzisztens állapot tényleges visszaállíthatósága adja. A 3-2-1 elv mellett ezért az elkülönített jogosultság, az offline vagy megfelelően védett változtathatatlan példány és a rendszeres restore-próba is számít.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -108,13 +122,6 @@ Hátrány:
 > az incremental csak a legutóbbi mentés óta változott adatokat,
 > a differential pedig az utolsó teljes mentés óta történt változásokat.  
 > A megfelelő mentési elvet a visszaállítási igény, az idő és a tárhely alapján kell megválasztani.
-
-## Gyakori vizsgahibák
-
-- A syncet backupnak nevezni.
-- Nem tudni a full, incremental és differential különbségét.
-- Azt hinni, hogy a "backup elkészült" egyenlő a restore-készséggel.
-- Nem említeni a 3-2-1 elvet.
 
 ## Gyors önellenőrzés
 
@@ -151,3 +158,9 @@ Hátrány:
    Használat: további hivatalos gyakorlati példa restore- és rollback-szempontokkal.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): elkülönített, titkosított mentések és ellenőrzött helyreállítás
+
+Ellenőrizve: `2026-10-14`.

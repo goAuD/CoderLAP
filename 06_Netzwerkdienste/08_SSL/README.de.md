@@ -4,8 +4,9 @@
 
 | Begriff | Heutige Situation |
 |---|---|
-| SSL 2.0 / 3.0 | veraltet, nicht empfohlen |
-| TLS 1.2 / 1.3 | modern, in Verwendung |
+| SSL 2.0 / 3.0, TLS 1.0 / 1.1 | veraltet, für eine zeitgemäße Sicherheitskonfiguration ungeeignet |
+| TLS 1.2 | bei bestehenden Systemen mit geeigneter Konfiguration noch im Einsatz |
+| TLS 1.3 | bevorzugte aktuelle Version |
 | "SSL certificate" | umgangssprachlich, aber technisch ungenau |
 
 ## Was war SSL?
@@ -58,18 +59,19 @@ Der Kern einer guten Antwort:
 | HTTPS | HTTP mit TLS geschützt |
 | Zertifikat | Teil der Authentifizierungskette, nicht das Protokoll selbst |
 
+## Durchgearbeitetes Beispiel: Was prüft der Browser?
+
+Für `https://shop.example.org` erwartet der Client ein zum Namen passendes, zeitlich gültiges Zertifikat und eine vertrauenswürdige Zertifikatskette. Im Handshake entstehen die Schlüssel für den Schutz des Datenverkehrs. Das Zertifikat ist öffentlich; den dazugehörigen privaten Schlüssel schützt der Server. Für große Mengen von Anwendungsdaten wird symmetrische Verschlüsselung verwendet.
+
+Ist das Zertifikat abgelaufen oder auf einen anderen Namen ausgestellt, wird die Ursache behoben. Das Abschalten der Zertifikatsprüfung ersetzt keine korrekte Konfiguration. Ein gültiges Zertifikat kann die Berechtigung über die Domain belegen, bestätigt aber beispielsweise keine redliche Geschäftstätigkeit eines Onlineshops.
+
+**Stand 2026-10-14:** RFC 9852 verlangt für neue Protokolle, die TLS einsetzen, TLS 1.3 als Vorgabe. TLS 1.2 kann als begründete Kompatibilitätsoption erhalten bleiben. Das bedeutet nicht, dass an einem einzigen Stichtag jede bestehende TLS-1.2-Verbindung automatisch unbrauchbar wird.
+
 ## Prüfungstaugliche Formulierung
 
 > SSL steht für Secure Sockets Layer, ist aber heute bereits eine veraltete Technologie.  
 > In modernen Systemen wird stattdessen TLS verwendet, daher ist HTTPS eigentlich HTTP mit TLS-Schutz.  
 > Im Alltag ist das Wort "SSL" noch häufig geblieben, aber technisch ist TLS der korrekte heutige Begriff.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass SSL heute noch der zeitgemäße Standard ist.
-- TLS und SSL als genau dasselbe betrachten.
-- Das Zertifikat mit dem gesamten Protokoll verwechseln.
-- Glauben, dass SSL nur bei Webseiten existiert.
 
 ## Schnelle Selbstkontrolle
 
@@ -106,3 +108,10 @@ Der Kern einer guten Antwort:
    Verwendung: praktischer Hintergrund zur Funktionsweise von TLS und zur Websicherheit.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 9325: Secure TLS use](https://www.rfc-editor.org/rfc/rfc9325.html): Versionen und sichere Konfiguration.
+- [RFC 9852: New protocols and TLS 1.3](https://www.rfc-editor.org/rfc/rfc9852.html): Änderung von 2026 für neue Protokolle.
+
+Geprüft: `2026-10-14`.

@@ -18,7 +18,7 @@ Redundanciáról beszélünk, ha egy adat:
 
 Példa:
 
-ha egy ügyfél címe minden rendelési sorban teljes egészében újra meg újra szerepel, az tipikus redundancia.
+Ha az ügyfél aktuális törzsadatcímét minden rendelési sorban újra tároljuk, az felesleges redundancia lehet. A rendeléskori szállítási cím viszont külön történeti tény, amelyet indokolt változatlanul megőrizni.
 
 ## Miért probléma?
 
@@ -63,19 +63,24 @@ Vizsgán jó válasz, ha kimondod:
 | értelmes ismétlődés | például több rendelés ugyanattól az ügyféltől |
 | redundancia | ugyanazon információ fölösleges újratárolása |
 
+## Kidolgozott példa: háromféle anomália
+
+Tegyük fel, hogy egy táblában tároljuk a `course_id`, `course_title`, `student_id` és `student_name` mezőket. Egy sor egy jelentkezést jelent.
+
+- **Módosítás:** a kurzus címét húsz jelentkezési sorban kell átírni. Ha egy kimarad, két cím lesz ugyanahhoz a kurzushoz.
+- **Beszúrás:** egy új kurzust még nem tudunk megfelelően rögzíteni, mert nincs hozzá jelentkező.
+- **Törlés:** az utolsó jelentkezés törlésével a kurzus neve is eltűnik a nyilvántartásból.
+
+A megoldás `courses`, `students` és `enrollments` táblák kialakítása. A cím a kurzusnál, a név a tanulónál marad, a jelentkezés pedig két idegen kulcsot tartalmaz. Az azonosító ismétlődése az `enrollments` táblában a kapcsolatot fejezi ki, nem ugyanaz a probléma, mint a név minden sorban történő másolása.
+
+Ha egy gyors riport kedvéért előre tároljuk a jelentkezők számát, meg kell határozni az újraszámítást és frissítést is. Ez tudatos denormalizálás. A mentés vagy replikáció szintén több adatpéldányt hozhat létre, de más célból, nem a logikai séma rossz felosztása miatt.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A redundancia adatbázisban azt jelenti, hogy ugyanaz az információ feleslegesen több helyen is tárolódik.  
 > Ez növeli a tárhelyigényt és adatinkonzisztenciához vezethet, például akkor, ha egy módosítást nem végzünk el minden  
 > előfordulási helyen.  
 > A relációs adatbázistervezés egyik célja a felesleges redundancia csökkentése, például normalizálással.
-
-## Gyakori vizsgahibák
-
-- A redundanciát önmagában mindig hibának nevezni.
-- Nem megemlíteni az inkonzisztencia veszélyét.
-- Összekeverni a természetes többszörös előfordulással.
-- Kihagyni a normalizálás kapcsolatát.
 
 ## Gyors önellenőrzés
 
@@ -104,3 +109,9 @@ Vizsgán jó válasz, ha kimondod:
    Használat: hivatalos háttér a redundancia csökkentéséhez és a normalizálás céljához.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Database design basics](https://support.microsoft.com/en-us/access/database-design-basics): követelmények, táblák, kapcsolatok és normalizálás
+
+Ellenőrizve: `2026-10-14`.

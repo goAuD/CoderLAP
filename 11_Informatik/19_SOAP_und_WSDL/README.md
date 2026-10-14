@@ -9,7 +9,7 @@
 
 ## Mi az a SOAP?
 
-A `SOAP` (`Simple Object Access Protocol`) XML-alapú üzenetstruktúrát használó protokoll a rendszerek közötti kommunikációhoz.
+A `SOAP` XML-alapú üzenetstruktúrát használó protokoll a rendszerek közötti kommunikációhoz. A `Simple Object Access Protocol` történeti névfeloldás; a SOAP 1.2 szabvány már nem rövidítésként kezeli a nevet.
 
 Jellemzői:
 
@@ -41,14 +41,14 @@ A `WSDL` (`Web Services Description Language`) leírja, hogyan lehet egy szolgá
 A klasszikus modellben:
 
 - a WSDL leírja a szolgáltatást
-- a SOAP ténylegesen továbbítja az XML-üzeneteket
+- a SOAP meghatározza az XML-üzenetek felépítését és feldolgozását
 
 Tehát:
 
 - a WSDL inkább szerződés
 - a SOAP inkább kommunikációs forma
 
-## Miért volt fontos?
+## Miért fontos vállalati integrációkban?
 
 Mert erősen szabványosított és pontos működést tesz lehetővé:
 
@@ -67,24 +67,48 @@ Mert erősen szabványosított és pontos működést tesz lehetővé:
 
 | Szempont | SOAP/WSDL | REST |
 |---|---|---|
-| adatcsere | tipikusan XML | gyakran JSON |
+| adatcsere | XML-alapú SOAP-üzenet | gyakran JSON, de nem kötött formátum |
 | leírás | formális szerződés, WSDL | nem kötelező egységes leíró nyelv |
 | stílus | kötöttebb | könnyebb, webközelibb |
+
+## Egy SOAP-üzenet és a hozzá tartozó szerződés
+
+Ez egy szemléltető **SOAP 1.2** XML-üzenet, nem önmagában futtatható program:
+
+```xml
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+              xmlns:c="urn:example:courses">
+  <env:Body>
+    <c:GetCourse>
+      <c:id>15</c:id>
+    </c:GetCourse>
+  </env:Body>
+</env:Envelope>
+```
+
+Az `Envelope` a teljes üzenet kerete, a kötelező `Body` az alkalmazás adatait
+tartalmazza. A `Header` opcionális, ezért itt nincs. A `c:GetCourse` és `c:id`
+saját példabeli elemek, nem a SOAP szabvány által definiált kurzusműveletek.
+A névterek választják el az alkalmazás és a protokoll elemeit.
+
+A WSDL-szerződés leírhatja, milyen bemenetet és választ vár ez a művelet,
+milyen típusa van az azonosítónak, melyik cím és protokollkötés használható.
+A WSDL 1.1 és 2.0 eltérő szerkezetű, ezért a kódgenerátorhoz a szolgáltatás
+valós verzióját választjuk. Egy szolgáltatáshiba strukturált SOAP `Fault`
+üzenetként is érkezhet, amit külön fel kell dolgozni.
+
+A SOAP üzenetformátumot és feldolgozási szabályokat ad. A tényleges továbbítást
+például HTTP biztosítja, de a SOAP nem kizárólag HTTP-hez köthető. Az alap SOAP
+önmagában nem titkosít és nem ad teljes hitelesítési megoldást. Az integráció
+szerződéséhez a biztonsági beállítások is hozzátartoznak.
 
 ## Vizsgán jól használható megfogalmazás
 
 > A SOAP egy XML-alapú üzenetküldési protokoll, amelyet web service kommunikációra használnak.  
 > A WSDL ezzel szemben a szolgáltatás leírására szolgál: megadja a műveleteket, üzenettípusokat és elérési pontokat.  
-> Klasszikus vállalati rendszerekben a SOAP és WSDL gyakran együtt jelent meg,
+> Vállalati rendszerekben a SOAP és WSDL gyakran együtt használatos,
 > mert pontos, formális szerződést
-> és szabványos kommunikációt biztosítottak.
-
-## Gyakori vizsgahibák
-
-- A SOAP-ot és a WSDL-t ugyanannak nevezni.
-- Azt mondani, hogy a WSDL maga küldi az adatot.
-- Nem megemlíteni az XML szerepét.
-- A SOAP-ot modern frontend API-k tipikus alapmegoldásának nevezni.
+> és szabványos kommunikációt biztosítanak.
 
 ## Gyors önellenőrzés
 
@@ -103,6 +127,12 @@ Mert erősen szabványosított és pontos működést tesz lehetővé:
 5. Nehezebb és kötöttebb, gyakran XML-es
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [W3C: SOAP 1.2](https://www.w3.org/TR/soap12-part1/): Envelope, opcionális Header, Body, Fault és protokollkötés.
+- [W3C: WSDL 2.0 Primer](https://www.w3.org/TR/wsdl20-primer/): szerződés, típusok, binding és verzió.
+
 
 1. W3C - SOAP Version 1.2 Part 1: Messaging Framework (Second Edition)  
    https://www.w3.org/TR/soap12-part1/  

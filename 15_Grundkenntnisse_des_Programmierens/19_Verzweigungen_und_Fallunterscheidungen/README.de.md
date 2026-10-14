@@ -52,6 +52,54 @@ Auswahl aus mehreren konkreten Fällen.
 | Verzweigung | Entscheidung |
 | Schleife | Wiederholung |
 
+## Wertebereiche und konkrete Zustände
+
+In einer eigenen Übungsaufgabe melden wir ab 50 Punkten „bestanden“ und ab 80
+ein starkes Ergebnis. Das ist eine beispielhafte Bewertung, keine offizielle
+LAP-Notenskala. Die zweite Funktion wählt eine Aktion anhand eines konkreten
+Textzustands. Beide laufen in Node.js.
+
+<!-- example:run -->
+
+```javascript
+function result(points) {
+  if (!Number.isInteger(points) || points < 0 || points > 100) return "invalid";
+  if (points >= 80) return "strong";
+  if (points >= 50) return "passed";
+  return "practice";
+}
+for (const points of [49, 50, 79, 80, 101]) {
+  console.log(points, result(points));
+}
+function action(status) {
+  switch (status) {
+    case "draft": return "edit";
+    case "ready": return "start";
+    default: return "review";
+  }
+}
+console.log(action("ready"), action("unknown"));
+```
+
+```text
+49 practice
+50 passed
+79 passed
+80 strong
+101 invalid
+start review
+```
+
+Die Reihenfolge der `if`-Bedingungen ist bewusst gewählt: zuerst der zulässige
+Bereich, dann die höhere Schwelle. Nach `return` werden spätere Bedingungen
+nicht mehr ausgeführt. Die Fälle um 50 und 80 zeigen, welche Grenzen eingeschlossen sind.
+
+JavaScript sucht im `switch` mit strenger Gleichheit nach dem passenden Fall.
+Hier kehrt jeder Zweig zurück, daher ist kein `break` nötig. Bei weiterlaufenden
+Zweigen würden wir mit `break` abschließen, sonst könnten auch die Anweisungen
+des nächsten Zweigs ausgeführt werden. `default` liefert eine festgelegte
+Antwort für nicht aufgezählte Zustände.
+
 ## Prüfungstaugliche Formulierung
 
 > Mit Verzweigungen und Fallunterscheidungen kann das Programm auf Basis von Bedingungen zwischen verschiedenen  
@@ -59,13 +107,6 @@ Auswahl aus mehreren konkreten Fällen.
 > Die häufigste Lösung ist `if / else`, für die Behandlung mehrerer konkreter Fälle wird oft `switch / case`  
 > verwendet.  
 > Diese Kontrollstrukturen dienen der Umsetzung der Entscheidungslogik.
-
-## Häufige Prüfungsfehler
-
-- Die Verzweigung als Schleife zu bezeichnen.
-- `switch` als für alles geeignet darzustellen.
-- Den Standardfall nicht zu erwähnen.
-- Die Bedeutung der Reihenfolge der Bedingungen zu vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,6 +125,11 @@ Auswahl aus mehreren konkreten Fällen.
 5. Die eine entscheidet, die andere wiederholt
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch): strenge Gleichheit, Rückgabe und Fall-through.
+
 
 1. MDN - Control flow and error handling  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  

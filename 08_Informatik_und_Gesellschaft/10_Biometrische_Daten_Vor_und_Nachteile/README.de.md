@@ -72,10 +72,18 @@ Biometrische Daten sind in bestimmten Fällen:
 
 Daher ist ihre Verwendung nicht "nur technisch", sondern auch eine Datenschutzfrage.
 
+## Gesichtsfoto, biometrische Vorlage und Entscheidungsschwelle
+
+Ein Foto kann personenbezogen sein, ohne automatisch eine Verarbeitung besonderer biometrischer Daten auszulösen. Zur Definition in Artikel 4 DSGVO gehören spezifische technische Verarbeitung und die Möglichkeit eindeutiger Identifizierung. Artikel 9 schützt biometrische Verarbeitung zum Zweck der eindeutigen Identifizierung einer natürlichen Person als besondere Kategorie.
+
+Ein Zugangssystem kann die gemessene Probe mit einer gespeicherten Vorlage vergleichen (`1:1`, Verifikation). Die Suche nach einer unbekannten Person unter vielen Vorlagen ist `1:N`-Identifikation. Eine strengere Ähnlichkeitsschwelle kann unberechtigte Annahmen reduzieren, dafür aber berechtigte Personen häufiger ablehnen. „99 % Genauigkeit“ sagt deshalb allein nicht, welche Fehlerquote unter welchen Bedingungen gemeint ist.
+
+Eine lokal gespeicherte Vorlage kann zentrale Datensammlung begrenzen. Zum System gehören außerdem ein zugänglicher alternativer Anmeldeweg, Berechtigungsverwaltung und eine geeignete Rechtsgrundlage. Die Technik allein entscheidet nicht über die Rechtmäßigkeit.
+
 ## Prüfungstaugliche Formulierung
 
-> Biometrische Daten, wie zum Beispiel Fingerabdruck,
-> Gesichtsbild oder Stimmprobe,
+> Biometrische Daten, etwa zur eindeutigen Identifizierung
+> technisch verarbeitete Fingerabdruck-, Gesichts- oder Stimmmuster,
 > können eine bequeme und schnelle Identifizierung ermöglichen.  
 > Gleichzeitig handelt es sich um besonders sensible personenbezogene Daten,
 > weshalb ihre Nutzung Fragen des Datenschutzes,
@@ -84,13 +92,6 @@ Daher ist ihre Verwendung nicht "nur technisch", sondern auch eine Datenschutzfr
 > das verzerrte Funktionieren und auch die Tatsache sein,
 > dass ein biometrisches Merkmal bei Kompromittierung
 > nicht so einfach ausgetauscht werden kann wie ein Passwort.
-
-## Häufige Prüfungsfehler
-
-- Nur die Vorteile zu erwähnen.
-- Biometrische Daten als einen einfachen Identifikator zu betrachten.
-- Nicht zu erwähnen, dass es sich um besonders sensible Daten handeln kann.
-- Das False-Accept-/False-Reject-Problem zu vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -102,13 +103,18 @@ Daher ist ihre Verwendung nicht "nur technisch", sondern auch eine Datenschutzfr
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Aus biologischen oder verhaltensbezogenen Merkmalen gewonnene, zur Identifizierung geeignete Daten
-2. Fingerabdruck, Gesichtsbild, Stimmprobe
+1. Durch spezielle technische Verarbeitung körperlicher, physiologischer oder verhaltensbezogener Merkmale gewonnene personenbezogene Daten, die eindeutige Identifizierung ermöglichen oder bestätigen
+2. Zur eindeutigen Identifizierung verarbeitete Fingerabdruck-, Gesichts- oder Stimmmerkmale
 3. Schnelle und bequeme Identifizierung
 4. Privacy-Risiko, fehlerhafte Erkennung, Verzerrung
 5. Weil es nicht leicht geändert werden kann
 
 ## Quellen
+
+- [EUR-Lex: DSGVO, Art. 4 und 9, Erwägungsgrund 51](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679)  
+  Unterschied zwischen Foto und biometrischen Daten sowie Identifizierungszweck.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. EUR-Lex - Regulation (EU) 2016/679  
    https://eur-lex.europa.eu/eli/reg/2016/679/oj  

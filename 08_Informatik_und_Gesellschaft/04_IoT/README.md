@@ -49,6 +49,14 @@ Az IoT lényege, hogy az eszközök:
 | internet | maga a hálózati infrastruktúra |
 | Industrie 4.0 | ipari digitalizáció, amelyben gyakran IoT is szerepel |
 
+## Egy okos fűtés adatútja és életciklusa
+
+A hőmérséklet-érzékelő mérést küld egy átjárónak. A helyi vezérlő összeveti ezt a beállított értékkel, majd utasítást ad a szelepet működtető beavatkozónak. A telefonos felület megjeleníti az állapotot. A felhő csak egy lehetséges rész: IoT-eszközök helyi hálózaton, közvetítőn keresztül is együttműködhetnek, nem kell mindegyiknek közvetlenül elérhetőnek lennie az internetről.
+
+Beszerzés előtt tisztázzuk az egyedi eszközazonosítást, a jogosultságokat, a frissítési támogatást és az adatkezelést. A példában fontos, hogy internetkimaradáskor a helyi hőmérsékletszabályozás biztonságosan folytatódjon. A készülék továbbadásakor a fiókkapcsolatot megszüntetjük és a tárolt adatokat a gyártó eljárásával töröljük.
+
+Az életciklus a beüzemeléstől a kivonásig tart. A biztonság nem ér véget a kezdeti jelszó beállításával.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az IoT, vagyis a dolgok internete olyan fizikai eszközök
@@ -57,13 +65,6 @@ Az IoT lényege, hogy az eszközök:
 > és sokszor automatizált folyamatokat támogatnak.  
 > Az IoT megjelenik az okosotthonban, az iparban, az egészségügyben és sok más területen is.  
 > Előnye a kényelmesebb vezérlés és a valós idejű adat, kockázata viszont a biztonság és az adatvédelem.
-
-## Gyakori vizsgahibák
-
-- Az IoT-t pusztán "internetkapcsolatos kütyünek" nevezni.
-- Nem megemlíteni a szenzorokat és adatgyűjtést.
-- Elfelejteni a biztonsági és privacy kockázatokat.
-- Összekeverni az Industrie 4.0-val.
 
 ## Gyors önellenőrzés
 
@@ -82,6 +83,11 @@ Az IoT lényege, hogy az eszközök:
 5. Nem
 
 ## Források
+
+- [NISTIR 8259A](https://csrc.nist.gov/pubs/ir/8259/a/final)  
+  IoT-eszközök alapvető biztonsági képességei.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. NIST - Internet of Things (IoT)  
    https://www.nist.gov/topics/internet-things-iot  

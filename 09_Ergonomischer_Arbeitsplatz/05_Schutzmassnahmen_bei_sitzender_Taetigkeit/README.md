@@ -60,6 +60,12 @@ Mert a panaszok sokszor:
 - lassan alakulnak ki
 - eleinte alig észrevehetők
 
+## A munkaszervezés tegye lehetővé a mozgást
+
+Egy ülő-álló asztal lehetőséget ad a helyzetváltásra, de a folyamatos állás sem cél. Egy csapat például a hosszabb egyéni kódolást rövid, képernyő nélküli egyeztetéssel váltja, az iratokat pedig úgy rendezi el, hogy rendszeresen legyen alkalom felállni. Álló munkához az asztalt és a monitort újra be kell állítani.
+
+A védelem több szinten működik: megfelelő eszközök, változatos feladatok, reális munkaterhelés és a megszakításokat lehetővé tevő csapatszokások. Ha a határidők miatt senki nem tud szünetet tartani, egy emlékeztető alkalmazás önmagában nem oldja meg a problémát. A kialakult panaszt jelezni kell, és a munkahelyet az érintett személlyel együtt újraértékelni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Ülőmunka esetén a fő védőintézkedések a rendszeres testhelyzetváltás,
@@ -67,13 +73,6 @@ Mert a panaszok sokszor:
 > valamint a jól beállított monitor és munkaeszközök.  
 > A cél a hát, a nyak, a váll és a keringés túlterhelésének csökkentése.  
 > Nem elég csak "jól ülni", a rendszeres mozgás és megszakítás is fontos.
-
-## Gyakori vizsgahibák
-
-- Az ülőmunkát passzív, ártalmatlan dolognak tekinteni.
-- Csak a széket említeni, a mozgást nem.
-- Azt hinni, hogy ha egy szék drága, automatikusan megold mindent.
-- Nem megemlíteni a munkaszervezés szerepét.
 
 ## Gyors önellenőrzés
 
@@ -93,6 +92,11 @@ Mert a panaszok sokszor:
 
 ## Források
 
+- [AUVA: Bewegungsübungen für den beruflichen Alltag](https://auva.at/praevention/medien-und-publikationen/publikationen-us/m-035-bewegungsuebungen-fuer-den-beruflichen-alltag/)  
+  Mozgás beillesztése a munkanapba.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
 1. AUVA - M 035 Bewegungsübungen für den beruflichen Alltag  
    https://auva.at/praevention/medien-und-publikationen/publikationen-us/m-035-bewegungsuebungen-fuer-den-beruflichen-alltag/  
    Használat: hivatalos AUVA-forrás a mozgás és a tartásváltás szerepéhez.
@@ -102,7 +106,7 @@ Mert a panaszok sokszor:
    Használat: gyakorlati ergonómiai ajánlások ülőmunkához.
 
 3. Arbeitsinspektion - Schnittstelle Mensch - Technik  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Schnittstelle_Mensch_-_Technik.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/ergonomie/schnittstelle_mensch_technik.html  
    Használat: hivatalos ergonómiai háttér az emberhez igazított munkahely és a testhelyzet fontosságához.
 
 4. AUVA - Checkliste Homeoffice für Arbeitnehmer:innen  

@@ -141,6 +141,14 @@ Hangnál fontos lehet:
 | gyakran tollal / billentyűzettel is használják | ritkábban használják ilyen módon       |
 | kevésbé „telefon-központú”                     | elsődlegesen kommunikációs eszköz is   |
 
+## Kidolgozott átvételi próba: tanulás és prezentáció
+
+A tablet feladata PDF-jegyzetelés, videóhívás és prezentáció. A próba során ugyanazt a PDF-et megnyitjuk, tollal jelöljük, majd szabványos PDF-ként exportáljuk. Így kiderül, hogy másik eszközön is megmaradnak-e a jegyzetek. A toll pontos típusának kompatibilitását külön ellenőrizzük.
+
+Ezután fekvő és álló nézetben, megosztott képernyőn és külső billentyűzettel is kipróbáljuk az alkalmazást. A nagy kijelző önmagában nem garantál többablakos támogatást: az OS-verzió, a hardver és az alkalmazás együtt számít.
+
+Egy mobilrendszerű tablet nem feltétlenül futtatja a laptopon használt teljes IDE-t vagy helyi adatbázisszervert. A szükséges fejlesztői munkafolyamatot ezért ténylegesen kipróbáljuk. Külső kijelzőhöz az USB-C aljzat mellett az adott eszköz videókimeneti képességét és a megfelelő adaptert is megvizsgáljuk. A próba végén rögzítjük, mely feladat működik offline.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A tablet hordozható, érintésvezérelt eszköz nagyobb kijelzővel, mint egy smartphone.  
@@ -148,14 +156,6 @@ Hangnál fontos lehet:
 > a processzor, a RAM, a tárhely, az akkumulátor,
 > a vezeték nélküli kapcsolatok és a multitasking-képesség.  
 > A tabletek gyakran támogatnak digitális tollat és billentyűzetet is, ezért oktatási és produktív feladatokra is alkalmasak.
-
-## Gyakori vizsgahibák
-
-- A tabletet egyszerűen „nagy telefonnak” nevezni.
-- Nem említeni a stylus és billentyűzet szerepét.
-- Kihagyni a multitasking előnyét.
-- Azt hinni, hogy tablet csak médiafogyasztásra jó.
-- Nem tudni különbséget mondani smartphone és tablet között.
 
 ## Gyors önellenőrzés
 
@@ -188,3 +188,9 @@ Hangnál fontos lehet:
    Használat: Android tablet és többféle kijelzős eszközök modern, hivatalos minőségi irányelvei.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Android: Adaptive app quality](https://developer.android.com/docs/quality-guidelines/adaptive-app-quality): képernyőméret, ablakmód és beviteli eszközök tesztelése.
+
+Ellenőrizve: `2026-10-14`.

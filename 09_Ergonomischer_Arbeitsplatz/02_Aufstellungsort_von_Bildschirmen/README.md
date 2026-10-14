@@ -45,6 +45,14 @@ Mert a tükröződés:
 - rontja az olvashatóságot
 - rákényszeríthet rossz testtartásra
 
+## Fényviszonyok ellenőrzése valódi munkaközben
+
+A 90 fokos elrendezés azt jelenti, hogy a tekintet iránya megközelítőleg párhuzamos az ablak síkjával, az ablak oldalról ad fényt. A cél az, hogy se világos ablakba nézzünk a monitor mögött, se a hátunk mögötti ablak tükröződjön a kijelzőben.
+
+Ülj a tényleges munkapozícióba, és nézd meg a sötét kijelzőn látható tükröződéseket is. Délelőtt és délután eltérhet a helyzet. Szükség esetén módosítsd az elrendezést és az árnyékolást. Két kijelzőnél a többet használt kerüljön előre; hasonló használati időnél a közös középvonaluk legyen előtted, kis fejfordítással elérhetően.
+
+Az olvashatóságot szövegmérettel és megfelelő fényerővel is segítjük. A rossz helyet nem célszerű azzal ellensúlyozni, hogy tartósan elfordulva ülünk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A monitort úgy kell elhelyezni, hogy a lehető legkevesebb tükröződés és vakítás érje.  
@@ -53,13 +61,6 @@ Mert a tükröződés:
 > hanem oldalirányban,
 > gyakran körülbelül 90 fokban az ablakhoz képest.  
 > A helyes monitorpozíció csökkenti a szemterhelést és a kényszertartást.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a monitor legjobb helye mindig közvetlenül az ablak előtt van.
-- Nem megemlíteni a csillogást és tükröződést.
-- Kihagyni, hogy több monitor esetén a fő monitor helye különösen fontos.
-- A monitorhelyet csak esztétikai kérdésnek tekinteni.
 
 ## Gyors önellenőrzés
 
@@ -79,8 +80,13 @@ Mert a tükröződés:
 
 ## Források
 
+- [Arbeitsinspektion: Bildschirmarbeitsplätze](https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html)  
+  Munkahelyi beállítások és képernyős munkavégzés feltételei.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Használat: hivatalos osztrák forrás a monitor 90°-os ablakhoz viszonyított elhelyezéséhez és a blendfrei beállításhoz.
 
 2. AUVA - Checkliste Homeoffice für Arbeitnehmer:innen  
@@ -88,7 +94,7 @@ Mert a tükröződés:
    Használat: gyakorlati, hivatalos AUVA-checklista monitorhelyzethez és fényviszonyokhoz.
 
 3. Arbeitsinspektion - Bildschirmarbeitsplätze  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Használat: munkavédelmi összefoglaló a képernyős munkahelyek ergonómiai követelményeiről.
 
 Megnyitva: `2026-04-08`

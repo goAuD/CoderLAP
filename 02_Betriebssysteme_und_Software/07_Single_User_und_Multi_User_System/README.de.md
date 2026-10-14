@@ -9,18 +9,9 @@
 
 ## Was ist ein Single-User-System?
 
-Ein System, das typischerweise von einem einzelnen Benutzer direkt verwendet wird.
+Ein klassisches Single-User-System ist für die Arbeit eines Benutzers ausgelegt, ohne mehrere getrennte, gleichzeitige Benutzersitzungen zu unterstützen. Ein historisches Beispiel auf Personalcomputern ist MS-DOS.
 
-Beispiele:
-
-- Heim-PC mit einem einzigen aktiven Benutzer
-- individuelle Laptop-Nutzung
-- bestimmte einfache eingebettete Systeme
-
-Wichtig:
-
-- es können trotzdem mehrere Benutzerkonten vorhanden sein
-- der Punkt ist eher, dass das Nutzungsmodell auf einen Benutzer ausgelegt ist
+Davon zu unterscheiden ist die **Single-User-Nutzung**: Auch ein modernes OS mit mehreren Konten und Berechtigungen kann gerade von einer einzigen Person benutzt werden. Seine Fähigkeiten zur Benutzerverwaltung ändern sich dadurch nicht.
 
 ## Was ist ein Multi-User-System?
 
@@ -59,7 +50,7 @@ Die Hauptfrage ist nicht, wie viele Personen „vor dem Rechner sitzen", sondern
 
 ## Beispiele
 
-### Single-User-Beispiele
+### Nutzung durch eine Person auf einem modernen OS
 
 - Heim-Windows-PC
 - persönliches MacBook
@@ -99,20 +90,24 @@ Bei Multi-User-Systemen ist besonders wichtig:
 
 Denn mehrere Benutzer teilen sich dasselbe System oder dieselbe Infrastruktur.
 
+## Durchgearbeiteter Fall: gemeinsam genutzter Schulrechner
+
+Anna und Bela verwenden denselben Rechner mit eigenen Konten. Für ihre Dateien gelten getrennte Zugriffsregeln; zur Wartung gibt es ein eigenes Administratorkonto. Der Rechner besitzt auch dann ein Mehrbenutzer-Sicherheitsmodell, wenn am lokalen Bildschirm jeweils nur eine Person arbeitet.
+
+Drei Fragen werden getrennt geprüft:
+
+1. Gibt es getrennte Benutzeridentitäten und Berechtigungen?
+2. Können mehrere Sitzungen angemeldet bleiben oder gleichzeitig arbeiten?
+3. Welche Ausgabe, welcher Dienst und welche Lizenz erlauben Remotesitzungen?
+
+Moderne Windows-, macOS- und Linux-Systeme lassen sich nicht pauschal als „Desktop, also Single-User” einordnen. Mehrbenutzerfähigkeit und Anzahl gleichzeitig benutzbarer interaktiver Desktops sind unterschiedliche Eigenschaften. Die Sitzungslimits verschiedener Windows-Client- und Serverausgaben können sich unterscheiden.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Single-User-System ist in erster Linie für die direkte Nutzung durch einen Benutzer ausgelegt.  
 > Ein Multi-User-System hingegen kann mehreren Benutzern Zugang,
 > separate Berechtigungen und getrennte Arbeitsumgebungen bieten.  
 > Multi-User-Systeme sind typischerweise in Server- oder Unternehmensumgebungen wichtig.
-
-## Häufige Prüfungsfehler
-
-- Multi-User und Multitasking verwechseln.
-- Glauben, dass mehrere Benutzerkonten automatisch einen vollwertigen Multi-User-Betrieb bedeuten.
-- Behaupten, dass jeder Desktop-Rechner nur Single-User sein kann.
-- Die Berechtigungsverwaltung nicht erwähnen.
-- Kein Serverbeispiel nennen können.
 
 ## Schnelle Selbstkontrolle
 
@@ -145,3 +140,9 @@ Denn mehrere Benutzer teilen sich dasselbe System oder dieselbe Infrastruktur.
    Verwendung: Beispiel für den modernen Desktop als Single-User-Nutzungskontext.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Manage user accounts](https://support.microsoft.com/en-us/windows/security/identity-signin/manage-user-accounts-in-windows): getrennte Konten und Zugriffe unter modernem Windows.
+
+Geprüft: `2026-10-14`.

@@ -194,6 +194,55 @@ aber bei der Prüfung ist die textuelle Interpretation am wichtigsten.
 - bei Bitoperationen
 - bei der Fehlerprüfung
 
+## Eine zusammengesetzte Bedingung herleiten
+
+Eine Aktion ist erlaubt, wenn die Person angemeldet ist (`A`), Schreibrechte besitzt (`B`)
+und das Dokument nicht gesperrt ist (`C` steht für die Sperre).
+Die Regel lautet `A AND B AND NOT C`. Drei unabhängige logische Eingaben benötigen `2³ = 8` Zeilen.
+
+| A | B | C | A AND B AND NOT C |
+| - | - | - | ---------------- |
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 0 |
+
+Im eigenständigen JavaScript verwenden wir echte boolesche Werte:
+
+<!-- example:run -->
+```javascript
+const signedIn = true;
+const canEdit = true;
+const locked = false;
+console.log(signedIn && canEdit && !locked);
+console.log(!(signedIn && canEdit) === (!signedIn || !canEdit));
+console.log(true !== false);
+```
+
+Erwartete Ausgabe:
+
+```text
+true
+true
+true
+```
+
+Die zweite Zeile veranschaulicht De Morgans Gesetz: `NOT (A AND B)` entspricht
+`(NOT A) OR (NOT B)`. Die dritte Zeile bildet XOR durch den Unterschied zweier Booleans ab.
+JavaScripts `^` arbeitet bitweise, deshalb verwenden wir es hier nicht für die logische Bedingung.
+`&&` und `||` werten die rechte Seite nur aus, wenn sie für das Ergebnis benötigt wird
+(Kurzschlussauswertung). Eingänge eines Schaltbilds beschreiben dagegen keine
+Ausführungsreihenfolge von Programmanweisungen.
+
+Die clientseitige Bedingung zeigt nur das Verhalten der Oberfläche. In einem realen
+System muss der Server die Berechtigung beim Ausführen der Aktion ebenfalls prüfen.
+
+Quelle: [MDN: Ausdrücke und Operatoren](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators).
+
 ## Prüfungstaugliche Formulierung
 
 > Logische Schaltungen arbeiten mit binären Eingaben, die Signale haben also den Wert 0 oder 1.  
@@ -202,14 +251,6 @@ aber bei der Prüfung ist die textuelle Interpretation am wichtigsten.
 > OR ergibt 1, wenn mindestens eine Eingabe 1 ist.  
 > XOR ergibt 1, wenn die beiden Eingaben unterschiedlich sind.  
 > NOT invertiert eine einzelne Eingabe.
-
-## Häufige Prüfungsfehler
-
-- OR und XOR zu verwechseln.
-- Zu sagen, dass AND auch dann `1` ergibt, wenn nur eine Eingabe `1` ist.
-- Zu vergessen, dass NOT nur einen Eingang hat.
-- Die Wahrheitstabelle falsch auszufüllen.
-- Nicht zu erkennen, dass das Wesentliche von XOR die Unterschiedlichkeit ist.
 
 ## Schnelle Selbstkontrolle
 

@@ -84,6 +84,16 @@ Daher ist wichtig:
 - getrennte Aufbewahrung
 - möglichst eine Offline- oder isolierte Kopie
 
+## Durchgearbeiteter Plan: ein kleines Lernsystem
+
+Laut Anforderung darf höchstens eine Stunde neuer Arbeit verloren gehen (**RPO: 1 Stunde**), und nach einem Ausfall muss der Dienst innerhalb von vier Stunden nutzbar sein (**RTO: 4 Stunden**). Das sind Zielwerte, keine automatische Garantie eines Backup-Programms.
+
+Neben der Datenbank gehören hochgeladene Dateien, Konfiguration und wiederherstellbare Kopien erforderlicher Schlüssel in den Plan. Eine Kopie des Programmcodes stellt Benutzerdaten allein nicht wieder her. Stündliche Sicherungen erreichen das RPO nur dann annähernd, wenn sie erfolgreich, konsistent und rechtzeitig fertig sowie die benötigten Kopien verfügbar sind.
+
+Beispiel: Der letzte wiederherstellbare Zustand stammt von 13:00, der Ausfall tritt um 13:40 ein. Das Datenverlustfenster beträgt 40 Minuten. Ist die 13:00-Sicherung unbrauchbar und nur 12:00 verfügbar, sind es bereits 100 Minuten. Das Ein-Stunden-Ziel ist dann verfehlt.
+
+Miss im Test die Beschaffung der Zugänge, den Aufbau der Umgebung, die Wiederherstellung und die Nutzbarkeitsprüfung zusammen. Verantwortliche, Vertretung, Fehlermeldungen und Aufbewahrungsregeln müssen feststehen. Das RTO betrifft mehr als die Kopiergeschwindigkeit.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Grundlage einer sicheren Backup-Planung ist die Festlegung,
@@ -95,14 +105,6 @@ Daher ist wichtig:
 > die Verantwortlichkeiten, die Aufbewahrungsdauer,
 > die Zugriffsregeln und die Restore-Tests.  
 > Die Sicherungen müssen auch getrennt vom Originalsystem verfügbar sein.
-
-## Häufige Prüfungsfehler
-
-- Statt eines Backup-Plans nur ein einzelnes Tool oder Programm erwähnen.
-- Den Restore-Test weglassen.
-- Nicht zwischen kritischen und weniger kritischen Daten unterscheiden.
-- Die RPO/RTO-Logik nicht erwähnen.
-- Die Sicherung am selben Ort wie das Originalsystem aufbewahren.
 
 ## Schnelle Selbstkontrolle
 
@@ -135,3 +137,11 @@ Daher ist wichtig:
    Verwendung: primäre, strukturierte Quelle für die sichere Backup-Planung.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [NIST: Recovery Point Objective](https://csrc.nist.gov/glossary/term/recovery_point_objective): Zeitpunkt des wiederherzustellenden Datenstands
+- [NIST: Recovery Time Objective](https://csrc.nist.gov/glossary/term/recovery_time_objective): Zielzeit der Wiederherstellung
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): getrennte, verschlüsselte Sicherungen und geprüfte Wiederherstellung
+
+Geprüft: `2026-10-14`.

@@ -46,6 +46,14 @@ Hier wird unter anderem entschieden:
 | Softwareentwurf | wie wir es aufbauen |
 | Implementierung | die konkrete Umsetzung im Code |
 
+## Die Verantwortungen einer Ausleihe aufteilen
+
+Der Ausleihknopf verbindet drei unterscheidbare Verantwortungen. Die Oberfläche erfasst die Gerätekennung und zeigt die Antwort. Die Anwendungslogik prüft die Berechtigung der angemeldeten Person und die Geschäftsregeln. Die Speicherung legt die neue Ausleihe zuverlässig ab.
+
+Der Schnittstellenvertrag beschreibt erfolgreiche Antworten und verständliche Ergebnisse wie „Gerät bereits ausgeliehen“. Gleichzeitige Anfragen und Datenbankregeln gehören zum Entwurf; allein ein deaktivierter Knopf bietet keinen serverseitigen Schutz.
+
+Diese Teile können Module einer einzigen Anwendung sein. Getrennte Verantwortlichkeiten verlangen keine Einführung von Microservices. Der Entwurf richtet sich nach bekanntem Bedarf; Entscheidungsgründe bleiben dokumentiert, damit spätere Anpassungen nachvollziehbar sind.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Softwareentwurf ist der Plan für die technische Umsetzung der Anforderungen.  
@@ -53,13 +61,6 @@ Hier wird unter anderem entschieden:
 > die Datenverarbeitung
 > und die wichtigen Entwurfsentscheidungen fest.  
 > Sein Ziel ist es, dass die Entwicklung übersichtlich, erweiterbar und wartbar ist.
-
-## Häufige Prüfungsfehler
-
-- Den Softwareentwurf mit der Anforderungsspezifikation verwechseln.
-- Glauben, dass es bereits die Codierung selbst ist.
-- Die Rolle von Architektur und Schnittstellen auslassen.
-- Nur an die Oberfläche denken und nicht an das gesamte System.
 
 ## Schnelle Selbstkontrolle
 
@@ -78,6 +79,11 @@ Hier wird unter anderem entschieden:
 5. Durch bessere Trennung und Übersichtlichkeit
 
 ## Quellen
+
+- [Microsoft: Architecture styles](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/)  
+  Komponentenverantwortung und Abwägungen beim Architekturentwurf.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Microsoft Learn - Architecture styles  
    https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/  

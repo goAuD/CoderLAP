@@ -69,6 +69,37 @@ Egyszerűen:
 | ECG | online szolgáltatók és e-kereskedelmi szabályok egy része |
 | spam-szabályok | reklámüzenetek küldésének feltételei |
 
+## Példa: rendelési értesítés és reklámlevél
+
+Egy javítóműhely a megrendelt javítás elkészültéről értesíti az ügyfelet.
+Ez a szolgáltatás teljesítéséhez kapcsolódó üzenet. A következő heti laptopakció
+viszont reklám. A rendszerben a két célt és a hozzájuk tartozó címzettlistát
+külön kezeljük. A reklámot is tartalmazó értesítésnél a teljes üzenet célját vizsgáljuk.
+
+A TKG 174. § (4) meglévő ügyfelekre vonatkozó kivételének **minden feltétele együtt** kell:
+
+1. A címet az ügyfélnek történt értékesítés vagy szolgáltatás kapcsán szereztük.
+2. Saját, hasonló terméket vagy szolgáltatást reklámozunk.
+3. Már az adatfelvételnél, majd minden üzenetben világos, ingyenes és egyszerű
+   elutasítási lehetőséget adunk.
+4. A címzett korábban nem tiltakozott, az ECG-listán szereplő tiltást is figyelembe vesszük.
+
+Egy nyilvánosan megtalálható céges e-mail-cím önmagában nem hozzájárulás.
+A szabály nem ad általános mentességet a cégeknek küldött reklámokra.
+A személyes adatok kezelésének GDPR-jogalapját ettől külön is rendezni kell.
+
+## Böngészős tárolás: a cél számít
+
+A TKG 165. § (3) a végberendezésen történő adattároláshoz és hozzáféréshez is kapcsolódik.
+Nem csak a cookie neve vagy technológiája számít: a `localStorage` is érintett lehet.
+A felhasználó által kifejezetten kért szolgáltatáshoz feltétlenül szükséges műveleteknél
+lehet kivétel; egy hirdetési követő célja ettől eltér. A szükségességet az adott
+funkcióra indokoljuk, a nem szükséges követést pedig csak a szükséges hozzájárulás után indítjuk.
+
+Forrás: [TKG 174. §](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011678&Paragraf=174),
+[DSB: cookie-k és végberendezés-hozzáférés](https://dsb.gv.at/faqs/datenschutz-cookies).
+Ellenőrizve: `2026-10-14`.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Telekommunikationsgesetz 2021 az elektronikus kommunikációs szolgáltatások egyik alapvető osztrák jogszabálya.  
@@ -76,13 +107,6 @@ Egyszerűen:
 > a kommunikáció bizalmassága,
 > valamint a kéretlen reklámüzenetekre és spamre vonatkozó szabályozás.  
 > Ha egy rendszer e-mailt, SMS-t vagy más elektronikus kommunikációt használ, a TKG 2021 gyakran releváns.
-
-## Gyakori vizsgahibák
-
-- A TKG-t teljesen összemosni a GDPR-ral.
-- Azt hinni, hogy reklám e-mail vagy SMS bármikor küldhető.
-- Elfelejteni, hogy a kommunikáció titkossága is jogi kérdés.
-- Nem felismerni, hogy marketingkommunikációnál több jogterület egyszerre lehet releváns.
 
 ## Gyors önellenőrzés
 

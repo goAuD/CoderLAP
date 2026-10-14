@@ -194,6 +194,14 @@ Konkrete Modelle müssen nicht auswendig gelernt werden, aber man muss verstehen
 - was die Nutzbarkeit beeinflusst
 - welches Bauteil wofür zuständig ist
 
+## Durchgerechneter Vergleich: Was sagt das Datenblatt?
+
+Zwei erfundene Geräte haben Akkus mit 5000 mAh / 3,85 V beziehungsweise 4500 mAh / 3,85 V. Näherungsweise gilt `Wh = Ah × V`, also 19,25 Wh und 17,325 Wh. Der erste Akku speichert mehr Energie. Display, Funkverbindung, Last und Akkuzustand verhindern aber, daraus eine genaue Laufzeit abzuleiten.
+
+Verbrauchte das erste Telefon durchschnittlich 3,85 W, ergäbe die ideale Rechnung `19,25 Wh / 3,85 W = 5 Stunden`. Das ist eine Beispielschätzung und keine Laufzeitzusage für ein reales Modell.
+
+USB-C bezeichnet den Anschluss. Datenrate, Bildausgabe und Ladeprofil werden gesondert geprüft. Ladegerät, Kabel und Telefon bestimmen gemeinsam die mögliche Ladung. Ebenso beschreibt die Megapixelzahl allein nicht die Bildqualität. Bei der Geräteauswahl zählen auch Sicherheitsupdatezeitraum und Reparierbarkeit des konkreten Modells.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Smartphone ist ein fortschrittliches Mobiltelefon,
@@ -205,14 +213,6 @@ Konkrete Modelle müssen nicht auswendig gelernt werden, aber man muss verstehen
 > und die biometrische Identifikation.  
 > Der Betrieb wird von einem mobilen Betriebssystem wie Android oder iOS gesteuert.
 
-## Häufige Prüfungsfehler
-
-- Nur Kamera und Display erwähnen.
-- Die Begriffe RAM und Speicher verwechseln.
-- Nicht wissen, welche Rolle das SoC spielt.
-- Glauben, dass allein die mAh alles über die Akkulaufzeit aussagen.
-- Konnektivität und Sensoren nicht erwähnen.
-
 ## Schnelle Selbstkontrolle
 
 1. Welche Rolle spielt das SoC in einem Smartphone?
@@ -223,9 +223,7 @@ Konkrete Modelle müssen nicht auswendig gelernt werden, aber man muss verstehen
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Das SoC (System on a Chip) enthält auf einem einzigen Chip die CPU, GPU,
-   AI/NPU-Einheiten und andere Controller - es bestimmt die Geschwindigkeit
-   und die Energieeffizienz.
+1. Ein SoC (System on a Chip) integriert mehrere Verarbeitungs- und Steuereinheiten, etwa CPU und GPU, modellabhängig auch eine NPU. Es beeinflusst Leistung und Energieeffizienz.
 2. Der RAM ist der temporäre Speicher für aktuell laufende Anwendungen,
    der Speicher ist der dauerhafte Speicherplatz für Dateien und Apps.
 3. 4G, 5G, Wi-Fi, Bluetooth, NFC, GPS
@@ -247,3 +245,10 @@ Konkrete Modelle müssen nicht auswendig gelernt werden, aber man muss verstehen
    Verwendung: Typische Fähigkeiten von Android-Geräten und der allgemeine technische Kontext der Telefonumgebung.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [USB-IF: USB Power Delivery](https://www.usb.org/usb-charger-pd): Aushandlung von Ladefähigkeiten.
+- [Google: Pixel hardware specifications](https://support.google.com/pixelphone/answer/16043605?hl=en): Bedeutung getrennter Datenblattangaben, keine Modellempfehlung.
+
+Geprüft: `2026-10-14`.

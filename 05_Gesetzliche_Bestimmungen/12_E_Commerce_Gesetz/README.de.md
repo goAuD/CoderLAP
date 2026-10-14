@@ -71,6 +71,34 @@ dann sollte er zumindest auf Grundniveau diese Pflichten kennen.
 | Impressum | verpflichtend veröffentlichte Angaben des Diensteanbieters |
 | ECG-Liste | Sperrliste bezüglich Werbe-E-Mails |
 
+## Einen Webshop-Ablauf am ECG prüfen
+
+Bei einer Bestellung genügt ein Impressumslink im Footer allein nicht.
+Vor der abschließenden Erklärung sollen die technischen Schritte, Vertragssprache,
+Korrekturmöglichkeiten und die Speicherung sowie Zugänglichkeit des Vertragstexts
+verständlich sein (§ 9). Eingabefehler, etwa eine falsche Stückzahl, müssen erkennbar
+und korrigierbar sein (§ 10). Vertragsbedingungen sind speicherbar und reproduzierbar
+bereitzustellen (§ 11).
+
+**Test:** Ein Kunde legt zwei Produkte in den Warenkorb, korrigiert in der Übersicht
+auf eines, prüft Preis und Versandkosten und bestellt. Der Eingang wird nach den
+anwendbaren Regeln elektronisch bestätigt. Eingangsbestätigung und Vertragsannahme
+können unterschiedliche Erklärungen sein; Ablauf und Wortlaut müssen zusammenpassen.
+
+Ein Abgleich mit der ECG-Liste ist für sich genommen keine Erlaubnis zum Werbeversand.
+Zusätzlich prüfen wir die vorherige Einwilligung nach § 174 TKG oder die eng begrenzte
+Bestandskundenausnahme mit ihren gemeinsam zu erfüllenden Bedingungen.
+Die Rechtsgrundlage der Datenverarbeitung ist daneben eine eigenständige DSGVO-Frage.
+
+Das ECG enthält nicht sämtliche Webshop-Pflichten: Für Verbraucherverträge im Fernabsatz
+ist etwa auch das FAGG relevant. Bei heutigen Haftungsfragen für Vermittlungsdienste
+sind außerdem die Regeln des EU Digital Services Act zu beachten. Frühere ECG-Paragrafen
+dürfen nicht ungeprüft übernommen werden, weil sie 2024 geändert wurden.
+
+Quellen: [RIS: ECG §§ 5, 9–12 und 28](https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001703),
+[TKG § 174](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011678&Paragraf=174).
+Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Das E-Commerce-Gesetz regelt in Österreich bestimmte rechtliche Pflichten der Online-Diensteanbieter.
@@ -79,13 +107,6 @@ dann sollte er zumindest auf Grundniveau diese Pflichten kennen.
 > und dass bei kommerzieller elektronischer Kommunikation
 > auch die ECG-Liste zu beachten ist.
 > Das ECG ist daher bei Webshops, Unternehmenswebsites und Online-Diensten ein grundlegender rechtlicher Hintergrund.
-
-## Häufige Prüfungsfehler
-
-- Das ECG vollständig mit der GDPR zu verwechseln.
-- Die verpflichtenden Angaben des Diensteanbieters nicht zu erwähnen.
-- Die Rolle der ECG-Liste zu vergessen.
-- Zu glauben, es gelte nur für Webshops.
 
 ## Schnelle Selbstkontrolle
 

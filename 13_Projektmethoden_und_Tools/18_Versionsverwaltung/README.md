@@ -52,6 +52,23 @@ A `Git` elosztott verziókezelő rendszer.
 
 Egy verziókezelő rendszer hasznos, de nem ugyanaz, mint a teljes backup-stratégia.
 
+## Munkakönyvtár, staging és commit
+
+A Gitben a módosított fájl először a munkakönyvtárban változik. A staging area az előkészített változásokat tartalmazza a következő commithoz. A commit a kiválasztott állapotot rögzíti a helyi történetben; a távoli tárolóba külön push juttatja el.
+
+Az alábbi parancsok egy már megnyitott gyakorlórepositoryban mutatják a különbségeket, és nem módosítanak fájlt:
+
+```bash
+git status --short
+git diff
+git diff --staged
+git log -3 --oneline
+```
+
+A `git diff` az előkészítés nélküli változást, a `git diff --staged` a következő commitba előkészített eltérést mutatja. Ha ugyanaz a sor két ágon eltérően változott, merge-konfliktus lehet: a szándékot kell összeegyeztetni, majd ellenőrizni az eredményt.
+
+Megosztott történetben egy hibás commit hatását gyakran új, visszafordító committal (`git revert`) kezeljük. A `.gitignore` nem törli a már követett fájlokat vagy a történetet; véletlenül megosztott titkos kulcsot külön vissza kell vonni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A verziókezelés a fájlok, különösen a forráskód változásainak nyomon követését és kezelését jelenti.  
@@ -59,13 +76,6 @@ Egy verziókezelő rendszer hasznos, de nem ugyanaz, mint a teljes backup-strat�
 > valamint lehetőség van korábbi állapotok visszaállítására
 > és több fejlesztő munkájának összehangolására.  
 > A modern szoftverfejlesztésben a Git az egyik legelterjedtebb elosztott verziókezelő rendszer.
-
-## Gyakori vizsgahibák
-
-- A verziókezelést egyszerű fájlmásolgatással azonosítani.
-- Nem megemlíteni a csapatmunkát.
-- A verziókezelést összekeverni a backup fogalmával.
-- Nem tudni, mi az a `commit` vagy `branch`.
 
 ## Gyors önellenőrzés
 
@@ -84,6 +94,14 @@ Egy verziókezelő rendszer hasznos, de nem ugyanaz, mint a teljes backup-strat�
 5. Mert más a célja, mint a biztonsági mentésnek
 
 ## Források
+
+- [Git: Recording changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)  
+  Staging, diff, commit és az ignore szabályok határa.
+
+- [Git: git-revert](https://git-scm.com/docs/git-revert)  
+  Visszafordító commit történetátírás nélkül.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Git - About Version Control  
    https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control  

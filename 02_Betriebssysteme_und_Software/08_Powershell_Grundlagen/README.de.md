@@ -121,7 +121,7 @@ Get-Content .\jegyzet.txt
 
 ## Nützliche Aliase
 
-In PowerShell häufige Kurzaliase:
+Häufige PowerShell-Aliase unter Windows; auf anderen Plattformen kann die Verfügbarkeit abweichen:
 
 | Alias | Originalbefehl  |
 | ----- | --------------- |
@@ -142,6 +142,33 @@ Wichtig:
 - Ausführung von Skripten
 - Verwaltung von Server- und Client-Rechnern
 
+## Ausführbares Beispiel: Objekte filtern und sortieren
+
+Aufgabe: Aus einer erfundenen Datenträgerliste werden die Volumes mit weniger als 10 GiB freiem Platz nach Namen ausgegeben. Das Beispiel funktioniert in PowerShell 5.1 und 7 und arbeitet nur im Arbeitsspeicher.
+
+```powershell
+$volumes = @(
+    [pscustomobject]@{ Name = 'DATA'; FreeGiB = 18 }
+    [pscustomobject]@{ Name = 'CACHE'; FreeGiB = 4 }
+    [pscustomobject]@{ Name = 'BACKUP'; FreeGiB = 8 }
+)
+$volumes |
+    Where-Object { $_.FreeGiB -lt 10 } |
+    Sort-Object Name |
+    ForEach-Object { '{0}: {1} GiB' -f $_.Name, $_.FreeGiB }
+```
+
+Erwartete Ausgabe:
+
+```text
+BACKUP: 8 GiB
+CACHE: 4 GiB
+```
+
+`|` reicht Objekte weiter, `$_` bezeichnet das gerade bearbeitete Objekt. Der Filter vergleicht Zahlenwerte, die Sortierung verwendet die Eigenschaft `Name`. Erst im letzten Schritt entsteht Text. Externe Kommandozeilenprogramme liefern dagegen häufig Textausgabe.
+
+Windows PowerShell 5.1 und die plattformübergreifende PowerShell 7 sind getrennte Ausgaben. `Get-Command ls` zeigt die tatsächliche Auflösung des Alias. Die früheren Dateibefehle sind illustrative Ausschnitte und setzen vorhandene Dateien und Verzeichnisse voraus. Vor Änderungen hilft bei unterstützten Befehlen `-WhatIf`, die beabsichtigte Aktion zu prüfen.
+
 ## Prüfungstaugliche Formulierung
 
 > PowerShell ist die objektbasierte Kommandozeilen-Shell und Automatisierungsumgebung von Microsoft.  
@@ -149,14 +176,6 @@ Wichtig:
 > die typischerweise in der Form Verb-Nomen benannt sind,
 > zum Beispiel `Get-Help` oder `Get-ChildItem`.  
 > Es kann für Dateiverwaltung, Informationsabfragen und Automatisierung administrativer Aufgaben verwendet werden.
-
-## Häufige Prüfungsfehler
-
-- PowerShell mit dem alten `cmd` als völlig identisch betrachten.
-- Nicht mindestens 4-5 Grundbefehle kennen.
-- Nur die Aliase kennen, nicht die Cmdlet-Namen.
-- Nicht wissen, wofür `Get-Help` da ist.
-- Vergessen, dass PowerShell objektbasiert ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -207,3 +226,9 @@ Wichtig:
    Verwendung: Löschen von Elementen.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: about_Pipelines](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines): Objekte in der Pipeline.
+
+Geprüft: `2026-10-14`.

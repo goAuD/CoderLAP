@@ -175,22 +175,49 @@ Viele Sprachen und Werkzeuge verwenden Präfixe:
 
 Das kann je nach Sprache variieren, aber die Grundidee ist dieselbe.
 
+## Derselbe Wert im Programm
+
+Ein Zahlensystem beschreibt, wie wir eine Zahl schreiben. Das eigenständige JavaScript
+erzeugt aus allen vier Literalen denselben Wert. Hexadezimal ist eine kürzere Schreibweise,
+kein Verfahren zur Datenkompression.
+
+<!-- example:run -->
+```javascript
+const values = [0b101010, 0o52, 42, 0x2A];
+console.log(values.join(" "));
+console.log(values.every(value => value === 42));
+console.log((42).toString(2));
+```
+
+Erwartete Ausgabe:
+
+```text
+42 42 42 42
+true
+101010
+```
+
+Die Präfixe helfen beim Lesen des Quellcodes; `toString(2)` liefert dagegen einen
+binären Text. Der Text `"101010"` und die Zahl `42` haben unterschiedliche Typen:
+Darstellung und gespeicherter Zahlenwert sind getrennte Fragen. Beim Umwandeln
+eines Texts in eine Zahl geben wir auch dessen Zahlensystem an.
+
+**Feste Breite:** Mit 8 Bit ohne Vorzeichen ist `255` der größte Wert.
+Für `255 + 1 = 256` brauchen wir bereits neun Binärstellen: `100000000`.
+Was bei einem Überlauf passiert, hängt von Sprache und Datentyp ab.
+JavaScripts allgemeiner Typ `Number` ist keine 8-Bit-Ganzzahl; diese Addition ergibt daher `256`.
+
+Quellen: [MDN: Numbers and strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
+und [MDN: Number.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+
 ## Prüfungstaugliche Formulierung
 
 > In der Informatik werden am häufigsten das Binär-, Oktal-, Dezimal- und Hexadezimalsystem verwendet.  
 > Das Binärsystem hat die Basis 2 und verwendet daher nur die Ziffern 0 und 1.  
 > Das Dezimalsystem hat die Basis 10, es ist das alltägliche Zahlensystem.  
 > Das Hexadezimalsystem hat die Basis 16 und ist deshalb wichtig,
-> weil es Binärdaten gut komprimiert:
+> weil es Binärdaten kurz darstellt:
 > eine Hexadezimalziffer entspricht 4 Bit.
-
-## Häufige Prüfungsfehler
-
-- Zu vergessen, dass hexadezimal auch `A-F` als Ziffern enthält.
-- Zu sagen, dass die Basis des Oktalsystems `16` ist.
-- Nicht zu wissen, dass das Binärsystem nur `0` und `1` verwendet.
-- Nicht zu erkennen, dass dieselbe Zahl in verschiedenen Zahlensystemen anders aussieht.
-- Nicht zu wissen, warum die hexadezimale Notation praktisch ist.
 
 ## Schnelle Selbstkontrolle
 

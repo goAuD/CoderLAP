@@ -53,19 +53,47 @@ De a leszármazott osztály:
 - módosíthatja
 - felülírhatja egyes elemek működését
 
+## Azonos művelet, felülírt megvalósítás
+
+Az alábbi Node.js-példában egy üzenet szöveggé alakítását specializáljuk:
+
+<!-- example:run -->
+
+```javascript
+class Message {
+  constructor(text) { this.text = text; }
+  render() { return this.text; }
+}
+class UrgentMessage extends Message {
+  render() { return `! ${super.render()}`; }
+}
+for (const message of [new Message("Ready"), new UrgentMessage("Save")]) {
+  console.log(message.render());
+}
+```
+
+```text
+Ready
+! Save
+```
+
+Az `extends` összekapcsolja az osztályokat. Az `UrgentMessage` örökli a konstruktor
+viselkedését, és felülírja a `render` metódust. A `super.render()` a szülő
+megvalósítását hívja. A ciklus ugyanúgy `render()`-t kér mindkettőtől, mégis eltérő
+eredményt kap: ez polimorf viselkedés.
+
+A hívó szerződése mindkét esetben megmarad: a `render` szöveget ad vissza.
+Öröklést akkor választunk, ha a leszármazott a szülő helyén értelmesen használható.
+Ha egy üzenethez naplózó szolgáltatás tartozik, az „van neki” kapcsolat, ezért
+inkább átadott komponenssel modellezzük. A közös kódsorok önmagukban még nem
+indokolnak öröklési hierarchiát.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az öröklés az objektumorientált programozás egyik alapelve, amely lehetővé teszi, hogy egy osztály tulajdonságokat  
 > és műveleteket vegyen át egy másik osztálytól.  
 > Ez támogatja az újrafelhasználhatóságot és a közös viselkedés kiemelését.  
 > Ugyanakkor a túlzott vagy rosszul megtervezett öröklés bonyolult és nehezen karbantartható rendszert eredményezhet.
-
-## Gyakori vizsgahibák
-
-- Az öröklést minden OOP-megoldás alapjának nevezni.
-- Nem megemlíteni az újrafelhasználhatóságot.
-- Kihagyni a lehetséges hátrányokat.
-- Az öröklést osztálypéldányosítással összekeverni.
 
 ## Gyors önellenőrzés
 
@@ -84,6 +112,11 @@ De a leszármazott osztály:
 5. Az egyik “is-a”, a másik inkább “has-a” jellegű
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes): extends, super és metódusfelülírás.
+
 
 1. MDN - Inheritance and the prototype chain  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain  

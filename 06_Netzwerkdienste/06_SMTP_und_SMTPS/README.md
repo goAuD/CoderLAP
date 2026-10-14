@@ -62,19 +62,24 @@ használatos.
 | IMAP | postafiók szinkronizálása |
 | POP3 | levelek letöltése |
 
+## Kidolgozott beállítás és válaszértelmezés
+
+Egy kliens a szolgáltató által megadott beküldési kiszolgálót használja. `465`-ön a TLS-kézfogás azonnal kezdődik, `587`-en a `STARTTLS` emeli TLS-re a kapcsolatot. A `587` tehát szintén lehet titkosított; a kliensben kötelezővé tesszük a sikeres TLS-t, nem engedünk csendes visszaesést védtelen küldésre. A felhasználó hitelesítése külön lépés.
+
+| Szemléltető SMTP-válasz | Jelentés és következő lépés |
+| --- | --- |
+| `250` | a parancs sikeres; a teljes üzenet átvétele után kézbesítési felelősség átvétele |
+| `451` | átmeneti feldolgozási hiba; későbbi újrapróbálás lehet indokolt |
+| `550` | végleges elutasítás; a részletes üzenetet és címzést ellenőrizzük |
+
+A `250` jelentése a parancs helyétől is függ, és nem olvasási visszaigazolás. Szerverek között tipikusan `25`-ös porton történik a továbbítás, ott is használható STARTTLS. A küldő fiók védelme és a nyílt továbbítás (`open relay`) megakadályozása külön feladat az átviteli titkosítás mellett.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az SMTP a levelek küldésére és továbbítására szolgáló protokoll.  
 > Kliensoldali levélbeküldésre ma gyakran a `587` portot használják,
 > titkosított submissionhöz pedig elterjedt a `465` port is.  
 > Az SMTP nem a levelek olvasására való, arra tipikusan IMAP vagy POP3 szolgál.
-
-## Gyakori vizsgahibák
-
-- Az SMTP-t olvasási protokollnak mondani.
-- A `25`, `587` és `465` port szerepét összekeverni.
-- Azt hinni, hogy a `SMTPS` minden kontextusban külön protokoll.
-- Elfelejteni, hogy ma a titkosított beküldés az elvárt.
 
 ## Gyors önellenőrzés
 
@@ -111,3 +116,10 @@ használatos.
    Használat: hivatalos portregiszter a `25`, `465` és `587` portokhoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 5321: SMTP](https://www.rfc-editor.org/rfc/rfc5321.html): MX-kézbesítés és válaszosztályok.
+- [RFC 8314: TLS for email](https://www.rfc-editor.org/rfc/rfc8314.html): implicit TLS, STARTTLS és tanúsítvány-ellenőrzés.
+
+Ellenőrizve: `2026-10-14`.

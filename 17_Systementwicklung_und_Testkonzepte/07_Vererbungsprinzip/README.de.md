@@ -53,19 +53,47 @@ Aber die abgeleitete Klasse kann:
 - ändern
 - die Funktionsweise einzelner Elemente überschreiben
 
+## Gleiche Operation, überschriebene Umsetzung
+
+Im folgenden Node.js-Beispiel spezialisieren wir die Umwandlung einer Nachricht in Text:
+
+<!-- example:run -->
+
+```javascript
+class Message {
+  constructor(text) { this.text = text; }
+  render() { return this.text; }
+}
+class UrgentMessage extends Message {
+  render() { return `! ${super.render()}`; }
+}
+for (const message of [new Message("Ready"), new UrgentMessage("Save")]) {
+  console.log(message.render());
+}
+```
+
+```text
+Ready
+! Save
+```
+
+`extends` verbindet die Klassen. `UrgentMessage` übernimmt das Verhalten des
+Konstruktors und überschreibt `render`. `super.render()` ruft die Umsetzung
+der Elternklasse auf. Die Schleife ruft bei beiden Objekten gleichartig
+`render()` auf und erhält unterschiedliche Ergebnisse: Das ist polymorphes Verhalten.
+
+Der Vertrag gegenüber dem Aufrufer bleibt erhalten: `render` liefert Text.
+Vererbung wählen wir, wenn die abgeleitete Klasse sinnvoll anstelle der
+Elternklasse einsetzbar ist. Gehört zu einer Nachricht ein Protokollierungsdienst,
+ist das eine „hat eine“-Beziehung; dafür eignet sich eher eine übergebene
+Komponente. Gemeinsame Codezeilen allein rechtfertigen noch keine Vererbungshierarchie.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Vererbung ist eines der Grundprinzipien der objektorientierten Programmierung, das es ermöglicht, dass eine  
 > Klasse Eigenschaften und Operationen von einer anderen Klasse übernimmt.  
 > Dies unterstützt die Wiederverwendbarkeit und das Herausziehen gemeinsamen Verhaltens.  
 > Allerdings kann übermäßige oder schlecht geplante Vererbung zu einem komplexen und schwer wartbaren System führen.
-
-## Häufige Prüfungsfehler
-
-- Vererbung als Grundlage jeder OOP-Lösung bezeichnen.
-- Die Wiederverwendbarkeit nicht erwähnen.
-- Die möglichen Nachteile auslassen.
-- Vererbung mit Klasseninstanziierung verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,6 +112,11 @@ Aber die abgeleitete Klasse kann:
 5. Das eine ist "is-a", das andere eher "has-a"
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes): extends, super und Überschreiben von Methoden.
+
 
 1. MDN - Inheritance and the prototype chain  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain  

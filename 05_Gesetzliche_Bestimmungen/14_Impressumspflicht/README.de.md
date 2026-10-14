@@ -28,7 +28,9 @@ Das ist besonders wichtig bei:
 Auf Prüfungsniveau sollte man vor allem diese kennen:
 
 - **ECG § 5**
-- **Mediengesetz § 24**
+- **Mediengesetz § 25**: Offenlegung bei Websites
+- **UGB § 14**: Angaben firmenbuchlich eingetragener Unternehmen
+- **Mediengesetz § 24**: Impressum etwa bei wiederkehrenden elektronischen Newslettern
 
 Daher ist das Impressum nicht nur „eine Zeile Kontakt", sondern eine rechtliche Verpflichtung.
 
@@ -38,7 +40,7 @@ Die konkreten Pflichtangaben hängen auch von der Tätigkeit und der Rechtsform 
 
 - Name oder Firmenname
 - Adresse / Sitz
-- E-Mail-Adresse oder andere direkte Kontaktmöglichkeit
+- Angaben zur unmittelbaren Kontaktaufnahme, bei ECG § 5 einschließlich E-Mail-Adresse
 - Firmenbuchnummer
 - Firmenbuchgericht
 - Rechtsform
@@ -65,6 +67,33 @@ Typische Lösung:
 | Datenschutz / Privacy | Datenschutzinformation |
 | AGB | Allgemeine Geschäftsbedingungen |
 
+## Wie stellen wir die Angaben einer Website zusammen?
+
+Zuerst klären wir Betreiber, Rechtsform und Tätigkeit.
+Bei einem kommerziellen Online-Diensteanbieter treten zu Name, geografischer Anschrift
+und Kontaktdaten nach ECG § 5 beispielsweise Register-, Aufsichts- oder Berufsangaben hinzu,
+sofern sie auf den konkreten Anbieter zutreffen.
+
+Die **Offenlegung** nach Mediengesetz § 25 macht den Medieninhaber transparent.
+Für eine einfache persönliche oder betriebliche Präsentation, die nicht zur Beeinflussung
+der öffentlichen Meinungsbildung geeignet ist, sieht das Gesetz einen geringeren Umfang vor.
+Das ist keine allgemeine Befreiung für alle privaten oder kostenlosen Websites.
+
+Beispiel: Bei der Website einer eingetragenen Werkstatt prüfen wir die Diensteanbieterangaben
+nach ECG, die Unternehmensangaben nach UGB und die anwendbaren medienrechtlichen Angaben.
+Sie können auf einer übersichtlichen Impressumsseite stehen; die einzelnen gesetzlichen
+Pflichten bleiben trotzdem eigenständig. Die Datenschutzerklärung erläutert dagegen
+die Verarbeitung personenbezogener Daten.
+
+Bei der Abnahme öffnen wir den Impressumslink auch mobil und mit der Tastatur.
+Eine schwebende Schaltfläche darf ihn nicht verdecken; er muss von allen betroffenen Seiten
+erreichbar sein.
+
+Quellen: [ECG § 5](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001703&Paragraf=5),
+[Mediengesetz § 25](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000719&Paragraf=25),
+[UGB § 14](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001702&Paragraf=14).
+Geprüft: `2026-10-14`.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Impressum bedeutet die verpflichtende Veröffentlichung
@@ -73,14 +102,8 @@ Typische Lösung:
 > Sein Zweck ist die Transparenz und die Sicherstellung,
 > dass der Nutzer weiß, wer der Betreiber
 > oder die für den Inhalt verantwortliche Person ist.
-> In Österreich sind für die Impressumspflicht insbesondere das ECG § 5 und das Mediengesetz § 24 relevant.
-
-## Häufige Prüfungsfehler
-
-- Das Impressum mit der Datenschutzinformation zu verwechseln.
-- Zu glauben, eine E-Mail-Adresse allein sei immer ausreichend.
-- Zu vergessen, dass mehrere Rechtsvorschriften zusammen die Pflicht ergeben können.
-- Die leichte und direkte Erreichbarkeit nicht zu erwähnen.
+> Bei Websites sind besonders ECG § 5 und Mediengesetz § 25 relevant;
+> je nach Unternehmen kommen weitere Vorschriften wie UGB § 14 hinzu.
 
 ## Schnelle Selbstkontrolle
 
@@ -95,7 +118,7 @@ Typische Lösung:
 1. Transparenz und Identifizierbarkeit des Verantwortlichen
 2. Name / Firmenname, Adresse, E-Mail oder Unternehmensdaten
 3. Nein
-4. ECG § 5 und Mediengesetz § 24
+4. Bei Websites besonders ECG § 5 und Mediengesetz § 25; der Anwendungsbereich ist jeweils zu prüfen
 5. An einer leicht und direkt erreichbaren Stelle
 
 ## Quellen
@@ -110,6 +133,6 @@ Typische Lösung:
 
 3. RIS - Mediengesetz § 24
    https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000719&Paragraf=24&Uebergangsrecht=
-   Verwendung: österreichische Rechtsgrundlage der Impressumspflicht für elektronische Medien.
+   Verwendung: insbesondere Impressumsangaben wiederkehrender elektronischer Medien.
 
 Abgerufen: `2026-04-08`

@@ -46,6 +46,14 @@ Ha a tesztelés a folyamat vége felé történik, a problémák kijavítása k�
 
 Tehát nem rossz modell, csak nem minden helyzetben ideális.
 
+## Késői felismerés és korábbi bizonyíték
+
+Egy ügyfél papíron elfogadta a „havi jelentés” követelményt. Három hónappal később a bemutatón derül ki, hogy az ő hónapja nem naptári hónap, hanem elszámolási időszak. A kész adatlekérdezés, képernyő és teszt egyszerre módosulhat. A probléma oka a korábban tisztázatlan üzleti fogalom.
+
+Ezt már a követelményszakaszban enyhítheti két konkrét mintajelentés, egy korai prototípus és az ügyféllel ellenőrzött időszakhatár. A vízesés jellegű munka is használhat ilyen korai visszajelzést. A lényeg, hogy a fázis lezárását valódi megértés támassza alá.
+
+Szabályozott környezetben a bizonyíték és a nyomon követhetőség kötelező lehet, de ez önmagában nem ír elő kizárólag vízesésmodellt. A választott folyamatnak a követelmények változását és az ellenőrizhető megfelelést egyaránt kezelnie kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A vízesésmodell egyik fő problémája a merev, lineáris felépítés.  
@@ -53,13 +61,6 @@ Tehát nem rossz modell, csak nem minden helyzetben ideális.
 > és a hibák vagy félreértések gyakran csak későn derülnek ki,
 > amikor a javítás már drágább.  
 > Emiatt bizonytalan vagy gyorsan változó projektekben sokszor kevésbé előnyös, mint az iteratív vagy agilis megközelítések.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy a vízesésmodell mindig rossz.
-- Nem megemlíteni a változáskezelés nehézségét.
-- Kihagyni a késői visszajelzés problémáját.
-- Nem tenni különbséget stabil és változó projektek között.
 
 ## Gyors önellenőrzés
 
@@ -78,6 +79,11 @@ Tehát nem rossz modell, csak nem minden helyzetben ideális.
 5. Mert a működő eredmény később jelenik meg
 
 ## Források
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Korai tesztelés és különböző fejlesztési életciklusok.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Waterfall methodology  
    https://www.atlassian.com/agile/project-management/waterfall-methodology  

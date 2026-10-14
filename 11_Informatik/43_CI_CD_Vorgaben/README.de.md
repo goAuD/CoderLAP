@@ -47,6 +47,40 @@ Wenn es keine Governance gibt, dann:
 - Auch das Zurückrollen muss geplant sein.
 - Die Regeln sollen klar und konsequent eingehalten werden.
 
+## Von konkreten Vorgaben zu überprüfbaren Nachweisen
+
+Auch ein kleines Team kann kurze, überprüfbare Regeln haben. Das folgende
+Beispiel beschreibt mögliche Vorgaben, nicht die derzeitigen Einstellungen
+dieses Repositorys:
+
+| Vorgabe | Woran lässt sich ihre Erfüllung erkennen? |
+|---|---|
+| Änderungen über PRs | Commit und zugehöriges Review sind nachvollziehbar |
+| verpflichtender Test und Build | erfolgreiches Ergebnis gehört zur tatsächlich zusammenzuführenden Version |
+| bekannte Abhängigkeits- und Werkzeugversionen | Lockfile und festgelegte Laufzeit |
+| eingeschränkter Produktivzugriff | nur erlaubter Branch und Deployment-Identität haben Zugriff |
+| nachvollziehbare Version | Commit, Artefakt, Zeitpunkt und Zielumgebung sind erfasst |
+| geplante Wiederherstellung | Funktionsprüfung und erprobtes Wiederherstellungsverfahren |
+
+**Auch CI führt Code aus.** Tests eines externen PR dürfen keine produktiven
+Geheimnisse oder Schreibzugriff auf den Server erhalten. Nur der Deployment-
+Schritt erhält die dafür nötigen minimalen Rechte. Externe GitHub Actions
+lassen sich auf eine vollständige Commit-SHA festlegen. Das fixiert den Code,
+ersetzt aber weder dessen Vertrauensprüfung noch spätere Updates. PR-Titel
+und anderer externer Text bleiben Daten und werden nicht ungeprüft in Shellbefehle
+eingesetzt.
+
+Hinter einer grünen Prüfung muss wirkliche Arbeit stehen: Wir prüfen, ob Tests
+tatsächlich liefen, durch Bedingungen übersprungen wurden oder Fehler ignoriert
+wurden. Checkname, administrative Umgehungsmöglichkeiten und wirksame Regeln
+bestimmen gemeinsam den Schutz. Logs enthalten notwendige Diagnosedaten,
+keine Passwörter oder Tokens.
+
+Die Vorgaben richten sich nach dem Projektrisiko. Eine statische Lernseite
+und ein Zahlungsdienst brauchen nicht dieselben Deployment-Freigaben. Bei
+beiden muss aber verständlich bleiben, was geprüft wurde, was ausgeliefert
+wurde und wie sich ein Problem beheben lässt.
+
 ## Prüfungstaugliche Formulierung
 
 > CI/CD-Vorgaben sind Regeln,
@@ -58,13 +92,6 @@ Wenn es keine Governance gibt, dann:
 > Umgebungsschutz, sichere Verwaltung von Geheimnissen
 > und Rollback-Möglichkeit.
 > Diese Regeln sind deshalb wichtig, weil Automatisierung mit Kontrolle und Qualitätssicherung verbunden werden muss.
-
-## Häufige Prüfungsfehler
-
-- Denken, dass eine Pipeline allein keine Regeln braucht.
-- Branch Protection oder Status Checks nicht erwähnen.
-- Nicht über die Rolle von Secrets und Approval sprechen.
-- Rollback und Protokollierung weglassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +110,12 @@ Wenn es keine Governance gibt, dann:
 5. Weil es ein Sicherheitsrisiko ist
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [GitHub: Secure use reference](https://docs.github.com/en/actions/reference/security/secure-use): Minimale Rechte, PR-Code, Geheimnisse und fixierte Action-Versionen.
+- [GitHub: Protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches): Verpflichtende Prüfungen und Umgehungsregeln.
+
 
 1. GitHub Docs - About protected branches
    https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches

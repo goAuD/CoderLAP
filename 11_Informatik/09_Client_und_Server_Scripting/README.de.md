@@ -59,7 +59,7 @@ Typische Technologien:
 4. Der Server sendet HTML, JSON oder eine andere Antwort.
 5. Der clientseitige Code zeigt dies an oder verarbeitet es weiter.
 
-## Warum braucht man beides?
+## Wie werden die Aufgaben verteilt?
 
 Weil die Rollen unterschiedlich sind.
 
@@ -92,6 +92,29 @@ Weil die Rollen unterschiedlich sind.
 - Eine gute Webanwendung nutzt in der Regel beide Seiten.
 - Das Gleichgewicht zwischen Benutzererlebnis und Sicherheit ist wichtig.
 
+## Die Vertrauensgrenze bei einer Bestellung
+
+Die Grenze zwischen Client und Server ist zugleich eine Vertrauensgrenze.
+Benutzer können JavaScript und ausgehende Anfragen in ihrem eigenen Browser
+ändern. Deshalb erhalten die beiden Seiten unterschiedliche Aufgaben:
+
+| Client sendet oder erledigt | Server prüft oder berechnet |
+|---|---|
+| Produkt-ID und Menge | existierendes Produkt, erlaubte Menge und Bestand |
+| gewählte Versandart | zulässige Versandart und ihre Kosten für die Bestellung |
+| schnelle Feldprüfung und Rückmeldung | sämtliche Eingaben und Geschäftsregeln |
+| Anfrage innerhalb einer Sitzung | Identität und Berechtigung des angemeldeten Benutzers |
+
+Der Server berechnet den Gesamtpreis aus eigenen Daten. Er vertraut nicht einem
+übermittelten Wert wie „admin“ oder „price“. Die Antwort kann HTML oder JSON
+sein. Bei JSON muss der Browser die Daten anschließend noch darstellen.
+
+Die Sprache JavaScript legt den Ausführungsort nicht fest: DOM-Code läuft im
+Browser, Node.js-Code etwa auf einem Server oder als lokales Werkzeug. Auch ein
+herkömmliches HTML-Formular kann ohne clientseitiges JavaScript Daten an einen
+Server senden. Der Umfang des clientseitigen Codes ergibt sich aus der
+benötigten Benutzerinteraktion.
+
 ## Prüfungstaugliche Formulierung
 
 > Clientseitiges Scripting läuft im Browser des Benutzers
@@ -101,13 +124,6 @@ Weil die Rollen unterschiedlich sind.
 > und übernimmt die Geschäftslogik, die Datenverwaltung,
 > die Authentifizierung und die Erzeugung der Antwort.  
 > Eine moderne Webanwendung verwendet typischerweise beide Ansätze gemeinsam.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass jedes JavaScript nur clientseitig sein kann.
-- Clientseitige Validierung als ausreichende Sicherheitslösung betrachten.
-- Die dynamische Seite ausschließlich als serverseitigen Begriff bezeichnen.
-- Die Datenbank- und Berechtigungsverwaltung auf der Serverseite nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -126,6 +142,12 @@ Weil die Rollen unterschiedlich sind.
 5. Ja
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [OWASP: Business Logic Security](https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html): serverseitige Vertrauensgrenze.
+- [MDN: Server-side introduction](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction): Aufgabenteilung zwischen Server und Client.
+
 
 1. MDN - Introduction to the server side  
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction  

@@ -63,6 +63,18 @@ Ez lehet:
 - a story board ne csak szép legyen, hanem érthető is
 - egyik sem helyettesíti teljesen a részletes specifikációt
 
+## Egy story elfogadási feltételekkel
+
+„Tanulóként szeretném témakörre szűrni a kérdéseket, hogy a következő órára célzottan gyakorolhassak.” Ez jó beszélgetésindító, de tisztázni kell a viselkedést is:
+
+- egy témakör kijelölése után csak annak kérdései kerülnek a gyakorlásba;
+- több témakörnél az ezekhez tartozó kérdések együtt szerepelnek;
+- üres kijelölésnél érthető üzenet jelenik meg, és nem indul üres kvíz.
+
+A storyboard négy képkockája lehet: megnyitás mobilon, témaválasztás, a kérdésszám ellenőrzése, gyakorlás indítása. A történet megmutatja a helyzetet és a sorrendet, az elfogadási feltételek pedig tesztelhetővé teszik a szabályokat.
+
+A user story bevett technika, a Scrum azonban nem követeli meg ezt a szövegformát. Technikai karbantartási feladat is lehet Product Backlog-elem, mesterséges felhasználói történet nélkül.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A user story egy rövid,
@@ -70,13 +82,6 @@ Ez lehet:
 > amely azt írja le, hogy ki mit szeretne és milyen célból.  
 > A story board ezzel szemben vizuálisan mutatja be a felhasználói folyamatot vagy egy használati helyzetet.  
 > A kettő együtt segíti a követelmények megértését, a kommunikációt és a tervezést.
-
-## Gyakori vizsgahibák
-
-- A user storyt technikai feladatleírásként kezelni.
-- A story boardot összekeverni a programkóddal vagy a wireframe-mel.
-- Nem megemlíteni a felhasználói nézőpontot.
-- Azt állítani, hogy ezek önmagukban teljes specifikációk.
 
 ## Gyors önellenőrzés
 
@@ -95,6 +100,11 @@ Ez lehet:
 5. Mert közös megértést adnak
 
 ## Források
+
+- [Agile Alliance: User Stories](https://agilealliance.org/glossary/user-stories/)  
+  Felhasználói igény, közös pontosítás és elfogadási feltételek.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - User stories with examples and a template  
    https://www.atlassian.com/agile/project-management/user-stories  

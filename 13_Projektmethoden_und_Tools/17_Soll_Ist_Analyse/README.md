@@ -42,18 +42,19 @@ Majd megkeresi:
 | hibakeresés | konkrét probléma megtalálása |
 | Soll-Ist-Analyse | jelen és célállapot összehasonlítása |
 
+## Mérhető eltérésből intézkedési terv
+
+Egy műhelyben egy eszköz megtalálása átlagosan 6 perc. A cél legfeljebb 2 perc ugyanolyan feladatoknál. A mérés szerint az idő a három külön táblázat összevetésére megy el. A 4 perces eltérés tehát nem bizonyít lassú szervert; a szétszórt nyilvántartás lehet a fő ok.
+
+Az intézkedés egy közös kereshető lista, adatgazdával és azonosítóval. Megnevezzük a felelőst, a határidőt, az adattisztítás szükségletét és az újramérés módját. A bevezetés után ugyanazokat a mintafeladatokat mérjük újra.
+
+A Soll-Ist összehasonlítás projektkövetésben is használható. Például a terv szerinti 12 és a ténylegesen elfogadott 9 munkacsomag között 3 az eltérés. Különböző méretű csomagoknál ez önmagában még nem jelenti, hogy a projekt pontosan 75%-ban kész.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Soll-Ist-Analyse során összehasonlítjuk a jelenlegi állapotot az elérni kívánt célállapottal.  
 > Az elemzés célja az eltérések felismerése, a hiányosságok azonosítása és a szükséges intézkedések meghatározása.  
 > Ez fontos alapja lehet a projekttervezésnek és a fejlesztési döntéseknek.
-
-## Gyakori vizsgahibák
-
-- Az `Ist` és a `Soll` fogalmát felcserélni.
-- Nem megemlíteni az eltérés elemzését.
-- A módszert egyszerű hibajegyre szűkíteni.
-- Kihagyni, hogy ez tervezési alap is lehet.
 
 ## Gyors önellenőrzés
 
@@ -72,6 +73,11 @@ Majd megkeresi:
 5. Nem csak hibát keres, hanem célállapotot hasonlít össze
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Munkaterv és tényleges előrehaladási jelentés összehasonlítása.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian Confluence - Gap analysis template  
    https://www.atlassian.com/software/confluence/templates/gap-analysis  

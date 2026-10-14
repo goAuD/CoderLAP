@@ -55,19 +55,45 @@ Das kann bei der Prüfung Bonuspunkte bringen, wenn man es gut formuliert.
 | Rolle | zur Laufzeit veränderliche Daten | feste Werte oder fixierte Bindung |
 | Lesbarkeit | allgemein | verdeutlicht die Absicht |
 
+## Bindung und Objektzustand getrennt verfolgen
+
+Aufgabe: Wir zählen einen Versuch und tragen ein abgeschlossenes Thema in ein
+Profil ein. Im Node.js-Beispiel erlaubt `let` eine Neuzuweisung; `const` fixiert die Bindung.
+
+<!-- example:run -->
+
+```javascript
+let attempts = 0;
+attempts += 1;
+const profile = { name: "Ada", completed: 0 };
+profile.completed += 1;
+console.log(attempts, profile.completed);
+const settings = Object.freeze({ maxAttempts: 3 });
+console.log(settings.maxAttempts, Object.isFrozen(settings));
+```
+
+```text
+1 1
+3 true
+```
+
+`profile` verweist weiterhin auf dasselbe Objekt, während sich dessen Eigenschaft
+`completed` ändert. `const` macht dieses Objekt also nicht unveränderlich. Ein
+neues Objekt derselben Bindung `profile` zuzuweisen ist hingegen nicht erlaubt.
+Wenn zwei Variablen auf dasselbe Objekt verweisen, sehen beide die Änderung einer Eigenschaft.
+
+`Object.freeze` friert die eigenen Eigenschaften des angegebenen Objekts ein.
+Das wirkt **flach**: Darin referenzierte weitere Objekte müssen gesondert
+behandelt werden. Eine Konstante im Quelltext ist außerdem kein Geheimnis:
+Ein an den Browser ausgelieferter API-Schlüssel wird durch `const` nicht vor
+dem Besucher geschützt.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine Variable ist ein Programmierelement, dessen Wert sich während der Programmausführung ändern kann.  
 > Eine Konstante hingegen ist ein Element, dessen Wert oder Bindung nicht geändert werden soll.  
 > Die Verwendung von Konstanten erhöht die Lesbarkeit des Codes und verringert das Risiko versehentlicher Fehler, obwohl
 > das genaue Verhalten je nach Sprache unterschiedlich sein kann.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, dass eine Konstante immer ein vollständig unveränderliches Objekt bedeutet.
-- Nicht zu erwähnen, dass das Verhalten je nach Sprache unterschiedlich sein kann.
-- Die Begriffe Variable und Datentyp zu vermischen.
-- Keine Beispiele für feste Werte nennen zu können.
 
 ## Schnelle Selbstkontrolle
 
@@ -86,6 +112,11 @@ Das kann bei der Prüfung Bonuspunkte bringen, wenn man es gut formuliert.
 5. Für feste Konfigurations- oder konstante Werte
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze): flache Unveränderlichkeit.
+
 
 1. MDN - const  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const  

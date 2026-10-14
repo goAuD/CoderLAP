@@ -57,6 +57,14 @@ Vorteile können sein:
 | IoT | allgemeiner die Welt vernetzter Geräte |
 | Automatisierung | nur ein Teil von Industrie 4.0 |
 
+## Vom Sensor zur Wartungsentscheidung
+
+Ein Sensor an einer Produktionslinie misst zunehmende Vibration. Die lokale Steuerung übermittelt den Messwert, ein Analysesystem vergleicht ihn mit dem bisherigen Zustand und die Instandhaltung erhält einen Arbeitsauftrag. Ziel ist ein geplanter Stillstand vor einem Lagerschaden. Ein digitaler Zwilling kann dazu ein durch Datenverbindung aktualisiertes digitales Modell des physischen Geräts bereitstellen; eine reine 3D-Zeichnung besitzt diese laufende Verbindung noch nicht.
+
+`OT` bezeichnet Technik zur Überwachung und Steuerung physischer Prozesse. Verfügbarkeit und menschliche Sicherheit sind hier besonders wichtig. Ein Steuerungsupdate stimmen wir deshalb mit der Produktion ab, testen es vorher und regeln Zugriffe aus dem Büronetz.
+
+Auch bei Internetausfall kann ein sicherer lokaler Betrieb erforderlich sein. Der Nutzen von Industrie 4.0 zeigt sich in messbaren Produktionsergebnissen, etwa weniger ungeplanten Stillständen.
+
 ## Prüfungstaugliche Formulierung
 
 > Industrie 4.0 bezeichnet die Digitalisierung, Vernetzung und datengetriebene Optimierung von Fertigungsprozessen.  
@@ -65,13 +73,6 @@ Vorteile können sein:
 > Der Vorteil liegt in der Effizienz und Flexibilität,
 > es bedeutet aber auch sicherheitstechnische,
 > integrations- und organisatorische Herausforderungen.
-
-## Häufige Prüfungsfehler
-
-- Industrie 4.0 einfach als Automatisierung zu bezeichnen.
-- Die Daten- und Netzwerkverbindung nicht zu erwähnen.
-- Mit IoT zu verwechseln.
-- Die Risiken und organisatorischen Konsequenzen auszulassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,6 +91,14 @@ Vorteile können sein:
 5. Nein
 
 ## Quellen
+
+- [NIST SP 800-82 Rev. 3](https://csrc.nist.gov/pubs/sp/800/82/r3/final)  
+  OT, Betriebssicherheit und besondere Verfügbarkeitsanforderungen.
+
+- [NIST: Digital Twins, Essential Elements](https://www.nist.gov/digital-twins/essential-elements)  
+  Abgrenzung des dynamischen, mit realen Daten verbundenen digitalen Zwillings vom statischen Modell.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Plattform Industrie 4.0 - Industrie 4.0  
    https://www.plattform-i40.de/IP/Redaktion/EN/Dossiers/industrie40.html  

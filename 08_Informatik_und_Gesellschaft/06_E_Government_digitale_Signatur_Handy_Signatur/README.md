@@ -24,15 +24,9 @@ Példák:
 - elektronikus kézbesítés
 - digitális igazolások
 
-## Mi a digitális / elektronikus aláírás?
+## Mi az elektronikus aláírás?
 
-Az elektronikus aláírás olyan technikai megoldás, amely:
-
-- egy személyhez köthető
-- digitális dokumentumhoz kapcsolódik
-- bizonyos esetekben jogilag is nagyon erős bizonyító erővel bír
-
-Az EU-ban ezt az `eIDAS` rendelet szabályozza.
+Az elektronikus aláírás olyan elektronikus adat, amelyet más elektronikus adathoz csatolnak vagy logikailag hozzárendelnek, és amelyet az aláíró aláírásra használ. Nem minden formája használ kriptográfiát. A követelményeket és a joghatást az EU-ban az `eIDAS` rendelet szabályozza.
 
 ## Mi volt a Handy-Signatur?
 
@@ -73,14 +67,22 @@ Ez gyakorlatban azt jelenti:
 
 - digitális dokumentumot lehet hivatalos jelleggel aláírni
 
-## Ne keverd össze
+## A fogalmak kapcsolata
 
 | Fogalom | Mit jelent? |
 |---|---|
 | e-government | online hatósági ügyintézés |
-| elektronikus aláírás | digitális aláírási mechanizmus |
+| elektronikus aláírás | az aláíró által aláírásra használt, más elektronikus adathoz kapcsolt adat |
 | ID Austria | osztrák digitális azonosítási / aláírási rendszer |
 | Handy-Signatur | korábbi, már leváltott rendszer |
+
+## Azonosítás és aláírás két külön feladat
+
+Az azonosítás azt igazolja a szolgáltatásnak, ki jelentkezik be. Az aláírás egy konkrét nyilatkozathoz vagy dokumentumhoz kapcsolódik. Az elektronikus aláírás jogi gyűjtőfogalom; a digitális aláírás kriptográfiai technika, amellyel többek között a dokumentum változatlansága ellenőrizhető.
+
+Az eIDAS megkülönbözteti az elektronikus, a fokozott biztonságú és a minősített elektronikus aláírást. A 25. cikk szerint a minősített elektronikus aláírás joghatása egyenértékű a kézzel írt aláíráséval. Egy egyszerű elektronikus aláírás joghatását sem lehet pusztán elektronikus formája miatt elutasítani, de ettől még nem lesz minősített.
+
+Példa: aláírás előtt elolvasod a végleges PDF-et, majd az erre szolgáló funkcióval aláírod. A fogadó fél az aláírás érvényességét és a dokumentum sértetlenségét ellenőrzi. Az aláírás képének bemásolása nem azonos ezzel a kriptográfiai ellenőrzéssel. Külön alaki követelményhez kötött ügyletnél az eljárás szabályait is ellenőrizni kell.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -90,20 +92,13 @@ Ez gyakorlatban azt jelenti:
 > `2023. december 5-én` az ID Austria váltotta fel,
 > ezért ma már az ID Austria az aktuális megoldás.
 
-## Gyakori vizsgahibák
-
-- A Handy-Signaturt jelenlegi rendszerként bemutatni.
-- Nem megemlíteni az ID Austria-t.
-- Az e-governmentet összekeverni pusztán egy weboldallal.
-- Az elektronikus aláírást automatikusan minden sima digitális névbeírással azonosítani.
-
 ## Gyors önellenőrzés
 
 1. Mi az e-government?
 2. Mire való az elektronikus aláírás?
 3. Mi váltotta fel a Handy-Signaturt?
 4. Mikor váltotta fel?
-5. Mi a jelenlegi hivatalos állapot 2026. április 8-án?
+5. Melyik aláírás joghatása egyenértékű a kézzel írt aláíráséval az eIDAS szerint?
 
 ## Rövid válaszok az önellenőrzéshez
 
@@ -111,9 +106,17 @@ Ez gyakorlatban azt jelenti:
 2. Digitális dokumentumok joghatású aláírására
 3. Az ID Austria
 4. `2023. december 5-én`
-5. Az aktuális rendszer az ID Austria
+5. A minősített elektronikus aláírásé, az eIDAS 25. cikke szerint
 
 ## Források
+
+- [EUR-Lex: eIDAS, konszolidált szöveg / konsolidierte Fassung](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A02014R0910-20240520)  
+  3., 25. és 26. cikk: aláírások fogalma és joghatása.
+
+- [ID Austria: Umstellung](https://www.id-austria.gv.at/de/registrieren/uebersicht/von-handy-signatur-umsteigen)  
+  A Handy-Signatur utódjára váltás hivatalos oldala.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. oesterreich.gv.at - E-Government  
    https://www.oesterreich.gv.at/en/themen/egovernment_moderne_verwaltung  

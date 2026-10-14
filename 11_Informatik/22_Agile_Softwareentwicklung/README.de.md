@@ -63,6 +63,32 @@ Ein agiles Team arbeitet typischerweise:
 - Schnelligkeit darf nicht auf Kosten der Qualität gehen.
 - Agiles Arbeiten erfordert disziplinierte Teamarbeit.
 
+## Aus einem Lernbedarf wird ein kleiner nutzbarer Schritt
+
+Beispiel einer User Story: „Als lernende Person möchte ich nur noch nicht
+gelernte Themen sehen, damit ich die nächste Übung auswählen kann.“ Die erste
+lieferbare Fassung ist kein vollständiges Motivationssystem, sondern eine
+funktionierende Markierung mit Filter.
+
+Dazu formulieren wir konkrete Akzeptanzkriterien:
+
+- ein als gelernt markiertes Thema verschwindet aus der Ansicht „noch offen“;
+- die Markierung ist rückgängig zu machen;
+- eine leere Ergebnisliste erhält eine verständliche Rückmeldung;
+- die Funktion ist mobil und per Tastatur bedienbar.
+
+Die **Definition of Done** ist davon getrennt eine gemeinsame Qualitätsvereinbarung
+für mehrere Aufgaben, etwa geprüfter Code, bestandene relevante Tests und
+aktualisierte Benutzungshinweise. Im Review bewerten wir das nutzbare Ergebnis
+mit Lernenden. In der Retrospektive verbessern wir die Zusammenarbeit, etwa
+indem mobile Prüfungen früher erfolgen.
+
+Zeigt sich Bedarf an Wiederholungen, wird der Backlog entsprechend neu geordnet.
+Änderungsgrund und Akzeptanzkriterien bleiben dokumentiert. Das Manifest betont
+funktionierende Software und Zusammenarbeit und erkennt zugleich den Wert von
+Dokumentation und Planung an. Sprints gehören zu Scrum; agiles Arbeiten kann
+auch als kontinuierlicher Arbeitsfluss organisiert werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Agile Softwareentwicklung ist ein flexibler Entwicklungsansatz,
@@ -72,13 +98,6 @@ Ein agiles Team arbeitet typischerweise:
 > dass das Team schnell auf sich ändernde Anforderungen reagieren kann
 > und dabei regelmäßig funktionierende Software liefert.
 > Zur agilen Entwicklung gehören mehrere konkrete Frameworks, zum Beispiel Scrum oder Kanban.
-
-## Häufige Prüfungsfehler
-
-- Agil als "systemlose Improvisation" statt als Methode bezeichnen.
-- Scrum und agil gleichsetzen.
-- Die Rolle von Feedback und Iteration nicht erwähnen.
-- Das vollständige Weglassen von Dokumentation als agiles Arbeiten bezeichnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -97,6 +116,12 @@ Ein agiles Team arbeitet typischerweise:
 5. Weil es hilft, rechtzeitig zu korrigieren
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Agile Manifesto](https://agilemanifesto.org/): Werte, Dokumentation und Veränderung.
+- [Scrum Guide](https://scrumguides.org/scrum-guide.html): Unterscheidung von DoD, Review und Retrospektive.
+
 
 1. Manifesto for Agile Software Development
    https://agilemanifesto.org/

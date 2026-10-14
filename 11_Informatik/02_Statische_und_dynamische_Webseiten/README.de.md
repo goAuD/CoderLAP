@@ -86,6 +86,29 @@ Zum Beispiel:
 | dynamische Seite | zur Laufzeit generierter oder veränderter Inhalt |
 | interaktive Seite | nicht immer dasselbe wie dynamisch |
 
+## Wann entsteht das HTML?
+
+Dieselbe Lernseite kann unterschiedlich ausgeliefert werden:
+
+| Verfahren | Ablauf beim Öffnen einer Seite |
+|---|---|
+| Statische Generierung, SSG | der Build hat das HTML bereits erzeugt; der Server liefert die fertige Datei |
+| Serverseitiges Rendering, SSR | der Server beschafft Daten zur Anfrage und erzeugt HTML |
+| Clientseitiges Rendering, CSR | JavaScript erstellt die Oberfläche im Browser, bei Bedarf aus API-Daten |
+
+Bei SSG benötigt eine Textänderung üblicherweise einen neuen Build und eine
+Veröffentlichung. Bei SSR kann geänderter Datenbankinhalt mit der nächsten
+Auslieferung erscheinen; Caches können dies beeinflussen. Bei CSR enthält das
+anfängliche HTML möglicherweise wenig Inhalt. Lade- und Fehlerzustände gehören
+deshalb zur Planung.
+
+Eine statisch ausgelieferte Seite kann mit JavaScript Themen filtern und den
+Lernfortschritt lokal speichern. Sie besitzt dadurch noch keine serverseitige
+Benutzerdatenbank. Umgekehrt liefert eine dynamische Anwendung CSS und Bilder
+meist als statische Dateien. Daher sollte man **Auslieferungsverfahren** und
+**Interaktion im Browser** getrennt benennen. „Statisch“ bedeutet nicht, dass
+eine Seite keine interaktiven Funktionen haben darf.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine statische Webseite besteht aus vorab erstellten Dateien,
@@ -94,13 +117,6 @@ Zum Beispiel:
 > basierend auf Daten und Logik Inhalte erstellen,
 > zum Beispiel angepasst an den Benutzer oder die Datenbank.  
 > Heutige Webanwendungen kombinieren häufig beide Ansätze.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass auf einer statischen Seite kein JavaScript sein kann.
-- Eine dynamische Seite ausschließlich mit einer Datenbank gleichsetzen.
-- Serverseitige und clientseitige Dynamik nicht unterscheiden.
-- Glauben, dass das moderne Web nur das eine oder das andere sein kann.
 
 ## Schnelle Selbstkontrolle
 
@@ -119,6 +135,12 @@ Zum Beispiel:
 5. Ja
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Client-server overview](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview): Weg von Anfrage und Antwort.
+- [MDN: SSR](https://developer.mozilla.org/en-US/docs/Glossary/SSR): Unterscheidung der Rendering-Zeitpunkte.
+
 
 1. MDN - Server-side website programming first steps  
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps  

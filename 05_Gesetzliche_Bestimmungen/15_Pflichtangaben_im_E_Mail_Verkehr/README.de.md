@@ -59,6 +59,38 @@ Wenn in diesen die notwendigen Unternehmensdaten fehlen, kann das rechtliche Pro
 | Impressum | auf der Website veröffentlichte Pflichtangaben |
 | Signatur | technisches oder visuelles Element, kann aber auch rechtlichen Inhalt tragen |
 
+## Beispiel: zentrale Vorlage für Geschäftsbriefe
+
+Für die geschäftliche E-Mail einer eingetragenen GmbH kann dieser **auszufüllende Entwurf** dienen:
+
+```text
+[Firmenname] GmbH
+Sitz: [Ort]
+Firmenbuchnummer: [Nummer]
+Firmenbuchgericht: [Gericht]
+```
+
+Die eckigen Klammern kennzeichnen Platzhalter, keine erfundenen Unternehmensdaten.
+Das veranschaulicht Grundangaben nach UGB § 14 und ist keine vollständige Vorlage für jedes Unternehmen.
+Bei Liquidation oder besonderen Rechtsformen können weitere Angaben nötig sein.
+Bei einem eingetragenen Einzelunternehmen kommt der eigene Name hinzu, wenn er von der Firma abweicht.
+Für nicht eingetragene Gewerbetreibende sind insbesondere Name und Gewerbestandort
+nach GewO § 63 maßgeblich.
+
+Als Entwickler stellen wir die Angaben zentral für Geschäftsbriefe aus CRM, Rechnungs-
+und Supportsystem bereit. Sie bleiben auch in einer Text-E-Mail lesbar;
+eine ausschließlich als Bild eingefügte Signatur kann bei blockierten Bildern fehlen.
+Bei einer Änderung von Name oder Sitz aktualisieren wir die Vorlage und prüfen die automatischen Nachrichten.
+
+Die Textsignatur am Ende einer E-Mail liefert Identifikationsangaben.
+Eine kryptografische elektronische Signatur ist ein anderer Begriff: Sie kann die Prüfung
+von Herkunft und Unversehrtheit ermöglichen.
+Korrekte Unternehmensangaben erlauben für sich noch keinen Versand von Werbe-E-Mails.
+
+Quellen: [UGB § 14](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001702&Paragraf=14),
+[GewO § 63](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517&Paragraf=63).
+Geprüft: `2026-10-14`.
+
 ## Prüfungstaugliche Formulierung
 
 > Im geschäftlichen E-Mail-Verkehr müssen bestimmte Unternehmen
@@ -69,13 +101,6 @@ Wenn in diesen die notwendigen Unternehmensdaten fehlen, kann das rechtliche Pro
 > und ist auch bei automatischen
 > oder systemgenerierten geschäftlichen E-Mails besonders wichtig.
 > Der genaue Pflichtinhalt kann von der Rechtsform des Unternehmens abhängen.
-
-## Häufige Prüfungsfehler
-
-- Zu glauben, bei geschäftlichen E-Mails seien keinerlei Pflichtangaben nötig.
-- Das Impressum und die E-Mail-Signatur als vollständig identisch zu betrachten.
-- Zu vergessen, dass auch für automatisch versendete geschäftliche E-Mails Regeln gelten können.
-- Die Bedeutung der Rechtsform nicht zu berücksichtigen.
 
 ## Schnelle Selbstkontrolle
 

@@ -45,6 +45,14 @@ Die folgenden Nachteile ergeben sich teilweise aus der strengen Struktur:
 | Dokumentation | typischerweise betont | im nötigen Umfang |
 | Testen | formal zugeordnet | kontinuierlich, iterativ |
 
+## Welchen Aufwand rechtfertigt welcher Nutzen?
+
+Bei einer im öffentlichen Auftrag entstehenden Verwaltungsanwendung kann für jede vereinbarte Anforderung ein zugeordneter Test und Abnahmenachweis nötig sein. Das begründet Anforderungskennungen, formale Freigaben und konsequente Dokumentenpflege.
+
+Weiß der Auftraggeber noch nicht, wie er suchen möchte, kann ein früher Oberflächenprototyp den Bedarf zunächst klären. Formale Prüfung ersetzt Benutzerfeedback nicht. Der Umfang der Dokumentation richtet sich nach Nachweispflichten und Risiko.
+
+Eine einfache, strikt sequenzielle Anwendung des V kann unflexibel sein. V-Modell XT ist dagegen anpassbar und berücksichtigt auch iterativ-inkrementelles Vorgehen. Vor- und Nachteile beziehen sich deshalb immer auf die gewählte Variante und ihre konkrete Anwendung.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Vorteil des V-Modells ist, dass es eine klare Struktur bietet
@@ -53,13 +61,6 @@ Die folgenden Nachteile ergeben sich teilweise aus der strengen Struktur:
 > Der Nachteil ist, dass es starrer ist
 > und einen höheren Dokumentationsaufwand mit sich bringen kann,
 > weshalb es bei sich schnell ändernden Projekten weniger vorteilhaft ist.
-
-## Häufige Prüfungsfehler
-
-- Nur die Vorteile aufzählen.
-- Die Nachteile mit der allgemeinen Kritik am Wasserfallmodell verwechseln.
-- Die Nachverfolgbarkeit nicht erwähnen.
-- Behaupten, dass das V-Modell für jedes Projekt ideal ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -73,11 +74,16 @@ Die folgenden Nachteile ergeben sich teilweise aus der strengen Struktur:
 
 1. Die klare Struktur und die Zuordnung zum Testen
 2. Weil es gut dokumentierbar und nachverfolgbar ist
-3. Die Starrheit
+3. Bei strikt sequenzieller Anwendung der Änderungs- und Dokumentationsaufwand.
 4. Weil die Phasen stark aufeinander aufbauen
 5. In der bewussteren Einbindung des Testens
 
 ## Quellen
+
+- [V-Modell XT Bund: Projektauftrag](https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell%20XT%20Bund-2.0-HTML/2d5213b1f2d3063.html)  
+  Ausdrückliche Möglichkeit von Tailoring und iterativ-inkrementellem Vorgehen.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. V-Modell XT Bund 2.0 - Gesamt PDF  
    https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell-XT-Bund-2.0-Gesamt.pdf  

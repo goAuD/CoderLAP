@@ -175,22 +175,48 @@ Sok nyelv és eszköz használ prefixeket:
 
 Ez nyelvenként változhat, de az alapötlet ugyanaz.
 
+## Ugyanaz az érték a programban
+
+A számrendszer a szám leírásának módja. Az alábbi önálló JavaScript mind a négy
+literálból ugyanazt az értéket állítja elő. A hexadecimális jelölés rövidebb leírás,
+nem adattömörítési eljárás.
+
+<!-- example:run -->
+```javascript
+const values = [0b101010, 0o52, 42, 0x2A];
+console.log(values.join(" "));
+console.log(values.every(value => value === 42));
+console.log((42).toString(2));
+```
+
+Várt kimenet:
+
+```text
+42 42 42 42
+true
+101010
+```
+
+Az előtagok a forráskód olvasását segítik, a `toString(2)` pedig bináris szöveget ad.
+A `"101010"` szöveg és a `42` szám eltérő típus: a megjelenítés és a tárolt érték
+külön kérdés. Szövegből számmá alakításkor a bemeneti számrendszert is megadjuk.
+
+**Rögzített szélesség:** előjel nélküli 8 biten `255` a legnagyobb szám.
+A `255 + 1 = 256` leírásához már kilenc bináris számjegy kell: `100000000`.
+Egy konkrét programnyelv vagy típus dönti el, hogy túlcsorduláskor mi történik.
+A JavaScript általános `Number` típusa nem 8 bites egész, ezért ott ez az összeadás `256`-ot ad.
+
+Források: [MDN: számok és szövegek](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
+és [MDN: Number.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az informatikában leggyakrabban a bináris, oktális, decimális és hexadecimális számrendszert használjuk.  
 > A bináris rendszer alapja 2, ezért csak 0 és 1 számjegyeket használ.  
 > A decimális rendszer alapja 10, ez a hétköznapi számrendszer.  
 > A hexadecimális rendszer alapja 16, és azért fontos,
-> mert jól tömöríti a bináris adatokat:
+> mert röviden ábrázolja a bináris adatokat:
 > egy hexaszámjegy 4 bitnek felel meg.
-
-## Gyakori vizsgahibák
-
-- Elfelejteni, hogy hexában az `A-F` is számjegy.
-- Azt mondani, hogy az oktális alapja `16`.
-- Nem tudni, hogy a bináris rendszer csak `0`-t és `1`-et használ.
-- Nem felismerni, hogy ugyanaz a szám több számrendszerben máshogy néz ki.
-- Nem tudni, miért praktikus a hexadecimális jelölés.
 
 ## Gyors önellenőrzés
 

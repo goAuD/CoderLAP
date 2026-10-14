@@ -55,6 +55,41 @@ Das Ziel von Bootstrap ist, dass man schnell:
 | CSS | allgemeine Stilsprache |
 | Bootstrap | auf CSS und Komponenten aufbauendes Framework |
 
+## Eine und zwei Spalten aus demselben HTML
+
+**Umgebung:** HTML-Seite mit geladenem Bootstrap-5.3-CSS. Für diesen Ausschnitt
+wird kein JavaScript benötigt. CSS kann lokal ausgeliefert werden; ein CDN
+ist keine Voraussetzung.
+
+```html
+<div class="container">
+  <div class="row g-3">
+    <section class="col-12 col-md-6">
+      <h2 class="h4">Programmieren</h2>
+      <p>Schleifen und Funktionen üben.</p>
+    </section>
+    <section class="col-12 col-md-6">
+      <h2 class="h4">Netzwerke</h2>
+      <p>Adressen und Protokolle verstehen.</p>
+    </section>
+  </div>
+</div>
+```
+
+`container` bildet den Inhaltsrahmen, `row` eine Rasterzeile und `g-3` die Abstände.
+`col-12` belegt die gesamte Breite des zwölfspaltigen Rasters. `col-md-6` belegt
+ab dem Bootstrap-5.3-Breakpoint `md`, also `768px` Viewportbreite, sechs Spalten.
+Die Themen stehen deshalb schmal untereinander und breiter in zwei gleich großen
+Spalten. Die Klasse `h4` verändert nur die Darstellung; das Element bleibt eine
+Überschrift der Ebene `h2`.
+
+Ein einfaches Raster funktioniert durch CSS. Ein Modal oder eine aufklappende
+Interaktion benötigt auch die passende JavaScript-Komponente. Bootstrap 5 hat
+keine jQuery-Abhängigkeit. Beschriftung, Kontrast und Tastaturbedienung bleiben
+beim Einbau der Komponenten Entwicklungsaufgaben. Ein eigenes Erscheinungsbild
+wird über gemeinsame Variablen und dokumentierte Anpassungspunkte gepflegt,
+statt jeden Button separat zu überschreiben.
+
 ## Prüfungstaugliche Formulierung
 
 > Bootstrap ist ein verbreitetes Frontend-Framework,
@@ -65,13 +100,6 @@ Das Ziel von Bootstrap ist, dass man schnell:
 > Sein Vorteil ist die Geschwindigkeit und die fertige Komponentensammlung,
 > sein Nachteil kann das schablonenartige Aussehen
 > und die schwierigere Umsetzung eines individuellen Designs sein.
-
-## Häufige Prüfungsfehler
-
-- Bootstrap als eigenständige Programmiersprache bezeichnen.
-- Nicht erwähnen, dass es auch ein responsives Layout bietet.
-- Es mit der CSS-Grundsprache verwechseln.
-- Nicht über die fertigen Komponenten sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,6 +118,14 @@ Das Ziel von Bootstrap ist, dass man schnell:
 5. Für Prototypen, Admin-Oberflächen, schnelle Entwicklung
 
 ## Quellen
+
+- [Bootstrap: Migration to v5](https://getbootstrap.com/docs/5.3/migration/#javascript): Entfernung der jQuery-Abhängigkeit in Version 5. Geprüft: `2026-10-14`.
+
+Geprüft: `2026-10-14`.
+
+- [Bootstrap 5.3: Grid](https://getbootstrap.com/docs/5.3/layout/grid/): 12 Spalten, row und md-Breakpoint.
+- [Bootstrap 5.3: Accessibility](https://getbootstrap.com/docs/5.3/getting-started/accessibility/): Voraussetzungen barrierefreier Komponentennutzung.
+
 
 1. Bootstrap 5.3 - Introduction
    https://getbootstrap.com/docs/5.3/getting-started/introduction/

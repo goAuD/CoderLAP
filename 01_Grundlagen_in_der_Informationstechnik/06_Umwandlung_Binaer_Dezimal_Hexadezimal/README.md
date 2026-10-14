@@ -38,7 +38,7 @@ Módszer:
 - minden helyiértéket megszorzunk a megfelelő `2` hatvánnyal
 - az eredményeket összeadjuk
 
-### Példa: decimálisból binárisba
+### Példa: binárisból decimálisba
 
 `101101₂`
 
@@ -67,7 +67,7 @@ Módszer:
 - feljegyezzük a maradékokat
 - a maradékokat alulról felfelé olvassuk
 
-### Példa: binárisból hexadecimálisba
+### Példa: decimálisból binárisba
 
 `45₁₀`
 
@@ -96,7 +96,7 @@ Módszer:
 - ha kell, bal oldalon nullákkal kiegészítjük
 - minden `4 bites` csoportot egy hexaszámjegyre cserélünk
 
-### Példa: hexadecimálisból binárisba
+### Példa: binárisból hexadecimálisba
 
 `1101111010₂`
 
@@ -120,7 +120,7 @@ Módszer:
 
 - minden hexaszámjegyet lecserélünk a megfelelő `4 bites` bináris alakra
 
-### Példa: decimálisból hexadecimálisba
+### Példa: hexadecimálisból binárisba
 
 `7B₁₆`
 
@@ -141,7 +141,7 @@ Módszer:
 - maradékok feljegyzése
 - a maradékokat alulról felfelé olvassuk
 
-### Példa: hexadecimálisból decimálisba
+### Példa: decimálisból hexadecimálisba
 
 `123₁₀`
 
@@ -169,7 +169,7 @@ Módszer:
 - megszorozzuk a számjegyeket a megfelelő `16` hatványokkal
 - összeadjuk az eredményt
 
-### Példa
+### Példa: hexadecimálisból decimálisba
 
 `2F₁₆`
 
@@ -206,6 +206,43 @@ Ezért:
 
 esetén a hexadecimális alak nagyon praktikus.
 
+## Ellenőrzés visszaalakítással
+
+A kézi számítást az ellenkező irányú átváltással is ellenőrizhetjük.
+Az alábbi önálló JavaScript a `2F` hexadecimális szöveget számmá alakítja,
+majd ugyanazt az értéket három számrendszerben jeleníti meg.
+
+<!-- example:run -->
+```javascript
+const value = Number.parseInt("2F", 16);
+console.log(value);
+console.log(value.toString(2).padStart(8, "0"));
+console.log(value.toString(16).toUpperCase());
+console.log(Number.parseInt("00101111", 2) === value);
+```
+
+Várt kimenet:
+
+```text
+47
+00101111
+2F
+true
+```
+
+A `padStart` a megjelenítéshez tesz ki vezető nullákat, az értéket nem módosítja.
+Ellenőrzésként `32 + 8 + 4 + 2 + 1 = 47` és `2 × 16 + 15 = 47` is ugyanoda vezet.
+A nulla minden számrendszerben `0`; az osztásos módszernél ezt külön kiírjuk,
+mert nincs végrehajtandó pozitív hányadosú lépés.
+
+A példa ellenőrzött állandó bemenetet használ. Felhasználói adatnál a `parseInt`
+önmagában nem teljes bemeneti ellenőrzés: az első érvénytelen jelnél megállhat,
+így például a `"2Fxyz"` elejét még értelmezi. A teljes szöveg megengedett
+számjegyeit és a szükséges értéktartományt külön ellenőrizzük.
+
+Forrás: [MDN: parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+és [Number.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+
 ## Vizsgán jól használható megfogalmazás
 
 > A bináris, decimális és hexadecimális számok közti átváltás alapja a helyiértékes rendszer.  
@@ -213,14 +250,6 @@ esetén a hexadecimális alak nagyon praktikus.
 > decimálisból binárisba pedig 2-vel osztunk
 > és a maradékokat olvassuk visszafelé.  
 > Hexadecimális és bináris között különösen könnyű az átváltás, mert egy hexaszámjegy pontosan 4 bitnek felel meg.
-
-## Gyakori vizsgahibák
-
-- Rossz irányban olvasni a maradékokat osztásos módszernél.
-- Elfelejteni, hogy `A-F` értéke `10-15`.
-- Bináris számot nem balról jobbra, hanem rossz helyiértékekkel értelmezni.
-- Nem `4` bites blokkokra bontani a bináris számot hexa előtt.
-- A `0` helyiértékeit kihagyni a számolásból.
 
 ## Gyors önellenőrzés
 

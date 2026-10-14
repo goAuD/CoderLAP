@@ -33,7 +33,7 @@ A hatókör azt jelenti, hogy:
 
 ### Lokális
 
-- csak egy függvényen vagy eljáráson belül él
+- a név egy függvényen vagy eljáráson belül látható
 - jobban kontrollálható
 
 ### Blokk-szintű
@@ -56,18 +56,46 @@ A kettő összefügg, de nem ugyanaz.
 - könnyebb véletlenül módosítani
 - gyengíti a moduláris felépítést
 
+## Hatókör és élettartam closure-rel
+
+A következő Node.js-példa két egymástól független számlálót hoz létre:
+
+<!-- example:run -->
+
+```javascript
+function createCounter() {
+  let count = 0;
+  return function next() {
+    count += 1;
+    return count;
+  };
+}
+const first = createCounter();
+const second = createCounter();
+console.log(first(), first(), second());
+```
+
+```text
+1 2 1
+```
+
+A `count` közvetlenül csak a létrehozó függvényben és annak belső függvényében
+látható. A visszaadott `next` függvény megőrzi a hozzá tartozó környezetet, ezt
+nevezzük **closure**-nek. Az első két hívás ugyanazt a számlálót növeli; a
+`second` külön létrehozásból származik, ezért 1-ről indul.
+
+A `createCounter` már visszatért, a belső állapot mégis elérhető a visszaadott
+függvényen keresztül. Ez mutatja, miért nem azonos a hatókör és az élettartam.
+JavaScriptben a `let` és `const` blokkhatókörű, a `var` függvényhatókörű.
+A belső hatókör használhatja a külső neveit; azonos nevű belső deklaráció
+árnyékolja a külsőt. ES-modulban a legfelső szintű változó modulhatókörű,
+nem automatikusan minden más fájl globális változója.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A változók hatóköre azt határozza meg, hogy a program mely részein érhető el egy adott változó.  
 > Beszélhetünk például globális, lokális és blokk-szintű scope-ról.  
 > A helyes scope-kezelés fontos a hibák megelőzése, az átláthatóság és a karbantarthatóság szempontjából.
-
-## Gyakori vizsgahibák
-
-- A hatókört az élettartammal összekeverni.
-- Azt állítani, hogy a globális változó mindig jó, mert “mindenhonnan látszik”.
-- Nem megemlíteni a lokális scope előnyeit.
-- Scope és adattípus összemosása.
 
 ## Gyors önellenőrzés
 
@@ -86,6 +114,11 @@ A kettő összefügg, de nem ugyanaz.
 5. Az egyik a láthatóság, a másik a létezés ideje
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures): lexikális környezet és megőrzött állapot.
+
 
 1. MDN - Scope  
    https://developer.mozilla.org/en-US/docs/Glossary/Scope  

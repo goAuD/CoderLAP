@@ -52,20 +52,59 @@ Több konkrét eset közül választunk.
 | elágazás | döntés |
 | ciklus | ismétlés |
 
+## Tartományok és konkrét állapotok
+
+Egy saját gyakorlófeladatban 50 ponttól teljesített, 80-tól erős eredményt
+jelzünk. Ez szemléltető pontozás, nem hivatalos LAP-osztályozás. A második
+függvény konkrét szöveges állapotból választ műveletet. Mindkettő Node.js-ben fut.
+
+<!-- example:run -->
+
+```javascript
+function result(points) {
+  if (!Number.isInteger(points) || points < 0 || points > 100) return "invalid";
+  if (points >= 80) return "strong";
+  if (points >= 50) return "passed";
+  return "practice";
+}
+for (const points of [49, 50, 79, 80, 101]) {
+  console.log(points, result(points));
+}
+function action(status) {
+  switch (status) {
+    case "draft": return "edit";
+    case "ready": return "start";
+    default: return "review";
+  }
+}
+console.log(action("ready"), action("unknown"));
+```
+
+```text
+49 practice
+50 passed
+79 passed
+80 strong
+101 invalid
+start review
+```
+
+Az `if`-ek sorrendje szándékos: előbb a megengedett tartományt, majd a magasabb
+küszöböt ellenőrizzük. A `return` után a későbbi feltételek már nem futnak.
+Az 50 és 80 körüli esetek megmutatják a határok befoglalását.
+
+A JavaScript `switch` szigorú egyenlőséggel keresi az esetet. Itt minden ág
+visszatér, ezért nem kell `break`. Ha az ág tovább futna, `break`-kel zárnánk le,
+különben a következő ág utasításai is végrehajtódhatnának. A `default` a fel nem
+sorolt állapotokhoz ad meghatározott választ.
+
 ## Vizsgán jól használható megfogalmazás
 
-> Az elágazások és fallunterscheidungok segítségével a program különböző végrehajtási ágak közül választhat feltételek  
+> Az elágazások és esetválasztások segítségével a program különböző végrehajtási ágak közül választhat feltételek  
 > alapján.  
 > A leggyakoribb megoldás az `if / else`, több konkrét eset kezelésére pedig gyakran használunk `switch / case`  
 > szerkezetet.  
 > Ezek a vezérlési szerkezetek a döntési logika megvalósítására szolgálnak.
-
-## Gyakori vizsgahibák
-
-- Az elágazást ciklusnak nevezni.
-- A `switch`-et mindenre alkalmasnak beállítani.
-- Nem megemlíteni az alapértelmezett esetet.
-- A feltételek sorrendjének jelentőségét elfelejteni.
 
 ## Gyors önellenőrzés
 
@@ -84,6 +123,11 @@ Több konkrét eset közül választunk.
 5. Az egyik dönt, a másik ismétel
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch): szigorú egyenlőség, visszatérés és fall-through.
+
 
 1. MDN - Control flow and error handling  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  

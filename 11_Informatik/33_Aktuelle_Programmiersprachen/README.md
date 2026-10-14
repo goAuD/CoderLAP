@@ -74,21 +74,59 @@ Ha a kérdés "aktuális nyelvek", akkor érdemes:
 - területhez kötni őket
 - megmutatni, hogy ma több fő irány van egyszerre jelen
 
+## Nyelv, futtatókörnyezet és framework külön szerepe
+
+| Elem | Mi ez? | Példa a kapcsolatukra |
+|---|---|---|
+| JavaScript | programozási nyelv, alapját az ECMAScript szabvány adja | Node.js-ben vagy böngészőben futhat |
+| Node.js | JavaScript-futtatókörnyezet | például szerveroldali kódhoz |
+| TypeScript | JavaScriptre építő nyelv statikus típusellenőrzéssel | típusaiból általában nem marad futó JavaScript-kód |
+| React / Angular | UI-library / webes framework | JavaScript vagy TypeScript projektek eszközei |
+
+**Szemléltető TypeScript-forrás**, amelyet például a TypeScript Playgroundban
+lehet fordítani:
+
+```typescript
+function greet(name: string): string {
+  return `Hallo ${name}`;
+}
+console.log(greet("Ada"));
+```
+
+A típusjelölések nélküli JavaScript-változat Node.js-ben önállóan futtatható:
+
+<!-- example:run -->
+
+```javascript
+function greet(name) {
+  return `Hallo ${name}`;
+}
+console.log(greet("Ada"));
+```
+
+```text
+Hallo Ada
+```
+
+A `name: string` fejlesztéskor segít ellenőrizni a hívásokat. A hálózatról
+beérkező JSON-t azonban futáskor is ellenőrizni kell, mert a TypeScript-típus
+nem alakítja át és nem hitelesíti a külső adatot. A típusellenőrzés, a teszt
+és a bemeneti validálás más-más kérdésre ad választ.
+
+**Indokolt választás:** egy kis meglévő PHP-webhely űrlapjának bővítésénél a
+karbantartott PHP-környezet megtartása egyszerű lehet; Android-specifikus
+eszközfunkcióknál Kotlin és a platform API-ja lehet jó alap. A támogatott
+verzió, csapattudás, telepítési környezet és feladat többet mond, mint egyetlen
+népszerűségi rangsor. Az itt szereplő felsorolás nem teljes lista és nem rangsor.
+
 ## Vizsgán jól használható megfogalmazás
 
-> `2026. április 8.` szerint az aktuális programozási nyelvek közé azok sorolhatók,
+> `2026. október 14.` állapot szerint az aktuális programozási nyelvek közé azok sorolhatók,
 > amelyek ma is széles körben használtak és aktívan támogatottak.  
 > A webes, mobilos és vállalati fejlesztésben
 > különösen fontos például a JavaScript, TypeScript, Python, Java,
 > C#, PHP, Kotlin és Swift.  
 > Nem egyetlen “legjobb” nyelv létezik, hanem a választás mindig a feladat, a platform és az ökoszisztéma függvénye.
-
-## Gyakori vizsgahibák
-
-- Egyetlen nyelvet kiemelni "legjobbnak".
-- Régi vagy már marginális nyelveket mai főiránynak nevezni indoklás nélkül.
-- Nem összekötni a nyelveket a felhasználási területtel.
-- Az "aktuális" fogalmat összekeverni az "új" fogalmával.
 
 ## Gyors önellenőrzés
 
@@ -108,9 +146,15 @@ Ha a kérdés "aktuális nyelvek", akkor érdemes:
 
 ## Források
 
+Ellenőrizve: `2026-10-14`.
+
+- [TypeScript Handbook: The Basics](https://www.typescriptlang.org/docs/handbook/2/basic-types.html): típusellenőrzés és típusok törlése a fordításkor.
+- [Android Developers: Kotlin-first](https://developer.android.com/kotlin/first): feladat- és platformfüggő nyelvválasztás példája.
+
+
 1. Stack Overflow Developer Survey 2025 - Technology  
    https://survey.stackoverflow.co/2025/technology/  
-   Használat: aktuális, `2025`-ös használati snapshot a széles körben használt programozási nyelvekről.
+   Használat: a 2025-ös válaszadók használati szokásainak történeti pillanatképe, nem teljes piaci rangsor vagy mai támogatási igazolás.
 
 2. TypeScript  
    https://www.typescriptlang.org/  

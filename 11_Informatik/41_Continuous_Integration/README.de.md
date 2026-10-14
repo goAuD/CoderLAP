@@ -6,7 +6,7 @@
 |---|---|
 | Commit / PR | neuer Code kommt an |
 | Pipeline startet | automatische Prüfung läuft |
-| Build + Test | es wird klar, ob es funktioniert |
+| Build + Test | Feedback zu Build und geprüftem Verhalten |
 | Feedback | Fehler werden schnell sichtbar |
 
 ## Was ist das Ziel von CI?
@@ -44,6 +44,45 @@
 - Die Pipeline ist dann nützlich, wenn sie fehlerhaften Code tatsächlich stoppt.
 - Es empfiehlt sich, obligatorische Prüfungen vor dem Merge zu verwenden.
 
+## Der Weg einer Änderung in den gemeinsamen Code
+
+**Beispiel:** Eine Person ändert die Punkteberechnung, eine andere die
+Ergebnisansicht. Beide Branches können für sich funktionieren und trotzdem
+unterschiedliche Datenfelder erwarten. Häufiges Integrieren und ein Test beider
+Teile zeigen diese Abweichung früh. Tägliche automatische Builds wochenlang
+getrennter Branches lösen das Integrationsproblem allein nicht.
+
+Für ein **beispielhaftes Node-Projekt**, dessen `package.json` bereits die
+Scripte `lint`, `test` und `build` enthält, könnte CI so ablaufen:
+
+```text
+1. sauberer Checkout des geprüften Commits
+2. festgelegte Node-Version einrichten
+3. npm ci
+4. npm run lint
+5. npm test
+6. npm run build
+7. Testergebnisse und Build-Artefakt aufbewahren
+```
+
+`npm ci` installiert aus einem vorhandenen Lockfile und schreibt bei Abweichungen
+nicht still die Abhängigkeitsliste um. Das verbessert die Wiederholbarkeit;
+Plattform, Laufzeit und externe Dienste müssen trotzdem festgelegt oder geprüft
+werden. Die Scripte gehören hier zu einem Lernbeispiel und passen nicht
+automatisch zu jedem Repository.
+
+| Ereignis | Passender nächster Schritt |
+|---|---|
+| erwartetes Datenfeld fehlt im Test | Prüfung schlägt fehl, der getestete Code muss korrigiert und erneut geprüft werden |
+| neuer Commit kommt in den PR | neuer Inhalt muss geprüft werden |
+| Zielbranch ändert sich inzwischen | Zusammenspiel mit dem aktuellen Zielzustand prüfen |
+| Test ist gelegentlich ohne klare Ursache rot | Ursache untersuchen; erneutes Starten allein ist keine Korrektur |
+
+Ein Cache beschleunigt, ersetzt aber keine korrekten Abhängigkeiten oder Tests.
+Das Ergebnis belegt nur tatsächlich ausgeführte Prüfungen. Ein Exitcode, der
+Fehler sichtbar hält, und verpflichtende Merge-Prüfungen verbinden das Feedback
+mit dem Arbeitsablauf des Teams.
+
 ## Prüfungstaugliche Formulierung
 
 > Ziel von Continuous Integration ist,
@@ -51,13 +90,6 @@
 > und die Integration von automatischen Prüfungen begleitet wird.
 > Dabei laufen typischerweise Build, Test und andere Codequalitätsprüfungen ab.
 > Der größte Vorteil von CI ist, dass Integrationsfehler schnell erkannt werden und das Projekt dadurch stabiler bleibt.
-
-## Häufige Prüfungsfehler
-
-- CI mit Deployment verwechseln.
-- Automatische Tests nicht erwähnen.
-- Denken, dass CI nur für große Projekte nötig ist.
-- Die Rolle des schnellen Feedbacks weglassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -76,6 +108,12 @@
 5. Weil es günstiger ist, früh zu korrigieren
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [GitHub: Continuous integration](https://docs.github.com/en/actions/get-started/continuous-integration): Häufige Integration und automatisiertes Feedback.
+- [npm: npm ci](https://docs.npmjs.com/cli/v11/commands/npm-ci/): Lockfile-basierte Installation und Umgang mit Abweichungen.
+
 
 1. GitHub Docs - About continuous integration
    https://docs.github.com/en/actions/automating-builds-and-tests/about-continuous-integration

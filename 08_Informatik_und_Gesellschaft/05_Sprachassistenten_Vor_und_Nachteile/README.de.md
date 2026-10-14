@@ -74,6 +74,14 @@ können vorkommen.
 - Aufnahmen löschen oder automatisches Löschen einrichten
 - Mikrofon stummschalten, wenn nötig
 
+## Befehlserkennung, Aktion und Kontrolle
+
+Bei „Schalte das Licht aus“ sind Aktivierungserkennung, Sprachverarbeitung, Absichtserkennung und Ausführung getrennte Schritte. Welche davon lokal oder auf Servern laufen, hängt von Produkt und Einstellungen ab. Das Überwachen des Mikrofons bedeutet nicht automatisch eine dauerhafte Cloud-Speicherung sämtlicher Geräusche; eine Fehlaktivierung kann jedoch unbeabsichtigte Übertragung auslösen.
+
+In einem gemeinsamen Büro können auch Gespräche anderer Personen betroffen sein. Vor der Einführung klären wir deshalb Verarbeitungsort, Aufbewahrung und Löschmöglichkeit. Einkäufe, Türöffnung oder Nachrichtenversand benötigen stärkere Bestätigung als das Starten eines Timers.
+
+Bei generativen Assistenten kann auch eine selbstsicher formulierte Antwort falsch sein. Die bequeme Sprachoberfläche ersetzt weder Quellenprüfung noch Freigabe einer wichtigen Aktion.
+
 ## Prüfungstaugliche Formulierung
 
 > Sprachassistenten ermöglichen eine bequeme, sprachbasierte Steuerung
@@ -85,13 +93,6 @@ können vorkommen.
 > Daher sind ein angemessener Passwortschutz,
 > die Überprüfung der Privacy-Einstellungen
 > und ein bewusster Umgang mit der Aufnahmeverwaltung wichtig.
-
-## Häufige Prüfungsfehler
-
-- Nur die Vorteile zu erwähnen.
-- Zu glauben, dass der Sprachassistent immer nur lokal arbeitet.
-- Das Problem der versehentlichen Aktivierung auszulassen.
-- Die Privacy-Einstellungen nicht zu erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -111,8 +112,16 @@ können vorkommen.
 
 ## Quellen
 
+- [EDPB Guidelines 02/2021](https://www.edpb.europa.eu/documents/guideline/guidelines-022021-on-virtual-voice-assistants_en)  
+  Datenwege von Sprachassistenten und Schutz betroffener Personen.
+
+- [NIST AI 600-1: Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)  
+  Abschnitt 2.2: das Risiko selbstsicher ausgegebener, aber falscher generierter Antworten.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
 1. FTC - How To Secure Your Voice Assistant and Protect Your Privacy  
-   https://consumer.ftc.gov/node/77539  
+   https://consumer.ftc.gov/articles/how-secure-your-voice-assistant-protect-your-privacy  
    Verwendung: offizieller, praktischer Privacy- und Sicherheitsleitfaden für Sprachassistenten.
 
 2. FTC - Amazon didn't protect Alexa users' or children's privacy  

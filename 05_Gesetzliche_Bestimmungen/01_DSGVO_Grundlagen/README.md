@@ -104,20 +104,41 @@ Mert a DSGVO sok más témához kapcsolódik:
 - marketing
 - adatbiztonság
 
+## Jogalap és adatbiztonság egy példában
+
+Egy javítóműhely online időpontfoglalást készít. A foglalás teljesítéséhez szükséges
+elérhetőség kezelésének alapja lehet a szerződés vagy az érintett kérésére tett,
+szerződéskötést megelőző lépés. A számlák kötelező megőrzését jogi kötelezettség alapozhatja meg.
+A külön reklámhírlevél más cél, amelyet külön kell értékelni; a foglalásból nem következik
+automatikusan marketingengedély.
+
+A GDPR 6. cikkének jogalapjai: hozzájárulás, szerződés teljesítése, jogi kötelezettség,
+létfontosságú érdek, közérdekű feladat vagy közhatalmi jogosítvány, illetve jogos érdek.
+Mindegyiknek saját feltételei vannak. Jogos érdeknél a konkrét érdeket, a szükségességet
+és az érintett jogait mérlegeljük; ez nem általános felmentés. Közfeladat ellátásához
+a közhatalmi szerv nem erre a jogalapra támaszkodik.
+
+Fejlesztőként a döntést mezőnként is lefordítjuk: mi a cél, kell-e az adat,
+ki fér hozzá, mikor törlődik, és melyik szolgáltatóhoz kerül? A titkosítás és
+a hozzáférés-szabályozás védi az adatot, de önmagában nem teszi jogszerűvé a gyűjtést.
+Az adatkezelési tájékoztató elolvasásának visszajelzése sem helyettesít egy szükséges,
+önkéntes hozzájárulást.
+
+**Hatály:** a rendelet automatizált adatkezelésre és rendezett nyilvántartás részét
+képező kézi adatkezelésre is vonatkozhat. Nem csak EU-állampolgárokat véd;
+a területi alkalmazhatóságot a 3. cikk szabályozza. Egy magánszemély személyes vagy
+háztartási tevékenységének kivétele nem jelent általános kivételt minden ingyenes weboldalra.
+
+Forrás a pontosításhoz: [EDPB: jogszerű adatkezelés](https://www.edpb.europa.eu/sme/be-compliant/process-personal-data-lawfully_en),
+[EDPB: alapfogalmak és hatály](https://www.edpb.europa.eu/sme/learn-the-basics/data-protection-basics_en),
+GDPR 2., 3., 5., 6. és 32. cikk. Ellenőrizve: 2026-10-14.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A DSGVO az Európai Unió adatvédelmi alaprendelete, amely 2018. május 25. óta közvetlenül alkalmazandó.  
 > A személyes adatok kezelésére vonatkozó alapelveket,
 > az érintettek jogait és az adatkezelők kötelezettségeit szabályozza.  
 > Ausztriában a DSGVO mellett a nemzeti Datenschutzgesetz is releváns.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a DSGVO csak nagyvállalatokra vonatkozik.
-- A DSGVO-t összekeverni egy sima ajánlással vagy irányelvvel.
-- Nem tudni, hogy 2018. május 25. a gyakorlati alkalmazás kezdete.
-- Nem felismerni, hogy IP-cím és e-mail-cím is lehet személyes adat.
-- Kihagyni az érintetti jogokat.
 
 ## Gyors önellenőrzés
 

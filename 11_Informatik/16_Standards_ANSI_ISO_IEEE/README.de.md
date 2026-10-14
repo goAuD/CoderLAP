@@ -31,7 +31,7 @@ ANSI ist ein wichtiger koordinierender Akteur im amerikanischen nationalen Norme
 
 Wichtige Klarstellung:
 
-- ANSI schreibt nicht jede Norm selbst
+- ANSI entwickelt die Standards nicht selbst
 - es koordiniert eher die Normungsprozesse und Genehmigungsrahmen
 
 ## Welche Rolle spielt ISO?
@@ -72,6 +72,41 @@ Zum Beispiel ist die `IEEE 802`-Familie in der Welt der Netzwerktechnologien seh
 - klarere Dokumentation und Kommunikation entstehen
 - Qualitätssicherung und Tests können sich ebenfalls auf Normen stützen
 
+## Konkrete Standards mit konkreten Aufgaben verbinden
+
+`IEEE 802.3` betrifft Ethernet, `IEEE 802.11` drahtlose lokale Netze.
+`IEEE 754` definiert Gleitkommadarstellungen und Operationen. Letzteres ist
+direkt im Programm sichtbar: JavaScripts `Number` verwendet binäre
+64-Bit-Gleitkommazahlen mit doppelter Genauigkeit.
+
+Eine in Node.js ausführbare Beobachtung:
+
+<!-- example:run -->
+
+```javascript
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 === 0.3);
+console.log(10 + 20 === 30);
+```
+
+```text
+0.30000000000000004
+false
+true
+```
+
+`0.1` und `0.2` besitzen keine exakte endliche Binärbruchdarstellung. Speicherung
+und Addition erfordern deshalb Rundung. Das ergibt sich aus der Darstellung.
+Die Summe kleiner ganzzahliger Centbeträge ist dagegen exakt; bei großen Werten
+ist zusätzlich die Grenze genauer Ganzzahlen zu beachten. Eine Rundung für die
+Anzeige verändert nicht rückwirkend die Mathematik der Berechnung.
+
+Beim Verweis auf eine Spezifikation nennen wir Kennung, Ausgabe und relevante
+Anforderung. „Standardkonform“ allein ist kein hinreichend genaues
+Abnahmekriterium. Standardentwicklung, Konformitätsprüfung und Zertifizierung
+sind unterschiedliche Aufgaben. ISO entwickelt Standards, führt aber selbst
+keine Zertifizierung von Organisationen durch.
+
 ## Prüfungstaugliche Formulierung
 
 > ANSI, ISO und IEEE sind wichtige Akteure in der Welt der Normung.  
@@ -82,13 +117,6 @@ Zum Beispiel ist die `IEEE 802`-Familie in der Welt der Netzwerktechnologien seh
 > ISO gibt internationale Normen heraus
 > und IEEE ist besonders bedeutend
 > im Bereich technischer und informatischer Standards.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, ANSI, ISO und IEEE seien konkrete Produkte.
-- Organisation und Standard nicht unterscheiden.
-- Nicht erwähnen, dass Normen die Interoperabilität unterstützen.
-- IEEE ausschließlich auf Hardware beschränken.
 
 ## Schnelle Selbstkontrolle
 
@@ -107,6 +135,15 @@ Zum Beispiel ist die `IEEE 802`-Familie in der Welt der Netzwerktechnologien seh
 5. Die Organisation erstellt oder koordiniert, der Standard ist die Vorschrift selbst
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [ANSI: Standards FAQs](https://www.ansi.org/standards-faqs): ANSI koordiniert und genehmigt, entwickelt aber keine Standards.
+- [IEEE 802.3](https://www.ieee802.org/3/): Ethernet-Standardisierung.
+- [IEEE 802.11](https://www.ieee802.org/11/): WLAN-Standardisierung.
+- [MDN: Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number): IEEE754 und Zahlengenauigkeit.
+- [ISO: Certification](https://www.iso.org/certification.html): Trennung von Standard und Zertifizierung.
+
 
 1. ANSI - Introduction to American National Standards process by ANSI  
    https://www.ansi.org/american-national-standards/ans-introduction/overview  

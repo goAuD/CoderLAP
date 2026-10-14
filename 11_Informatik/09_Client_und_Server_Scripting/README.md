@@ -59,7 +59,7 @@ Tipikus technológiák:
 4. A szerver HTML-t, JSON-t vagy más választ küld.
 5. A kliensoldali kód ezt megjeleníti vagy tovább kezeli.
 
-## Miért kell mindkettő?
+## Hogyan osztjuk meg a feladatokat?
 
 Mert más a szerepük.
 
@@ -92,6 +92,29 @@ Mert más a szerepük.
 - A jó webalkalmazás általában mindkét oldalt használja.
 - A felhasználói élmény és a biztonság egyensúlya fontos.
 
+## A bizalmi határ egy rendelésnél
+
+A kliens és a szerver közötti határ egyben bizalmi határ. A felhasználó a saját
+böngészőjében módosíthatja a JavaScriptet és a küldött kérést. Egy rendelésnél
+ezért más feladatot kap a két oldal:
+
+| Kliens küldi vagy végzi | Szerver ellenőrzi vagy számítja |
+|---|---|
+| termékazonosító és darabszám | létező termék, megengedett mennyiség és készlet |
+| a kiválasztott szállítási mód | az adott rendeléshez engedett mód és díj |
+| gyors mezőellenőrzés és visszajelzés | az összes beérkező adat és az üzleti szabály |
+| munkamenethez tartozó kérés | a hitelesített felhasználó kiléte és jogosultsága |
+
+A szerver a saját adataiból számolja a végösszeget, és nem a kérésben kapott
+„admin” vagy „price” érték alapján dönt. A válasz lehet HTML vagy JSON;
+JSON esetén a böngészőnek még meg kell jelenítenie az adatot.
+
+A JavaScript nyelv önmagában nem dönti el a végrehajtás helyét: DOM-kódot a
+böngészőben, Node.js-kódot szerveren vagy helyi eszközként is futtathatunk.
+Egy hagyományos HTML-űrlap kliensoldali JavaScript nélkül is küldhet adatot
+a szervernek. A kliensoldali kód mennyiségét a szükséges felhasználói élmény
+alapján választjuk meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A kliensoldali scripting a felhasználó böngészőjében fut, és főleg a felület interaktív működéséért felel.  
@@ -99,13 +122,6 @@ Mert más a szerepük.
 > és az üzleti logikát, az adatkezelést,
 > a hitelesítést és a válasz előállítását végzi.  
 > Egy modern webalkalmazás jellemzően mindkét megközelítést együtt használja.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy minden JavaScript csak kliensoldali lehet.
-- A kliensoldali validálást elégséges biztonsági megoldásnak tekinteni.
-- A dinamikus oldalt kizárólag szerveroldali fogalomnak nevezni.
-- Nem megemlíteni az adatbázis- és jogosultságkezelést a szerveroldalon.
 
 ## Gyors önellenőrzés
 
@@ -124,6 +140,12 @@ Mert más a szerepük.
 5. Igen
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [OWASP: Business Logic Security](https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html): szerveroldali bizalmi határ.
+- [MDN: Server-side introduction](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction): szerver és kliens feladatmegosztása.
+
 
 1. MDN - Introduction to the server side  
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction  

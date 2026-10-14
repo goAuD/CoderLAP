@@ -48,13 +48,13 @@ Ez egy tudatosan egyszerű, vizsgabarát mintamegoldás a `18_Uebungsbeispiel` b
               <div class="row g-3">
                 <div class="col-12 col-md-6">
                   <label for="vorname" class="form-label">Vorname</label>
-                  <input id="vorname" name="vorname" type="text" class="form-control" autocomplete="given-name">
+                  <input id="vorname" name="vorname" type="text" class="form-control" autocomplete="given-name" required>
                   <div class="invalid-feedback">Bitte einen Vornamen eingeben.</div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <label for="nachname" class="form-label">Nachname</label>
-                  <input id="nachname" name="nachname" type="text" class="form-control" autocomplete="family-name">
+                  <input id="nachname" name="nachname" type="text" class="form-control" autocomplete="family-name" required>
                   <div class="invalid-feedback">Bitte einen Nachnamen eingeben.</div>
                 </div>
 
@@ -66,12 +66,13 @@ Ez egy tudatosan egyszerű, vizsgabarát mintamegoldás a `18_Uebungsbeispiel` b
                     type="text"
                     class="form-control"
                     inputmode="numeric"
+                    required
                     autocomplete="off"
                     placeholder="z. B. 4422 180599"
                     aria-describedby="svnummer-help"
                   >
                   <div id="svnummer-help" class="form-text">
-                    Format: <code>LLLL TTMMJJ</code> bzw. 10 Ziffern mit optionalem Leerzeichen nach der 4. Stelle.
+                    Format: <code>LLLP TTMMJJ</code>, 10 Ziffern mit optionalem Leerraum. Bitte nur die PDF-Testdaten verwenden.
                   </div>
                   <div class="invalid-feedback" id="svnummer-feedback">
                     Bitte eine SV-Nummer eingeben.
@@ -177,14 +178,17 @@ const resetButton = document.getElementById("reset-button");
 svInput.addEventListener("input", () => {
   svInput.value = formatSvInput(svInput.value);
   svInput.classList.remove("is-invalid", "is-valid");
+  hideResult();
 });
 
 firstNameInput.addEventListener("input", () => {
   firstNameInput.classList.remove("is-invalid");
+  hideResult();
 });
 
 lastNameInput.addEventListener("input", () => {
   lastNameInput.classList.remove("is-invalid");
+  hideResult();
 });
 
 form.addEventListener("submit", (event) => {
@@ -225,7 +229,7 @@ form.addEventListener("submit", (event) => {
     svInput.classList.add("is-valid");
     showResult({
       ok: true,
-      title: "SV-Nummer ist gueltig.",
+      title: "Formale SV-Pruefung bestanden.",
       detail: "Der QR-Code enthaelt den Text Richtig.",
       payload: "Richtig"
     });
@@ -278,11 +282,17 @@ function renderQrCode(payload) {
   qr.addData(payload);
   qr.make();
 
-  qrCodeBox.innerHTML = qr.createSvgTag(6, 0);
+  // The default margin is four modules on every side (quiet zone).
+  qrCodeBox.innerHTML = qr.createSvgTag(6);
 }
 
 function formatSvInput(value) {
-  const digits = value.replace(/\D/g, "").slice(0, 10);
+  const digits = value.replace(/\s/g, "");
+
+  // Keep malformed input visible so validation can explain the problem.
+  if (!/^\d{0,10}$/.test(digits)) {
+    return value;
+  }
 
   if (digits.length <= 4) {
     return digits;
@@ -292,12 +302,19 @@ function formatSvInput(value) {
 }
 
 function validateAustrianSvNumber(rawValue) {
-  const digits = rawValue.replace(/\D/g, "");
+  const digits = rawValue.replace(/\s/g, "");
 
   if (!/^\d{10}$/.test(digits)) {
     return {
       isValid: false,
-      message: "Die SV-Nummer muss aus genau 10 Ziffern bestehen."
+      message: "Die SV-Nummer muss aus genau 10 Ziffern bestehen; nur Leerraum ist zusaetzlich erlaubt."
+    };
+  }
+
+  if (digits[0] === "0") {
+    return {
+      isValid: false,
+      message: "Die Laufnummer muss zwischen 100 und 999 liegen."
     };
   }
 
@@ -422,10 +439,47 @@ function escapeHtml(value) {
 - `5255 121299`
 - `4999 070700`
 
+## A kód olvasási sorrendje és ellenőrzése
+
+A `submit` esemény megállítja az alapértelmezett elküldést, majd ellenőrzi a kötelező mezőket.
+A `validateAustrianSvNumber()` a formátum, a Laufnummer, a dátumrész és az ellenőrzőszám
+eredményét adja vissza. A `showResult()` választja a feliratot, a `renderQrCode()` a képet készíti el.
+Ez a szétválasztás segít a logikát böngészőfelület nélkül is tesztelni.
+
+A formázó csak szóközöket rendez; betűt vagy a tizediken túli számjegyet nem dob el csendben.
+Új bevitel elrejti az előző eredményt. A QR kizárólag a döntés szavát tartalmazza.
+Az eredmény formai ellenőrzés, nem biztosítói nyilvántartási lekérdezés.
+
+A repo gyökeréből futtatható regressziós ellenőrzés:
+
+```powershell
+node --test tests/sv-exercise.test.cjs
+```
+
+A teszt a PDF hat példáját, hibás karaktereket, túl hosszú bemenetet, a nulla kezdőszámot,
+az ellenőrzőszám határeseteit és az egymást követő űrlapállapotokat ellenőrzi.
+A README-be másolt teljes forráskódot a tényleges fájlokkal is összehasonlítja.
+Az önálló QR-olvasós próbát az előző témában leírtak szerint végezzük.
+
+A QR-könyvtár helyi, a Bootstrap-stílushoz jelenleg internetkapcsolat kell.
+A próba előtt ezt a különbséget is figyelembe vesszük.
+
+## Gyors önellenőrzés
+
+1. Melyik függvény vizsgálja az SV-számot?
+2. Mi történik új bevitelkor a régi QR-ral?
+3. Mit őriz meg a formázó hibás karakterek esetén?
+
+## Rövid válaszok az önellenőrzéshez
+
+1. A validateAustrianSvNumber().
+2. Eltűnik, és csak új ellenőrzés után jelenik meg új eredmény.
+3. A hibás karaktert és a túl hosszú bemenetet is, hogy a validáló felismerje.
+
 ## Források
 
 1. Themenkatalog für die Vorbereitung auf die Lehrabschlussprüfung Applikationsentwicklung-Coding v2-2024  
-   `../../themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`
+   https://github.com/goAuD/CoderLAP/blob/main/themenkatalog-applikationsentwicklung-coding-v2-2024.pdf
 
 2. Dachverband der österreichischen Sozialversicherung - offizielle Beschreibung der Versicherungsnummer  
    https://www.sozialversicherung.at/cdscontent/load?contentid=10008.796428&version=1750403135

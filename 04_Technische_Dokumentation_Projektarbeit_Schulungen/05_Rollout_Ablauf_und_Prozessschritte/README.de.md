@@ -146,9 +146,17 @@ Die Abnahme bedeutet, dass der Auftraggeber oder Verantwortliche bestätigt:
 
 - es muss immer einen Plan geben
 - es muss einen Pilot oder Testlauf geben
-- eine Rollback-Möglichkeit muss vorhanden sein
+- ein erprobter Wiederherstellungsplan muss vorhanden sein
 - vor der Datenmigration muss ein Backup erstellt werden
 - Kommunikation und Schulung dürfen nicht vergessen werden
+
+## Einführungsentscheidung: fortsetzen, anhalten oder zurückführen?
+
+Fünf ausgewählte Testbenutzer erhalten zunächst die neue Version eines Buchungssystems. Vorab vereinbaren wir: Anmeldung und Speichern müssen in allen Prüffällen funktionieren, es darf kein Datenverlust auftreten. Nach dem Pilot entscheidet die verantwortliche Person anhand der Beobachtungszeit und Ergebnisse über die nächste Gruppe.
+
+Eine Sicherung vor der Einführung wurde bereits in einer getrennten Testinstanz wiederhergestellt. Meldet der Pilot Speicherfehler, halten wir die Einführung an. Das Zurückschalten auf die alte Anwendung genügt nur, wenn das neue Datenbankschema noch damit kompatibel ist. Bei einer Datenmigration müssen zwischenzeitlich entstandene Daten gesondert behandelt werden: Das Einspielen einer alten Sicherung könnte sonst gültige neue Buchungen verlieren.
+
+Rollback ist daher ein geplantes und erprobtes Verfahren, kein für jede Änderung verfügbarer Knopf. Je nach Änderung kann ein vorbereiteter Korrekturstand oder eine sichere vorübergehende Abschaltung der passende Wiederherstellungsweg sein.
 
 ## Prüfungstaugliche Formulierung
 
@@ -158,14 +166,6 @@ Die Abnahme bedeutet, dass der Auftraggeber oder Verantwortliche bestätigt:
 > Wichtige Bestandteile sind die Berücksichtigung der Sicherheitsanforderungen,
 > die Datenmigration sowie die Rollback-Möglichkeit für den Fall,
 > dass die Einführung nicht gelingt.
-
-## Häufige Prüfungsfehler
-
-- Den Rollout nur als Installation betrachten.
-- Die Rollback-Möglichkeit nicht erwähnen.
-- Die Benutzerschulung auslassen.
-- Nicht an die Datenmigration denken.
-- Den Unterschied zwischen Übergabe und Abnahme nicht erkennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -184,6 +184,11 @@ Die Abnahme bedeutet, dass der Auftraggeber oder Verantwortliche bestätigt:
 5. Weil die Benutzer das neue System bedienen können müssen
 
 ## Quellen
+
+- [Microsoft: Safe deployment practices](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments)  
+  Schrittweise Einführung, Zustandsprüfung und Wiederherstellung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Planning the Deployment - Microsoft Learn  
    https://learn.microsoft.com/en-us/iis/web-hosting/installing-infrastructure-components/planning-the-deployment  

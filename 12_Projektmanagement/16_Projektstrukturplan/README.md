@@ -40,6 +40,27 @@ A lényeg nem a forma, hanem a logikai felbontás.
 | PSP | miből áll a projekt |
 | ütemterv | mikor történik valami |
 
+## Egy kis PSP, amelyben a tesztelés is látható
+
+Egy eszköznyilvántartó projekt lehetséges felbontása:
+
+```text
+1. Eszköznyilvántartó projekt
+   1.1 Egyeztetett követelmények
+   1.2 Működő alkalmazás
+       1.2.1 Adatimport
+       1.2.2 Keresés és módosítás
+       1.2.3 Jogosultságkezelés
+   1.3 Ellenőrzés és átadás
+       1.3.1 Elfogadási tesztek
+       1.3.2 Dokumentáció és betanítás
+   1.4 Projektirányítás
+```
+
+A 100%-os szabály szerint a gyermekelemek együtt lefedik a szülő teljes munkatartalmát. A teszt, a dokumentáció és a vezetési munka is beleszámít; ugyanazt a munkát két helyen nem számoljuk el. A levélelemek tovább bonthatók, amíg jól becsülhető és kiosztható munkacsomagokká válnak.
+
+A számozás hierarchiát mutat, nem végrehajtási sorrendet. A függőségeket és dátumokat külön ütemtervben határozzuk meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Projektstrukturplan a projekt teljes munkájának hierarchikus felbontása.  
@@ -48,13 +69,6 @@ A lényeg nem a forma, hanem a logikai felbontás.
 > és ez alapot adjon az ütemezéshez,
 > költségtervezéshez és felelősségi körök kijelöléséhez.  
 > A PSP tehát nem időterv, hanem a projekt logikai felbontása.
-
-## Gyakori vizsgahibák
-
-- A PSP-t Gantt-diagramnak vagy ütemtervnek nevezni.
-- Nem megemlíteni a hierarchikus szerkezetet.
-- Nem kapcsolni a feladatbontáshoz és becsléshez.
-- Összekeverni a munkacsomaggal.
 
 ## Gyors önellenőrzés
 
@@ -73,6 +87,11 @@ A lényeg nem a forma, hanem a logikai felbontás.
 5. Költségtervezésre és felelősségekre
 
 ## Források
+
+- [PMI: Practice Standard for Work Breakdown Structures](https://www.pmi.org/learning/library/practice-standard-work-breakdown-structures-8063)  
+  A PSP teljes munkatartalma, a 100%-os szabály és a projektirányítás szerepe.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Work breakdown structure template  
    https://www.atlassian.com/software/jira/templates/work-breakdown-structure  

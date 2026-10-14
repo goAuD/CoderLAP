@@ -53,6 +53,34 @@ Ismert `DBMS`-ek:
 - `Microsoft SQL Server`
 - `SQLite`
 
+## Hogyan dolgozza fel a DBMS a kérést?
+
+Egy lekérdezésnél a DBMS ellenőrzi a szintaxist, az objektumok létezését és a jogosultságot. A lekérdezéstervező kiválaszt egy végrehajtási tervet, például indexkeresést vagy táblabejárást. A tárolómotor végrehajtja a műveletet; a tranzakciókezelés és naplózás gondoskodik a beállítások szerinti egyidejűségről és helyreállításról.
+
+Az alkalmazás így azt írja le, milyen adatot kér. Nem kell tudnia, a lemez melyik oldalán található egy sor. Ez az adatok fizikai tárolásától való függetlenség egyik előnye.
+
+**MySQL 8.0 / InnoDB, üres gyakorló adatbázis:** a következő példa a DBMS saját metaadatait kérdezi le. Ezek az adatok az adatok szerkezetéről szólnak.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE books (
+  id INT PRIMARY KEY,
+  title VARCHAR(80) NOT NULL
+) ENGINE=InnoDB;
+
+SELECT column_name, data_type, is_nullable
+FROM information_schema.columns
+WHERE table_schema = DATABASE() AND table_name = 'books'
+ORDER BY ordinal_position;
+```
+
+```text
+id int NO
+title varchar NO
+```
+
+A phpMyAdmin vagy egy grafikus SQL-kliens kezelőfelület; a MySQL maga a DBMS. A mentés ütemezése, a jogosultságok és a frissítés ettől még üzemeltetési feladat marad.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A `DBMS`, vagyis Database Management System az a szoftver, amely az adatbázis létrehozását, kezelését, lekérdezését,  
@@ -60,13 +88,6 @@ Ismert `DBMS`-ek:
 > A `DBMS` közvetít az alkalmazások és a tárolt adatok között, valamint biztosítja például az integritást, a  
 > többfelhasználós működést és az adatkezelés szabályait.  
 > Ezért a `DBMS` az adatbázisrendszer központi eleme.
-
-## Gyakori vizsgahibák
-
-- A `DBMS`-t az adatbázissal azonosítani.
-- A `DBMS`-t pusztán lekérdezőprogramnak nevezni.
-- Nem megemlíteni az adminisztrációs és integritási funkciókat.
-- Kihagyni, hogy többfelhasználós hozzáférést is kezel.
 
 ## Gyors önellenőrzés
 
@@ -95,3 +116,10 @@ Ismert `DBMS`-ek:
    Használat: modern, könnyen olvasható összefoglaló a `DBMS` szerepéhez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [MySQL: INFORMATION_SCHEMA COLUMNS](https://dev.mysql.com/doc/refman/8.0/en/information-schema-columns-table.html): oszlopmetaadatok lekérdezése
+- [MySQL: Introduction to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-introduction.html): tranzakciók és az InnoDB tárolómotor szerepe
+
+Ellenőrizve: `2026-10-14`.

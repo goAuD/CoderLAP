@@ -28,7 +28,7 @@ Dafür gibt es ein bekanntes Prinzip:
 
 das heißt:
 
-- mindestens 3 Kopien
+- mindestens 3 Kopien insgesamt, einschließlich der produktiven Daten
 - 2 verschiedene Datenträger
 - 1 separate / Offsite-Kopie
 
@@ -89,7 +89,7 @@ Vorteil:
 
 Nachteil:
 
-- wird mit der Zeit größer als das Incremental
+- wird mit der Zeit meist größer; das hängt auch von Änderungen und Sicherungssoftware ab
 
 ## Nicht verwechseln
 
@@ -98,6 +98,20 @@ Nachteil:
 | Backup | Sicherung zur Wiederherstellung |
 | Sync | Abgleich der Inhalte zweier Orte, nicht immer ein echtes Backup |
 | Archive | längerfristige Aufbewahrung, nicht unbedingt für schnellen Restore |
+
+## Durchgearbeitete Sicherungskette
+
+Am Sonntag entsteht eine Vollsicherung. Am Montag ändert sich Datei `A`, am Dienstag `B`, am Mittwoch `C`. Im vereinfachten Beispiel gibt es keine Löschung, Kompression oder Deduplizierung.
+
+| Tag | Tägliche inkrementelle Sicherung | Tägliche differenzielle Sicherung |
+|---|---|---|
+| Montag | Änderung an A | Änderung an A |
+| Dienstag | Änderung an B | Änderungen an A und B |
+| Mittwoch | Änderung an C | Änderungen an A, B und C |
+
+Für den Stand vom Mittwoch benötigt die klassische inkrementelle Kette **Sonntag + Montag + Dienstag + Mittwoch**. Differenziell reichen **Sonntag + Mittwoch**. Ein fehlendes inkrementelles Glied vom Dienstag kann daher auch die spätere Wiederherstellung verhindern. Manche Produkte erzeugen synthetische Vollsicherungen; die tatsächlichen Abhängigkeiten müssen dann produktspezifisch geprüft werden.
+
+RAID kann bei bestimmten Laufwerksausfällen die Verfügbarkeit erhalten, übernimmt aber auch Löschungen oder verschlüsselte Daten. Synchronisation kann dieselben Änderungen an mehreren Orten verteilen. Entscheidend beim Backup ist, ob sich ein früherer konsistenter Zustand tatsächlich wiederherstellen lässt. Neben 3-2-1 zählen deshalb getrennte Berechtigungen, eine offline aufbewahrte oder geeignet geschützte unveränderbare Kopie und regelmäßige Restore-Tests.
 
 ## Prüfungstaugliche Formulierung
 
@@ -108,13 +122,6 @@ Nachteil:
 > das Incremental nur die seit der letzten Sicherung geänderten Daten,
 > und das Differential die seit der letzten Vollsicherung geänderten Daten.  
 > Das passende Sicherungsprinzip muss anhand des Wiederherstellungsbedarfs, der Zeit und des Speicherplatzes gewählt werden.
-
-## Häufige Prüfungsfehler
-
-- Sync als Backup bezeichnen.
-- Den Unterschied zwischen Full, Incremental und Differential nicht kennen.
-- Glauben, dass "Backup wurde erstellt" gleichbedeutend mit Restore-Bereitschaft ist.
-- Das 3-2-1-Prinzip nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -151,3 +158,9 @@ Nachteil:
    Verwendung: weiteres offizielles praktisches Beispiel mit Restore- und Rollback-Aspekten.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): getrennte, verschlüsselte Sicherungen und geprüfte Wiederherstellung
+
+Geprüft: `2026-10-14`.

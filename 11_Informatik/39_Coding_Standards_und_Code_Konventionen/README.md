@@ -53,19 +53,50 @@ Mert a rosszul egységesített kód:
 - növeli a hibázás esélyét
 - nehezíti az onboardingot
 
+## Kis csapat, ellenőrizhető megállapodás
+
+**Példa:** a csapat két szóközzel húzza be a JavaScriptet, UTF-8 fájlokat és LF
+sortörést használ. A repository gyökerében lévő `.editorconfig` ezt rögzítheti:
+
+```ini
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*.js]
+indent_style = space
+indent_size = 2
+```
+
+Az EditorConfigot támogató szerkesztő a megnyitott fájltól felfelé keresi a
+beállításokat; `root = true` megállítja ezt a keresést. Egy `.js` fájlra az
+általános rész és a JavaScript-rész is érvényes. A konfiguráció önmagában nem
+futtat CI-ellenőrzést, és nem javít üzleti logikát.
+
+| Eszköz vagy szabály | Mit bizonyít? | Konkrét példa |
+|---|---|---|
+| formatter | a megállapodott formátumot | következetes behúzás és sortörés |
+| linter | az engedélyezett szabályok teljesülését | nem használt változó vagy nem definiált név jelzése |
+| típusellenőrző | a leírt típusok szerinti kapcsolatokat | számot váró paraméter hibás hívása |
+| teszt | adott bemenetnél az elvárt viselkedést | a 0 perces időtartam eredménye 0 másodperc |
+| review | emberi értékelést a szándékról és megoldásról | érthető-e az adatkezelés és a változtatás oka? |
+
+Névadáskor a mértékegységet is közöljük: `durationSeconds` vagy `priceCents`
+pontosabb, mint az önmagában álló `value`. A komment inkább a nem nyilvánvaló
+okot magyarázza, ne csupán ismételje az utasítást. A formázási változásokat
+érdemes különválasztani a működés módosításától, hogy a diff átlátható maradjon.
+A stílusvitát egyszer rendezzük a közös konfigurációban, utána a review a
+feladatra összpontosíthat. A linter zöld eredménye nem általános helyességi bizonyíték.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A coding standardok és code konvenciók olyan közös szabályok,
 > amelyek egységesebbé és jobban olvashatóvá teszik a forráskódot.  
 > Ide tartozik például a névadás, a formázás, a szerkezet, a kommentelés és a kódminőségi szabályok használata.  
 > Ezek különösen csapatmunkában fontosak, mert megkönnyítik a review-t, a karbantartást és az együttműködést.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy ez csak esztétikai kérdés.
-- Nem megemlíteni a csapatmunka szerepét.
-- A standardot és a lintert ugyanannak nevezni.
-- Nem hozni rá konkrét példát.
 
 ## Gyors önellenőrzés
 
@@ -84,6 +115,13 @@ Mert a rosszul egységesített kód:
 5. Mert kevesebb zaj marad, jobban látszik a lényeg
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [EditorConfig](https://editorconfig.org/): fájlszintű konfiguráció és keresési sorrend.
+- [ESLint: Core concepts](https://eslint.org/docs/latest/use/core-concepts/): szabályalapú statikus ellenőrzés.
+- [Prettier: Prettier vs. Linters](https://prettier.io/docs/comparison): formázás és minőségi szabályok szerepe.
+
 
 1. EditorConfig  
    https://editorconfig.org/  

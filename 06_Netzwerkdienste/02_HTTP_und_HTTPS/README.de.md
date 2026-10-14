@@ -70,6 +70,22 @@ Zum Beispiel löst es allein nicht:
 | TLS | das die Verbindung schützende Sicherheitsprotokoll |
 | SSL | alter, veralteter Vorgängername |
 
+## Durchgearbeitetes Request-Response-Beispiel
+
+Der folgende HTTP/1.1-Ausschnitt zeigt das Abrufen einer Aufgabe. Bei HTTPS werden diese Anwendungsdaten über die geschützte Verbindung übertragen; das Beispiel ist kein Befehl für einen echten Server.
+
+```http
+GET /api/tasks/7 HTTP/1.1
+Host: example.org
+Accept: application/json
+```
+
+Bei Erfolg können `200 OK` und etwa der JSON-Inhalt `{"id":7,"done":false}` mit `Content-Type: application/json` zurückkommen. Je nach API-Regel ist `404` bei einer nicht vorhandenen Aufgabe, `401` bei fehlender oder unzureichender Authentifizierung und `403` bei einer untersagten Aktion passend.
+
+`GET` dient dem Lesen; `POST` stößt häufig eine Erstellung oder Aktion an. `PUT` und `DELETE` besitzen idempotente Semantik: Wiederholungen derselben Anfrage häufen die beabsichtigte Wirkung auf den Serverzustand nicht an. Das garantiert weder identischen Antworttext noch identischen Statuscode.
+
+Trotz zustandslosem HTTP kann die Anwendung per Cookie oder Token eine Sitzung verwalten. HTTPS schützt die Verbindung und authentifiziert bei korrekter Zertifikatsprüfung den Servernamen; die Wahrheit von Webseiteninhalten bestätigt es nicht. HTTP/3 verwendet QUIC mit integrierter TLS-1.3-Nutzung.
+
 ## Prüfungstaugliche Formulierung
 
 > HTTP (Hypertext Transfer Protocol) ist das grundlegende Request-Response-Protokoll im Web.  
@@ -77,13 +93,6 @@ Zum Beispiel löst es allein nicht:
 > und gewährleistet daher die Verschlüsselung des Datenverkehrs,
 > die Integrität und die Authentifizierung des Servers.  
 > In der Praxis ist HTTPS bei modernen Webdiensten der Standard.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass HTTPS ein völlig anderes Protokoll als HTTP ist.
-- HTTP für verschlüsselt halten.
-- TLS und SSL im heutigen Sinne als Synonyme behandeln.
-- Die Ports vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -128,3 +137,10 @@ Zum Beispiel löst es allein nicht:
    Verwendung: offizielles Portregister für die Ports `80` und `443`.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 9110: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html): Methoden, Idempotenz und Statuscodes.
+- [RFC 9114: HTTP/3](https://www.rfc-editor.org/rfc/rfc9114.html): HTTP über QUIC.
+
+Geprüft: `2026-10-14`.

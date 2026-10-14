@@ -155,6 +155,23 @@ Megjegyzés:
 - gyors
 - rekurziót és felosztásos gondolkodást igényel
 
+## Rendezési szempontok és memória
+
+**Stabil** rendezésnél az azonos kulcsú rekordok eredeti sorrendje megmarad.
+Ha két dolgozat egyaránt 10 pontos, a korábban leadott marad előrébb, feltéve
+hogy a bemenet leadási sorrendben volt. A fenti Bubble Sort csak szigorúan
+nagyobb értéknél cserél, ezért stabil. A hagyományos, helyben dolgozó Quick Sort
+általában nem stabil; az algoritmus neve önmagában nem ír le minden változatot.
+
+A **helyben rendezés** az eredeti adatszerkezet módosítását jelenti. A fenti
+Bubble Sort szándékosan másol, tehát ez a tanulóváltozat `O(n)` többletmemóriát
+használ. A Quick Sort példában a résztömbök és a rekurzív hívások is memóriát
+igényelnek. Egy könyvtári rendezés kiválasztásánál ezért az időigény mellett a
+stabilitást, a másolást és az összehasonlítás szabályát is tisztázzuk.
+
+Próbáld kézzel követni a `[2, 2, 1]` bemenetet: az eredmény `[1, 2, 2]`, és az
+elemszám változatlanul három. A rendezés nem távolítja el az ismétlődéseket.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Bubble Sort egy egyszerű rendezési algoritmus, amely a szomszédos elemek ismételt összehasonlításával és  
@@ -179,6 +196,12 @@ Megjegyzés:
 5. Új `[]`, illetve `[7]` tömböt; a bemenet változatlan marad.
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [NIST DADS: bubble sort](https://xlinux.nist.gov/dads/HTML/bubblesort.html): stabilitás és rendezési változat.
+- [NIST DADS: quicksort](https://xlinux.nist.gov/dads/HTML/quicksort.html): pivot és különböző megvalósítások.
+
 
 1. NIST DADS - bubble sort  
    https://xlinux.nist.gov/dads/HTML/bubblesort.html  

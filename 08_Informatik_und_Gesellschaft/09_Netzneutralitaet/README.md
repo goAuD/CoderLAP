@@ -57,6 +57,14 @@ Mert ha a net neutrality sérül:
 | internet censorship | tartalomkorlátozás más logika alapján |
 | QoS | technikai szolgáltatásminőség-kezelés, nem automatikusan tiltott |
 
+## Két forgalomkezelési döntés összehasonlítása
+
+Ha a szolgáltató tartósan lassít egy versenytárs videóalkalmazását kereskedelmi előnyért, az nem válik elfogadhatóvá attól, hogy szerepel az apró betűs részben. Az ésszerű forgalomkezelésnek átláthatónak, megkülönböztetésmentesnek és arányosnak kell lennie, objektív műszaki követelmények alapján.
+
+Más helyzet egy konkrét biztonsági támadás elhárítása vagy kivételes vagy átmeneti torlódás kezelése. Ilyenkor is csak a szükséges mértékű és idejű korlátozás alkalmazható; az általánosan túlterhelt hálózat nem korlátlan felmentés. Az uniós rendelet külön kezeli a speciális szolgáltatásokat, amelyek feltételek mellett nyújthatók, de nem ronthatják az általános internet-hozzáférés minőségét.
+
+Ausztriában az RTR és a TKK felügyeli a területet. A vizsgán ezért az elv mellett a korlátozás célját, időtartamát és arányosságát is érdemes megvizsgálni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A net neutrality, vagyis hálózatsemlegesség azt az elvet jelenti,
@@ -65,13 +73,6 @@ Mert ha a net neutrality sérül:
 > vagy hátrányban bizonyos online szolgáltatásokat önkényesen.  
 > Ez a nyílt internet, a verseny és az innováció szempontjából fontos.  
 > Korlátozott, indokolt és átlátható forgalomkezelés bizonyos esetekben lehetséges, de a fő elv az egyenlő bánásmód.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy semmilyen forgalomkezelés nem lehet.
-- A net neutralityt összekeverni általános cenzúrával.
-- Nem megemlíteni a verseny és innováció szerepét.
-- Azt hinni, hogy csak technikai kérdés, társadalmi oldala nincs.
 
 ## Gyors önellenőrzés
 
@@ -87,9 +88,20 @@ Mert ha a net neutrality sérül:
 2. Mert nagyobb választási szabadságot ad
 3. Mert nem kerülnek automatikusan hátrányba
 4. Igen
-5. Például torlódáskezelés vagy biztonsági intézkedés
+5. Például konkrét biztonsági fenyegetés elhárítása vagy kivételes vagy átmeneti torlódás arányos kezelése
 
 ## Források
+
+- [RTR: Netzneutralität](https://www.rtr.at/TKP/was_wir_tun/telekommunikation/weitere-regulierungsthemen/netzneutralitaet/Netzneutralitaet.de.html)  
+  Osztrák felügyelet és uniós szabályozás.
+
+- [RTR Netzneutralitätsbericht 2026](https://www.rtr.at/TKP/aktuelles/publikationen/publikationen/netzneutralitaetsbericht/nnbericht2026.de.html)  
+  Aktuális osztrák jelentés, 2025. május–2026. április időszak.
+
+- [EUR-Lex: Verordnung (EU) 2015/2120, Art. 3](https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32015R2120)  
+  A forgalomkezelés feltételei és kivételei, különösen a kivételes vagy átmeneti torlódás.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. EUR-Lex - Regulation (EU) 2015/2120  
    https://eur-lex.europa.eu/eli/reg/2015/2120/oj  

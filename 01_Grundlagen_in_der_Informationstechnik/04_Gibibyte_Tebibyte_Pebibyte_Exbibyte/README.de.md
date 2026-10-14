@@ -134,6 +134,25 @@ Vollständige Kette:
 - `1 PiB = 2^50 B`
 - `1 EiB = 2^60 B`
 
+## Durchgerechnetes Beispiel: dieselbe Platte in zwei Einheiten
+
+Eine Platte mit `1 TB` nomineller Kapazität entspricht `1 000 000 000 000 B`.
+Zur Umrechnung in GiB teilen wir die Byteanzahl durch die Größe eines GiB:
+
+`1 000 000 000 000 / 1 073 741 824 ≈ 931,32 GiB`.
+
+`1000 GB` und ungefähr `931,32 GiB` bezeichnen dieselbe Kapazität. Bei der Umrechnung
+geht nichts verloren. Partitionsdaten, Dateisystem und reservierte Bereiche können
+den nutzbaren freien Platz tatsächlich verringern; das ist ein zusätzlicher Effekt.
+Wir prüfen deshalb neben der angezeigten Zahl auch die verwendete Einheit.
+
+**Zweite Aufgabe:** Wie viele Blöcke mit `512 MiB` passen in ein Budget von `8 GiB`?
+Zuerst rechnen wir `8 GiB = 8192 MiB`, dann `8192 / 512 = 16`.
+Das gilt für das angegebene Budget ohne Zusatzbedarf. Der gesamte Speicherbedarf
+eines Programms kann zusätzlich beispielsweise Objektinformationen und die Laufzeitumgebung umfassen.
+
+Quelle: [NIST: Definition der binären Präfixe](https://physics.nist.gov/cuu/Units/binary.html).
+
 ## Prüfungstaugliche Formulierung
 
 > Gibibyte, Tebibyte, Pebibyte und Exbibyte sind binäre Datengrößeneinheiten.  
@@ -143,14 +162,6 @@ Vollständige Kette:
 > Die binären Präfixe wurden eingeführt,
 > damit der Unterschied zwischen 1000er-
 > und 1024er-basierter Berechnung eindeutig ist.
-
-## Häufige Prüfungsfehler
-
-- `GiB` und `GB` zu verwechseln.
-- Zu sagen, dass `1 GiB = 1 000 000 000 Byte`.
-- Zu vergessen, dass der binäre Schritt `1024` ist, nicht `1000`.
-- Nicht zu wissen, warum in der Bezeichnung ein `i` steht.
-- Zu glauben, dass binäre Präfixe SI-Präfixe sind.
 
 ## Schnelle Selbstkontrolle
 
@@ -171,7 +182,7 @@ Vollständige Kette:
 ## Quellen
 
 1. NIST - Definitions of the SI units: The binary prefixes  
-   https://physics.nist.gov/cgi-bin/cuu/Info/Units/binary.html  
+   https://physics.nist.gov/cuu/Units/binary.html  
    Verwendung: offizielle Definition der binären Präfixe und Vergleich mit SI-Präfixen.
 
 2. NIST CSRC Glossary - gibibyte  

@@ -12,14 +12,17 @@ const resetButton = document.getElementById("reset-button");
 svInput.addEventListener("input", () => {
   svInput.value = formatSvInput(svInput.value);
   svInput.classList.remove("is-invalid", "is-valid");
+  hideResult();
 });
 
 firstNameInput.addEventListener("input", () => {
   firstNameInput.classList.remove("is-invalid");
+  hideResult();
 });
 
 lastNameInput.addEventListener("input", () => {
   lastNameInput.classList.remove("is-invalid");
+  hideResult();
 });
 
 form.addEventListener("submit", (event) => {
@@ -60,7 +63,7 @@ form.addEventListener("submit", (event) => {
     svInput.classList.add("is-valid");
     showResult({
       ok: true,
-      title: "SV-Nummer ist gueltig.",
+      title: "Formale SV-Pruefung bestanden.",
       detail: "Der QR-Code enthaelt den Text Richtig.",
       payload: "Richtig"
     });
@@ -113,11 +116,17 @@ function renderQrCode(payload) {
   qr.addData(payload);
   qr.make();
 
-  qrCodeBox.innerHTML = qr.createSvgTag(6, 0);
+  // The default margin is four modules on every side (quiet zone).
+  qrCodeBox.innerHTML = qr.createSvgTag(6);
 }
 
 function formatSvInput(value) {
-  const digits = value.replace(/\D/g, "").slice(0, 10);
+  const digits = value.replace(/\s/g, "");
+
+  // Keep malformed input visible so validation can explain the problem.
+  if (!/^\d{0,10}$/.test(digits)) {
+    return value;
+  }
 
   if (digits.length <= 4) {
     return digits;
@@ -127,12 +136,19 @@ function formatSvInput(value) {
 }
 
 function validateAustrianSvNumber(rawValue) {
-  const digits = rawValue.replace(/\D/g, "");
+  const digits = rawValue.replace(/\s/g, "");
 
   if (!/^\d{10}$/.test(digits)) {
     return {
       isValid: false,
-      message: "Die SV-Nummer muss aus genau 10 Ziffern bestehen."
+      message: "Die SV-Nummer muss aus genau 10 Ziffern bestehen; nur Leerraum ist zusaetzlich erlaubt."
+    };
+  }
+
+  if (digits[0] === "0") {
+    return {
+      isValid: false,
+      message: "Die Laufnummer muss zwischen 100 und 999 liegen."
     };
   }
 

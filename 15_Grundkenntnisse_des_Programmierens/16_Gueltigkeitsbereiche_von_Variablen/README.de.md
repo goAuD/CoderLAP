@@ -33,7 +33,7 @@ Der Gültigkeitsbereich bedeutet:
 
 ### Lokal
 
-- lebt nur innerhalb einer Funktion oder Prozedur
+- der Name ist innerhalb einer Funktion oder Prozedur sichtbar
 - besser kontrollierbar
 
 ### Blockbezogen
@@ -56,19 +56,48 @@ Die beiden hängen zusammen, sind aber nicht dasselbe.
 - leichter, sie versehentlich zu ändern
 - schwächt den modularen Aufbau
 
+## Gültigkeitsbereich und Lebensdauer mit einer Closure
+
+Das folgende Node.js-Beispiel erzeugt zwei unabhängige Zähler:
+
+<!-- example:run -->
+
+```javascript
+function createCounter() {
+  let count = 0;
+  return function next() {
+    count += 1;
+    return count;
+  };
+}
+const first = createCounter();
+const second = createCounter();
+console.log(first(), first(), second());
+```
+
+```text
+1 2 1
+```
+
+`count` ist direkt nur in der erzeugenden Funktion und deren innerer Funktion
+sichtbar. Die zurückgegebene Funktion `next` behält Zugriff auf ihre Umgebung;
+das nennen wir **Closure**. Die ersten beiden Aufrufe erhöhen denselben Zähler.
+`second` stammt aus einer eigenen Erzeugung und beginnt deshalb bei 1.
+
+`createCounter` ist bereits zurückgekehrt, der innere Zustand bleibt über die
+zurückgegebene Funktion dennoch erreichbar. Das zeigt den Unterschied zwischen
+Gültigkeitsbereich und Lebensdauer. In JavaScript haben `let` und `const`
+Block-Scope, `var` hat Funktions-Scope. Ein innerer Bereich darf äußere Namen
+verwenden; eine gleichnamige innere Deklaration verdeckt den äußeren Namen.
+In einem ES-Modul gehört eine Variable auf oberster Ebene zum Modul und ist
+nicht automatisch eine globale Variable aller anderen Dateien.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Gültigkeitsbereich von Variablen bestimmt, in welchen Teilen des Programms eine bestimmte Variable erreichbar  
 > ist.  
 > Man kann zum Beispiel von globalem, lokalem und blockbezogenem Scope sprechen.  
 > Die korrekte Scope-Handhabung ist wichtig für die Fehlervermeidung, die Übersichtlichkeit und die Wartbarkeit.
-
-## Häufige Prüfungsfehler
-
-- Den Gültigkeitsbereich mit der Lebensdauer zu verwechseln.
-- Zu behaupten, dass eine globale Variable immer gut ist, weil sie "überall sichtbar ist".
-- Die Vorteile des lokalen Scopes nicht zu erwähnen.
-- Scope und Datentyp zu vermischen.
 
 ## Schnelle Selbstkontrolle
 
@@ -87,6 +116,11 @@ Die beiden hängen zusammen, sind aber nicht dasselbe.
 5. Das eine ist die Sichtbarkeit, das andere die Existenzdauer
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures): lexikalische Umgebung und erhaltener Zustand.
+
 
 1. MDN - Scope  
    https://developer.mozilla.org/en-US/docs/Glossary/Scope  

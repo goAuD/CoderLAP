@@ -50,6 +50,11 @@ _ALLOWED_ATTRIBUTES = {
 
 _SAFE_URL_SCHEMES = {"http", "https", "mailto"}
 _HIDDEN_TOPIC_SECTIONS = {"gyakori vizsgahibak", "haufige prufungsfehler"}
+_EDITORIAL_MARKERS = {
+    "<!-- example:run -->",
+    "<!-- example:mysql -->",
+    "<!-- example:php-pdo-mysql -->",
+}
 
 
 class _TopicSectionFilter(Treeprocessor):
@@ -99,7 +104,8 @@ def _sanitize_url(value: str) -> str:
     return candidate
 
 
-def _linkify_plain_url_lines(markdown_text: str) -> str:
+def _prepare_markdown(markdown_text: str) -> str:
+    """Link plain source URLs and omit editorial markers outside code blocks."""
     transformed_lines: list[str] = []
     in_fenced_block = False
     fence_marker = ""
@@ -120,6 +126,10 @@ def _linkify_plain_url_lines(markdown_text: str) -> str:
 
         if in_fenced_block or line.startswith("    ") or line.startswith("\t"):
             transformed_lines.append(line)
+            continue
+
+        if stripped in _EDITORIAL_MARKERS:
+            transformed_lines.append("")
             continue
 
         match = _STANDALONE_URL_PATTERN.fullmatch(stripped)
@@ -225,7 +235,7 @@ def render_markdown(
     suppress_redundant_summary_heading: bool = False,
     suppress_exam_mistakes: bool = False,
 ) -> str:
-    normalized_markdown = _linkify_plain_url_lines(markdown_text)
+    normalized_markdown = _prepare_markdown(markdown_text)
     md = Markdown(
         extensions=["extra", "tables", "fenced_code", "sane_lists"],
         output_format="html",

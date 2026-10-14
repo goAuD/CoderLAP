@@ -50,6 +50,14 @@ Ezért a projektmenedzsment jellemzően magában foglalja:
 - követés / ellenőrzés
 - lezárás
 
+## Heti státusz egy kis szoftverprojektben
+
+Pénteken elkészült egy időpontfoglaló űrlap kódja. A projektvezető nem csak azt kérdezi, hány feladatot zártak le: működik-e a kettős foglalás elleni ellenőrzés, megtörtént-e az ügyfél próbája, és mi kell még az átadáshoz? Az „elkódolva” és az „elfogadva” külön állapot.
+
+A következő heti tervben felelőst és időpontot kap a teszt, a felhasználói próba és a használati leírás. Ha az ügyfél csak egy héttel később ér rá, ezt függőségként rögzítik, és átütemezik az érintett munkát. Az eltérésre adott döntést is dokumentálják.
+
+A követés és a korrekció tehát végigkíséri a projektet; nem csak a megvalósítás utáni lépés. Kis csapatban ugyanaz a személy fejleszthet és koordinálhat is, de a két felelősséget akkor is érdemes megkülönböztetni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projektmenedzsment egy projekt tudatos megtervezését, irányítását, koordinálását és ellenőrzését jelenti.  
@@ -58,13 +66,6 @@ Ezért a projektmenedzsment jellemzően magában foglalja:
 > A projektmenedzsmenthez tartozik többek között a tervezés,
 > a kommunikáció, a feladatkiosztás, a kockázatkezelés
 > és a folyamatos nyomon követés.
-
-## Gyakori vizsgahibák
-
-- A projektmenedzsmentet összekeverni a szakmai kivitelezéssel.
-- Csak a határidőt említeni, a költséget és célt nem.
-- Nem megemlíteni a koordináció és kommunikáció szerepét.
-- A projektmenedzsmentet puszta adminisztrációnak nevezni.
 
 ## Gyors önellenőrzés
 
@@ -83,6 +84,11 @@ Ezért a projektmenedzsment jellemzően magában foglalja:
 5. Idő, költség, eredmény / terjedelem
 
 ## Források
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Projektcélok, felelősségek és folyamatos irányítás; a példa saját tanulási eset.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - Lexicon of Terms  
    https://www.pmi.org/standards/lexicon  

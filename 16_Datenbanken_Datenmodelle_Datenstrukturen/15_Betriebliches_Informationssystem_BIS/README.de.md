@@ -51,19 +51,22 @@ Das heißt:
 
 - `ERP` und `BI` sind häufig Teile oder Subsysteme des `BIS`
 
+## Durchgearbeiteter Prozess: Auftrag einer Reparaturwerkstatt
+
+Die Annahme übernimmt einen Laptop und eröffnet einen Auftrag mit Gerätekennung, Fehlerbeschreibung und vereinbartem Kontaktweg. Die Technik ergänzt Diagnose und Arbeitszeit, das Lager reserviert Teile und die Finanzabteilung übernimmt freigegebene Positionen für die Abrechnung.
+
+Das BIS ist hier nicht der Name eines einzigen Programms. Dazu gehören Auftragsdaten, Software, Aufgaben der Technik, Freigaberegeln und die Verantwortung für die Kundenbenachrichtigung. Ist niemand für Statusänderungen zuständig, bleiben Informationen auch mit einer technisch einwandfreien Datenbank irreführend.
+
+Unterscheide **Stammdaten**, etwa die Bezeichnung eines Ersatzteils, von **Bewegungsdaten**, etwa zwei verbauten Stück in einem konkreten Auftrag. Die tägliche Auftragsbearbeitung ist operativ; der Vergleich monatlicher durchschnittlicher Reparaturzeiten ist analytisch.
+
+Abnahmeprüfung: Spiele einen Auftrag von der Annahme bis zum Abschluss durch. Prüfe eindeutige Kennungen, rollenbezogene Zugriffe, Verantwortliche, Statuswechsel und die Fortsetzbarkeit unterbrochener Schritte. Erfasse nur für den Prozess erforderliche personenbezogene Daten und lege ihre Aufbewahrung fest.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein betriebliches Informationssystem ist ein System, das die Erfassung, Speicherung, Verarbeitung und Weitergabe der  
 > für den Unternehmensbetrieb notwendigen Informationen unterstützt.  
 > Ein `BIS` besteht nicht nur aus technologischen Elementen, sondern auch aus Menschen, Prozessen und Geschäftsregeln.  
 > Sein Ziel ist die Unterstützung der operativen Arbeit und der Entscheidungsfindung innerhalb des Unternehmens.
-
-## Häufige Prüfungsfehler
-
-- Das `BIS` ausschließlich als Datenbank bezeichnen.
-- Das `BIS` vollständig mit dem `ERP` gleichsetzen.
-- Die Rolle der Menschen und Prozesse weglassen.
-- Die Entscheidungsunterstützungsseite nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -100,3 +103,10 @@ Hinweis: `BIS` ist hier als Sammelbegriff formuliert, basierend auf einer Zusamm
 zuverlässigen Quellen.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Pace University: Information Systems](https://www.pace.edu/news/what-is-information-systems): Zusammenspiel von Menschen, Prozessen und Technik
+- [IBM: Business Intelligence](https://www.ibm.com/think/topics/business-intelligence): analytische Nutzung operativer Daten
+
+Geprüft: `2026-10-14`.

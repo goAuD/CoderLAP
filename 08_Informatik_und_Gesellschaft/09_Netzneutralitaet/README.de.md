@@ -59,6 +59,14 @@ Weil wenn die Netzneutralität verletzt wird:
 | Internetzensur | Inhaltsbeschränkung nach anderer Logik |
 | QoS | technisches Dienstqualitätsmanagement, nicht automatisch verboten |
 
+## Zwei Entscheidungen zum Verkehrsmanagement vergleichen
+
+Verlangsamt ein Anbieter die Videoanwendung eines Konkurrenten dauerhaft aus geschäftlichem Interesse, wird dies nicht allein durch einen Hinweis im Kleingedruckten zulässig. Angemessenes Verkehrsmanagement muss transparent, nicht diskriminierend und verhältnismäßig sein und auf objektiven technischen Anforderungen beruhen.
+
+Anders liegen die Abwehr eines konkreten Sicherheitsangriffs oder die Behandlung außergewöhnlicher oder vorübergehender Überlastung. Auch dann ist die Beschränkung auf das notwendige Ausmaß und die erforderliche Zeit begrenzt; ein dauerhaft unterdimensioniertes Netz ist keine unbeschränkte Ausnahme. Die EU-Verordnung behandelt Spezialdienste gesondert: Sie können unter Voraussetzungen angeboten werden, dürfen die Qualität des allgemeinen Internetzugangs aber nicht beeinträchtigen.
+
+In Österreich überwachen RTR und TKK diesen Bereich. In der Prüfung betrachten wir daher neben dem Prinzip auch Zweck, Dauer und Verhältnismäßigkeit einer Einschränkung.
+
 ## Prüfungstaugliche Formulierung
 
 > Netzneutralität bezeichnet das Prinzip,
@@ -68,13 +76,6 @@ Weil wenn die Netzneutralität verletzt wird:
 > Begrenztes, begründetes und transparentes Verkehrsmanagement
 > ist in bestimmten Fällen möglich,
 > aber das Hauptprinzip ist die Gleichbehandlung.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, dass keinerlei Verkehrsmanagement möglich ist.
-- Netzneutralität mit allgemeiner Zensur zu verwechseln.
-- Die Rolle von Wettbewerb und Innovation nicht zu erwähnen.
-- Zu glauben, dass es nur eine technische Frage ist, ohne gesellschaftliche Seite.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,9 +91,20 @@ Weil wenn die Netzneutralität verletzt wird:
 2. Weil sie größere Wahlfreiheit bietet
 3. Weil sie nicht automatisch benachteiligt werden
 4. Ja
-5. Zum Beispiel Überlastungsmanagement oder Sicherheitsmaßnahmen
+5. Zum Beispiel die Abwehr einer konkreten Sicherheitsbedrohung oder verhältnismäßige Behandlung außergewöhnlicher oder vorübergehender Überlastung
 
 ## Quellen
+
+- [RTR: Netzneutralität](https://www.rtr.at/TKP/was_wir_tun/telekommunikation/weitere-regulierungsthemen/netzneutralitaet/Netzneutralitaet.de.html)  
+  Österreichische Aufsicht und EU-Regelung.
+
+- [RTR Netzneutralitätsbericht 2026](https://www.rtr.at/TKP/aktuelles/publikationen/publikationen/netzneutralitaetsbericht/nnbericht2026.de.html)  
+  Aktueller österreichischer Bericht für Mai 2025 bis April 2026.
+
+- [EUR-Lex: Verordnung (EU) 2015/2120, Art. 3](https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32015R2120)  
+  Voraussetzungen und Ausnahmen der Verkehrssteuerung, insbesondere außergewöhnliche oder vorübergehende Überlastung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. EUR-Lex - Regulation (EU) 2015/2120  
    https://eur-lex.europa.eu/eli/reg/2015/2120/oj  

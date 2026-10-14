@@ -51,6 +51,14 @@ Ezért a modell:
 | változáskezelés | nehezebb | rugalmasabb |
 | visszajelzés | később | gyakrabban |
 
+## Mit adunk át az egyes fázisok között?
+
+Egy megadott számlaformátum átalakítójánál a követelményszakasz eredménye lehet a mezőleírás és az elfogadott bemenet-kimenet példák. A terv megmondja a feldolgozás lépéseit és a hibajelzéseket. Az implementáció után a tesztek ugyanazokkal a mintákkal ellenőrzik az átalakítást, majd dokumentált telepítés és átadás következik.
+
+A fázishatáron rögzítjük, ki fogadja el az eredményt és melyik változat az alap. Ha később új kötelező mező jelenik meg, hatáselemzés készül: melyik követelményt, tervet, kódot és tesztet kell módosítani? A visszalépés lehetséges, de összehangolt változáskezelést igényel.
+
+A fázisok sorrendje nem tiltja a korai dokumentumreview-t vagy a tesztek előzetes megtervezését. Ezekkel még az implementáció előtt tisztázhatók a félreérthető szabályok.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A vízesésmodell egy lineáris szoftverfolyamat-modell,
@@ -58,13 +66,6 @@ Ezért a modell:
 > jellemzően egymás után következnek.  
 > Tipikus fázisai a követelményelemzés, tervezés, implementáció, tesztelés, bevezetés és karbantartás.  
 > Előnye az átlátható szerkezet, hátránya pedig az, hogy kevésbé rugalmas, ha a követelmények menet közben változnak.
-
-## Gyakori vizsgahibák
-
-- A vízesést teljesen hibamentes vagy mindig rossz modellnek beállítani.
-- Nem megemlíteni a lineáris felépítést.
-- Összekeverni a V-modellel.
-- Kihagyni a karbantartási szakaszt.
 
 ## Gyors önellenőrzés
 
@@ -83,6 +84,11 @@ Ezért a modell:
 5. A vízesés kevésbé rugalmas
 
 ## Források
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Teszttevékenységek a fejlesztési életciklusban, korai ellenőrzés.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - What is the Waterfall methodology?  
    https://www.atlassian.com/agile/project-management/waterfall-methodology  

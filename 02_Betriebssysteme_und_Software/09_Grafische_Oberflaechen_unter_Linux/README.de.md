@@ -83,22 +83,13 @@ Zum Beispiel:
 
 ## Verwandte Begriffe
 
-### Display-Server
+### Anzeigeprotokoll und Server
 
-Die technische Schicht hinter der grafischen Darstellung.
+`X11` und `Wayland` bezeichnen Protokolle für die Kommunikation zwischen grafischen Clients und dem Anzeigesystem. Ein Wayland-Server heißt **Compositor**: Er setzt das sichtbare Bild zusammen und vermittelt Eingaben. Protokoll und konkrete Implementierung sind unterschiedliche Begriffe.
 
-Gängige Namen:
+### Fenster- und Anmeldeverwaltung
 
-- `X11`
-- `Wayland`
-
-Für die Prüfung reicht es zu wissen:
-
-- diese gehören zum technischen Hintergrund der grafischen Funktionsweise
-
-### Window-Manager
-
-Verwaltet das Verhalten und die Positionierung der Fenster.
+Der **Window-Manager** kümmert sich um Position und Verhalten der Fenster. Der **Display-Manager** verwaltet die grafische Anmeldung und den Sitzungsstart. Eine vollständige Desktop-Umgebung umfasst mehr, etwa Panel, Dateimanager und Einstellungen.
 
 ## Linux-GUI vs Windows / macOS
 
@@ -108,6 +99,12 @@ Verwaltet das Verhalten und die Positionierung der Fenster.
 | starke Anpassbarkeit               | im Allgemeinen gebundeneres Grunderlebnis   |
 | hängt auch von der Distribution ab | vom Hersteller enger festgelegt             |
 
+## Durchgearbeitete Auswahl: älterer Lernlaptop
+
+Benötigt werden Browser, Textverarbeitung und Terminal. Auf derselben Distribution werden eine schlankere und eine umfangreichere Desktop-Umgebung erprobt. Zuerst wird der Speicherbedarf nach der Anmeldung verglichen, anschließend werden dieselben Anwendungen geöffnet. Browser-Tabs können mehr Ressourcen beanspruchen als der Unterschied zwischen den Oberflächen.
+
+Auch Bildschirmskalierung, Tastaturlayout, Barrierefreiheit und die benötigte Bildschirmfreigabe werden geprüft. „Leichtgewichtig” ist eine relative Eigenschaft und keine Geschwindigkeitsgarantie für jede Aufgabe. Distribution, Desktop-Umgebung und Wayland-/X11-Sitzung werden im Testprotokoll getrennt festgehalten.
+
 ## Prüfungstaugliche Formulierung
 
 > Unter Linux können verschiedene grafische Oberflächen, auch Desktop-Umgebungen genannt, verwendet werden.  
@@ -115,14 +112,6 @@ Verwaltet das Verhalten und die Positionierung der Fenster.
 > Diese stellen die Fensterverwaltung, die Panels,
 > den Dateimanager und die grafischen Einstellungsmöglichkeiten bereit.  
 > Ein Vorteil von Linux ist, dass der Benutzer zwischen verschiedenen grafischen Umgebungen wählen kann.
-
-## Häufige Prüfungsfehler
-
-- Glauben, dass es unter Linux nur ein Terminal gibt.
-- Linux und GNOME als dasselbe betrachten.
-- Nicht mindestens 2-3 Linux-Grafikoberflächen aufzählen können.
-- Den Window-Manager mit der vollständigen Desktop-Umgebung verwechseln.
-- Nicht wissen, dass Wayland und X11 zur grafischen Hintergrundschicht gehören.
 
 ## Schnelle Selbstkontrolle
 
@@ -142,8 +131,8 @@ Verwaltet das Verhalten und die Positionierung der Fenster.
 
 ## Quellen
 
-1. Ubuntu Help - Visual overview of GNOME  
-   https://help.ubuntu.com/stable/ubuntu-help/shell-introduction  
+1. GNOME Help - Visual overview of GNOME
+   https://help.gnome.org/gnome-help/shell-introduction.html
    Verwendung: GNOME als grafische Linux-Desktop-Umgebung.
 
 2. KDE - Plasma is a Desktop  
@@ -158,8 +147,14 @@ Verwaltet das Verhalten und die Positionierung der Fenster.
    https://fedoraproject.org/kde/  
    Verwendung: KDE Plasma als modernes Distributions-Beispiel einer Linux-Desktop-Umgebung.
 
-5. Linux Mint Cinnamon projects  
-   https://projects.linuxmint.com/cinnamon/  
+5. Linux Mint - Cinnamon
+   https://github.com/linuxmint/cinnamon
    Verwendung: Cinnamon als wichtige Linux-Desktop-Oberfläche.
 
-Abgerufen: `2026-04-08`
+Überprüft: `2026-10-14`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Wayland project](https://wayland.freedesktop.org/): Protokoll, Client und Compositor.
+
+Geprüft: `2026-10-14`.

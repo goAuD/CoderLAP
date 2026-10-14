@@ -81,6 +81,31 @@ Wichtig:
 - Ein falsches `viewport` verschlechtert die Nutzbarkeit auf Mobilgeräten.
 - Eine fehlerhafte `robots`-Einstellung kann dazu führen, dass die Seite nicht im Index erscheint.
 
+## Wer verwendet welche Angabe?
+
+Die Angaben im Dokumentkopf haben unterschiedliche Aufgaben:
+
+| Kennzeichnung | Empfänger und Aufgabe |
+|---|---|
+| `meta charset="utf-8"` | der Browser dekodiert die Bytes korrekt |
+| `meta name="description"` | Zusammenfassung, die eine Suchmaschine für den Auszug verwenden kann |
+| `meta name="robots" content="noindex"` | ein beachtender Suchroboter soll die Seite nicht indexieren |
+| `html lang="de"` | Dokumentsprache, etwa für Screenreader |
+| `title` | Dokumenttitel, beispielsweise die Beschriftung des Browsertabs |
+
+Die letzten beiden Angaben sind Metadaten, aber keine `meta`-Elemente. Die
+`charset`-Deklaration gehört an den Anfang von `head`. Laut HTML-Vorgabe muss
+sie vollständig innerhalb der ersten 1024 Bytes stehen. Auch die Datei selbst
+muss tatsächlich UTF-8-kodiert sein.
+
+Privates Lernmaterial wird durch Anmeldung oder eine andere serverseitige
+Berechtigungsprüfung geschützt. `noindex` ist eine Suchmaschinenanweisung,
+keine Zugriffssperre. `robots.txt` steuert das Crawling: Darf der Roboter die
+Seite nicht lesen, sieht er auch deren `noindex`-Angabe nicht. Die beiden
+Einstellungen sind deshalb nicht austauschbar. Auch die `description` muss
+eine Suchmaschine nicht wörtlich anzeigen. Je nach Suchanfrage kann sie einen
+anderen Auszug aus dem Seiteninhalt auswählen.
+
 ## Prüfungstaugliche Formulierung
 
 > Metadaten sind beschreibende Daten über das Dokument.
@@ -89,13 +114,6 @@ Wichtig:
 > bei der korrekten Verarbeitung der Seite,
 > zum Beispiel bei der Zeichenkodierung,
 > der mobilen Ansicht oder der Kurzbeschreibung der Seite.
-
-## Häufige Prüfungsfehler
-
-- Metadaten mit dem sichtbaren Inhalt verwechseln.
-- Behaupten, dass alle Metadaten vom Benutzer gesehen werden.
-- Die Rollen von `title` und `description` vermischen.
-- Glauben, dass Meta-Tags allein für gutes SEO ausreichen.
 
 ## Schnelle Selbstkontrolle
 
@@ -114,6 +132,12 @@ Wichtig:
 5. Weil auch Inhalt und technische Qualität zählen
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [WHATWG: Metadata](https://html.spec.whatwg.org/dev/semantics.html): Zeichenkodierung und Metadaten.
+- [Google Search Central: Robots meta tag](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag): Indexierungsanweisungen und Crawling.
+
 
 1. MDN - `<meta>`: The metadata element  
    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta  

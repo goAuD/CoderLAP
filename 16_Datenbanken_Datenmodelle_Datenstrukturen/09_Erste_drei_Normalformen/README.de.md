@@ -1,92 +1,54 @@
 # Erste drei Normalformen
 
-## Schneller visueller Überblick
+## Ziel der Normalisierung
 
-| Normalform | Kern |
-|---|---|
-| `1NF` | keine Wiederholungsgruppen, ein Wert pro Zelle |
-| `2NF` | keine partielle Abhängigkeit bei zusammengesetztem Schlüssel |
-| `3NF` | keine transitive Abhängigkeit zwischen Nicht-Schlüsselfeldern |
+Normalisierung zerlegt Tabellen anhand der Abhängigkeiten zwischen Daten. Sie reduziert unnötige Wiederholung sowie Einfüge-, Änderungs- und Löschanomalien. Eine Abhängigkeit ist eine Geschäftsregel, keine Schlussfolgerung aus zufällig gleichen Beispielwerten.
 
-## Warum ist Normalisierung nötig?
+`X -> Y` bedeutet: Zu demselben X-Wert gehört immer derselbe Y-Wert. Ein **Schlüsselkandidat** ist eine minimale Spaltenmenge, die eine Zeile eindeutig identifiziert. Daraus wird der Primärschlüssel gewählt. Bei der Normalisierung werden auch die anderen Schlüsselkandidaten berücksichtigt.
 
-Weil sie hilft:
+## 1NF: ein Wert aus der gewählten Domäne
 
-- Redundanz zu reduzieren
-- Dateninkonsistenzen zu vermeiden
-- die Wartung zu erleichtern
+Es gibt keine wiederholten Spaltengruppen wie `product1`, `product2`, `product3` und keine kommaseparierte Produktliste in einer Zelle. Eine Bestellposition bildet eine Zeile. „Atomar“ hängt von der Verwendung im Datenmodell ab: Ein Datum darf ein einzelner DATE-Wert bleiben, obwohl man Jahr und Monat daraus bestimmen kann.
 
-## `1NF` - Erste Normalform
+## 2NF: vollständige Abhängigkeit von jedem Schlüsselkandidaten
 
-In einem Feld soll nur **ein einziger atomarer Wert** stehen.
+Zusätzlich zur 1NF hängt jedes Attribut, das zu keinem Schlüsselkandidaten gehört, vollständig von jedem Schlüsselkandidaten ab, nicht nur von einem Teil davon. Bei zusammengesetzten Schlüsseln ist das gesondert zu prüfen. Bestehen alle Schlüsselkandidaten aus jeweils einer Spalte, gibt es keine solche partielle Abhängigkeit.
 
-Nicht gut ist zum Beispiel:
+## 3NF: transitive Abhängigkeiten behandeln
 
-- mehrere Telefonnummern in einem Feld, durch Komma getrennt
+In einfachen Fällen mit eindeutigem Schlüssel soll ein Nicht-Schlüsselattribut nicht über ein anderes Nicht-Schlüsselattribut vom Schlüssel abhängen. Beispielsweise gilt `customer_id -> customer_name`. Der Kundenname gehört daher zum Kunden und wird nicht in jeder Bestellung erneut gespeichert.
 
-## `2NF` - Zweite Normalform
+Präziser gilt für jede nicht triviale Abhängigkeit `X -> A`: X ist ein Superschlüssel oder A gehört zu einem Schlüsselkandidaten. Ein Superschlüssel identifiziert eindeutig, darf aber im Gegensatz zum minimalen Schlüsselkandidaten überflüssige Spalten enthalten. Diese Formulierung deckt auch mehrere Schlüsselkandidaten ab.
 
-Die Tabelle soll in `1NF` sein, und jedes Nicht-Schlüsselfeld soll vom **gesamten Schlüssel** abhängen.
+## Durchgearbeitete Zerlegung: Bestellpositionen
 
-Das ist besonders bei zusammengesetzten Schlüsseln wichtig.
+Ausgangspunkt: `order_id, product_id, order_date, customer_id, customer_name, product_name, quantity`. Nach der Beispielregel kommt ein Produkt je Bestellung einmal vor; Schlüsselkandidat ist `(order_id, product_id)`.
 
-Wenn ein Feld nur von einem Teil des Schlüssels abhängt, muss es in eine eigene Tabelle ausgelagert werden.
+1. **1NF:** Jedes Produkt steht in einer eigenen Zeile. Die Menge ist eine einzelne Zahl.
+2. **2NF:** Bestelldatum und Kunde hängen nur von `order_id` ab, der Produktname nur von `product_id`. Sie werden in `orders` und `products` ausgelagert. `order_items(order_id, product_id, quantity)` enthält die Menge, die zum gesamten Paar gehört.
+3. **3NF:** In `orders` bestünde die Kette `order_id -> customer_id -> customer_name`. Der Name kommt nach `customers(customer_id, customer_name)`; in der Bestellung bleibt der Fremdschlüssel des Kunden.
 
-## `3NF` - Dritte Normalform
-
-Die Tabelle soll in `2NF` sein, und die Nicht-Schlüsselfelder **dürfen nicht von anderen Nicht-Schlüsselfeldern abhängen**.
-
-Das heißt:
-
-- die Nicht-Schlüsselfelder sollen vom Schlüssel abhängen
-- nicht voneinander
-
-## Einfaches Beispiel
-
-Wenn in einer `Products`-Tabelle Folgendes steht:
-
-- `ProductID`
-- `SRP`
-- `Discount`
-
-und `Discount` von `SRP` abhängt und nicht direkt vom Schlüssel, dann kann das eine Verletzung der `3NF` sein.
-
-## Worauf muss man bei der Prüfung achten?
-
-- nicht nur die Definition nennen, sondern auch das Ziel
-- bei der `2NF` ist der zusammengesetzte Schlüssel wichtig
-- bei der `3NF` ist die transitive Abhängigkeit das Schlüsselwort
+Das Ergebnis sind vier Tabellen: `customers`, `orders`, `products`, `order_items`. Über Schlüssel und Joins lässt sich dieselbe Bestellung wieder zusammensetzen, während der aktuelle Kundenname nur an einer Stelle geändert wird. Preis oder Lieferadresse zum Bestellzeitpunkt können eigenständige historische Daten sein. Ihre Bedeutung wird zuerst geklärt, statt sie automatisch zu entfernen.
 
 ## Prüfungstaugliche Formulierung
 
-> Die ersten drei Normalformen gehören zu den Grundprinzipien des relationalen Datenbankentwurfs.  
-> Die erste Normalform besagt, dass in einem Feld nur ein Wert stehen darf; die zweite Normalform schließt partielle  
-> Abhängigkeiten bei zusammengesetzten Schlüsseln aus; die dritte Normalform verbietet, dass Nicht-Schlüsselfelder von  
-> anderen Nicht-Schlüsselfeldern abhängen.  
-> Diese Regeln reduzieren die Redundanz und verbessern die Datenkonsistenz.
-
-## Häufige Prüfungsfehler
-
-- `1NF` nur als "geordnete Tabelle" bezeichnen.
-- Bei der `2NF` den zusammengesetzten Schlüssel weglassen.
-- `3NF` mit `2NF` verwechseln.
-- Die transitive Abhängigkeit nicht erwähnen.
+> Die 1NF beseitigt Wiederholungsgruppen. Die 2NF prüft Abhängigkeiten von Teilen eines Schlüsselkandidaten. Die 3NF beseitigt zusätzlich ungeeignete transitive Abhängigkeiten. Ziel ist eine Aufteilung, in der Geschäftsfakten konsistent verwaltet und benötigte Daten durch Verknüpfung wiedergewonnen werden können.
 
 ## Schnelle Selbstkontrolle
 
-1. Was ist der Kern der `1NF`?
-2. Wann ist die `2NF` besonders wichtig?
-3. Was verbietet die `3NF`?
-4. Warum ist Normalisierung sinnvoll?
-5. Was ist eine transitive Abhängigkeit in Kurzform?
+1. Warum stehen zwei Produkte einer Bestellung in getrennten Zeilen?
+2. Was ist eine partielle Abhängigkeit?
+3. Warum kann der Kundenname in eine eigene Tabelle gehören?
+4. Löst eine zusätzliche `id`-Spalte allein alle Normalisierungsprobleme?
+5. Woher kennt man die funktionalen Abhängigkeiten?
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Ein Wert pro Feld
-2. Bei zusammengesetzten Schlüsseln
-3. Abhängigkeiten von Nicht-Schlüsselfeldern untereinander
-4. Weil sie Redundanz und Fehler reduziert
-5. Wenn ein Nicht-Schlüsselfeld von einem anderen Nicht-Schlüsselfeld abhängt
+1. So entsteht keine wiederholte Produktliste innerhalb eines Feldes.
+2. Ein Nicht-Schlüsselattribut hängt nur von einem Teil eines zusammengesetzten Schlüsselkandidaten ab.
+3. Er wird durch die Kundenkennung bestimmt und ist kein eigener Sachverhalt der Bestellung.
+4. Nein. Fachliche Schlüssel und Abhängigkeiten bleiben bestehen.
+5. Aus Anforderungen und geprüften Geschäftsregeln.
 
 ## Quellen
 
@@ -100,3 +62,10 @@ und `Discount` von `SRP` abhängt und nicht direkt vom Schlüssel, dann kann das
    `3NF`.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Database normalization](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-normalization-description): Grundsätze der Normalisierung und Tabellenzerlegung
+- [Microsoft: Database design basics](https://support.microsoft.com/en-us/access/database-design-basics): Entwurf von Abhängigkeiten, Schlüsseln und Beziehungen
+
+Geprüft: `2026-10-14`.

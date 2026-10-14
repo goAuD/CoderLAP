@@ -144,6 +144,26 @@ Suchvorgängen kann sich die Sortierung lohnen. Die binäre Suche verschiebt hie
 Indexgrenzen in einem Array; ein binärer Baum ist eine eigene Datenstruktur
 aus Knoten.
 
+## Eine erfolglose Suche nachvollziehen
+
+Wir suchen `8` im bekannten Array `[5, 11, 19, 42, 70]`:
+
+| Schritt | Bereich | Mittlerer Wert | Nächster Bereich |
+|---|---|---|---|
+| 1. | Index `0..4` | `19` | `0..1`, denn 8 ist kleiner |
+| 2. | Index `0..1` | `5` | `1..1`, denn 8 ist größer |
+| 3. | Index `1..1` | `11` | `1..0`, also leer |
+
+Aus dem leeren Bereich folgt `-1`; es gibt kein besonderes „fehlendes Element“
+im Array. Der Aufrufer prüft mit `index >= 0`, ob ein Treffer vorliegt: Auch `0`
+ist ein gültiger Index.
+
+Die Laufzeitabschätzung setzt eine Datenstruktur voraus. In einem Array erreichen
+wir die Mitte direkt über den Index; bei einer verketteten Liste müssen wir
+zunächst dorthin laufen. Logarithmisch viele Vergleiche bedeuten deshalb nicht
+bei jeder Speicherform logarithmische Gesamtlaufzeit. Sortieren und Suchen
+müssen dieselbe Vergleichsregel verwenden, etwa numerisch aufsteigend.
+
 ## Prüfungstaugliche Formulierung
 
 > Die sequenzielle Suche untersucht die Elemente der Reihe nach, bis sie den gesuchten Wert findet oder das Listenende  
@@ -169,6 +189,11 @@ aus Knoten.
 5. Zum Gesamtaufwand gehören Sortierung und Suchvorgänge zusammen; für eine einzelne Suche kann ein linearer Durchlauf günstiger sein.
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [NIST DADS: binary search](https://xlinux.nist.gov/dads/HTML/binarySearch.html): Zugriffskosten bei Array und verketteter Liste.
+
 
 1. NIST DADS - linear search  
    https://xlinux.nist.gov/dads/HTML/linearSearch.html  

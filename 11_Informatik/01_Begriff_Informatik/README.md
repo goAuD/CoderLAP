@@ -62,7 +62,27 @@ Attól függ, milyen területen dolgozik, de tipikusan:
 |---|---|
 | informatika | tágabb tudományos és gyakorlati terület |
 | programozás | kódírás és algoritmus megvalósítása |
-| IT | gyakran tágabb, üzemeltetési és üzleti környezetet is jelöl |
+| IT | az információ feldolgozására használt technológiák és rendszerek, gyakran üzemeltetési környezetben |
+
+## Egy mérési feladat informatikai nézőpontból
+
+Egy tanteremben három hőmérsékletet mérünk: `20`, `22`, `24`. A számok
+önmagukban adatok; a mértékegység, a mérés helye és ideje adja meg, hogyan
+értelmezzük őket. A „22 °C volt a három mérés átlaga” már értelmezett információ.
+
+| Lépés | A példában megoldandó kérdés |
+|---|---|
+| Adatfelvétel | valóban hőmérsékletet és azonos mértékegységet kapunk? |
+| Modell | egy mérés értéket, időpontot és érzékelőazonosítót tartalmaz |
+| Algoritmus | összeadjuk az értékeket, majd osztunk a darabszámmal |
+| Tárolás | megőrizzük-e az egyedi méréseket is, vagy csak az átlagot? |
+| Megjelenítés | az eredmény mellé kiírjuk a mértékegységet és az időszakot |
+
+Az összeg `66`, ezért az átlag `66 / 3 = 22`. Üres mérési sorozatra előbb
+megállapodunk az eredményben, például „nincs adat”; ilyenkor nem osztunk nullával.
+Ezzel egy hétköznapi problémát pontos adatszerkezetre és ellenőrizhető eljárásra
+fordítottunk le. A programozás ennek a megvalósítása, de az informatika a modell
+helyességével, az erőforrásigénnyel és az információ megbízhatóságával is foglalkozik.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -72,13 +92,6 @@ Attól függ, milyen területen dolgozik, de tipikusan:
 > felhasználói felületekkel
 > és a digitális megoldások teljes életciklusával is.  
 > A programozás tehát az informatika egyik része, de nem maga az egész terület.
-
-## Gyakori vizsgahibák
-
-- Az informatikát a programozással azonosítani.
-- Kihagyni az adatok és algoritmusok szerepét.
-- Nem megemlíteni, hogy rendszerszintű gondolkodás is része.
-- Csak "számítógépes munkának" nevezni.
 
 ## Gyors önellenőrzés
 
@@ -97,6 +110,11 @@ Attól függ, milyen területen dolgozik, de tipikusan:
 5. Mert a digitális rendszerek alapja
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [GI: Was ist Informatik?](https://gi.de/themen/beitrag/was-ist-informatik): az informatika feladatköre; saját mérési példa.
+
 
 1. Gesellschaft für Informatik - Was ist Informatik?  
    https://gi.de/themen/was-ist-informatik  

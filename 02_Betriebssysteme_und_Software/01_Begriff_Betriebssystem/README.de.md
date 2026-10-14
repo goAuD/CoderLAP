@@ -130,6 +130,14 @@ Das OS macht den Computer benutzbar.
 | verwaltet die Hardware                      | nutzt die Dienste des OS   |
 | z.B. Windows, macOS, Linux                  | z.B. Word, Chrome, VLC     |
 
+## Durchgearbeitetes Beispiel: Was passiert beim Speichern?
+
+Eine Textverarbeitung läuft in ihrem eigenen Prozess. Beim Speichern fordert sie über einen Betriebssystemdienst einen Schreibzugriff an. Das OS prüft den Zugriff, das Dateisystem verwaltet Speicherort und Metadaten, und der Gerätetreiber vermittelt zum Speichermedium. Schlägt die Anfrage fehl, muss die Anwendung einen verständlichen Fehler anzeigen.
+
+Ein **Prozess** besitzt eigene Ressourcen und einen virtuellen Adressraum; ein **Thread** ist eine Ausführungseinheit innerhalb dieses Prozesses. Der Kernel stellt geschützte Dienste bereit, die Anwendung läuft gewöhnlich im Benutzermodus. Diese Trennung begrenzt gegenseitige Eingriffe, verhindert aber nicht jeden Programmfehler.
+
+**Ergebnis:** Die Textverarbeitung bestimmt den Dokumentinhalt, das OS regelt den Ressourcenzugriff. Ein kleines eingebettetes Gerät kann ohne allgemeines Betriebssystem arbeiten; das beschriebene Modell gilt für moderne Allzweckrechner.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Betriebssystem ist die grundlegende Systemsoftware eines Computers,
@@ -139,14 +147,6 @@ Das OS macht den Computer benutzbar.
 > Zu seinen Aufgaben gehören unter anderem die Prozessverwaltung,
 > die Speicherverwaltung, die Dateiverwaltung, die Geräteverwaltung
 > und die Bereitstellung der Benutzeroberfläche.
-
-## Häufige Prüfungsfehler
-
-- Das Betriebssystem mit Anwendungen verwechseln.
-- Sagen, dass das OS nur „Fenster anzeigt".
-- Die Rolle der Speicher- und Prozessverwaltung auslassen.
-- Kein Beispiel für GUI und CLI nennen können.
-- Den Kernel und das gesamte Betriebssystem als völlig identisch betrachten.
 
 ## Schnelle Selbstkontrolle
 
@@ -179,3 +179,10 @@ Das OS macht den Computer benutzbar.
    Verwendung: allgemeinverständliche, moderne Übersicht der Funktionen des Windows-Betriebssystems.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Processes and threads](https://learn.microsoft.com/en-us/windows/win32/procthread/about-processes-and-threads): Prozess, Thread und Scheduling.
+- [Microsoft: User mode and kernel mode](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode): Schutzebenen und Trennung.
+
+Geprüft: `2026-10-14`.

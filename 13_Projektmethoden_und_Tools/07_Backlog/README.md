@@ -5,7 +5,7 @@
 | Fogalom | Mit jelent? |
 |---|---|
 | product backlog | a teljes termékhez tartozó, priorizált lista |
-| sprint backlog | az aktuális sprintre kiválasztott elemek |
+| sprint backlog | Sprint Goal, kiválasztott elemek és megvalósítási terv |
 | backlog item | egy konkrét munkaelem, pl. user story, hiba, technikai feladat |
 
 ## Mi az a backlog?
@@ -32,8 +32,8 @@ Agilis környezetben tipikusan tartalmazhat:
 | Szempont | Product backlog | Sprint backlog |
 |---|---|---|
 | időtáv | hosszabb táv | aktuális sprint |
-| tartalom | minden fontos munkaelem | a sprintre kiválasztott elemek |
-| felelős | főleg a Product Owner rendezi | a Scrum Team dolgozik vele |
+| tartalom | a termék fejlesztésének rendezett munkaelemei | Sprint Goal, kiválasztott elemek és terv |
+| felelős | a Product Owner felel a kezeléséért | a Developers készíti és alakítja |
 | cél | mit kellene valamikor megcsinálni | mit csinálunk most |
 
 ## Egy jó backlog jellemzői
@@ -55,6 +55,14 @@ Ilyenkor a csapat:
 - tisztázza a feltételeket
 - újrarendezi a prioritásokat
 
+## A Sprint Backlog három összetevője
+
+Például a Sprint Goal: „A tanuló segítség nélkül megtalálja a keresett témát.” Ehhez kiválasztott Product Backlog-elemek: szöveges keresés és találat nélküli állapot. A megvalósítási terv része a keresési logika, a billentyűzetes kezelés és az ellenőrzés. A **miért, mit, hogyan** együtt alkotja a Sprint Backlogot, amelyet a Developers készít és alakít.
+
+Ha a próba során kiderül, hogy a szűrés túl szigorú, a tervet módosítják, és a hatókört a Product Ownerrel egyeztetik a Sprint Goal megtartása mellett. A Sprint Backlog élő terv, nem érinthetetlen vállalási lista.
+
+A Product Backlog folyamatosan alakuló, rendezett lista; nem ígéret arra, hogy minden benne szereplő ötlet elkészül. A refinement tevékenység, nem külön kötelező Scrum-esemény. Az egyes tételek részletezése és méretezése mellett a cél és a sorrend is felülvizsgálható.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A backlog egy priorizált feladatlista,
@@ -62,15 +70,8 @@ Ilyenkor a csapat:
 > összes fontos munkaelemet tartalmazza.  
 > Agilis környezetben a product backlog a teljes igénylistát jelenti,
 > míg a sprint backlog
-> az aktuális sprintre kiválasztott feladatokat foglalja össze.  
+> a Sprint Goalt, a kiválasztott elemeket és a megvalósítási tervet tartalmazza.  
 > A backlog célja az átláthatóság, a priorizálás és a tervezés támogatása.
-
-## Gyakori vizsgahibák
-
-- A backlogot egyszerű to-do listának nevezni.
-- Nem megkülönböztetni a product backlogot és a sprint backlogot.
-- Azt hinni, hogy a backlog statikus dokumentum.
-- Kihagyni a priorizálás szerepét.
 
 ## Gyors önellenőrzés
 
@@ -83,12 +84,17 @@ Ilyenkor a csapat:
 ## Rövid válaszok az önellenőrzéshez
 
 1. Priorizált munkaelemlista
-2. Az egyik a teljes lista, a másik az aktuális sprintre kiválasztott rész
+2. A Product Backlog a termék rendezett munkaelemlistája; a Sprint Backlog a sprint célja, kiválasztott elemei és terve.
 3. Mert az igények és prioritások változnak
-4. Főleg a Product Owner
+4. A Product Owner felelős érte akkor is, ha feladatokat delegál.
 5. Funkciók, hibák, technikai feladatok, kutatás
 
 ## Források
+
+- [Scrum.org: What is a Sprint Backlog?](https://www.scrum.org/resources/what-is-a-sprint-backlog)  
+  A Scrum Guide-hoz kapcsolódó hivatalos szakmai magyarázat.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

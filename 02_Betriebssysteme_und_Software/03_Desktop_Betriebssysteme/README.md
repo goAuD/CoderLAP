@@ -76,7 +76,7 @@ Jellemzői:
 Jellemzői:
 
 - Apple által fejlesztett desktop rendszer
-- csak Apple hardveren fut
+- hivatalosan támogatott használata kompatibilis Apple hardverhez kötődik
 - egységes, erősen integrált felhasználói élmény
 
 ## 3. Linux desktop rendszerek
@@ -118,6 +118,19 @@ Jellemzői:
 | GUI fontos                | gyakran CLI vagy admin-konzol hangsúlyos         |
 | helyi napi használat      | hálózati szolgáltatások, sok kliens kiszolgálása |
 
+## Kidolgozott választás: egy fejlesztői munkaállomás
+
+Az alkalmazás neve mellett annak verzióját és processzorarchitektúráját is ellenőrizzük. Egy `x86-64`-re készült program nem válik automatikusan natív `ARM64`-alkalmazássá. Az emuláció lehet megoldás, de külön kell vizsgálni a teljesítményt és az eszközmeghajtókat.
+
+| Ellenőrzés | Elfogadható bizonyíték |
+| --- | --- |
+| szükséges IDE és adatbáziskliens | települ és végrehajtja a mintafeladatot |
+| hálózat, nyomtató, külső kijelző | kipróbált működés a kiválasztott OS-verzióval |
+| karbantartás | biztonsági frissítések és támogatási időszak ismert |
+| átállás | mentésből kipróbált visszaállítás, szükséges licencek |
+
+**Aktualitás, 2026-10-14:** a Windows 10 általános támogatása 2025-10-14-én véget ért. Az ESU-program és egyes LTSC-kiadások eltérő feltételekkel, illetve életciklussal rendelkeznek. Ezért egy gép támogatottságát a pontos kiadás és a jogosultság alapján ellenőrizzük, nem pusztán a „Windows 10” névből döntjük el.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A desktop operációs rendszer olyan általános célú operációs rendszer,
@@ -125,14 +138,6 @@ Jellemzői:
 > Jellemző rá a grafikus felület, a fájlkezelés, a perifériák támogatása és több alkalmazás futtatása.  
 > Tipikus desktop operációs rendszerek a Windows, a macOS
 > és különböző Linux desktop rendszerek.
-
-## Gyakori vizsgahibák
-
-- A desktop és mobil operációs rendszert összemosni.
-- Azt mondani, hogy minden Linux szerverrendszer és nem lehet desktop.
-- A ChromeOS-t teljesen kihagyni a modernebb desktop példák közül.
-- A GUI szerepét alábecsülni.
-- A desktop és a szerver célját összekeverni.
 
 ## Gyors önellenőrzés
 
@@ -169,3 +174,9 @@ Jellemzői:
    Használat: a desktop operációs rendszerek mai elterjedtségének kontextusa.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Windows 10 release information](https://learn.microsoft.com/en-us/windows/release-health/release-information): támogatás és kiadásonkénti életciklus.
+
+Ellenőrizve: `2026-10-14`.

@@ -72,6 +72,45 @@ Ha rossz elvet választunk, a rendszer logikailag hibás lehet.
 - Ugyanaz az adatszerkezet bizonyos esetekben többféleképpen is használható.
 - A vizsgán gyakran példát is kérnek, nem csak feloldást.
 
+## Érkezés és kivétel felváltva
+
+**Feladat:** megérkezik `A`, majd `B`; egy tételt kiveszünk; megérkezik `C`;
+végül kiürítjük a tárolót. Ez jobban megmutatja a szabályt, mint egy egyszerű
+megfordított lista. Node.js-ben önállóan futtatható:
+
+<!-- example:run -->
+
+```javascript
+const lifo = [];
+const fifo = [];
+for (const task of ["A", "B"]) {
+  lifo.push(task);
+  fifo.push(task);
+}
+console.log(lifo.pop(), fifo.shift());
+lifo.push("C");
+fifo.push("C");
+console.log(lifo.pop(), fifo.shift());
+console.log(lifo.pop(), fifo.shift());
+console.log(lifo.length, fifo.length);
+```
+
+```text
+B A
+C B
+A C
+0 0
+```
+
+Az első kivételnél LIFO szerint `B`, FIFO szerint `A` távozik. Az új `C`
+a verem tetejére kerül, ezért rögtön ő következik; a sorban viszont `B`
+mögé áll. LIFO sorrendje így `B, C, A`, FIFO sorrendje `A, B, C`.
+
+A sorrend az **elemek kiválasztására** vonatkozik. Több párhuzamos feldolgozó
+esetén FIFO-kivétel mellett is végezhet hamarabb egy később kezdett rövid feladat.
+Egy prioritásos sor pedig más kiválasztási szabályt használ: nem minden olyan
+könyvtári típus szigorúan FIFO, amelynek nevében „Queue” szerepel.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A LIFO és FIFO olyan feldolgozási elvek,
@@ -79,13 +118,6 @@ Ha rossz elvet választunk, a rendszer logikailag hibás lehet.
 > vagy dolgozzuk fel az elemeket.  
 > LIFO esetén az utoljára bekerült elem jön ki először, FIFO esetén pedig a legkorábban bekerült elem.  
 > A LIFO tipikus megvalósítása a stack, a FIFO-é pedig a queue.
-
-## Gyakori vizsgahibák
-
-- A két rövidítést felcserélni.
-- Csak angolul feloldani, de nem elmagyarázni.
-- Nem mondani rá informatikai példát.
-- Azt hinni, hogy mindkettő ugyanarra a célra való.
 
 ## Gyors önellenőrzés
 
@@ -104,6 +136,12 @@ Ha rossz elvet választunk, a rendszer logikailag hibás lehet.
 5. LIFO: hívási verem. FIFO: nyomtatási sor
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Array.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift): soreleji kivétel és módosuló tömb.
+- [Oracle: Queue](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Queue.html): FIFO és más sorrendi szabályú queue-k.
+
 
 1. Oracle Java SE - `Deque` Interface  
    https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Deque.html  

@@ -52,18 +52,27 @@ Feladata:
 | UAC | emelési jóváhagyási mechanizmus |
 | least privilege | csak a szükséges minimum jogot adni |
 
+## Kidolgozott jogosultsági példa
+
+Egy tanulási rendszerben a belépés igazolja a fiókhoz tartozó hitelesítő adat használatát (**authentication**). Ezután külön döntés, hogy az adott fiók mit tehet (**authorization**).
+
+| Szerep | Szükséges hozzáférés |
+|---|---|
+| tanuló | tananyag olvasása, saját megoldás módosítása |
+| oktató | saját kurzus anyagainak és feladatainak szerkesztése |
+| üzemeltető | telepítés, mentés, a szükséges rendszerbeállítások |
+
+A szerep nem feltétlenül ad jogot minden felhasználó minden adatára. Például a tanuló más azonosítót írhat a címsorba, de a szervernek akkor is a jogosultságát kell ellenőriznie. A gomb elrejtése csak felületi segítség.
+
+Belépéskor add meg a szükséges szerepet, feladatváltáskor vizsgáld felül, kilépéskor vond vissza a hozzáférést és az aktív munkameneteket. A szolgáltatásfiók külön azonosító, célhoz kötött jogokkal.
+
+Az MFA eltérő tényezőket kombinál: például jelszó és birtokolt hitelesítő eszköz. Két jelszó nem két tényező. A Windows UAC egy művelet jogosultságemelését szabályozza; nem tesz automatikusan megbízhatóvá egy programot. Normál felhasználói joggal is törölhetők a saját fájlok, ezért a mentés továbbra is szükséges.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A felhasználói fiókok korlátozásának célja a legkisebb szükséges jogosultság elvének érvényesítése.  
 > Napi munkára célszerű standard user fiókot használni, és csak indokolt esetben emelni admin szintre.  
 > Ez csökkenti a hibák, a jogosulatlan rendszer-módosítások és a malware által okozható károk mértékét.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy mindenki legyen admin, mert úgy egyszerűbb.
-- A UAC-t összekeverni magával az admin fiókkal.
-- Nem megemlíteni a least privilege elvet.
-- Azt hinni, hogy a felhasználói korlátozás csak kényelmetlenség, de nem biztonsági előny.
 
 ## Gyors önellenőrzés
 
@@ -100,3 +109,11 @@ Feladata:
    Használat: hivatalos CISA-forrás a least privilege elv modern biztonsági jelentőségéhez.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [OWASP: Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html): hitelesítés és jogosultság különválasztása, szükséges jogok
+- [Microsoft: User Account Control](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/): UAC és a jogosultságemelés
+- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html): hitelesítési tényezők és adathalászattal szembeni ellenállás
+
+Ellenőrizve: `2026-10-14`.

@@ -50,7 +50,8 @@ def count_sources(markdown: str) -> int:
     if next_heading:
         sources_section = sources_section[: next_heading.start()]
 
-    return len(re.findall(r"^\d+\.\s", sources_section, re.MULTILINE))
+    # Both numbered references and linked bullet entries are used in the corpus.
+    return len(re.findall(r"^(?:\d+\.|[-*+])\s", sources_section, re.MULTILINE))
 
 
 def get_markdown_title(markdown: str, fallback: str) -> str:

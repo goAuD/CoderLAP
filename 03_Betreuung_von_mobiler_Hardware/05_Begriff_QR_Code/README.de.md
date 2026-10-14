@@ -111,6 +111,14 @@ Deshalb ist es wichtig:
 - QR-Code aus einer vertrauenswürdigen Quelle
 - darauf achten, wohin er führt
 
+## Durchgearbeiteter Fall: dauerhafter QR-Code im Klassenraum
+
+Ein gedruckter Code enthält `https://example.org/lernen`. Das Punktmuster speichert diese Zeichenfolge und nicht die gesamte Webseite. Der Inhalt hinter der Adresse kann sich ohne Neudruck ändern. Verweist der Code auf einen Weiterleitungsdienst, lässt sich dort das Ziel ändern; die Daten im gedruckten Code bleiben unverändert. Das wird häufig „dynamischer QR-Code” genannt und bezeichnet keinen eigenen QR-Standard.
+
+Beim Drucktest wird auf ausreichenden Kontrast und einen freien Rand von mindestens vier Modulen an allen Seiten eines gewöhnlichen QR-Codes geachtet. Der Code wird mit mehreren Telefonen aus dem vorgesehenen Abstand gescannt. Fehlerkorrektur hat Grenzen und bestätigt nicht die Identität des Linkbetreibers.
+
+Nach dem Scannen wird die tatsächliche Adresse geprüft, besonders vor Anmeldung oder Zahlung. QR-Daten sind nicht von sich aus verschlüsselt: Ein darin gespeichertes Passwort ist für jeden lesbar, der den Code erhält.
+
 ## Prüfungstaugliche Formulierung
 
 > Der QR-Code ist ein zweidimensionaler Barcode,
@@ -118,14 +126,6 @@ Deshalb ist es wichtig:
 > großer Datenmengen ermöglicht.  
 > Seine Vorteile sind die größere Datenspeicherkapazität, das schnelle Einlesen und die Fehlerkorrektur.  
 > Er wird häufig für Links, Zahlungen, Tickets und Identifikation verwendet.
-
-## Häufige Prüfungsfehler
-
-- Den QR-Code als herkömmlichen 1D-Barcode beschreiben.
-- Die Fehlerkorrektur nicht erwähnen.
-- Glauben, dass nur eine Webadresse darin enthalten sein kann.
-- Kein Beispiel für praktische Verwendung nennen können.
-- Die Sicherheitsrisiken außer Acht lassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -158,3 +158,9 @@ Deshalb ist es wichtig:
    Verwendung: Hintergrundinformationen zur Standardisierung des QR-Codes.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [DENSO WAVE: Code area](https://www.qrcode.com/en/howto/code.html): vier Module breite Ruhezone des gewöhnlichen QR-Codes.
+
+Geprüft: `2026-10-14`.

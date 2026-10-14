@@ -54,19 +54,28 @@ Rontja a párhuzamos teljesítményt.
 | tranzakció | logikailag összetartozó műveletek egysége |
 | zárolás | technikai mechanizmus az ütközések elkerülésére |
 
+## Kidolgozott eset: az utolsó készlet lefoglalása
+
+Egy termékből egy darab maradt. A és B kapcsolat egyszerre szeretné lefoglalni. **MySQL/InnoDB-ben** az A kapcsolat explicit tranzakcióban `SELECT ... FOR UPDATE` utasítással olvassa a termék sorát, majd módosítja. B ugyanennek a sornak a zároló olvasásánál vár, amíg A commitol vagy visszagörget. Ezután B a friss állapot alapján dönthet.
+
+A szokásos, konzisztens `SELECT` MVCC-t, vagyis több verzión alapuló olvasást használhat, ezért nem minden olvasás vár az íróra. A `FOR UPDATE` más viselkedés. A lock a tranzakció lezárásáig él; ne várakozz közben felhasználói kattintásra vagy lassú külső szolgáltatásra.
+
+| Helyzet | Jelentés |
+|---|---|
+| B vár A zárolására | normál ütközéskezelés lehet |
+| A az 1-es sort, B a 2-es sort tartja, majd egymás sorát kérik | deadlock, körkörös várakozás |
+| minden tranzakció ugyanabban a sorrendben kéri a sorokat | kisebb deadlock-kockázat |
+
+Az InnoDB felismerhet egy holtpontot és visszavonhatja az egyik tranzakciót. Az alkalmazásnak az egész érintett tranzakció ellenőrzött újrapróbálására kell felkészülnie. A timeout nem feltétlenül ugyanúgy vonja vissza az egész tranzakciót, ezért a hibakezelésben explicit rollback is szükséges lehet.
+
+A kizárólagos és megosztott zárak kompatibilitása, az indexek és az izolációs szint együtt határozzák meg a pontos viselkedést. A zárolási nyilvántartás például a MySQL `performance_schema.data_locks` és `data_lock_waits` tábláiból vizsgálható megfelelő jogosultsággal.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A zárolás célja, hogy több felhasználó egyidejű adatkezelése mellett is megmaradjon az adatkonzisztencia.  
 > A `DBMS` különböző lock-mechanizmusokat alkalmazhat, és ezek viselkedése befolyásolja a várakozást, a  
 > párhuzamosságot és a teljesítményt.  
 > A helytelen vagy túl erős zárolás problémákhoz vezethet, például várakozáshoz vagy deadlockhoz.
-
-## Gyakori vizsgahibák
-
-- A zárolást egyszerű hibának tekinteni.
-- Nem megemlíteni, hogy a cél a konzisztencia védelme.
-- A `Sperrtabelle` fogalmát szó szerint felhasználói adattáblaként kezelni.
-- Kihagyni a deadlock lehetőségét.
 
 ## Gyors önellenőrzés
 
@@ -95,3 +104,11 @@ Rontja a párhuzamos teljesítményt.
    Használat: kiegészítő háttér a párhuzamos hozzáférés és konzisztencia kapcsolatának megértéséhez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [MySQL: Locking Reads](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-reads.html): FOR UPDATE és várakozás
+- [MySQL: Deadlocks](https://dev.mysql.com/doc/refman/8.0/en/innodb-deadlocks-handling.html): deadlock kezelése és tranzakció újrapróbálása
+- [MySQL: InnoDB error handling](https://dev.mysql.com/doc/refman/8.0/en/innodb-error-handling.html): timeout és teljes tranzakció visszavonásának különbsége
+
+Ellenőrizve: `2026-10-14`.

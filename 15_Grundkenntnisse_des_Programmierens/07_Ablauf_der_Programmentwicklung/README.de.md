@@ -84,6 +84,42 @@ Bei der Prüfung lohnt es sich zu sagen:
 - die Entwicklung ist oft iterativ
 - Fehlerbehebung und Testen wiederholen sich mehrmals
 
+## Der vollständige Entwicklungszyklus einer kleinen Aufgabe
+
+Anforderung: Ab 50 Euro ist der Versand kostenlos, darunter kostet er 4,90 Euro.
+Beträge kommen als ganze Cent an; negative oder gebrochene Eingaben werden
+abgewiesen. Zuerst legen wir die erwarteten Grenzfälle fest, dann implementieren
+wir die Regel. Ausführung: Node.js.
+
+<!-- example:run -->
+
+```javascript
+function shippingCents(totalCents) {
+  if (!Number.isSafeInteger(totalCents) || totalCents < 0) {
+    throw new RangeError("Nonnegative integer cents required");
+  }
+  return totalCents >= 5000 ? 0 : 490;
+}
+for (const [input, expected] of [[0, 490], [4999, 490], [5000, 0], [5001, 0]]) {
+  console.log(input, shippingCents(input) === expected);
+}
+```
+
+```text
+0 true
+4999 true
+5000 true
+5001 true
+```
+
+Der Wechsel zwischen `4999` und `5000` prüft die Bedeutung von „ab 50 Euro“.
+Viermal `true` zeigt die Übereinstimmung von berechnetem und erwartetem Preis.
+Die Fälle stammen aus der Spezifikation, nicht aus einer Wiederholung des Codes.
+Für ungültige Eingaben erwarten wir in einem gesonderten Test einen `RangeError`.
+Nach einer Änderung führen wir auch die bisherigen Fälle erneut aus: Das ist
+eine Regressionsprüfung. Die kleine Funktion lässt sich getrennt von Oberfläche
+und Datenbank testen.
+
 ## Prüfungstaugliche Formulierung
 
 > Der praktische Ablauf der Programmentwicklung beginnt in der Regel mit dem Verstehen der Aufgabe, gefolgt vom  
@@ -91,13 +127,6 @@ Bei der Prüfung lohnt es sich zu sagen:
 > Dieser Prozess ist in der Praxis oft iterativ, da der Entwickler aufgrund von Tests und Fehlern zu früheren  
 > Schritten zurückkehren kann.  
 > Das Ziel ist nicht nur ein lauffähiges Programm, sondern ein korrektes und zuverlässiges Programm.
-
-## Häufige Prüfungsfehler
-
-- Den Entwurf auszulassen.
-- Das Testen mit dem einfachen Ausführen zu verwechseln.
-- Das Debugging nicht zu erwähnen.
-- Den Prozess so darzustellen, als wäre er immer vollständig linear.
 
 ## Schnelle Selbstkontrolle
 
@@ -116,6 +145,11 @@ Bei der Prüfung lohnt es sich zu sagen:
 5. Weil man wegen Fehlern zu früheren Schritten zurückkehren muss
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Number.isSafeInteger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger): Prüfung ganzzahliger Centbeträge.
+
 
 1. IBM - What is the Software Development Lifecycle (SDLC)?  
    https://www.ibm.com/think/topics/sdlc  

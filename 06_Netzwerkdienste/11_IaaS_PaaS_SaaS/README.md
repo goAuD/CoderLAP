@@ -4,9 +4,9 @@
 
 | Modell | Mit kapsz? | Mire van több saját felelősség? |
 |---|---|---|
-| IaaS | VM, hálózat, tárhely | sok mindenre |
-| PaaS | futtatási platform | kevesebbre |
-| SaaS | kész alkalmazás | még kevesebbre |
+| IaaS | VM, hálózat, tárhely | vendég OS, alkalmazás, adatok, jogosultságok |
+| PaaS | futtatási platform | alkalmazáskód, függőségek, adatok, jogosultságok |
+| SaaS | kész alkalmazás | fiókok, megosztások, adatkezelési és megőrzési beállítások |
 
 ## Mi az IaaS?
 
@@ -46,7 +46,7 @@ Például:
 
 Itt a felhasználó tipikusan:
 
-- csak használja a kész szoftvert
+- a kész szoftvert használja, és kezeli saját fiókjait, adatait, megosztásait
 
 ## Miért fontos?
 
@@ -64,6 +64,14 @@ Mert más lesz:
 | IaaS / PaaS / SaaS | szolgáltatási modellek |
 | private / public / hybrid | deployment modellek |
 
+## Kidolgozott példa: ugyanaz a nyilvántartási feladat
+
+**IaaS:** virtuális gépet kapunk, telepítjük az OS-t és az alkalmazást. A vendégrendszer frissítése is a mi feladatunk. **PaaS:** a szolgáltató kezeli a futtatókörnyezet jelentős részét, mi telepítjük az alkalmazáskódot és beállítjuk a hozzáférést. **SaaS:** kész nyilvántartó alkalmazásban dolgozunk, saját funkciók fejlesztésére rendszerint kevesebb szabadsággal.
+
+Mindhárom esetben nekünk kell eldönteni, ki férhet az adatokhoz. Ha egy dokumentumot tévesen mindenkivel megosztunk, azt nem teszi helyessé, hogy a szolgáltató karbantartja a szervereket.
+
+A táblázat tipikus feladatmegosztást mutat. A konkrét szerződésből kell kiderülnie, ki ment, milyen időpontig lehet visszaállítani, ki frissíti az egyes függőségeket, és hogyan exportálhatók az adatok. A szolgáltatási modell a private/public telepítési modelltől külön tengely.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az IaaS, PaaS és SaaS a cloud szolgáltatási modelljei.  
@@ -71,13 +79,6 @@ Mert más lesz:
 > PaaS esetén platformot biztosít az alkalmazások futtatásához,
 > SaaS esetén pedig kész szoftvert használ a felhasználó.  
 > Minél magasabb szintű a szolgáltatás, általában annál kevesebb technikai üzemeltetési feladat marad az ügyfélnél.
-
-## Gyakori vizsgahibák
-
-- Összekeverni a deployment modellekkel.
-- Azt mondani, hogy a SaaS-nál nincs semmilyen ügyféloldali felelősség.
-- Az IaaS-t és a PaaS-t ugyanannak tekinteni.
-- Nem felismerni, hogy a kontroll és a felelősség mértéke modellenként változik.
 
 ## Gyors önellenőrzés
 
@@ -110,3 +111,9 @@ Mert más lesz:
    Használat: jól szemlélteti, hogy a felelősség hogyan változik a szolgáltatás absztrakciós szintjével.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Shared responsibility](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility): konkrét felelősségi megosztás IaaS/PaaS/SaaS esetén.
+
+Ellenőrizve: `2026-10-14`.

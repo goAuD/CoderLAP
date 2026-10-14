@@ -45,6 +45,20 @@ Häufig wird untersucht:
 
 Der Kunde ist oft ein Stakeholder, aber nicht jeder Stakeholder ist ein Kunde.
 
+## Beteiligte einer Schulungsanwendung erfassen
+
+| Beteiligte | Zu verstehender Bedarf | Beispiel der Einbindung |
+|---|---|---|
+| Lernende | schnelle Suche am Mobilgerät | Aufgabenerledigung beobachten |
+| Lehrperson | fachlich richtige Inhalte | inhaltliche Prüfung |
+| Betrieb | wiederherstellbarer Dienst | Backup- und Übergabeprobe |
+| Screenreader-Nutzer | selbstständiger Zugang | Erprobung der Barrierefreiheit |
+| Entscheidungsbefugte | tragbarer Aufwand | Entscheidungspunkt und Kostensicht |
+
+Eine Person kann wenig organisatorischen Einfluss haben, obwohl ihr Bedarf für die Nutzbarkeit wesentlich ist. Die Einfluss-Interessen-Matrix unterstützt daher Kommunikation und ist keine automatische Rangliste der Wichtigkeit von Bedürfnissen.
+
+Der Kontaktplan verfolgt einen Zweck: Welche Information wird von wem, wann und in welcher Form benötigt? Erfasst werden nur nötige Rolle und Kontaktangaben; persönliche Werturteile helfen dem Projekt nicht.
+
 ## Prüfungstaugliche Formulierung
 
 > Als Stakeholder bezeichnen wir Personen, Gruppen oder Organisationen,
@@ -54,13 +68,6 @@ Der Kunde ist oft ein Stakeholder, aber nicht jeder Stakeholder ist ein Kunde.
 > Ziel des Stakeholder-Managements ist die Identifikation der Beteiligten,
 > das Verstehen ihrer Erwartungen
 > und die Sicherstellung einer angemessenen Kommunikation.
-
-## Häufige Prüfungsfehler
-
-- Nur den Kunden als Stakeholder nennen.
-- Benutzer oder den Betrieb auslassen.
-- Die Rolle der Kommunikation nicht erwähnen.
-- Den Stakeholder-Begriff zu eng auslegen.
 
 ## Schnelle Selbstkontrolle
 
@@ -79,6 +86,11 @@ Der Kunde ist oft ein Stakeholder, aber nicht jeder Stakeholder ist ein Kunde.
 5. Auftraggeber, Benutzer, Management
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Stakeholder-Matrix und Kommunikationsplanung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - What is Stakeholder Mapping?  
    https://www.atlassian.com/work-management/project-collaboration/stakeholder-mapping  

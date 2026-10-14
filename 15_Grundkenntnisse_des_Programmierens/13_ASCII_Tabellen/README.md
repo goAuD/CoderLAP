@@ -56,6 +56,39 @@ A modern rendszerek többsége ma már Unicode-ot használ, de az ASCII alapjai 
 - a karakterkódok alaplogikáját jól mutatja
 - programozásnál gyakran találkozunk ASCII-kompatibilis fogalmakkal
 
+## Karakterkód és számérték a gyakorlatban
+
+Node.js-ben futtatható példa: a `"7"` egy számjegyből álló szöveg. Megnézzük a
+kódját, majd az ASCII-számjegyek folytonos tartományát használva a számértékét.
+
+<!-- example:run -->
+
+```javascript
+const digit = "7";
+const code = digit.codePointAt(0);
+console.log(code);
+console.log(code - "0".codePointAt(0));
+console.log(String.fromCodePoint(65));
+console.log("\n".codePointAt(0));
+```
+
+```text
+55
+7
+A
+10
+```
+
+Az `55` a `7` karakter kódja, a `7` pedig annak számértéke. A kivonás csak
+előzőleg ellenőrzött `"0".."9"` karakterre ad értelmes számjegyeredményt.
+Általános szövegkonverzióra inkább a nyelv megfelelő átalakító függvényét és
+bemenetellenőrzést használjuk.
+
+Az LF (`10`, `0A` hex) és CR (`13`, `0D` hex) külön vezérlőkarakter. A Windows
+szövegfájloknál gyakori CRLF két karakterből áll. A `codePointAt` Unicode-kódpontot
+ad; a `0..127` tartományban ez megegyezik az ASCII-val. Az `ő` és az emoji már
+nem ASCII. Szövegfájl bájtjainak értelmezéséhez az alkalmazott kódolást is tudnunk kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az ASCII-tábla az ASCII karakterkészlet karaktereihez tartozó numerikus kódokat mutatja meg.  
@@ -63,13 +96,6 @@ A modern rendszerek többsége ma már Unicode-ot használ, de az ASCII alapjai 
 > jeleket.  
 > Bár ma már jellemzően Unicode-alapú rendszereket használunk, az ASCII továbbra is alapvető jelentőségű a
 > karakterkódolás megértésében.
-
-## Gyakori vizsgahibák
-
-- Az ASCII-t Unicode-nak nevezni.
-- Azt állítani, hogy minden modern szöveg ASCII.
-- Nem megemlíteni a vezérlőkaraktereket.
-- A 7 bites alapot elfelejteni.
 
 ## Gyors önellenőrzés
 
@@ -88,6 +114,12 @@ A modern rendszerek többsége ma már Unicode-ot használ, de az ASCII alapjai 
 5. Mert sok alapfogalom erre épül
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: String.codePointAt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt): Unicode-kódpont lekérése.
+- [IETF RFC 20](https://www.ietf.org/rfc/rfc20.txt): ASCII kódértékek, LF és CR.
+
 
 1. MDN - ASCII  
    https://developer.mozilla.org/en-US/docs/Glossary/ASCII  

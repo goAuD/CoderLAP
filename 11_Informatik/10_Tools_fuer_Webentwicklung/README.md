@@ -98,6 +98,30 @@ Feladata:
 - Csapatban egységes toolchain kell.
 - A verziókezelést nem szabad kihagyni.
 
+## Egy hiba útja az eszközökön át
+
+Tegyük fel, hogy egy oldal HTML-je megjelenik, de a formázása eltűnt.
+Nem találomra írunk át CSS-t, hanem bizonyítékot keresünk:
+
+1. A DevTools **Network** nézetében újratöltjük az oldalt. A CSS-kérés `404`
+   válasza rossz útvonalra vagy hiányzó fájlra utal.
+2. Ha a fájl megérkezett, az **Elements/Styles** megmutatja, illeszkedik-e a
+   szelektor, és melyik szabály írja felül. A **Computed** a végső értéket mutatja.
+3. A **Console** futásidejű JavaScript-hibát jelezhet, de a hibamentes konzol
+   önmagában nem bizonyítja, hogy az elrendezés vagy az üzleti logika helyes.
+4. A DevToolsban kipróbált javítást átvezetjük a forrásfájlba. A böngészőben
+   végzett ideiglenes módosítás normál esetben újratöltéskor elveszik.
+
+A formatter egységesíti a formát, a linter szabályokat ellenőriz, a típusellenőrző
+típusszerződéseket vizsgál, a teszt konkrét viselkedést ellenőriz. Ezek egymást
+kiegészítő eszközök. Verziókezelésnél a diff alapján azt is meg tudjuk mondani,
+pontosan melyik változás oldotta meg a feladatot.
+
+Node-projektben a rögzített lockfájl és az egyeztetett Node-verzió segíti az
+azonos környezetet. Az `npm ci` a lockfájlhoz igazodó tiszta függőségtelepítés;
+a meglévő `node_modules` könyvtárat újraépíti, ezért nem általános javítóparancs
+minden böngészőhibára.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A webfejlesztéshez többféle eszköz szükséges:
@@ -107,13 +131,6 @@ Feladata:
 > csomagkezelő a függőségek kezeléséhez,
 > valamint helyi futtatási környezet
 > és kódminőségi eszközök a stabil munkafolyamathoz.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy webfejlesztéshez elég egy szövegszerkesztő.
-- A Git-et összekeverni a GitHubbal.
-- A DevTools szerepét csak JavaScript hibákra szűkíteni.
-- Nem megemlíteni a csomagkezelő vagy a helyi fejlesztői környezet szerepét.
 
 ## Gyors önellenőrzés
 
@@ -132,6 +149,12 @@ Feladata:
 5. Egységesebb és tisztább kódot adnak
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Chrome: JavaScript debugging](https://developer.chrome.com/docs/devtools/javascript): bizonyítékalapú hibakeresés és böngészős eszközök.
+- [npm: npm ci](https://docs.npmjs.com/cli/commands/npm-ci/): lockfájl és tiszta telepítés.
+
 
 1. Chrome for Developers - DevTools  
    https://developer.chrome.com/docs/devtools  

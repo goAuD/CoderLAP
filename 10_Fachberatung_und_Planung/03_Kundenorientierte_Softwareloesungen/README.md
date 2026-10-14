@@ -70,6 +70,14 @@ Mert ha a szoftver nem ügyfélközpontú:
 | feature-rich | sok funkció, de nem biztos, hogy jó használhatóság |
 | technikailag működik | nem ugyanaz, mint hogy valóban jól használható |
 
+## Egy funkciókérés mögötti feladat megtalálása
+
+Az ügyfél azt kéri, hogy „legyen PDF-export”. Megkérdezzük, mire használja a fájlt. Kiderül, hogy a műszak végén aláírt átadási listára van szüksége. A valódi feladat így az aktuális adatok ellenőrzése, az átadás igazolása és a későbbi visszakeresés, nem pusztán egy gomb megjelenítése.
+
+Egy kis próbaváltozaton három dolgot ellenőrzünk: megtalálja-e a felhasználó a megfelelő napot, hiánytalan-e a lista, és a következő műszak meg tudja-e nyitni. A próba tartalmazzon billentyűzettel történő használatot és hosszú neveket is. A résztvevők megfigyelése gyakran többet mond, mint a „tetszik?” kérdés.
+
+A megrendelő és a napi felhasználó lehet két külön személy. Az előbbi üzleti célját és az utóbbi munkakörülményeit együtt kell megérteni. Az első kiadásban a feladat elvégzéséhez szükséges funkciók kapnak elsőbbséget.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az ügyfélközpontú szoftvermegoldás a felhasználó igényeiből és problémáiból indul ki.  
@@ -77,13 +85,6 @@ Mert ha a szoftver nem ügyfélközpontú:
 > hanem egyszerűen használható, megbízható
 > és a valós munkafolyamatokhoz illeszkedő legyen.  
 > A jó megoldás felhasználói visszajelzés alapján iteratívan javul.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy a sok funkció automatikusan jobb terméket jelent.
-- Nem kutatni a felhasználói igényt.
-- Kihagyni a usability és visszajelzés szerepét.
-- Csak a technikai működést nézni.
 
 ## Gyors önellenőrzés
 
@@ -102,6 +103,11 @@ Mert ha a szoftver nem ügyfélközpontú:
 5. A jól használható rendszer a gyakorlatban is támogatja a felhasználót
 
 ## Források
+
+- [GOV.UK: Plan user research](https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service)  
+  Célzott használhatósági vizsgálat és különböző felhasználói igények.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. GOV.UK Service Standard - Understand users and their needs  
    https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs  

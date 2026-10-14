@@ -71,6 +71,33 @@ akkor legalább alapszinten ismernie kell ezeket a kötelezettségeket.
 | Impressum | kötelező közzétett szolgáltatói adatok |
 | ECG-Liste | reklám e-mailekkel kapcsolatos tiltólista |
 
+## Webshop-folyamat az ECG alapján
+
+Egy rendelési felületnél nem elég az impresszumot a láblécbe tenni.
+A felhasználó a végleges nyilatkozat előtt értse a technikai lépéseket,
+a szerződéskötés nyelvét, a beviteli adatok javításának módját és azt,
+hogy tárolják-e a szerződés szövegét, illetve hogyan férhet hozzá (9. §).
+Legyen lehetőség például a hibás darabszám felismerésére és javítására (10. §).
+A szerződési feltételeket tárolható és reprodukálható módon kell biztosítani (11. §).
+
+**Próba:** a vásárló két terméket tesz a kosárba, az összesítőn egyre módosítja,
+ellenőrzi az árat és a szállítási költséget, majd megrendel. A beérkezést elektronikus
+visszaigazolás követi a vonatkozó szabály szerint. A beérkezés visszaigazolása és
+a szerződés elfogadása fogalmilag különbözhet; a folyamat és a szöveg legyen összhangban.
+
+Az ECG-lista ellenőrzése nem önmagában engedély reklámlevél küldésére.
+A TKG 174. § szerinti előzetes hozzájárulást vagy a szűk, együttes feltételekhez kötött
+ügyfélkivételt is vizsgálni kell. Az adatkezelési jogalap ettől külön GDPR-kérdés.
+
+Az ECG nem foglal össze minden webshopkötelezettséget: például fogyasztói távértékesítésnél
+a FAGG is releváns. A közvetítő szolgáltatások mai felelősségi kereténél az EU Digital
+Services Act szabályait is alkalmazni kell; az ECG korábbi szakaszszámait nem használjuk
+ellenőrzés nélkül, mert 2024-ben módosultak.
+
+Forrás: [RIS: ECG 5., 9–12. és 28. §](https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20001703),
+[TKG 174. §](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011678&Paragraf=174).
+Ellenőrizve: 2026-10-14.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az E-Commerce-Gesetz az online szolgáltatók egyes jogi kötelezettségeit szabályozza Ausztriában.  
@@ -79,13 +106,6 @@ akkor legalább alapszinten ismernie kell ezeket a kötelezettségeket.
 > valamint hogy a reklámcélú elektronikus kommunikációnál
 > figyelembe kell venni az ECG-listát is.  
 > Az ECG ezért webshopok, céges weboldalak és online szolgáltatások esetén alapvető jogi háttér.
-
-## Gyakori vizsgahibák
-
-- Az ECG-t teljesen összekeverni a GDPR-ral.
-- Nem megemlíteni a kötelező szolgáltatói adatokat.
-- Elfelejteni az ECG-lista szerepét.
-- Azt hinni, hogy csak webshopokra vonatkozik.
 
 ## Gyors önellenőrzés
 

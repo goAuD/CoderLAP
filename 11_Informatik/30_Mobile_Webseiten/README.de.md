@@ -14,7 +14,7 @@
 Eine Seite, die:
 
 - auch auf dem Handy lesbar ist
-- kein Zoomen erfordert
+- in normaler Größe lesbar ist und bei Bedarf vergrößert werden kann
 - die Navigation leicht mit dem Finger bedient werden kann
 - die Leistung akzeptabel ist
 
@@ -50,6 +50,37 @@ In der Praxis wird heute in der Regel die **responsive** Lösung empfohlen.
 | mobile Webseite | läuft im Browser |
 | native Mobilapp | auf dem Betriebssystem installierte Anwendung |
 
+## Auf Mobilgeräten einen echten Ablauf prüfen
+
+Ein Anmeldeformular wird nicht nur in einem schmalen Fenster geprüft. Auch mit
+eingeblendeter Bildschirmtastatur müssen Feld, Fehlermeldung und Absenden
+erreichbar bleiben. Wir durchlaufen die Aufgabe im Hoch- und Querformat sowie
+mit vergrößertem Text. Manuelles Zoomen wird im Viewport nicht deaktiviert.
+
+Die Zielgrößenanforderung von WCAG 2.2 AA geht grundsätzlich von `24 × 24`
+CSS-Pixeln aus, mit definierten Abstands- und weiteren Ausnahmen. Für angenehme
+Touch-Bedienung wählen wir häufig größere Ziele, etwa `44 × 44` CSS-Pixel.
+Das ist eine Gestaltungsentscheidung und keine auf allen Geräten gleiche
+physische Größe. Für Hilfen per Hover braucht es auch einen Touch- und Tastaturweg.
+
+Displayausschnitte und den unteren Systembereich können wir in CSS berücksichtigen:
+
+```css
+.site-footer {
+  padding-block-end: max(1rem, env(safe-area-inset-bottom, 0px));
+}
+```
+
+Dieser Browser-CSS-Ausschnitt lässt mindestens `1rem` Platz und berücksichtigt
+einen gegebenenfalls größeren unteren sicheren Bereich. Sein tatsächlicher
+Wert hängt von Gerät und Viewport-Einstellung ab. Schwebende Buttons werden
+zusätzlich geprüft, damit sie keinen Inhalt verdecken.
+
+Bei langsamem Netz helfen passend kleine Bilder, reservierter Bildplatz und
+verständliche Ladezustände. Installierbarkeit allein macht eine Anwendung
+nicht nativ: Auch eine PWA kann installiert werden und basiert weiterhin auf
+Webtechnologien.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine mobile Webseite ist eine Weboberfläche,
@@ -58,13 +89,6 @@ In der Praxis wird heute in der Regel die **responsive** Lösung empfohlen.
 > Wichtige Aspekte sind gute Lesbarkeit, berührungsfreundliche Bedienung,
 > schnelles Laden und ein an den kleinen Bildschirm angepasstes Layout.
 > In der modernen Praxis wird dies meist mit responsive Webdesign umgesetzt.
-
-## Häufige Prüfungsfehler
-
-- Die mobile Webseite als native Anwendung bezeichnen.
-- Die Rolle von Leistung und Berührungsbedienung nicht erwähnen.
-- Die mobile Unterstützung nur auf eine kleinere Bildschirmgröße reduzieren.
-- Den Zusammenhang mit dem responsiven Ansatz nicht herstellen.
 
 ## Schnelle Selbstkontrolle
 
@@ -79,10 +103,16 @@ In der Praxis wird heute in der Regel die **responsive** Lösung empfohlen.
 1. Gute Nutzbarkeit im mobilen Browser
 2. Weil es im Mobilnetz und auf dem Handy besonders zählt
 3. Weil man mit dem Finger bedient
-4. Die Webseite läuft im Browser, die App ist installiert
+4. Die mobile Website läuft in einer Webumgebung; die native App baut auf dem Anwendungsmodell der Plattform auf. Auch eine Web-PWA kann installiert sein.
 5. Responsive Webdesign
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [W3C: Target size minimum](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html): 24 CSS-Pixel und Ausnahmen der Anforderung.
+- [MDN: env()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/env): Umgebungsvariablen für sichere Bildschirmbereiche.
+
 
 1. MDN - Responsive design
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
