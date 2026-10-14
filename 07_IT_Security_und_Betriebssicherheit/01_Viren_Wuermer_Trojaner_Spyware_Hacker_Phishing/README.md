@@ -8,7 +8,7 @@
 | worm | önterjedő malware | gyors hálózati terjedés |
 | trójai | legitimnek álcázott kártevő | hátsó kapu, letöltő, lopás |
 | spyware | megfigyelő szoftver | adatlopás |
-| hacker | illetéktelen hozzáférésre törekvő személy | rendszerfeltörés |
+| hacker | rendszereket vizsgáló, technikailag jártas személy; a kontextus számít | engedélyezett vizsgálat vagy jogosulatlan támadás |
 | phishing | megtévesztő üzenet vagy oldal | jelszó- és adatlopás |
 
 ## Mi a különbség a fő malware-típusok között?
@@ -66,14 +66,7 @@ Phishing jöhet:
 
 ## Mi az a hacker?
 
-Vizsgán gyakran egyszerűen így fogalmaznak:
-
-- hacker = aki jogosulatlanul próbál hozzáférni egy rendszerhez
-
-Fontos pontosítás:
-
-- a hétköznapi nyelvben ez többnyire rosszindulatú támadót jelent
-- szakmailag létezik etikus hacker is, aki engedéllyel vizsgál rendszereket
+A szó jelentése a környezettől függ. Biztonsági incidensnél gyakran rosszindulatú támadóra utalnak vele, de az etikus hacker előzetes engedéllyel és meghatározott keretek között vizsgál rendszereket. Vizsgán mondd ki, hogy **jogosulatlan támadóról vagy engedélyezett biztonsági tesztelőről** beszélsz. A hacker személy, a malware szoftver.
 
 ## Miért fontos ezeket szétválasztani?
 
@@ -94,6 +87,16 @@ Mert más a működésük:
 | phishing | nem vírusfajta, hanem támadási módszer |
 | hacker | nem minden hacker etikus, de nem is minden hacker automatikusan "vírus" |
 
+## Kidolgozott eset: hamis iskolai belépési üzenet
+
+Egy levél azt állítja, hogy lejár a tanulói fiókod. A gomb egy hasonló nevű, de idegen webhelyre vezet. Ez **phishing**, akkor is, ha semmit nem telepít a gépre. A jelszó megszerzéséhez elég lehet a hamis űrlap. A feladó megjelenített neve és a lakat önmagában nem bizonyítja, hogy az iskola küldte.
+
+1. A szolgáltatást a korábban elmentett címen nyisd meg, és ismert csatornán ellenőrizd az üzenetet.
+2. Ha már megadtad a jelszót, megbízható eszközről változtasd meg, és jelezd az esetet az üzemeltetőnek.
+3. Vizsgáljátok meg az aktív munkamenetek visszavonását, a helyreállítási adatokat és a levelezési továbbításokat is. A jelszócsere nem feltétlenül érvénytelenít minden ellopott munkamenetet.
+
+A kategóriák különböző szempontokat írnak le: a trójai a megtévesztő csomagolást, a spyware az adatgyűjtést, a ransomware a zsarolást. Egyetlen támadásban több is együtt jelenhet meg. A védekezés ezért a belépési módot, a jogosultságokat és a következményeket is vizsgálja.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A vírus, a worm, a trójai és a spyware mind malware-típusok, de eltérő módon működnek.  
@@ -102,14 +105,6 @@ Mert más a működésük:
 > a trójai legitim programnak álcázza magát,
 > a spyware pedig titokban adatot gyűjt.  
 > A phishing ezzel szemben megtévesztésen alapuló támadási módszer, amelynek célja gyakran jelszó- vagy adatlopás.
-
-## Gyakori vizsgahibák
-
-- A phishinget vírusfajtának mondani.
-- A wormot és a vírust teljesen ugyanannak tekinteni.
-- Azt állítani, hogy a trójai mindig önmagát terjeszti.
-- Nem megemlíteni, hogy a spyware adatot gyűjt.
-- A hacker fogalmát túl pontatlanul használni.
 
 ## Gyors önellenőrzés
 
@@ -121,11 +116,11 @@ Mert más a működésük:
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. A worm jellemzően önterjedőbb, főleg hálózaton át
+1. A vírus más kódhoz vagy fájlhoz kapcsolódva szaporodik; a worm önállóan képes más rendszerekre terjedni
 2. Mert ártalmatlannak látszik, de rejtett káros funkciója van
 3. Arra, hogy titokban megfigyel és adatot gyűjt
 4. Megtévesztéssel adatot vagy hozzáférést szerezni
-5. Jogosulatlanul hozzáférni próbáló támadó
+5. Kontextustól függő megnevezés; az engedélyezett biztonsági tesztelő és a jogosulatlan támadó megkülönböztetendő
 
 ## Források
 
@@ -150,3 +145,10 @@ Mert más a működésük:
    Használat: Microsoft-féle malware-kategóriák és gyakorlati értelmezés.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [NIST: Phishing](https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing): gyanús üzenetek külön csatornán történő ellenőrzése és jelentése
+- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html): hitelesítési tényezők és adathalászattal szembeni ellenállás
+
+Ellenőrizve: `2026-10-14`.
