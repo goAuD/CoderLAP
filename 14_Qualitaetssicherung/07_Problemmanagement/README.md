@@ -14,7 +14,7 @@ Incidens / ismétlődő hiba
 
 Ez egy olyan folyamat, amely:
 
-- összegyűjti a visszatérő problémákat
+- azonosítja egy vagy több incidens tényleges vagy lehetséges okait
 - megvizsgálja az okokat
 - megkeresi a gyökérokot
 - tartós javítást vagy megelőző intézkedést kezdeményez
@@ -43,18 +43,19 @@ Egy incidenst gyorsan kezelni kell, a problem management pedig azt vizsgálja, m
 - workaround vagy végleges megoldás
 - dokumentálás és tanulságok
 
+## Visszatérő tárhelyriasztás okának vizsgálata
+
+A szolgáltatás leáll, mert megtelt a lemez. Az incidenskezelés első feladata a szolgáltatás biztonságos helyreállítása, a szükséges bizonyítékok megőrzésével. A problem management azt kutatja, miért nőtt korlátlanul a tárhelyhasználat.
+
+A mérések szerint egy importáló hibás kérése ugyanazt az üzenetet ismétli, a naplón nincs forgatás, és a riasztás túl későn szól. Több közreható ok van. A tartós intézkedés az importáló javítása, méretezett naplóforgatás és korábbi kapacitásriasztás. Mindegyikhez felelőst és ellenőrzési időpontot rendelünk. A naplózást egyszerűen kikapcsolni elveszítené a későbbi vizsgálat lehetőségét.
+
+A kerülőmegoldás, workaround átmenetileg enyhíti a hatást, de nem feltétlenül szünteti meg az okot. Az elemzésnek nem kell több azonos incidensre várnia: egyetlen súlyos eset vagy előre felismert lehetséges ok is indokolhatja. A tanulság a rendszer javítására, nem egy ember hibáztatására irányul.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A problem management célja a problémák kiváltó okának feltárása és a hasonló hibák jövőbeni megelőzése.  
 > Nemcsak a tünetek gyors kezelésére koncentrál, hanem a háttérben álló okok elemzésére is.  
 > Ezért a problem management fontos része a tartós minőségjavításnak és a stabil működésnek.
-
-## Gyakori vizsgahibák
-
-- A problem managementet az incident managementtel azonosítani.
-- Csak a hiba elhárítását említeni, az okkutatást nem.
-- Nem megemlíteni a megelőzést.
-- A gyökérokelemzés szerepét kihagyni.
 
 ## Gyors önellenőrzés
 
@@ -73,6 +74,14 @@ Egy incidenst gyorsan kezelni kell, a problem management pedig azt vizsgálja, m
 5. Workaround, végleges javítás vagy megelőző intézkedés
 
 ## Források
+
+- [Atlassian: Problem and incident management](https://www.atlassian.com/incident-management/devops/incident-vs-problem-management)  
+  Egy vagy több incidens tényleges vagy lehetséges okának kezelése.
+
+- [Google SRE: Postmortem culture](https://sre.google/sre-book/postmortem-culture/)  
+  Több közreható ok és nyomon követhető, hibáztatásmentes intézkedések.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Problem management in Jira Service Management  
    https://www.atlassian.com/software/jira/service-management/product-guide/getting-started/problem-management  
