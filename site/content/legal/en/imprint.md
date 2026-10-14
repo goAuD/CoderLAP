@@ -3,11 +3,14 @@
 ## Provider
 
 - Service provider and media owner: Viktor Halupka
-- Project name: CoderLAP
+- Projects: CoderLAP (`https://coderlap.com`) and CoderQuiz
+  (`https://quiz.coderlap.com`), with the same service provider and media owner
 - Project type: educational study resource for the Austrian LAP in software
   development and coding
-- Publication format: static website generated from repository content
-- Current publication status: restricted access behind `basic_auth`
+- Publication format: static learning material and a practice quiz running in
+  the browser
+- Current publication status: restricted access with temporary HTTP Basic Auth;
+  the two services have separate web addresses
 
 ## Contact
 

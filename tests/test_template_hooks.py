@@ -229,6 +229,46 @@ class TemplateHookTests(unittest.TestCase):
         self.assertNotIn('<nav class="topic-pagination" aria-label="Sidebar">', html)
         self.assertNotIn('<main class="page-shell">', html)
 
+    def test_unpublished_quiz_keeps_development_panels_and_localized_footer_anchor(self) -> None:
+        for site_root in ("/", "/hu/"):
+            with self.subTest(site_root=site_root):
+                html = self.env.get_template("home.html").render(
+                    ui_lang="de", ui=self.ui, page_title="CoderLAP",
+                    asset_prefix="/assets", body_class="home-page",
+                    navigation=self.navigation, topic_index=self.topic_index,
+                    site_root=site_root, quiz_url="",
+                )
+
+                self.assertIn('<details class="coder-tool" id="coderquiz">', html)
+                self.assertIn('<details class="coder-tool" id="codercoaster">', html)
+                self.assertIn(f'href="{site_root}#coderquiz"', html)
+                self.assertNotIn('class="coder-tool coder-tool--available"', html)
+
+    def test_published_quiz_uses_one_url_for_home_and_all_footer_links(self) -> None:
+        quiz_url = "https://quiz.coderlap.com/"
+        for site_root in ("/", "/hu/"):
+            with self.subTest(site_root=site_root):
+                context = dict(
+                    ui_lang="de", ui=self.ui, page_title="CoderLAP",
+                    asset_prefix="/assets", navigation=self.navigation,
+                    topic_index=self.topic_index, site_root=site_root,
+                    quiz_url=quiz_url,
+                )
+                home_html = self.env.get_template("home.html").render(
+                    **context, body_class="home-page",
+                )
+                legal_html = self.env.get_template("legal.html").render(
+                    **context, body_class="legal-page", content_html="<p>Privacy</p>",
+                )
+
+                self.assertEqual(home_html.count(f'href="{quiz_url}"'), 2)
+                self.assertEqual(legal_html.count(f'href="{quiz_url}"'), 1)
+                self.assertNotIn('<details class="coder-tool" id="coderquiz">', home_html)
+                self.assertNotIn(f'href="{site_root}#coderquiz"', home_html)
+                self.assertIn('<details class="coder-tool" id="codercoaster">', home_html)
+                self.assertIn(f'href="{site_root}#codercoaster"', home_html)
+                self.assertIn(f'href="{site_root}privacy/"', legal_html)
+
     def test_module_pack_template_exposes_print_trigger_and_topic_outline(self) -> None:
         html = self.env.get_template("module_pack.html").render(
             ui_lang="hu",
