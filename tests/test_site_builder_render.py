@@ -7,6 +7,27 @@ from scripts.site_builder.render import build_template_environment, render_markd
 
 
 class RenderTests(unittest.TestCase):
+    def test_runnable_example_marker_is_not_visible_in_topic_output(self):
+        for marker in ("run", "mysql", "php-pdo-mysql"):
+            for gap in ("\n", "\n\n"):
+                with self.subTest(marker=marker, gap=gap):
+                    html = render_markdown(
+                        "Explanation." + gap + "<!-- example:" + marker + " -->\n"
+                        "```javascript\nconsole.log(2 + 3);\n```\n\n```text\n5\n```"
+                    )
+                    self.assertNotIn("example:" + marker, html)
+                    self.assertIn("Explanation.", html)
+                    self.assertIn("console.log(2 + 3);", html)
+                    self.assertIn("<pre><code class=\"language-text\">5", html)
+
+    def test_editorial_marker_filter_preserves_code_and_other_comments(self):
+        for marker in ("run", "mysql", "php-pdo-mysql"):
+            comment = "<!-- example:" + marker + " -->"
+            for source in ("```html\n" + comment + "\n```", "    " + comment, "`" + comment + "`"):
+                with self.subTest(source=source):
+                    self.assertIn("&lt;!-- example:" + marker + " --&gt;", render_markdown(source))
+        self.assertIn("&lt;!-- other comment --&gt;", render_markdown("<!-- other comment -->"))
+
     def test_topic_output_omits_exam_mistakes_and_nested_content_in_both_languages(self):
         for heading in ("Gyakori vizsgahibák", "Häufige Prüfungsfehler"):
             with self.subTest(heading=heading):
