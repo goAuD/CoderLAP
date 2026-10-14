@@ -3,11 +3,14 @@
 ## Anbieter
 
 - Diensteanbieter und Medieninhaber: Viktor Halupka
-- Projektname: CoderLAP
+- Projekte: CoderLAP (`https://coderlap.com`) und CoderQuiz
+  (`https://quiz.coderlap.com`) mit demselben Diensteanbieter und Medieninhaber
 - Projekttyp: Bildungs- und Lernangebot für die österreichische LAP in
   Applikationsentwicklung - Coding
-- Veröffentlichungsformat: statische Website aus Repository-Inhalten
-- Aktueller Veröffentlichungsstatus: zugriffsbeschränkt mit `basic_auth`
+- Veröffentlichungsformat: statische Lerninhalte und ein im Browser laufendes
+  Übungsquiz
+- Aktueller Veröffentlichungsstatus: zugriffsbeschränkt mit vorübergehendem
+  HTTP Basic Auth; die beiden Angebote haben getrennte Webadressen
 
 ## Kontakt
 

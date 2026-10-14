@@ -3,11 +3,13 @@
 ## Szolgáltató
 
 - Szolgáltató és médiatulajdonos: Viktor Halupka
-- Projekt neve: CoderLAP
+- Projektek: CoderLAP (`https://coderlap.com`) és CoderQuiz
+  (`https://quiz.coderlap.com`), azonos szolgáltatóval és médiatulajdonossal
 - Projekt típusa: oktatási tananyag az osztrák LAP szoftverfejlesztés és coding
   vizsgához
-- Közzétételi formátum: repository-tartalomból generált statikus weboldal
-- Jelenlegi közzétételi állapot: korlátozott hozzáférés `basic_auth` védelemmel
+- Közzétételi formátum: statikus tananyag és böngészőben futó gyakorlókvíz
+- Jelenlegi közzétételi állapot: korlátozott hozzáférés, átmeneti HTTP Basic
+  Auth védelemmel; a két szolgáltatás külön webcímen működik
 
 ## Kapcsolat
 
