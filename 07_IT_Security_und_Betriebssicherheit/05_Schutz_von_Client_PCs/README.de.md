@@ -89,6 +89,16 @@ Ein guter Schutz:
 
 - besteht aus mehreren Schichten
 
+## Abnahme eines Lern-Laptops
+
+Ein Rechner ist erst dann vorbereitet, wenn das Prüfergebnis nachvollziehbar ist. Prüfe den tatsächlichen Aktualisierungsstand von Betriebssystem und Browser, die unterstützte Version und erforderliche Neustarts. Firmware und installierte Anwendungen gehören ebenfalls ins Inventar. Bei ausgelaufenem Support sind Ablösung oder dokumentierte vorübergehende Schutzmaßnahmen zu planen.
+
+Nutze im Alltag ein Standardkonto, automatische Bildschirmsperre und bei Bedarf Laufwerksverschlüsselung. Diese schützt vor allem Daten auf einem verlorenen, gesperrten Gerät; Malware in einer bereits angemeldeten Sitzung hält sie nicht auf. Der Wiederherstellungsschlüssel muss auch verfügbar sein, wenn der Laptop selbst ausfällt.
+
+Beim Konto helfen einzigartiges Passwort, Passwortmanager und MFA zusammen. Korrekt verwendete FIDO/WebAuthn-Authentifizierung kann phishing-resistent sein; manuell eingegebene Einmalcodes sind es normalerweise nicht. Prüfe auch die Wiederherstellungsmöglichkeit für das Konto.
+
+Stelle abschließend ein Beispieldokument in einen separaten Ordner wieder her und öffne es. Bei Verdacht auf eine Infektion sollten Netzwerkisolation und Meldung an den Betrieb vor unkontrollierten Bereinigungsversuchen stehen. So sinkt das Risiko weiterer Ausbreitung und des Verlusts von Belegen.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Schutz des Client-PCs muss in mehreren Schichten umgesetzt werden.  
@@ -97,14 +107,6 @@ Ein guter Schutz:
 > eingeschränkte Berechtigungen, Bewusstsein gegen Phishing
 > und regelmäßige Datensicherung.  
 > Kein einzelnes Werkzeug reicht für sich allein aus, daher ist ein mehrschichtiger Schutz erforderlich.
-
-## Häufige Prüfungsfehler
-
-- Glauben, dass nur ein Antivirus ausreicht.
-- Die Rolle der Updates vergessen.
-- Die Verantwortung der Benutzerseite nicht erwähnen.
-- Das Backup aus dem Schutzkonzept weglassen.
-- Phishing nur als technisches und nicht als menschliches Risiko betrachten.
 
 ## Schnelle Selbstkontrolle
 
@@ -149,3 +151,10 @@ Ein guter Schutz:
    Verwendung: praktische Seite des aktuellen Endpunktschutzes und der Bedrohungsverwaltung.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html): Authentifizierungsfaktoren und Phishing-Resistenz
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): getrennte, verschlüsselte Sicherungen und geprüfte Wiederherstellung
+
+Geprüft: `2026-10-14`.

@@ -89,6 +89,16 @@ A jó védelem:
 
 - több rétegből áll
 
+## Átadás előtti ellenőrzés egy tanulói laptopon
+
+Egy gép akkor tekinthető előkészítettnek, ha az ellenőrzés eredménye is látszik. Nézd meg az operációs rendszer és a böngésző tényleges frissítési állapotát, a támogatott verziót és a szükséges újraindításokat. A firmware és a telepített alkalmazások is részei a leltárnak. Támogatás nélkül maradt rendszernél a leváltást vagy dokumentált átmeneti védelmet is meg kell tervezni.
+
+Napi munkához normál fiókot, automatikus képernyőzárat és szükség szerint lemeztitkosítást használj. A lemeztitkosítás főleg az elveszett, lezárt eszköz adatait védi; a már bejelentkezett munkamenetben futó kártevőt nem állítja meg. A helyreállítási kulcs legyen hozzáférhető akkor is, ha maga a laptop nem működik.
+
+A fióknál az egyedi jelszó, a jelszókezelő és az MFA együtt hasznos. A megfelelően használt FIDO/WebAuthn-alapú hitelesítés adathalászattal szemben is ellenálló lehet; a kézzel begépelt egyszer használatos kód általában nem az. A helyreállítási lehetőséget is próbáld ki.
+
+Végül állíts vissza egy mintadokumentumot mentésből egy külön mappába, és nyisd meg. Ha gyanús fertőzés történik, a hálózati kapcsolat elkülönítése és az üzemeltető értesítése előzze meg az ellenőrizetlen takarítást. Így a továbbterjedés és a bizonyítékvesztés kockázata is csökken.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A kliens PC védelmét több rétegben kell megvalósítani.  
@@ -97,14 +107,6 @@ A jó védelem:
 > a korlátozott jogosultságok, a phishing elleni tudatosság
 > és a rendszeres biztonsági mentés.  
 > Egyetlen eszköz önmagában nem elég, ezért rétegzett védelemre van szükség.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy elég csak egy antivírus.
-- Elfelejteni a frissítések szerepét.
-- Nem megemlíteni a felhasználói oldal felelősségét.
-- A backupot kihagyni a védelemből.
-- A phishinget csak technikai, és nem emberi kockázatnak tekinteni.
 
 ## Gyors önellenőrzés
 
@@ -149,3 +151,10 @@ A jó védelem:
    Használat: naprakész végpontvédelem és fenyegetéskezelés gyakorlati oldala.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html): hitelesítési tényezők és adathalászattal szembeni ellenállás
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): elkülönített, titkosított mentések és ellenőrzött helyreállítás
+
+Ellenőrizve: `2026-10-14`.

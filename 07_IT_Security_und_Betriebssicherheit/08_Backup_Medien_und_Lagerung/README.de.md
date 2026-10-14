@@ -86,6 +86,14 @@ gleichzeitig die Primärdaten und die nahe Sicherung zerstören kann.
 | online erreichbares Backup | komfortabel, aber angreifbarer |
 | Offline / Air-Gapped Backup | getrennt, besser schützbar |
 
+## Medienauswahl anhand des Wiederherstellungsziels
+
+Eine Werkstatt muss 200 GB Daten innerhalb von vier Stunden wiederherstellen. Bei gemessenen dauerhaften 100 MB/s von einer externen Festplatte dauert das reine Kopieren theoretisch `200 000 / 100 = 2000` Sekunden, etwa 33 Minuten. Eine Internetverbindung mit 20 Mbit/s erreicht ideal höchstens 2,5 MB/s. Für dieselben Daten wären das rund 22,2 Stunden. Gerechnet wird mit dezimalen GB/MB; Protokollaufwand, viele kleine Dateien und Entschlüsselung können die Dauer erhöhen. Dieser Downloadweg allein erfüllt das Vier-Stunden-Ziel nicht.
+
+Die lokale Kopie unterstützt schnellen Restore, eine räumlich getrennte Kopie schützt vor örtlichen Schäden. **Offsite** bedeutet anderer Standort, nicht automatisch offline. **Immutable** bedeutet, dass eine Sicherung gemäß dem eingerichteten Schutz für eine festgelegte Zeit nicht verändert oder gelöscht werden kann; das ist nicht dasselbe wie ein physisch getrenntes Medium.
+
+Bei verschlüsselten Backups muss auch der Schlüssel separat geschützt und im Wiederherstellungsfall verfügbar sein. Dokumentiere Medienkennung, Datenstand, Aufbewahrung und Restore-Test. Für lange Aufbewahrung kann eine Migration auf neue Medien nötig werden, damit Laufwerk, Lesegerät und Software weiterhin verfügbar sind. Es gibt keine für jede HDD, SSD oder jedes Band garantierte Lebensdauer.
+
 ## Prüfungstaugliche Formulierung
 
 > Beim Backup-Medium und der Aufbewahrung zählt nicht nur die Kapazität,
@@ -95,13 +103,6 @@ gleichzeitig die Primärdaten und die nahe Sicherung zerstören kann.
 > und bei sensiblen Daten verschlüsselt werden.  
 > Ein ständig im Netzwerk erreichbares Backup allein reicht nicht aus,
 > daher kann auch eine Offline- oder Offsite-Kopie wichtig sein.
-
-## Häufige Prüfungsfehler
-
-- NAS automatisch als vollständig sicheres Backup betrachten.
-- Die getrennte Aufbewahrung nicht erwähnen.
-- Verschlüsselung und Zugriffsschutz vergessen.
-- Glauben, dass ein einziges Medium für alle Zwecke optimal ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -138,3 +139,10 @@ gleichzeitig die Primärdaten und die nahe Sicherung zerstören kann.
    Verwendung: Restore- und Rollback-Aspekte sowie regelmäßige Überprüfung der Sicherungen.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [CISA: Protect stored data](https://www.cisa.gov/resources-tools/training/how-protect-data-stored-your-devices): Trennung externer Sicherungslaufwerke und Schutz gespeicherter Daten
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): getrennte, verschlüsselte Sicherungen und geprüfte Wiederherstellung
+
+Geprüft: `2026-10-14`.

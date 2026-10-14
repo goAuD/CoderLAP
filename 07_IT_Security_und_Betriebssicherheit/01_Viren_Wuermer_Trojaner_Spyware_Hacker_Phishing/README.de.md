@@ -8,7 +8,7 @@
 | Worm | sich selbst verbreitende Malware | schnelle Netzwerkausbreitung |
 | Trojaner | als legitim getarnte Schadsoftware | Hintertür, Downloader, Diebstahl |
 | Spyware | Überwachungssoftware | Datendiebstahl |
-| Hacker | Person, die unbefugten Zugriff anstrebt | Systemeinbruch |
+| Hacker | technisch versierte Person, die Systeme untersucht; der Kontext entscheidet | autorisierte Prüfung oder unbefugter Angriff |
 | Phishing | täuschende Nachricht oder Seite | Passwort- und Datendiebstahl |
 
 ## Was ist der Unterschied zwischen den wichtigsten Malware-Typen?
@@ -66,14 +66,7 @@ Phishing kann kommen über:
 
 ## Was ist ein Hacker?
 
-Bei der Prüfung wird häufig einfach so formuliert:
-
-- Hacker = jemand, der unbefugt versucht, auf ein System zuzugreifen
-
-Wichtige Präzisierung:
-
-- in der Alltagssprache meint man damit meistens einen böswilligen Angreifer
-- fachlich gibt es auch ethische Hacker, die Systeme mit Genehmigung prüfen
+Die Bedeutung hängt vom Zusammenhang ab. Bei einem Sicherheitsvorfall ist damit oft ein böswilliger Angreifer gemeint. Ethische Hacker prüfen Systeme dagegen mit vorheriger Genehmigung und innerhalb eines festgelegten Rahmens. Benenne in der Prüfung, ob du von einem **unbefugten Angreifer oder einem autorisierten Sicherheitstester** sprichst. Ein Hacker ist eine Person, Malware ist Software.
 
 ## Warum ist das wichtig, diese auseinanderzuhalten?
 
@@ -94,6 +87,16 @@ Weil sie unterschiedlich funktionieren:
 | Phishing | keine Virusart, sondern eine Angriffsmethode |
 | Hacker | nicht jeder Hacker ist ethisch, aber auch nicht jeder Hacker ist automatisch ein "Virus" |
 
+## Durchgearbeitetes Beispiel: gefälschte Schul-Anmeldung
+
+Eine Nachricht behauptet, dein Lernkonto laufe ab. Der Link führt zu einer ähnlich benannten, aber fremden Website. Das ist **Phishing**, auch wenn keine Software installiert wird. Ein gefälschtes Formular kann bereits das Passwort abfangen. Anzeigename und Schlosssymbol beweisen für sich allein nicht, dass die Schule die Nachricht geschickt hat.
+
+1. Öffne den Dienst über die bekannte gespeicherte Adresse und prüfe die Nachricht über einen vertrauten Kontaktweg.
+2. Hast du das Passwort bereits eingegeben, ändere es auf einem vertrauenswürdigen Gerät und informiere den Betreiber.
+3. Prüft auch das Widerrufen aktiver Sitzungen, Wiederherstellungsdaten und Weiterleitungsregeln im Postfach. Ein Passwortwechsel beendet nicht zwangsläufig jede gestohlene Sitzung.
+
+Die Kategorien beschreiben unterschiedliche Eigenschaften: Trojaner die täuschende Verpackung, Spyware das Datensammeln und Ransomware die Erpressung. In einem Angriff können mehrere Eigenschaften zusammenkommen. Zur Abwehr betrachtet man deshalb Eintrittsweg, Berechtigungen und Folgen.
+
 ## Prüfungstaugliche Formulierung
 
 > Virus, Worm, Trojaner und Spyware sind alle Malware-Typen, funktionieren aber unterschiedlich.  
@@ -102,14 +105,6 @@ Weil sie unterschiedlich funktionieren:
 > der Trojaner tarnt sich als legitimes Programm,
 > und die Spyware sammelt heimlich Daten.  
 > Phishing hingegen ist eine auf Täuschung basierende Angriffsmethode, deren Ziel häufig Passwort- oder Datendiebstahl ist.
-
-## Häufige Prüfungsfehler
-
-- Phishing als Virusart bezeichnen.
-- Worm und Virus als komplett identisch betrachten.
-- Behaupten, dass sich der Trojaner immer selbst verbreitet.
-- Nicht erwähnen, dass Spyware Daten sammelt.
-- Den Begriff Hacker zu ungenau verwenden.
 
 ## Schnelle Selbstkontrolle
 
@@ -121,11 +116,11 @@ Weil sie unterschiedlich funktionieren:
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Der Worm verbreitet sich typischerweise stärker selbst, vor allem über Netzwerke
+1. Ein Virus vermehrt sich in Verbindung mit anderem Code oder Dateien; ein Wurm kann sich selbstständig auf weitere Systeme verbreiten
 2. Weil er harmlos erscheint, aber eine versteckte schädliche Funktion hat
 3. Darauf, dass er heimlich überwacht und Daten sammelt
 4. Durch Täuschung Daten oder Zugang zu erlangen
-5. Ein Angreifer, der unbefugt auf ein System zuzugreifen versucht
+5. Kontextabhängige Bezeichnung; autorisierte Sicherheitstester und unbefugte Angreifer sind zu unterscheiden
 
 ## Quellen
 
@@ -150,3 +145,10 @@ Weil sie unterschiedlich funktionieren:
    Verwendung: Microsoft-Malware-Kategorien und praktische Interpretation.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [NIST: Phishing](https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/phishing): Prüfen verdächtiger Nachrichten über einen anderen Kanal und Melden
+- [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html): Authentifizierungsfaktoren und Phishing-Resistenz
+
+Geprüft: `2026-10-14`.
