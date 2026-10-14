@@ -67,6 +67,32 @@ Der Web Service ermöglicht, dass:
 - wiederverwendbare Funktionen bereitgestellt werden
 - servicebasierte Systeme gebaut werden können
 
+## Ein Dienstaufruf besteht aus mehr als einer URL
+
+Eine Lernanwendung möchte den Kurs mit ID `15` lesen. Ein möglicher HTTP-Vertrag
+liefert auf `GET /api/courses/15` den Status `200` mit Kursdaten und bei
+unbekannter ID `404`. Die Schnittstellenbeschreibung legt dies fest. Die URL
+ist ein Beispiel und kein funktionierender öffentlicher Dienst.
+
+Der Aufrufer muss mehrere Ergebnisse behandeln:
+
+| Fall | Aufgabe des Clients |
+|---|---|
+| gültige erfolgreiche Antwort | erwartete Datenstruktur prüfen und anzeigen |
+| fehlende Berechtigung | verständlicher Hinweis statt endloser Wiederholung |
+| Verbindungsabbruch oder Zeitüberschreitung | Warten beenden und gegebenenfalls erneuten Versuch anbieten |
+| Überlastung | begrenzte, verzögerte Wiederholung gemäß API-Regeln |
+
+Einen Leseaufruf zu wiederholen hat ein anderes Risiko als das erneute Anlegen
+einer Bestellung. War das Anlegen erfolgreich und ging nur die Antwort verloren,
+kann eine blinde Wiederholung duplizieren. Dafür kann der Vertrag eine eindeutige
+Anfragekennung und Duplikationsschutz vorsehen. Eine Zeitüberschreitung beweist
+also nicht, dass der Server nichts ausgeführt hat.
+
+Der Dienst kann auch in einem internen Netz laufen. HTTPS schützt die
+Übertragung. Identifikation und Berechtigungsprüfung für jede Ressource sind
+zusätzliche Aufgaben.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Web Service ist ein über das Netzwerk erreichbarer Dienst,
@@ -75,13 +101,6 @@ Der Web Service ermöglicht, dass:
 > In der Praxis nutzt er typischerweise ein Webprotokoll
 > und ein strukturiertes Nachrichtenformat,
 > zum Beispiel SOAP oder REST-basierte HTTP-Kommunikation.
-
-## Häufige Prüfungsfehler
-
-- Web Service als einfache Webseite bezeichnen.
-- Mit der Benutzeroberfläche verwechseln.
-- Die System-zu-System-Kommunikation nicht erwähnen.
-- REST und SOAP als vollständig identisch darstellen.
 
 ## Schnelle Selbstkontrolle
 
@@ -100,6 +119,11 @@ Der Web Service ermöglicht, dass:
 5. SOAP und REST
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [IETF: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html): Antwortstatus, Wiederholung und Idempotenz.
+
 
 1. W3C - Web Services Architecture  
    https://www.w3.org/TR/ws-arch/wsa.pdf  

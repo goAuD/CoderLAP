@@ -46,6 +46,36 @@ Das kann geschehen durch:
 - Bei schlechter Belastung kann das System langsamer werden.
 - Bei der Entwicklung muss man auf Thread-Sicherheit und gemeinsame Ressourcen achten.
 
+## Zeitscheiben, Warten und gemeinsamer Zustand
+
+Betrachten wir einen Prozessorkern und zwei ausführungsbereite Aufgaben. Eine
+vereinfachte Verteilung gleich großer Zeitscheiben könnte so aussehen:
+
+| Zeitscheibe | Laufende Aufgabe | Andere Aufgabe |
+|---|---|---|
+| 1 | A rechnet | B ist bereit, wartet aber |
+| 2 | B rechnet | A ist bereit, wartet aber |
+| 3 | A rechnet | B ist bereit, wartet aber |
+
+Das ist Zeitaufteilung, nicht die gleichzeitige Ausführung zweier CPU-Operationen.
+Beim Wechsel wird der Ausführungszustand gesichert und wiederhergestellt;
+Kontextwechsel kosten Zeit. Wartet A auf Datenträger oder Netz, kann die CPU
+inzwischen B bearbeiten. Bei präemptiver Planung kann das Betriebssystem eine
+laufende Aufgabe unterbrechen. Im kooperativen Modell muss sie die Kontrolle
+selbst abgeben.
+
+Prozesse besitzen normalerweise getrennte Adressräume. Threads eines Prozesses
+nutzen auch gemeinsamen Speicher. Deshalb können sich die Schritte „lesen,
+erhöhen, zurückschreiben“ überlagern: Zwei Threads lesen `0`, beide schreiben
+`1`, eine Erhöhung geht verloren. Sperren oder geeignete atomare Operationen
+ordnen solche Zugriffe.
+
+Eine lange synchrone Berechnung auf dem JavaScript-Hauptthread blockiert die
+Browseroberfläche. `async` oder ein Promise verschieben sie nicht automatisch
+auf einen anderen Thread. Für rechenintensive Aufgaben können Worker,
+Aufteilung oder ein anderer Algorithmus sinnvoll sein. Bei Netzwerkwarten
+kann eine asynchrone API genügen.
+
 ## Prüfungstaugliche Formulierung
 
 > Multitasking bedeutet,
@@ -53,13 +83,6 @@ Das kann geschehen durch:
 > dass sie für den Benutzer gleichzeitig erscheinen.
 > Dies kann durch schnelle Zeiteinteilung oder durch Nutzung mehrerer Prozessorkerne erreicht werden.
 > Ziel ist es, dass das System mehrere Anwendungen und Hintergrundoperationen effizient verwalten kann.
-
-## Häufige Prüfungsfehler
-
-- Multitasking vollständig mit echter Parallelität gleichsetzen.
-- Die Rolle des Betriebssystems nicht erwähnen.
-- Glauben, dass es auf einem einzelnen Prozessorkern kein Multitasking gibt.
-- Nicht über Ressourcenteilung sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -78,6 +101,12 @@ Das kann geschehen durch:
 5. Ressourcenverwaltung und Thread-Sicherheit
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: JavaScript execution model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model): Ausführungsagent, Ereignisschleife und gemeinsamer Zustand.
+- [Microsoft: Processes and threads](https://learn.microsoft.com/en-us/windows/win32/procthread/processes-and-threads): Prozesse, Threads und Planung.
+
 
 1. Microsoft Support - How to multitask in Windows
    https://support.microsoft.com/en-us/windows/how-to-multitask-in-windows-b4fa0333-98f8-ef43-e25c-06d4fb1d6960

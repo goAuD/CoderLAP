@@ -86,6 +86,27 @@ Például:
 | dinamikus oldal | futásidőben generált vagy módosított tartalom |
 | interaktív oldal | nem mindig ugyanaz, mint a dinamikus |
 
+## Mikor készül el a HTML?
+
+Ugyanaz a tananyagoldal többféleképpen is kiszolgálható:
+
+| Megoldás | Folyamat egy oldal megnyitásakor |
+|---|---|
+| Előre generált statikus oldal, SSG | a build már elkészítette a HTML-t; a szerver a kész fájlt küldi |
+| Szerveroldali renderelés, SSR | a szerver a kéréshez összegyűjti az adatokat és HTML-t állít elő |
+| Kliensoldali renderelés, CSR | JavaScript a böngészőben állítja össze a felületet, szükség esetén API-adatokból |
+
+Az SSG-ben egy szövegmódosítás rendszerint új buildet és közzétételt igényel.
+SSR-nél az adatbázisban módosított tartalom a következő kiszolgáláskor megjelenhet;
+a gyorsítótár ezt befolyásolhatja. CSR-nél a kezdeti HTML lehet kevés tartalom,
+ezért a betöltési és hibaállapotot is meg kell tervezni.
+
+Egy statikusan kiszolgált oldal JavaScripttel szűrheti a témákat és helyben
+mentheti a haladást. Ettől még nincs szerveroldali felhasználói adatbázisa.
+Fordítva: egy dinamikus alkalmazás CSS-e és képei többnyire statikus fájlok.
+Érdemes tehát külön megnevezni a **kiszolgálás módját** és a **böngészőbeli
+interakciót**, mert a „statikus” szó nem jelenti azt, hogy az oldal mozdulatlan.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A statikus weboldal előre elkészített fájlokból áll,
@@ -94,13 +115,6 @@ Például:
 > adatok és logika alapján állíthat elő tartalmat,
 > például felhasználóhoz vagy adatbázishoz igazítva.  
 > A mai webalkalmazások gyakran a két megközelítést kombinálják.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a statikus oldalban nem lehet JavaScript.
-- A dinamikus oldalt kizárólag adatbázissal azonosítani.
-- Nem megkülönböztetni a szerveroldali és kliensoldali dinamikát.
-- Azt hinni, hogy a modern web csak egyik vagy másik lehet.
 
 ## Gyors önellenőrzés
 
@@ -119,6 +133,12 @@ Például:
 5. Igen
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Client-server overview](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview): a kérés és válasz útja.
+- [MDN: SSR](https://developer.mozilla.org/en-US/docs/Glossary/SSR): renderelési időpontok megkülönböztetése.
+
 
 1. MDN - Server-side website programming first steps  
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps  

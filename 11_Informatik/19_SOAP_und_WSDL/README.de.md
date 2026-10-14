@@ -9,9 +9,7 @@
 
 ## Was ist SOAP?
 
-`SOAP` (`Simple Object Access Protocol`) ist ein Protokoll
-mit XML-basierter Nachrichtenstruktur
-für die Kommunikation zwischen Systemen.
+`SOAP` ist ein Protokoll mit XML-basierter Nachrichtenstruktur für die Kommunikation zwischen Systemen. `Simple Object Access Protocol` ist die historische Auflösung; SOAP 1.2 behandelt den Namen nicht mehr als Abkürzung.
 
 Merkmale:
 
@@ -43,14 +41,14 @@ Im Allgemeinen gibt sie an:
 Im klassischen Modell:
 
 - WSDL beschreibt den Dienst
-- SOAP überträgt tatsächlich die XML-Nachrichten
+- SOAP definiert Aufbau und Verarbeitung der XML-Nachrichten
 
 Also:
 
 - WSDL ist eher ein Vertrag
 - SOAP ist eher eine Kommunikationsform
 
-## Warum war das wichtig?
+## Warum ist das für Unternehmensintegrationen wichtig?
 
 Weil es stark standardisierte und präzise Funktionsweise ermöglicht:
 
@@ -69,24 +67,50 @@ Weil es stark standardisierte und präzise Funktionsweise ermöglicht:
 
 | Aspekt | SOAP/WSDL | REST |
 |---|---|---|
-| Datenaustausch | typischerweise XML | häufig JSON |
+| Datenaustausch | XML-basierte SOAP-Nachricht | häufig JSON, aber kein vorgeschriebenes Format |
 | Beschreibung | formaler Vertrag, WSDL | keine obligatorische einheitliche Beschreibungssprache |
 | Stil | strenger | leichter, webnäher |
+
+## Eine SOAP-Nachricht und ihr Vertrag
+
+Dies ist eine veranschaulichende **SOAP-1.2**-XML-Nachricht und kein allein
+ausführbares Programm:
+
+```xml
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+              xmlns:c="urn:example:courses">
+  <env:Body>
+    <c:GetCourse>
+      <c:id>15</c:id>
+    </c:GetCourse>
+  </env:Body>
+</env:Envelope>
+```
+
+`Envelope` umschließt die Nachricht. Der verpflichtende `Body` enthält die
+Anwendungsdaten. `Header` ist optional und fehlt hier. `c:GetCourse` und `c:id`
+sind eigene Beispielelemente, keine vom SOAP-Standard definierten Kursoperationen.
+Namensräume trennen Anwendungs- und Protokollelemente.
+
+Der WSDL-Vertrag kann Eingabe und Antwort der Operation, den Typ der ID sowie
+Adresse und Protokollbindung beschreiben. WSDL 1.1 und 2.0 sind unterschiedlich
+aufgebaut. Für einen Codegenerator wählen wir deshalb die tatsächliche Version
+des Dienstes. Ein Dienstfehler kann als strukturierte SOAP-`Fault`-Nachricht
+ankommen und muss entsprechend ausgewertet werden.
+
+SOAP definiert Nachrichtenformat und Verarbeitungsregeln. Die Übertragung
+übernimmt beispielsweise HTTP, SOAP ist jedoch nicht ausschließlich an HTTP
+gebunden. SOAP allein verschlüsselt nicht und bietet keine vollständige
+Authentifizierungslösung. Sicherheitsvorgaben gehören zusätzlich zum
+Integrationsvertrag.
 
 ## Prüfungstaugliche Formulierung
 
 > SOAP ist ein XML-basiertes Nachrichtenprotokoll, das für die Kommunikation von Web Services verwendet wird.  
 > WSDL dient hingegen zur Beschreibung des Dienstes: es gibt die Operationen, Nachrichtentypen und Endpunkte an.  
-> In klassischen Unternehmenssystemen traten SOAP und WSDL häufig gemeinsam auf,
+> In Unternehmenssystemen werden SOAP und WSDL häufig gemeinsam verwendet,
 > da sie einen präzisen, formalen Vertrag
-> und standardisierte Kommunikation boten.
-
-## Häufige Prüfungsfehler
-
-- SOAP und WSDL als dasselbe bezeichnen.
-- Behaupten, WSDL selbst sende die Daten.
-- Die Rolle von XML nicht erwähnen.
-- SOAP als typische Basislösung für moderne Frontend-APIs bezeichnen.
+> und standardisierte Kommunikation bieten.
 
 ## Schnelle Selbstkontrolle
 
@@ -105,6 +129,12 @@ Weil es stark standardisierte und präzise Funktionsweise ermöglicht:
 5. Schwerer und strenger, häufig XML-basiert
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [W3C: SOAP 1.2](https://www.w3.org/TR/soap12-part1/): Envelope, optionaler Header, Body, Fault und Protokollbindung.
+- [W3C: WSDL 2.0 Primer](https://www.w3.org/TR/wsdl20-primer/): Vertrag, Typen, Binding und Version.
+
 
 1. W3C - SOAP Version 1.2 Part 1: Messaging Framework (Second Edition)  
    https://www.w3.org/TR/soap12-part1/  

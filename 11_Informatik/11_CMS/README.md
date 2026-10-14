@@ -72,8 +72,8 @@ Gyakori területek:
 
 | Megoldás | Előny | Hátrány |
 |---|---|---|
-| CMS | gyors indulás, könnyebb tartalomkezelés | korlátosabb rugalmasság |
-| egyedi fejlesztés | teljes testreszabhatóság | drágább és lassabb fejlesztés |
+| CMS | gyors indulás, könnyebb tartalomkezelés | a választott rendszer kereteihez kell igazodni |
+| egyedi fejlesztés | célzott testreszabhatóság | a közös alapfunkciókat is meg kell valósítani |
 
 ## Mit kell fejlesztőként látni?
 
@@ -96,6 +96,31 @@ Fejlesztőként gyakran ezekkel dolgozunk:
 - A jogosultságkezelést nem szabad lazán venni.
 - Nem minden projekthez CMS a legjobb választás.
 
+## Tartalommodell és szerkesztői folyamat
+
+Egy iskolai hírhez például `cím`, `bevezető`, `törzsszöveg`, `nyelv` és
+`publikálási állapot` tartozik. Ezek szerkeszthető mezők. A sablon dönti el,
+hogyan jelenjenek meg a honlapon; egy arculatváltás ezért nem kívánja meg
+az összes hír újraírását.
+
+Egy lehetséges munkafolyamat:
+
+1. A szerző piszkozatot hoz létre és képet csatol szöveges alternatívával.
+2. A szerkesztő az előnézetben ellenőrzi a tartalmat és a nyelvi változatot.
+3. A publikálásra jogosult személy közzéteszi. A mentés és a publikálás
+   ebben a folyamatban két külön lépés.
+4. Későbbi módosításkor a verzióelőzményből visszakereshető az előző szöveg.
+
+A TYPO3 Workspaces például ellenőrzési szakaszokat és verziózást ad ehhez.
+A szerkesztőnek nem kell adminisztrátori jog a bővítmények telepítéséhez.
+Mentéskor a tartalom mellett a médiát és a rendszer helyreállításához szükséges
+beállításokat is figyelembe vesszük.
+
+Hagyományos CMS-nél a rendszer a megjelenítést is kezelheti. Headless CMS-nél
+API-n adja a tartalmat külön frontendeknek. Egy CMS használhat fájlos tárolást
+is; az adatbázis a fenti tipikus felépítés része, nem a fogalom kötelező feltétele.
+Az egyedi fejlesztés és a CMS együtt is alkalmazható, például saját modul révén.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A CMS, vagyis Content Management System olyan rendszer,
@@ -105,13 +130,6 @@ Fejlesztőként gyakran ezekkel dolgozunk:
 > ugyanakkor bővíthető sablonokkal, modulokkal
 > és jogosultságkezeléssel.  
 > Tipikus felhasználása például vállalati weboldalak, blogok és portálok üzemeltetése.
-
-## Gyakori vizsgahibák
-
-- A CMS-t összekeverni a teljes weboldallal.
-- Azt mondani, hogy CMS-ben nincs szükség fejlesztőre.
-- Nem megemlíteni a jogosultságkezelést és bővíthetőséget.
-- A CMS-t kizárólag blogmotorként bemutatni.
 
 ## Gyors önellenőrzés
 
@@ -126,10 +144,15 @@ Fejlesztőként gyakran ezekkel dolgozunk:
 1. Tartalmak kezelése és publikálása
 2. Gyorsabb és könnyebben használható
 3. Admin felület, adatbázis, theme, plugin, jogosultságkezelés
-4. Kevésbé rugalmas, de gyorsabban bevezethető
+4. Kész tartalomkezelési alapot ad; az egyedi igényekhez konfiguráció vagy fejlesztés kellhet
 5. Instabilitás és biztonsági probléma
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [TYPO3: Workspaces](https://docs.typo3.org/c/typo3/cms-workspaces/main/en-us/): verziók és szerkesztői jóváhagyás.
+
 
 1. MDN - CMS  
    https://developer.mozilla.org/en-US/docs/Glossary/CMS  

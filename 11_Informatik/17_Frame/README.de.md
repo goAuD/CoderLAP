@@ -75,23 +75,45 @@ Daher ist häufig die Verwendung von `sandbox` und anderen einschränkenden Attr
 | `frameset` | das alte Rahmenaufteilungselement |
 | `iframe` | modernes Einbettungselement |
 
+## Einbetten mit minimalen Berechtigungen
+
+Dieser HTML-Ausschnitt lässt sich lokal öffnen und lädt keinen externen Dienst:
+
+```html
+<iframe
+  title="Isolierte Textvorschau"
+  sandbox
+  srcdoc="<p>Nur lesen</p>">
+</iframe>
+```
+
+Im Rahmen erscheint `Nur lesen`. `title` beschreibt den Zweck für assistive
+Technologien. `srcdoc` enthält hier festen Beispieltext. Für eingefügtes
+Benutzer-HTML ist zusätzlich eine sichere Inhaltsbehandlung erforderlich.
+Ein leeres `sandbox` aktiviert Einschränkungen, etwa das Verbot von Skripten
+und Formularübermittlung. Nur tatsächlich benötigte Fähigkeiten werden erlaubt.
+
+Die Kombination von `allow-scripts` und `allow-same-origin` kann bei Inhalten
+derselben Herkunft die Isolation unterlaufen. Der Server der eingebetteten
+Seite kann mit dem Header `Content-Security-Policy: frame-ancestors` festlegen,
+wer sie einbetten darf. Ein HTML-Attribut auf der einbettenden Seite kann diese
+Vorgabe nicht aufheben.
+
+Das frühere vollständige `frameset`-Layout wird durch CSS Grid/Flexbox und normale
+Navigation ersetzt. `iframe` dient zum Einbetten eines separaten Dokuments und
+ist kein allgemeiner Nachfolger der alten Seitenaufteilung. Bei externen
+Einbettungen prüfen wir außerdem Datenübertragung und Ladekosten.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Frame-Begriff bedeutete im alten HTML Seiten,
 > die in mehrere Rahmen aufgeteilt waren,
 > aber diese Lösung gilt heute als veraltet.  
-> Im modernen Web kann stattdessen das `iframe` verwendet werden,
+> Zum Einbetten eines anderen Dokuments kann im modernen Web das `iframe` verwendet werden,
 > mit dem ein anderes Dokument in die aktuelle Seite eingebettet werden kann.  
 > Das `iframe` kann zum Beispiel für Videos oder externe Dienste nützlich sein,
 > muss aber hinsichtlich Sicherheit
 > und Benutzbarkeit umsichtig eingesetzt werden.
-
-## Häufige Prüfungsfehler
-
-- Altes `frame` und modernes `iframe` verwechseln.
-- Behaupten, dass Frame heute noch eine empfohlene Grundseitenstruktur ist.
-- Die Veraltung nicht erwähnen.
-- Nicht über Sicherheitsaspekte sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -110,6 +132,12 @@ Daher ist häufig die Verwendung von `sandbox` und anderen einschränkenden Attr
 5. Video und Karte
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe): sandbox, srcdoc, Beschriftung und Herkunft.
+- [MDN: frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors): der Inhaltsserver kann Einbettung begrenzen.
+
 
 1. MDN - `<iframe>`: The Inline Frame element  
    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe  

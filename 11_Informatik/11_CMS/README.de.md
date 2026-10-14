@@ -72,8 +72,8 @@ Häufige Bereiche:
 
 | Lösung | Vorteil | Nachteil |
 |---|---|---|
-| CMS | schneller Start, leichtere Inhaltsverwaltung | eingeschränktere Flexibilität |
-| individuelle Entwicklung | volle Anpassbarkeit | teurere und langsamere Entwicklung |
+| CMS | schneller Start, leichtere Inhaltsverwaltung | Anpassung an die Möglichkeiten des gewählten Systems |
+| individuelle Entwicklung | gezielte Anpassbarkeit | gemeinsame Grundfunktionen müssen ebenfalls umgesetzt werden |
 
 ## Was muss man als Entwickler sehen?
 
@@ -96,6 +96,33 @@ Als Entwickler arbeiten wir häufig mit:
 - Die Rechteverwaltung darf nicht auf die leichte Schulter genommen werden.
 - Nicht für jedes Projekt ist ein CMS die beste Wahl.
 
+## Inhaltsmodell und redaktioneller Ablauf
+
+Eine Schulnachricht kann die Felder `Titel`, `Einleitung`, `Text`, `Sprache`
+und `Veröffentlichungsstatus` besitzen. Die Redaktion bearbeitet diese Inhalte.
+Das Template bestimmt ihre Darstellung. Ein neues Design erfordert deshalb
+nicht, jede Nachricht neu zu schreiben.
+
+Ein möglicher Ablauf:
+
+1. Die Autorin erstellt einen Entwurf und ergänzt ein Bild mit Textalternative.
+2. Die Redaktion prüft Inhalt und Sprachfassung in der Vorschau.
+3. Eine berechtigte Person veröffentlicht die Nachricht. Speichern und
+   Veröffentlichen sind in diesem Ablauf unterschiedliche Schritte.
+4. Bei späteren Änderungen lässt sich die frühere Fassung in der Versionshistorie
+   nachvollziehen.
+
+TYPO3 Workspaces bietet dafür beispielsweise Prüfungsstufen und Versionierung.
+Redakteure benötigen keine Administratorrechte zur Installation von Erweiterungen.
+Ein Backup berücksichtigt neben Inhalten auch Medien und die für eine
+Wiederherstellung erforderlichen Einstellungen.
+
+Ein herkömmliches CMS kann die Darstellung selbst übernehmen. Ein Headless-CMS
+stellt Inhalte über eine API für getrennte Frontends bereit. Ein CMS kann auch
+dateibasiert speichern; eine Datenbank ist Teil des oben gezeigten typischen
+Aufbaus, aber keine zwingende Begriffsbedingung. Individuelle Entwicklung und
+CMS können zusammenwirken, etwa in einem eigenen Modul.
+
 ## Prüfungstaugliche Formulierung
 
 > CMS, also Content Management System, ist ein System,
@@ -106,13 +133,6 @@ Als Entwickler arbeiten wir häufig mit:
 > und es gleichzeitig mit Templates, Modulen
 > und Rechteverwaltung erweiterbar ist.  
 > Typische Einsatzgebiete sind zum Beispiel Unternehmenswebseiten, Blogs und Portale.
-
-## Häufige Prüfungsfehler
-
-- CMS mit der gesamten Webseite verwechseln.
-- Behaupten, dass bei einem CMS kein Entwickler benötigt wird.
-- Rechteverwaltung und Erweiterbarkeit nicht erwähnen.
-- CMS ausschließlich als Blog-Engine darstellen.
 
 ## Schnelle Selbstkontrolle
 
@@ -127,10 +147,15 @@ Als Entwickler arbeiten wir häufig mit:
 1. Verwaltung und Veröffentlichung von Inhalten
 2. Schneller und einfacher nutzbar
 3. Admin-Oberfläche, Datenbank, Theme, Plugin, Rechteverwaltung
-4. Weniger flexibel, aber schneller einführbar
+4. Bietet fertige Inhaltsverwaltung; besondere Anforderungen können Konfiguration oder Entwicklung benötigen
 5. Instabilität und Sicherheitsprobleme
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [TYPO3: Workspaces](https://docs.typo3.org/c/typo3/cms-workspaces/main/en-us/): Versionierung und redaktionelle Freigabe.
+
 
 1. MDN - CMS  
    https://developer.mozilla.org/en-US/docs/Glossary/CMS  

@@ -33,10 +33,10 @@ jQuery machte dies lange Zeit viel einfacher.
 
 ## Wie sieht es heute aus?
 
-Aus Sicht von `2026. April 8.`:
+Stand: `14. Oktober 2026`.
 
-- aufgrund moderner Browser und Frameworks ist jQuery keine zentrale Technologie mehr
-- aber in vielen älteren Seiten und Unternehmenssystemen ist es noch vorhanden
+- moderne Browser lösen viele frühere jQuery-Aufgaben auch mit nativen APIs
+- jQuery ist weiterhin gepflegt und wird in bestehenden Websites und CMS eingesetzt
 
 ## Wann trifft man es noch an?
 
@@ -52,6 +52,43 @@ Aus Sicht von `2026. April 8.`:
 | JavaScript | Programmiersprache |
 | jQuery | JavaScript-Library |
 
+## Dieselbe Aufgabe mit jQuery und nativer DOM-API
+
+**Browserumgebung:** Das folgende HTML befindet sich bereits auf der Seite,
+JavaScript läuft danach. Die erste Lösung benötigt geladenes jQuery:
+
+```html
+<button id="ready" type="button">Bereit</button>
+<p id="status" role="status"></p>
+```
+
+```javascript
+$("#ready").on("click", () => {
+  $("#status").text("Die Übung kann beginnen.");
+});
+```
+
+Nach Aktivieren des Buttons lautet der Absatz `Die Übung kann beginnen.`.
+`$` wählt Elemente aus, `on` verbindet ein Ereignis und `text` setzt Text.
+Die getrennte Alternative ohne jQuery für dieselbe Aufgabe lautet:
+
+```javascript
+document.querySelector("#ready").addEventListener("click", () => {
+  document.querySelector("#status").textContent = "Die Übung kann beginnen.";
+});
+```
+
+Wir verwenden eine der beiden JavaScript-Varianten. Textdaten werden mit `text`
+oder `textContent` angezeigt, weil beide sie nicht als HTML interpretieren.
+Baut ein Projekt bereits auf jQuery und getesteten Plugins auf, kann deren
+Wartung sinnvoll sein. Für einen einzelnen solchen Button genügt auch die
+Browser-API ohne zusätzliche Abhängigkeit.
+
+**Stand 2026-10-14:** jQuery ist kein eingestelltes Projekt. Version 4.0.0 wurde
+offiziell am 17. Januar 2026 veröffentlicht. Bei einem Hauptversionswechsel
+prüfen wir Kompatibilität und Plugins. Die Existenz des Projekts bedeutet nicht,
+dass beliebige ältere Versionen sicher oder für jeden modernen Browser nötig sind.
+
 ## Prüfungstaugliche Formulierung
 
 > jQuery ist eine JavaScript-Library,
@@ -60,13 +97,6 @@ Aus Sicht von `2026. April 8.`:
 > Historisch spielte es eine sehr wichtige Rolle in der Webentwicklung,
 > besonders bei der Bewältigung browserübergreifender Kompatibilitätsprobleme.
 > Heute ist seine Rolle geringer, aber in alten Systemen und bei einfacheren Webaufgaben kommt es immer noch vor.
-
-## Häufige Prüfungsfehler
-
-- jQuery als Programmiersprache bezeichnen.
-- Die DOM- und Ajax-Rolle nicht erwähnen.
-- Behaupten, dass es heute noch die primäre Grundlage des modernen Frontends ist.
-- Nicht über seine historische Bedeutung sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -81,10 +111,16 @@ Aus Sicht von `2026. April 8.`:
 1. Eine JavaScript-Library
 2. Für DOM, Ereignisse, Ajax-Behandlung
 3. Weil es die browserübergreifende Webentwicklung vereinfachte
-4. Hauptsächlich in Legacy-Systemen wichtig
+4. Gepflegte Library; ihr Bedarf hängt vom Projekt und den verfügbaren nativen APIs ab
 5. JavaScript ist eine Sprache, jQuery eine darauf aufbauende Library
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [jQuery: 4.0.0 release](https://blog.jquery.com/2026/01/17/jquery-4-0-0/): Wartungsstatus und Hauptversionswechsel.
+- [jQuery: text()](https://api.jquery.com/text/): Textänderung im DOM.
+
 
 1. jQuery official site
    https://jquery.com/
@@ -96,8 +132,6 @@ Aus Sicht von `2026. April 8.`:
 
 3. Stack Overflow Developer Survey 2025 - Web frameworks and technologies
    https://survey.stackoverflow.co/2025/technology/
-   Verwendung: aktuelle Technologieübersicht,
-   die gut zeigt, dass jQuery heute eher eine ältere,
-   aber noch vorhandene Technologie ist.
+   Verwendung: historische Nutzungsumfrage von 2025; den heutigen Supportstatus prüfen wir anhand der offiziellen Veröffentlichung.
 
 Abgerufen: `2026-04-08`

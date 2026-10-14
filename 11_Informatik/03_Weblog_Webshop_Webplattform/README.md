@@ -76,6 +76,26 @@ Példa:
 | webshop | nem csak sima terméklista |
 | platform | nem minden weboldal platform |
 
+## Ugyanaz a termék, három különböző folyamat
+
+Egy könyvről szóló blogbejegyzésnél a szerkesztő megírja, jóváhagyja és
+közzéteszi a szöveget. A lényeg a tartalom életciklusa: piszkozat, publikált
+változat, későbbi frissítés.
+
+Egy könyvesbolt webshopjában a kosár még nem rendelés. A szerver a termékazonosító
+és a darabszám alapján ellenőrzi az aktuális árat és készletet. Ezután keletkezik
+a rendelés, amely például fizetésre váró, fizetett és feladott állapotokon halad
+át. A böngészőben átírt ár nem lehet a végleges fizetendő összeg forrása.
+
+Egy piactéren több eladó kínálhat könyvet. Itt eladói jogosultságok, külön
+ajánlatok és moderáció is kellhet: az egyik eladó nem módosíthatja a másik
+készletét. A közös webes felület mögött tehát eltérő üzleti szabályok állnak.
+
+A „webplatform” itt technikai, általános kifejezés. A DSA „online platform”
+jogi fogalma ennél meghatározottabb: többek között a felhasználó kérésére tárolt
+információ nyilvánossághoz közvetítésére épül. Egy oldal jogi besorolása ezért
+nem következik pusztán abból, hogy több felhasználója vagy funkciója van.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A weblog elsősorban tartalomközlésre szolgáló, bejegyzésalapú weboldal.  
@@ -84,13 +104,6 @@ Példa:
 > olyan webes rendszer,
 > amely több szereplőt, szolgáltatást vagy folyamatot kapcsol össze,
 > például piactér vagy tanulási platform formájában.
-
-## Gyakori vizsgahibák
-
-- A blogot egyszerű híroldallal automatikusan azonosítani.
-- A webshopot csak "katalógusnak" nevezni.
-- Minden nagyobb weboldalt platformnak mondani.
-- Nem különbséget tenni a tartalom-, kereskedelmi- és platformlogika között.
 
 ## Gyors önellenőrzés
 
@@ -110,6 +123,12 @@ Példa:
 
 ## Források
 
+Ellenőrizve: `2026-10-14`.
+
+- [OWASP: Business Logic Security](https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html): szerver által számított ár és üzleti állapotok.
+- [EUR-Lex: DSA, Artikel 3](https://eur-lex.europa.eu/eli/reg/2022/2065/oj): a jogi platformfogalom határai.
+
+
 1. WordPress.org - Blog Tool, Publishing Platform, and CMS  
    https://wordpress.org/  
    Használat: hivatalos, modern példa arra, hogy a blog és publishing platform hogyan jelenik meg a gyakorlatban.
@@ -120,8 +139,7 @@ Példa:
 
 3. EUR-Lex - Regulation (EU) 2022/2065 (Digital Services Act)  
    https://eur-lex.europa.eu/eli/reg/2022/2065/oj  
-   Használat: az "online platform" hivatalos EU-s fogalmi hátteréhez,
-   amikor a platform több felhasználót és szolgáltatást köt össze.
+   Használat: az online platform külön jogi fogalmához, különösen a 3. cikkhez.
 
 4. MDN - Site  
    https://developer.mozilla.org/docs/Glossary/Site  

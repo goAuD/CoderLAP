@@ -82,6 +82,31 @@ Daher ist es wichtig:
 - Die mobile Darstellung und die Leistung sollten nicht schwach sein.
 - Suchroboter sollten nicht versehentlich ausgesperrt werden.
 
+## Die Auffindbarkeit einer Themenseite prüfen
+
+Eine öffentliche Seite „JavaScript-Schleifen“ beantwortet zuerst die Frage der
+Lesenden mit einem verständlichen Beispiel. Anschließend prüfen wir die Technik:
+
+1. Die Seite ist unter einer funktionierenden URL mit erfolgreicher HTTP-Antwort
+   erreichbar.
+2. Titel und Hauptüberschrift benennen das Thema genau. Interne Links verwenden
+   aussagekräftige Texte wie „Kopfgesteuerte Schleifen“.
+3. Inhalt ist mobil und per Tastatur nutzbar. Bilder erhalten bei Bedarf
+   Textalternativen.
+4. Bei mehreren URLs mit gleichem Inhalt kann `rel="canonical"` die bevorzugte
+   Fassung angeben. Dies ist ein Signal an die Suchmaschine, keine Zugriffsregel
+   und keine in jedem Fall verbindliche Entscheidung.
+
+Eine Sitemap unterstützt das Entdecken von URLs, garantiert aber weder
+Indexierung noch bessere Platzierung. Eine tatsächlich fehlende Seite sollte
+`404` liefern, statt nur „nicht gefunden“ mit einer erfolgreichen `200`-Antwort
+anzuzeigen. Google verwendet das `keywords`-Metaelement nicht als Rankingsignal.
+
+Bei einer bewusst zugangsgeschützten Lernoberfläche ist die Auffindbarkeit
+privater Materialien dagegen nicht das Ziel. Zunächst entscheiden wir, welche
+Seiten öffentlich sein sollen, und richten danach die Indexierung aus. SEO ist
+kein Grund, eine benötigte Zugriffskontrolle abzuschalten.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Ziel von SEO ist,
@@ -90,14 +115,6 @@ Daher ist es wichtig:
 > Zu den wichtigen Maßnahmen gehören qualitativ hochwertiger Inhalt,
 > korrekte HTML-Struktur, eindeutige Titel, schnelle Ladezeit,
 > mobilfreundliche Gestaltung und logische interne Verlinkung.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, SEO sei nur Keyword-Platzierung.
-- SEO mit bezahlter Werbung verwechseln.
-- Die Meta-Description als Ranking-Garantie betrachten.
-- Die technische Seite nicht erwähnen.
-- "Tricksen" als gutes SEO bezeichnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -116,6 +133,12 @@ Daher ist es wichtig:
 5. Weil auch die Inhaltsqualität und die technische Umsetzung zählen
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Google: SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide): Inhalt und technische Grundlagen.
+- [Google: Special tags](https://developers.google.com/search/docs/crawling-indexing/special-tags): unterstützte Metadaten und keywords.
+
 
 1. Google Search Central - SEO Starter Guide  
    https://developers.google.com/search/docs/fundamentals/seo-starter-guide  

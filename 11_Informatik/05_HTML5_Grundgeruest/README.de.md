@@ -8,10 +8,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Seitentitel</title>
+    <title>Lernwerkstatt</title>
   </head>
   <body>
-    Inhalt
+    Willkommen!
   </body>
 </html>
 ```
@@ -86,6 +86,37 @@ Wichtig:
 | `title` | Seitentitel, nicht identisch mit der Hauptüberschrift (`h1`) |
 | `doctype` | Dokumenttyp-Deklaration, nicht der Inhalt selbst |
 
+## Vom Gerüst zur aufrufbaren Seite
+
+Das obige Gerüst verwendet in beiden Sprachfassungen deutsche Beispielinhalte.
+Daher passt `lang="de"`. Bei ungarischem Inhalt wird auch die Sprachangabe auf
+`hu` geändert. Dies ist etwa für die Aussprache eines Screenreaders wichtig.
+
+Ersetzen wir den Inhalt von `body` durch folgenden HTML-Ausschnitt und speichern
+das vollständige Dokument als UTF-8-Datei `index.html`. Es lässt sich direkt im
+Browser öffnen:
+
+```html
+<main>
+  <h1>Lernwerkstatt</h1>
+  <section aria-labelledby="loops-title">
+    <h2 id="loops-title">Schleifen</h2>
+    <p>Eine Schleife wiederholt Anweisungen.</p>
+  </section>
+</main>
+```
+
+Der Browsertab heißt `Lernwerkstatt`. Im Dokument erscheinen die Hauptüberschrift
+`Lernwerkstatt`, darunter der Abschnitt `Schleifen` und ein Satz. Die beiden
+Titel sind unterschiedliche Elemente und können unabhängig geändert werden.
+`main` kennzeichnet den Hauptinhalt. Überschriften beschreiben die Gliederung
+und nicht nur eine Schriftgröße.
+
+Die Viewport-Einstellung schafft die Grundlage für mobile Größenverhältnisse;
+das flexible Layout liefert anschließend CSS. Manuelles Zoomen bleibt möglich.
+„HTML5“ ist die Bezeichnung im Prüfungskatalog. Die laufend gepflegte
+Spezifikation heißt HTML Living Standard.
+
 ## Prüfungstaugliche Formulierung
 
 > Das HTML5-Grundgerüst ist eine standardkonforme Dokumentstruktur,
@@ -94,13 +125,6 @@ Wichtig:
 > die Viewport-Einstellung und den Titel,
 > während der `body` den für den Benutzer sichtbaren Inhalt enthält.  
 > Das korrekte Grundgerüst unterstützt standardkonformes Verhalten, mobile Darstellung und Wartbarkeit.
-
-## Häufige Prüfungsfehler
-
-- Das `title`-Element in den `body`-Teil setzen.
-- Glauben, dass `title` dasselbe wie die Hauptüberschrift (`h1`) ist.
-- Den `doctype` weglassen.
-- Bei einer modernen Seite kein `charset`- oder `viewport`-Meta-Element verwenden.
 
 ## Schnelle Selbstkontrolle
 
@@ -119,6 +143,11 @@ Wichtig:
 5. Zur Unterstützung der mobilen und responsiven Darstellung
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [WHATWG: HTML Standard](https://html.spec.whatwg.org/): Dokumentstruktur und aktueller HTML-Standard.
+
 
 1. MDN - Doctype  
    https://developer.mozilla.org/en-US/docs/Glossary/Doctype  

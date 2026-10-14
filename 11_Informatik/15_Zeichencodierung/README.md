@@ -83,6 +83,45 @@ Ha a mentés és a beolvasás nem ugyanazzal a kódolással történik, hibás e
 - Régi rendszereknél keveredhetnek a legacy kódolások.
 - Adatcsere és import/export során különösen fontos a helyes kódolás.
 
+## Karakter, kódegység és bájt: háromféle hossz
+
+**Feladat:** kódoljuk az `Aő🙂` szöveget UTF-8 bájtokra, majd olvassuk vissza.
+A példa mai Node.js-ben és böngészőkonzolban is fut:
+
+<!-- example:run -->
+
+```javascript
+const text = "Aő🙂";
+const bytes = new TextEncoder().encode(text);
+console.log(text.length, [...text].length, bytes.length);
+console.log([...bytes].map((byte) => byte.toString(16).padStart(2, "0")).join(" "));
+console.log(new TextDecoder("utf-8", { fatal: true }).decode(bytes));
+console.log("é" === "é");
+console.log("é" === "é".normalize("NFC"));
+```
+
+```text
+4 3 7
+41 c5 91 f0 9f 99 82
+Aő🙂
+false
+true
+```
+
+A szöveg három Unicode-kódpontból áll. A JavaScript `length` viszont UTF-16
+kódegységeket számol: az emoji kettőt használ, ezért az eredmény `4`.
+UTF-8-ban `A` egy bájt, `ő` kettő, az emoji négy, összesen `7`.
+A `TextEncoder` UTF-8-at készít, a dekóder ebből visszaállítja a szöveget.
+A `fatal: true` hibás bemeneti bájtok esetén kivételt kér helyettesítő jel helyett.
+
+Az `é` egyetlen kódpontként és `e` plusz kombináló ékezettel is leírható.
+Az utolsó két sor azt mutatja, hogy a nyers sztringek különbözhetnek, miközben
+NFC-normalizálás után egyeznek. A felhasználó által látott jelek száma még
+a kódpontok számától is eltérhet, például összetett emojinál.
+
+A font ettől külön kérdés: helyes bájtok mellett is megjelenhet hiányzó jel,
+ha a betűkészlet nem tartalmazza. Ilyenkor nem karakterkódolás-cserével javítunk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A karakterkódolás azt határozza meg, hogyan reprezentáljuk a szöveg karaktereit bájtok formájában.  
@@ -90,13 +129,6 @@ Ha a mentés és a beolvasás nem ugyanazzal a kódolással történik, hibás e
 > mert sok nyelv karaktereit képes egységesen kezelni,
 > és elkerülhető vele a hibás karaktermegjelenítés.  
 > A hibás kódolás tipikus következménye a torz vagy olvashatatlan szöveg.
-
-## Gyakori vizsgahibák
-
-- A Unicode-ot és a UTF-8-at ugyanannak nevezni.
-- Azt mondani, hogy az ASCII minden szövegre elég.
-- Nem megemlíteni, hogy a kódolás bájtértelmezési szabály.
-- Elfelejteni a webes `charset` megadást.
 
 ## Gyors önellenőrzés
 
@@ -115,6 +147,13 @@ Ha a mentés és a beolvasás nem ugyanazzal a kódolással történik, hibás e
 5. `<meta charset="utf-8" />`
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder): UTF-8 bájtok előállítása.
+- [WHATWG: Encoding](https://encoding.spec.whatwg.org/): dekódolás és hibakezelés.
+- [MDN: String.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize): Unicode-normalizálás.
+
 
 1. MDN - Character encoding  
    https://developer.mozilla.org/en-US/docs/Glossary/Character_encoding  

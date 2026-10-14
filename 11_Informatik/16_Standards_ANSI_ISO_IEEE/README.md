@@ -31,7 +31,7 @@ Az ANSI az amerikai nemzeti szabványosítási rendszer fontos koordináló szer
 
 Fontos pontosítás:
 
-- az ANSI nem minden szabványt maga ír meg
+- az ANSI nem maga fejleszti a szabványokat
 - inkább a szabványosítási folyamatokat és jóváhagyási kereteket koordinálja
 
 ## Mi az ISO szerepe?
@@ -72,6 +72,40 @@ Például az `IEEE 802` család a hálózati technológiák világában nagyon f
 - egyértelműbb dokumentáció és kommunikáció alakul ki
 - a minőségbiztosítás és tesztelés is szabványokra támaszkodhat
 
+## Konkrét szabványt kössünk konkrét feladathoz
+
+Az `IEEE 802.3` az Ethernethez, az `IEEE 802.11` a vezeték nélküli helyi
+hálózatokhoz kapcsolódik. Az `IEEE 754` lebegőpontos számábrázolást és műveleteket
+határoz meg. Utóbbi fejlesztőként közvetlenül is látható: a JavaScript `Number`
+64 bites, kettős pontosságú bináris lebegőpontos érték.
+
+Node.js-ben futtatható megfigyelés:
+
+<!-- example:run -->
+
+```javascript
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 === 0.3);
+console.log(10 + 20 === 30);
+```
+
+```text
+0.30000000000000004
+false
+true
+```
+
+A `0.1` és `0.2` nem ábrázolható pontosan véges bináris törtként, így a tárolás
+és az összeadás kerekítéssel jár. Ez az ábrázolás következménye. A kis egész
+centértékek összege ezzel szemben pontos; nagy értékeknél az egészszám-pontosság
+határára is figyelni kell. A megjelenítés kerekítése nem változtatja meg
+visszamenőleg a számítás matematikáját.
+
+Egy specifikációra hivatkozva megadjuk az azonosítóját, kiadását és az érintett
+követelményt. A „szabványos” önmagában nem elég pontos elfogadási feltétel.
+Külön fogalom a szabvány kiadása, a megfelelőség vizsgálata és a tanúsítás.
+Az ISO szabványokat fejleszt, de maga nem végzi a szervezetek tanúsítását.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az ANSI, ISO és IEEE a szabványosítás világának fontos szereplői.  
@@ -82,13 +116,6 @@ Például az `IEEE 802` család a hálózati technológiák világában nagyon f
 > az ISO nemzetközi szabványokat ad ki,
 > az IEEE pedig különösen jelentős
 > a műszaki és informatikai szabványok területén.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy az ANSI, ISO és IEEE konkrét termékek.
-- Nem különválasztani a szervezetet és a szabványt.
-- Nem megemlíteni, hogy a szabványok az interoperabilitást segítik.
-- Az IEEE-t kizárólag hardverre leszűkíteni.
 
 ## Gyors önellenőrzés
 
@@ -107,6 +134,15 @@ Például az `IEEE 802` család a hálózati technológiák világában nagyon f
 5. A szervezet létrehozza vagy koordinálja, a szabvány maga az előírás
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [ANSI: Standards FAQs](https://www.ansi.org/standards-faqs): az ANSI koordinál és jóváhagy, nem szabványfejlesztő.
+- [IEEE 802.3](https://www.ieee802.org/3/): Ethernet szabványosítása.
+- [IEEE 802.11](https://www.ieee802.org/11/): WLAN szabványosítása.
+- [MDN: Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number): IEEE754 és számpontosság.
+- [ISO: Certification](https://www.iso.org/certification.html): szabvány és tanúsítás elkülönítése.
+
 
 1. ANSI - Introduction to American National Standards process by ANSI  
    https://www.ansi.org/american-national-standards/ans-introduction/overview  
