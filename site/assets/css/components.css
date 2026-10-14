@@ -255,7 +255,7 @@ a.lang-switcher__item:focus-visible {
 
 @media screen and (prefers-reduced-motion: no-preference) {
   .coder-tool--featured {
-    animation: quiz-border-orbit 8s linear infinite;
+    animation: quiz-border-orbit 6s linear infinite;
   }
   .coder-tool--featured:is(:hover, :focus-visible) {
     animation-play-state: paused;
