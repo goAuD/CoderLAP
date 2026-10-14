@@ -7,23 +7,24 @@ nem új funkciók vagy infrastruktúra elkészültének igazolása.
 
 ## Aktuális prioritás, 2026-10-14
 
-A mai kör első feladata a távoli ágak és függőségfrissítések rendezése,
-utána mind a 235 CoderLAP-téma tartalmi ellenőrzése, javítása és indokolt
-bővítése mindkét nyelven. A részletes állapotot a
-[tartalmi felülvizsgálat](2026-10-14-content-review.md) követi.
-A Quiz következő tartalmi köre ezután következik.
+A távoli ágak rendezése és mind a 235 CoderLAP-téma kétnyelvű felülvizsgálata
+elkészült; a `v0.4.0-reviewed-content` kiadás éles. A részletes állapotot a
+[tartalmi felülvizsgálat](2026-10-14-content-review.md) követi. A következő kör
+a Quiz csomagválasztója, a friss LAP-forrással egyeztetett kérdések és a védett
+indulás a `quiz.coderlap.com` címen.
 
 A SkillDisplay és a tanári válaszra épülő egyeztetés **szünetel**:
 2026-10-14-ig nem érkezett válasz. A korábbi kérdésvázlat megmarad;
-a tananyag fejlesztése ettől függetlenül halad. A meghívásos belépés és
-a DNS beállítása a tartalmi kör után folytatható, nincs most infraátállás.
+a tananyag fejlesztése ettől függetlenül halad. Viktor 2026-10-14-én
+engedélyezte a Quiz átmeneti Basic Auth indulását. A közös meghívásos
+belépés későbbi, külön feladat; az induláshoz nem készül fiók vagy adatbázis.
 
 ## Elfogadott irány és a következő kis lépés
 
-- Az új Quiz/Coaster DNS-rekordok beállításával várunk a belépési próba és
-  az élesítési terv elkészültéig. Ha a próba HTTPS-hostnevet igényel, azt külön
-  tesztcélként kezeljük; ez nem a tanulói szolgáltatás éles megnyitása.
-- Meghívásos hozzáféréssel indulunk. A meghívás, fiókaktiválás, helyreállítás
+- A Quiz DNS-, TLS- és Caddy-beállítása most előkészíthető a jóváhagyott,
+  átmeneti Basic Auth induláshoz. A LAP eszközlinkje csak a működő, védett
+  Quiz ellenőrzése után aktiválható; a Coaster külön kiadási lépés marad.
+- A későbbi közös belépés meghívásos lesz. A meghívás, fiókaktiválás, helyreállítás
   és visszavonás konkrét folyamata még tervezendő; az Authelia továbbra is
   jelölt, nem elfogadott vagy már elkészült meghívórendszer.
 - Az alkalmazások és adataik saját üzemeltetésű tárhelyre kerülnek.
@@ -37,9 +38,9 @@ a DNS beállítása a tartalmi kör után folytatható, nincs most infraátáll�
   a kapacitást a többi szolgáltatással együtt mérjük fel. A streamapp és a
   tervezett személyes Nextcloud külön projekt, itt nem módosítjuk őket.
 
-A tartalmi kör után a meghívásos belépés és az adatfolyam rövid tervével
-folytathatjuk, utána két tesztfiókkal próbálhatjuk ki. A szerveres
-haladásszinkron későbbi lépés.
+A meghívásos belépéshez később előbb rövid adatfolyamterv, majd két
+tesztfiókos próba készül. A szerveres haladásszinkron szintén későbbi lépés.
+Az átmeneti Basic Auth nem ad közös munkamenetet a külön webcímekhez.
 
 ## Korábbi ellenőrzött kiinduló állapot, 2026-09-30
 
@@ -71,7 +72,7 @@ rögzíti. Kiadás előtt továbbra is friss fetch és diff kell.
 
 | Sorrend | Feladat | Repo | Késznek tekintjük, ha… |
 | --- | --- | --- | --- |
-| 0 | Közös belépés és adatkezelés megtervezése | közös infrastruktúra + LAP | Üzemeltető, felhasználói kör, választott belépés, adatfolyam, megőrzés és visszaállítás tisztázott; még nincs éles fiókmigráció. |
+| 0 | Későbbi közös belépés és adatkezelés megtervezése | közös infrastruktúra + LAP | Üzemeltető, felhasználói kör, választott belépés, adatfolyam, megőrzés és visszaállítás tisztázott; még nincs éles fiókmigráció. |
 | 1 | Publikálható Quiz-kezdőlap és statikus csomag | Quiz | A LAP-programozási kérdések normál indítással elérhetők, külön Python-előnézeti trükk nélkül; a régi mentések nem keverednek az új bankkal. |
 | 2 | Védett Quiz/Coaster élesítés és keresztlinkek | mindhárom | DNS, TLS, szerverútvonal, belépés, visszaállítás és mobilos elérés ellenőrzött; csak ezután élnek a LAP eszközlinkjei. |
 | 3 | Főoldali haladásjelölés és állapotszűrő | LAP | Egy téma a kártyán jelölhető és visszaállítható; a számlálók és a témaoldal azonos mentést használnak. |
@@ -79,8 +80,9 @@ rögzíti. Kiadás előtt továbbra is friss fetch és diff kell.
 | 5 | Következő tananyagrész és vegyes gyakorlás | Quiz | A következő főtéma kis, forrásolt DE/HU adagokban ellenőrzött; a témák csoportosítása pontosan tisztázott. |
 | 6 | Öt tanulási célból álló SkillDisplay-próba | LAP + tanári egyeztetés | Aktív készségazonosítók, tanulási célok és igazolási szerepek tisztázottak; első körben csak hivatkozások készülnek. |
 
-A 0. feladatot az élesítés előtt lezárjuk; az 1. feladat közben is végezhető.
-Ha az infra döntésre vár, a 3. feladat külön ágon haladhat. A tanári kérdések
+A Quiz átmeneti Basic Auth indulásához most az 1–2. feladat szükséges.
+A 0. feladat a későbbi fiókrendszer bevezetésének előfeltétele.
+Ha az infra ellenőrzésre vár, a 3. feladat külön ágon haladhat. A tanári kérdések
 összegyűjtése közben is végezhető; a SkillDisplay-integráció nem feltétele a helyi tanulásnak.
 
 ### 0. Közös belépés és későbbi szerveres mentés
@@ -119,7 +121,7 @@ az inaktivitás miatti szüneteltetés nem az SQL-adatbázis általános tulajdo
   kijelentkezést, lejáratot, visszavont hozzáférést és iPhone-os működést.
   A kapu kihagyásával az origin vagy az API ne legyen elérhető; a szolgáltatás
   kiesése se tegye nyilvánossá a védett tartalmat. Legyen kipróbált visszaállítás.
-- [x] Elfogadott indulási elv: csak meghívott fiókok; a tanulási haladás
+- [x] Elfogadott elv a későbbi fiókrendszerhez: csak meghívott fiókok; a tanulási haladás
   továbbra is helyi. A belépés nem indít automatikus eredményfeltöltést.
   Ez követelmény, a fiókrendszer még nincs megvalósítva.
 - [ ] Későbbi API esetén a felhasználói azonosságot a szerver hitelesítse;
@@ -160,16 +162,16 @@ Ellenőrzött források, 2026-09-30:
 
 ### 1–2. Publikálás
 
-- [ ] Ajánlott Quiz-belépési pont: a három jóváhagyott programozási rész
+- [ ] Quiz-belépési pont: a LAP-alapú kérdéscsomagok
   egyértelmű elérése közös kezdőlapról. A végleges navigációt kis előnézetben
   ellenőrizzük. A régi DSGVO-bankot és a meglévő böngészős mentéseket őrizzük meg.
 - [ ] Ellenőrizzük, mi kerül a webgyökérbe: csak szükséges statikus fájlok,
   ne teljes repó, `.git`, helyi jegyzet vagy fejlesztői szerver.
-- [ ] Célként javasolt `quiz.coderlap.com` és `coaster.coderlap.com`; ellenőrizzük
-  a tényleges DNS-rekordokat és a meglévő Debian/Caddy kapacitást, beállításokat.
-- [ ] Belépési döntés a 0. lépés alapján, telepítés előtt. A cél a közös
-  belépés; azonos Basic Auth-jelszó nem jelent automatikusan egy munkamenetet.
-  A végleges auth-megoldás még nincs kiválasztva vagy telepítve.
+- [ ] A Quiz célcíme `quiz.coderlap.com`; ellenőrizzük a tényleges DNS-t és a
+  Debian/Caddy beállításokat. A `coaster.coderlap.com` külön indulás marad.
+- [x] Átmeneti Quiz-belépési döntés: HTTP Basic Auth, alkalmazásfiók és
+  szerveres eredménytárolás nélkül. Azonos Basic Auth-jelszó nem jelent közös
+  munkamenetet. A későbbi közös auth-megoldás még nincs kiválasztva vagy telepítve.
 - [ ] Ellenőrizzük a TLS-t, a védett elérést, a kiadási/rollback útvonalat és
   mindkét app telefonos működését. A Coaster külső segédscriptjeit külön vegyük
   számba; teljes offline működést ne ígérjünk ellenőrzés nélkül.
