@@ -25,8 +25,8 @@ class BuildSettings:
     legal_content_dir: Path
     languages: tuple[LanguageConfig, ...] = ()
     default_lang: str = "de"
-    # Set only after the protected Quiz deployment has been verified.
-    quiz_url: str = ""
+    # Shared destination for the verified, protected Quiz deployment.
+    quiz_url: str = "https://quiz.coderlap.com/"
 
     @classmethod
     def from_repo_root(cls, repo_root: Path) -> "BuildSettings":
