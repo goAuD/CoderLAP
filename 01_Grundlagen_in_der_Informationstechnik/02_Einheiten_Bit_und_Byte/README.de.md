@@ -5,7 +5,7 @@
 | Einheit  | Bezeichnung | Bedeutung      | Mögliche Werte |
 | -------- | ----------- | -------------- | -------------- |
 | **Bit**  | `b`         | 1 Binärziffer  | `0` oder `1`   |
-| **Byte** | `B`         | 8 Bit zusammen | `0-255`        |
+| **Byte** | `B`         | 8 Bit zusammen | `0-255` ohne Vorzeichen        |
 
 ### Zusammenhang
 
@@ -93,7 +93,7 @@ Wer den Unterschied zwischen Bit und Byte versteht, versteht leichter:
 Diese werden in der Regel in **Byte** gemessen:
 
 - `25 B`
-- `4 KB`
+- `4 kB`
 - `12 MB`
 - `256 GB`
 
@@ -172,6 +172,32 @@ Bei Prüfungen wird das sehr oft verwechselt.
 - Nicht jedes Zeichen passt in 1 Byte.
 - Die größeren Einheiten (`KB`, `MB`, `GB` bzw. `KiB`, `MiB`, `GiB`) gehören zu einem eigenen Themenbereich.
 
+## Durchgerechnetes Beispiel: Datenmenge und Übertragungszeit
+
+Eine Datei mit `24 MB` wird mit einer Nutzdatenrate von `12 Mbit/s` übertragen.
+Beide Präfixe sind dezimal; die Einheiten lassen sich daher direkt umrechnen.
+
+1. Byte in Bit: `24 MB × 8 = 192 Mbit`.
+2. Zeit: `192 Mbit / 12 Mbit/s = 16 s`.
+3. Gegenprobe: `12 Mbit/s × 16 s / 8 = 24 MB`.
+
+Die Formel lautet: **Zeit = Datenmenge / Datenrate**, jeweils mit passenden Einheiten.
+Sind 12 Mbit/s nur die nominelle Leitungsgeschwindigkeit, kann die tatsächliche Dauer
+wegen Protokoll-Overhead, anderem Datenverkehr und Schwankungen länger sein.
+Dann ist das Ergebnis eine ideale untere Abschätzung und keine garantierte Downloadzeit.
+
+### Ein Bitmuster interpretieren
+
+Ein Byte liefert immer 256 verschiedene Bitmuster. Der Datentyp legt deren Bedeutung fest:
+vorzeichenlos liegt der Bereich bei `0…255`, als 8-Bit-Ganzzahl im Zweierkomplement bei `−128…127`.
+`11111111` bedeutet daher vorzeichenlos `255`, im Zweierkomplement dagegen `−1`.
+Dieselben Bits können auch Teil eines Zeichencodes oder eines Farbkanals sein.
+
+**Übung:** Wie viel sind `80 Mbit/s` in `MB/s`? Die Antwort ist `10 MB/s`,
+weil wir beim Umrechnen von Bit in Byte durch acht teilen. Das Präfix ist hier gleich.
+
+Quelle zu den Einheiten: [NIST: dezimale und binäre Präfixe](https://physics.nist.gov/cuu/Units/binary.html).
+
 ## Prüfungstaugliche Formulierung
 
 > Das Bit ist die kleinste Einheit der digitalen Information, sein Wert kann 0 oder 1 sein.  
@@ -180,14 +206,6 @@ Bei Prüfungen wird das sehr oft verwechselt.
 > verwendet, während Bits häufig bei Datenübertragungsgeschwindigkeiten
 > vorkommen.  
 > Ein wichtiger Unterschied ist, dass `b` für Bit und `B` für Byte steht.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass Bit und Byte dasselbe sind.
-- Zu vergessen, dass `1 Byte = 8 Bit`.
-- Die Bezeichnungen `b` und `B` zu verwechseln.
-- Zu behaupten, dass jedes Zeichen immer 1 Byte ist.
-- Dieses Thema mit den Themen `KB / MB / GB` und `KiB / MiB / GiB` zu vermischen.
 
 ## Schnelle Selbstkontrolle
 
@@ -214,7 +232,7 @@ Bei Prüfungen wird das sehr oft verwechselt.
    Verwendung: technische Verwendung der Bezeichnung `Byte` und `B`.
 
 2. NIST - Definitions of the SI units: The binary prefixes  
-   https://physics.nist.gov/cgi-bin/cuu/Info/Units/binary.html  
+   https://physics.nist.gov/cuu/Units/binary.html  
    Verwendung: klare Trennung von dezimalen und binären Datengrößen.
 
 3. MDN Web Docs - UTF-8  

@@ -132,6 +132,25 @@ Teljesebb lánc:
 - `1 PiB = 2^50 B`
 - `1 EiB = 2^60 B`
 
+## Kidolgozott példa: ugyanaz a lemez két egységben
+
+Egy `1 TB` névleges kapacitású lemez `1 000 000 000 000 B` adatot jelent.
+GiB-ra váltáskor a byte-ok számát osztjuk egy GiB méretével:
+
+`1 000 000 000 000 / 1 073 741 824 ≈ 931,32 GiB`.
+
+A `1000 GB` és a körülbelül `931,32 GiB` ugyanaz a kapacitás. A számításban semmi
+nem veszett el. A partíciós adatok, a fájlrendszer és a fenntartott terület viszont
+ténylegesen csökkenthetik a felhasználható szabad helyet; ez külön hatás.
+Az operációs rendszer által kiírt szám mellé az alkalmazott egységet is ellenőrizzük.
+
+**Második feladat:** egy `8 GiB` keretbe hány `512 MiB` adatblokk fér?
+Először `8 GiB = 8192 MiB`, majd `8192 / 512 = 16`.
+Ez a megadott keretre, többletfoglalás nélkül igaz. Egy program teljes memóriaigénye
+az adatok mellett például objektumleírókat és futtatókörnyezetet is tartalmazhat.
+
+Forrás: [NIST: a bináris előtagok meghatározása](https://physics.nist.gov/cuu/Units/binary.html).
+
 ## Vizsgán jól használható megfogalmazás
 
 > A gibibyte, tebibyte, pebibyte és exbibyte bináris adatméret-egységek.  
@@ -139,14 +158,6 @@ Teljesebb lánc:
 > 1 GiB = 2^30 byte, 1 TiB = 2^40 byte.  
 > A GiB, TiB, PiB és EiB nem azonos a GB, TB, PB és EB decimális egységekkel.  
 > A bináris prefixeket azért vezették be, hogy egyértelmű legyen a 1000-es és 1024-es alapú számítás közti különbség.
-
-## Gyakori vizsgahibák
-
-- A `GiB` és `GB` felcserélése.
-- Azt mondani, hogy `1 GiB = 1 000 000 000 byte`.
-- Elfelejteni, hogy a bináris lépés `1024`, nem `1000`.
-- Nem tudni, miért van `i` a jelölésben.
-- Azt hinni, hogy a bináris prefixek SI-prefixek.
 
 ## Gyors önellenőrzés
 
@@ -167,7 +178,7 @@ Teljesebb lánc:
 ## Források
 
 1. NIST - Definitions of the SI units: The binary prefixes  
-   https://physics.nist.gov/cgi-bin/cuu/Info/Units/binary.html  
+   https://physics.nist.gov/cuu/Units/binary.html  
    Használat: a bináris prefixek hivatalos definíciója és összehasonlítása az SI-prefixekkel.
 
 2. NIST CSRC Glossary - gibibyte  

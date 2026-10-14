@@ -38,7 +38,7 @@ Methode:
 - jeden Stellenwert mit der entsprechenden Potenz von `2` multiplizieren
 - die Ergebnisse addieren
 
-### Beispiel: Dezimal zu Binär
+### Beispiel: Binär zu Dezimal
 
 `101101₂`
 
@@ -67,7 +67,7 @@ Methode:
 - die Reste notieren
 - die Reste von unten nach oben lesen
 
-### Beispiel: Binär zu Hexadezimal
+### Beispiel: Dezimal zu Binär
 
 `45₁₀`
 
@@ -96,7 +96,7 @@ Methode:
 - bei Bedarf links mit Nullen auffüllen
 - jede `4-Bit-Gruppe` durch eine Hexadezimalziffer ersetzen
 
-### Beispiel: Hexadezimal zu Binär
+### Beispiel: Binär zu Hexadezimal
 
 `1101111010₂`
 
@@ -120,7 +120,7 @@ Methode:
 
 - jede Hexadezimalziffer durch die entsprechende `4-Bit-Binärform` ersetzen
 
-### Beispiel: Dezimal zu Hexadezimal
+### Beispiel: Hexadezimal zu Binär
 
 `7B₁₆`
 
@@ -141,7 +141,7 @@ Methode:
 - Reste notieren
 - die Reste von unten nach oben lesen
 
-### Beispiel: Hexadezimal zu Dezimal
+### Beispiel: Dezimal zu Hexadezimal
 
 `123₁₀`
 
@@ -169,7 +169,7 @@ Methode:
 - die Ziffern mit den entsprechenden Potenzen von `16` multiplizieren
 - das Ergebnis addieren
 
-### Beispiel
+### Beispiel: Hexadezimal zu Dezimal
 
 `2F₁₆`
 
@@ -206,6 +206,43 @@ Daher ist bei:
 
 die hexadezimale Darstellung sehr praktisch.
 
+## Gegenprobe durch Rückumwandlung
+
+Eine Handrechnung lässt sich durch Umrechnen in die Gegenrichtung prüfen.
+Das eigenständige JavaScript interpretiert den Hexadezimaltext `2F` als Zahl
+und zeigt denselben Wert anschließend in drei Zahlensystemen an.
+
+<!-- example:run -->
+```javascript
+const value = Number.parseInt("2F", 16);
+console.log(value);
+console.log(value.toString(2).padStart(8, "0"));
+console.log(value.toString(16).toUpperCase());
+console.log(Number.parseInt("00101111", 2) === value);
+```
+
+Erwartete Ausgabe:
+
+```text
+47
+00101111
+2F
+true
+```
+
+`padStart` ergänzt führende Nullen für die Anzeige und verändert den Wert nicht.
+Zur Kontrolle ergeben sowohl `32 + 8 + 4 + 2 + 1 = 47` als auch `2 × 16 + 15 = 47`
+dasselbe Ergebnis. Die Null ist in jedem Zahlensystem `0`; bei der Divisionsmethode
+geben wir sie gesondert aus, weil kein Schritt mit positivem Quotienten notwendig ist.
+
+Das Beispiel verwendet eine geprüfte Konstante. Bei Benutzereingaben ist `parseInt`
+allein keine vollständige Eingabeprüfung: Es kann am ersten ungültigen Zeichen stoppen
+und beispielsweise den Anfang von `"2Fxyz"` trotzdem auswerten. Zulässige Ziffern
+im gesamten Text und den benötigten Wertebereich prüfen wir deshalb zusätzlich.
+
+Quellen: [MDN: parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+und [Number.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
+
 ## Prüfungstaugliche Formulierung
 
 > Die Umwandlung zwischen Binär-, Dezimal- und Hexadezimalzahlen basiert auf dem Stellenwertsystem.  
@@ -213,14 +250,6 @@ die hexadezimale Darstellung sehr praktisch.
 > von Dezimal nach Binär teilt man durch 2
 > und liest die Reste rückwärts.  
 > Zwischen Hexadezimal und Binär ist die Umwandlung besonders einfach, weil eine Hexadezimalziffer genau 4 Bit entspricht.
-
-## Häufige Prüfungsfehler
-
-- Die Reste bei der Divisionsmethode in der falschen Richtung zu lesen.
-- Zu vergessen, dass `A-F` den Werten `10-15` entsprechen.
-- Binärzahlen nicht von links nach rechts, sondern mit falschen Stellenwerten zu interpretieren.
-- Die Binärzahl nicht in `4-Bit-Blöcke` aufzuteilen, bevor man sie hexadezimal umwandelt.
-- Die `0`-Stellenwerte bei der Berechnung auszulassen.
 
 ## Schnelle Selbstkontrolle
 
