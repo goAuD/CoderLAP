@@ -69,20 +69,20 @@ Jegyezd fel:
 - irreális ígéretek
 - bizonytalan kommunikáció
 
+## Panaszból követhető ügy
+
+Az ügyfél szerint egy frissítés után eltűnt a heti kimutatás. Először visszafogalmazzuk a hatást: „Így most nem tudja elkészíteni a heti elszámolást.” Elkérjük az érintett időszakot és a hiba pontos körülményeit, majd ügyazonosítót és következő visszajelzési időpontot adunk. A vizsgálat lezárásáig külön kezeljük a megfigyelt tünetet és a feltételezett okot.
+
+A megoldási javaslat lehet egy ellenőrzött kerülőút, javítás vagy eszkaláció a jogosult döntéshozóhoz. Visszatérítést vagy szerződésmódosítást csak az arra felhatalmazott személy ígér. Ez a kommunikációs folyamat nem helyettesíti az alkalmazandó szerződéses vagy fogyasztóvédelmi szabályokat.
+
+A lezáráskor visszaellenőrizzük, elkészült-e a kimutatás, és rögzítjük, mit változtatunk a jövőben. Az ügyfél személyes adatait csak a panasz kezeléséhez szükséges körben osztjuk meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Reklamáció esetén az ügyfelet először nyugodtan meg kell hallgatni,
 > majd pontosan tisztázni kell a probléma lényegét.  
 > Fontos az empatikus, de tárgyszerű kommunikáció, a következő lépések egyértelmű ismertetése és az ügy dokumentálása.  
 > A jó reklamációkezelés nemcsak a probléma megoldását szolgálja, hanem a szolgáltatás javítására is visszajelzést ad.
-
-## Gyakori vizsgahibák
-
-- Azonnali védekezés vagy visszatámadás.
-- Az ügyfél félbeszakítása.
-- Tisztázás nélkül megoldást ígérni.
-- Nem dokumentálni az ügyet.
-- Túl sokat magyarázkodni ahelyett, hogy a megoldásra fókuszálnál.
 
 ## Gyors önellenőrzés
 
@@ -101,6 +101,11 @@ Jegyezd fel:
 5. Segít javítani a szolgáltatást
 
 ## Források
+
+- [Ombudsman: Principles of good complaint handling](https://www.ombudsman.org.uk/publications/principles-good-complaint-handling-0)  
+  Átlátható, arányos panaszkezelés; módszertani, nem osztrák jogforrás.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. HMRC - Handling of Complaints  
    https://www.gov.uk/hmrc-internal-manuals/shares-and-assets-valuation-manual/svm103030  

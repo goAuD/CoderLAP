@@ -70,6 +70,14 @@ Ha nincs azonnali megoldás:
 - türelmetlen hangnemet
 - eltűnést vagy visszajelzés nélküli csendet
 
+## A visszajelzés ideje nem azonos a javítás idejével
+
+Egy ügyfélnél nem működik a belépés. Megkérdezzük, hány embert érint, van-e sürgős határidő, és mikor működött utoljára. Ez segít a hatás és a sürgősség alapján prioritást adni. Bejelentkezési jelszót vagy MFA-kódot nem kérünk elküldeni.
+
+Egy jó státusz például: „Jelenleg három felhasználó érintett. A belépési szolgáltatást vizsgáljuk. A következő tájékoztatás 10:30-kor lesz, akkor is, ha addig nincs végleges megoldás.” A tünetet ismerjük, az okot még nem állítjuk biztosnak.
+
+Adatvesztés vagy támadás gyanújánál a technikai incidensfolyamat szerint eszkalálunk, és megőrizzük a bizonyítékokat. Egy gyors újraindítás csak indokolt és engedélyezett beavatkozásként történjen. A sikeres javítást az érintett felhasználói feladat megismétlésével is ellenőrizzük.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Technikai probléma esetén az ügyféllel nyugodtan, strukturáltan és érthetően kell kommunikálni.  
@@ -79,13 +87,6 @@ Ha nincs azonnali megoldás:
 > a következő lépésekről
 > és a várható időkeretről.  
 > A jó ügyfélkezelés technikai hiba esetén is empatikus, tárgyszerű és megoldásorientált.
-
-## Gyakori vizsgahibák
-
-- Túl gyorsan technikai következtetést levonni.
-- Az ügyfél panaszát bagatellizálni.
-- Túl technikai nyelven magyarázni.
-- Nem mondani semmit a következő lépésről vagy határidőről.
 
 ## Gyors önellenőrzés
 
@@ -104,6 +105,11 @@ Ha nincs azonnali megoldás:
 5. Nyugodt, empatikus és tárgyszerű
 
 ## Források
+
+- [NIST SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final)  
+  Incidens esetén szerepkörök, kommunikáció és helyreállítás.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. GOV.UK Service Manual - Set up and manage user support  
    https://www.gov.uk/service-manual/operations/managing-user-support.html  

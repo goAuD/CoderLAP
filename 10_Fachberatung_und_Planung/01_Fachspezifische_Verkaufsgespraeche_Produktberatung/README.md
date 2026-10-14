@@ -67,6 +67,14 @@ Hanem ezt is:
 | terméktanácsadás | igényhez illesztett ajánlás |
 | agresszív értékesítés | nem ugyanaz, mint a jó szakmai tanács |
 
+## Ajánlat két megoldással, közös feltételekkel
+
+Egy tízfős iroda dokumentumokat szeretne megosztani. Előbb tisztázzuk az adatérzékenységet, a távoli hozzáférést, a jelenlegi eszközöket és azt, ki fogja üzemeltetni a megoldást. A „kell egy szerver” már megoldási ötlet, az igény inkább az, hogy mindenki a megfelelő dokumentumverzióhoz férjen hozzá.
+
+Az összehasonlításban azonos időtávra számolunk. Kitalált példa: az A ajánlat indulása 600 euró, működtetése havi 30 euró. Egy évre `600 + 12 × 30 = 960 euró`. A B ajánlat indulása 120 euró, havidíja 60 euró, így `120 + 12 × 60 = 840 euró`. A támogatás, a migráció, az adók és a munkaráfordítás csak akkor tekinthető benne foglaltnak, ha ezt az ajánlat kimondja.
+
+Az olcsóbb összeg önmagában nem dönt: ellenőrizzük a kötelező követelményeket és az adatkihozatal lehetőségét is. Az ügyfél a javaslat indokát és az ismert korlátokat együtt kapja meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szakszerű terméktanácsadás alapja az ügyfél igényeinek felmérése.  
@@ -75,13 +83,6 @@ Hanem ezt is:
 > milyen korlátai és elvárásai vannak,
 > és csak ezután szabad konkrét terméket vagy szoftvert ajánlani.  
 > A jó értékesítési beszélgetésben a technikai jellemzőket mindig az ügyfél számára érthető előnyökre kell lefordítani.
-
-## Gyakori vizsgahibák
-
-- Azonnal terméket ajánlani kérdezés nélkül.
-- Csak technikai adatokat sorolni.
-- Túlígérni a megoldást.
-- Nem tisztázni a felhasználási célt és a környezetet.
 
 ## Gyors önellenőrzés
 
@@ -100,6 +101,11 @@ Hanem ezt is:
 5. A feature technikai jellemző, a benefit ügyfélérték
 
 ## Források
+
+- [GOV.UK: Define user needs](https://www.gov.uk/guidance/define-user-needs)  
+  Igény, környezet és működtetési szempontok feltárása.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. GOV.UK Service Standard - Understand users and their needs  
    https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs  

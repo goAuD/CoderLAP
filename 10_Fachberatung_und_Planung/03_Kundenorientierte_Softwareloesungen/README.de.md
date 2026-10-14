@@ -70,6 +70,14 @@ Weil wenn die Software nicht kundenorientiert ist:
 | feature-rich | viele Funktionen, aber nicht unbedingt gute Bedienbarkeit |
 | funktioniert technisch | nicht dasselbe wie tatsächlich gut nutzbar |
 
+## Die Aufgabe hinter einem Funktionswunsch finden
+
+Der Kunde fordert einen PDF-Export. Wir fragen, wofür die Datei gebraucht wird. Es stellt sich heraus: Am Schichtende ist eine unterschriebene Übergabeliste erforderlich. Die eigentliche Aufgabe umfasst aktuelle Daten prüfen, Übergabe bestätigen und später wiederfinden, nicht nur einen zusätzlichen Knopf.
+
+An einer kleinen Probeversion prüfen wir drei Dinge: Findet die Person den richtigen Tag, ist die Liste vollständig und kann die nächste Schicht sie öffnen? Die Probe umfasst auch Tastaturbedienung und lange Namen. Beobachtetes Verhalten liefert häufig mehr Erkenntnisse als die Frage „Gefällt es Ihnen?“.
+
+Auftraggeber und tägliche Benutzer können verschiedene Personen sein. Geschäftsziel und Arbeitsbedingungen müssen gemeinsam verstanden werden. Im ersten Release erhalten die Funktionen Vorrang, die zur Erledigung der Aufgabe nötig sind.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine kundenorientierte Softwarelösung geht von den Bedürfnissen und Problemen des Benutzers aus.  
@@ -78,13 +86,6 @@ Weil wenn die Software nicht kundenorientiert ist:
 > sondern einfach zu bedienen, zuverlässig
 > und an die realen Arbeitsabläufe angepasst ist.  
 > Eine gute Lösung verbessert sich iterativ auf Basis von Benutzerfeedback.
-
-## Häufige Prüfungsfehler
-
-- Glauben, dass viele Funktionen automatisch ein besseres Produkt bedeuten.
-- Den Benutzerbedarf nicht ermitteln.
-- Die Rolle von Usability und Feedback auslassen.
-- Nur die technische Funktion betrachten.
 
 ## Schnelle Selbstkontrolle
 
@@ -103,6 +104,11 @@ Weil wenn die Software nicht kundenorientiert ist:
 5. Ein gut nutzbares System unterstützt den Benutzer auch in der Praxis
 
 ## Quellen
+
+- [GOV.UK: Plan user research](https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service)  
+  Gezielte Nutzungsprüfung und unterschiedliche Benutzerbedürfnisse.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. GOV.UK Service Standard - Understand users and their needs  
    https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs  

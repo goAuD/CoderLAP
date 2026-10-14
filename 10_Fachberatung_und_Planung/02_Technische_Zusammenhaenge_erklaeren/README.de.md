@@ -69,6 +69,14 @@ Weil man in der technischen Arbeit oft:
 - herablassender Ton
 - unnötig komplizierte Sätze
 
+## Nach dem Vergleich zur tatsächlichen Funktion zurückkehren
+
+Der Telefonbuchvergleich ist ein guter Einstieg für DNS: Zu einem merkbaren Namen suchen wir technische Informationen. Danach präzisieren wir: DNS ist verteilt, verwaltet unterschiedliche Record-Typen und Antworten können von Resolvern und Clients zwischengespeichert werden. Deshalb wird eine Änderung nicht überall im selben Moment sichtbar.
+
+Dem Kunden können wir sagen: „Die neue Adresse ist eingestellt, einige Geräte könnten aber noch eine gespeicherte frühere Antwort verwenden. Wir prüfen die maßgebliche Einstellung und die erhaltene Antwort und nennen anschließend weitere notwendige Schritte.“ Das erklärt die Unsicherheit, ohne eine sichere Behebungszeit zu erfinden.
+
+Eine konkrete Rückfrage prüft das Verständnis: „Warum beweist die alte Seite im Browser noch nicht, dass der neue Server defekt ist?“ Die Antwort zeigt, welcher Teil erneut erklärt werden sollte.
+
 ## Prüfungstaugliche Formulierung
 
 > Technische Zusammenhänge müssen so erklärt werden,
@@ -78,13 +86,6 @@ Weil man in der technischen Arbeit oft:
 > und Fachbegriffe mit einfacher Sprache,
 > Beispielen oder Vergleichen zu klären.  
 > Am Ende einer guten Erklärung sollte man überprüfen, ob die andere Person das Wesentliche tatsächlich verstanden hat.
-
-## Häufige Prüfungsfehler
-
-- Zu viel Fachjargon verwenden.
-- Glauben, dass einfache Erklärung gleich Ungenauigkeit ist.
-- Sich nicht an das Niveau des Zuhörers anpassen.
-- Nicht nachfragen, ob es verständlich war.
 
 ## Schnelle Selbstkontrolle
 
@@ -103,6 +104,14 @@ Weil man in der technischen Arbeit oft:
 5. Zuerst vom Ziel und der praktischen Bedeutung ausgehen
 
 ## Quellen
+
+- [GOV.UK: Publishing accessible documents](https://www.gov.uk/guidance/publishing-accessible-documents)  
+  Fachbegriffe erklären und verständliche Dokumente erstellen.
+
+- [IETF RFC 1034: Domain Names, Concepts and Facilities](https://datatracker.ietf.org/doc/html/rfc1034)  
+  Verteilte DNS-Struktur und Zwischenspeicherung als technischer Hintergrund des Vergleichs.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. GOV.UK - Writing for GOV.UK  
    https://www.gov.uk/guidance/content-design/writing-for-gov-uk  
