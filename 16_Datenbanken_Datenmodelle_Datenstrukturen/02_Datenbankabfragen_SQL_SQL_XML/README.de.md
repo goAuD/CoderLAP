@@ -77,19 +77,52 @@ Das ist vor allem bei Systemen wichtig, die Daten zwischen verschiedenen Systeme
 - `SQL/XML` ist ein spezielleres Thema als das grundlegende `SELECT`
 - bei der Prüfung ist das Grundprinzip wichtiger als eine herstellerspezifische Funktionsliste
 
+## Durchgearbeitetes SQL-Beispiel: Bestellübersicht
+
+Das Beispiel verwendet **MySQL 8.0.16+ / InnoDB**. Führe es einmal in einer leeren Übungsdatenbank aus. Ergebnisspalten: Name, Anzahl der Bestellungen, Summe. Die Tabellen enthalten ausschließlich Beispieldaten.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE customers (
+  id INT PRIMARY KEY,
+  name VARCHAR(40) NOT NULL
+) ENGINE=InnoDB;
+CREATE TABLE orders (
+  id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  amount DECIMAL(8,2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+) ENGINE=InnoDB;
+INSERT INTO customers VALUES (1, 'Ada'), (2, 'Linus'), (3, 'Grace');
+INSERT INTO orders VALUES (10, 1, 10.00), (11, 1, 18.00), (12, 2, 5.00);
+
+SELECT c.name, COUNT(o.id) AS order_count,
+       COALESCE(SUM(o.amount), 0) AS total
+FROM customers AS c
+LEFT JOIN orders AS o ON o.customer_id = c.id
+GROUP BY c.id, c.name
+HAVING COALESCE(SUM(o.amount), 0) >= 10
+ORDER BY total DESC, c.id;
+```
+
+```text
+Ada 2 28.00
+```
+
+`JOIN ... ON` verknüpft Zeilen, `WHERE` würde Zeilen vor der Gruppierung filtern, `GROUP BY` bildet Gruppen und `HAVING` filtert aggregierte Gruppen. `ORDER BY` legt eine verlässliche Reihenfolge fest; ohne diese Klausel ist die Reihenfolge nicht garantiert.
+
+Der `LEFT JOIN` erhält zunächst auch Grace ohne Bestellung. Erst `HAVING` entfernt diese Gruppe. Ohne die `HAVING`-Zeile erhält Grace die Werte `0` und `0.00`. `COUNT(o.id)` zählt nicht-NULL-Bestellkennungen, `COUNT(*)` würde dagegen auch die durch den Join entstandene Zeile zählen. `COALESCE` ersetzt die fehlende Summe durch die Zahl null.
+
+`NULL` steht für einen unbekannten oder fehlenden Wert, nicht für leeren Text oder die Zahl null. Geprüft wird mit `IS NULL`, nicht mit `= NULL`.
+
+SQL/XML ist der XML-bezogene Teil des Standards. Beispielsweise kann PostgreSQL mit `XMLTABLE` aus XML-Elementen Zeilen bilden. Das obige MySQL-Beispiel verwendet normales relationales SQL. XML-Funktionen eines anderen Herstellers sind nicht automatisch übertragbar.
+
 ## Prüfungstaugliche Formulierung
 
 > Für Datenbankabfragen verwendet man in relationalen Systemen üblicherweise `SQL`.  
 > Mit `SQL` können Daten abgefragt, eingefügt, geändert und gelöscht werden.  
 > `SQL/XML` dient hingegen der Verbindung von `XML`-Daten und SQL-basierter Datenverarbeitung, zum Beispiel zum Auslesen
 > von XML-Daten oder zur Umwandlung von SQL-Ergebnissen ins XML-Format.
-
-## Häufige Prüfungsfehler
-
-- Denken, dass eine Abfrage nur `SELECT` sein kann.
-- `SQL/XML` einfach als `XML` bezeichnen.
-- Nicht erwähnen, dass SQL auch schreiben und ändern kann.
-- Sich in herstellerspezifischen Details verlieren statt den Grundbegriff zu erklären.
 
 ## Schnelle Selbstkontrolle
 
@@ -118,3 +151,10 @@ Das ist vor allem bei Systemen wichtig, die Daten zwischen verschiedenen Systeme
    Verwendung: offizielle Quelle dazu, wie SQL und XML in der Praxis verbunden werden können.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [MySQL: SELECT](https://dev.mysql.com/doc/refman/8.0/en/select.html): JOIN, Gruppierung und Ergebnisreihenfolge
+- [PostgreSQL: XML Functions](https://www.postgresql.org/docs/current/functions-xml.html): konkrete Unterstützung für SQL/XML und XMLTABLE
+
+Geprüft: `2026-10-14`.

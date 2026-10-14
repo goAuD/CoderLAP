@@ -61,19 +61,41 @@ Különösen hasznos:
 
 Gyakran kapcsolódnak egymáshoz, de nem ugyanazok.
 
+## Kidolgozott összetett index
+
+**MySQL 8.0 / InnoDB, üres gyakorló adatbázis.** Gyakori kérdés: egy adott ügyfél mely rendelései érkeztek egy dátumtól kezdve?
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE orders (
+  id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  ordered_on DATE NOT NULL
+) ENGINE=InnoDB;
+CREATE INDEX idx_customer_date ON orders(customer_id, ordered_on);
+INSERT INTO orders VALUES
+  (1, 7, '2026-01-10'), (2, 8, '2026-01-12'), (3, 7, '2026-01-20');
+SELECT id, ordered_on FROM orders
+WHERE customer_id = 7 AND ordered_on >= '2026-01-15'
+ORDER BY ordered_on, id;
+```
+
+```text
+3 2026-01-20
+```
+
+Az index sorrendje `(customer_id, ordered_on)`: jól illeszkedik az ügyfél egyenlőségfeltételéhez, majd a dátumtartományhoz. A csak dátumra szűrő lekérdezés nem ugyanígy használja a balról kezdődő indexrészt; a megfelelő tervet meg kell mérni. Az index létrehozása önmagában nem ír elő használati kötelezettséget az optimalizálónak.
+
+A fenti `SELECT` elé írt `EXPLAIN` megmutatja a tervet. Nézd a lehetséges és választott indexet, a hozzáférés módját és a becsült sorszámot. Három sornál a teljes bejárás is olcsó lehet. Reális adatmennyiséggel és hasonló értékeloszlással érdemes mérni. Az `EXPLAIN ANALYZE` ténylegesen végre is hajtja a lekérdezést, ezért külön mérési művelet.
+
+Az index többletterületet és az érintett kulcsok változásakor karbantartást igényel. Az alacsony szelektivitás, például egy majdnem minden sorban azonos állapot, önmagában nem feltétlenül ad jó szűkítést. A `LIKE 'abc%'` és a `LIKE '%abc%'` keresés indexelhetősége sem azonos.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az index olyan adatbázis-struktúra, amely gyorsítja az adatok keresését és bizonyos lekérdezéseket.  
 > Előnye a jobb lekérdezési teljesítmény, hátránya pedig a többlet tárhelyigény és az, hogy a módosító műveleteknél  
 > karban kell tartani.  
 > Ezért az indexek használata teljesítménynyereséget adhat, de csak megfelelő tervezéssel érdemes alkalmazni.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy az index minden esetben javít.
-- Az indexet elsődleges kulccsal azonosítani.
-- Nem megemlíteni az írási műveletek lassulását.
-- Elfelejteni a tárhelyigényt.
 
 ## Gyors önellenőrzés
 
@@ -102,3 +124,10 @@ Gyakran kapcsolódnak egymáshoz, de nem ugyanazok.
    Használat: tömör, hivatalos bevezető az indexek előnyeihez és költségeihez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [MySQL: Multiple-Column Indexes](https://dev.mysql.com/doc/refman/8.0/en/multiple-column-indexes.html): bal oldali indexelőtag és oszlopsorrend
+- [MySQL: EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html): terv és tényleges végrehajtási mérés
+
+Ellenőrizve: `2026-10-14`.

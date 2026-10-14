@@ -81,19 +81,26 @@ Itt lesz az elméleti modellből konkrét adatbázis-séma.
 | logikai modell | táblák, kulcsok, kapcsolatok |
 | fizikai modell | konkrét `DBMS`-hez igazított megvalósítás |
 
+## Kidolgozott modell: tanulók és kurzusok
+
+Először a szabályokat rögzítjük: egy tanuló több kurzusra jelentkezhet; egy kurzusra több tanuló járhat; ugyanaz a tanuló ugyanarra a meghirdetett kurzusra egyszer jelentkezhet. A jelentkezés dátuma nem a tanulóhoz önmagában, hanem ehhez a kapcsolathoz tartozik.
+
+| Tábla | Kulcs és lényeges adatok |
+|---|---|
+| students | `id` elsődleges kulcs, név |
+| courses | `id` elsődleges kulcs, cím |
+| enrollments | összetett kulcs: `student_id, course_id`; jelentkezési dátum |
+
+A két idegen kulcs az `enrollments` táblában oldja fel az n:m kapcsolatot. A `0..n` azt is megengedi, hogy egy új kurzusnak még nincs résztvevője. A jelentkezés mindkét hivatkozása kötelező. A kurzuscím nem jó azonosító, mert változhat és ismétlődhet.
+
+Ellenőrizd a modellt konkrét történettel: felvehető-e egy üres kurzus, szerepelhet-e két azonos nevű tanuló, tiltott-e a kettős jelentkezés, és mi történjen kurzustörléskor? Ha egy kurzus évente újra indul, külön kurzusalkalom szükséges; ezt az igényt a követelmény határozza meg. A törlési szabály és a megőrzendő történet is a modellezés része.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az adatmodellezés során a valós vagy üzleti folyamatok adatait strukturált modellé alakítjuk.  
 > Ennek tipikus lépése a követelmények felmérése, az entitások és attribútumok meghatározása, a kapcsolatok és kulcsok  
 > kijelölése, majd a normalizálás és a konkrét adatbázis-séma kialakítása.  
 > A cél egy átlátható, bővíthető és konzisztens adatstruktúra létrehozása.
-
-## Gyakori vizsgahibák
-
-- Rögtön táblákkal kezdeni az üzleti fogalmak megértése nélkül.
-- A modellezést csak rajzolásnak tekinteni.
-- Nem megemlíteni a kulcsokat és kapcsolatokat.
-- A fogalmi és fizikai modellt összekeverni.
 
 ## Gyors önellenőrzés
 
@@ -122,3 +129,9 @@ Itt lesz az elméleti modellből konkrét adatbázis-séma.
    Használat: gyakorlati, hivatalos forrás a relációs tervezési folyamat alaplépéseihez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Database design basics](https://support.microsoft.com/en-us/access/database-design-basics): követelmények, táblák, kapcsolatok és normalizálás
+
+Ellenőrizve: `2026-10-14`.

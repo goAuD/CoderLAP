@@ -51,19 +51,22 @@ Vagyis:
 
 - az `ERP` és a `BI` gyakran a `BIS` részei vagy alrendszerei
 
+## Kidolgozott folyamat: javítóműhely munkalapja
+
+Egy ügyintéző átvesz egy laptopot, és munkalapot nyit. Rögzíti az eszköz azonosítóját, a hibaleírást és az egyeztetett elérhetőséget. A technikus diagnózist és munkaidőt ad hozzá, a raktár alkatrészt foglal, a pénzügy a jóváhagyott tételekből készíti el a számlázási adatokat.
+
+A BIS itt nem egyetlen program neve. Része a munkalap adata, a rendszer, a technikus feladata, a jóváhagyási szabály és az is, ki értesíti az ügyfelet. Ha senki sem felel a státusz frissítéséért, a tökéletes adatbázis mellett is félrevezető lesz az információ.
+
+Különböztesd meg a **törzsadatot**, például az alkatrész megnevezését, és a **mozgásadatot**, például egy konkrét javításhoz felhasznált két darabot. A napi munkalapkezelés operatív feladat; a havi átlagos javítási idő összehasonlítása elemzés.
+
+Átadási próba: vezess végig egy munkalapot az átvételtől a lezárásig. Ellenőrizd az egyedi azonosítókat, a szerepek hozzáférését, a felelőst, a státuszváltásokat és azt, hogy egy félbeszakadt lépés folytatható-e. Csak a folyamathoz szükséges személyes adatot kérd, és határozd meg a megőrzését.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A vállalati információs rendszer olyan rendszer, amely a vállalat működéséhez szükséges információk gyűjtését,  
 > tárolását, feldolgozását és továbbítását támogatja.  
 > A `BIS` nemcsak technológiai elemekből, hanem emberekből, folyamatokból és üzleti szabályokból is áll.  
 > Célja az operatív munka és a döntéshozatal támogatása a vállalaton belül.
-
-## Gyakori vizsgahibák
-
-- A `BIS`-t kizárólag adatbázisnak nevezni.
-- A `BIS`-t az `ERP`-vel teljesen azonosítani.
-- Kihagyni az emberek és folyamatok szerepét.
-- Nem megemlíteni a döntéstámogatási oldalt.
 
 ## Gyors önellenőrzés
 
@@ -99,3 +102,10 @@ Vagyis:
 Megjegyzés: a `BIS` itt gyűjtőfogalomként van megfogalmazva, a fenti megbízható forrásokból levont összegzés alapján.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [Pace University: Information Systems](https://www.pace.edu/news/what-is-information-systems): emberek, folyamatok és technológia közös rendszere
+- [IBM: Business Intelligence](https://www.ibm.com/think/topics/business-intelligence): operatív adatok elemzési felhasználása
+
+Ellenőrizve: `2026-10-14`.

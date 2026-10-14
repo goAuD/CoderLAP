@@ -61,19 +61,41 @@ Besonders hilfreich bei:
 
 Sie hängen häufig zusammen, sind aber nicht dasselbe.
 
+## Durchgearbeiteter zusammengesetzter Index
+
+**MySQL 8.0 / InnoDB, leere Übungsdatenbank.** Eine häufige Frage lautet: Welche Bestellungen eines bestimmten Kunden sind ab einem Datum eingegangen?
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE orders (
+  id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  ordered_on DATE NOT NULL
+) ENGINE=InnoDB;
+CREATE INDEX idx_customer_date ON orders(customer_id, ordered_on);
+INSERT INTO orders VALUES
+  (1, 7, '2026-01-10'), (2, 8, '2026-01-12'), (3, 7, '2026-01-20');
+SELECT id, ordered_on FROM orders
+WHERE customer_id = 7 AND ordered_on >= '2026-01-15'
+ORDER BY ordered_on, id;
+```
+
+```text
+3 2026-01-20
+```
+
+Die Indexreihenfolge `(customer_id, ordered_on)` passt zur Gleichheitsbedingung auf den Kunden und anschließend zum Datumsbereich. Eine Abfrage nur nach Datum nutzt das links beginnende Indexpräfix nicht auf dieselbe Weise; der geeignete Plan ist zu prüfen. Das Anlegen des Index verpflichtet den Optimierer nicht, ihn zu verwenden.
+
+Ein vor das obige `SELECT` gesetztes `EXPLAIN` zeigt den Plan. Betrachte mögliche und gewählte Indizes, Zugriffsart und geschätzte Zeilenanzahl. Bei drei Zeilen kann auch ein vollständiger Durchlauf günstig sein. Messe mit realistischer Datenmenge und vergleichbarer Werteverteilung. `EXPLAIN ANALYZE` führt die Abfrage tatsächlich aus und ist deshalb eine gesonderte Messoperation.
+
+Ein Index braucht zusätzlichen Platz und muss bei Änderungen betroffener Schlüssel gepflegt werden. Geringe Selektivität, etwa ein bei fast allen Zeilen gleicher Status, grenzt allein nicht unbedingt gut ein. Auch `LIKE 'abc%'` und `LIKE '%abc%'` unterscheiden sich hinsichtlich der Indexnutzung.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Index ist eine Datenbankstruktur, die die Suche nach Daten und bestimmte Abfragen beschleunigt.  
 > Sein Vorteil ist die bessere Abfrageleistung, sein Nachteil der zusätzliche Speicherbedarf und die Tatsache, dass er  
 > bei Änderungsoperationen gewartet werden muss.  
 > Daher können Indizes Leistungsgewinne bringen, sollten aber nur mit sorgfältiger Planung eingesetzt werden.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass ein Index in jedem Fall eine Verbesserung bringt.
-- Den Index mit dem Primärschlüssel gleichsetzen.
-- Die Verlangsamung bei Schreiboperationen nicht erwähnen.
-- Den Speicherbedarf vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -102,3 +124,10 @@ Sie hängen häufig zusammen, sind aber nicht dasselbe.
    Verwendung: kompakte, offizielle Einführung zu den Vorteilen und Kosten von Indizes.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [MySQL: Multiple-Column Indexes](https://dev.mysql.com/doc/refman/8.0/en/multiple-column-indexes.html): linkes Indexpräfix und Spaltenreihenfolge
+- [MySQL: EXPLAIN](https://dev.mysql.com/doc/refman/8.0/en/explain.html): Ausführungsplan und tatsächliche Messung
+
+Geprüft: `2026-10-14`.

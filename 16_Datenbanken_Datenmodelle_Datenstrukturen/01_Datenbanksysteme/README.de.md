@@ -11,15 +11,9 @@
 
 ## Was ist ein Datenbanksystem?
 
-Ein Datenbanksystem besteht in der Regel aus:
+Im engeren fachlichen Sinn besteht ein Datenbanksystem aus **Datenbank und verwaltendem DBMS**. Zum weiteren betrieblichen Umfeld gehören Anwendungen, Benutzer, Betriebspersonal und Hardware. Benenne, in welchem Sinn du den Begriff verwendest.
 
-- der Datenbank selbst
-- dem Datenbankmanagementsystem (`DBMS`)
-- den zugehörigen Anwendungen
-- den Benutzern und Administratoren
-- der Hardware und Laufzeitumgebung
-
-Deshalb ist ein Datenbanksystem **mehr** als eine einfache Datei zur Datenspeicherung.
+Das DBMS kann ein separater Server wie MySQL oder eine eingebettete Bibliothek wie SQLite sein. Auch eine in einer Datei gespeicherte Datenbank kann vollständige Abfrage- und Transaktionsfunktionen besitzen.
 
 ## Warum ist das wichtig?
 
@@ -43,7 +37,7 @@ Deshalb ist ein Datenbanksystem **mehr** als eine einfache Datei zur Datenspeich
 |---|---|
 | Datenbank | strukturiert gespeicherte Daten |
 | `DBMS` | Software, die die Daten verwaltet |
-| Datenbanksystem | Datenbank + `DBMS` + Anwendungen + Umgebung |
+| Datenbanksystem | enger: Datenbank + `DBMS`; weiter: zusätzlich das betriebliche Umfeld |
 
 ## Wo begegnet man dem?
 
@@ -55,19 +49,17 @@ Typische Beispiele:
 - Schüler- oder Mitarbeiterverwaltung
 - Content-Management-Systeme
 
+## Durchgearbeitetes Beispiel: Bibliotheksausleihe
+
+In einer Bibliotheksanwendung gehören Tabellen wie `books` und `loans` zur Datenbank. Das MySQL-DBMS verarbeitet Abfragen, prüft Schlüssel und koordiniert gleichzeitige Änderungen. Die Anwendung zeigt das Formular, prüft die fachliche Berechtigung der angemeldeten Person und sendet die benötigte Anweisung.
+
+Wollen zwei Schalter gleichzeitig dasselbe Exemplar verleihen, reicht das Schreiben in eine gemeinsame Datei allein nicht. Eine passend entworfene Transaktion und Datenbankregel machen überprüfbar, dass nur eine aktive Ausleihe entsteht. Das DBMS erfindet diese Geschäftsregel nicht selbst.
+
+Das relationale Modell arbeitet mit Tabellen, Schlüsseln und Beziehungen. Dokument-, Schlüssel-Wert- und Graphdatenbanken bieten andere Strukturen. Entscheidend sind Abfragen, Datenbeziehungen und Konsistenzanforderungen, nicht allein die Bezeichnung SQL oder NoSQL.
+
 ## Prüfungstaugliche Formulierung
 
-> Ein Datenbanksystem ist das Gesamtsystem bestehend aus den gespeicherten Daten, dem Datenbankmanagementsystem und  
-> den zugehörigen Anwendungen.  
-> Sein Zweck ist die strukturierte Speicherung, Abfrage, Änderung und sichere Verwaltung von Daten.  
-> Ein Datenbanksystem umfasst also nicht nur die Daten selbst, sondern auch deren gesamte Betriebsumgebung.
-
-## Häufige Prüfungsfehler
-
-- Das Datenbanksystem mit der Datenbank gleichsetzen.
-- Den Begriff `DBMS` weglassen.
-- Die Mehrbenutzerfähigkeit und Administrationsfunktion nicht erwähnen.
-- Das gesamte System so behandeln, als wäre es nur eine einzelne Datei.
+> Die Datenbank enthält strukturierte Daten, das DBMS verwaltet Zugriffe, Abfragen und Änderungen. Gemeinsam bilden sie den Kern des Datenbanksystems. Anwendungen und Betriebsumgebung bauen darauf auf.
 
 ## Schnelle Selbstkontrolle
 
@@ -79,8 +71,8 @@ Typische Beispiele:
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Die gesamte Datenverwaltungsumgebung
-2. Datenbank, `DBMS`, Anwendungen, Benutzer
+1. Enger: Datenbank und DBMS; weiter: einschließlich der betrieblichen Umgebung
+2. Im Kern Datenbank und DBMS, umgeben von Anwendungen und Betriebsumgebung
 3. Das eine sind die Daten, das andere ist die Verwaltungssoftware
 4. Weil es einheitlichen und sicheren Zugriff bietet
 5. Webshop, Kundenverwaltungssystem
@@ -96,3 +88,10 @@ Typische Beispiele:
    Verwendung: offizielle Grundlagenquelle zur genaueren Definition relationaler Datenbanken und der Rolle des `DBMS`.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [SQLite: Appropriate Uses](https://www.sqlite.org/whentouse.html): Unterscheidung eingebetteter und Client-Server-Datenverwaltung
+- [MySQL: Introduction to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-introduction.html): Transaktionen und die Rolle der InnoDB-Speicherengine
+
+Geprüft: `2026-10-14`.
