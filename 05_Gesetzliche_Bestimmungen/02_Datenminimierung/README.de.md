@@ -2,12 +2,12 @@
 
 ## Schneller visueller Überblick
 
-| Schlechte Praxis | Gute Praxis |
-|---|---|
-| alle möglichen Daten abfragen | nur die notwendigen Daten abfragen |
-| „vielleicht brauchen wir sie noch" | zweckgebundene Datenerhebung |
-| zu viele Pflichtfelder | begründete minimale Felder |
-| unbegrenzte Datenspeicherung | Speicherung nur für den notwendigen Zeitraum |
+| Zweck | Beispiel notwendiger Daten | Entwurfsentscheidung |
+|---|---|---|
+| Newsletter zustellen | E-Mail-Adresse | nur für Zustellung und Einwilligungsnachweis erforderliche Daten |
+| Paket zustellen | Name, Lieferadresse | die Zustellung begründet die Adressangabe |
+| Benutzereinstellung speichern | interne Kontokennung, Einstellung | kein vollständiges Kundenprofil in die Einstellungstabelle kopieren |
+| Fehler untersuchen | Fehlercode, erforderliche technische Umgebung | persönliche Formularinhalte aus Protokollen weglassen |
 
 ## Wo steht das in der GDPR?
 
@@ -69,9 +69,10 @@ Die beiden Begriffe hängen zusammen, sind aber nicht dasselbe.
 
 ## Datenminimierung und Aufbewahrungsfrist
 
-Datenminimierung betrifft nicht nur die Erhebung, sondern auch:
-
-- Daten nicht länger als nötig aufzubewahren
+Datenminimierung begrenzt Umfang und Detailgrad auf das für den Zweck Erforderliche
+(Art. 5 Abs. 1 lit. c). Die Dauer regelt der eigenständige Grundsatz der
+**Speicherbegrenzung** (Art. 5 Abs. 1 lit. e). Beide wirken zusammen:
+angemessene Datenmengen werden nur so lange wie begründet verarbeitet.
 
 ## Warum ist das wichtig?
 
@@ -82,21 +83,33 @@ Weil weniger verarbeitete Daten bedeuten:
 - geringeres Missbrauchspotenzial
 - leichtere Einhaltung der GDPR
 
+## Ein Formular begründet entwerfen
+
+Für eine Reparaturbuchung verwenden wir Name, Kontaktmöglichkeit, Gerätetyp und Termin.
+Eine Ausweiskopie ist für diese Buchung nicht erforderlich. Erfolgt die Rückmeldung
+per E-Mail, muss eine zusätzliche Telefonnummer als Pflichtfeld gesondert begründet werden.
+
+Die Entscheidung lässt sich knapp festhalten: **Feld → Zweck → Erforderlichkeit → Zugriff → Löschung**.
+Für die Fehlerbeschreibung reichen vielleicht einige Kategorien statt eines Freitexts.
+Brauchen wir Freitext, erklären wir, dass keine Passwörter oder sensiblen Angaben
+über andere Personen eingetragen werden sollen. Die Bezeichnung „optional“ allein
+rechtfertigt nicht jede zusätzliche Datenerhebung.
+
+Auch der Server verarbeitet nur zugelassene Felder; das Protokoll speichert nicht
+automatisch die vollständige Anfrage. Tests verwenden künstliche Daten.
+Für einen späteren Export gilt dieselbe Auswahl: Der Empfänger erhält die für
+seine Aufgabe erforderlichen Daten, nicht automatisch die gesamte Tabelle.
+
+Quelle: [EDPB: Verarbeitungsgrundsätze](https://www.edpb.europa.eu/sme/learn-the-basics/data-protection-basics_en),
+Art. 5 und 25 DSGVO. Die Buchung ist eine eigene Entwurfsübung. Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Datenminimierung ist ein Grundsatz der GDPR.
 > Sie besagt, dass nur personenbezogene Daten verarbeitet werden dürfen,
 > die für den jeweiligen Verarbeitungszweck notwendig, angemessen und erheblich sind.
 > In der Praxis bedeutet das, dass keine unnötigen Daten erhoben werden dürfen
-> und Daten nicht unangemessen lange gespeichert werden dürfen.
-
-## Häufige Prüfungsfehler
-
-- Datenminimierung nur als „wenige Daten sammeln" zu beschreiben.
-- Den Bezug zum Zweck nicht herzustellen.
-- Zu glauben, dass alle Daten verarbeitet werden dürfen, wenn der Nutzer sie angibt.
-- Nicht zu erkennen, dass auch die Speicherdauer dazugehört.
-- Datenminimierung mit Löschung zu verwechseln.
+> während die Aufbewahrungsdauer nach dem eigenständigen Grundsatz der Speicherbegrenzung festgelegt wird.
 
 ## Schnelle Selbstkontrolle
 
@@ -111,7 +124,7 @@ Weil weniger verarbeitete Daten bedeuten:
 1. Es dürfen nur die notwendigen personenbezogenen Daten verarbeitet werden
 2. Weil die GDPR dies verbietet, wenn die Daten für den Zweck nicht erforderlich sind
 3. Die Notwendigkeit muss immer anhand des Zwecks beurteilt werden
-4. Nein, auch die Speicherdauer und die Verwendung gehören dazu
+4. Nein, auch der Datenumfang bei Verwendung und Weitergabe ist begrenzt; die Dauer regelt ein eigener Grundsatz
 5. Für einen Newsletter kann allein die E-Mail-Adresse ausreichen
 
 ## Quellen

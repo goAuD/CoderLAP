@@ -60,6 +60,37 @@ Ha ezekből kimaradnak a szükséges céges adatok, az jogi problémát okozhat.
 | impresszum | weboldalon közzétett kötelező adatok |
 | aláírás / signature | technikai vagy vizuális elem, de jogi tartalmat is hordozhat |
 
+## Példa: központi céges levélsablon
+
+Egy bejegyzett GmbH üzleti leveléhez ilyen **kitöltendő vázlat** készülhet:
+
+```text
+[Firmenname] GmbH
+Sitz: [Ort]
+Firmenbuchnummer: [Nummer]
+Firmenbuchgericht: [Gericht]
+```
+
+A szögletes zárójeles elemek helyőrzők, nem kitalált cégadatok.
+Ez az UGB 14. § szerinti alapadatok szemléltetése, nem minden vállalkozásra teljes sablon.
+Felszámolási állapotnál vagy különleges cégformánál további adatok szükségesek lehetnek.
+Bejegyzett egyéni vállalkozónál a saját nevet is feltüntetjük, ha eltér a cégnévtől.
+A cégjegyzékbe nem bejegyzett, Gewerbeordnung alá tartozó vállalkozásnál
+a GewO 63. § szerinti név és a tevékenységi hely adatai irányadók.
+
+Fejlesztőként egy központi sablonból adjuk ezeket a CRM, a számlázó és a támogatási
+rendszer üzleti leveleihez. A szöveg egyszerű szöveges levélben is olvasható maradjon;
+a csak képként beillesztett aláírás képek tiltásakor eltűnhet.
+Név- vagy székhelyváltozáskor a sablon és az automatikus levelek próbája is frissül.
+
+A levél végi szöveges aláírás azonosító információ. A kriptográfiai elektronikus aláírás
+más fogalom: az eredet és sértetlenség ellenőrzését szolgálhatja.
+A szabályos cégadatok önmagukban nem adnak engedélyt reklámlevél küldésére.
+
+Forrás: [UGB 14. §](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001702&Paragraf=14),
+[GewO 63. §](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10007517&Paragraf=63).
+Ellenőrizve: `2026-10-14`.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az üzleti e-mail-forgalomban bizonyos vállalkozásoknak
@@ -70,13 +101,6 @@ Ha ezekből kimaradnak a szükséges céges adatok, az jogi problémát okozhat.
 > és különösen fontos automatikus
 > vagy rendszerből küldött üzleti e-maileknél is.  
 > A pontos kötelező adattartalom a vállalkozás jogi formájától függhet.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy céges e-mailnél semmilyen kötelező adat nem kell.
-- Az impresszumot és az e-mail aláírást teljesen ugyanannak tekinteni.
-- Elfelejteni, hogy automatikusan küldött üzleti e-mailekre is vonatkozhatnak szabályok.
-- Nem figyelembe venni a vállalkozási forma jelentőségét.
 
 ## Gyors önellenőrzés
 

@@ -49,7 +49,7 @@ Praktische erste Schritte:
 Nach Art. 33 der GDPR:
 
 - muss der Verantwortliche den Vorfall **ohne unangemessene Verzögerung**,
-  möglichst **innerhalb von 72 Stunden** an die Aufsichtsbehörde melden
+  möglichst **innerhalb von 72 Stunden nach Bekanntwerden** an die Aufsichtsbehörde melden
 - Ausnahme: wenn der Vorfall **voraussichtlich kein Risiko** für die Rechte und Freiheiten der betroffenen Personen darstellt
 
 In Österreich ist die zuständige Behörde:
@@ -79,22 +79,43 @@ Dokumentiert werden muss zum Beispiel:
 - welche Maßnahmen ergriffen wurden
 - warum gemeldet oder warum nicht gemeldet wurde
 
+## Zeitlinie und zwei verschiedene Benachrichtigungen
+
+Am Mittwoch um 09:00 wird bekannt, dass ein Export mit Kundendaten öffentlich zugänglich war.
+Der Verantwortliche sperrt den Zugang sofort, sichert erforderliche Beweise und beurteilt
+betroffene Daten sowie Risiken für die Personen. 72 Stunden ab diesem Bekanntwerden
+enden am Samstag um 09:00. Wir rechnen nicht mit drei Arbeitstagen und warten auch
+nicht automatisch bis zum Fristende.
+
+| Aufgabe | Empfänger und Zeitpunkt |
+|---|---|
+| Vorfallmitteilung des Auftragsverarbeiters | an den Verantwortlichen unverzüglich |
+| Meldung eines meldepflichtigen Vorfalls | Verantwortlicher → Aufsichtsbehörde nach Art. 33 |
+| Mitteilung bei voraussichtlich hohem Risiko | Verantwortlicher → Betroffene unverzüglich nach Art. 34 |
+
+Die Behördenmeldung enthält Art der Verletzung, Kategorien und möglichst Zahlen
+der Daten und betroffenen Personen, Anlaufstelle, wahrscheinliche Folgen und Maßnahmen.
+Sind noch nicht alle Einzelheiten bekannt, können Angaben ohne unangemessene weitere
+Verzögerung nachgereicht werden. Erfolgt die Meldung später als nach 72 Stunden,
+ist auch die Verzögerung zu begründen.
+
+Bei der gesonderten Benachrichtigung der Betroffenen prüfen wir die Ausnahmen des Art. 34,
+etwa ob geeignete Verschlüsselung die Daten für Unbefugte tatsächlich unlesbar gemacht hat.
+Eine erfolgreiche Wiederherstellung beseitigt für sich genommen nicht das Risiko
+eines bereits erfolgten Datenabflusses.
+
+Quellen: [DSB: Data-Breach-Verfahren](https://dsb.gv.at/ueber-die-datenschutzbehoerde/data-breach-verfahren),
+[DSB: Mitteilung durch Auftragsverarbeiter](https://dsb.gv.at/rechte-pflichten/ihre-pflichten-als-auftragsverarbeiterin),
+Art. 33–34 DSGVO. Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei Datendiebstahl oder einer anderen Verletzung personenbezogener Daten
 > muss der Verantwortliche unverzüglich eine Risikobewertung durchführen.
 > Wenn ein Risiko für die Rechte und Freiheiten wahrscheinlich ist,
-> muss der Vorfall nach Art. 33 der GDPR möglichst innerhalb von 72 Stunden
+> muss der Vorfall nach Art. 33 DSGVO unverzüglich, möglichst innerhalb von 72 Stunden nach Bekanntwerden,
 > der Behörde gemeldet werden.
 > Bei hohem Risiko müssen auch die betroffenen Personen nach Art. 34 der GDPR informiert werden.
-
-## Häufige Prüfungsfehler
-
-- Zu glauben, nur Hackerangriffe zählen als Vorfall.
-- Die 72-Stunden-Regel zu vergessen.
-- Zu behaupten, die betroffenen Personen müssten immer benachrichtigt werden.
-- Nicht zwischen „Risiko" und „hohem Risiko" zu unterscheiden.
-- Die Dokumentationspflicht auszulassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -107,7 +128,7 @@ Dokumentiert werden muss zum Beispiel:
 ## Kurzantworten zur Selbstkontrolle
 
 1. Eine Sicherheitsverletzung, die personenbezogene Daten betrifft
-2. Möglichst innerhalb von 72 Stunden
+2. Unverzüglich, möglichst innerhalb von 72 Stunden nach Bekanntwerden
 3. Wenn voraussichtlich kein Risiko für die betroffenen Personen besteht
 4. Wenn das Risiko hoch ist
 5. Ja

@@ -59,6 +59,36 @@ Wenn dies vor der Abgabe nicht ordnungsgemäß gelöscht wird, kann das ein Date
 | Recycling | Rückgewinnung von Materialien |
 | Restmüll | hierhin gehören Elektronikgeräte nicht |
 
+## Ausmustern mit nachvollziehbarer Datenlöschung
+
+Vor der Weitergabe eines Firmenlaptops prüfen wir, ob benötigte Daten wiederherstellbar
+gesichert sind. Danach beenden wir zugehörige Unternehmenszugänge und wählen ein
+überprüfbares Löschverfahren passend zu Speichertyp, Schutzbedarf und weiterer Nutzung.
+Dateien in den Papierkorb zu verschieben ist keine sichere Löschung.
+
+Auf SSDs erreicht gewöhnliches Überschreiben von Dateien nicht unbedingt alle früheren
+physischen Datenblöcke. Wir verwenden ein geeignetes unterstütztes Löschverfahren oder
+kryptografisches Löschen und prüfen dafür auch Voraussetzungen der Verschlüsselung und
+Schlüsselverwaltung. Bei defekten, nicht sicher löschbaren Datenträgern kann kontrollierte
+Vernichtung nötig sein. Das gehört in einen fachgerechten Übergabeprozess, nicht in
+einen Versuch mit Bohrmaschine oder zerlegten Akkus.
+
+Gerätekennung, Verfahren, Prüfergebnis und Empfänger werden dokumentiert.
+Ein nutzbares Gerät kann nach geeigneter Vorbereitung weiterverwendet werden;
+Abfall kommt zur getrennten Sammlung oder in ein geregeltes Rücknahmesystem.
+Den Umgang mit beschädigten oder aufgeblähten Akkus stimmen wir mit der Sammelstelle ab.
+
+**Änderung 2026:** Seit 1. Oktober gilt nach § 5 Abs. 2a EAG-VO eine gesonderte
+Rücknahme ohne Neukauf für sehr kleine Elektrogeräte aus privaten Haushalten, die
+Batterien enthalten und deren äußere Abmessungen jeweils höchstens 25 cm betragen,
+bei Letztvertreibern mit mindestens 25 m² Verkaufsfläche. Die Pflicht ist auf die
+abgegebenen Gerätearten und üblichen Mengen begrenzt; sie ist keine pauschale Annahmepflicht
+für beliebige Abfälle.
+
+Quellen: [RIS: EAG-VO § 5](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20004052&Paragraf=5),
+[NIST SP 800-88 Rev. 2: Media Sanitization](https://csrc.nist.gov/pubs/sp/800/88/r2/final).
+Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Elektronikschrott muss getrennt gesammelt und über eine offizielle Sammelstelle oder ein Rücknahmesystem abgegeben werden.
@@ -66,13 +96,6 @@ Wenn dies vor der Abgabe nicht ordnungsgemäß gelöscht wird, kann das ein Date
 > sondern auch aus Datenschutzgründen
 > die ordnungsgemäße Datenlöschung und Vorbereitung des Geräts wichtig.
 > Akkumulatoren und Batterien dürfen ebenfalls nicht einfach in den Restmüll geworfen werden.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, das alte Telefon oder den Akkumulator könne man einfach wegwerfen.
-- Die Bedeutung der getrennten Sammlung auszulassen.
-- Die Datenlöschung zu vergessen.
-- Umweltschutz- und Datenschutzaspekte zu verwechseln.
 
 ## Schnelle Selbstkontrolle
 

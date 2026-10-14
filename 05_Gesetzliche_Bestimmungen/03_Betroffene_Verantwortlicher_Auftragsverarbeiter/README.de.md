@@ -77,11 +77,31 @@ Zum Beispiel:
 
 ## Ihre Beziehung in der Praxis
 
-Wenn ein Auftragsverarbeiter beteiligt ist, braucht es in der Regel:
+Bei einer Auftragsverarbeitung verlangt Art. 28 DSGVO:
 
-- einen Auftragsverarbeitungsvertrag
+- einen Auftragsverarbeitungsvertrag oder einen entsprechenden verbindlichen Rechtsakt
 - klare Weisungen
 - technische und organisatorische Schutzmaßnahmen
+
+## Derselbe Dienstleister in mehreren Rollen
+
+Der Webshop bestimmt den Zweck der Verarbeitung von Bestelldaten. Der Hosting-Anbieter
+kann diese nach Weisung des Betreibers speichern und ist für diesen Vorgang Auftragsverarbeiter.
+Für seine eigenen Rechnungsdaten kann derselbe Anbieter hingegen selbst Verantwortlicher sein.
+Wir bestimmen die Rolle daher **für den jeweiligen Verarbeitungsvorgang**, nicht anhand des Firmennamens.
+
+Bestimmen zwei Organisationen gemeinsam Zwecke und wesentliche Mittel, kann gemeinsame
+Verantwortlichkeit vorliegen (Art. 26). Eine Aufgabenverteilung beseitigt die Rechte
+der Betroffenen nicht. Ein Auftragsverarbeiter kann bei technischen Einzelheiten Spielraum
+haben; einen eigenen zusätzlichen Zweck für Kundendaten darf er daraus nicht ableiten.
+
+**Übung:** Vor einem ausgelagerten Newsletter-Versand klären wir Weisungen, Datenumfang,
+Vertraulichkeit, Schutzmaßnahmen, weitere Auftragsverarbeiter, Vorfallmeldungen und
+Rückgabe oder Löschung nach Abschluss. Die Verantwortung des Verantwortlichen endet
+nicht mit der Auslagerung. Auch den Auftragsverarbeiter treffen eigene gesetzliche Pflichten.
+
+Quelle: [DSB: Pflichten von Auftragsverarbeitern](https://dsb.gv.at/rechte-pflichten/ihre-pflichten-als-auftragsverarbeiterin),
+Art. 4, 26, 28 und 32 DSGVO. Geprüft: 2026-10-14.
 
 ## Prüfungstaugliche Formulierung
 
@@ -89,14 +109,6 @@ Wenn ein Auftragsverarbeiter beteiligt ist, braucht es in der Regel:
 > Der Verantwortliche ist derjenige, der über den Zweck und die Mittel der Datenverarbeitung entscheidet.
 > Der Auftragsverarbeiter hingegen verarbeitet Daten im Namen des Verantwortlichen, auf dessen Weisung.
 > Die Unterscheidung der drei Begriffe ist wichtig, weil die Verantwortlichkeiten nach der GDPR davon abhängen.
-
-## Häufige Prüfungsfehler
-
-- Den Verantwortlichen und den Auftragsverarbeiter gleichzusetzen.
-- Unter den Begriff der betroffenen Person ein Unternehmen zu fassen.
-- Zu behaupten, der Hosting-Anbieter sei immer der Verantwortliche.
-- Nicht zu erkennen, dass die Entscheidung über den Zweck das Schlüsselmerkmal des Verantwortlichen ist.
-- Kein praktisches Beispiel nennen zu können.
 
 ## Schnelle Selbstkontrolle
 

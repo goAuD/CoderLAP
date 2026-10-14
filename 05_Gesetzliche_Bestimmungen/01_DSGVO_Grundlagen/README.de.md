@@ -104,6 +104,37 @@ Weil die DSGVO mit vielen anderen Themen zusammenhängt:
 - Marketing
 - Datensicherheit
 
+## Rechtsgrundlage und Datensicherheit an einem Beispiel
+
+Eine Reparaturwerkstatt bietet eine Online-Terminbuchung an. Die dafür notwendige
+Verarbeitung der Kontaktdaten kann auf Vertragserfüllung oder auf vorvertraglichen
+Maßnahmen auf Anfrage der betroffenen Person beruhen. Gesetzlich vorgeschriebene
+Rechnungsaufbewahrung kann auf einer rechtlichen Verpflichtung beruhen.
+Ein zusätzlicher Werbe-Newsletter verfolgt einen anderen Zweck und ist gesondert zu prüfen;
+aus einer Buchung folgt keine automatische Werbeerlaubnis.
+
+Art. 6 DSGVO nennt diese Rechtsgrundlagen: Einwilligung, Vertragserfüllung, rechtliche
+Verpflichtung, lebenswichtige Interessen, öffentliche Aufgabe oder öffentliche Gewalt
+sowie berechtigte Interessen. Jede hat eigene Voraussetzungen. Bei berechtigten Interessen
+prüfen wir das konkrete Interesse, die Erforderlichkeit und die Rechte der Betroffenen.
+Das ist keine pauschale Erlaubnis; Behörden können sich bei der Erfüllung ihrer Aufgaben
+nicht auf diese Rechtsgrundlage stützen.
+
+Für die Entwicklung übersetzen wir die Entscheidung in einzelne Felder: Zweck,
+Notwendigkeit, Zugriffsrechte, Löschzeitpunkt und beteiligte Dienstleister.
+Verschlüsselung und Zugriffskontrolle schützen Daten, machen deren Erhebung aber nicht
+automatisch rechtmäßig. Eine Bestätigung, die Datenschutzhinweise gelesen zu haben,
+ersetzt ebenfalls keine erforderliche freiwillige Einwilligung.
+
+**Anwendungsbereich:** Die Verordnung kann für automatisierte Verarbeitung sowie
+für manuelle Daten in einem strukturierten Dateisystem gelten. Sie schützt nicht nur
+EU-Staatsangehörige; Art. 3 regelt den räumlichen Anwendungsbereich. Die Ausnahme für
+persönliche oder familiäre Tätigkeiten ist keine allgemeine Ausnahme für kostenlose Websites.
+
+Quellen zur Präzisierung: [EDPB: rechtmäßige Verarbeitung](https://www.edpb.europa.eu/sme/be-compliant/process-personal-data-lawfully_en),
+[EDPB: Grundlagen und Anwendungsbereich](https://www.edpb.europa.eu/sme/learn-the-basics/data-protection-basics_en),
+Art. 2, 3, 5, 6 und 32 DSGVO. Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Die DSGVO ist die Datenschutz-Grundverordnung der Europäischen Union,
@@ -111,14 +142,6 @@ Weil die DSGVO mit vielen anderen Themen zusammenhängt:
 > Sie regelt die Grundsätze für die Verarbeitung personenbezogener Daten,
 > die Rechte der betroffenen Personen und die Pflichten der Verantwortlichen.
 > In Österreich ist neben der DSGVO auch das nationale Datenschutzgesetz relevant.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass die DSGVO nur für Großunternehmen gilt.
-- Die DSGVO mit einer einfachen Empfehlung oder Richtlinie zu verwechseln.
-- Nicht zu wissen, dass der 25. Mai 2018 der Beginn der praktischen Anwendung ist.
-- Nicht zu erkennen, dass auch IP-Adressen und E-Mail-Adressen personenbezogene Daten sein können.
-- Die Rechte der betroffenen Personen auszulassen.
 
 ## Schnelle Selbstkontrolle
 

@@ -5,7 +5,7 @@
 | Datentyp | Beispiel | Schutzniveau |
 |---|---|---|
 | personenbezogene Daten | Name, E-Mail, IP-Adresse | geschützt |
-| besondere Kategorien personenbezogener Daten | Gesundheitsdaten, Biometrie, Religion | besonders geschützt |
+| besondere Kategorien personenbezogener Daten | Gesundheitsdaten, Biometrie zur eindeutigen Identifizierung, Religion | besonders geschützt |
 | strafrechtliche Daten | Daten zu Verurteilungen oder Straftaten | unterliegen gesonderten Regelungen |
 
 ## Was sind personenbezogene Daten?
@@ -45,7 +45,7 @@ Dazu können zum Beispiel gehören:
 Wichtig:
 
 - deren Verarbeitung ist grundsätzlich **verboten**
-- sie dürfen nur mit besonderer Rechtsgrundlage oder Ausnahme verarbeitet werden
+- zusätzlich zur Rechtsgrundlage nach Art. 6 ist eine passende Ausnahme nach Art. 9 Abs. 2 erforderlich
 
 ## Wie ist es mit strafrechtlichen Daten?
 
@@ -54,7 +54,7 @@ sind nicht dasselbe wie besondere Kategorien personenbezogener Daten.
 
 Dafür gilt **Art. 10** der GDPR.
 
-Das ist bei der Prüfung eine typische Falle:
+Die beiden Kategorien haben unterschiedliche Rechtsgrundlagen:
 
 - **Art. 9** = besondere Kategorien
 - **Art. 10** = strafrechtliche Verurteilungen und Daten im Zusammenhang mit Straftaten
@@ -82,24 +82,41 @@ Beispiel:
 | anonyme Daten | nicht mehr einer Person zuordenbar |
 | pseudonymisierte Daten | können noch rückverknüpft werden, daher können weiterhin Datenschutzregeln gelten |
 
+## Einordnungsaufgabe: Kennung statt Name
+
+In einer Übungsdatenbank steht `user-42` statt `Anna`; eine separate Tabelle enthält
+weiterhin die Zuordnung. Das ist **Pseudonymisierung**, keine vollständige Anonymisierung:
+Der Verantwortliche mit Zugriff auf die Zuordnung kann die Person wieder identifizieren.
+Wir schützen die Zuordnung mit getrennten Zugriffsrechten und behandeln auch den
+pseudonymisierten Datensatz weiterhin als personenbezogen.
+
+Bei anonymen Daten ist eine Identifizierung mit vernünftigerweise wahrscheinlich
+eingesetzten Mitteln nicht möglich. Nur den Namen zu entfernen genügt dafür oft nicht:
+Ein seltener Beruf, ein genaues Geburtsdatum und ein kleiner Wohnort können zusammen
+auf eine Person hinweisen. Die Beurteilung berücksichtigt auch verfügbare Zusatzinformationen.
+
+Ein gewöhnliches Profilfoto kann personenbezogen sein, ist aber nicht automatisch
+ein besonderes biometrisches Datum nach Art. 9. Eine zur eindeutigen Gesichtserkennung
+erstellte und verwendete Vorlage ist anders zu beurteilen. Ein Passwort ist sicherheitskritisch,
+gehört für sich genommen aber nicht zu den in Art. 9 aufgezählten besonderen Kategorien.
+
+**Schlussfolgerung:** Der technische Schutzbedarf hängt nicht allein vom Namen der
+rechtlichen Kategorie ab. Auch gewöhnliche Kontaktdaten können großen Schaden verursachen,
+wenn sie zu einer gefährdeten Person gehören.
+
+Quelle: [DSB: besondere Datenkategorien](https://dsb.gv.at/faqs/besondere-datenkategorien),
+Art. 4, 6, 9, 10 und Erwägungsgründe 26, 51 DSGVO. Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Personenbezogene Daten sind alle Informationen,
 > die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.
 > Besondere Kategorien personenbezogener Daten,
-> wie zum Beispiel Gesundheits- oder biometrische Daten,
+> wie Gesundheitsdaten oder biometrische Daten zur eindeutigen Identifizierung,
 > stehen unter besonderem Schutz
 > und ihre Verarbeitung ist grundsätzlich verboten,
 > nur unter bestimmten Ausnahmen zulässig.
 > Daten über strafrechtliche Verurteilungen und Straftaten unterliegen einer gesonderten Regelung nach Art. 10 der GDPR.
-
-## Häufige Prüfungsfehler
-
-- Zu glauben, dass nur Name und Adresse personenbezogene Daten sind.
-- IP-Adressen oder E-Mail-Adressen nicht als personenbezogene Daten einzustufen.
-- Den Begriff „sensible Daten" als rechtliche Kategorie zu betrachten, ohne die besonderen Kategorien zu erwähnen.
-- Art. 9 und Art. 10 Daten zu verwechseln.
-- Zu vergessen, dass die Verarbeitung besonderer Kategorien grundsätzlich verboten ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -113,7 +130,7 @@ Beispiel:
 
 1. Einer Person zuordenbare Information
 2. Name, E-Mail-Adresse, IP-Adresse
-3. Zum Beispiel Gesundheitsdaten, biometrische Daten, religiöse Überzeugung
+3. Zum Beispiel Gesundheitsdaten, biometrische Daten zur eindeutigen Identifizierung, religiöse Überzeugung
 4. Art. 9
 5. Nein, strafrechtliche Daten werden gesondert in Art. 10 geregelt
 
