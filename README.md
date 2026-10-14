@@ -218,6 +218,9 @@ What was deliberately deferred:
 
 ## Static frontend build
 
+Use Python 3.11 or newer. CI uses Python 3.11; the Markdown 3.11 series no
+longer supports Python 3.10.
+
 Install dependencies (once per machine):
 
 ```bash
