@@ -194,6 +194,14 @@ Nem konkrét modelleket kell magolni, hanem érteni kell:
 - mi befolyásolja a használhatóságot
 - melyik alkatrész mire való
 
+## Kidolgozott összehasonlítás: mit mond az adatlap?
+
+Két kitalált készülék akkumulátora 5000 mAh / 3,85 V, illetve 4500 mAh / 3,85 V. Az energiatartalom közelítőleg `Wh = Ah × V`, így 19,25 Wh és 17,325 Wh. Az első nagyobb energiát tárol, de a kijelző, a rádiós kapcsolat, a terhelés és az akkumulátor állapota miatt ebből még nem következik pontos üzemidő.
+
+Ha az első telefon átlagosan 3,85 W-ot fogyasztana, az ideális számítás `19,25 Wh / 3,85 W = 5 óra`. Ez szemléltető becslés, nem egy valódi modell ígért üzemideje.
+
+Az USB-C a csatlakozót jelöli; az átviteli sebességet, videókimenetet és töltési profilt külön kell ellenőrizni. A töltő, a kábel és a telefon együtt határozza meg az elérhető töltést. Hasonlóan, a kamera megapixelszáma önmagában nem írja le a képminőséget. A készülékválasztásnál az adott modell biztonsági frissítési időszaka és javíthatósága is lényeges.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A smartphone egy fejlett mobiltelefon,
@@ -205,14 +213,6 @@ Nem konkrét modelleket kell magolni, hanem érteni kell:
 > és a biometrikus azonosítás.  
 > A működését mobil operációs rendszer, például Android vagy iOS vezérli.
 
-## Gyakori vizsgahibák
-
-- Csak a kamerát és a kijelzőt említeni.
-- A RAM és a tárhely fogalmát összekeverni.
-- Nem tudni, mi a SoC szerepe.
-- Azt hinni, hogy a mAh önmagában mindent eldönt az üzemidőről.
-- Nem említeni a kapcsolódási lehetőségeket és szenzorokat.
-
 ## Gyors önellenőrzés
 
 1. Mi a SoC szerepe egy smartphone-ban?
@@ -223,9 +223,7 @@ Nem konkrét modelleket kell magolni, hanem érteni kell:
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. A SoC (System on a Chip) egyetlen chipben tartalmazza a CPU-t, GPU-t,
-   AI/NPU egységeket és más vezérlőket
-   — ez határozza meg a sebességet és az energiahatékonyságot.
+1. A SoC (System on a Chip) több feldolgozó- és vezérlőegységet integrál, például CPU-t és GPU-t, modelltől függően NPU-t is. Befolyásolja a teljesítményt és az energiahatékonyságot.
 2. A RAM az éppen futó alkalmazások ideiglenes memóriája, a tárhely a fájlok és appok tartós tárhelye.
 3. 4G, 5G, Wi-Fi, Bluetooth, NFC, GPS
 4. Gyorsulásmérő, giroszkóp, közelségérzékelő
@@ -246,3 +244,10 @@ Nem konkrét modelleket kell magolni, hanem érteni kell:
    Használat: Android-eszközök jellemző képességei és a telefonos környezet általános technikai kontextusa.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [USB-IF: USB Power Delivery](https://www.usb.org/usb-charger-pd): töltési képességek egyeztetése.
+- [Google: Pixel hardware specifications](https://support.google.com/pixelphone/answer/16043605?hl=en): külön adatlapmezők jelentősége, nem modellajánlás.
+
+Ellenőrizve: `2026-10-14`.

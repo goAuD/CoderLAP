@@ -141,6 +141,14 @@ Beim Audio kann wichtig sein:
 | wird häufig mit Stift / Tastatur verwendet | wird seltener auf diese Weise genutzt          |
 | weniger „telefonzentriert"                 | ist auch primär ein Kommunikationsgerät        |
 
+## Durchgearbeiteter Abnahmetest: Lernen und Präsentieren
+
+Das Tablet soll PDF-Notizen, Videoanrufe und Präsentationen ermöglichen. Im Test wird dasselbe PDF geöffnet, mit einem Stift kommentiert und als gewöhnliches PDF exportiert. So wird geprüft, ob die Notizen auf einem anderen Gerät erhalten bleiben. Die Kompatibilität des genauen Stiftmodells wird gesondert kontrolliert.
+
+Anschließend wird die Anwendung im Hoch- und Querformat, im geteilten Bildschirm und mit externer Tastatur getestet. Ein großes Display garantiert keine Mehrfensterunterstützung: OS-Version, Hardware und Anwendung wirken zusammen.
+
+Ein Tablet mit mobilem Betriebssystem führt nicht unbedingt die vollständige Laptop-IDE oder einen lokalen Datenbankserver aus. Der benötigte Entwicklungsablauf wird deshalb praktisch erprobt. Bei einem externen Bildschirm werden neben der USB-C-Buchse auch die Videoausgabe des Geräts und der passende Adapter geprüft. Abschließend wird festgehalten, welche Aufgaben offline funktionieren.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Tablet ist ein tragbares, berührungsgesteuertes Gerät mit einem größeren Display als ein Smartphone.  
@@ -149,14 +157,6 @@ Beim Audio kann wichtig sein:
 > die drahtlosen Verbindungen und die Multitasking-Fähigkeit.  
 > Tablets unterstützen häufig auch einen digitalen Stift und eine Tastatur
 > und sind daher auch für Bildungs- und Produktivitätsaufgaben geeignet.
-
-## Häufige Prüfungsfehler
-
-- Das Tablet einfach als „großes Telefon" bezeichnen.
-- Die Rolle von Stylus und Tastatur nicht erwähnen.
-- Den Multitasking-Vorteil weglassen.
-- Glauben, dass ein Tablet nur für Medienkonsum gut ist.
-- Keinen Unterschied zwischen Smartphone und Tablet nennen können.
 
 ## Schnelle Selbstkontrolle
 
@@ -189,3 +189,9 @@ Beim Audio kann wichtig sein:
    Verwendung: Moderne, offizielle Qualitätsrichtlinien für Android-Tablets und Geräte mit verschiedenen Displaygrößen.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Android: Adaptive app quality](https://developer.android.com/docs/quality-guidelines/adaptive-app-quality): Tests von Bildschirmgröße, Fenstermodus und Eingabegeräten.
+
+Geprüft: `2026-10-14`.

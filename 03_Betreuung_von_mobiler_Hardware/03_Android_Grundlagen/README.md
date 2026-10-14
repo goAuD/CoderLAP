@@ -53,7 +53,7 @@ Ez nagy előny, de sokféleséget és eltéréseket is jelent.
 
 Az Android-appok tipikusan:
 
-- `APK` vagy `AAB` formátumhoz kapcsolódnak fejlesztői oldalon
+- `AAB` kiadási csomagból is terjeszthetők; a készülékre települő csomag formátuma `APK`
 - leggyakrabban a **Google Play**-en keresztül jutnak el a felhasználóhoz
 
 De az Android világában más terjesztési módok is létezhetnek.
@@ -133,6 +133,16 @@ Ez rugalmas, de biztonsági kockázatot is jelenthet.
 | többféle eszköz és felület | egységesebb hardver-szoftver kontroll |
 | több terjesztési lehetőség | erősebben ellenőrzött terjesztés      |
 
+## Kiadási csomag és telepített alkalmazás
+
+Az **AAB** (`Android App Bundle`) kiadásra szolgáló csomag. A Google Play ebből az eszköznek megfelelő APK-kat állíthat elő. Az AAB ezért nem azonos egy közvetlenül telepítendő APK-fájllal. Az AOSP nyílt alapja pedig nem jelenti, hogy minden készüléken eleve megtalálható a Google Play vagy az összes Google-szolgáltatás.
+
+## Kidolgozott eset: QR-olvasó alkalmazás
+
+A QR-olvasó kameraképet kér, ezért a kamerahasználat indításakor indokolt a kameraengedély. Egy egyszerű kódbeolvasáshoz a teljes névjegyzék olvasása nem szükséges. A tesztben az engedély megtagadását is kipróbáljuk: az app magyarázza el a következményt, és maradjon használható, ahol ez lehetséges.
+
+Az appok elkülönítését a platform sandboxa támogatja. A megadott engedély viszont tényleges hozzáférést adhat, ezért a felhasználói jóváhagyás és az adattakarékos működés együtt fontos. Eszköztámogatásnál az Android-verzió mellett a biztonsági javítás szintjét és a gyártó vállalt támogatási idejét is ellenőrizzük.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az Android egy széles körben használt mobil operációs rendszer-platform, amely nyílt forrású alapokra épül.  
@@ -140,14 +150,6 @@ Ez rugalmas, de biztonsági kockázatot is jelenthet.
 > Az Android fontos jellemzői az alkalmazások futtatása,
 > a jogosultságkezelés, a Google Play ökoszisztéma,
 > valamint a nagyobb testreszabhatóság.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy Android csak Google telefonokon fut.
-- AOSP és Google Play fogalmát összekeverni.
-- Azt hinni, hogy minden Android készülék ugyanúgy frissül.
-- A nyitottságot csak előnyként kezelni, kockázatok nélkül.
-- Nem tudni, hogy az Android többféle készüléktípuson fut.
 
 ## Gyors önellenőrzés
 
@@ -184,3 +186,11 @@ Ez rugalmas, de biztonsági kockázatot is jelenthet.
    Használat: Play Protect / integritásvédelem és biztonsági környezet.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Android: App Bundles](https://developer.android.com/guide/app-bundle): AAB kiadási formátum és APK generálás.
+- [Android: Permissions](https://developer.android.com/guide/topics/permissions/overview): funkcióhoz kötött engedély és elutasítás kezelése.
+- [AOSP: Application Sandbox](https://source.android.com/docs/security/app-sandbox): alkalmazások elkülönítése.
+
+Ellenőrizve: `2026-10-14`.
