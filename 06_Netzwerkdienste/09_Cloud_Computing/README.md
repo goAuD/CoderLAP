@@ -23,7 +23,7 @@ A NIST meghatározása szerint a cloud computing olyan modell, amely:
 Egyszerűen:
 
 - nem feltétlenül a saját gépeden vagy saját szervertermedben fut minden
-- hanem egy szolgáltató infrastruktúráját használod
+- az erőforrások szolgáltatásként vehetők igénybe, saját szervezeten belül vagy külső szolgáltatónál is
 
 ## Miért jó?
 
@@ -65,6 +65,14 @@ Továbbra is fontos:
 | SaaS | kész szoftver szolgáltatásként |
 | saját szerver | nem cloud attól, hogy távolról elérhető |
 
+## Kidolgozott eset: időszakos tanfolyami terhelés
+
+Egy gyakorló alkalmazásnak hétköznap kevés, vizsga előtt sok egyidejű használója van. A vertikális skálázás egy példánynak ad több erőforrást, a horizontális skálázás több példányt indít. Az utóbbihoz például közösen elérhető adatkezelésre és megfelelő terheléselosztásra is szükség lehet.
+
+Az elasztikusság azt jelenti, hogy az erőforrás a kereslethez igazodva bővíthető és visszavehető. A kapacitás, a kvóta és a költségkeret ettől még véges. A mintaterhelést ezért kipróbáljuk, felső korlátot állítunk be, és megmérjük a válaszidőt.
+
+Az igény szerinti önkiszolgálás több annál, hogy e-mailt írunk egy új szerverért. A szolgáltatás erőforrásokat tud kiosztani és felszabadítani automatizált módon. Ugyanakkor egy kis, állandó terhelésű alkalmazás számára egy egyszerű saját szerver is megfelelő lehet; a cloud jellemzői nem teszik minden feladatra kötelezővé a modellt.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A cloud computing olyan modell,
@@ -74,13 +82,6 @@ Továbbra is fontos:
 > a megosztott erőforráskészlet, a gyors skálázhatóság
 > és a mérhető szolgáltatásjelleg.  
 > Előnye a rugalmasság, de figyelni kell a biztonsági, adatvédelmi és költségszempontokra is.
-
-## Gyakori vizsgahibák
-
-- A cloudot egyszerűen "internetként" definiálni.
-- Azt hinni, hogy a cloud automatikusan mindent biztonságossá tesz.
-- Nem megemlíteni a skálázhatóságot.
-- A SaaS-t összekeverni a teljes cloud fogalommal.
 
 ## Gyors önellenőrzés
 
@@ -113,3 +114,9 @@ Továbbra is fontos:
    Használat: aktuális, gyakorlati, szolgáltatói nézőpontból írt cloud-összefoglaló.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf): a felhő fogalma és telepítési modelljei.
+
+Ellenőrizve: `2026-10-14`.

@@ -73,6 +73,14 @@ Das kann je nach Modell variieren:
 - bei IaaS verbleibt mehr beim Kunden
 - bei SaaS übernimmt der Dienstleister mehr Aufgaben
 
+## Durchgerechnetes Beispiel: Was bedeutet 99,9 Prozent?
+
+Ein beispielhafter Monat mit 30 Tagen hat `30 × 24 × 60 = 43 200` Minuten. Davon sind 0,1 Prozent `43,2` Minuten. In dieser vereinfachten Rechnung entspricht 99,9 Prozent Verfügbarkeit dieser Ausfallzeit. Messverfahren, Ausschlüsse, Wartungsregeln und Gutschriften des tatsächlichen SLA sind vertragsabhängig. Ein SLA verspricht nicht, dass jeder einzelne Ausfall kürzer als 43 Minuten dauert.
+
+Für eine Lernanwendung werden zunächst akzeptabler Datenverlust und Wiederherstellungszeit festgelegt. Danach werden Daten testweise exportiert, in einer anderen Testumgebung wiederhergestellt und Benutzer, Dateien sowie Berechtigungen geprüft. So erhält „exportierbar” einen praktischen Nachweis.
+
+Zur Kostenschätzung gehören Rechenleistung, Speicher, ausgehender Datenverkehr, Sicherungen und Protokollierung. Bei der Datenschutzprüfung zählen neben der Region auch vertragliche Rollen, Unterauftragnehmer, Zugriffe, Löschung und mögliche Drittlandübermittlungen. Ein EU-Speicherort allein ist kein vollständiger Konformitätsnachweis.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Auswahl eines Cloud-Dienstes muss man nicht nur Funktionalität und Preis betrachten,
@@ -81,13 +89,6 @@ Das kann je nach Modell variieren:
 > Darüber hinaus ist es wichtig, das Shared-Responsibility-Modell zu verstehen,
 > also dass sich die Sicherheitsverantwortung
 > zwischen Dienstleister und Kunde aufteilt.
-
-## Häufige Prüfungsfehler
-
-- Nur aufgrund des Preises entscheiden.
-- Glauben, dass in der Cloud alle Sicherheitsaufgaben beim Dienstleister liegen.
-- Datenstandort und Compliance nicht erwähnen.
-- Das Vendor-Lock-in-Problem vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -128,3 +129,12 @@ Das kann je nach Modell variieren:
    Verwendung: offizielles Beispiel für Verfügbarkeit und SLA-Aspekte.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [AWS: Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/): Verantwortung für Konfiguration, Daten und Zugriffe.
+- [Microsoft: Online Services SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1): dienstspezifische Messung und Zusage.
+
+- [EUR-Lex: DSGVO](https://eur-lex.europa.eu/eli/reg/2016/679/oj): Anforderungen an Auftragsverarbeiter in Artikel 28, Drittlandübermittlungen ab Artikel 44.
+
+Geprüft: `2026-10-14`.

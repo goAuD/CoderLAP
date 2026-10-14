@@ -58,19 +58,20 @@ Ezért ma a titkosított kapcsolat az elvárt megoldás.
 | IMAP | szerveroldali szinkronizálás |
 | SMTP | küldés és továbbítás |
 
+## Kidolgozott eset: hol marad a levél?
+
+Egy kliens POP3-mal letölt három levelet. A letöltés önmagában nem kötelező törlés: a kliens beállítható úgy, hogy másolatot hagyjon a szerveren. A POP3 `DELE` parancsa törlésre jelöl, a rendes `QUIT` utáni frissítési szakasz végzi a törlést. A szolgáltató megőrzési szabálya ettől külön kérdés.
+
+Ha a laptop már eltávolította a levelet a szerverről, a később csatlakozó telefon nem tudja ugyanonnan letölteni. A helyben tárolt üzenetekhez külön mentés kell. Két eszköz közös olvasottsági állapotához és mappáihoz ezért jellemzően az IMAP a célszerűbb választás.
+
+POP3S-nél a `995` porton rögtön TLS indul. A `110` porton az `STLS` kiterjesztés válthat TLS-re. A kliensnek sikeres TLS-t és érvényes tanúsítványt kell megkövetelnie a hitelesítési adatok küldése előtt; a portszám önmagában nem teljes biztonsági beállítás.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A POP3 egy levelezési protokoll, amely a bejövő e-mailek letöltésére szolgál.  
 > Egyszerű modellje miatt elsősorban helyi letöltésre alkalmas,
 > míg több eszközös szinkronhoz az IMAP gyakran jobb választás.  
 > A POP3S a POP3 TLS-sel védett változata, ezért biztonságosabb.
-
-## Gyakori vizsgahibák
-
-- A POP3-at küldési protokollnak mondani.
-- A POP3S-t összekeverni az SMTPS-sel.
-- Nem tudni, hogy a POP3 inkább letöltésközpontú modell.
-- Elfelejteni a titkosítás jelentőségét.
 
 ## Gyors önellenőrzés
 
@@ -85,7 +86,7 @@ Ezért ma a titkosított kapcsolat az elvárt megoldás.
 1. Bejövő levelek letöltésére
 2. A `110`
 3. A `995`
-4. A POP3S titkosított
+4. POP3S esetén a TLS azonnal indul; a 110-es POP3-kapcsolat is védhető STLS-frissítéssel, ha támogatott és megkövetelt
 5. Az IMAP
 
 ## Források
@@ -103,3 +104,10 @@ Ezért ma a titkosított kapcsolat az elvárt megoldás.
    Használat: hivatalos portregiszter a `110` és `995` portokhoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 1939: POP3](https://www.rfc-editor.org/rfc/rfc1939.html): letöltés, törlésjelölés, UPDATE állapot.
+- [RFC 2595: TLS with IMAP, POP3 and ACAP](https://www.rfc-editor.org/rfc/rfc2595.html): POP3 STLS mechanizmus, a korszerű TLS-beállításokkal együtt értelmezve.
+
+Ellenőrizve: `2026-10-14`.

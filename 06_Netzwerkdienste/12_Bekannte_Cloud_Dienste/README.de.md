@@ -62,6 +62,19 @@ Zum Beispiel:
 - AWS = hauptsächlich Infrastruktur und Plattform
 - Microsoft 365 = fertige Software als Dienst
 
+## Konkrete Dienste statt nur Anbieternamen einordnen
+
+| Konkretes Beispiel | Wofür? | Begründung der Einordnung |
+| --- | --- | --- |
+| Amazon EC2 | virtuelle Maschine betreiben | Kontrolle auch über das Gast-OS, typisches IaaS |
+| Google Compute Engine | VM-Ressourcen | Infrastruktur, keine fertige Office-Anwendung |
+| Azure App Service | eigene Webanwendung veröffentlichen | verwaltete Laufzeitplattform, PaaS |
+| Gmail in Google Workspace | fertigen E-Mail-Dienst nutzen | Anwendungsdienst, SaaS |
+
+**Durchgearbeitete Frage:** „Ist Azure IaaS oder PaaS?” Dafür muss der konkrete Dienst genannt werden. Eine virtuelle Azure-Maschine und App Service geben dem Kunden unterschiedliche Aufgaben, obwohl sie zum selben Anbieter gehören.
+
+Ein Markenname kann mehrere Produkte, Pakete und Abrechnungsmodelle umfassen. In der Prüfung werden deshalb auch die gelöste Aufgabe und die verbleibenden Betriebsarbeiten erklärt. Diese Liste ist eine Beispielsammlung, keine Beschaffungsempfehlung; Preise, Kontingente und Supportbedingungen werden für das jeweilige aktuelle Paket geprüft.
+
 ## Prüfungstaugliche Formulierung
 
 > Bekannte Cloud-Dienste sind zum Beispiel AWS, Microsoft Azure und Google Cloud
@@ -69,13 +82,6 @@ Zum Beispiel:
 > Google Workspace, iCloud oder Dropbox
 > als eher SaaS- oder Endbenutzer-Cloud-Lösungen.  
 > Bei der Prüfung ist es wichtig, das Beispiel eines Dienstes dem richtigen Cloud-Modell zuordnen zu können.
-
-## Häufige Prüfungsfehler
-
-- Alle Cloud-Dienste als SaaS bezeichnen.
-- Glauben, dass AWS nur Speicherplatz ist.
-- Microsoft 365 als Infrastrukturdienst bezeichnen.
-- Keine konkreten Beispiele nennen können.
 
 ## Schnelle Selbstkontrolle
 
@@ -124,3 +130,12 @@ Zum Beispiel:
    Verwendung: offizielle Dropbox-Serviceseite.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [AWS: EC2 concepts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html): konkretes Beispiel für VM-Infrastruktur.
+- [Azure: App Service overview](https://learn.microsoft.com/en-us/azure/app-service/overview): PaaS zum Anwendungsbetrieb.
+- [Google: Compute Engine](https://docs.cloud.google.com/compute/docs/overview): virtuelle Maschinen.
+- [Google Workspace: Gmail](https://workspace.google.com/products/gmail/): fertiger E-Mail-Dienst.
+
+Geprüft: `2026-10-14`.
