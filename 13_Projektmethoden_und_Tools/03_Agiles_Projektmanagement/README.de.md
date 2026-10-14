@@ -39,6 +39,14 @@ geführt.
 | agil | Grundprinzipien und Denkweise |
 | Scrum | ein konkretes agiles Framework |
 
+## Klein liefern, echtes Feedback erhalten, neu entscheiden
+
+Der erste nutzbare Teil einer Lernanwendung listet drei Themen und öffnet deren Beschreibungen. Bei der Erprobung zeigt sich: Lernende würden Themen eher über Stichwörter als über Kategorien finden. Deshalb erhält die Suche im nächsten Schritt Vorrang; eine dekorative Animation wird verschoben.
+
+Zur Bewertung beobachten wir, ob die gewünschte Lernaufgabe gelingt. Die Anzahl fertiger Bildschirme allein zeigt keinen Nutzen. Der Plan wird angepasst, Qualitätsanspruch, Datenschutz und notwendige Dokumentation bleiben erhalten.
+
+Das Agile Manifest betont funktionierende Software und Zusammenarbeit, ohne Dokumentation und Planung für wertlos zu erklären. Agilität garantiert keine Geschwindigkeit: Häufiges Lernen und ein nachhaltiges Arbeitstempo ermöglichen die Anpassung.
+
 ## Prüfungstaugliche Formulierung
 
 > Agiles Projektmanagement ist ein flexibler Projektführungsansatz,
@@ -47,13 +55,6 @@ geführt.
 > Ziel ist es, dass das Team schnell auf sich ändernde Anforderungen reagieren kann,
 > während es regelmäßig Mehrwert liefert.  
 > Agil bedeutet nicht eine einzelne Methode, sondern eine Denkweise, zu der Frameworks wie z. B. Scrum gehören können.
-
-## Häufige Prüfungsfehler
-
-- Agil mit Scrum vollständig gleichsetzen.
-- Behaupten, dass es darin keine Planung gibt.
-- Die Rolle von Feedback und Iteration nicht erwähnen.
-- Nur als Entwicklungsmethode beschreiben, ohne den Projektführungsaspekt.
 
 ## Schnelle Selbstkontrolle
 
@@ -72,6 +73,14 @@ geführt.
 5. Weil man früher Feedback bekommt
 
 ## Quellen
+
+- [Agile Manifesto](https://agilemanifesto.org/)  
+  Abwägung von Werten, nicht Verzicht auf Dokumentation.
+
+- [Agile Manifesto: Principles](https://agilemanifesto.org/principles.html)  
+  Häufige Wertlieferung, Rückmeldung und nachhaltige Entwicklung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Manifesto for Agile Software Development  
    https://agilemanifesto.org/  

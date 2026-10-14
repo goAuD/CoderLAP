@@ -52,6 +52,23 @@ Ein Versionsverwaltungssystem verfolgt:
 
 Ein Versionsverwaltungssystem ist nützlich, aber nicht dasselbe wie eine vollständige Backup-Strategie.
 
+## Arbeitsverzeichnis, Staging und Commit
+
+In Git verändert sich eine bearbeitete Datei zunächst im Arbeitsverzeichnis. Die Staging Area enthält die für den nächsten Commit vorbereiteten Änderungen. Ein Commit speichert den ausgewählten Zustand in der lokalen Historie; erst ein gesonderter Push überträgt ihn in das Remote-Repository.
+
+Diese Befehle zeigen die Unterschiede in einem bereits geöffneten Übungsrepository und ändern keine Dateien:
+
+```bash
+git status --short
+git diff
+git diff --staged
+git log -3 --oneline
+```
+
+`git diff` zeigt noch nicht vorgemerkte Änderungen, `git diff --staged` die für den nächsten Commit vorbereitete Differenz. Wurde dieselbe Zeile auf zwei Zweigen unterschiedlich geändert, kann ein Merge-Konflikt entstehen. Dann müssen die Absichten zusammengeführt und das Ergebnis geprüft werden.
+
+In gemeinsam genutzter Historie wird die Wirkung eines fehlerhaften Commits häufig mit einem neuen Gegen-Commit (`git revert`) aufgehoben. `.gitignore` entfernt weder bereits verfolgte Dateien noch Historie; ein versehentlich geteilter geheimer Schlüssel muss gesondert widerrufen werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Versionsverwaltung bedeutet die Nachverfolgung und Verwaltung von Änderungen an Dateien, insbesondere am Quellcode.  
@@ -59,13 +76,6 @@ Ein Versionsverwaltungssystem ist nützlich, aber nicht dasselbe wie eine vollst
 > und es besteht die Möglichkeit, frühere Zustände wiederherzustellen
 > und die Arbeit mehrerer Entwickler zu koordinieren.  
 > In der modernen Softwareentwicklung ist Git eines der verbreitetsten verteilten Versionsverwaltungssysteme.
-
-## Häufige Prüfungsfehler
-
-- Versionsverwaltung mit einfachem Kopieren von Dateien gleichsetzen.
-- Die Teamarbeit nicht erwähnen.
-- Versionsverwaltung mit dem Backup-Begriff verwechseln.
-- Nicht wissen, was ein `Commit` oder `Branch` ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,6 +94,14 @@ Ein Versionsverwaltungssystem ist nützlich, aber nicht dasselbe wie eine vollst
 5. Weil sie einen anderen Zweck hat als die Datensicherung
 
 ## Quellen
+
+- [Git: Recording changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)  
+  Staging, Diff, Commit und Grenzen von Ignore-Regeln.
+
+- [Git: git-revert](https://git-scm.com/docs/git-revert)  
+  Gegen-Commit ohne Umschreiben der Historie.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Git - About Version Control  
    https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control  

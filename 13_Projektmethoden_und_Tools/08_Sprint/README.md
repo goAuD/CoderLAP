@@ -3,12 +3,11 @@
 ## Gyors vizuális kép
 
 ```text
-Sprint planning
-    -> fejlesztés
-    -> Daily Scrum
-    -> ellenőrzés
-Sprint review
-Sprint retrospective
+Sprint (legfeljebb egy hónap)
+  Planning
+  Fejlesztés, ellenőrzés és munkanaponként Daily Scrum
+  Review
+  Retrospective
 ```
 
 ## Mi az a sprint?
@@ -19,7 +18,7 @@ Ebben a csapat:
 
 - kiválaszt bizonyos backlog-elemeket
 - dolgozik rajtuk
-- eléri a sprintcélt
+- a sprintcél elérésén dolgozik
 - a végén bemutatja az eredményt
 
 ## Miért fontos?
@@ -34,7 +33,7 @@ Ebben a csapat:
 - **Sprint Planning**: mit vállalunk és hogyan?
 - **Daily Scrum**: napi rövid egyeztetés
 - **munka a sprint backlog alapján**
-- **Sprint Review**: eredmények bemutatása
+- **Sprint Review**: eredmények és következő lépések közös vizsgálata
 - **Sprint Retrospective**: folyamat javítása
 
 ## Sprint, projekt, release: ne keverd össze
@@ -54,20 +53,21 @@ Egy projekt több sprintből állhat, és egy release nem mindig esik egyetlen s
 - ne vállaljon túl sokat a csapat
 - a sprint közben ne változzon összevissza a fókusz
 
+## Egy kéthetes sprint végigkövetése
+
+A Planning során a csapat célja egy használható témakeresés. A Developers a kapacitás és a kész állapotra vonatkozó közös minőségi feltételek, a Definition of Done alapján választ munkát. A Daily Scrumokon a célhoz vezető tervet igazítják. A kész Incrementnek használhatónak és a korábbi eredményekkel együtt működőképesnek kell lennie.
+
+A Sprint Review a sprinten belül történik: a Scrum Team és az érintettek megvizsgálják az eredményt, és a következő döntéseket közösen alakítják. Ez több egy bemutatónál. A sprintet a Retrospective zárja, ahol a csapat a saját együttműködésén javít.
+
+A Sprint legfeljebb egy hónapos. Használható eredmény a vége előtt is kiadható; a Review nem kiadási engedélykapu. A Sprint Goalt veszélyeztető változtatást nem végzünk. Ha maga a cél érvényét veszti, a sprint megszakítására a Product Owner jogosult.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A sprint a Scrum egyik központi eleme.  
 > Ez egy rövid, fix időtartamú iteráció,
 > amely alatt a csapat meghatározott backlog-elemekből dolgozik,
 > és egy elérendő sprintcél felé halad.  
-> A sprint végén ellenőrizhető eredménynek kell létrejönnie, majd review és retrospective következik.
-
-## Gyakori vizsgahibák
-
-- A sprintet egyszerű határidőnek tekinteni.
-- Nem megemlíteni, hogy fix időkeretű.
-- A sprintet összekeverni a release-szel.
-- Nem említeni a sprintcélt és a végén történő ellenőrzést.
+> A sprint során használható Incrementet hoz létre a csapat; a Review és a Retrospective is a sprinten belül történik.
 
 ## Gyors önellenőrzés
 
@@ -80,12 +80,20 @@ Egy projekt több sprintből állhat, és egy release nem mindig esik egyetlen s
 ## Rövid válaszok az önellenőrzéshez
 
 1. Rövid, time-boxolt iteráció
-2. Általában `1-4 hét`
+2. Legfeljebb egy hónap, gyakran egy vagy két hét.
 3. Planning, Daily Scrum, Review, Retrospective
 4. Fókuszt és kiszámíthatóságot ad
 5. A sprint munkaciklus, a release kiadás
 
 ## Források
+
+- [Scrum.org: What is a Sprint?](https://www.scrum.org/resources/what-is-a-sprint-in-scrum)  
+  A Scrum Guide-hoz kapcsolódó hivatalos szakmai magyarázat.
+
+- [Scrum.org: What is a Sprint Review?](https://www.scrum.org/resources/what-is-a-sprint-review)  
+  A Scrum Guide-hoz kapcsolódó hivatalos szakmai magyarázat.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

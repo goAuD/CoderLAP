@@ -45,19 +45,20 @@ Az alábbi hátrányok részben a szigorú szerkezetből következnek:
 | dokumentáció | jellemzően hangsúlyos | a szükséges mértékben |
 | tesztelés | formálisan összerendelt | folyamatos, iteratív |
 
+## Melyik előnyért milyen ráfordítást vállalunk?
+
+Egy közbeszerzésben készülő nyilvántartásnál fontos lehet, hogy minden elfogadott követelményhez megmutatható legyen a hozzá tartozó teszt és átadási bizonyíték. Ez indokolja a követelményazonosítókat, a formális jóváhagyásokat és a dokumentumok következetes kezelését.
+
+Ha azonban a megrendelő még maga sem tudja, hogyan akar keresni, egy korai felületi prototípussal előbb tisztázható az igény. A formális ellenőrzési rend önmagában nem helyettesíti a felhasználói visszajelzést. A dokumentáció méretét a bizonyítási igényhez és a kockázathoz igazítjuk.
+
+Az egyszerű, szigorúan egymás utáni V alkalmazása lehet merev. A V-Modell XT viszont testreszabható, és iteratív-inkrementális megvalósítást is kezel. Ezért az előnyöket és a hátrányokat mindig a választott változatra és alkalmazási módra vonatkoztatjuk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A V-modell előnye, hogy világos szerkezetet ad,
 > és a fejlesztési lépésekhez a megfelelő tesztelési lépéseket rendeli.  
 > Ez javítja a nyomon követhetőséget és a minőségbiztosítást.  
 > Hátránya, hogy merevebb, nagyobb dokumentációs igénnyel járhat, ezért gyorsan változó projektekben kevésbé előnyös.
-
-## Gyakori vizsgahibák
-
-- Csak az előnyöket felsorolni.
-- A hátrányokat összekeverni a vízesésmodell általános kritikájával.
-- Nem megemlíteni a nyomon követhetőséget.
-- Azt állítani, hogy a V-modell minden projekthez ideális.
 
 ## Gyors önellenőrzés
 
@@ -71,11 +72,16 @@ Az alábbi hátrányok részben a szigorú szerkezetből következnek:
 
 1. A világos szerkezet és a tesztelési összerendelés
 2. Mert jól dokumentálható és nyomon követhető
-3. A merevség
+3. Szigorúan szekvenciális alkalmazásnál a változtatási és dokumentációs ráfordítás.
 4. Mert a fázisok erősen egymásra épülnek
 5. A tesztelés tudatosabb bekapcsolásában
 
 ## Források
+
+- [V-Modell XT Bund: Projektauftrag](https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell%20XT%20Bund-2.0-HTML/2d5213b1f2d3063.html)  
+  A testreszabás és az iteratív-inkrementális eljárás kifejezett lehetősége.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. V-Modell XT Bund 2.0 - Gesamt PDF  
    https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell-XT-Bund-2.0-Gesamt.pdf  

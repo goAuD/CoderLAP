@@ -46,6 +46,14 @@ Itt dől el többek között:
 | szoftverterv | hogyan építjük fel |
 | implementáció | a konkrét megvalósítás kódban |
 
+## Egy kölcsönzés feladatainak szétválasztása
+
+Az alkalmazás kölcsönzési gombja három jól elkülöníthető felelősséghez kapcsolódik. A felület összegyűjti az eszközazonosítót és megjeleníti a választ. Az alkalmazási logika megállapítja, hogy a bejelentkezett személy jogosult-e, és milyen üzleti szabály érvényes. Az adattárolási réteg megbízhatóan rögzíti az új kölcsönzést.
+
+Az interfész szerződése megadja a sikeres választ és az értelmezhető eredményeket, például „az eszköz már foglalt”. A párhuzamos kérések kezelése és az adatbázis-korlát a terv része; csak a gomb letiltása nem biztosít szerveroldali védelmet.
+
+Ezek lehetnek egyetlen alkalmazás moduljai. A felelősségek szétválasztása nem követeli meg mikroszolgáltatások bevezetését. A tervet az ismert igényhez igazítjuk, és a döntések indokát megőrizzük, hogy később érthetően lehessen módosítani.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverterv a követelmények technikai megvalósításának terve.  
@@ -53,13 +61,6 @@ Itt dől el többek között:
 > az interfészeket, az adatkezelést
 > és a fontos tervezési döntéseket.  
 > Célja, hogy a fejlesztés átlátható, bővíthető és karbantartható legyen.
-
-## Gyakori vizsgahibák
-
-- A szoftvertervet összekeverni a követelményspecifikációval.
-- Azt hinni, hogy ez már maga a kódolás.
-- Kihagyni az architektúra és interfészek szerepét.
-- Csak a felületre gondolni, és nem az egész rendszerre.
 
 ## Gyors önellenőrzés
 
@@ -78,6 +79,11 @@ Itt dől el többek között:
 5. Jobb szétválasztással és átláthatósággal
 
 ## Források
+
+- [Microsoft: Architecture styles](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/)  
+  Komponensek felelőssége és a választott felépítés kompromisszumai.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Microsoft Learn - Architecture styles  
    https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/  

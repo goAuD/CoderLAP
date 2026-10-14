@@ -39,6 +39,14 @@ vezetjük.
 | agilis | alapelvek és szemlélet |
 | Scrum | egy konkrét agilis keretrendszer |
 
+## Kis szállítás, valódi visszajelzés, új döntés
+
+Egy tanulási alkalmazás első használható része három témát listáz és megnyitja a leírásukat. A tanulók próbájából kiderül, hogy a témát inkább kulcsszóval keresnék, mint kategóriákon át. A következő lépés prioritása ezért a keresés lesz, a díszítő animáció későbbre kerül.
+
+Az értékeléshez azt figyeljük meg, el tudják-e végezni a tanulók a kívánt feladatot. A kész képernyők száma önmagában nem mutatja a hasznot. A terv változik, de a minőségi elvárás, az adatvédelem és a szükséges dokumentáció megmarad.
+
+Az Agilis Kiáltvány a működő szoftvert és az együttműködést hangsúlyozza, miközben a dokumentációt és a tervet sem tekinti értéktelennek. Az agilitás nem garantált gyorsaság: a gyakori tanulás és a fenntartható munkaritmus adja az alkalmazkodás alapját.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az agilis projektmenedzsment olyan rugalmas projektvezetési megközelítés,
@@ -48,13 +56,6 @@ vezetjük.
 > Az agilis nem egyetlen módszert jelent,
 > hanem egy szemléletet, amelyhez olyan keretrendszerek tartozhatnak,
 > mint például a Scrum.
-
-## Gyakori vizsgahibák
-
-- Az agilist a Scrum-mal teljesen azonosnak venni.
-- Azt állítani, hogy nincs benne tervezés.
-- Nem megemlíteni a visszajelzés és iteráció szerepét.
-- Csak fejlesztési módszerként leírni, projektvezetési oldal nélkül.
 
 ## Gyors önellenőrzés
 
@@ -73,6 +74,14 @@ vezetjük.
 5. Mert hamarabb kapunk visszajelzést
 
 ## Források
+
+- [Agile Manifesto](https://agilemanifesto.org/)  
+  Az értékek egymáshoz viszonyítása, nem a dokumentáció elhagyása.
+
+- [Agile Manifesto: Principles](https://agilemanifesto.org/principles.html)  
+  Gyakori értékszállítás, visszajelzés és fenntartható fejlődés.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Manifesto for Agile Software Development  
    https://agilemanifesto.org/  

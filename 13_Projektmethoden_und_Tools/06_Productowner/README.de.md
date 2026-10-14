@@ -38,6 +38,14 @@ Denn wenn es keine klare Priorität gibt:
 | Product Owner | verantwortlich für Produktwert und Priorität |
 | Projektleiter | Fokus auf Projektkoordination |
 
+## Zwischen zwei Wünschen anhand des Nutzens entscheiden
+
+Lernende wünschen eine Themensuche, die Leitung eine auffällige Statistik auf der Startseite. Der Product Owner klärt, was das aktuelle Product Goal besser unterstützt, etwa Lernmaterial schnell zu finden. Dafür nutzt er Rückmeldungen und Schätzungen der Developers und ordnet das Product Backlog nachvollziehbar.
+
+Eine Person trägt diese Verantwortung und berücksichtigt die Bedürfnisse mehrerer Beteiligter. Andere können Einträge schreiben und präzisieren; die Verantwortung geht dadurch nicht auf ein Gremium über. Die technische Umsetzung und die leistbare Sprintarbeit planen die Developers.
+
+Der Product Owner ist mehr als ein Ticketverwalter: Er verantwortet auch Produktwert und Produktziel. „Product Manager“ wird je nach Organisation unterschiedlich verwendet. Scrum schreibt diese zusätzliche Rolle nicht vor; zwischen beiden Bezeichnungen gibt es keine überall gleiche organisatorische Grenze.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Product Owner ist eine der Schlüsselrollen im Scrum-Team
@@ -46,13 +54,6 @@ Denn wenn es keine klare Priorität gibt:
 > die Festlegung der Prioritäten
 > und die Abstimmung der Stakeholder-Anforderungen.  
 > Der Product Owner stellt sicher, dass sich das Team mit den wichtigsten und wertschöpfendsten Elementen befasst.
-
-## Häufige Prüfungsfehler
-
-- Den Product Owner mit dem Scrum Master verwechseln.
-- Behaupten, dass er die Entwickler technisch leitet.
-- Die Backlog-Priorisierung nicht erwähnen.
-- Strategische und umsetzungsnahe Produktrollen nicht voneinander trennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -71,6 +72,11 @@ Denn wenn es keine klare Priorität gibt:
 5. Er unterstützt, dass die wertvollsten Dinge fertiggestellt werden
 
 ## Quellen
+
+- [Scrum.org: What is a Product Owner?](https://www.scrum.org/resources/what-is-a-product-owner)  
+  Offizielle fachliche Erläuterung zum Scrum Guide.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  
