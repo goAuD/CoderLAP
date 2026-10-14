@@ -53,6 +53,47 @@ Weil mit Klassen:
 - klarere Verantwortungsbereiche definiert werden können
 - eine erweiterbare Struktur geschaffen werden kann
 
+## Konstruktor, Instanzmitglied und statisches Mitglied
+
+Wir erzeugen zwei Themen, markieren aber nur das erste als abgeschlossen.
+Das vollständige Beispiel läuft in Node.js.
+
+<!-- example:run -->
+
+```javascript
+class Topic {
+  static created = 0;
+  constructor(title) {
+    if (typeof title !== "string" || title.trim() === "") {
+      throw new TypeError("Nonempty title required");
+    }
+    this.title = title;
+    this.completed = false;
+    Topic.created += 1;
+  }
+  complete() { this.completed = true; }
+}
+const first = new Topic("Loops");
+const second = new Topic("Functions");
+first.complete();
+console.log(first.completed, second.completed, Topic.created);
+```
+
+```text
+true false 2
+```
+
+`new Topic(...)` erzeugt eine Instanz und ruft den Konstruktor auf. Dieser prüft
+den Titel und setzt den Anfangszustand. `this` bezeichnet die aktuelle Instanz.
+`title` und `completed` gehören jeweils einer Instanz. `static created` gehört
+dagegen zur Klasse; wir lesen den Wert mit `Topic.created`.
+
+Der Zähler misst Erzeugungen in diesem Prozess, nicht Themen in einer Datenbank
+und auch nicht die Zahl noch lebender Objekte. Die öffentlichen Felder dienen
+hier der Anschaulichkeit. Zum Schutz von Gültigkeitsregeln können private Felder
+und prüfende Methoden verwendet werden; JavaScript kennzeichnet private Felder
+mit `#` und nicht mit dem Schlüsselwort `private`.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Klasse ist einer der Grundbegriffe der objektorientierten Programmierung, die die Eigenschaften und Operationen  
@@ -60,13 +101,6 @@ Weil mit Klassen:
 > Die Klasse ist ein Plan oder eine Vorlage, aus der konkrete Objekte instanziiert werden können.  
 > Mit ihrer Hilfe lässt sich das Programm besser strukturieren, und Elemente der realen Welt oder Geschäftsbegriffe
 > können gut modelliert werden.
-
-## Häufige Prüfungsfehler
-
-- Die Klasse mit dem Objekt gleichsetzen.
-- Attribute und Methoden nicht erwähnen.
-- Glauben, dass die Klasse nur ein technisches Schlüsselwort ist.
-- Die Modellierungsrolle auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -85,6 +119,11 @@ Weil mit Klassen:
 5. Das eine ist die Vorlage, das andere eine konkrete Instanz
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes): Konstruktor, static und Instanzmitglieder.
+
 
 1. MDN - Using classes  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes  

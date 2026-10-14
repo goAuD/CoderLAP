@@ -54,7 +54,7 @@ Az adatszerkezet azt írja le, hogyan szervezzük az adatokat úgy, hogy:
 
 | Adatszerkezet | Mire jó? |
 |---|---|
-| tömb / array | azonos típusú elemek sorozata |
+| tömb / array | indexelhető elemsor; a megengedett elemtípusok nyelvfüggők |
 | lista | rendezett elemsor |
 | verem / stack | `LIFO` logika |
 | sor / queue | `FIFO` logika |
@@ -74,6 +74,38 @@ Az adatszerkezet azt írja le, hogyan szervezzük az adatokat úgy, hogy:
 | adattípus | egy adatfajta |
 | adatszerkezet | adatok szervezett együttese |
 
+## A művelethez választunk adatszerkezetet
+
+Feladat: egyszer számoljuk az elvégzett témákat, címüket pedig azonosító alapján
+keressük. Node.js-ben futtatható megoldás:
+
+<!-- example:run -->
+
+```javascript
+const completed = new Set(["LAP-15-01", "LAP-15-01", "LAP-15-02"]);
+const titles = new Map([["LAP-15-01", "Lifecycle"], ["LAP-15-02", "Paradigms"]]);
+console.log(completed.size);
+console.log(completed.has("LAP-15-02"));
+console.log(titles.get("LAP-15-01"));
+```
+
+```text
+2
+true
+Lifecycle
+```
+
+A `Set` egyedi értékeket tárol, ezért az ismételt `LAP-15-01` nem növeli a
+darabszámot. A `Map` kulcs alapján ad vissza értéket. Ha a tanulási sorrend és
+az ismétlések is fontosak, külön tömbben tárolhatjuk a gyakorlási eseményeket.
+Így a választást az elvárt művelet indokolja: sorrend, egyediség vagy kulcsos keresés.
+
+A lista rendezettsége itt azt jelenti, hogy az elemeknek sorrendjük van, nem azt,
+hogy érték szerint növekvők. Egy JavaScript `Array` különböző típusokat is
+tartalmazhat; a homogén elemkövetelmény nyelv- vagy konkrét tárolótípus-függő.
+A típus fogalma az összetett típusokra is kiterjed, tehát adattípus és
+adatszerkezet nem két egymást kizáró kategória.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az adattípus azt határozza meg, hogy milyen jellegű adatot kezelünk, például egész számot, szöveget vagy logikai  
@@ -81,13 +113,6 @@ Az adatszerkezet azt írja le, hogyan szervezzük az adatokat úgy, hogy:
 > Az adatszerkezet ezzel szemben azt írja le, hogyan szervezzük és tároljuk az adatokat, például tömbben, listában,  
 > veremben vagy kulcs-érték párok formájában.  
 > A megfelelő adattípus és adatszerkezet kiválasztása fontos a program helyes működése és teljesítménye szempontjából.
-
-## Gyakori vizsgahibák
-
-- Az adattípust és adatszerkezetet összekeverni.
-- Csak alap típusokat említeni, szerkezeteket nem.
-- Nem megemlíteni a teljesítmény szempontját.
-- Azt hinni, hogy az adatszerkezet csak adatbázisos fogalom.
 
 ## Gyors önellenőrzés
 
@@ -106,6 +131,11 @@ Az adatszerkezet azt írja le, hogyan szervezzük az adatokat úgy, hogy:
 5. Mert hat a helyességre és teljesítményre
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Keyed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections): Map és Set választása.
+
 
 1. MDN - Grammar and types  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types  

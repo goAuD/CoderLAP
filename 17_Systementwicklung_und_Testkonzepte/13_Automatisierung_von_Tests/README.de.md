@@ -61,19 +61,49 @@ Typischerweise:
 - `CI`-Systeme
 - Reporting-Werkzeuge
 
+## Ein Test enthält auch eine Erwartung
+
+Der Vertrag lautet: Nur ganze Platzanzahlen aus `1..30` sind zulässig. Das
+folgende minimale Node.js-Programm prüft die Regel ohne Paketinstallation.
+Bei einer Abweichung wirft es eine Ausnahme und würde mit Fehlerstatus enden.
+
+<!-- example:run -->
+
+```javascript
+function validSeats(value) {
+  return Number.isInteger(value) && value >= 1 && value <= 30;
+}
+const cases = [[0, false], [1, true], [30, true], [31, false], [1.5, false], ["2", false]];
+for (const [input, expected] of cases) {
+  const actual = validSeats(input);
+  if (actual !== expected) {
+    throw new Error(`Input ${JSON.stringify(input)}: expected ${expected}, got ${actual}`);
+  }
+}
+console.log(`${cases.length} checks passed`);
+```
+
+```text
+6 checks passed
+```
+
+Die drei Teile heißen **Arrange**, Eingabe und Erwartung vorbereiten; **Act**,
+die geprüfte Funktion aufrufen; **Assert**, das Ergebnis vergleichen. Die
+Erwartungen stammen aus der Anforderung. Ein bloßer Funktionsaufruf ohne
+erwartetes Ergebnis ist noch keine solche Prüfung.
+
+Für größere Testsammlungen stehen die eingebauten Node-Module `node:test` und
+`node:assert/strict` ohne zusätzliche Abhängigkeit bereit. In CI verhindert ein
+Fehlerstatus den nächsten Schritt. Tests sollen voneinander unabhängig sein;
+Fälle mit Datei- oder Datenbankänderungen erhalten eine eigene Testumgebung.
+Eine menschliche Erprobung der Gebrauchstauglichkeit bleibt ein gesonderter Nachweis.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Testautomatisierung werden bestimmte Tests automatisch durch Werkzeuge und Skripte ausgeführt.  
 > Dies ist besonders nützlich bei wiederkehrenden, Regressions- oder in `CI` integrierbaren Tests, da es eine  
 > schnellere und häufiger durchführbare Prüfung ermöglicht.  
 > Allerdings lässt sich nicht jeder Test sinnvoll automatisieren, und auch die Wartung automatisierter Tests erfordert Ressourcen.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass alle Tests automatisiert werden müssen.
-- Die Wartungskosten nicht erwähnen.
-- Testautomatisierung mit dem gesamten QA gleichsetzen.
-- Den Zusammenhang mit `CI` auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -93,6 +123,12 @@ Typischerweise:
 
 ## Quellen
 
+Geprüft: `2026-10-14`.
+
+- [Node.js: Assert](https://nodejs.org/api/assert.html): eingebaute Unterstützung für Prüfaussagen.
+- [Selenium: Avoid sharing state](https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/): Unabhängigkeit der Tests.
+
+
 1. Selenium - Overview of Test Automation  
    https://www.selenium.dev/documentation/test_practices/overview/  
    Verwendung: offizielle, moderne Quelle zu Zweck, Vorteilen und Einschränkungen der Testautomatisierung.
@@ -102,7 +138,7 @@ Typischerweise:
    Verwendung: offizielle Quelle dazu, wie sich Testautomatisierung in den `CI`-Prozess einfügt.
 
 3. ISTQB CTFL Overview  
-   https://test.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/  
+   https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/
    Verwendung: offizieller Hintergrund zu Vorteilen und Risiken der Testautomatisierung aus Testsicht.
 
 Abgerufen: `2026-04-09`

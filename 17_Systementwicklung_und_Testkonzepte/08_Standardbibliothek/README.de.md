@@ -12,7 +12,7 @@
 
 ## Was ist eine Standard Library?
 
-Zu jeder ernsthaften Programmiersprache gehört eine Basisbibliothek oder ein standardmäßiges Bibliotheksset.
+Die meisten allgemeinen Programmiersprachen und Laufzeitumgebungen bieten Basisbibliotheken, deren Umfang je nach Plattform unterschiedlich ist.
 
 Dieses bietet typischerweise:
 
@@ -32,7 +32,7 @@ Dieses bietet typischerweise:
 Zum Beispiel:
 
 - Dateien verwalten
-- Daten berechnen
+- Datums- und Zeitwerte berechnen
 - Netzwerkoperationen durchführen
 - Daten transformieren
 - mit Collections arbeiten
@@ -51,6 +51,39 @@ Zum Beispiel:
 - schwerer zu warten
 - man dupliziert unnötig das, was bereits fertig und gut gelöst existiert
 
+## Auch den Vertrag einer eingebauten Operation lesen
+
+Aufgabe: Zahlen aufsteigend sortieren, ohne die Eingabe zu verändern, danach
+die sortierten Werte verdoppeln. Das Beispiel läuft in Node.js und modernen Browserkonsolen.
+
+<!-- example:run -->
+
+```javascript
+const values = [20, 3, 100];
+const sorted = [...values].sort((a, b) => a - b);
+console.log(JSON.stringify(sorted));
+console.log(JSON.stringify(values));
+console.log(JSON.stringify(sorted.map(value => value * 2)));
+```
+
+```text
+[3,20,100]
+[20,3,100]
+[6,40,200]
+```
+
+`sort` verändert das bearbeitete Array; deshalb kopieren wir zuerst.
+`(a, b) => a - b` liefert den numerischen Vergleich: Bei negativem Ergebnis kommt
+`a` zuerst. `map` erzeugt aus den Rückgabewerten des Callbacks ein neues Array.
+In der Dokumentation prüfen wir somit nicht nur die Eingabe, sondern auch
+Rückgabe, Seiteneffekte und Voraussetzungen.
+
+Bei JavaScript gehören `Array`, `Math` und `JSON` zur Sprache. DOM und
+Dateiauswahldialog des Browsers sind Plattformdienste; `node:fs` gehört zur
+Node.js-Basisbibliothek. Nicht jede Umgebung stellt dieselben APIs bereit.
+Ein externes Paket ist sinnvoll, wenn es eine konkrete Lücke schließt. Zuerst
+prüfen wir vorhandene Werkzeuge, Kompatibilität und Wartungsaufwand.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Standard Library ist die Sammlung von standardmäßigen Funktionen, Modulen und Klassen, die zur  
@@ -58,13 +91,6 @@ Zum Beispiel:
 > Ihr Zweck ist es, dass der Entwickler häufige Aufgaben mit fertigen Lösungen umsetzen kann, zum Beispiel  
 > Dateiverwaltung, Datenverarbeitung, Textverarbeitung oder mathematische Operationen.  
 > Die Verwendung der Standard Library ermöglicht eine schnellere, einheitlichere und zuverlässigere Entwicklung.
-
-## Häufige Prüfungsfehler
-
-- Die Standard Library als beliebiges externes Paket bezeichnen.
-- Glauben, dass sie nur ein "Komfort-Extra" ist.
-- Die Verringerung der Entwicklungszeit nicht erwähnen.
-- Die Basisbibliothek der Sprache und Plattform mit projektspezifischem Code verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +109,11 @@ Zum Beispiel:
 5. Weil es langsamer und fehleranfälliger sein kann
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort): numerische Sortierung und Eingabeänderung.
+
 
 1. Python Docs - The Python Standard Library  
    https://docs.python.org/3/library/index.html  

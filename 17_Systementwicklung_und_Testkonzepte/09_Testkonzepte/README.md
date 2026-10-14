@@ -56,19 +56,34 @@ Például:
 | tesztkoncepció | magasabb szintű megközelítés |
 | teszteset | konkrét kipróbálási leírás |
 
+## A kockázatból tesztesetet készítünk
+
+Egy foglalási rendszerben a dupla foglalás és az utolsó hely túlfoglalása fontos
+kockázat. Ezekhez különböző szinteken készül bizonyíték:
+
+| Szint | Konkrét ellenőrzés |
+|---|---|
+| Unit | a férőhely-szabály elfogadja az érvényes darabszámot |
+| Integráció | az alkalmazás és az adatbázis együtt őrzi az egyediséget |
+| Rendszer | két párhuzamos kérés közül csak egy kapja az utolsó helyet |
+| Elfogadás | a felhasználó érti a visszaigazolást és a betelt állapotot |
+
+Ha a megengedett darabszám egész `1..30`, egy érvényes osztály képviselője
+például 12. A határokhoz `0, 1, 2, 29, 30, 31` értékeket választunk.
+Tört szám, szöveg és hiányzó érték további bemeneti csoportok. Ezzel konkrét
+feltevéseket ellenőrzünk, nem minden lehetséges bemenetet próbálunk ki.
+
+A **black-box** nézőpont a szerződésből vezet le eseteket. A **white-box** a belső
+szerkezetet is használja, például mindkét elágazási kimenetet bejárja. A lefedettség
+segít a hiányok keresésében, de még 100% kódlefedettség sem bizonyítja, hogy a
+követelmény helyes vagy minden fontos állapotkombinációt kipróbáltunk.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A tesztkoncepció azt határozza meg, hogyan kívánjuk a szoftver minőségét ellenőrizni.  
 > Leírja a tesztelés célját, a tesztszinteket, a teszttípusokat, a használt módszereket és az eredményértékelés  
 > alapját.  
 > A jó tesztkoncepció biztosítja, hogy a tesztelés ne véletlenszerűen, hanem tudatos és tervezett módon történjen.
-
-## Gyakori vizsgahibák
-
-- A tesztkoncepciót konkrét tesztesettel azonosítani.
-- Kihagyni a tesztcél és tesztszint fogalmát.
-- Csak manuális tesztelésre szűkíteni.
-- Nem megemlíteni az eredményértékelési szempontokat.
 
 ## Gyors önellenőrzés
 
@@ -87,6 +102,11 @@ Például:
 5. Mert így átláthatóbb és teljesebb lesz
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [ISTQB CTFL 4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf): tesztszintek és teszttervezési technikák.
+
 
 1. ISTQB CTFL Syllabus v4.0.1  
    https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  

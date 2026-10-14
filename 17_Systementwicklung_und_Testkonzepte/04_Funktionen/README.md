@@ -51,18 +51,50 @@ A modern nyelvekben ez a különbség néha kevésbé éles, de az alapötlet m�
 - kapjon egyértelmű paramétereket
 - adjon jól értelmezhető eredményt
 
+## Paraméter, argumentum és visszatérés
+
+Egy rendelési tétel árát számoljuk egész centben. A teljes Node.js-példa
+egész, nemnegatív bemenetet és biztonságosan ábrázolható egész eredményt követel.
+
+<!-- example:run -->
+
+```javascript
+function totalCents(unitCents, quantity = 1) {
+  if (!Number.isSafeInteger(unitCents) || unitCents < 0 ||
+      !Number.isSafeInteger(quantity) || quantity < 0) {
+    throw new RangeError("Nonnegative integer inputs required");
+  }
+  const total = unitCents * quantity;
+  if (!Number.isSafeInteger(total)) throw new RangeError("Total is too large");
+  return total;
+}
+console.log(totalCents(250, 3));
+console.log(totalCents(250));
+console.log(totalCents(250, 0));
+```
+
+```text
+750
+250
+0
+```
+
+A deklarációban `unitCents` és `quantity` **paraméterek**. A `totalCents(250, 3)`
+hívásban `250` és `3` **argumentumok**, vagyis az átadott konkrét értékek.
+Ha a második argumentum hiányzik, az alapérték 1; a kifejezetten átadott 0 viszont
+0 marad. A `return` eredményt ad vissza és lezárja a hívást, a `console.log`
+pedig csak megjeleníti a hívó által megkapott értéket.
+
+A számítás nem módosít külső állapotot. Az ilyen függvény könnyen ellenőrizhető
+ugyanazzal a bemenettel. Léteznek névtelen függvények is, például callbackként.
+JavaScriptben explicit `return` nélkül egy hagyományos függvény `undefined`-ot
+ad vissza; ez is meghatározott nyelvi viselkedés.
+
 ## Vizsgán jól használható megfogalmazás
 
-> A függvény egy névvel ellátott, újra felhasználható programrész, amely meghatározott feladatot lát el.  
+> A függvény egy meghívható, újra felhasználható programrész, amely meghatározott feladatot lát el; lehet neve, de névtelen is lehet.  
 > Paramétereket kaphat, ezeket feldolgozza, és gyakran visszatérési értéket ad vissza.  
 > A függvények használata javítja a program szerkezetét, csökkenti a kódismétlést és megkönnyíti a karbantartást.
-
-## Gyakori vizsgahibák
-
-- A függvényt csak matematikai értelemben használni.
-- Nem megemlíteni a paramétereket.
-- Elfelejteni a visszatérési érték lehetőségét.
-- Nem kiemelni az újrafelhasználhatóságot.
 
 ## Gyors önellenőrzés
 
@@ -81,6 +113,11 @@ A modern nyelvekben ez a különbség néha kevésbé éles, de az alapötlet m�
 5. Világos, célzott és jól paraméterezett
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions): paraméter, argumentum és visszatérés.
+
 
 1. MDN - Functions  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions  
