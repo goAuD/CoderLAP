@@ -80,6 +80,12 @@ Es kann abhängen von:
 - der Bildschirmgröße
 - der Arbeitsaufgabe
 
+## Einstellung und Software wirken zusammen
+
+Eine Armlänge ist ein Ausgangspunkt, kein für alle verbindlicher Messwert. Beugst du dich in diesem Abstand zum Lesen vor, vergrößere Schrift oder Systemskalierung und prüfe die Haltung erneut. Abstand, Displaygröße und Detailbedarf der Aufgabe müssen zusammenpassen.
+
+Eine Entwicklerin erhöht beispielsweise die Schriftgröße im Editor von 12 auf 16 und lehnt sich wieder an die Rückenstütze an. Das ist eine individuelle Probe, keine allgemeine Vorgabe. Mit Gleitsichtbrille kann eine andere Höhe angenehm sein: Das Bild soll scharf erkennbar sein, ohne den Kopf dauerhaft zurückzuneigen. Anhaltende Seh- oder Nackenbeschwerden erfordern eine Arbeitsplatzbeurteilung und bei Bedarf eine fachliche Untersuchung.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der idealen Monitoreinstellung sollte der Blick leicht nach unten gerichtet sein,
@@ -89,14 +95,6 @@ Es kann abhängen von:
 > aber noch bequem lesbar sein,
 > da dies die Belastung von Augen und Nacken verringert.  
 > Die genaue Einstellung kann von Person zu Person variieren, daher muss der Arbeitsplatz individuell angepasst werden.
-
-## Häufige Prüfungsfehler
-
-- Einen genauen, für alle verbindlichen Zentimeterwert zu nennen.
-- Zu behaupten, dass der obere Bildschirmrand immer deutlich über der Augenhöhe liegen sollte.
-- Den nach unten gerichteten Blick nicht zu erwähnen.
-- Den Neigungswinkel des Monitors zu vergessen.
-- Zu vergessen, dass die separate Tastatur den richtigen Abstand unterstützt.
 
 ## Schnelle Selbstkontrolle
 
@@ -118,8 +116,13 @@ Es kann abhängen von:
 
 ## Quellen
 
+- [Arbeitsinspektion: Bildschirmarbeitsplätze](https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html)  
+  Arbeitsplatzeinstellung und Voraussetzungen der Bildschirmarbeit.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Verwendung: offizielle österreichische Quelle zu Bildschirmabstand,
    nach unten gerichtetem Blick und Neigungswinkel des Monitors.
 

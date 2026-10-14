@@ -71,6 +71,14 @@ Mert segíthet megelőzni:
 | drága bútor | nem automatikusan ergonomikus |
 | "kényelmesnek tűnik" | nem biztos, hogy hosszú távon egészséges |
 
+## Beállítási sorrend közös munkaállomásnál
+
+Először a széket igazítjuk a használóhoz: a talp legyen megtámasztva, az ülőlap ne nyomja a térdhajlatot, a háttámla támassza a hátat. Utána az asztal és a beviteli eszközök következnek. A váll maradjon laza, az egér legyen közel a billentyűzethez. Végül a monitor helyét, magasságát és a szöveg méretét állítjuk be.
+
+Egy alacsonyabb kolléga esetén a magas, nem állítható asztal miatt megemelt székhez lábtámasz is kellhet. A laptop megemelése önmagában nem elég: hosszabb munkához külön billentyűzet és egér teszi lehetővé a képernyő és a kéz egymástól független beállítását.
+
+A következő használó újra a saját testméreteihez igazítja az állomást. A jó berendezéshez változtatható testhelyzet és megfelelő munkaszervezés is tartozik.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az ergonomikus munkahely kialakításának célja,
@@ -78,13 +86,6 @@ Mert segíthet megelőzni:
 > az emberi test adottságaihoz igazodjanak.  
 > Fontos a megfelelő szék, asztal, monitor, billentyűzet, egér, lábtér és a jó fényviszony.  
 > Az ergonomikus berendezés csökkenti a túlterhelést és segíthet megelőzni a hát-, nyak- és szempanaszokat.
-
-## Gyakori vizsgahibák
-
-- Az ergonómiát csak a székre szűkíteni.
-- Azt hinni, hogy ami kényelmes, az biztosan ergonomikus is.
-- Nem megemlíteni a monitor, billentyűzet és lábtér szerepét.
-- Elfelejteni a fényviszonyokat.
 
 ## Gyors önellenőrzés
 
@@ -104,12 +105,17 @@ Mert segíthet megelőzni:
 
 ## Források
 
+- [Arbeitsinspektion: Bildschirmarbeitsplätze](https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html)  
+  Munkahelyi beállítások és képernyős munkavégzés feltételei.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
 1. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Használat: hivatalos osztrák ergonómiai alapforrás a monitor, asztal, szék és billentyűzet elrendezéséhez.
 
 2. Arbeitsinspektion - Bildschirmarbeitsplätze  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Használat: munkavédelmi követelmények és ergonómiai minimumok hivatalos osztrák összefoglalója.
 
 3. AUVA - Ergonomisch arbeiten am Telearbeitsplatz und im Homeoffice  
