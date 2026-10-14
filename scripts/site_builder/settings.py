@@ -25,6 +25,8 @@ class BuildSettings:
     legal_content_dir: Path
     languages: tuple[LanguageConfig, ...] = ()
     default_lang: str = "de"
+    # Set only after the protected Quiz deployment has been verified.
+    quiz_url: str = ""
 
     @classmethod
     def from_repo_root(cls, repo_root: Path) -> "BuildSettings":
