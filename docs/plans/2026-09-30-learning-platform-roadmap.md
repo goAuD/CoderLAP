@@ -16,9 +16,10 @@ már a `quiz.coderlap.com` címen fut: négy csomag, 135 DE/HU kérdés,
 az Informatik első hét témájához 35 kérdés készült.
 
 A DNS, HTTPS, Basic Auth védelme és a telepített fájlok ellenőrzése kész.
-A belépés utáni éles böngészős próba még hátravan: az automatizált Vivaldi
-megnyitás `ERR_BLOCKED_BY_CLIENT` hibát adott, ezért kézi belépést kértünk.
-A LAP kezdőlapi és lábléc-linkje előkészítve, de még kikapcsolva marad.
+A kézi belépés után az éles böngészős próba is sikerült: mind a négy csomag,
+DE/HU váltás, válaszmagyarázat és a mentett válasz visszatöltése működik.
+A LAP kezdőlapi és lábléc-linkje a központi `quiz_url` beállításból aktív.
+A 390 px széles böngészőnézet nem lógott ki; új fizikai iPhone-próba még nem volt.
 A két szolgáltatás adatvédelmi és impresszumoldala frissítve és telepítve:
 [LAP #46](https://github.com/goAuD/CoderLAP/pull/46),
 [sikeres deploy](https://github.com/goAuD/CoderLAP/actions/runs/38546816683).
@@ -32,7 +33,7 @@ belépés későbbi, külön feladat; az induláshoz nem készül fiók vagy ada
 ## Elfogadott irány és a következő kis lépés
 
 - A Quiz DNS-, TLS- és Caddy-beállítása elkészült az átmeneti Basic Auth
-  induláshoz. A LAP eszközlinkje a belépés utáni éles próba után aktiválható;
+  induláshoz. A LAP eszközlinkje a sikeres belépés utáni éles próbára épül;
   a Coaster külön kiadási lépés marad.
 - A későbbi közös belépés meghívásos lesz. A meghívás, fiókaktiválás, helyreállítás
   és visszavonás konkrét folyamata még tervezendő; az Authelia továbbra is
@@ -186,9 +187,10 @@ Ellenőrzött források, 2026-09-30:
   mindkét app telefonos működését. A Coaster külső segédscriptjeit külön vegyük
   számba; teljes offline működést ne ígérjünk ellenőrzés nélkül.
   A Quiz TLS-, 401-, kiadási fájlegyezési és Linux telepítési próbái kész;
-  az éles bejelentkezés és telefonos próba még nincs igazolva.
-- [ ] Ezután cseréljük az „In Entwicklung” célokat valódi linkekre; maradjon
-  egységes fejléc/lábléc és közvetlen visszaút a LAP-hez.
+  az éles bejelentkezés és a 390 px-es böngészőnézet szintén ellenőrzött.
+  A fizikai telefonos próba és a Coaster külön ellenőrzése még hátravan.
+- [x] A Quiz kezdőlapi és láblécbeli céljai valódi linkek. A közös keret és
+  a Quizből visszavezető LAP-link megmarad; a Coaster még „In Entwicklung”.
 
 ### 3. Haladásjelölés — első kis UX-kör
 

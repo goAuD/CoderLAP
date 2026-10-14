@@ -53,10 +53,14 @@ Last updated: `2026-10-14`
   configurable Quiz entry links. [Deployment verification](https://github.com/goAuD/CoderLAP/actions/runs/38546816683)
   passed 89 Python tests, 122 Node tests and the 512-page build; the updated
   Hungarian privacy page was also checked on the live site.
-- `BuildSettings.quiz_url` remains empty. Automated production Quiz navigation
-  hit Vivaldi `ERR_BLOCKED_BY_CLIENT`; manual sign-in has been requested.
-  Complete authenticated production UI/mobile verification before setting
-  `quiz_url` to `https://quiz.coderlap.com/` and deploying the LAP entry links.
+- After the operator signed in manually, all four production packages loaded.
+  DE/HU switching, answer explanations, source links and answer restoration after
+  reload/package switching passed. The 390 px viewport had no horizontal overflow.
+  This is browser emulation, not a new physical iPhone verification.
+- `BuildSettings.quiz_url` is now `https://quiz.coderlap.com/`, enabling the
+  homepage and footer links from the same setting. The
+  [v0.4.1-quiz-launch milestone](../releases/release-notes-v0.4.1-quiz-launch.md)
+  and its GitHub Release record the final deployed main commit and checks.
 - Coaster hosting and shared invitation login remain separate later tasks.
   Keep the central [roadmap](../plans/2026-09-30-learning-platform-roadmap.md)
   current; SkillDisplay still awaits the teacher's reply.

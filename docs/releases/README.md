@@ -10,6 +10,7 @@ are historical milestone records, not evergreen architecture or process notes.
 
 ## Current Files
 
+- [release-notes-v0.4.1-quiz-launch.md](./release-notes-v0.4.1-quiz-launch.md)
 - [release-notes-v0.4.0-reviewed-content.md](./release-notes-v0.4.0-reviewed-content.md)
 - [release-notes-v0.3.1-workshop.1.md](./release-notes-v0.3.1-workshop.1.md)
 - [release-notes-v0.3.0-workshop.1.md](./release-notes-v0.3.0-workshop.1.md)

@@ -224,8 +224,8 @@ CoderQuiz and CoderCoaster are introduced below the homepage hero in the shared
 development explanation and localized footer links to their stable `#coderquiz`
 or `#codercoaster` anchors, including without JavaScript.
 `BuildSettings.quiz_url` in `scripts/site_builder/settings.py` is the single
-Quiz destination switch. It remains empty until the protected Quiz deployment
-is verified. Setting it to `https://quiz.coderlap.com/` and rebuilding replaces
+Quiz destination switch. It is set to `https://quiz.coderlap.com/` after the
+protected production deployment and authenticated UI were verified. Rebuilding replaces
 both the homepage Quiz panel and all Quiz footer anchors with direct links;
 the Coaster panel stays unchanged. Clearing it and rebuilding restores the
 development state. Copy lives in the existing language dictionaries; no extra
