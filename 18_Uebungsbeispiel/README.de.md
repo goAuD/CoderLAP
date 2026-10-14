@@ -91,10 +91,41 @@ Bei der Umsetzung in der Prüfung empfiehlt sich folgende Reihenfolge:
 
 Diese Strategie ist besser, als zu früh an Extra-Features zu arbeiten.
 
+## Was können wir am Ende nachweisen?
+
+| Anforderung | Prüfung |
+|---|---|
+| Pflichtfelder für Namen und SV-NR | leere und nur mit Leerraum gefüllte Felder: Hinweis, kein Ergebnis |
+| Formale SV-Prüfung | drei positive und drei negative Beispiele aus der PDF |
+| Genauer QR-Inhalt | separater Reader liest `Richtig` beziehungsweise `Falsch` |
+| Neue Eingabe | alter QR verschwindet; ein neues Ergebnis entsteht erst nach erneuter Prüfung |
+| Responsives Formular | schmale Ansicht, Vergrößerung und Tastaturbedienung |
+
+Die formale Prüfung stellt fest, ob die Nummer die implementierten Format- und
+Prüfzifferregeln erfüllt. Sie bestätigt weder die tatsächliche Vergabe an eine
+bestimmte Person noch einen aufrechten Versicherungsschutz.
+Wir prüfen, ob Namen eingegeben wurden, nicht die Zuordnung zwischen Name und Nummer.
+
+Die Seiten 11–12 der PDF wurden am 2026-10-14 erneut mit der Lösung verglichen.
+Wir verwenden die Beispieldaten des Aufgabenblatts und erfundene Namen.
+Wegen des Handyverbots der PDF ist für die Prüfung ein vorab abgestimmter Desktop-Reader nötig.
+
+## Schnelle Selbstkontrolle
+
+1. Was darf der QR enthalten?
+2. Was bestätigt die passende Prüfziffer?
+3. Benötigt die PDF-Aufgabe eine Datenbank?
+
+## Kurzantworten zur Selbstkontrolle
+
+1. Genau das Wort Richtig oder Falsch.
+2. Einen formalen Zusammenhang der Ziffern, nicht die tatsächliche Vergabe oder den Versicherungsschutz.
+3. Nein, die PDF fordert keine Speicherung.
+
 ## Quellen
 
 1. Themenkatalog für die Vorbereitung auf die Lehrabschlussprüfung Applikationsentwicklung-Coding v2-2024  
-   `../themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`  
+   https://github.com/goAuD/CoderLAP/blob/main/themenkatalog-applikationsentwicklung-coding-v2-2024.pdf  
    Verwendung: Primärer Aufgabentext und Anforderungssystem.
 
 2. Dachverband der österreichischen Sozialversicherung - offizielle Beschreibung der Versicherungsnummer  
