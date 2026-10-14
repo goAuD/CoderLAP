@@ -41,13 +41,16 @@ H2_PATTERN = re.compile(r"^##\s+(.+)$", re.MULTILINE)
 
 
 def find_subtopic_readmes(module_filter: str | None = None) -> list[Path]:
-    """Find all subtopic README.md files, optionally filtered by module number."""
+    """Find topic README.md files, including registered module introductions."""
     results = []
     for main_dir in sorted(REPO_ROOT.iterdir()):
         if not main_dir.is_dir() or not re.match(r"^\d{2}_", main_dir.name):
             continue
         if module_filter and not main_dir.name.startswith(f"{module_filter}_"):
             continue
+        main_readme = main_dir / "README.md"
+        if main_readme.is_file():
+            results.append(main_readme)
         for sub_dir in sorted(main_dir.iterdir()):
             if not sub_dir.is_dir() or not re.match(r"^\d{2}_", sub_dir.name):
                 continue
@@ -80,7 +83,7 @@ def review_file(path: Path) -> dict:
     # Build topic ID from path
     parts = rel.parts  # e.g. ('01_Grundlagen...', '01_Zeichensatz_ASCII', 'README.md')
     main_num = parts[0][:2] if len(parts) >= 2 else "??"
-    sub_num = parts[1][:2] if len(parts) >= 2 else "??"
+    sub_num = parts[1][:2] if len(parts) >= 3 else "00"
     topic_id = f"LAP-{main_num}-{sub_num}"
 
     issues = []

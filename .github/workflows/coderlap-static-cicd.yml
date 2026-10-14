@@ -3,6 +3,7 @@ name: CoderLAP Static CI/CD
 'on':
   pull_request:
     branches:
+      - dev
       - main
     paths-ignore:
       - "docs/**"
@@ -47,7 +48,7 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Verify JavaScript interactions and learning examples
-        run: node --test tests/site-interactions.test.cjs tests/learning-examples.test.cjs
+        run: node --test tests/*.test.cjs
 
       - name: Build static site
         run: python scripts/build_site.py
