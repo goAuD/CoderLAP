@@ -268,7 +268,19 @@ Run the test suite:
 
 ```bash
 python -m unittest discover -s tests -v
+node --test tests/*.test.cjs
 ```
+
+The Node.js tests cover site interactions, executable learning examples and the
+SV-number exercise. Self-contained console examples marked `<!-- example:run -->`
+are read from the topic Markdown, checked against their published output, and
+compared across Hungarian and German. Browser-dependent fragments are labelled
+with their prerequisites and are not run as standalone Node.js examples.
+The build omits the editorial test marker from the rendered learning pages.
+Both `dev` and `main` pull requests run these checks in CI.
+
+The [2026-10 content review](./docs/plans/2026-10-14-content-review.md) records
+module coverage, factual corrections, sources and validation limits.
 
 ### Quick start on a new machine
 

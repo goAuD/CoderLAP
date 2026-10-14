@@ -1,9 +1,22 @@
-# Coder tanulóműhely — következő lépések
+# Coder tanulóműhely: következő lépések
 
-Frissítve: **2026-09-30**. Ez a három projekt közös sorrendjének egyetlen
+Frissítve: **2026-10-14**. Ez a három projekt közös sorrendjének egyetlen
 karbantartott listája; a részletes megvalósítási jegyzetek a saját repójukban
 maradnak. Egy feladat = külön ág és ellenőrizhető PR. Ez tervezési állapot,
 nem új funkciók vagy infrastruktúra elkészültének igazolása.
+
+## Aktuális prioritás, 2026-10-14
+
+A mai kör első feladata a távoli ágak és függőségfrissítések rendezése,
+utána mind a 235 CoderLAP-téma tartalmi ellenőrzése, javítása és indokolt
+bővítése mindkét nyelven. A részletes állapotot a
+[tartalmi felülvizsgálat](2026-10-14-content-review.md) követi.
+A Quiz következő tartalmi köre ezután következik.
+
+A SkillDisplay és a tanári válaszra épülő egyeztetés **szünetel**:
+2026-10-14-ig nem érkezett válasz. A korábbi kérdésvázlat megmarad;
+a tananyag fejlesztése ettől függetlenül halad. A meghívásos belépés és
+a DNS beállítása a tartalmi kör után folytatható, nincs most infraátállás.
 
 ## Elfogadott irány és a következő kis lépés
 
@@ -24,10 +37,11 @@ nem új funkciók vagy infrastruktúra elkészültének igazolása.
   a kapacitást a többi szolgáltatással együtt mérjük fel. A streamapp és a
   tervezett személyes Nextcloud külön projekt, itt nem módosítjuk őket.
 
-Most a meghívásos belépés és az adatfolyam rövid tervét készítjük elő,
-utána két tesztfiókkal próbáljuk ki. A szerveres haladásszinkron későbbi lépés.
+A tartalmi kör után a meghívásos belépés és az adatfolyam rövid tervével
+folytathatjuk, utána két tesztfiókkal próbálhatjuk ki. A szerveres
+haladásszinkron későbbi lépés.
 
-## Ellenőrzött kiinduló állapot
+## Korábbi ellenőrzött kiinduló állapot, 2026-09-30
 
 - [x] A három dokumentációs PR összevonva: LAP #36, Quiz #13, Coaster #4.
 - [x] LAP: `main` = `6d6343b`, `dev` = `aa366ba`. A két ág fájltartalmának
@@ -47,9 +61,11 @@ utána két tesztfiókkal próbáljuk ki. A szerveres haladásszinkron későbbi
 - [ ] A Quiz/Coaster élő DNS-, szerver-, TLS- és belépési beállításait még
   ellenőrizni kell; a nyitott Cloudflare-lap önmagában nem bizonyít telepítést.
 
-Az ágazonosítók dátumhoz kötött pillanatképek. Kiadás előtt friss fetch és diff
-kell. A most hiányzó LAP-dokumentációt a következő `dev` → `main` kiadási PR
-viheti át; pusztán emiatt nincs sürgős weboldal-deploy.
+Az ágazonosítók dátumhoz kötött pillanatképek. A 2026-10-14-es frissítésben
+a LAP #40 és #41 rendezte a Markdown-frissítést és a main/dev eltérését;
+a Quiz #14 és a Coaster #5 dokumentációs PR-ja már összevonva volt.
+A friss karbantartási és tartalmi állapotot a fent hivatkozott felülvizsgálat
+rögzíti. Kiadás előtt továbbra is friss fetch és diff kell.
 
 ## Végrehajtási sorrend
 

@@ -121,7 +121,17 @@ A fejezet két részben dolgozandó át: 01–21, majd 22–43.
 ## Ellenőrzés és átadás
 
 - A futtatható kód a Markdownból közvetlenül ellenőrizhető:
-  `node --test tests/learning-examples.test.cjs`.
+  `node --test tests/*.test.cjs`.
+- A 2026-10-es teljes felülvizsgálat új, önálló konzolpéldái
+  `<!-- example:run -->` jelölést kapnak. A következő `text` kódblokk a várt
+  kimenet; a `content-examples.test.cjs` futtatja a példát, és ellenőrzi a
+  HU/DE kód és kimenet egyezését. DOM-ot, szervert vagy adatbázist igénylő
+  részleteknél a szükséges környezetet külön leírjuk.
+  A build a belső tesztjelölést nem jeleníti meg a tanulóknak.
+- A `sv-exercise.test.cjs` a PDF mintaszámai és a validálási határesetek
+  mellett az űrlap egymást követő állapotait és a README teljes forráslistáinak
+  egyezését is ellenőrzi. Részletes moduleredmények:
+  [teljes tartalmi felülvizsgálat](2026-10-14-content-review.md).
 - A teszt ellenőrzi a közölt kimeneteket, a két nyelv kódegyezését, valamint
   a rendezés és keresés határeseteit. A Node.js `vm` itt a saját, ellenőrzött
   példákat futtatja; nem szolgál idegen kód biztonsági elkülönítésére.
