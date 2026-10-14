@@ -41,7 +41,27 @@ Last updated: `2026-10-14`
 - `robots.txt` currently blocks indexing
 - `.well-known/security.txt` is shipped from the repo
 
-## Latest Milestone: 2026-10-14
+## Quiz Rollout: 2026-10-14
+
+- CoderQuiz [v0.1.0](https://github.com/goAuD/CoderQuiz/releases/tag/v0.1.0)
+  is deployed at `https://quiz.coderlap.com/` on the existing Debian/Caddy origin.
+  Four packages contain 135 DE/HU questions covering 27 LAP topics.
+- Temporary Basic Auth reuses the existing LAP access configuration. DNS,
+  HTTPS, rejected missing/wrong credentials and all deployed artifact files were
+  verified. No application accounts, result database or shared sign-in were added.
+- LAP #45/#46 deployed the updated DE/HU/EN privacy and imprint pages plus
+  configurable Quiz entry links. [Deployment verification](https://github.com/goAuD/CoderLAP/actions/runs/38546816683)
+  passed 89 Python tests, 122 Node tests and the 512-page build; the updated
+  Hungarian privacy page was also checked on the live site.
+- `BuildSettings.quiz_url` remains empty. Automated production Quiz navigation
+  hit Vivaldi `ERR_BLOCKED_BY_CLIENT`; manual sign-in has been requested.
+  Complete authenticated production UI/mobile verification before setting
+  `quiz_url` to `https://quiz.coderlap.com/` and deploying the LAP entry links.
+- Coaster hosting and shared invitation login remain separate later tasks.
+  Keep the central [roadmap](../plans/2026-09-30-learning-platform-roadmap.md)
+  current; SkillDisplay still awaits the teacher's reply.
+
+## Content Milestone: 2026-10-14
 
 - All 235 topics in HU/DE were reviewed and expanded through
   [PR #42](https://github.com/goAuD/CoderLAP/pull/42), now merged into `dev`.
@@ -81,8 +101,9 @@ The authoritative coverage and validation record is
   clears stale QR results and keeps the QR quiet zone. It proves formal
   consistency only, not an actual insurance entitlement.
 - Semgrep remains local. Do not stage the user's untracked cloud workflow.
-- SkillDisplay waits for the teacher's reply. DNS and shared authentication
-  remain planned work; the next content batch belongs to CoderQuiz.
+- SkillDisplay waits for the teacher's reply. Quiz hosting is recorded above;
+  shared authentication remains planned work. The next content batch belongs
+  to CoderQuiz.
 
 ## Previous Frame Delivery: 2026-09-11
 
