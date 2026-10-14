@@ -38,19 +38,20 @@ Denn ohne sie kann leicht passieren:
 | Teammitglied | eigene fachliche Aufgabe |
 | Projektleiter | Abstimmung des gesamten Projekts |
 
+## Aus einem Risiko eine konkrete Maßnahme ableiten
+
+Das Projekt integriert die API eines externen Anbieters. Solange der Termin für den Testzugang unsicher ist, liegt ein Risiko vor: Ein mögliches Ereignis kann den Plan beeinflussen. Wir dokumentieren Auswirkung, Wahrscheinlichkeit, Verantwortliche und Reaktion. Beispielsweise fordert die Kontaktperson bis Mittwoch eine Bestätigung an; die Entwickler bereiten die Anbindung mit Musterantworten vor.
+
+Fehlt der Zugang am vereinbarten Tag tatsächlich, wird ein bestehendes Problem, ein Issue, bearbeitet. Die Projektleitung bestimmt betroffene Aufgaben, informiert und eskaliert Entscheidungen außerhalb ihrer Befugnis. Musterantworten sind eine nützliche Vorbereitung, beweisen aber keine funktionierende echte Integration.
+
+Der aktualisierte Plan enthält den Test mit dem Anbieter und seine Zuständigkeit. Das Risikolog ist damit kein einmalig geschriebenes Verzeichnis, sondern ein regelmäßig überprüftes Arbeitsmittel.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Aufgabe des Projektleiters ist die Planung, Koordination,
 > Überwachung und Sicherstellung der Kommunikation des Projekts.  
 > Er überwacht Fristen, Kosten, Ressourcen, Meilensteine und Risiken und managt Probleme und Änderungen.  
 > Der Projektleiter erledigt also nicht unbedingt selbst die fachliche Arbeit, sondern führt und steuert das gesamte Projekt.
-
-## Häufige Prüfungsfehler
-
-- Den Projektleiter als einfachen Administrator bezeichnen.
-- Kommunikation und Risikomanagement nicht erwähnen.
-- Glauben, dass er alle fachlichen Aufgaben selbst erledigt.
-- Die Rollen von Projektleiter und Teammitglied nicht trennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -69,6 +70,11 @@ Denn ohne sie kann leicht passieren:
 5. Planung, Koordination, Statusverfolgung, Kommunikation, Risikomanagement
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Arbeitsplan, Risikolog, Projektauftrag und Übergabedokumente.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  

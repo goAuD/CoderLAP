@@ -37,6 +37,14 @@ Ezért a soft skillek nagyon fontosak.
 | tulajdonság | milyen emberi és szakmai jellemző kell |
 | feladat | mit kell konkrétan csinálnia |
 
+## Nyugalom és egyértelműség eltérő elvárásoknál
+
+Die Fachabteilung verlangt eine schnelle Zusatzfunktion, die Entwicklerin sieht dadurch den vereinbarten Termin gefährdet. Eine gute Projektleitung lässt zuerst beide Seiten den konkreten Bedarf und Aufwand erklären. Sie fasst den Konflikt sachlich zusammen und erarbeitet entscheidbare Optionen mit ihren Folgen.
+
+Die technische Schätzung bleibt bei den fachkundigen Personen. Die Projektleitung muss nicht jede Bibliothek selbst beherrschen, aber Annahmen hinterfragen und Unsicherheit sichtbar machen können. Die Prioritätsentscheidung trifft die dafür befugte Person, nicht automatisch die lauteste Stimme im Gespräch.
+
+Nach der Entscheidung werden Zuständigkeit, nächster Schritt und Rückmeldetermin festgehalten. Verlässlichkeit bedeutet hier: Zusagen verfolgen, rechtzeitig eskalieren und neue Erkenntnisse offen mitteilen. Dauernde Überstunden oder das Verbergen von Schwierigkeiten sind kein Ersatz für Führung.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Egy jó projektvezető fontos tulajdonságai közé tartozik
@@ -47,13 +55,6 @@ Ezért a soft skillek nagyon fontosak.
 > elvárásokat és konfliktusokat is kezelnie kell,
 > a szakmai tudás mellett az emberi
 > és vezetői készségek is kulcsfontosságúak.
-
-## Gyakori vizsgahibák
-
-- Csak technikai tudást említeni.
-- A tulajdonságokat összekeverni a konkrét feladatokkal.
-- Nem megemlíteni a kommunikációt.
-- A projektvezetőt pusztán adminisztrátorként leírni.
 
 ## Gyors önellenőrzés
 
@@ -72,6 +73,11 @@ Ezért a soft skillek nagyon fontosak.
 5. Mert nyomás alatt is működnie kell
 
 ## Források
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Felelősségek és a projekt irányításának ellenőrzési pontjai.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - Building and Leading High-Performing Teams  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/thought-leadership/building-and-leading-high-performing-teams.pdf  

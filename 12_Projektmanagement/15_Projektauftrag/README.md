@@ -35,6 +35,14 @@ Sok projektmenedzsment-nyelvben ennek közeli megfelelője a **project charter**
 | projektauftrag | hivatalos indító dokumentum |
 | projektterv | részletes megvalósítási terv |
 
+## Egy rövid, de döntésre alkalmas projektmegbízás
+
+Példa: a tanműhely eszköznyilvántartását négy hét alatt közös rendszerbe költöztetjük. A szponzor a műhelyvezető, a koordinátor név szerint megjelölt munkatárs. A jóváhagyott ráfordítás legfeljebb 120 munkaóra. Az első kör egy telephely 300 eszközét és öt jogosult felhasználóját érinti; beszerzési rendszer készítése nincs benne.
+
+Az elfogadás feltétele: a 300 eszköz egyeztetett adatai átkerültek, a jogosultsági próba sikeres, és az üzemeltetési leírást átvették. A megbízás rögzíti azt is, ki fogadhat el hatókör- vagy keretváltozást, illetve milyen eltérést kell feljebb vinni.
+
+A megbízás tehát felhatalmazás és közös kiindulópont. Nem kell minden mező és képernyő részletes tervét tartalmaznia; ezek a későbbi követelmény- és tervezési munkában pontosodnak.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Projektauftrag a projekt hivatalos indító dokumentuma,
@@ -42,13 +50,6 @@ Sok projektmenedzsment-nyelvben ennek közeli megfelelője a **project charter**
 > fő kereteit és legfontosabb szereplőit.  
 > Feladata, hogy közös alapot adjon a projekt elindításához és a további tervezéshez.  
 > Tartalmilag közel áll ahhoz, amit angol nyelvű projektkörnyezetben project charternek neveznek.
-
-## Gyakori vizsgahibák
-
-- A projektauftragot teljes projekttervnek nevezni.
-- Nem megemlíteni az indító és hivatalos szerepét.
-- Összekeverni a követelménydokumentummal.
-- Nem beszélni a cél és keretek rögzítéséről.
 
 ## Gyors önellenőrzés
 
@@ -67,6 +68,11 @@ Sok projektmenedzsment-nyelvben ennek közeli megfelelője a **project charter**
 5. Project charter
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Munkaterv, kockázati napló, projektmegbízás és átadási dokumentumok.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Project charter template  
    https://www.atlassian.com/software/confluence/templates/project-charter  

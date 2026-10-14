@@ -54,6 +54,14 @@
 - javítja a koordinációt
 - korábban láthatóvá teszi a problémákat
 
+## Függőségek alapján készített kis ütemterv
+
+A következő becslések munkanapokat jelentenek: követelmények tisztázása 1 nap, adatbázis kialakítása 2 nap, felület 3 nap, összekötés 1 nap, elfogadási próba 2 nap. Az adatbázis és a felület a követelmények után párhuzamosan készülhet, az összekötéshez mindkettő kell.
+
+Ha a párhuzamos munkához külön emberek állnak rendelkezésre, a legrövidebb terv `1 + max(2, 3) + 1 + 2 = 7 munkanap`. A kritikus út a követelmény, felület, összekötés és próba lánca: ennek késése a teljes terv végét is késlelteti, ha nincs más módosítás. Az adatbázis egy napot csúszhat a felület elkészüléséig ebben az egyszerű hálóban.
+
+Ha ugyanaz az egy ember készíti az adatbázist és a felületet, a párhuzamos feltételezés nem áll meg. A kapacitást, a szabadságot és a külső jóváhagyások várakozási idejét ezért a függőségi rajzzal együtt kell vizsgálni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projekttervezés legfontosabb lépései közé tartozik
@@ -62,13 +70,6 @@
 > az erőforrás- és költségtervezés,
 > valamint a kockázatok és mérföldkövek meghatározása.  
 > A jó projektterv azért fontos, mert átláthatóvá és követhetővé teszi a megvalósítást.
-
-## Gyakori vizsgahibák
-
-- Csak a határidő-tervezést említeni.
-- Nem beszélni a scope-ról vagy követelményekről.
-- Kihagyni a kockázatot és erőforrástervezést.
-- Azt hinni, hogy a tervezés egyszeri és utána már nem változhat.
 
 ## Gyors önellenőrzés
 
@@ -87,6 +88,11 @@
 5. Cél, követelmény, feladatbontás, ütemezés, költségterv
 
 ## Források
+
+- [PMI: Practice Standard for Scheduling](https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/practice-standard-scheduling.pdf)  
+  Tevékenységek függősége, időtartam, mérföldkövek és kritikus út.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Create a project roadmap  
    https://www.atlassian.com/agile/project-management/create-project-roadmap  

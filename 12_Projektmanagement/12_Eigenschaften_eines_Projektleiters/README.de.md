@@ -37,6 +37,14 @@ Deshalb sind Soft Skills sehr wichtig.
 | Eigenschaft | welche menschlichen und fachlichen Merkmale nötig sind |
 | Aufgabe | was konkret zu tun ist |
 
+## Ruhe und Klarheit bei widersprüchlichen Erwartungen
+
+Der Fachbereich verlangt eine schnelle Zusatzfunktion, eine Entwicklerin sieht dadurch den vereinbarten Termin gefährdet. Gute Projektleitung lässt zunächst beide Seiten Bedarf und Aufwand erklären. Sie fasst den Konflikt sachlich zusammen und entwickelt entscheidbare Optionen mit ihren Folgen.
+
+Technische Schätzungen bleiben bei den fachkundigen Personen. Die Projektleitung muss nicht jede Bibliothek selbst beherrschen, sollte aber Annahmen hinterfragen und Unsicherheit sichtbar machen können. Über Prioritäten entscheidet die dafür befugte Person, nicht automatisch die lauteste Stimme im Gespräch.
+
+Danach werden Zuständigkeit, nächster Schritt und Rückmeldetermin festgehalten. Verlässlichkeit bedeutet: Zusagen nachverfolgen, rechtzeitig eskalieren und neue Erkenntnisse offen mitteilen. Ständige Überstunden oder das Verbergen von Schwierigkeiten ersetzen keine Führung.
+
 ## Prüfungstaugliche Formulierung
 
 > Zu den wichtigen Eigenschaften eines guten Projektleiters gehören
@@ -46,13 +54,6 @@ Deshalb sind Soft Skills sehr wichtig.
 > Da der Projektleiter Menschen, Aufgaben, Erwartungen
 > und Konflikte managen muss, sind neben dem Fachwissen
 > auch die menschlichen und Führungskompetenzen entscheidend.
-
-## Häufige Prüfungsfehler
-
-- Nur technisches Wissen nennen.
-- Eigenschaften mit konkreten Aufgaben verwechseln.
-- Kommunikation nicht erwähnen.
-- Den Projektleiter bloß als Administrator beschreiben.
 
 ## Schnelle Selbstkontrolle
 
@@ -71,6 +72,11 @@ Deshalb sind Soft Skills sehr wichtig.
 5. Weil er auch unter Druck funktionieren muss
 
 ## Quellen
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Verantwortlichkeiten und Kontrollpunkte der Projektsteuerung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - Building and Leading High-Performing Teams  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/thought-leadership/building-and-leading-high-performing-teams.pdf  
