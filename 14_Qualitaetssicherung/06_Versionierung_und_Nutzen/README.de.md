@@ -4,9 +4,9 @@
 
 | Version | Typische Bedeutung |
 |---|---|
-| `2.0.0` | größere, nicht kompatible Änderung |
-| `2.1.0` | neues Feature, in der Regel abwärtskompatibel |
-| `2.1.3` | Fehlerbehebung |
+| `2.0.0` | inkompatible Änderung der öffentlichen API |
+| `2.1.0` | neues, abwärtskompatibles Feature |
+| `2.1.3` | abwärtskompatible Fehlerbehebung |
 
 ## Was ist Versionierung?
 
@@ -32,15 +32,15 @@ Dies ist die bekannteste Form der semantischen Versionierung (`Semantic Versioni
 
 ### Major
 
-- größere, brechende Änderung
+- inkompatible Änderung der öffentlichen API
 
 ### Minor
 
-- neues Feature, in der Regel kompatible Erweiterung
+- neue, abwärtskompatible Funktion
 
 ### Patch
 
-- kleinere Korrektur, Bugfix
+- abwärtskompatible Fehlerbehebung
 
 ## Versionierung und Versionsverwaltung: nicht verwechseln
 
@@ -49,6 +49,20 @@ Dies ist die bekannteste Form der semantischen Versionierung (`Semantic Versioni
 | Versionierung | Nummerierung von Releases |
 | Versionsverwaltung | Nachverfolgung von Änderungen in einem VCS, z.B. `Git` |
 
+## Von Änderungsgröße zu Kompatibilität
+
+SemVer bezieht sich auf den Vertrag der veröffentlichten API. Drei Beispiele für eine Bibliothek mit `sum(numbers)`:
+
+| Ausgangspunkt: 2.3.4 | Änderung | Neue Version |
+|---|---|---|
+| dokumentiertes Verhalten korrigiert | leere Liste liefert die beschriebenen 0 | 2.3.5 |
+| kompatible Erweiterung | neue Funktion `average(numbers)` | 2.4.0 |
+| inkompatible Änderung | `sum` liefert ein Objekt statt einer Zahl | 3.0.0 |
+
+Auch eine einzige inkompatible Codezeile kann Major erfordern. Minor und Patch sind bei SemVer verbindlich kompatibel und nicht nur meistens. Verwendet eine Anwendung eine andere Nummerierung, gelten deren dokumentierte Regeln.
+
+`0.x.y` kennzeichnet anfängliche Entwicklung ohne zugesagte stabile öffentliche API. `2.4.0-rc.1` ist eine Vorabversion und nicht die endgültige Version `2.4.0`. Der Inhalt eines bereits veröffentlichten Pakets wird nicht ohne neue Versionskennung ausgetauscht; so bleibt eine im Fehlerbericht genannte Version nachvollziehbar.
+
 ## Prüfungstaugliche Formulierung
 
 > Versionierung bezeichnet die bewusste Vergabe von Versionsnummern für Softwarereleases.  
@@ -56,13 +70,6 @@ Dies ist die bekannteste Form der semantischen Versionierung (`Semantic Versioni
 > In der Praxis ist das Schema `major.minor.patch` verbreitet,
 > das bei der Verwaltung von Kompatibilität,
 > Fehlerverfolgung und Updates hilft.
-
-## Häufige Prüfungsfehler
-
-- Versionierung mit Versionsverwaltung verwechseln.
-- Glauben, dass die Versionsnummer nur Dekoration ist.
-- Die Kompatibilität nicht erwähnen.
-- Nicht wissen, was `major`, `minor`, `patch` bedeutet.
 
 ## Schnelle Selbstkontrolle
 
@@ -76,11 +83,19 @@ Dies ist die bekannteste Form der semantischen Versionierung (`Semantic Versioni
 
 1. Die bewusste Nummerierung von Releases
 2. Weil sie Releases identifizierbar und nachvollziehbar macht
-3. Eine größere, brechende Änderung
-4. Eine kleinere Fehlerbehebung
+3. Bei SemVer eine inkompatible Änderung der öffentlichen API, unabhängig von der Größe der Codeänderung.
+4. Bei SemVer eine abwärtskompatible Fehlerbehebung.
 5. Das eine nummeriert, das andere verwaltet Änderungen
 
 ## Quellen
+
+- [Semantic Versioning 2.0.0](https://semver.org/)  
+  Öffentliche API, Kompatibilität, Vorabversion und unverändertes veröffentlichtes Paket.
+
+- [npm: About semantic versioning](https://docs.npmjs.com/about-semantic-versioning/)  
+  Praktische Beispiele für Patch, Minor und Major.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Semantic Versioning 2.0.0  
    https://semver.org/  

@@ -50,7 +50,7 @@ Egy webshop kosárfunkciónál:
 
 - **completeness**: lehet terméket hozzáadni, törölni, módosítani
 - **correctness**: a végösszeg helyes
-- **appropriateness**: gyorsan és érthetően használható
+- **appropriateness**: a kedvezmény és a szállítás számítása is a vásárlási feladat részeként elvégezhető
 
 ## Funkcionalitás és használhatóság: ne keverd össze
 
@@ -61,6 +61,14 @@ Egy webshop kosárfunkciónál:
 
 Van köztük kapcsolat, de nem ugyanaz.
 
+## Teljesség, helyesség és alkalmasság külön vizsgálva
+
+Egy kölcsönzőnek a foglalás mellett hosszabbítás és visszavétel is szükséges. Ha ezek közül valamelyik hiányzik, a funkcionális teljesség nem megfelelő. Ha mindegyik létezik, de a visszavétel téves eszközt tesz szabaddá, a funkcionális helyesség sérül.
+
+Az alkalmasság azt nézi, mennyire támogatja a funkciók készlete a feladat célzott elvégzését. Például a csoportos visszavétel egy teljes osztály eszközeit kezeli, és nem kíván külső táblázatban végzett segédszámítást. A gomb olvashatósága és a kezelés megtanulhatósága inkább az interakció minőségéhez, a válaszidő a teljesítményhez tartozik.
+
+Az ISO/IEC 25010:2023 termékminőségi modelljében kilenc fő jellemző szerepel; a functional suitability csak az egyik. A három aljellemző továbbra is completeness, correctness és appropriateness. A 2011-es kiadás usability csoportjának helyét a 2023-as modellben az interaction capability fogalom veszi át, módosított részletekkel.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftver funkcionalitásának minősége azt fejezi ki,
@@ -70,13 +78,6 @@ Van köztük kapcsolat, de nem ugyanaz.
 > amelynek fő részei a functional completeness,
 > functional correctness és functional appropriateness.  
 > Egy jó szoftver tehát nemcsak sok funkcióval rendelkezik, hanem azokat pontosan és célszerűen is nyújtja.
-
-## Gyakori vizsgahibák
-
-- Csak a “van ilyen funkció” szintjén megállni.
-- A helyességet és a teljességet összekeverni.
-- A funkcionalitást a használhatósággal azonosítani.
-- Nem megemlíteni a három alaprészt.
 
 ## Gyors önellenőrzés
 
@@ -95,6 +96,14 @@ Van köztük kapcsolat, de nem ugyanaz.
 5. Az egyik a funkciók megfelelőségét, a másik a könnyű használatot nézi
 
 ## Források
+
+- [ISO/IEC 25010:2023](https://www.iso.org/standard/78176.html)  
+  A jelenlegi termékminőségi modell hivatalos leírása.
+
+- [ISTQB: Advanced Level Test Analyst v4.0, Appendix A](https://istqb.org/?download_id=5745&sdm_process_download=1)  
+  A 2011-es és a 2023-as minőségi jellemzők hivatalos vizsgaszakmai összevetése.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. ISO/IEC 25010:2023 - Product quality model  
    https://www.iso.org/standard/78176.html  

@@ -40,14 +40,22 @@ Hauptziele:
 - nicht nur als Suche nach formalen Fehlern
 - es soll nicht zu endlosen Diskussionen werden
 
-## Code Review und Testen: nicht verwechseln
+## Statisches Review und dynamischer Test
 
 | Begriff | Fokus |
 |---|---|
 | Code Review | ein Mensch sieht sich den Code an |
-| Testen | das Verhalten wird zur Laufzeit überprüft |
+| dynamisches Testen | das Verhalten wird zur Laufzeit überprüft |
 
 Beide ergänzen sich, ersetzen sich aber nicht.
+
+## Review einer Änderung an der Zugriffskontrolle
+
+Die Änderung soll sicherstellen, dass Benutzer nur ihre eigene Notiz bearbeiten. Im Review verfolgen wir die Anfrage vom Knopf bis zur serverseitigen Aktion: Woher stammt die Benutzerkennung, wo wird der Eigentümer geprüft und gibt es einen Test mit der Notiz einer anderen Person? Das Ausblenden des Knopfs betrifft die Darstellung; der Server muss die Berechtigung durchsetzen.
+
+Ein konkreter Kommentar lautet: „Die angeforderte Notizkennung stammt vom Client. Bitte verbinden wir die Datenabfrage mit dem authentifizierten Benutzer und prüfen auch einen anderen Eigentümer.“ Damit werden Risiko und erwartetes Ergebnis verständlich.
+
+Das Review ist eine Form des **statischen Testens**: Das geprüfte Programm muss dafür nicht ausgeführt werden. Ausführungsbasierte, dynamische Tests liefern andere Nachweise. Eine kleine gezielte Änderung, eine verständliche Beschreibung und vorhandene Testergebnisse unterstützen die prüfende Person.
 
 ## Prüfungstaugliche Formulierung
 
@@ -61,19 +69,12 @@ Beide ergänzen sich, ersetzen sich aber nicht.
 > sondern auch ein Instrument
 > der Qualitätssicherung und Zusammenarbeit.
 
-## Häufige Prüfungsfehler
-
-- Das Code Review lediglich als Rechtschreibprüfung betrachten.
-- Den Wissensaustausch nicht erwähnen.
-- Behaupten, dass das Code Review das Testen ersetzt.
-- Persönliche Kritik mit fachlicher Überprüfung verwechseln.
-
 ## Schnelle Selbstkontrolle
 
 1. Was ist das Hauptziel des Code Reviews?
 2. Warum sollte es vor dem Merge durchgeführt werden?
 3. Wie unterstützt es das Team?
-4. Warum ist es nicht dasselbe wie Testen?
+4. Wie verhält sich das Review zum dynamischen Test?
 5. Welche Arten von Problemen können dabei aufgedeckt werden?
 
 ## Kurzantworten zur Selbstkontrolle
@@ -81,10 +82,18 @@ Beide ergänzen sich, ersetzen sich aber nicht.
 1. Früherkennung von Fehlern und Qualitätsverbesserung
 2. Weil es günstiger ist, Fehler früh zu beheben
 3. Durch Wissensaustausch und ein gemeinsames Qualitätsniveau
-4. Weil es eine menschliche Überprüfung ist, keine Laufzeitkontrolle
+4. Das Review ist statisches Testen; der dynamische Test untersucht das Verhalten durch Programmausführung.
 5. Logische, stilistische, sicherheitsrelevante oder wartungsbezogene Probleme
 
 ## Quellen
+
+- [Google: What to look for in a code review](https://google.github.io/eng-practices/review/reviewer/looking-for.html)  
+  Funktion, Tests, Lesbarkeit und Gesamtzusammenhang einer Änderung.
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Statisches und dynamisches Testen, Testentwurfsverfahren und Abdeckung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. GitHub - Code review  
    https://github.com/features/code-review  
