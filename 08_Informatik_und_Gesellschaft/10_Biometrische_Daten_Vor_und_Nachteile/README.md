@@ -72,10 +72,18 @@ A biometrikus adat bizonyos esetekben:
 
 Ezért a használata nem "csak technikai", hanem adatvédelmi kérdés is.
 
+## Arcfotó, biometrikus sablon és döntési küszöb
+
+Egy fénykép lehet személyes adat anélkül, hogy automatikusan biometrikus különleges adatkezelés történne. A GDPR 4. cikkének definíciójához speciális technikai feldolgozás és az egyedi azonosítás lehetősége tartozik. A 9. cikk a természetes személy egyedi azonosítását célzó biometrikus adatkezelést védi különleges kategóriaként.
+
+Egy beléptető a mért mintát egy tárolt sablonnal hasonlíthatja össze (`1:1`, ellenőrzés). Ismeretlen személy keresése sok tárolt minta között `1:N` azonosítás. A hasonlósági küszöb szigorítása csökkentheti az illetéktelen elfogadások számát, de növelheti a jogosultak elutasítását. Ezért a puszta „99% pontosság” nem mondja meg, melyik hibaarányról és milyen körülményekről van szó.
+
+A helyben tárolt sablon csökkentheti a központi adatgyűjtést. A rendszerhez hozzáférhető tartalék belépési mód, jogosultságkezelés és megfelelő jogalap is szükséges, a technika önmagában nem dönti el a jogszerűséget.
+
 ## Vizsgán jól használható megfogalmazás
 
-> A biometrikus adatok, például az ujjlenyomat,
-> arckép vagy hangminta,
+> A biometrikus adatok, például az egyedi azonosításhoz
+> technikailag feldolgozott ujjlenyomat-, arc- vagy hangminták,
 > kényelmes és gyors azonosítást tehetnek lehetővé.  
 > Ugyanakkor különösen érzékeny személyes adatok,
 > ezért használatuk adatvédelmi, biztonsági
@@ -83,13 +91,6 @@ Ezért a használata nem "csak technikai", hanem adatvédelmi kérdés is.
 > Kockázat lehet a hibás felismerés, a torz működés
 > és az is, hogy kompromittálódás esetén
 > a biometrikus jellemző nem cserélhető úgy, mint egy jelszó.
-
-## Gyakori vizsgahibák
-
-- Csak az előnyöket említeni.
-- A biometrikus adatot sima azonosítónak tekinteni.
-- Nem megemlíteni, hogy ez különösen érzékeny adat lehet.
-- Elfelejteni a false accept / false reject problémát.
 
 ## Gyors önellenőrzés
 
@@ -101,13 +102,18 @@ Ezért a használata nem "csak technikai", hanem adatvédelmi kérdés is.
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. Biológiai vagy viselkedési jellemzőből származó, azonosításra alkalmas adat
-2. Ujjlenyomat, arckép, hangminta
+1. Fizikai, fiziológiai vagy viselkedési jellemzők speciális technikai feldolgozásából származó, egyedi azonosítást lehetővé tevő vagy megerősítő személyes adat
+2. Egyedi azonosításhoz feldolgozott ujjlenyomat-, arc- vagy hangminta
 3. Gyors és kényelmes azonosítás
 4. Privacy kockázat, hibás felismerés, torzítás
 5. Mert nem könnyen változtatható meg
 
 ## Források
+
+- [EUR-Lex: DSGVO, Art. 4 und 9, Erwägungsgrund 51](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679)  
+  Fénykép és biometrikus adat különbsége, egyedi azonosítás célja.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. EUR-Lex - Regulation (EU) 2016/679  
    https://eur-lex.europa.eu/eli/reg/2016/679/oj  

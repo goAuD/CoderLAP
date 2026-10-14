@@ -58,6 +58,14 @@ Weil gute Datenanalyse helfen kann:
 | Datenbank | strukturiertes Speichersystem für Daten |
 | AI / Machine Learning | Methode zur Datenanalyse, nicht dasselbe wie Big Data selbst |
 
+## Durchgearbeitetes Beispiel: von Datenmengen zur Entscheidung
+
+In einem fiktiven Werk senden 1000 Sensoren je einen Datensatz von 100 Byte pro Sekunde. Der Rohdatenstrom beträgt `1000 × 100 = 100 000 B/s`, täglich also `8 640 000 000 B` beziehungsweise `8,64 GB`. Indizes, Kopien und Netzwerk-Header sind noch nicht enthalten. Die Zahl allein macht daraus kein Big-Data-Problem: Geschwindigkeit, Verarbeitungsfrist und unterschiedliche Formate zählen ebenfalls.
+
+Vor der Analyse prüfen wir Zeitstempel, Einheiten und fehlende Messungen. Millionen falscher Sensorwerte werden durch ihre Menge nicht zuverlässig. Diesen Zuverlässigkeitsaspekt bezeichnet man häufig als `Veracity`. `3V`, `4V` und `5V` sind unterschiedliche Erklärungsmodelle, keine einzige verbindliche Liste.
+
+Eine mögliche Entscheidung ist die Kontrolle eines Lagers bei zunehmender Vibration. Das Muster liefert einen Hinweis; die Ursache muss fachlich überprüft werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Big Data bezeichnet die Verarbeitung und Analyse großer Mengen von Daten,
@@ -65,13 +73,6 @@ Weil gute Datenanalyse helfen kann:
 > Der Begriff wird häufig mit den Merkmalen `Volume`, `Velocity` und `Variety` beschrieben.  
 > Der Vorteil besteht darin, dass wertvolle Informationen gewonnen werden können,
 > gleichzeitig birgt es jedoch Risiken in Bezug auf Datenschutz, Qualität und Ethik.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, Big Data sei nur "viele Daten".
-- Die `3V`-Logik nicht zu erwähnen.
-- Big Data mit AI zu verwechseln.
-- Die Datenschutz- und Qualitätsrisiken auszulassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,6 +91,14 @@ Weil gute Datenanalyse helfen kann:
 5. Vorteil: bessere Entscheidungsunterstützung; Risiko: Datenschutzproblem
 
 ## Quellen
+
+- [NIST: Big data](https://csrc.nist.gov/topics/technologies/big-data)  
+  Skalierbare Architektur und Big-Data-Merkmale.
+
+- [NIST: The real challenge of Big Data](https://www.nist.gov/baldrige/real-challenge-big-data)  
+  Veracity und Datenqualität; keine feste Byte-Schwelle.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. NIST - Big Data Interoperability Framework: Volume 1, Definitions  
    https://www.nist.gov/publications/nist-big-data-interoperability-framework-volume-1-big-data-definitions-version-2  

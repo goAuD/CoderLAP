@@ -49,6 +49,14 @@ Das Wesentliche an IoT ist, dass Geräte:
 | Internet | die Netzwerkinfrastruktur selbst |
 | Industrie 4.0 | industrielle Digitalisierung, in der häufig auch IoT eine Rolle spielt |
 
+## Datenweg und Lebenszyklus einer intelligenten Heizung
+
+Ein Temperatursensor sendet Messwerte an ein Gateway. Eine lokale Steuerung vergleicht sie mit dem Sollwert und steuert den Aktor des Ventils. Die Telefonoberfläche zeigt den Zustand. Eine Cloud ist nur ein möglicher Bestandteil: IoT-Geräte können auch lokal über Vermittler zusammenarbeiten und müssen nicht alle unmittelbar aus dem Internet erreichbar sein.
+
+Vor dem Kauf klären wir eindeutige Geräteidentifikation, Berechtigungen, Update-Unterstützung und Datenverarbeitung. Im Beispiel soll die lokale Temperaturregelung bei Internetausfall sicher weiterlaufen. Bei Weitergabe lösen wir die Kontoverknüpfung und löschen gespeicherte Daten nach dem Herstellerverfahren.
+
+Der Lebenszyklus reicht von der Inbetriebnahme bis zur Außerbetriebnahme. Sicherheit endet nicht mit der ersten Passworteinstellung.
+
 ## Prüfungstaugliche Formulierung
 
 > IoT, also das Internet der Dinge,
@@ -58,13 +66,6 @@ Das Wesentliche an IoT ist, dass Geräte:
 > IoT kommt im Smart Home, in der Industrie, im Gesundheitswesen und in vielen anderen Bereichen vor.  
 > Der Vorteil liegt in der bequemeren Steuerung und den Echtzeitdaten,
 > das Risiko betrifft jedoch die Sicherheit und den Datenschutz.
-
-## Häufige Prüfungsfehler
-
-- IoT nur als "internetfähiges Gadget" zu bezeichnen.
-- Sensoren und Datenerfassung nicht zu erwähnen.
-- Die Sicherheits- und Privacy-Risiken zu vergessen.
-- Mit Industrie 4.0 zu verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +84,11 @@ Das Wesentliche an IoT ist, dass Geräte:
 5. Nein
 
 ## Quellen
+
+- [NISTIR 8259A](https://csrc.nist.gov/pubs/ir/8259/a/final)  
+  Grundlegende Sicherheitsfähigkeiten von IoT-Geräten.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. NIST - Internet of Things (IoT)  
    https://www.nist.gov/topics/internet-things-iot  

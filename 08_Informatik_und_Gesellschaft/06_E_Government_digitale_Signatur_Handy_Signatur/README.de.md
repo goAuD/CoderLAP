@@ -24,15 +24,9 @@ Beispiele:
 - elektronische Zustellung
 - digitale Bescheinigungen
 
-## Was ist die digitale/elektronische Signatur?
+## Was ist eine elektronische Signatur?
 
-Die elektronische Signatur ist eine technische Lösung, die:
-
-- einer Person zugeordnet werden kann
-- mit einem digitalen Dokument verbunden ist
-- in bestimmten Fällen auch rechtlich eine sehr starke Beweiskraft besitzt
-
-In der EU wird dies durch die `eIDAS`-Verordnung geregelt.
+Eine elektronische Signatur besteht aus elektronischen Daten, die anderen elektronischen Daten beigefügt oder logisch zugeordnet sind und die eine unterzeichnende Person zum Unterzeichnen verwendet. Nicht jede Form verwendet Kryptografie. Anforderungen und Rechtswirkungen regelt in der EU die `eIDAS`-Verordnung.
 
 ## Was war die Handy-Signatur?
 
@@ -73,14 +67,22 @@ Das bedeutet in der Praxis:
 
 - ein digitales Dokument kann offiziell signiert werden
 
-## Nicht verwechseln
+## Zusammenhang der Begriffe
 
 | Begriff | Was bedeutet das? |
 |---|---|
 | E-Government | Online-Behördenangelegenheiten |
-| elektronische Signatur | digitaler Signaturmechanismus |
+| elektronische Signatur | zum Unterzeichnen verwendete, anderen elektronischen Daten zugeordnete Daten |
 | ID Austria | österreichisches digitales Identifikations-/Signatursystem |
 | Handy-Signatur | früheres, bereits abgelöstes System |
+
+## Identifikation und Signatur sind zwei Aufgaben
+
+Die Identifikation weist dem Dienst nach, wer sich anmeldet. Eine Signatur bezieht sich dagegen auf eine konkrete Erklärung oder ein Dokument. Elektronische Signatur ist ein rechtlicher Oberbegriff; digitale Signatur bezeichnet eine kryptografische Technik, mit der unter anderem die Unverändertheit eines Dokuments geprüft werden kann.
+
+eIDAS unterscheidet elektronische, fortgeschrittene und qualifizierte elektronische Signaturen. Nach Artikel 25 ist die qualifizierte elektronische Signatur in ihrer Rechtswirkung einer handschriftlichen Unterschrift gleichgestellt. Auch einer einfachen elektronischen Signatur darf ihre Rechtswirkung nicht allein wegen ihrer elektronischen Form abgesprochen werden; dadurch wird sie aber noch nicht qualifiziert.
+
+Beispiel: Du liest das endgültige PDF und signierst es mit der dafür vorgesehenen Funktion. Die empfangende Person prüft Gültigkeit der Signatur und Unversehrtheit des Dokuments. Ein eingefügtes Bild einer Unterschrift bietet diese kryptografische Prüfung nicht. Bei Geschäften mit besonderen Formvorschriften müssen zusätzlich die Verfahrensregeln geprüft werden.
 
 ## Prüfungstaugliche Formulierung
 
@@ -90,20 +92,13 @@ Das bedeutet in der Praxis:
 > am 5. Dezember 2023 durch ID Austria abgelöst,
 > daher ist ID Austria heute die aktuelle Lösung.
 
-## Häufige Prüfungsfehler
-
-- Die Handy-Signatur als aktuelles System darzustellen.
-- ID Austria nicht zu erwähnen.
-- E-Government einfach mit einer Website zu verwechseln.
-- Die elektronische Signatur automatisch mit jeder einfachen digitalen Namenseingabe gleichzusetzen.
-
 ## Schnelle Selbstkontrolle
 
 1. Was ist E-Government?
 2. Wozu dient die elektronische Signatur?
 3. Was hat die Handy-Signatur abgelöst?
 4. Wann wurde sie abgelöst?
-5. Was ist der aktuelle offizielle Stand am 8. April 2026?
+5. Welche Signatur ist nach eIDAS einer handschriftlichen Unterschrift in ihrer Rechtswirkung gleichgestellt?
 
 ## Kurzantworten zur Selbstkontrolle
 
@@ -111,9 +106,17 @@ Das bedeutet in der Praxis:
 2. Zur rechtsverbindlichen Signatur digitaler Dokumente
 3. ID Austria
 4. Am 5. Dezember 2023
-5. Das aktuelle System ist ID Austria
+5. Die qualifizierte elektronische Signatur nach Artikel 25 eIDAS
 
 ## Quellen
+
+- [EUR-Lex: eIDAS, konszolidált szöveg / konsolidierte Fassung](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A02014R0910-20240520)  
+  Artikel 3, 25 und 26: Signaturbegriffe und Rechtswirkung.
+
+- [ID Austria: Umstellung](https://www.id-austria.gv.at/de/registrieren/uebersicht/von-handy-signatur-umsteigen)  
+  Offizielle Informationen zum Nachfolgesystem der Handy-Signatur.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. oesterreich.gv.at - E-Government  
    https://www.oesterreich.gv.at/en/themen/egovernment_moderne_verwaltung  
