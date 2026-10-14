@@ -222,6 +222,10 @@ copies at `assets/workshop-frame.css`; update all three together and compare
 their hashes. There is no shared runtime package or CDN.
 Local Lucide navigation icons include notices in `site/assets/LICENSE-Lucide.txt`.
 
+The homepage CoderQuiz link has a subtle animated border using the existing
+blue, Regex yellow and white color tokens. It pauses on hover or keyboard focus
+and stays still when reduced motion is preferred; print keeps the plain card.
+
 Key generated routes include:
 
 - `/` for the German catalog
