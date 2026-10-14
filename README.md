@@ -47,30 +47,8 @@ translation mapping, and site-building, the project now also includes:
 - `LAP_CONTENT_REGISTRY.json`
 - `LAP_CONTENT_REGISTRY.csv`
 
-Operational continuity and formatting rules are documented in:
-
-- [AGENTS.md](./AGENTS.md)
-
-Architecture and delivery notes are documented in:
-
-- [docs/project/content-architecture.md](./docs/project/content-architecture.md)
-- [docs/project/architecture-adoption.md](./docs/project/architecture-adoption.md)
-- [docs/project/deploy-strategy.md](./docs/project/deploy-strategy.md)
-- [docs/project/public-repo-flip-checklist.md](./docs/project/public-repo-flip-checklist.md)
-- [docs/project/github-security-settings-checklist.md](./docs/project/github-security-settings-checklist.md)
-- [docs/project/github-release-hygiene.md](./docs/project/github-release-hygiene.md)
-- [docs/project/private-rollout-access.md](./docs/project/private-rollout-access.md)
-- [docs/project/access-hygiene-playbook.md](./docs/project/access-hygiene-playbook.md)
-- [docs/project/pre-public-checklist.md](./docs/project/pre-public-checklist.md)
-- [docs/project/next-improvements-checklist.md](./docs/project/next-improvements-checklist.md)
-- [docs/project/backup-restore-playbook.md](./docs/project/backup-restore-playbook.md)
-- [docs/project/feedback-loop-playbook.md](./docs/project/feedback-loop-playbook.md)
-- [docs/project/uptime-expiry-monitoring.md](./docs/project/uptime-expiry-monitoring.md)
-- [docs/project/final-austrian-legal-review.md](./docs/project/final-austrian-legal-review.md)
-- [docs/releases/README.md](./docs/releases/README.md)
-- [docs/releases/release-notes-v0.1.0-private-beta.1.md](./docs/releases/release-notes-v0.1.0-private-beta.1.md)
-- [docs/releases/release-notes-v0.2.0-public-repo.1.md](./docs/releases/release-notes-v0.2.0-public-repo.1.md)
-- [docs/process/md013-cleanup-strategy.md](./docs/process/md013-cleanup-strategy.md)
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for content and contribution rules,
+and [release notes](./docs/releases/README.md) for published milestones.
 
 ## Project layout
 
@@ -81,7 +59,10 @@ The root contains:
 - one `README.md` per subtopic folder as the canonical Hungarian source file
 - one `README.de.md` translation sidecar per subtopic folder
 - generated registry files for all canonical topic documents
-- internal project/deployment docs under `docs/project/`
+- release notes under `docs/releases/` and public images under `docs/assets/`
+
+Other documents under `docs/` and local agent settings are ignored. Keep
+planning notes, deployment credentials and machine-specific details outside Git.
 
 Example:
 
@@ -96,7 +77,7 @@ Example:
 Completed so far:
 
 - full topic folder structure created
-- project rules documented in [AGENTS.md](./AGENTS.md)
+- contribution rules documented in [CONTRIBUTING.md](./CONTRIBUTING.md)
 - main topic `01_Grundlagen_in_der_Informationstechnik` completed
 - `7 / 7` subtopic documents created for topic `01`
 - main topic `02_Betriebssysteme_und_Software` completed
@@ -236,8 +217,9 @@ python scripts/build_site.py
 The generated static frontend is written to `dist/` (git-ignored).
 
 The shared CoderLAP / CoderQuiz / CoderCoaster header and footer are maintained
-in `site/assets/css/workshop-frame.css`; see the
-[frame maintenance notes](docs/project/architecture-adoption.md#shared-műhely-header-and-footer).
+in `site/assets/css/workshop-frame.css`. CoderQuiz and CoderCoaster keep matching
+copies at `assets/workshop-frame.css`; update all three together and compare
+their hashes. There is no shared runtime package or CDN.
 Local Lucide navigation icons include notices in `site/assets/LICENSE-Lucide.txt`.
 
 Key generated routes include:
@@ -279,8 +261,9 @@ with their prerequisites and are not run as standalone Node.js examples.
 The build omits the editorial test marker from the rendered learning pages.
 Both `dev` and `main` pull requests run these checks in CI.
 
-The [2026-10 content review](./docs/plans/2026-10-14-content-review.md) records
-module coverage, factual corrections, sources and validation limits.
+The [reviewed-content release](./docs/releases/release-notes-v0.4.0-reviewed-content.md)
+records module coverage, factual corrections and validation limits. Each topic
+keeps its own source list.
 
 ### Quick start on a new machine
 
@@ -295,20 +278,10 @@ python -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 ## Continuing work
 
-If you continue this project in a new Codex thread:
-
-1. Read [AGENTS.md](./AGENTS.md).
-2. Check the registry and `docs/project/` notes.
-3. Use the current clone's repository root as the active working copy.
-4. Check what topic folders already contain a `README.md`.
-5. Continue within the existing structure.
-6. Preserve the German naming + bilingual content structure, with Hungarian as
-   canonical source and German as the default frontend language.
-7. Keep sources explicit in every topic document.
-
-Short cross-machine continuation note:
-
-- [docs/project/next-thread-handoff.md](./docs/project/next-thread-handoff.md)
+Read [CONTRIBUTING.md](./CONTRIBUTING.md), check the registry and continue within
+the existing numbered topic structure. Preserve German file names, Hungarian
+canonical content and German translations. Keep sources explicit in every topic.
+Use a focused feature branch and run the checks above before opening a PR.
 
 ## Notes
 

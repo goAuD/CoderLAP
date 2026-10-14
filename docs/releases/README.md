@@ -5,8 +5,8 @@ Last updated: `2026-10-14`
 This folder stores release-note source files that describe milestone states of
 the repository and the live site.
 
-The release docs are intentionally separate from `docs/project/` because they
-are historical milestone records, not evergreen architecture or process notes.
+Release notes are historical milestone records. Current setup and contribution
+instructions live in the repository's README and CONTRIBUTING files.
 
 ## Current Files
 

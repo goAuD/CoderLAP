@@ -53,7 +53,7 @@ the production deployment and post-deploy monitor runs.
 
 ## Recovery And Follow-Up
 
-- For recovery, use the [backup and restore playbook](../project/backup-restore-playbook.md).
+- For recovery, verify the selected backup before restoring it.
   The production commit before this rollout is
   `260be4315cd2fee3145d080603ed758ae1e4f600`; the existing deploy workflow can be
   run manually at a temporary recovery branch referencing that commit if needed.
