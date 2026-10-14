@@ -7,7 +7,7 @@
 | fő egység | eljárás / függvény | osztály / objektum |
 | fókusz | mit csinál a program? | milyen dolgok vannak a rendszerben? |
 | adatok | gyakran külön kezeljük | az objektumhoz kapcsoljuk |
-| jó választás | kisebb, lineárisabb feladatok | nagyobb, összetettebb rendszerek |
+| szervezési szempont | jól elkülöníthető műveletek | összetartozó állapot és viselkedés |
 
 ## Mi az a procedurális programozás?
 
@@ -69,13 +69,47 @@ Alkalmazott
   - számolBér()
 ```
 
-## Ne keverd össze
+## A megközelítés kiválasztása
 
-| Tévhit | Miért hibás? |
-|---|---|
-| az OOP mindig jobb | nem mindig, feladattól függ |
-| a procedurális programozás elavult | ma is sok helyen hasznos |
-| OOP = csak class kulcsszó | az OOP szemlélet ennél több |
+A feladat adatainak, műveleteinek és változási igényeinek megfelelő szervezést válasszunk. Egy program több paradigmát is használhat.
+
+## Ugyanaz a pontszám kétféle szervezéssel
+
+Feladat: először 3, majd 2 pontot adunk egy nulláról induló pontszámhoz. A példa
+ellenőrzött, nemnegatív egész bemeneteket feltételez. Node.js-ben futtatható.
+
+<!-- example:run -->
+
+```javascript
+function addPoints(score, points) {
+  return score + points;
+}
+class Score {
+  #value = 0;
+  add(points) { this.#value += points; }
+  get value() { return this.#value; }
+}
+let total = addPoints(0, 3);
+total = addPoints(total, 2);
+const score = new Score();
+score.add(3);
+score.add(2);
+console.log(total, score.value);
+```
+
+```text
+5 5
+```
+
+A függvény megkapja a régi értéket, és új értéket ad vissza. Az osztály példánya
+őrzi a saját állapotát, az `add` metódus ezt változtatja. A `#value` privát mező;
+a kívülről olvasható `value` getter csak lekérdezést enged. Két `Score` példány
+két külön pontszámot tárolna. Egy egyszerű számításhoz a függvény gyakran elég;
+összetartozó állapot és műveletek esetén indokolt lehet az objektum.
+
+A választás nem a program méretéből következik. Nagy rendszert is lehet
+moduláris függvényekből építeni. JavaScriptben osztály nélkül, objektumliterállal
+is készülhet objektum; az objektum és az osztály ezért nem szinonima.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -84,13 +118,6 @@ Alkalmazott
 > A procedurális megközelítés főleg a végrehajtandó lépésekre, az objektumorientált megközelítés pedig az adatok és a  
 > hozzájuk tartozó műveletek egységére koncentrál.  
 > Mindkét paradigma hasznos, és a választás a feladattól függ.
-
-## Gyakori vizsgahibák
-
-- Az OOP-t automatikusan fejlettebbnek nevezni minden helyzetben.
-- A procedurális megközelítést csak “régi stílusnak” beállítani.
-- Nem megemlíteni az adatok és műveletek kapcsolatát.
-- Az OOP-t pusztán öröklésre leszűkíteni.
 
 ## Gyors önellenőrzés
 
@@ -109,6 +136,11 @@ Alkalmazott
 5. Mert a feladat dönti el, melyik előnyösebb
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Using classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes): privát mező, getter és példányállapot.
+
 
 1. Oracle Java Tutorials - Object-Oriented Programming Concepts  
    https://docs.oracle.com/javase/tutorial/java/concepts  

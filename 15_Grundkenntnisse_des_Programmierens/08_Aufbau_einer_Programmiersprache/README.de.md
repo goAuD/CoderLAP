@@ -82,19 +82,47 @@ Zu einer Sprache gehört häufig:
 - eine Standardbibliothek
 - eine Laufzeitumgebung
 
+## Einen Ausdruck in Bestandteile zerlegen
+
+Aufgabe: Aus 250 Cent Stückpreis und der als Text gelieferten Menge `"3"`
+berechnen wir den Gesamtpreis. Dieses Node.js-Beispiel verwendet eine feste,
+gültige Eingabe. Bei Benutzereingaben prüfen wir nach der Umwandlung auch
+Wertebereich und Ganzzahligkeit.
+
+<!-- example:run -->
+
+```javascript
+const unitCents = 250;
+const quantity = Number("3");
+const totalCents = unitCents * quantity;
+console.log(totalCents);
+console.log(typeof quantity, quantity === 3);
+```
+
+```text
+750
+number true
+```
+
+| Codeteil | Sprachliche Rolle |
+|---|---|
+| `const` | Schlüsselwort für die Deklaration |
+| `unitCents` | selbst gewählter Bezeichner |
+| `250`, `"3"` | Zahlen- beziehungsweise Textliteral |
+| `unitCents * quantity` | Ausdruck, der einen Wert liefert |
+| `===` | strenger Gleichheitsvergleich |
+
+Die Syntax bestimmt den Aufbau der Deklaration. Die Semantik beschreibt, welche
+Operation `*` durchführt und welcher Wert entsteht. `Number` gehört zu den
+eingebauten Sprachobjekten; `console` ist ein Dienst der Laufzeitumgebung. Das
+`document`-Objekt des Browsers gehört beispielsweise nicht automatisch zu Node.js.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Aufbau einer Programmiersprache wird durch die Gesamtheit von Syntax, Semantik und Sprachelementen bestimmt.  
 > Dazu gehören beispielsweise Schlüsselwörter, Bezeichner, Literale, Datentypen, Operatoren und Kontrollstrukturen.  
 > Die Syntax bestimmt, wie der Code korrekt geschrieben werden muss, die Semantik hingegen, was er bedeutet und wie er
 > sich bei der Ausführung verhält.
-
-## Häufige Prüfungsfehler
-
-- Syntax und Semantik zu verwechseln.
-- Die Programmiersprache nur als Ansammlung von Schlüsselwörtern zu betrachten.
-- Typen und Operatoren nicht zu erwähnen.
-- Auszulassen, dass zur Sprache ein Regelwerk gehört.
 
 ## Schnelle Selbstkontrolle
 
@@ -113,6 +141,11 @@ Zu einer Sprache gehört häufig:
 5. Weil es logisch noch fehlerhaft sein kann
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types): Literale, Deklarationen und Typumwandlung.
+
 
 1. MDN - Syntax  
    https://developer.mozilla.org/en-US/docs/Glossary/Syntax  

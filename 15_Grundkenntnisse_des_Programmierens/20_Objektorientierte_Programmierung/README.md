@@ -68,19 +68,55 @@ Gond lehet, ha:
 | szervezés | függvények / eljárások | osztályok / objektumok |
 | adatok és műveletek | gyakran külön | együtt kezelve |
 
+## Egy objektum felelőssége és érvényes állapota
+
+Feladat: egy gyakorlásban megszámoljuk az összes és a helyes választ. Az osztály
+gondoskodik arról, hogy a helyes válaszok száma ne haladhassa meg az összeset.
+A teljes JavaScript-példa Node.js-ben futtatható.
+
+<!-- example:run -->
+
+```javascript
+class PracticeSession {
+  #answered = 0;
+  #correct = 0;
+  answer(isCorrect) {
+    if (typeof isCorrect !== "boolean") throw new TypeError("Boolean required");
+    this.#answered += 1;
+    if (isCorrect) this.#correct += 1;
+  }
+  summary() {
+    return `${this.#correct}/${this.#answered}`;
+  }
+}
+const first = new PracticeSession();
+const second = new PracticeSession();
+first.answer(true);
+first.answer(false);
+console.log(first.summary(), second.summary());
+```
+
+```text
+1/2 0/0
+```
+
+A privát mezőket az `answer` metódus együtt módosítja, és csak logikai bemenetet
+fogad. Ez a bezárás gyakorlati értelme: az objektum érvényes állapotának
+megőrzése. A `summary` lekérdez, nem módosít. A második példány állapota független.
+
+Az absztrakció a kívülről használható műveleteket mutatja meg, a két számláló
+tárolási részleteit elrejti. Öröklésre itt nincs szükség. Ha később egy gyakorlás
+több kérdést tartalmaz, a „gyakorlásnak vannak kérdései” kapcsolatot összetétellel
+(kompozícióval) modellezzük. Az öröklés „egy fajtája” kapcsolatot és valódi
+helyettesíthetőséget igényel. Polimorfizmusnál több kérdéstípus azonos `checkAnswer`
+művelete eltérően ellenőrizheti a választ.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az objektumorientált programozás olyan programozási paradigma, amelyben a rendszert objektumokkal modellezzük.  
 > Az objektumok állapotot és viselkedést tartalmaznak, és általában osztályok alapján jönnek létre.  
 > Az OOP fontos fogalmai az osztály, objektum, encapsulation, inheritance, polymorphism és abstraction.  
 > Fő előnye a jobb modellezhetőség és karbantarthatóság, különösen összetettebb rendszereknél.
-
-## Gyakori vizsgahibák
-
-- Az OOP-t csak öröklésként leírni.
-- Az objektumot az osztállyal összekeverni.
-- Azt állítani, hogy minden jó program csak OOP lehet.
-- Kihagyni az encapsulation szerepét.
 
 ## Gyors önellenőrzés
 
@@ -99,6 +135,11 @@ Gond lehet, ha:
 5. Jobb modellezhetőség és karbantarthatóság
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Private elements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements): privát mezők és nyelvileg kikényszerített hozzáférés.
+
 
 1. Oracle Java Tutorials - Object-Oriented Programming Concepts  
    https://docs.oracle.com/javase/tutorial/java/concepts  

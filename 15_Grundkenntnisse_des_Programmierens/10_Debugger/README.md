@@ -60,19 +60,51 @@ Megmutatja, milyen hívási láncon keresztül jutottunk az aktuális pontra.
 
 A kettő együtt a leghasznosabb.
 
+## Megfigyelési feladat helyes programon
+
+A következő Node.js-ben vagy böngészőkonzolban futtatható kód két egész
+centértéket összegez. Mentsd fájlba, és a szerkesztő debuggerével tegyél
+breakpointot a `total += price` sorra.
+
+<!-- example:run -->
+
+```javascript
+function subtotal(prices) {
+  let total = 0;
+  for (const price of prices) {
+    total += price;
+  }
+  return total;
+}
+console.log(subtotal([200, 350]));
+```
+
+```text
+550
+```
+
+Az első megálláskor `total = 0`, `price = 200`; a kiemelt sor még nem futott le.
+Egy lépés után `total = 200`. A második megálláskor `price = 350`, utána a
+végösszeg `550`. A Watch mezőben például a `total` kifejezést figyelhetjük.
+
+| Művelet | Mit hajt végre? |
+|---|---|
+| Step into | belép a következő függvényhívásba |
+| Step over | végrehajtja a hívást, de nem járja be soronként |
+| Step out | befejezi az aktuális függvényt, majd a hívónál áll meg |
+| Resume | továbbfut a következő megállási feltételig |
+
+A feltételes breakpoint csak például `price > 300` esetén állítja meg a futást.
+Ez hosszú ciklusban hasznos. A hibakeresőben látott személyes vagy titkos adatot
+nem másoljuk automatikusan naplóba; a megfigyeléshez elég lehet a típus vagy egy
+személytelenített próbaadat.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A debugger egy hibakereső eszköz, amely lehetővé teszi a program futásának megfigyelését és vezérlését.  
 > Segítségével breakpointokat állíthatunk be, lépésenként futtathatjuk a kódot, megfigyelhetjük a változók értékét és  
 > elemezhetjük a hívási láncot.  
 > Ez különösen hasznos logikai hibák és futás közbeni problémák feltárásában.
-
-## Gyakori vizsgahibák
-
-- A debugger-t egyszerű hibaüzenet-olvasásnak tekinteni.
-- Nem megemlíteni a breakpointot.
-- Összekeverni a debugger-t a compilerrel.
-- Elfelejteni a változófigyelés és call stack szerepét.
 
 ## Gyors önellenőrzés
 
@@ -91,6 +123,11 @@ A kettő együtt a leghasznosabb.
 5. Az egyik interaktív, a másik naplózás
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Chrome DevTools: Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript): léptetés, breakpoint és Watch.
+
 
 1. GDB - Debugging with GDB  
    https://sourceware.org/gdb/current/onlinedocs/gdb.pdf  

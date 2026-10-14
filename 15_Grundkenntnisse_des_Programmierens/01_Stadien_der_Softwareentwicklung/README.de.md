@@ -102,19 +102,35 @@ Dazu gehört:
 - auch Testen und Wartung nennen
 - die Phasen nicht mit konkreten Methoden wie `Scrum` oder dem Wasserfallmodell verwechseln
 
+## Eine Anforderung durch den Lebenszyklus verfolgen
+
+Wir entwickeln eine Kursanmeldung. Der Wunsch lautet: „Man soll sich anmelden
+können.“ Daraus wird eine überprüfbare Anforderung: Eine Person darf sich pro
+Termin einmal anmelden; die Bestätigung erscheint erst nach erfolgreicher Speicherung.
+
+| Phase | Überprüfbares Ergebnis |
+|---|---|
+| Analyse | Kapazität, Berechtigungen und Akzeptanzkriterien |
+| Entwurf | Oberflächenentwurf, Datenmodell, gleichzeitige Anmeldungen |
+| Implementierung | Speicherung und verständliche Rückmeldung |
+| Test | freier Platz, voller Termin, wiederholter Klick |
+| Einführung | erprobte Installation, Sicherung und Wiederherstellungsplan |
+| Wartung | Verbesserung aus Rückmeldungen, anschließend erneuter Test |
+
+Die Phasen beschreiben Tätigkeiten, keine zwingend einmalige Reihenfolge. Bei
+iterativer Entwicklung durchläuft eine kleine Funktion diese Tätigkeiten mehrfach.
+Testfälle lassen sich bereits mit den Anforderungen planen. Validierung fragt,
+ob wir das tatsächliche Problem der Benutzer lösen. Verifizierung prüft, ob die
+Lösung die festgelegten Anforderungen erfüllt. Dafür können unterschiedliche
+Nachweise erforderlich sein: ein Benutzertest beziehungsweise ein Test anhand
+der Spezifikation.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Softwareentwicklung besteht aus mehreren aufeinander aufbauenden Phasen.  
 > Die typischen Schritte sind Anforderungserhebung, Anforderungsanalyse, Entwurf, Implementierung, Testen, Einführung  
 > und Wartung.  
 > Der Zweck dieser Aufteilung ist, die Entwicklung übersichtlicher, kontrollierbarer und sicherer zu machen.
-
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass Softwareentwicklung im Wesentlichen Codierung ist.
-- Die Anforderungsanalyse auszulassen.
-- Das Testen nicht zu erwähnen.
-- Zu vergessen, dass die Wartung ebenfalls Teil des Prozesses ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -133,6 +149,11 @@ Dazu gehört:
 5. Anforderung, Analyse, Entwurf, Implementierung, Test, Einführung, Wartung
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [IBM: Software Development Lifecycle](https://www.ibm.com/think/topics/sdlc): Lebenszyklus und Rückkopplung; das Kursbeispiel ist eigenständig.
+
 
 1. IBM - What is the Software Development Lifecycle (SDLC)?  
    https://www.ibm.com/think/topics/sdlc  

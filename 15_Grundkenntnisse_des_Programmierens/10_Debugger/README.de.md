@@ -60,19 +60,52 @@ Zeigt, über welche Aufrufkette wir zum aktuellen Punkt gelangt sind.
 
 Beides zusammen ist am nützlichsten.
 
+## Beobachtungsaufgabe an einem korrekten Programm
+
+Der folgende Code läuft in Node.js oder der Browserkonsole und summiert zwei
+ganzzahlige Centbeträge. Speichere ihn als Datei und setze im Debugger des
+Editors einen Breakpoint auf die Zeile `total += price`.
+
+<!-- example:run -->
+
+```javascript
+function subtotal(prices) {
+  let total = 0;
+  for (const price of prices) {
+    total += price;
+  }
+  return total;
+}
+console.log(subtotal([200, 350]));
+```
+
+```text
+550
+```
+
+Beim ersten Halt gilt `total = 0`, `price = 200`; die markierte Zeile wurde noch
+nicht ausgeführt. Nach einem Schritt ist `total = 200`. Beim zweiten Halt ist
+`price = 350`, danach beträgt die Summe `550`. Im Watch-Feld lässt sich etwa
+der Ausdruck `total` beobachten.
+
+| Aktion | Was wird ausgeführt? |
+|---|---|
+| Step into | in den nächsten Funktionsaufruf hineinsteigen |
+| Step over | den Aufruf ausführen, ohne seine Zeilen einzeln zu betreten |
+| Step out | die aktuelle Funktion beenden und beim Aufrufer anhalten |
+| Resume | bis zur nächsten Haltebedingung weiterlaufen |
+
+Ein bedingter Breakpoint hält beispielsweise nur bei `price > 300` an. Das hilft
+in langen Schleifen. Personenbezogene oder geheime Daten aus dem Debugger gehören
+nicht automatisch ins Protokoll; für die Beobachtung genügen oft Datentypen oder
+anonymisierte Beispieldaten.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Debugger ist ein Fehlersuch-Werkzeug, das es ermöglicht, die Programmausführung zu beobachten und zu steuern.  
 > Mit ihm können Breakpoints gesetzt, der Code schrittweise ausgeführt, Variablenwerte beobachtet und die Aufrufkette  
 > analysiert werden.  
 > Das ist besonders nützlich zur Aufdeckung logischer Fehler und Laufzeitprobleme.
-
-## Häufige Prüfungsfehler
-
-- Den Debugger als einfaches Fehlermeldung-Lesen zu betrachten.
-- Den Breakpoint nicht zu erwähnen.
-- Den Debugger mit dem Compiler zu verwechseln.
-- Die Rolle der Variablenüberwachung und des Call Stacks zu vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -91,6 +124,11 @@ Beides zusammen ist am nützlichsten.
 5. Das eine ist interaktiv, das andere ist Protokollierung
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Chrome DevTools: Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript): Schrittsteuerung, Breakpoint und Watch.
+
 
 1. GDB - Debugging with GDB  
    https://sourceware.org/gdb/current/onlinedocs/gdb.pdf  

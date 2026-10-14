@@ -146,6 +146,26 @@ Ausgabe:
 | Schleife | Wiederholung mit Kontrollstruktur |
 | Rekursion | Wiederholung durch Selbstaufruf einer Funktion |
 
+## Beenden, fortsetzen und Arbeitsaufwand
+
+| Anweisung | Wirkung |
+|---|---|
+| `break` | beendet die innerste betroffene Schleife oder das `switch` |
+| `continue` | überspringt den Rest des aktuellen Schleifendurchlaufs |
+| `return` | verlässt die gesamte aktuelle Funktion |
+
+Bei `for` folgen nach `continue` die Aktualisierung und danach die Prüfung der
+Bedingung. Bei `while` geht es direkt zur Bedingung. Deshalb platzieren wir die
+für den Fortschritt nötige Zustandsänderung bewusst. `for...of` liefert Werte;
+`for...in` durchläuft aufzählbare Eigenschaftsnamen von Objekten. Für die Elemente
+eines gewöhnlichen Arrays ist `for...of` daher meist verständlicher.
+
+Zwei aufeinanderfolgende Durchläufe mit jeweils `n` Elementen benötigen `2n`
+Arbeit und damit `O(n)`. Durchlaufen wir hingegen für jedes Element erneut alle
+Elemente, entstehen `n * n` Operationen, also `O(n²)`. Zehn Zeilen mit jeweils
+fünf Spalten ergeben beispielsweise 50 innere Ausführungen. Kurzer Code sagt
+allein noch nichts über seine Laufzeitkosten aus.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine Schleife ist eine Kontrollstruktur, die eine Anweisung oder einen Anweisungsblock mehrmals ausführt.  
@@ -170,6 +190,12 @@ Ausgabe:
 5. Der Selbstaufruf der Funktion; bei einer Schleife wiederholt die Kontrollstruktur den Schleifenkörper.
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: continue](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue): nächster Ausführungspunkt je Schleifentyp.
+- [MDN: break](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break): Reichweite des Abbruchs.
+
 
 1. MDN - Loops and iteration  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration  
