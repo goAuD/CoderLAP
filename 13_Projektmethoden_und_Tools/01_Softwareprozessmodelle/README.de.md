@@ -52,19 +52,20 @@ Unterschiedliche Modelle eignen sich für:
 | Prozessmodell | übergeordneter Entwicklungsrahmen |
 | konkrete Methode / Praxis | Detail der täglichen Umsetzung |
 
+## Ein Vorgehen anhand konkreter Risiken wählen
+
+Vergleiche zwei Aufgaben. Die erste wandelt ein genau dokumentiertes altes Dateiformat um, mit bekannten Beispielen und stabilen Abnahmebedingungen. Hier lassen sich aufeinander aufbauende Schritte und formale Prüfpunkte gut planen. Die zweite entwickelt eine neue Lernoberfläche, deren Nutzung noch wenig verstanden ist. Frühe Erprobung und kleine funktionsfähige Teile helfen hier, Unsicherheit zu verringern.
+
+Für die Auswahl betrachten wir Veränderlichkeit der Anforderungen, Folgen falscher Annahmen, Verfügbarkeit Beteiligter und Lieferbedingungen. Ein großes Vorhaben bedeutet nicht automatisch Wasserfall, ein kleines nicht automatisch Scrum.
+
+Iteratives Arbeiten verfeinert eine Lösung; inkrementelles Arbeiten erweitert sie um nutzbare Teile. Eine Entwicklung kann beides verbinden. Agil beschreibt eine übergreifende Denkweise mehrerer Ansätze, Scrum ein konkretes Framework.
+
 ## Prüfungstaugliche Formulierung
 
 > Softwareprozessmodelle sind methodische Rahmenwerke,
 > die festlegen, wie der Softwareentwicklungsprozess aufgebaut ist.  
 > Sie beschreiben die Hauptphasen, deren Reihenfolge und die zugehörigen Ergebnisse.  
 > Mit ihrer Hilfe wird die Entwicklung übersichtlicher, planbarer und besser kontrollierbar.
-
-## Häufige Prüfungsfehler
-
-- Das Modell mit einem konkreten Werkzeug verwechseln.
-- Glauben, dass es nur ein einziges richtiges Prozessmodell gibt.
-- Phasen und Rahmenrolle nicht erwähnen.
-- Agil und Scrum als völlig identisch betrachten.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +84,11 @@ Unterschiedliche Modelle eignen sich für:
 5. Anforderung, Design, Entwicklung, Test, Einführung
 
 ## Quellen
+
+- [IBM: Software Development Lifecycle](https://www.ibm.com/think/topics/sdlc)  
+  Lebenszyklen und situationsgerechte Wahl eines Vorgehens.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. IBM - What is the Software Development Lifecycle (SDLC)?  
    https://www.ibm.com/think/topics/sdlc  

@@ -50,6 +50,14 @@ Für neue oder sich schnell ändernde Projekte ist es oft zu starr.
 
 Es ist also kein schlechtes Modell, nur nicht in jeder Situation ideal.
 
+## Späte Erkenntnis und früherer Nachweis
+
+Ein Kunde hat die Anforderung „Monatsbericht“ auf Papier freigegeben. Drei Monate später zeigt die Vorführung: Sein Monat ist kein Kalendermonat, sondern eine Abrechnungsperiode. Fertige Datenabfrage, Oberfläche und Tests müssen möglicherweise gemeinsam geändert werden. Ursache ist ein zuvor ungeklärter Geschäftsbegriff.
+
+Zwei konkrete Musterberichte, ein früher Prototyp und gemeinsam geprüfte Periodengrenzen können das bereits in der Anforderungsphase abfangen. Auch ein wasserfallorientiertes Vorgehen kann frühes Feedback nutzen. Entscheidend ist, dass echtes Verständnis einen Phasenabschluss stützt.
+
+In regulierten Umgebungen können Nachweise und Rückverfolgbarkeit vorgeschrieben sein. Daraus folgt allein keine Pflicht zum ausschließlichen Wasserfallmodell. Der gewählte Prozess muss sowohl Anforderungsänderungen als auch überprüfbare Konformität ermöglichen.
+
 ## Prüfungstaugliche Formulierung
 
 > Eines der Hauptprobleme des Wasserfallmodells ist sein starrer, linearer Aufbau.  
@@ -57,13 +65,6 @@ Es ist also kein schlechtes Modell, nur nicht in jeder Situation ideal.
 > und Fehler oder Missverständnisse werden oft erst spät erkannt,
 > wenn die Korrektur bereits teurer ist.  
 > Deshalb ist es bei unsicheren oder sich schnell ändernden Projekten oft weniger vorteilhaft als iterative oder agile Ansätze.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass das Wasserfallmodell immer schlecht ist.
-- Die Schwierigkeit beim Änderungsmanagement nicht erwähnen.
-- Das Problem des späten Feedbacks auslassen.
-- Nicht zwischen stabilen und veränderlichen Projekten unterscheiden.
 
 ## Schnelle Selbstkontrolle
 
@@ -82,6 +83,11 @@ Es ist also kein schlechtes Modell, nur nicht in jeder Situation ideal.
 5. Weil das funktionierende Ergebnis erst später erscheint
 
 ## Quellen
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Frühe Prüfung und unterschiedliche Entwicklungslebenszyklen.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Waterfall methodology  
    https://www.atlassian.com/agile/project-management/waterfall-methodology  

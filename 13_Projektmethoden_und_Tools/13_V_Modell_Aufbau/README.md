@@ -53,6 +53,21 @@ A hivatalos `V-Modell XT` ezt kibővíti projektirányítási, minőségbiztosí
 | vízesésmodell | lineáris fázisok egymás után |
 | V-modell | lineáris jelleg + fejlesztés és tesztelés összerendelése |
 
+## Ugyanaz a funkció négy ellenőrzési szinten
+
+Egy eszközkölcsönző rendszerben egy eszközt egyszerre csak egy személy kölcsönözhet:
+
+| Tervezési alap | Kapcsolódó ellenőrzés |
+|---|---|
+| felhasználói igény | a tanár végigpróbálja a kölcsönzés és visszaadás feladatát |
+| rendszerkövetelmény | két egyidejű foglalási kérésből pontosan egy sikerül |
+| komponensek kapcsolata | az alkalmazás és az adatbázis együtt érvényesíti a foglalást |
+| részletes modulműködés | az elérhetőség-számítás külön egységtesztje |
+
+A teszteket már a megfelelő leírás elkészítésekor tervezzük. A dokumentumok review-ja kódfuttatás nélkül is megtörténhet, a dinamikus teszt a működő részt igényli. Az általános V-ábra a megfeleltetést tanítja, nem azt, hogy minden ellenőrzés csak a kódolás után kezdődik.
+
+A V-Modell XT ennél részletesebb, testreszabható folyamatkeret. Az egyszerű oktatási V és a teljes XT módszertan ezért nem azonos fogalom.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A V-modell egy folyamatmodell, amelyben a fejlesztési és a tesztelési tevékenységek egymáshoz vannak rendelve.  
@@ -60,13 +75,6 @@ A hivatalos `V-Modell XT` ezt kibővíti projektirányítási, minőségbiztosí
 > alul az implementáció,
 > a jobb oldalon pedig a hozzájuk tartozó tesztelési szintek.  
 > A modell fő előnye, hogy a tesztelés már a tervezés korai szakaszában hangsúlyt kap.
-
-## Gyakori vizsgahibák
-
-- A V-modellt teljesen azonosnak tekinteni a vízesésmodellel.
-- Nem megemlíteni a tesztszintek hozzárendelését.
-- Csak a V alakot leírni, de a jelentését nem.
-- Kihagyni az implementáció központi szerepét.
 
 ## Gyors önellenőrzés
 
@@ -85,6 +93,14 @@ A hivatalos `V-Modell XT` ezt kibővíti projektirányítási, minőségbiztosí
 5. Külön hangsúlyozza a tesztelési megfeleltetést
 
 ## Források
+
+- [V-Modell XT Bund: Einstieg](https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell%20XT%20Bund-2.0-HTML/1431a155da001978.html)  
+  A hivatalos XT módszertan a szemléltető V-ábrán túlmutató keret.
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Tesztelési szintek és korai ellenőrzések.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. V-Modell XT Bund 2.0 - Gesamt PDF  
    https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell-XT-Bund-2.0-Gesamt.pdf  

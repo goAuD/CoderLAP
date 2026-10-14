@@ -53,6 +53,21 @@ Das offizielle `V-Modell XT` erweitert dies um Projektsteuerungs-, Qualitätssic
 | Wasserfallmodell | lineare Phasen nacheinander |
 | V-Modell | linearer Charakter + Zuordnung von Entwicklung und Test |
 
+## Dieselbe Funktion auf vier Prüfungsstufen
+
+In einem Geräteverleih darf ein Gerät gleichzeitig nur von einer Person ausgeliehen werden:
+
+| Entwurfsgrundlage | Zugeordnete Prüfung |
+|---|---|
+| Benutzerbedarf | Lehrperson erprobt Ausleihe und Rückgabe vollständig |
+| Systemanforderung | Von zwei gleichzeitigen Buchungsanfragen gelingt genau eine |
+| Zusammenspiel der Komponenten | Anwendung und Datenbank setzen die Buchung gemeinsam durch |
+| detailliertes Modulverhalten | separater Unit-Test der Verfügbarkeitsberechnung |
+
+Tests werden bereits beim Erarbeiten der jeweiligen Beschreibung geplant. Dokumentenreviews sind ohne Codeausführung möglich, dynamische Tests benötigen einen ausführbaren Teil. Das allgemeine V-Diagramm lehrt diese Zuordnung und nicht, dass sämtliche Prüfungen erst nach dem Codieren beginnen.
+
+V-Modell XT ist ein umfassenderer, anpassbarer Vorgehensrahmen. Das vereinfachte Lehrdiagramm und die gesamte XT-Methodik sind deshalb nicht derselbe Begriff.
+
 ## Prüfungstaugliche Formulierung
 
 > Das V-Modell ist ein Prozessmodell, bei dem Entwicklungs- und Testaktivitäten einander zugeordnet sind.  
@@ -60,13 +75,6 @@ Das offizielle `V-Modell XT` erweitert dies um Projektsteuerungs-, Qualitätssic
 > unten die Implementierung
 > und auf der rechten Seite die zugehörigen Teststufen.  
 > Der Hauptvorteil des Modells ist, dass das Testen bereits in der frühen Planungsphase Gewicht bekommt.
-
-## Häufige Prüfungsfehler
-
-- Das V-Modell als völlig identisch mit dem Wasserfallmodell betrachten.
-- Die Zuordnung der Teststufen nicht erwähnen.
-- Nur die V-Form beschreiben, nicht aber ihre Bedeutung.
-- Die zentrale Rolle der Implementierung auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -85,6 +93,14 @@ Das offizielle `V-Modell XT` erweitert dies um Projektsteuerungs-, Qualitätssic
 5. Es betont die Zuordnung zum Testen besonders
 
 ## Quellen
+
+- [V-Modell XT Bund: Einstieg](https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell%20XT%20Bund-2.0-HTML/1431a155da001978.html)  
+  Die offizielle XT-Methodik geht über das vereinfachte V-Diagramm hinaus.
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Teststufen und frühe Prüfungen.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. V-Modell XT Bund 2.0 - Gesamt PDF  
    https://download.gsb.bund.de/BundesCIO/V-Modell_XT_Bund/V-Modell-XT-Bund-2.0-Gesamt.pdf  

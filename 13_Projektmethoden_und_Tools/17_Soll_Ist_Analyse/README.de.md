@@ -42,6 +42,14 @@ Dann wird gesucht:
 | Fehlersuche | ein konkretes Problem finden |
 | Soll-Ist-Analyse | Vergleich von aktuellem und Zielzustand |
 
+## Aus einer messbaren Lücke einen Maßnahmenplan ableiten
+
+In einer Werkstatt dauert das Auffinden eines Geräts durchschnittlich 6 Minuten. Ziel sind höchstens 2 Minuten bei gleichen Aufgaben. Die Beobachtung zeigt, dass Zeit beim Abgleich dreier getrennter Tabellen verloren geht. Die Lücke von 4 Minuten beweist somit keinen langsamen Server; die verteilte Verwaltung könnte die Hauptursache sein.
+
+Die Maßnahme ist eine gemeinsame durchsuchbare Liste mit Datenverantwortung und eindeutigen Kennungen. Wir benennen Zuständigkeit, Termin, nötige Datenbereinigung und erneute Messung. Nach der Einführung werden dieselben Musteraufgaben gemessen.
+
+Ein Soll-Ist-Vergleich hilft auch bei der Projektsteuerung. Zwischen 12 geplanten und 9 tatsächlich abgenommenen Arbeitspaketen liegt eine Abweichung von 3. Sind die Pakete unterschiedlich groß, bedeutet das allein noch keinen exakten Fertigstellungsgrad von 75 %.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Soll-Ist-Analyse vergleichen wir den aktuellen Zustand mit dem angestrebten Zielzustand.  
@@ -49,13 +57,6 @@ Dann wird gesucht:
 > die Identifikation von Lücken
 > und die Bestimmung der notwendigen Maßnahmen.  
 > Sie kann eine wichtige Grundlage für die Projektplanung und Entwicklungsentscheidungen sein.
-
-## Häufige Prüfungsfehler
-
-- Die Begriffe `Ist` und `Soll` vertauschen.
-- Die Abweichungsanalyse nicht erwähnen.
-- Die Methode auf einen einfachen Fehlerbericht reduzieren.
-- Auslassen, dass sie auch eine Planungsgrundlage sein kann.
 
 ## Schnelle Selbstkontrolle
 
@@ -74,6 +75,11 @@ Dann wird gesucht:
 5. Sie sucht nicht nur Fehler, sondern vergleicht den Zielzustand
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Vergleich von Arbeitsplan und tatsächlichem Fortschrittsbericht.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian Confluence - Gap analysis template  
    https://www.atlassian.com/software/confluence/templates/gap-analysis  

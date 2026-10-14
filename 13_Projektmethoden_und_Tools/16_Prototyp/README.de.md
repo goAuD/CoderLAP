@@ -40,6 +40,14 @@ Er kann sein:
 | Prototyp | frühes Muster oder Modell |
 | fertiges Produkt | endgültige, stabile Lösung |
 
+## Der Prototyp braucht eine zu beantwortende Frage
+
+Unsere Frage lautet: Findet eine lernende Person am Handy die nächste Übung ohne Hilfe? Dafür können drei klickbare Ansichten ohne echte Datenbank genügen. Wir beobachten den Weg und Hindernisse und passen die Anordnung an. Ein schöner Bildschirm beweist noch keine gute Nutzbarkeit.
+
+Eine andere Frage braucht ein anderes Muster: Ist die Importgeschwindigkeit unklar, liefert ein technischer Versuch mit realistischer, aber personenfreier Beispieldatei Hinweise. Visueller Detailgrad und technische Vollständigkeit sind getrennte Eigenschaften.
+
+Bei einem Wegwerfprototyp übernehmen wir Erkenntnisse, nicht unbedingt den Code. Ein evolutionärer Prototyp kann sich zum Produkt entwickeln, benötigt dafür aber gesonderte Prüfungen etwa von Berechtigungen, Fehlerbehandlung und Wartbarkeit. Zweck und Grenzen der Probe werden auch den Teilnehmenden erklärt.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Prototyp ist ein frühes Muster des geplanten Systems,
@@ -49,13 +57,6 @@ Er kann sein:
 > aber gut geeignet für frühes Feedback
 > und die Vermeidung von Fehlern.  
 > Mit seiner Hilfe können Kunde und Entwicklungsteam leichter ein gemeinsames Bild der Lösung entwickeln.
-
-## Häufige Prüfungsfehler
-
-- Den Prototyp als fertiges Produkt bezeichnen.
-- Glauben, dass es nur eine grafische Skizze sein kann.
-- Die Rolle des Feedbacks nicht erwähnen.
-- Auslassen, dass er Zeit und Kosten sparen kann.
 
 ## Schnelle Selbstkontrolle
 
@@ -74,6 +75,11 @@ Er kann sein:
 5. Dem Kunden, dem Benutzer, dem Entwicklungsteam
 
 ## Quellen
+
+- [GOV.UK: Making prototypes](https://www.gov.uk/service-manual/design/making-prototypes)  
+  Zum Erkenntnisziel passender Prototyp und Grenze zum Produktivsystem.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Figma Learn - Guide to prototyping in Figma  
    https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma  
