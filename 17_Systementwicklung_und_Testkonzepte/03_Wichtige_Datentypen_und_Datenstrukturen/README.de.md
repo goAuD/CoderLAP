@@ -54,7 +54,7 @@ Die Datenstruktur beschreibt, wie wir Daten so organisieren, dass:
 
 | Datenstruktur | Wofür geeignet? |
 |---|---|
-| Array | Folge von gleichartigen Elementen |
+| Array | indizierbare Elementfolge; erlaubte Elementtypen sind sprachabhängig |
 | Liste | geordnete Elementfolge |
 | Stack | `LIFO`-Logik |
 | Queue | `FIFO`-Logik |
@@ -74,6 +74,39 @@ Die Datenstruktur beschreibt, wie wir Daten so organisieren, dass:
 | Datentyp | eine Datenart |
 | Datenstruktur | organisierte Zusammenstellung von Daten |
 
+## Die Datenstruktur passend zur Operation wählen
+
+Aufgabe: Abgeschlossene Themen zählen wir einmal; ihre Titel suchen wir über
+Kennungen. Ausführbare Lösung in Node.js:
+
+<!-- example:run -->
+
+```javascript
+const completed = new Set(["LAP-15-01", "LAP-15-01", "LAP-15-02"]);
+const titles = new Map([["LAP-15-01", "Lifecycle"], ["LAP-15-02", "Paradigms"]]);
+console.log(completed.size);
+console.log(completed.has("LAP-15-02"));
+console.log(titles.get("LAP-15-01"));
+```
+
+```text
+2
+true
+Lifecycle
+```
+
+`Set` speichert eindeutige Werte, deshalb erhöht das wiederholte `LAP-15-01`
+die Anzahl nicht. `Map` liefert einen Wert anhand eines Schlüssels. Sind auch
+Lernreihenfolge und Wiederholungen wichtig, können wir Übungsereignisse in einem
+separaten Array speichern. Die benötigte Operation begründet die Wahl:
+Reihenfolge, Eindeutigkeit oder Suche nach Schlüssel.
+
+„Geordnet“ bedeutet bei einer Liste, dass die Elemente eine Reihenfolge haben,
+nicht automatisch aufsteigende Sortierung. Ein JavaScript-`Array` kann verschiedene
+Typen enthalten; gleichartige Elemente sind eine Bedingung der jeweiligen Sprache
+oder des konkreten Speichertyps. Typen umfassen auch zusammengesetzte Typen.
+Datentyp und Datenstruktur sind deshalb keine sich ausschließenden Kategorien.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Datentyp bestimmt, welche Art von Daten wir verarbeiten, zum Beispiel Ganzzahl, Text oder logischen Wert.  
@@ -81,13 +114,6 @@ Die Datenstruktur beschreibt, wie wir Daten so organisieren, dass:
 > Liste, einem Stack oder als Schlüssel-Wert-Paare.  
 > Die Wahl des richtigen Datentyps und der richtigen Datenstruktur ist wichtig für die korrekte Funktion und Leistung
 > des Programms.
-
-## Häufige Prüfungsfehler
-
-- Datentyp und Datenstruktur verwechseln.
-- Nur Grundtypen erwähnen, Strukturen nicht.
-- Den Leistungsaspekt nicht erwähnen.
-- Glauben, dass Datenstruktur nur ein Datenbankbegriff ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -106,6 +132,11 @@ Die Datenstruktur beschreibt, wie wir Daten so organisieren, dass:
 5. Weil es Korrektheit und Leistung beeinflusst
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Keyed collections](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections): Auswahl von Map und Set.
+
 
 1. MDN - Grammar and types  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types  

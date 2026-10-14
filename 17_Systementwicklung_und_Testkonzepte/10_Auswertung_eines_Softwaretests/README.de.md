@@ -59,19 +59,33 @@ Typischerweise:
 | Auswertung | Vergleich des Ergebnisses mit der Erwartung |
 | Fehlerbehebung | Beseitigung der Fehlerursache |
 
+## Vom Ergebnis zur nachvollziehbaren Entscheidung
+
+Testfall `FOG-03` sendet zwei identische Buchungsanfragen. Erwartet wird genau eine
+gespeicherte Buchung. Der Bericht enthält Anwendungsversion, Testdatenkennung,
+Ausführungsumgebung und tatsächliche Datensatzanzahl. Die genaue Schrittfolge
+erlaubt anderen, die Prüfung zu wiederholen.
+
+| Status | Beispiel | Nächster Schritt |
+|---|---|---|
+| Passed | eine Buchung bleibt | Nachweis aufbewahren |
+| Failed | zwei Buchungen entstehen | Abweichung untersuchen, nach Korrektur nachtesten |
+| Blocked | Testdatenbank unerreichbar | Umgebung wiederherstellen |
+| Not run | Fall noch nicht ausgeführt | Ausführung planen |
+
+Ein blockierter Fall ist kein bestandener Test. Sind von 100 geplanten Fällen
+90 erfolgreich, 5 fehlgeschlagen und 5 blockiert, genügt „90% erfolgreich“ allein
+nicht für eine Freigabe. Auch die Auswirkungen zählen: Ein Datenverlust kann
+schwerer wiegen als viele kosmetische Abweichungen. **Schweregrad** beschreibt
+die Auswirkung, **Priorität** die Dringlichkeit der Behebung. Nach einer Korrektur
+prüfen wir den konkreten Fehler erneut und anschließend verwandtes Verhalten mit Regressionstests.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Auswertung eines Softwaretests wird das tatsächliche Ergebnis mit dem erwarteten Ergebnis verglichen.  
 > Wenn beide übereinstimmen, ist der Test erfolgreich; bei einer Abweichung ist der Test fehlgeschlagen, und der  
 > Fehler oder die Anomalie muss dokumentiert werden.  
 > Eine ordnungsgemäße Auswertung unterstützt die Fehlerverfolgung, die Qualitätsmessung und weitere Entwicklungsentscheidungen.
-
-## Häufige Prüfungsfehler
-
-- Die Testdurchführung mit der Auswertung verwechseln.
-- Das erwartete Ergebnis nicht erwähnen.
-- Den Fehler automatisch als Entwicklerfehler bezeichnen, ohne Umgebungsprüfung.
-- Die Rolle der Dokumentation auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,6 +104,11 @@ Typischerweise:
 5. Die eine bewertet, die andere behebt
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [ISTQB CTFL 4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf): Ergebnisverfolgung, Fehlermanagement, Nachtest und Regression.
+
 
 1. ISTQB CTFL Syllabus v4.0.1  
    https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  

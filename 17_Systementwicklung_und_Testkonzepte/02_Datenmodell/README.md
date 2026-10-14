@@ -62,19 +62,34 @@ Kapcsolat:
 - segíti az adatok következetes kezelését
 - támogatja a tesztelést és továbbfejlesztést
 
+## Kapcsolatból következő szabályok
+
+Tanfolyamok és résztvevők között több-a-többhöz kapcsolat van: egy ember több
+tanfolyamra jelentkezhet, egy tanfolyamnak több résztvevője lehet. Relációs
+modellben köztes táblával tesszük ezt kezelhetővé:
+
+| Tábla | Lényeges mezők és szabályok |
+|---|---|
+| `participant` | `id` elsődleges kulcs, megjelenítési név |
+| `course` | `id` elsődleges kulcs, cím |
+| `enrollment` | `participant_id`, `course_id` idegen kulcsok; együtt egyediek |
+
+A jelentkezés saját adata például a `registered_at` időpont. Ez nem a résztvevő
+vagy a tanfolyam állandó tulajdonsága, hanem a kapcsolatot jellemzi. A két
+azonosító egyedisége megakadályozza a duplán tárolt jelentkezést. Az idegen kulcs
+azt őrzi, hogy létező sorra hivatkozzunk.
+
+A kardinalitás mellé kötelezőséget is rendelünk: lehet-e egy tanfolyamnak nulla
+résztvevője? Mi történik résztvevő törlésekor? Ezek üzleti döntések, a `CASCADE`
+nem automatikus jó választás. A modellt konkrét példarekordokkal és törlési
+forgatókönyvvel is ellenőrizzük, mielőtt a fizikai SQL-t elkészítjük.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az adatmodell az adatok szerkezetének és kapcsolatainak leírása.  
 > Meghatározza, hogy milyen entitásokat, attribútumokat és relációkat kell kezelni, valamint milyen szabályok és  
 > kulcsok érvényesek rájuk.  
 > Az adatmodell a jól felépített adatbázis és adatkezelő rendszer egyik legfontosabb tervezési alapja.
-
-## Gyakori vizsgahibák
-
-- Az adatmodellt az adatbázissal azonosítani.
-- Nem megemlíteni a kapcsolatokat.
-- Kihagyni a kulcsok szerepét.
-- Úgy kezelni, mintha csak rajz lenne, szabályok nélkül.
 
 ## Gyors önellenőrzés
 
@@ -93,6 +108,11 @@ Kapcsolat:
 5. Fogalmi, logikai, fizikai
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Oracle: Data Modeler FAQ](https://www.oracle.com/tools/technologies/faq-sql-developer-data-modeler.html): fogalmi, relációs és fizikai modellek.
+
 
 1. Oracle SQL Developer Data Modeler  
    https://www.oracle.com/database/sqldeveloper/technologies/sql-data-modeler/  
