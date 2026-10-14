@@ -44,6 +44,14 @@ Ein Arbeitspaket kann mehrere kleinere Aufgaben enthalten.
 - lässt sich gut Verantwortlichen zuordnen
 - erleichtert die Fortschrittsverfolgung
 
+## Arbeitspaket für einen Datenimport
+
+AP-2.1 soll 30 Musterzeilen einer abgestimmten CSV importieren. Eingang ist die freigegebene Spaltenbeschreibung. Verantwortlich ist eine benannte Entwicklerin; geschätzt werden 8 Arbeitsstunden. Ergebnisse sind Importfunktion, Prüfnachweis und kurze Bedienungsanleitung.
+
+Akzeptanzkriterien: Alle 30 gültigen Zeilen werden übernommen, doppelte Kennungen gemäß vereinbarter Regel abgewiesen und gemeldet, fehlerhafte Zeilen erzeugen keine halbfertigen Datensätze. Auch die Grenze ist klar: Manuelle Bereinigung alter Tabellen gehört nicht zu diesem Paket.
+
+Aufwand und Dauer unterscheiden sich. Hat die Entwicklerin täglich 4 Stunden dafür verfügbar, benötigt das Paket mindestens 2 Arbeitstage; Wartezeiten können hinzukommen. Fertig bedeutet ein akzeptiertes Ergebnis und nicht bloß verbrauchte Stunden.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Arbeitspaket ist eine handhabbare Teileinheit des Projekts,
@@ -52,13 +60,6 @@ Ein Arbeitspaket kann mehrere kleinere Aufgaben enthalten.
 > Es erscheint auf den unteren Ebenen des Projektstrukturplans
 > und bildet die Grundlage
 > für die Detailplanung, Durchführung und Kontrolle.
-
-## Häufige Prüfungsfehler
-
-- Das Arbeitspaket mit dem gesamten Projektteil verwechseln.
-- Die Rolle des Verantwortlichen und der Schätzbarkeit nicht erwähnen.
-- Es mit dem PSP gleichsetzen.
-- Zu allgemein formulieren.
 
 ## Schnelle Selbstkontrolle
 
@@ -77,6 +78,11 @@ Ein Arbeitspaket kann mehrere kleinere Aufgaben enthalten.
 5. Weil sein Fortschritt separat messbar ist
 
 ## Quellen
+
+- [PMI: Practice Standard for Scheduling](https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/practice-standard-scheduling.pdf)  
+  Abhängigkeiten, Dauer, Meilensteine und kritischer Pfad.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Work breakdown structure template  
    https://www.atlassian.com/software/jira/templates/work-breakdown-structure  

@@ -81,6 +81,29 @@ Fontos:
 - A rossz `viewport` mobilon rontja a használhatóságot.
 - A `robots` hibás beállítása miatt az oldal akár ki is maradhat az indexből.
 
+## Melyik adatot ki használja?
+
+Egy oldal fejlécének elemei külön feladatokat látnak el:
+
+| Jelölés | Értelmező és feladat |
+|---|---|
+| `meta charset="utf-8"` | a böngésző helyesen dekódolja a fájl bájtjait |
+| `meta name="description"` | rövid összefoglaló, amelyből a kereső kivonatot készíthet |
+| `meta name="robots" content="noindex"` | az ezt követő keresőrobot ne vegye indexbe az oldalt |
+| `html lang="de"` | a dokumentum nyelve, például a képernyőolvasó számára |
+| `title` | dokumentumcím, például a böngészőlap felirata |
+
+Az utolsó két sor metaadatot hordoz, de nem `meta` elem. A `charset` deklarációt
+a `head` elejére tesszük; a HTML-előírás szerint teljes egészében az első
+1024 bájton belül kell lennie. A tényleges fájlkódolás is UTF-8 legyen.
+
+Egy privát tananyag hozzáférését bejelentkezés vagy más szerveroldali
+jogosultság-ellenőrzés védi. A `noindex` keresőutasítás, nem hozzáférési korlát.
+A `robots.txt` tiltása a feltérképezést szabályozza: ha a robot nem olvashatja
+az oldalt, a rajta lévő `noindex` jelölést sem látja. Ezért a két beállítás
+nem felcserélhető. A `description` szövegét pedig a kereső nem köteles szó szerint
+megjeleníteni; az adott kereséshez más oldalszöveget is kiválaszthat.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A metaadat a dokumentumról szóló leíró adat.
@@ -89,13 +112,6 @@ Fontos:
 > segítenek az oldal helyes feldolgozásában,
 > például a karakterkódolás, a mobilnézet
 > vagy az oldal rövid leírása terén.
-
-## Gyakori vizsgahibák
-
-- A metaadatot összekeverni a látható tartalommal.
-- Azt állítani, hogy minden metaadatot a felhasználó lát.
-- A `title` és a `description` szerepét összemosni.
-- Azt hinni, hogy a meta tagek önmagukban elegendők a jó SEO-hoz.
 
 ## Gyors önellenőrzés
 
@@ -114,6 +130,12 @@ Fontos:
 5. Mert a tartalom és a technikai minőség is számít
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [WHATWG: Metadata](https://html.spec.whatwg.org/dev/semantics.html): karakterkódolás és metaelemek.
+- [Google Search Central: Robots meta tag](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag): indexelési utasítások és feltérképezés.
+
 
 1. MDN - `<meta>`: The metadata element  
    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta  

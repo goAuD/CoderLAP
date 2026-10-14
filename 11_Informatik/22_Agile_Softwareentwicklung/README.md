@@ -63,6 +63,31 @@ Az agilis csapat jellemzően:
 - A gyorsaság nem jelentheti a minőség feladását.
 - Az agilis működéshez fegyelmezett csapatmunka kell.
 
+## Egy tanulói igényből kis, használható lépés
+
+Példa felhasználói történetre: „Tanulóként szeretném csak a még nem megtanult
+témákat látni, hogy kiválaszthassam a következő gyakorlást.” Az első szállítható
+változat nem teljes motivációs rendszer, hanem egy működő jelölés és szűrés.
+
+Ehhez konkrét elfogadási feltételeket rendelünk:
+
+- egy témát megtanultnak jelölve eltűnik a „még hátra van” nézetből;
+- a jelölés visszavonható;
+- üres találati listánál érthető visszajelzés jelenik meg;
+- a viselkedés mobilon és billentyűzettel is használható.
+
+A csapat **Definition of Done** feltétele ettől külön, több feladatra érvényes
+minőségi megállapodás lehet, például ellenőrzött kód, lefutott releváns tesztek
+és frissített használati leírás. A review-n a működő eredményt a tanulókkal
+értékeljük. A retrospektíven a saját együttműködésünket javítjuk, például hogy
+a mobilos ellenőrzés korábban történjen meg.
+
+Ha kiderül, hogy a tanulók ismétlést is szeretnének, a backlogot ennek megfelelően
+átpriorizáljuk. A változás oka és az elfogadási feltétel továbbra is dokumentált.
+A manifesztó a működő szoftvert és az együttműködést hangsúlyozza, miközben a
+dokumentációnak és tervezésnek is értéket tulajdonít. A sprint Scrum-eszköz;
+agilis munka folyamatos áramlásban is szervezhető.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az agilis szoftverfejlesztés olyan rugalmas fejlesztési megközelítés,
@@ -70,13 +95,6 @@ Az agilis csapat jellemzően:
 > folyamatos visszajelzéssel és gyakori szállítással dolgozik.  
 > Célja, hogy a csapat gyorsan tudjon reagálni a változó igényekre, miközben rendszeresen működő szoftvert ad át.  
 > Az agilis fejlesztéshez több konkrét keretrendszer is tartozhat, például a Scrum vagy a Kanban.
-
-## Gyakori vizsgahibák
-
-- Az agilist módszer helyett "rendszer nélküli improvizálásnak" nevezni.
-- A Scrumot és az agilist azonosnak tekinteni.
-- Nem megemlíteni a visszajelzés és iteráció szerepét.
-- A dokumentáció teljes elhagyását agilis működésnek nevezni.
 
 ## Gyors önellenőrzés
 
@@ -95,6 +113,12 @@ Az agilis csapat jellemzően:
 5. Mert segít időben korrigálni
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Agile Manifesto](https://agilemanifesto.org/): értékek, dokumentáció és változás.
+- [Scrum Guide](https://scrumguides.org/scrum-guide.html): DoD, review és retrospektív elkülönítése.
+
 
 1. Manifesto for Agile Software Development  
    https://agilemanifesto.org/  

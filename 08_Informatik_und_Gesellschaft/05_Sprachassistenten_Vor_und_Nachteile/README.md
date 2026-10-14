@@ -74,6 +74,14 @@ is előfordulhat.
 - felvételek törlése vagy automatikus törlése
 - mikrofon némítása, ha kell
 
+## Parancsfelismerés, művelet és ellenőrzés
+
+A „kapcsold le a lámpát” kérésnél külön lépés az aktiválás felismerése, a beszéd feldolgozása, a szándék megállapítása és a művelet végrehajtása. Hogy melyik lépés fut helyben vagy szerveren, terméktől és beállítástól függ. A mikrofon figyelése nem jelenti automatikusan, hogy minden hang folyamatosan felhőben tárolódik, de a téves aktiválás nem szándékos továbbítást okozhat.
+
+Közös irodában a környezetben lévők beszéde is érintett lehet. Bevezetés előtt ezért tisztázzuk a feldolgozás helyét, a felvételek megőrzését és a törlés lehetőségét. Vásárlást, ajtónyitást vagy üzenetküldést erősebb megerősítéshez kötünk, mint egy időzítő indítását.
+
+Generatív asszisztensnél a magabiztosan megfogalmazott válasz is lehet téves. A kényelmes hangfelület nem helyettesíti a forrásellenőrzést vagy a fontos művelet jóváhagyását.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A hangasszisztensek kényelmes, hangalapú vezérlést tesznek lehetővé,
@@ -82,13 +90,6 @@ is előfordulhat.
 > mert hangfelvételeket, fiókadatokat és használati információkat kezelhetnek,
 > valamint előfordulhat véletlen aktiválás is.  
 > Ezért fontos a megfelelő jelszóvédelem, a privacy beállítások ellenőrzése és a felvételek kezelésének tudatos szabályozása.
-
-## Gyakori vizsgahibák
-
-- Csak az előnyöket említeni.
-- Azt hinni, hogy a hangasszisztens mindig csak helyben dolgozik.
-- Kihagyni a véletlen aktiválás problémáját.
-- Nem megemlíteni a privacy beállításokat.
 
 ## Gyors önellenőrzés
 
@@ -108,8 +109,16 @@ is előfordulhat.
 
 ## Források
 
+- [EDPB Guidelines 02/2021](https://www.edpb.europa.eu/documents/guideline/guidelines-022021-on-virtual-voice-assistants_en)  
+  Hangasszisztensek adatútja és az érintettek védelme.
+
+- [NIST AI 600-1: Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)  
+  2.2. fejezet: a magabiztosan előadott, mégis hibás generált válasz kockázata.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
 1. FTC - How To Secure Your Voice Assistant and Protect Your Privacy  
-   https://consumer.ftc.gov/node/77539  
+   https://consumer.ftc.gov/articles/how-secure-your-voice-assistant-protect-your-privacy  
    Használat: hivatalos, gyakorlati privacy- és biztonsági útmutató hangasszisztensekhez.
 
 2. FTC - Amazon didn’t protect Alexa users’ or children’s privacy  

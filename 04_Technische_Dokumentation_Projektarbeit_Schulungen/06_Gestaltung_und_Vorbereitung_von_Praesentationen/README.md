@@ -125,27 +125,19 @@ Ezt sokan elfelejtik.
 - a szakmai kifejezéseket a közönség szintjéhez kell igazítani
 - a lényeg előbb jelenjen meg, mint a részletek
 
-## Tipikus hibák
+## Ötperces bemutató egy elkészült funkcióról
 
-- túl sok szöveg egy dián
-- túl kicsi betű
-- logikátlan sorrend
-- nincs próba
-- nincs zárás vagy összefoglalás
+Tegyük fel, hogy a téma egy akadálymentes kereső. Az első 30 másodpercben megnevezzük a felhasználói feladatot. Másfél percben bemutatjuk a keresést billentyűzettel és egy nulla találatos esetet. Egy percben egyetlen ábrán elmagyarázzuk az adat útját. Újabb egy percben közöljük, milyen eszközökön teszteltük, majd egy perc marad az ismert korlátokra és kérdésekre.
+
+A demonstrációhoz kitalált adatokat használunk, és tartunk egy helyi képernyőfelvételt arra az esetre, ha a hálózat kiesik. A képen látható fontos változást szóban is elmondjuk. Diagramon a szín mellett felirat jelzi az állapotot. Videónál felirat, az átadott diákban értelmes olvasási sorrend és képleírás segíti a hozzáférést.
+
+A próba során a hátsó sorból is ellenőrizzük az olvashatóságot. A bemutató után a hallgatónak meg kell tudnia mondani, milyen feladatot old meg a funkció, és mi bizonyítja a működését.
 
 ## Vizsgán jól használható megfogalmazás
 
 > Egy jó prezentáció célorientált, a közönséghez igazított és logikusan felépített.  
 > Fontos a világos szerkezet, az áttekinthető diakialakítás, az olvashatóság és a vizuális következetesség.  
 > A prezentáció előkészítéséhez hozzátartozik a vázlatkészítés, a próba, az időzítés és a technikai ellenőrzés is.
-
-## Gyakori vizsgahibák
-
-- A dizájnt fontosabbnak tartani, mint a tartalmat.
-- Nincs közönséghez igazítva a prezentáció.
-- Túl sok információ kerül egy diára.
-- Kimarad a technikai próba.
-- Nincs világos lezárás.
 
 ## Gyors önellenőrzés
 
@@ -164,6 +156,11 @@ Ezt sokan elfelejtik.
 5. Mert így elkerülhetők a technikai problémák
 
 ## Források
+
+- [W3C WAI: Making events accessible](https://www.w3.org/WAI/teach-advocate/accessible-presentations/)  
+  Hozzáférhető előadás, diák és multimédia.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Microsoft Support - Create a presentation in PowerPoint  
    https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-422250f8-5721-4cea-92cc-202fa7b89617  

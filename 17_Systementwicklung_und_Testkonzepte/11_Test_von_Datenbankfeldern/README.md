@@ -23,7 +23,7 @@ Azt ellenőrizzük, hogy a mező:
 
 ### Kötelező mező
 
-- üresen maradhat-e vagy sem
+- lehet-e SQL NULL; az üres szöveg megengedettsége külön szabály
 
 ### Hosszellenőrzés
 
@@ -62,19 +62,35 @@ Vizsgán jó pont:
 | UI-teszt | a felületi viselkedés |
 | adatmezőteszt | az adat érvényessége és tárolása |
 
+## A NULL, az üres szöveg és a nulla külön eset
+
+A `NOT NULL` az SQL `NULL` értékét tiltja. A `0`, az üres szöveg (`''`) és a
+szóközöket tartalmazó szöveg más értékek; érvényességüket külön szabály dönti el.
+Például egy terméknévhez az alkalmazás előírhatja, hogy levágott szélső szóközök
+után 1..80 karakter maradjon.
+
+| Bemenet a névhez | Elvárt eredmény e szerződés szerint |
+|---|---|
+| `"Ada"` | elfogadás |
+| `NULL`, `""`, `"   "` | elutasítás |
+| 80 karakter | elfogadás |
+| 81 karakter | elutasítás, csendes csonkítás nélkül |
+| `"Őrség"` | helyes tárolás és változatlan visszaolvasás |
+
+MySQL 8.4-ben például az `price DECIMAL(8,2) NOT NULL CHECK (price >= 0)` egy
+**oszlopdefiníció-részlet**, nem önálló SQL-program. A `CHECK` önmagában a `NULL`
+miatt ismeretlen eredményű feltételt is elfogadhatja, ezért kell mellé a
+kötelezőség. Teszteljük a tényleges adatbázisverziót és SQL-módot, ne csak a
+felületet. A karakterhossz és bájthossz eltérhet; az ékezetes szöveg ezért fontos
+próbaadat. Az inputellenőrzés mellett külön kell paraméterezett SQL, jogosultság-
+ellenőrzés és megjelenítéskor megfelelő kódolás.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az adatbázismezők tesztelése során azt ellenőrizzük, hogy a mezők megfelelnek-e az adattípusra, kötelezőségre,  
 > hosszra, tartományra, formátumra és egyediségre vonatkozó elvárásoknak.  
 > Fontos nemcsak helyes, hanem hibás, határértékű és váratlan bemenetekkel is tesztelni.  
 > A cél az adatminőség, a konzisztencia és a biztonság biztosítása.
-
-## Gyakori vizsgahibák
-
-- Csak helyes adatokat tesztelni.
-- Nem megemlíteni a határértékeket.
-- A mezőtesztet kizárólag felületi ellenőrzésként kezelni.
-- Kihagyni az egyediség és formátum vizsgálatát.
 
 ## Gyors önellenőrzés
 
@@ -93,6 +109,13 @@ Vizsgán jó pont:
 5. Mert a kliensoldali ellenőrzés megkerülhető
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MySQL: NULL values](https://dev.mysql.com/doc/refman/8.4/en/working-with-null.html): NULL, üres szöveg és nulla különbsége.
+- [MySQL: CHECK constraints](https://dev.mysql.com/doc/refman/8.4/en/create-table-check-constraints.html): CHECK és UNKNOWN.
+- [OWASP: Input validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html): validáció és külön biztonsági rétegek.
+
 
 1. OWASP Input Validation Cheat Sheet  
    https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html  

@@ -98,6 +98,35 @@ Itt:
 - Nem elég csak "szépnek" lennie: használhatónak és áttekinthetőnek is kell lennie.
 - A CSS nem helyettesíti a szemantikus HTML-t.
 
+## Követhető példa: kaszkád és dobozmodell
+
+Az alábbi HTML-részlet böngészőben, egy HTML-dokumentumban használható:
+
+```html
+<style>
+  .card { box-sizing: border-box; width: 320px; padding: 16px; border: 2px solid; color: navy; }
+  p { color: green; }
+  .card { color: purple; }
+</style>
+<p class="card">Lernkarte</p>
+```
+
+A szöveg lila. Ebben a rétegek és `!important` nélküli példában a `.card`
+osztályszelektor erősebb a `p` elemszelektornál. A két `.card` szabály azonos
+erősségű, ezért a későbbi `purple` érték dönt. Általánosan a kaszkád előbb a
+szabály eredetét, fontosságát és rétegét is figyelembe veszi; a fájl végén álló
+szabály tehát nem automatikusan nyer minden mással szemben.
+
+A kerettel együtt mért szélesség `320px`. A tartalomnak
+`320 - 2 × 16 - 2 × 2 = 284px` marad. `content-box` esetén a `320px` csak a
+tartalomra vonatkozna, így a külső szélesség `356px` lenne. A margó mindkét
+esetben a kereten kívüli tér.
+
+A DevTools „Computed” nézetében megnézhető a végső szín és a doboz mérete.
+A `color` jellemzően öröklődik a szülőről, a `padding` nem. Az öröklés azt
+magyarázza, honnan kap értéket egy tulajdonság; a kaszkád a versengő deklarációk
+közül választ. Ezek külön mechanizmusok.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A CSS a weboldalak megjelenésének leírására szolgáló stílusnyelv.  
@@ -105,13 +134,6 @@ Itt:
 > szabályozhatjuk az elrendezést,
 > és kialakíthatunk reszponzív, egységes felhasználói felületeket.  
 > A HTML a szerkezetet, a CSS a megjelenést, a JavaScript pedig az interaktív működést adja.
-
-## Gyakori vizsgahibák
-
-- A CSS-t programozási nyelvnek nevezni.
-- A HTML és CSS szerepét felcserélni.
-- A reszponzív megjelenítést csak JavaScripthez kötni.
-- Nem megemlíteni, hogy a CSS a layoutért is felel.
 
 ## Gyors önellenőrzés
 
@@ -130,6 +152,12 @@ Itt:
 5. A CSS formáz, a JavaScript viselkedést ad
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Introduction): a kaszkád döntési sorrendje.
+- [MDN: Box sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-sizing): border-box és content-box számítása.
+
 
 1. MDN - CSS: Cascading Style Sheets  
    https://developer.mozilla.org/en-US/docs/Web/CSS  

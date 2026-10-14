@@ -39,6 +39,14 @@ Weil der Projektleiter immer abwägen muss zwischen:
 - dem Budget
 - der Qualität
 
+## Auswirkungen eines zusätzlichen Wunsches
+
+Bis zum Release stehen 60 Arbeitsstunden zur Verfügung; so hoch ist auch die Schätzung der vereinbarten Funktionen. Der Kunde wünscht zusätzlich einen Export mit ungefähr 20 Stunden Aufwand. Für die Entscheidung zeigen wir Optionen: Export in einem späteren Release, Entfall einer ähnlich aufwendigen Funktion mit geringerer Priorität oder Anpassung von Ressourcen und Termin.
+
+Eine zusätzliche Person macht 20 Stunden Arbeit nicht automatisch parallel ausführbar. Einarbeitung, Abhängigkeiten und Abstimmung können hinzukommen. Deshalb werden die Annahmen hinter den Schätzungen offengelegt.
+
+Vereinbarte Mindestanforderungen an Sicherheit und Qualität gelten weiterhin. Das Weglassen einer Berechtigungsprüfung ist beispielsweise keine akzeptable Beschleunigung. Die entscheidungsbefugte Person genehmigt die gewählte Variante; der aktualisierte Plan bildet die neue Grundlage der Steuerung.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Spannungsfelder im Projekt bedeuten,
@@ -48,13 +56,6 @@ Weil der Projektleiter immer abwägen muss zwischen:
 > Deshalb ist es eine wichtige Aufgabe des Projektmanagements,
 > zwischen diesen Erwartungen ein Gleichgewicht zu schaffen,
 > während das gewünschte Ergebnis und die Qualität erhalten bleiben.
-
-## Häufige Prüfungsfehler
-
-- Nur zwei der drei Haupteinschränkungen nennen.
-- Glauben, dass Frist, Kosten und Umfang unabhängig voneinander sind.
-- Die Rolle der Qualität nicht erwähnen.
-- Kein praktisches Beispiel dafür bringen.
 
 ## Schnelle Selbstkontrolle
 
@@ -73,6 +74,11 @@ Weil der Projektleiter immer abwägen muss zwischen:
 5. Bei falschen Entscheidungen kann auch die Qualität sinken
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Vorlagen für Projektauftrag, Arbeitsplan und Entscheidungsprotokoll.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Project Management Skills for Life  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/pmief/skills-for-life-english.pdf  

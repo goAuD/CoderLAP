@@ -84,6 +84,16 @@ Ezért fontos:
 - külön tárolás
 - lehetőleg offline vagy elkülönített másolat
 
+## Kidolgozott terv: egy kis tanulási rendszer
+
+A feladat szerint legfeljebb egy óra új munka veszhet el (**RPO: 1 óra**), és hiba után négy órán belül használható szolgáltatás kell (**RTO: 4 óra**). Ezek célértékek, nem egy mentőprogram automatikus garanciái.
+
+Az adatbázis mellett a feltöltött fájlokat, a konfigurációt és a szükséges kulcsok helyreállítható példányát is fel kell venni a tervbe. A programkód másolatából önmagában nem áll vissza a felhasználói adat. Az óránkénti mentés csak akkor közelíti meg az RPO-t, ha sikeres, konzisztens, időben befejeződik és a megfelelő példány elérhető.
+
+Példa: az utolsó helyreállítható állapot 13:00, a hiba 13:40-kor történik. Az adatvesztési időablak 40 perc. Ha a 13:00-s mentés hibás és csak 12:00 áll rendelkezésre, ez már 100 perc, tehát az egyórás cél nem teljesül.
+
+A próbán mérd a hozzáférés megszerzését, a környezet felépítését, az adatok visszaállítását és a használhatóság ellenőrzését együtt. Legyen felelős, helyettes, hibajelzés és rögzített megőrzési rend. Az RTO nem csak a másolás sebességéről szól.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A biztonságos backup tervezésének alapja annak meghatározása,
@@ -95,14 +105,6 @@ Ezért fontos:
 > a felelősségeket, a megőrzési időt,
 > a hozzáférési szabályokat és a restore teszteket is.  
 > A mentéseknek az eredeti rendszertől elkülönítve is rendelkezésre kell állniuk.
-
-## Gyakori vizsgahibák
-
-- Backup terv helyett csak egy eszközt vagy programot említeni.
-- Kihagyni a restore tesztet.
-- Nem megkülönböztetni a kritikus és kevésbé kritikus adatokat.
-- Nem említeni az RPO / RTO logikáját.
-- A mentést ugyanott tartani, ahol az eredeti rendszer van.
 
 ## Gyors önellenőrzés
 
@@ -135,3 +137,11 @@ Ezért fontos:
    Használat: elsődleges, strukturált biztonsági backup-tervezési forrás.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [NIST: Recovery Point Objective](https://csrc.nist.gov/glossary/term/recovery_point_objective): helyreállítandó adatállapot időpontja
+- [NIST: Recovery Time Objective](https://csrc.nist.gov/glossary/term/recovery_time_objective): helyreállítás célideje
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): elkülönített, titkosított mentések és ellenőrzött helyreállítás
+
+Ellenőrizve: `2026-10-14`.

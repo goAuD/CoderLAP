@@ -124,6 +124,14 @@ Ha Linux rendszerpartícióról van szó:
 
 - gyakori az `ext4`
 
+## Kidolgozott eset: egy 6 GiB-os videó másolása
+
+A pendrive-on 20 GiB szabad hely van, de FAT32 fájlrendszerrel egy 6 GiB-os fájl mégsem tárolható rajta. A FAT32 fájlméretének felső határa `2^32 - 1` bájt, vagyis 4 GiB mínusz 1 bájt. A szabad összkapacitás és az egyetlen fájlra vonatkozó korlát külön tulajdonság.
+
+Ha mindkét célrendszer támogatja, exFAT alkalmas lehet a nagy fájl átvitelére. Ha Windows-jogosultságok is szükségesek, NTFS lehet megfelelőbb. Újraformázás előtt a meglévő adatokat mentjük, mert a formázás adatvesztést okozhat.
+
+Egy fizikai lemezen több **partíció** is lehet; a fájlrendszer tipikusan egy köteten szervezi a fájlokat, azon belül a **könyvtár** a rendszerezést szolgálja. A naplózás (`journaling`) az összeomlás utáni konzisztencia helyreállítását segíti. A véletlen törlés vagy az eszköz elvesztése ellen külön biztonsági mentés kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A fájlrendszer olyan szoftveres mechanizmus vagy szabályrendszer,
@@ -131,14 +139,6 @@ Ha Linux rendszerpartícióról van szó:
 > és érjük el a fájlokat a háttértáron.  
 > A fájlrendszer kezeli a könyvtárstruktúrát, a hozzáférést és gyakran a metaadatokat is.  
 > Tipikus példák az NTFS, exFAT, ext4 vagy APFS.
-
-## Gyakori vizsgahibák
-
-- A fájlrendszert összekeverni a háttértárral.
-- Azt mondani, hogy az SSD maga a fájlrendszer.
-- Nem tudni példát mondani konkrét fájlrendszerre.
-- A mappát és a teljes fájlrendszert összekeverni.
-- Nem említeni a névkezelés és szervezés szerepét.
 
 ## Gyors önellenőrzés
 
@@ -175,3 +175,9 @@ Ha Linux rendszerpartícióról van szó:
    Használat: modern Apple fájlrendszer-környezet és APFS-kontextus.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: File System Functionality Comparison](https://learn.microsoft.com/en-us/windows/win32/fileio/filesystem-functionality-comparison): méretkorlát, jogosultságok, naplózás.
+
+Ellenőrizve: `2026-10-14`.

@@ -91,10 +91,41 @@ Ha ezt vizsgán kell megcsinálni, akkor a sorrend legyen:
 
 Ez jobb stratégia, mint túl korán extra funkciókat építeni.
 
+## Mit tudunk igazolni a végén?
+
+| Követelmény | Ellenőrzés |
+|---|---|
+| Kötelező névmezők és SV-NR | üres és csak szóközös mezőknél visszajelzés, eredmény nélkül |
+| Formai SV-ellenőrzés | a PDF három pozitív és három negatív mintája |
+| Pontos QR-tartalom | külön olvasóval `Richtig`, illetve `Falsch` |
+| Új bevitel | a régi QR eltűnik; az új eredmény új ellenőrzésből készül |
+| Reszponzív űrlap | keskeny nézet, nagyítás és billentyűzetes kitöltés |
+
+A formai ellenőrzés azt állapítja meg, hogy a szám megfelel-e a megvalósított
+formátum- és ellenőrzőszám-szabályoknak. Nem igazolja, hogy egy adott személyhez
+valóban ezt a számot rendelte a biztosító, vagy hogy fennáll a biztosítási jogviszonya.
+A névmezők kitöltését ellenőrizzük, a név és a szám összetartozását nem.
+
+A PDF 11–12. oldalát 2026-10-14-én ismét összevetettük a megoldással.
+A példákat a feladatlap adataival és kitalált nevekkel futtatjuk.
+Vizsgán a PDF telefonhasználati tilalma miatt előre egyeztetett asztali olvasó szükséges.
+
+## Gyors önellenőrzés
+
+1. Mit tartalmazhat a QR?
+2. Mit igazol a helyes ellenőrzőszám?
+3. Kell-e adatbázis a PDF feladatához?
+
+## Rövid válaszok az önellenőrzéshez
+
+1. Pontosan a Richtig vagy Falsch szót.
+2. Formai összefüggést a számjegyek között; nem a szám valódi kiadását vagy a biztosítási jogviszonyt.
+3. Nem, adattárolást a PDF nem kér.
+
 ## Források
 
 1. Themenkatalog für die Vorbereitung auf die Lehrabschlussprüfung Applikationsentwicklung-Coding v2-2024  
-   `../themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`  
+   https://github.com/goAuD/CoderLAP/blob/main/themenkatalog-applikationsentwicklung-coding-v2-2024.pdf  
    Használat: elsődleges feladatszöveg és elvárásrendszer.
 
 2. Dachverband der österreichischen Sozialversicherung - offizielle Beschreibung der Versicherungsnummer  

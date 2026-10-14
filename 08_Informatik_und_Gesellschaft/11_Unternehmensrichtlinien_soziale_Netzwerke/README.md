@@ -73,6 +73,14 @@ Mert a gyakorlatban kell:
 | comment policy | nyilvános szabály a követőknek / kommentelőknek |
 | IT security policy | tágabb biztonsági szabályzat, amelynek a social media csak egy része |
 
+## Egy céges fiók működése a belépéstől a kilépésig
+
+Egy kis csapatban a szerkesztő előkészíti a termékbemutató posztot, egy kijelölt felelős pedig ellenőrzi a tényeket, a képhasználati jogot és a közzététel időpontját. A hozzáférés személyhez kötött, ahol a platform ezt támogatja; közös jelszó körbeküldése helyett szerepköröket használunk. A helyreállítás szervezeti kézben marad, kijelölt helyettes felelőssel.
+
+Ha a szerkesztő kilép, visszavonjuk a hozzáférését és a hozzá kapcsolódó külső alkalmazásengedélyeket. Fiókátvételnél a jóváhagyott folyamat szerint leállítjuk az időzített publikálást, biztosítjuk a fiókot, megőrizzük a bizonyítékokat, és a kijelölt csatornán tájékoztatunk.
+
+A szabályzat különbséget tesz személyes vélemény és hivatalos céges közlés között. A bemutatott munkakörnyezeti fotót is ellenőrizni kell: a háttérben látható monitoron ügyféladat vagy belépési információ jelenhet meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A vállalati social media irányelv meghatározza,
@@ -82,13 +90,6 @@ Mert a gyakorlatban kell:
 > Egy jó irányelv tartalmazza a jogosultságkezelést,
 > a tartalmi szabályokat, a fiókbiztonsági előírásokat,
 > valamint az incidenskezelési lépéseket is.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy ez csak marketingkérdés.
-- Nem megemlíteni a biztonsági oldalt.
-- Kihagyni az MFA-t és a jogosultságkezelést.
-- Nem megkülönböztetni a személyes és hivatalos kommunikációt.
 
 ## Gyors önellenőrzés
 
@@ -107,6 +108,11 @@ Mert a gyakorlatban kell:
 5. Mert védi a fiókot az illetéktelen hozzáféréstől
 
 ## Források
+
+- [CISA: Social Media Account Protection](https://www.cisa.gov/sites/default/files/publications/CISA_CEG_Social_Media_Account_Protection_508.pdf)  
+  Szervezeti fiókok hozzáférése, külső eszközök és helyreállítás.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. CISA - CISA Releases Guidance on Protecting Organization-Run Social Media Accounts  
    https://www.cisa.gov/news-events/alerts/2021/12/09/cisa-releases-guidance-protecting-organization-run-social-media-accounts  

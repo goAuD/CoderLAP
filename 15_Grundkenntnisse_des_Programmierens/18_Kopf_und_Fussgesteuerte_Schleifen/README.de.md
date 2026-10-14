@@ -47,6 +47,44 @@ Aufgabe: Daten einlesen, solange sie nicht korrekt sind.
 
 Wenn mindestens eine Eingabe sicher benötigt wird, ist die fußgesteuerte Logik oft natürlicher.
 
+## Nach der ersten Verarbeitung prüfen
+
+Die Eingabe ersetzen wir hier durch ein vorgegebenes, **nicht leeres** Array
+endlicher ganzer Zahlen. Wir lesen, bis ein Wert mindestens 1 ist oder die Liste
+endet. So gibt es keine interaktive Wartezeit; das Beispiel läuft reproduzierbar in Node.js.
+
+<!-- example:run -->
+
+```javascript
+function readAtLeastOnce(inputs) {
+  let position = 0;
+  let value;
+  do {
+    value = inputs[position];
+    position += 1;
+  } while (value < 1 && position < inputs.length);
+  return { value, attempts: position };
+}
+console.log(JSON.stringify(readAtLeastOnce([0, -2, 4])));
+console.log(JSON.stringify(readAtLeastOnce([7])));
+```
+
+```text
+{"value":4,"attempts":3}
+{"value":7,"attempts":1}
+```
+
+Im ersten Fall sind nach `0` und `-2` weitere Daten vorhanden. `4` ist gültig,
+daher erfolgen drei Lesevorgänge. Bei `[7]` genügt einer. Sind alle Werte kleiner
+als 1, beendet die Prüfung auf das Listenende den Ablauf nach dem letzten Wert.
+Der Aufrufer muss dann weiterhin prüfen, ob das Ergebnis zulässig ist. Für eine
+leere Liste braucht man vorher eine Leerheitsprüfung oder eine kopfgesteuerte Verarbeitung.
+
+Die Bedingung von `do...while` ist eine **Fortsetzungsbedingung**: Bei wahr wird
+wiederholt. Die Pseudocode-Schreibweise `repeat ... until` beendet dagegen bei
+wahr. Bei der Übertragung beachten wir deshalb die Bedeutung der Bedingung und
+nicht nur deren Position.
+
 ## Prüfungstaugliche Formulierung
 
 > Die kopfgesteuerte Schleife prüft die Bedingung vor der Ausführung des Schleifenkörpers, daher kann es vorkommen,  
@@ -54,13 +92,6 @@ Wenn mindestens eine Eingabe sicher benötigt wird, ist die fußgesteuerte Logik
 > Die fußgesteuerte Schleife hingegen prüft die Bedingung nach dem Schleifenkörper, sodass er mindestens einmal sicher  
 > ausgeführt wird.  
 > Der Unterschied zwischen den beiden Typen liegt hauptsächlich in der minimalen Ausführungsanzahl und im Ort der Bedingungsprüfung.
-
-## Häufige Prüfungsfehler
-
-- Den Unterschied zwischen `while` und `do...while` nicht zu kennen.
-- Zu behaupten, dass beide gleich funktionieren.
-- Die garantierte einmalige Ausführung nicht zu erwähnen.
-- Die Begriffe kopfgesteuert und fußgesteuert zu vertauschen.
 
 ## Schnelle Selbstkontrolle
 
@@ -79,6 +110,11 @@ Wenn mindestens eine Eingabe sicher benötigt wird, ist die fußgesteuerte Logik
 5. Weil sie je nach Ausgangsbedingung unterschiedliches Verhalten zeigt
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: do...while](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while): Fortsetzungsbedingung und erste Ausführung.
+
 
 1. MDN - Loops and iteration  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration  

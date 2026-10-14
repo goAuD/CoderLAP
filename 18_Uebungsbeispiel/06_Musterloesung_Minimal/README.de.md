@@ -48,13 +48,13 @@ Dies ist eine bewusst einfache, prüfungstaugliche Musterlösung für den Block 
               <div class="row g-3">
                 <div class="col-12 col-md-6">
                   <label for="vorname" class="form-label">Vorname</label>
-                  <input id="vorname" name="vorname" type="text" class="form-control" autocomplete="given-name">
+                  <input id="vorname" name="vorname" type="text" class="form-control" autocomplete="given-name" required>
                   <div class="invalid-feedback">Bitte einen Vornamen eingeben.</div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <label for="nachname" class="form-label">Nachname</label>
-                  <input id="nachname" name="nachname" type="text" class="form-control" autocomplete="family-name">
+                  <input id="nachname" name="nachname" type="text" class="form-control" autocomplete="family-name" required>
                   <div class="invalid-feedback">Bitte einen Nachnamen eingeben.</div>
                 </div>
 
@@ -66,12 +66,13 @@ Dies ist eine bewusst einfache, prüfungstaugliche Musterlösung für den Block 
                     type="text"
                     class="form-control"
                     inputmode="numeric"
+                    required
                     autocomplete="off"
                     placeholder="z. B. 4422 180599"
                     aria-describedby="svnummer-help"
                   >
                   <div id="svnummer-help" class="form-text">
-                    Format: <code>LLLL TTMMJJ</code> bzw. 10 Ziffern mit optionalem Leerzeichen nach der 4. Stelle.
+                    Format: <code>LLLP TTMMJJ</code>, 10 Ziffern mit optionalem Leerraum. Bitte nur die PDF-Testdaten verwenden.
                   </div>
                   <div class="invalid-feedback" id="svnummer-feedback">
                     Bitte eine SV-Nummer eingeben.
@@ -177,14 +178,17 @@ const resetButton = document.getElementById("reset-button");
 svInput.addEventListener("input", () => {
   svInput.value = formatSvInput(svInput.value);
   svInput.classList.remove("is-invalid", "is-valid");
+  hideResult();
 });
 
 firstNameInput.addEventListener("input", () => {
   firstNameInput.classList.remove("is-invalid");
+  hideResult();
 });
 
 lastNameInput.addEventListener("input", () => {
   lastNameInput.classList.remove("is-invalid");
+  hideResult();
 });
 
 form.addEventListener("submit", (event) => {
@@ -225,7 +229,7 @@ form.addEventListener("submit", (event) => {
     svInput.classList.add("is-valid");
     showResult({
       ok: true,
-      title: "SV-Nummer ist gueltig.",
+      title: "Formale SV-Pruefung bestanden.",
       detail: "Der QR-Code enthaelt den Text Richtig.",
       payload: "Richtig"
     });
@@ -278,11 +282,17 @@ function renderQrCode(payload) {
   qr.addData(payload);
   qr.make();
 
-  qrCodeBox.innerHTML = qr.createSvgTag(6, 0);
+  // The default margin is four modules on every side (quiet zone).
+  qrCodeBox.innerHTML = qr.createSvgTag(6);
 }
 
 function formatSvInput(value) {
-  const digits = value.replace(/\D/g, "").slice(0, 10);
+  const digits = value.replace(/\s/g, "");
+
+  // Keep malformed input visible so validation can explain the problem.
+  if (!/^\d{0,10}$/.test(digits)) {
+    return value;
+  }
 
   if (digits.length <= 4) {
     return digits;
@@ -292,12 +302,19 @@ function formatSvInput(value) {
 }
 
 function validateAustrianSvNumber(rawValue) {
-  const digits = rawValue.replace(/\D/g, "");
+  const digits = rawValue.replace(/\s/g, "");
 
   if (!/^\d{10}$/.test(digits)) {
     return {
       isValid: false,
-      message: "Die SV-Nummer muss aus genau 10 Ziffern bestehen."
+      message: "Die SV-Nummer muss aus genau 10 Ziffern bestehen; nur Leerraum ist zusaetzlich erlaubt."
+    };
+  }
+
+  if (digits[0] === "0") {
+    return {
+      isValid: false,
+      message: "Die Laufnummer muss zwischen 100 und 999 liegen."
     };
   }
 
@@ -422,10 +439,47 @@ function escapeHtml(value) {
 - `5255 121299`
 - `4999 070700`
 
+## Lesereihenfolge und Prüfung des Codes
+
+Das `submit`-Ereignis verhindert das normale Absenden und prüft die Pflichtfelder.
+`validateAustrianSvNumber()` liefert das Ergebnis von Format-, Laufnummer-, Datums-
+und Prüfzifferprüfung. `showResult()` wählt die Rückmeldung, `renderQrCode()` erstellt das Bild.
+Diese Trennung erleichtert die Prüfung der Logik ohne Browseroberfläche.
+
+Der Formatierer ordnet nur Leerraum; Buchstaben und überzählige Ziffern werden nicht stillschweigend entfernt.
+Neue Eingaben blenden das vorherige Ergebnis aus. Der QR enthält ausschließlich das Ergebniswort.
+Das Ergebnis ist eine formale Prüfung, keine Abfrage des Versicherungsverzeichnisses.
+
+Aus dem Repository-Hauptverzeichnis startet der Regressionstest:
+
+```powershell
+node --test tests/sv-exercise.test.cjs
+```
+
+Er prüft die sechs PDF-Beispiele, falsche Zeichen, zu lange Eingaben, eine führende Null,
+Prüfziffer-Grenzfälle und aufeinanderfolgende Formularzustände.
+Der vollständig im README angeführte Quellcode wird mit den tatsächlichen Dateien verglichen.
+Die separate QR-Reader-Probe erfolgt wie im vorigen Thema beschrieben.
+
+Die QR-Bibliothek liegt lokal vor; für den Bootstrap-Stil ist derzeit eine Internetverbindung nötig.
+Diesen Unterschied berücksichtigen wir bei der Vorbereitung.
+
+## Schnelle Selbstkontrolle
+
+1. Welche Funktion prüft die SV-Nummer?
+2. Was passiert bei neuer Eingabe mit dem alten QR?
+3. Was erhält der Formatierer bei fehlerhaften Zeichen?
+
+## Kurzantworten zur Selbstkontrolle
+
+1. validateAustrianSvNumber().
+2. Er verschwindet; erst eine neue Prüfung erzeugt ein neues Ergebnis.
+3. Falsche Zeichen und zu lange Eingaben, damit die Validierung sie erkennen kann.
+
 ## Quellen
 
 1. Themenkatalog für die Vorbereitung auf die Lehrabschlussprüfung Applikationsentwicklung-Coding v2-2024  
-   `../../themenkatalog-applikationsentwicklung-coding-v2-2024.pdf`
+   https://github.com/goAuD/CoderLAP/blob/main/themenkatalog-applikationsentwicklung-coding-v2-2024.pdf
 
 2. Dachverband der österreichischen Sozialversicherung - offizielle Beschreibung der Versicherungsnummer  
    https://www.sozialversicherung.at/cdscontent/load?contentid=10008.796428&version=1750403135

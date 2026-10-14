@@ -60,19 +60,20 @@ szükséges.
 | POP3 | egyszerűbb letöltési modell |
 | SMTP | levélküldés |
 
+## Kidolgozott eset: telefon és laptop közös postafiókja
+
+A telefon megnyit egy levelet és olvasottnak jelöli. A szerver tárolja ezt az állapotot, így a laptop a következő szinkronizáláskor szintén olvasottnak láthatja. Egy mappába áthelyezett vagy törölt üzenet változása is eljuthat a többi kliensre. A kliens tarthat helyi gyorsítótárat az offline olvasáshoz, de ennek mérete és teljessége beállítástól függ.
+
+Ezért a **szinkronizálás nem biztonsági mentés**: egy szándékos vagy téves törlés szinkronizálódhat. A megőrzéshez és visszaállításhoz külön szolgáltatói vagy saját mentési eljárást ellenőrzünk.
+
+IMAPS esetén a `993` porton azonnal TLS indul; `143`-on a `STARTTLS` parancs válthat védett kapcsolatra. Új beállításnál a szolgáltató dokumentált, TLS-t megkövetelő konfigurációját használjuk, tanúsítvány-ellenőrzéssel. A bejövő és kimenő levelezést külön teszteljük, mert a működő IMAP nem bizonyítja a működő SMTP-beküldést.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az IMAP egy levelezési protokoll, amely a szerveren tárolt levelek és mappák szinkronizálására szolgál.  
 > Több eszköz használatánál általában előnyösebb, mint a POP3,
 > mert a levelek és állapotok központilag a szerveren maradnak.  
 > Az IMAPS az IMAP TLS-sel védett, biztonságos változata.
-
-## Gyakori vizsgahibák
-
-- Az IMAP-ot küldési protokollnak mondani.
-- Azt állítani, hogy az IMAP mindig letörli a levelet a szerverről.
-- Nem tudni, hogy több eszköznél miért előnyös.
-- Elfelejteni a portokat.
 
 ## Gyors önellenőrzés
 
@@ -105,3 +106,10 @@ szükséges.
    Használat: hivatalos portregiszter a `143` és `993` portokhoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 9051: IMAP4rev2](https://www.rfc-editor.org/rfc/rfc9051.html): postafiók, állapotok, offline szinkron és STARTTLS.
+- [RFC 8314: TLS for email](https://www.rfc-editor.org/rfc/rfc8314.html): implicit TLS, STARTTLS és tanúsítvány-ellenőrzés.
+
+Ellenőrizve: `2026-10-14`.

@@ -55,19 +55,56 @@ AUSGABE summe
 - nicht mit konkreten sprachlichen Details vermischen, wenn nicht nötig
 - die Reihenfolge der Schritte soll eindeutig sein
 
+## Vom Pseudocode zur überprüfbaren Lösung
+
+Aufgabe: Wir suchen das Maximum einer Liste endlicher Zahlen. Für eine leere
+Liste lautet das Ergebnis „kein Wert“. Zuerst die sprachunabhängige Beschreibung:
+
+```text
+WENN die Liste leer ist: GIB kein Wert ZURÜCK
+groesster = erstes Element
+FÜR JEDES weitere Element:
+  WENN Element größer als groesster:
+    groesster = Element
+GIB groesster ZURÜCK
+```
+
+Die entsprechende, eigenständig ausführbare JavaScript-Umsetzung:
+
+<!-- example:run -->
+
+```javascript
+function maximum(values) {
+  if (values.length === 0) return null;
+  let largest = values[0];
+  for (let i = 1; i < values.length; i++) {
+    if (values[i] > largest) largest = values[i];
+  }
+  return largest;
+}
+console.log(maximum([-5, -2, -7]));
+console.log(maximum([]));
+```
+
+```text
+-2
+null
+```
+
+Der Startwert ist `-5`, beim zweiten Element wird er zu `-2`; das dritte ändert
+ihn nicht. Der Start mit dem ersten tatsächlichen Element funktioniert auch bei
+negativen Zahlen. `null` steht hier vereinbarungsgemäß für „kein Ergebnis“, nicht
+für die Zahl null. Bei der Umsetzung entscheiden wir bewusst über die
+Indexierung (ab `0`), die Rückgabe und den leeren Fall. Pseudocode hat keine
+einzige verbindliche Syntax. Deshalb verwenden wir unsere Schreibweise
+einheitlich und kennzeichnen das Ende eines Zweigs durch Einrückung oder ein Abschlusswort.
+
 ## Prüfungstaugliche Formulierung
 
 > Pseudocode ist eine codeähnliche, aber nicht ausführbare Beschreibung, die die Logik eines Algorithmus oder  
 > Programmteils darstellt.  
 > Sein Zweck ist es, sprachunabhängig und gut lesbar eine Lösung zu entwerfen oder zu erklären.  
 > Pseudocode ist besonders nützlich bei der Darstellung von Algorithmen und bei Prüfungsaufgaben.
-
-## Häufige Prüfungsfehler
-
-- Pseudocode als echten Programmcode zu behandeln.
-- Zu viele sprachspezifische Details hineinzuschreiben.
-- Die Schritte nicht in eindeutiger Reihenfolge zu formulieren.
-- Eingabe oder Ergebnis auszulassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -86,6 +123,11 @@ AUSGABE summe
 5. Klar und nachvollziehbar
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Pseudocode](https://developer.mozilla.org/en-US/docs/Glossary/Pseudocode): sprachunabhängige Beschreibung und Notation.
+
 
 1. MDN - Pseudocode  
    https://developer.mozilla.org/en-US/docs/Glossary/Pseudocode  

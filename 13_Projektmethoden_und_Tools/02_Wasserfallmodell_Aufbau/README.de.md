@@ -51,6 +51,14 @@ Daher ist das Modell:
 | Änderungsmanagement | schwieriger | flexibler |
 | Feedback | später | häufiger |
 
+## Was wird zwischen den Phasen übergeben?
+
+Bei einem Konverter für ein festgelegtes Rechnungsformat entstehen in der Anforderungsphase Feldbeschreibungen und vereinbarte Ein-/Ausgabebeispiele. Der Entwurf beschreibt Verarbeitungsschritte und Fehlermeldungen. Nach der Implementierung prüfen Tests die Umwandlung mit diesen Beispielen; dokumentierte Installation und Übergabe folgen.
+
+Am Phasenübergang halten wir fest, wer das Ergebnis freigibt und welche Version die Grundlage bildet. Kommt später ein Pflichtfeld hinzu, wird die Auswirkung untersucht: Welche Anforderung, welcher Entwurf, welcher Code und welcher Test ändern sich? Eine Rückkehr ist möglich, erfordert aber abgestimmte Änderungskontrolle.
+
+Die Phasenfolge verbietet weder frühe Dokumentenreviews noch das vorgezogene Planen von Tests. Dadurch lassen sich missverständliche Regeln bereits vor der Implementierung klären.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Wasserfallmodell ist ein lineares Softwareprozessmodell,
@@ -60,13 +68,6 @@ Daher ist das Modell:
 > Der Vorteil ist die übersichtliche Struktur,
 > der Nachteil ist, dass es weniger flexibel ist,
 > wenn sich die Anforderungen im Laufe des Projekts ändern.
-
-## Häufige Prüfungsfehler
-
-- Das Wasserfallmodell als völlig fehlerfrei oder immer schlecht darstellen.
-- Den linearen Aufbau nicht erwähnen.
-- Mit dem V-Modell verwechseln.
-- Die Wartungsphase auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -85,6 +86,11 @@ Daher ist das Modell:
 5. Das Wasserfallmodell ist weniger flexibel
 
 ## Quellen
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Testaktivitäten im Entwicklungslebenszyklus und frühe Prüfung.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - What is the Waterfall methodology?  
    https://www.atlassian.com/agile/project-management/waterfall-methodology  

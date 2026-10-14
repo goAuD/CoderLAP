@@ -117,6 +117,19 @@ Nem jók, ha:
 - elavult részeket javítani kell
 - változás után a dokumentációt is frissíteni kell
 
+## A leírás kipróbálása felhasználói feladatként
+
+A dokumentációt úgy ellenőrizzük, mint egy kezelőfelületet. Például egy új kolléga feladata: „Készíts CSV-exportot a tesztkörnyezet három mintafoglalásáról.” Megkapja a leírást, de a készítője nem súg. Feljegyezzük, melyik lépésnél bizonytalan, és a sikeres eredményt is: létrejött a fájl, három adatsort tartalmaz, az ékezetek helyesen jelennek meg.
+
+| Dokumentumelem | Konkrét megoldás |
+| --- | --- |
+| Lépés | „Nyisd meg a Foglalások oldalt, majd válaszd az Exportálás gombot.” |
+| Eredmény | „A böngésző letölt egy UTF-8 kódolású CSV-fájlt.” |
+| Kép | A szükséges vezérlőre szűkített kép, személyes adatok nélkül |
+| Akadálymentesség | Szöveges utasítás a kép mellett; logikus címsorok és beszédes linkek |
+
+A javítás után a próbát újra elvégezzük. Egy elavult képernyőkép helyett gyakran tartósabb az egyértelmű menünév és a várt eredmény.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A technikai dokumentáció előkészítése során a tartalmat logikusan kell strukturálni,
@@ -125,14 +138,6 @@ Nem jók, ha:
 > a rövid és pontos megfogalmazás,
 > valamint a képek, táblázatok és példák megfelelő használata.  
 > A dokumentációnak később is karbantarthatónak és frissíthetőnek kell maradnia.
-
-## Gyakori vizsgahibák
-
-- Rossz sorrendben vannak az információk.
-- Nincsenek címsorok vagy logikus blokkok.
-- A dokumentum túl szöveges és nehezen áttekinthető.
-- Nem a célcsoport nyelvén íródik.
-- Elavult screenshotok maradnak benne.
 
 ## Gyors önellenőrzés
 
@@ -151,6 +156,11 @@ Nem jók, ha:
 5. Hogy követhető és karbantartható legyen
 
 ## Források
+
+- [Google Technical Writing: Audience](https://developers.google.com/tech-writing/one/audience)  
+  Előismeretek, olvasói feladatok és világos nyelvezet.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Google Technical Writing - Organizing large documents  
    https://developers.google.com/tech-writing/two/large-docs  

@@ -59,6 +59,14 @@ Mert sokan összekeverik:
 
 Pedig ezek nem ugyanazok.
 
+## Kidolgozott hibabehatárolás: belépés sikerül, listázás nem
+
+FTP-nél a vezérlőkapcsolat és az adatkapcsolat külön út. Így a sikeres bejelentkezés után a könyvtárlistázás még elakadhat a tűzfalon. Aktív módban a szerver kezdeményezi az adatkapcsolatot a kliens felé. Passzív módban a kliens csatlakozik a szerver által megadott adatportra; ezt a kiszolgáló tűzfalán és NAT-beállításában is figyelembe kell venni.
+
+Explicit FTPS esetén tipikusan a `21`-es vezérlőporton `AUTH TLS` kezdi a védett működést. Az adatkapcsolat védelme külön beállítás, például `PROT P`; a titkosított bejelentkezés önmagában még nem bizonyítja a fájladat titkosítását. Implicit FTPS-nél tipikusan `990`-en indul rögtön TLS.
+
+A próba során egy ártalmatlan mintafájlt töltünk fel és le, ellenőrizzük a tartalmát és a tanúsítványt. SFTP választásakor más protokollt használunk SSH felett, tipikusan `22`-es porton; az FTPS-kliens beállításait ezért nem lehet pusztán portcserével SFTP-vé alakítani.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az FTP klasszikus fájlátviteli protokoll kliens és szerver között.  
@@ -66,13 +74,6 @@ Pedig ezek nem ugyanazok.
 > ezért biztonságosabb alternatíva az FTPS,
 > amely TLS-sel védi a kapcsolatot.  
 > Az FTPS nem ugyanaz, mint az SSH-alapú SFTP.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy az FTP önmagában biztonságos.
-- Az FTPS-t és az SFTP-t összekeverni.
-- Nem megemlíteni, hogy az FTP külön adat- és vezérlőkapcsolatot használhat.
-- Elfelejteni a `21` portot.
 
 ## Gyors önellenőrzés
 
@@ -109,3 +110,10 @@ Pedig ezek nem ugyanazok.
    Használat: hivatalos portregiszter a `21` és `990` portokhoz.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 4217: Securing FTP with TLS](https://www.rfc-editor.org/rfc/rfc4217): vezérlő- és adatcsatorna külön védelme.
+- [RFC 959: FTP](https://www.rfc-editor.org/rfc/rfc959): aktív/passzív adatkapcsolat.
+
+Ellenőrizve: `2026-10-14`.

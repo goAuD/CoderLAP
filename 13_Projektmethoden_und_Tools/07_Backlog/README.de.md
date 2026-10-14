@@ -5,7 +5,7 @@
 | Begriff | Was bedeutet es? |
 |---|---|
 | Product Backlog | die priorisierte Liste zum gesamten Produkt |
-| Sprint Backlog | die für den aktuellen Sprint ausgewählten Elemente |
+| Sprint Backlog | Sprint Goal, ausgewählte Einträge und Umsetzungsplan |
 | Backlog Item | ein konkretes Arbeitselement, z. B. User Story, Bug, technische Aufgabe |
 
 ## Was ist ein Backlog?
@@ -34,8 +34,8 @@ In einer agilen Umgebung kann es typischerweise enthalten:
 | Aspekt | Product Backlog | Sprint Backlog |
 |---|---|---|
 | Zeithorizont | längerfristig | aktueller Sprint |
-| Inhalt | alle wichtigen Arbeitselemente | die für den Sprint ausgewählten Elemente |
-| Verantwortlich | hauptsächlich vom Product Owner gepflegt | das Scrum Team arbeitet damit |
+| Inhalt | geordnete Arbeitseinträge zur Produktverbesserung | Sprint Goal, ausgewählte Einträge und Plan |
+| Verantwortlich | Product Owner verantwortet die Pflege | Developers erstellen und aktualisieren es |
 | Ziel | was irgendwann gemacht werden sollte | was wir jetzt machen |
 
 ## Merkmale eines guten Backlogs
@@ -57,6 +57,14 @@ Dabei macht das Team:
 - klärt die Bedingungen
 - ordnet die Prioritäten neu
 
+## Die drei Bestandteile des Sprint Backlogs
+
+Ein Sprint Goal könnte lauten: „Lernende finden das gesuchte Thema ohne Hilfe.“ Ausgewählte Product-Backlog-Einträge sind Textsuche und Zustand ohne Treffer. Zum Umsetzungsplan gehören Suchlogik, Tastaturbedienung und Prüfung. **Warum, was und wie** bilden zusammen das Sprint Backlog; die Developers erstellen und aktualisieren es.
+
+Zeigt die Erprobung eine zu strenge Filterung, passen sie den Plan an und stimmen den Umfang mit dem Product Owner ab, ohne das Sprint Goal zu gefährden. Das Sprint Backlog ist ein lebender Plan, keine unveränderliche Zusagenliste.
+
+Das Product Backlog ist eine sich entwickelnde, geordnete Liste und kein Versprechen, jede enthaltene Idee umzusetzen. Refinement ist eine Tätigkeit und kein zusätzliches verpflichtendes Scrum-Event. Neben Detaillierung und Größenbestimmung einzelner Einträge können Zielbezug und Reihenfolge erneut geprüft werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Backlog ist eine priorisierte Aufgabenliste,
@@ -64,15 +72,8 @@ Dabei macht das Team:
 > In einer agilen Umgebung bezeichnet das Product Backlog
 > die vollständige Anforderungsliste,
 > während das Sprint Backlog
-> die für den aktuellen Sprint ausgewählten Aufgaben zusammenfasst.  
+> das Sprint Goal, die ausgewählten Einträge und den Umsetzungsplan umfasst.  
 > Ziel des Backlogs ist die Unterstützung von Transparenz, Priorisierung und Planung.
-
-## Häufige Prüfungsfehler
-
-- Das Backlog einfach als To-do-Liste bezeichnen.
-- Product Backlog und Sprint Backlog nicht unterscheiden.
-- Glauben, dass das Backlog ein statisches Dokument ist.
-- Die Rolle der Priorisierung auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,13 +85,18 @@ Dabei macht das Team:
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Eine priorisierte Arbeitselemeliste
-2. Das eine ist die Gesamtliste, das andere der für den aktuellen Sprint ausgewählte Teil
+1. Eine geordnete Arbeitselementliste
+2. Das Product Backlog ist die geordnete Arbeitsliste des Produkts; das Sprint Backlog umfasst Sprintziel, ausgewählte Einträge und Plan.
 3. Weil sich Anforderungen und Prioritäten ändern
-4. Hauptsächlich der Product Owner
+4. Der Product Owner bleibt auch bei delegierten Aufgaben verantwortlich.
 5. Funktionen, Bugs, technische Aufgaben, Recherche
 
 ## Quellen
+
+- [Scrum.org: What is a Sprint Backlog?](https://www.scrum.org/resources/what-is-a-sprint-backlog)  
+  Offizielle fachliche Erläuterung zum Scrum Guide.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

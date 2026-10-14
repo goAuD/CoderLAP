@@ -4,15 +4,15 @@
 
 | Modell | Wesentliches |
 |---|---|
-| Private Cloud | eine der Organisation stärker zugeordnete Cloud-Umgebung |
-| Public Cloud | Cloud eines externen Dienstleisters |
+| Private Cloud | Cloud zur ausschließlichen Nutzung durch eine Organisation |
+| Public Cloud | für die allgemeine Öffentlichkeit angebotene Cloud |
 | Hybrid Cloud | Private + Public gemeinsam |
 
 ## Was ist eine Private Cloud?
 
 Eine Private Cloud ist eine Cloud-Umgebung, die:
 
-- einer einzelnen Organisation zugeordnet ist
+- für die ausschließliche Nutzung durch eine Organisation bereitgestellt wird
 - stärker kontrolliert wird
 - häufig auf internen oder dedizierten Ressourcen aufbaut
 
@@ -25,7 +25,7 @@ Vorteil kann sein:
 
 Bei der Public Cloud:
 
-- stellt ein externer Dienstleister die Infrastruktur bereit
+- steht das Angebot der allgemeinen Öffentlichkeit mit passendem Vertrag und Konto offen
 - sind die Ressourcen über das Netzwerk erreichbar
 - ist der Dienst typischerweise flexibel erweiterbar
 
@@ -39,7 +39,7 @@ Typische Beispiele:
 
 Hybrid Cloud bedeutet, dass:
 
-- eine Organisation Private- und Public-Lösungen gemeinsam nutzt
+- eigenständige Cloud-Umgebungen, etwa Private und Public Cloud, durch Technik für Daten- oder Anwendungsportabilität verbunden werden
 
 Zum Beispiel:
 
@@ -64,21 +64,22 @@ Weil die Wahl des richtigen Modells abhängen kann von:
 | Hybrid Cloud | Kombination mehrerer Modelle |
 | On-Premises | lokal betriebenes System, nicht unbedingt Cloud |
 
+## Eigentümer, Standort und Nutzung sind getrennte Fragen
+
+Eine Private Cloud kann von einem externen Unternehmen in dessen Rechenzentrum betrieben werden, solange die Umgebung einer Organisation exklusiv dient. On-Premises beschreibt den Standort, Private/Public das Nutzungsmodell. Eine Public Cloud macht Kundendaten und virtuelle Maschinen nicht automatisch öffentlich zugänglich.
+
+**Durchgearbeiteter Fall:** Eine Schule hält ihre Übungsdatenbank in einer Private Cloud und erweitert über eine kontrollierte Verbindung die Anwendungskapazität mit Public-Cloud-Ressourcen. Verbindung und portable Arbeitslast bilden hier den hybriden Betrieb. Ein lokaler Dateiserver neben einem unabhängigen SaaS-Abonnement belegt für sich noch keine Hybrid Cloud nach NIST.
+
+NIST nennt außerdem die **Community Cloud**: Sie dient einer bestimmten Gemeinschaft von Organisationen mit gemeinsamen Anforderungen. Die drei Modelle im Titel sind somit nicht die gesamte Einteilung.
+
 ## Prüfungstaugliche Formulierung
 
 > Private, Public und Hybrid Cloud sind die Deployment-Modelle der Cloud.  
 > Die Private Cloud ist eine an eine Organisation gebundene Umgebung
 > mit größerer Kontrolle,
-> die Public Cloud ist eine von einem externen Dienstleister bereitgestellte Lösung,
+> die Public Cloud ist ein Angebot für die allgemeine Öffentlichkeit,
 > und die Hybrid Cloud ist eine Kombination davon.  
 > Bei der Wahl sind Kosten, Flexibilität, Sicherheit und Compliance wichtige Aspekte.
-
-## Häufige Prüfungsfehler
-
-- Die Private Cloud ohne Weiteres als einfachen lokalen Server bezeichnen.
-- Die Hybrid Cloud als einfache Backup-Lösung betrachten.
-- Nicht erkennen, dass auch bei der Public Cloud kundenseitige Verantwortung bleibt.
-- Das Deployment-Modell mit dem Servicemodell verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,9 +91,9 @@ Weil die Wahl des richtigen Modells abhängen kann von:
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Stärker zugeordnete, an die Organisation gebundene Cloud-Umgebung
-2. Cloud eines externen Dienstleisters
-3. Kombination von Private und Public
+1. Cloud-Umgebung zur ausschließlichen Nutzung durch eine Organisation
+2. für die allgemeine Öffentlichkeit angebotene Cloud
+3. Technisch verbundene Kombination eigenständiger Cloud-Umgebungen
 4. Deployment-Modell
 5. Zum Beispiel Kosten und Compliance
 
@@ -115,3 +116,9 @@ Weil die Wahl des richtigen Modells abhängen kann von:
    Verwendung: praktische Erklärung zu Hybrid-Cloud-Nutzungsmustern.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf): Cloudbegriff und Bereitstellungsmodelle.
+
+Geprüft: `2026-10-14`.

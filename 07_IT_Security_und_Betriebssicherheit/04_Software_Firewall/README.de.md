@@ -5,7 +5,7 @@
 | Typ | Wo läuft sie? |
 |---|---|
 | Software / Host Firewall | auf einem bestimmten Rechner |
-| Network / Hardware Firewall | an der Netzwerkgrenze oder vor mehreren Geräten |
+| Network Firewall | filtert Verkehr zwischen Netzen oder Netzsegmenten |
 
 ## Was ist eine Software Firewall?
 
@@ -52,8 +52,16 @@ In solchen Fällen ist es besonders wichtig, dass der Rechner sich selbst schüt
 | Begriff | Was bedeutet das? |
 |---|---|
 | Software Firewall | hostbasierte Firewall auf dem Rechner |
-| Hardware / Network Firewall | separates Netzwerkgerät oder zentraler Schutz |
+| Netzwerk-Firewall | filtert Verkehr mehrerer Systeme; als Gerät oder virtuelle/softwarebasierte Lösung möglich |
 | Antivirus | Malware-Erkennung, nicht dasselbe wie eine Firewall |
+
+## Durchgearbeitetes Beispiel: lokale Webvorschau erreichen
+
+Auf dem Entwicklungsrechner funktioniert `http://127.0.0.1:8767`, auf dem Telefon nicht. `127.0.0.1` ist immer die Loopback-Adresse des jeweils verwendeten Geräts. Lauscht der Server nur dort, macht eine Firewall-Regel ihn allein noch nicht im lokalen Netz erreichbar.
+
+Prüfreihenfolge: Läuft der Dienst, an welcher Adresse und welchem Port lauscht er, ist die LAN-Adresse des Rechners erreichbar und erlaubt die Firewall die benötigte Verbindung? Eine begründete lokale Regel könnte **eingehendes TCP, Zielport 8767, privates Profil und das benötigte lokale Subnetz** umfassen. Das ist ein Planungsbeispiel, keine fertige Regel für jedes Netzwerk. Im öffentlichen WLAN gelten andere Zugriffsanforderungen.
+
+Eine zustandsbehaftete Firewall verfolgt Verbindungszustände. Für Antwortverkehr einer erlaubten ausgehenden Verbindung müssen deshalb normalerweise nicht pauschal eingehende Ports geöffnet werden. Ein freigegebener Port beweist nicht, dass die darüber übertragenen Anwendungsdaten ungefährlich sind. Host/Netzwerk beschreibt die Position des Schutzes, Software/Hardware seine Umsetzung.
 
 ## Prüfungstaugliche Formulierung
 
@@ -64,13 +72,6 @@ In solchen Fällen ist es besonders wichtig, dass der Rechner sich selbst schüt
 > und kann in bestimmten Fällen
 > auch ausgehende Verbindungen einschränken.  
 > Sie ist besonders wichtig bei Client-Rechnern und in nicht vertrauenswürdigen Netzwerkumgebungen.
-
-## Häufige Prüfungsfehler
-
-- Die Firewall mit dem Antivirus verwechseln.
-- Sagen, dass sie nur auf Servern wichtig ist.
-- Glauben, dass bei einer Blockierung die beste Lösung das vollständige Abschalten der Firewall ist.
-- Nicht zwischen Host- und Netzwerk-Firewall unterscheiden.
 
 ## Schnelle Selbstkontrolle
 
@@ -103,3 +104,9 @@ In solchen Fällen ist es besonders wichtig, dass der Rechner sich selbst schüt
    Verwendung: Kontext zur Verbindung zwischen lokaler Firewall und anderen Client-Schutzkomponenten.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: Windows Firewall](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/): adress-, protokoll-, port- und profilbezogene Regeln, Antwortverkehr
+
+Geprüft: `2026-10-14`.

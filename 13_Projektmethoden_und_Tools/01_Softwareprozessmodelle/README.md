@@ -52,19 +52,20 @@ Más modell lehet jó:
 | folyamatmodell | magasabb szintű fejlesztési keret |
 | konkrét módszer / gyakorlat | a napi megvalósítás részlete |
 
+## A modell kiválasztása konkrét kockázat alapján
+
+Két feladatot hasonlíts össze. Az első egy pontosan dokumentált régi fájlformátum átalakítása, ismert példákkal és stabil átadási feltételekkel. Itt jól tervezhető egymásra épülő lépések és formális ellenőrzési pontok használhatók. A második egy új tanulói felület, amelynek használati igényeiről még keveset tudunk. Itt korai kipróbálással és kisebb működő részekkel érdemes csökkenteni a bizonytalanságot.
+
+A választásnál az igények változékonyságát, a tévedés következményét, az érintettek elérhetőségét és a szállítás feltételeit vizsgáljuk. A nagyobb projekt nem automatikusan vízesés, a kisebb pedig nem automatikusan Scrum.
+
+Az iteratív munka ugyanazt a megoldást finomítja, az inkrementális munka használható részekkel bővíti. Egy fejlesztés mindkettőt alkalmazhatja. Az agilis több megközelítés gyűjtőszemlélete; a Scrum egy konkrét keretrendszer.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverfolyamat-modellek olyan módszertani keretek,
 > amelyek meghatározzák, hogyan épül fel a szoftverfejlesztés folyamata.  
 > Leírják a fő fázisokat, azok sorrendjét és a hozzájuk tartozó eredményeket.  
 > Segítségükkel a fejlesztés átláthatóbbá, tervezhetőbbé és jobban ellenőrizhetővé válik.
-
-## Gyakori vizsgahibák
-
-- A modellt konkrét eszközzel összekeverni.
-- Azt hinni, hogy egyetlen helyes folyamatmodell létezik.
-- Nem megemlíteni a fázisokat és keretszerepet.
-- Az agilist és a Scrumot teljesen azonosnak tekinteni.
 
 ## Gyors önellenőrzés
 
@@ -83,6 +84,11 @@ Más modell lehet jó:
 5. Követelmény, design, fejlesztés, teszt, bevezetés
 
 ## Források
+
+- [IBM: Software Development Lifecycle](https://www.ibm.com/think/topics/sdlc)  
+  Életciklusok és a megközelítés helyzethez igazítása.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. IBM - What is the Software Development Lifecycle (SDLC)?  
    https://www.ibm.com/think/topics/sdlc  

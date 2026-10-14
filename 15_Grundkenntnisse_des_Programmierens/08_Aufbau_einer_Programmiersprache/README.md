@@ -82,19 +82,46 @@ Egy nyelvhez gyakran tartozik:
 - standard library
 - futási környezet
 
+## Egy kifejezés részekre bontása
+
+Feladat: 250 cent egységárból és a szövegként kapott `"3"` darabszámból
+kiszámítjuk a teljes árat. Ez rögzített, érvényes bemenetű Node.js-példa;
+felhasználói adatnál a konverzió után tartományt és egész számot is ellenőrzünk.
+
+<!-- example:run -->
+
+```javascript
+const unitCents = 250;
+const quantity = Number("3");
+const totalCents = unitCents * quantity;
+console.log(totalCents);
+console.log(typeof quantity, quantity === 3);
+```
+
+```text
+750
+number true
+```
+
+| Kódrész | Nyelvi szerep |
+|---|---|
+| `const` | deklarációs kulcsszó |
+| `unitCents` | általunk választott azonosító |
+| `250`, `"3"` | szám-, illetve szövegliterál |
+| `unitCents * quantity` | értéket előállító kifejezés |
+| `===` | szigorú egyenlőségvizsgálat |
+
+A szintaxis megmondja, hogyan épülhet fel a deklaráció. A szemantika mondja meg,
+hogy a `*` milyen műveletet végez és milyen értéket kapunk. A `Number` nyelvi
+beépített objektum; a `console` a futtatókörnyezet szolgáltatása. A böngésző
+`document` objektuma például nem jár automatikusan a Node.js környezethez.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Egy programozási nyelv felépítését a szintaxis, a szemantika és a nyelvi elemek összessége adja.  
 > Ide tartoznak például a kulcsszavak, azonosítók, literálok, adattípusok, operátorok és vezérlési szerkezetek.  
 > A szintaxis azt határozza meg, hogyan kell helyesen leírni a kódot, a szemantika pedig azt, hogy az mit jelent és
 > hogyan viselkedik végrehajtáskor.
-
-## Gyakori vizsgahibák
-
-- A szintaxist és szemantikát összekeverni.
-- A programnyelvet csak kulcsszavak halmazának tekinteni.
-- Nem megemlíteni a típusokat és operátorokat.
-- Kihagyni, hogy a nyelvhez szabályrendszer tartozik.
 
 ## Gyors önellenőrzés
 
@@ -113,6 +140,11 @@ Egy nyelvhez gyakran tartozik:
 5. Mert logikailag még lehet hibás
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types): literálok, deklarációk és típuskonverzió.
+
 
 1. MDN - Syntax  
    https://developer.mozilla.org/en-US/docs/Glossary/Syntax  

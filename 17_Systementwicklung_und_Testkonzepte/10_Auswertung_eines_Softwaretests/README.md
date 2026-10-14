@@ -59,19 +59,32 @@ Tipikusan:
 | kiértékelés | eredmény összevetése az elvárással |
 | hibajavítás | a hiba okának megszüntetése |
 
+## Egy eredményből követhető döntés
+
+A `FOG-03` eset két azonos foglalási kérést küld. Az elvárt eredmény egyetlen
+tárolt foglalás. A jelentés az alkalmazás verzióját, a tesztadat azonosítóját,
+a végrehajtás környezetét és a tényleges rekordszámot is rögzíti. A pontos
+lépéssor segítségével más is megismételheti a vizsgálatot.
+
+| Státusz | Példa | Következő lépés |
+|---|---|---|
+| Passed | egy foglalás marad | bizonyíték megőrzése |
+| Failed | két foglalás keletkezik | eltérés kivizsgálása, javítás után újrateszt |
+| Blocked | tesztadatbázis nem érhető el | környezet helyreállítása |
+| Not run | az esetet még nem futtatták | futtatás ütemezése |
+
+A blokkolt eset nem sikeres teszt. Ha 100 tervezett esetből 90 sikeres, 5 sikertelen
+és 5 blokkolt, a „90%-os siker” önmagában kevés a kiadási döntéshez. A hibák
+hatását is ismerni kell: egy adatvesztés súlyosabb lehet sok kozmetikai eltérésnél.
+A **súlyosság** a hatást, a **prioritás** a javítás sürgősségét jelöli. Javítás után
+a konkrét hibát újrateszteljük, majd a kapcsolódó működést regressziós teszttel is ellenőrizzük.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szoftverteszt kiértékelése során a tényleges eredményt összehasonlítjuk a várt eredménnyel.  
 > Ha a kettő megegyezik, a teszt sikeres, ha eltérés van, a teszt sikertelen, és a hibát vagy rendellenességet  
 > dokumentálni kell.  
 > A megfelelő kiértékelés segíti a hibakövetést, a minőség mérését és a további fejlesztési döntéseket.
-
-## Gyakori vizsgahibák
-
-- A teszt futtatását összekeverni a kiértékeléssel.
-- Nem megemlíteni a várt eredményt.
-- A hibát automatikusan fejlesztői hibának nevezni környezetvizsgálat nélkül.
-- Kihagyni a dokumentálás szerepét.
 
 ## Gyors önellenőrzés
 
@@ -90,6 +103,11 @@ Tipikusan:
 5. Az egyik értékel, a másik javít
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [ISTQB CTFL 4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf): eredménykövetés, hibakezelés, újrateszt és regresszió.
+
 
 1. ISTQB CTFL Syllabus v4.0.1  
    https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  

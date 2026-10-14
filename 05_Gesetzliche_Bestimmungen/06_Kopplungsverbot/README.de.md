@@ -6,8 +6,8 @@
 |---|---|
 | Webshop fragt Adressdaten für die Lieferung ab | ja |
 | Webshop verlangt verpflichtend Marketing-Einwilligung bei der Bestellung | nein |
-| Anwendung fragt technisch notwendige Daten für den Betrieb ab | ja |
-| Anwendung erstellt ohne gesonderte Einwilligung ein Werbeprofil | in der Regel nein |
+| Anwendung verarbeitet für den angeforderten Dienst notwendige Daten | mit passender Rechtsgrundlage und unter Beachtung der übrigen Grundsätze |
+| Website verwendet ohne vorherige Einwilligung einen für den angeforderten Dienst nicht notwendigen Werbe-Tracking-Cookie | nein |
 
 ## Was bedeutet das Kopplungsverbot?
 
@@ -57,9 +57,10 @@ Wenn die Website eine Einwilligung für nicht notwendige Marketing- oder Trackin
 
 ### Beispiel 3: App-Registrierung
 
-Wenn eine Anwendung ein für den Betrieb nicht notwendiges Profiling durchführen möchte:
+Eine Anwendung möchte zusätzliche Werbe-Tracking-Cookies verwenden:
 
-- braucht es dafür eine gesonderte, tatsächlich freiwillige Einwilligung
+- für nicht notwendige Cookies holt sie vorher eine tatsächlich freiwillige Einwilligung ein
+- Rechtsgrundlage und Zweck der anschließenden personenbezogenen Verarbeitung sind ebenfalls zu bestimmen; nicht jedes Profiling beruht automatisch auf Einwilligung
 
 ## Was gilt nicht als verbotene Kopplung?
 
@@ -79,6 +80,28 @@ Zum Beispiel:
 - die Einwilligung muss getrennt von der Vertragserfüllung behandelt werden,
   wenn es um eine nicht notwendige Datenverarbeitung geht
 
+## Der Lebenszyklus einer Einwilligung in der Oberfläche
+
+Ein Termin lässt sich buchen, ohne einen Newsletter zu bestellen. Die getrennte
+Newsletter-Auswahl ist zunächst leer; der Text nennt Absender und Zweck. Der Anbieter
+kann nachweisen, wann und auf Grundlage welcher Information aktiv zugestimmt wurde.
+Der Widerruf muss mindestens so einfach sein wie die Erteilung und die künftige
+Verarbeitung auf dieser Grundlage beenden. Die zuvor rechtmäßige Verarbeitung wird
+dadurch nicht rückwirkend rechtswidrig.
+
+Für tatsächlich notwendige Dienstdaten verwenden wir die passende Rechtsgrundlage.
+Wir stellen keine scheinbar frei widerrufliche Erlaubnis zur Wahl, wenn die Leistung
+ohne diese Daten nicht erbracht werden kann. Auch ein Feld „Datenschutzhinweise akzeptiert“
+erteilt keine pauschale Erlaubnis für beliebige spätere Zwecke.
+
+**Oberflächentest:** Ohne Marketing-Auswahl gelingt die Buchung; mit Auswahl wird
+nur der erläuterte Newsletter-Zweck aktiviert; nach Widerruf endet diese Verarbeitung.
+So lässt sich die rechtliche Entscheidung am tatsächlichen Verhalten überprüfen.
+
+Quellen: [EDPB: Einwilligungsbedingungen](https://www.edpb.europa.eu/sme/be-compliant/process-personal-data-lawfully_en),
+[DSB: Cookies und Einwilligung](https://dsb.gv.at/faqs/datenschutz-cookies), Art. 7 DSGVO.
+Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Kopplungsverbot bedeutet, dass die Einwilligung freiwillig sein muss.
@@ -86,13 +109,6 @@ Zum Beispiel:
 > an eine Datenverarbeitung geknüpft werden,
 > die für die Vertragserfüllung nicht notwendig ist.
 > Wenn keine echte Wahlmöglichkeit besteht, kann die Gültigkeit der Einwilligung in Frage gestellt werden.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, dass für jede Datenverarbeitung eine Einwilligung eingeholt werden kann und das immer in Ordnung ist.
-- Notwendige und nicht notwendige Datenverarbeitung nicht zu unterscheiden.
-- Zu vergessen, dass die Einwilligung freiwillig sein muss.
-- Die für die Vertragserfüllung notwendige Datenverarbeitung mit Marketing zu verwechseln.
 
 ## Schnelle Selbstkontrolle
 

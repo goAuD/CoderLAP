@@ -84,6 +84,40 @@ Vizsgán érdemes kimondani:
 - a fejlesztés sokszor iteratív
 - a hibajavítás és tesztelés többször ismétlődik
 
+## Egy kis feladat teljes fejlesztési köre
+
+Követelmény: 50 eurótól ingyenes a szállítás, alatta 4,90 euró. Az összegek
+egész centben érkeznek; negatív vagy tört bemenetet a függvény elutasít. Először
+megadjuk a határértékek várt eredményét, majd megírjuk a szabályt. Futtatás: Node.js.
+
+<!-- example:run -->
+
+```javascript
+function shippingCents(totalCents) {
+  if (!Number.isSafeInteger(totalCents) || totalCents < 0) {
+    throw new RangeError("Nonnegative integer cents required");
+  }
+  return totalCents >= 5000 ? 0 : 490;
+}
+for (const [input, expected] of [[0, 490], [4999, 490], [5000, 0], [5001, 0]]) {
+  console.log(input, shippingCents(input) === expected);
+}
+```
+
+```text
+0 true
+4999 true
+5000 true
+5001 true
+```
+
+Az `4999` és `5000` közötti váltás ellenőrzi az „50 eurótól” jelentését.
+Mind a négy `true` azt mutatja, hogy a kiszámolt és az elvárt díj egyezik.
+Ezek az esetek a specifikációból származnak, nem a kód megismétléséből. Az érvénytelen
+bemenethez külön tesztben `RangeError`-t várunk. Javítás után a korábbi eseteket is
+újrafuttatjuk, ezt regressziós ellenőrzésnek nevezzük. A rövid függvény könnyen
+tesztelhető a felülettől és az adatbázistól külön.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A programfejlesztés gyakorlati menete általában a feladat megértésével kezdődik, majd következik a megoldás  
@@ -91,13 +125,6 @@ Vizsgán érdemes kimondani:
 > Ez a folyamat a gyakorlatban sokszor iteratív, mert a fejlesztő a tesztek és hibák alapján visszaléphet korábbi  
 > lépésekhez is.  
 > A cél nemcsak a futó program, hanem a helyes és megbízható program elkészítése.
-
-## Gyakori vizsgahibák
-
-- Kihagyni a tervezést.
-- A tesztelést összekeverni az egyszerű futtatással.
-- Nem megemlíteni a debuggolást.
-- Úgy leírni a folyamatot, mintha mindig teljesen lineáris lenne.
 
 ## Gyors önellenőrzés
 
@@ -116,6 +143,11 @@ Vizsgán érdemes kimondani:
 5. Mert a hibák miatt vissza kell térni korábbi lépésekhez
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Number.isSafeInteger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger): egész centértékek ellenőrzése.
+
 
 1. IBM - What is the Software Development Lifecycle (SDLC)?  
    https://www.ibm.com/think/topics/sdlc  

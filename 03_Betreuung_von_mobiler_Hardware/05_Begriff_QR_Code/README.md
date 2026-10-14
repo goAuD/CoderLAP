@@ -109,19 +109,19 @@ Ezért fontos:
 - ellenőrzött forrásból származó QR-kód
 - figyelni, hová vezet
 
+## Kidolgozott eset: tartós tantermi QR-kód
+
+Egy nyomtatott kód a `https://example.org/lernen` címet tartalmazza. A pontmintázat ezt a karakterláncot tárolja, nem magát a teljes weboldalt. A cím mögötti tartalom változhat a kód újranyomtatása nélkül. Ha a kód egy átirányító szolgáltatásra mutat, az új cél a szolgáltatásnál módosítható; a nyomtatott kódban lévő adat ekkor sem változik. Ezt szokás „dinamikus QR-kódnak” nevezni, nem külön QR-szabványt.
+
+A nyomtatási próbán megfelelő kontrasztot és minden oldalon legalább négy modul széles üres szegélyt hagyunk a szokásos QR-kód körül. Több telefonról, a tervezett távolságból olvassuk be. A hibajavításnak van határa, és nem hitelesíti a hivatkozás tulajdonosát.
+
+Beolvasás után a tényleges címet ellenőrizzük, különösen bejelentkezés vagy fizetés előtt. A QR-adat önmagában nem titkos: egy benne tárolt jelszót bárki elolvashat, aki a kódot megszerzi.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A QR-kód egy kétdimenziós vonalkód, amely nagy mennyiségű adat gyors és többirányú beolvasását teszi lehetővé.  
 > Előnye a nagyobb adattárolási kapacitás, a gyors leolvasás és a hibajavítás.  
 > Gyakran használják linkekhez, fizetéshez, jegyekhez és azonosításhoz.
-
-## Gyakori vizsgahibák
-
-- A QR-kódot hagyományos 1D vonalkódként leírni.
-- Nem említeni a hibajavítást.
-- Azt hinni, hogy csak webcím lehet benne.
-- Nem tudni példát mondani gyakorlati felhasználásra.
-- Figyelmen kívül hagyni a biztonsági kockázatokat.
 
 ## Gyors önellenőrzés
 
@@ -154,3 +154,9 @@ Ezért fontos:
    Használat: a QR-kód szabványosítási háttere.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [DENSO WAVE: Code area](https://www.qrcode.com/en/howto/code.html): a szabványos QR-kód négy modul széles nyugalmi zónája.
+
+Ellenőrizve: `2026-10-14`.

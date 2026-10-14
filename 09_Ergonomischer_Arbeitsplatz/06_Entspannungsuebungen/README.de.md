@@ -66,11 +66,17 @@ Beispiele:
 - regelmäßig durchführen
 - auch kurz kann nützlich sein
 
-## Warum ist regelmäßiges kurzes Üben besser?
+## Wie lässt sich Bewegung in den Arbeitstag einbauen?
 
-Weil die tägliche kleine Unterbrechung:
+Verbinde eine kurze Bewegungsunterbrechung mit einer abgeschlossenen Aufgabe oder einem Tätigkeitswechsel. Regelmäßige Haltungswechsel während der Arbeit und körperliche Aktivität in der Freizeit ergänzen einander.
 
-- mehr bringen kann als seltene, lange Kompensation
+## Eine kurze, schonende Unterbrechung praktisch umsetzen
+
+Lass nach einer abgeschlossenen Aufgabe die Maus los und entspanne Hände und Schultern. Blicke weiter als bis zum Bildschirm, blinzle und stehe, wenn es für dich sicher ist, für einige Schritte auf. Die Bewegung bleibt langsam, leicht und schmerzfrei. Erzwungenes Nackenkreisen oder große Bewegungsumfänge sind dafür nicht nötig.
+
+Das Beispiel unterbricht die statische Arbeitshaltung. Es ersetzt weder eine passende Arbeitsplatzgestaltung noch erforderliche Pausen oder regelmäßige allgemeine Bewegung. Bei anhaltenden Schmerzen, Taubheit oder Schwindel wird die Übung beendet und die passende Bewegung mit einer Fachperson geklärt.
+
+Zur Selbstkontrolle gehören daher häufige kurze Unterbrechungen und regelmäßige körperliche Aktivität zusammen: Beide erfüllen unterschiedliche Aufgaben und ergänzen einander.
 
 ## Prüfungstaugliche Formulierung
 
@@ -80,20 +86,13 @@ Weil die tägliche kleine Unterbrechung:
 > Nützlich sind mobilisierende, dehnende und aktivierende Übungen sowie die Entlastung der Augen.  
 > Es geht nicht um hohe Intensität, sondern um regelmäßige, kurze und schonende Bewegung.
 
-## Häufige Prüfungsfehler
-
-- Zu sagen, dass nur langes Sporttraining hilft.
-- Die Augenentlastung nicht zu erwähnen.
-- Die Übungen als zu kompliziert oder zu intensiv vorzustellen.
-- Zu vergessen, dass Regelmäßigkeit wichtiger ist als seltene hohe Belastung.
-
 ## Schnelle Selbstkontrolle
 
 1. Warum sind Entspannungsübungen nützlich?
 2. Nenne drei Übungsarten.
 3. Warum ist Augenentlastung wichtig?
 4. Was sollte man bei den Übungen vermeiden?
-5. Was ist besser: selten viel oder häufig wenig?
+5. Wie hängen kurze Bewegungsunterbrechungen und regelmäßige körperliche Aktivität zusammen?
 
 ## Kurzantworten zur Selbstkontrolle
 
@@ -101,9 +100,14 @@ Weil die tägliche kleine Unterbrechung:
 2. Mobilisierung, Dehnung, Aktivierung
 3. Weil der Nahfokus und die Bildschirmbelastung die Augen ermüden
 4. Schmerzhafte und erzwungene Bewegung
-5. Häufig wenig
+5. Kurze Unterbrechungen lösen statische Arbeitsbelastung und ergänzen regelmäßige Bewegung, ersetzen sie aber nicht
 
 ## Quellen
+
+- [AUVA: Bewegungsübungen für den beruflichen Alltag](https://auva.at/praevention/medien-und-publikationen/publikationen-us/m-035-bewegungsuebungen-fuer-den-beruflichen-alltag/)  
+  Bewegung im Arbeitsalltag.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. AUVA - "Ausgleichs- und Entspannungsübungen"  
    https://auva.at/praevention/medien-und-publikationen/video-us/ausgleichs-und-entspannungsuebungen/  
@@ -118,7 +122,7 @@ Weil die tägliche kleine Unterbrechung:
    Verwendung: praktische Checklistenquelle zu Bewegung, Pausen und ergonomischer Arbeitsorganisation.
 
 4. Arbeitsinspektion - Bildschirmarbeitsplatz  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Arbeitsplaetze/Bildschirmarbeitsplatz.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/arbeitsplaetze/bildschirmarbeitsplaetze.html  
    Verwendung: offizieller Hintergrund zur Augen- und Körperbelastung bei Bildschirmarbeit.
 
 Abgerufen: `2026-04-08`

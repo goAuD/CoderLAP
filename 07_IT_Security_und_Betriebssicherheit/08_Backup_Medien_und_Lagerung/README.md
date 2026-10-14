@@ -86,6 +86,14 @@ egyszerre pusztíthatja el az elsődleges adatot és a közeli mentést.
 | online elérhető backup | kényelmes, de támadhatóbb |
 | offline / air-gapped backup | leválasztott, jobban védhető |
 
+## Médiumválasztás visszaállítási céllal
+
+Egy műhelynek 200 GB adatot kell négy órán belül visszaállítania. Külső lemezről mért 100 MB/s tartós olvasással az elméleti másolási idő `200 000 / 100 = 2000` másodperc, körülbelül 33 perc. Egy 20 Mbit/s internetkapcsolat ideális felső korlátja 2,5 MB/s, így ugyanaz az adat körülbelül 22,2 óra. Itt tízes alapú GB/MB egységekkel számolunk; a protokollterhelés, sok kis fájl és visszafejtés tovább növelheti az időt. A négyórás célhoz önmagában ez a letöltési út nem elég.
+
+A helyi példány gyors restore-t segít, a külön helyen őrzött másolat a helyi károktól véd. Az **offsite** másik helyszínt jelent, nem feltétlenül offline állapotot. Az **immutable** mentés meghatározott ideig nem módosítható vagy törölhető a beállított védelem szerint; ez nem azonos a fizikailag leválasztott médiummal.
+
+A titkosított mentéshez a kulcs külön védett, de helyreállításkor elérhető tárolása is kell. Dokumentáld a médium azonosítóját, az adatállapot dátumát, megőrzést és próbavisszaállítást. Hosszú megőrzésnél a meghajtó, olvasó és szoftver későbbi elérhetősége miatt időnként új médiumra kell átvinni az adatot. Nincs minden HDD-re, SSD-re vagy szalagra érvényes garantált élettartam.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A backup médiumnál és tárolásnál nemcsak a kapacitás számít, hanem a biztonság és a helyreállíthatóság is.  
@@ -93,13 +101,6 @@ egyszerre pusztíthatja el az elsődleges adatot és a közeli mentést.
 > megfelelően védett helyen tárolni,
 > és érzékeny adatok esetén titkosítani.  
 > A hálózaton állandóan elérhető mentés önmagában nem elég, ezért fontos lehet az offline vagy offsite példány is.
-
-## Gyakori vizsgahibák
-
-- A NAS-t automatikusan teljesen biztonságos backupnak tekinteni.
-- Nem említeni az elkülönített tárolást.
-- Elfelejteni a titkosítást és hozzáférésvédelmet.
-- Azt hinni, hogy egyetlen médium minden célra optimális.
 
 ## Gyors önellenőrzés
 
@@ -136,3 +137,10 @@ egyszerre pusztíthatja el az elsődleges adatot és a közeli mentést.
    Használat: restore és rollback szempontok, valamint a mentések rendszeres ellenőrzése.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [CISA: Protect stored data](https://www.cisa.gov/resources-tools/training/how-protect-data-stored-your-devices): külső mentési meghajtó elkülönítése és az adatok védelme
+- [CISA: StopRansomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide): elkülönített, titkosított mentések és ellenőrzött helyreállítás
+
+Ellenőrizve: `2026-10-14`.

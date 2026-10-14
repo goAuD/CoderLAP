@@ -38,6 +38,14 @@ Mert nélküle könnyen előfordulhat:
 | csapattag | saját szakmai feladat |
 | projektvezető | teljes projekt összehangolása |
 
+## Kockázatból konkrét intézkedés
+
+A projekt külső szolgáltató API-jához kapcsolódik. Amíg a teszt-hozzáférés megérkezésének ideje bizonytalan, ez kockázat: bekövetkezhet olyan esemény, amely a tervet érinti. Rögzítjük a várható hatást, valószínűséget, felelőst és a válaszlépést. Például a kapcsolattartó szerdáig visszaigazolást kér, a fejlesztők addig mintaválaszokkal készítik az illesztést.
+
+Ha a hozzáférés a megállapodott napon tényleg hiányzik, már fennálló ügyet, issue-t kezelünk. A projektvezető azonosítja az érintett feladatokat, tájékoztat és a hatáskörén túli döntést eszkalálja. A mintaválasz hasznos előkészítés, de nem bizonyítja, hogy a valódi integráció is működik.
+
+Az új tervben szerepel a szolgáltatóval végzett próba és annak felelőse. A kockázati napló így nem egyszer elkészített lista, hanem rendszeresen felülvizsgált munkaeszköz.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projektvezető feladata a projekt megtervezése, koordinálása, nyomon követése és kommunikációjának biztosítása.  
@@ -45,13 +53,6 @@ Mert nélküle könnyen előfordulhat:
 > mérföldköveket és kockázatokat,
 > valamint kezeli a problémákat és a változásokat.  
 > A projektvezető tehát nem feltétlenül maga végzi a szakmai munkát, hanem összefogja és irányítja a teljes projektet.
-
-## Gyakori vizsgahibák
-
-- A projektvezetőt egyszerű adminisztrátornak nevezni.
-- Nem megemlíteni a kommunikációt és kockázatkezelést.
-- Azt gondolni, hogy minden szakmai feladatot ő végez.
-- Nem elválasztani a projektvezető és csapattag szerepet.
 
 ## Gyors önellenőrzés
 
@@ -70,6 +71,11 @@ Mert nélküle könnyen előfordulhat:
 5. Tervezés, koordináció, státuszkövetés, kommunikáció, kockázatkezelés
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Munkaterv, kockázati napló, projektmegbízás és átadási dokumentumok.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  

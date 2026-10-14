@@ -76,23 +76,67 @@ Damit es REST-artig ist, braucht man:
 
 ## Worauf muss man achten?
 
-- `GET` sollte eine Abfrage sein und keine versteckte Änderung durchführen.
+- `GET` soll Lesen anfordern; begleitende Protokollierung ist möglich, fachliche Änderungen gehören nicht in diese Operation.
 - HTTP-Statuscodes sollten konsequent verwendet werden.
 - Endpointnamen sollten ressourcenbasiert sein.
 - Die API sollte dokumentiert und vorhersagbar sein.
+
+## HTTP-Vertrag und tatsächlicher Clientcode
+
+Die Operationen einer möglichen Kurs-API unterscheiden wir so:
+
+| Methode | Absicht und Wiederholung |
+|---|---|
+| `GET /courses/15` | lesen; der Client fordert keine fachliche Zustandsänderung an |
+| `POST /courses` | hier anlegen; Wiederholung kann mehrere Datensätze erzeugen |
+| `PUT /courses/15` | Zielzustand festlegen/ersetzen; idempotent |
+| `PATCH /courses/15` | teilweise ändern; Idempotenz hängt von der Operation ab |
+| `DELETE /courses/15` | entfernen; Wiederholung derselben Absicht ist idempotent |
+
+Idempotenz betrifft die **beabsichtigte Wirkung**, nicht identische Antworten.
+Ein zweites Löschen kann beispielsweise `404` liefern, während der Kurs weiterhin
+fehlt. Bei erfolgreichem Anlegen sind `201` und `Location` üblich, bei Erfolg
+ohne Antwortinhalt `204`. `401` betrifft Authentifizierung, `403` verweigerten
+Zugriff. Jede Ressource benötigt serverseitige Berechtigungsprüfung.
+
+**Browserbeispiel:** Es setzt einen funktionierenden gleichnamigen Endpunkt
+`/api/courses/15` derselben Herkunft voraus, der mit `200` das JSON
+`{"id":15,"title":"Schleifen"}` liefert. Ohne diesen Dienst ist es keine
+eigenständige Demo. Erwartete Konsolenausgabe: `Schleifen`.
+
+```javascript
+async function loadCourse() {
+  const response = await fetch("/api/courses/15", {
+    headers: { Accept: "application/json" },
+    signal: AbortSignal.timeout(5000),
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const course = await response.json();
+  if (course === null || typeof course !== "object" ||
+      course.id !== 15 || typeof course.title !== "string") {
+    throw new Error("Unexpected course data");
+  }
+  return course.title;
+}
+loadCourse().then(console.log).catch((error) => console.error(error.message));
+```
+
+`fetch` lehnt sein Promise allein wegen einer `404`-Antwort nicht ab. Deshalb
+prüfen wir `ok`. Nach dem JSON-Parsing prüfen wir auch die erwarteten Daten.
+Die Wartezeit ist auf fünf Sekunden begrenzt. Der Fehlerpfad behandelt Netz-,
+HTTP- und Verarbeitungsfehler.
+
+Zu REST gehören außerdem Cachefähigkeit, Client-Server-Trennung und eine
+einheitliche Schnittstelle. Dazu zählen Ressourcenrepräsentationen und Links
+zu möglichen nächsten Schritten. Code-on-Demand ist eine optionale REST-Bedingung.
+Zustandslos bedeutet nicht, dass der Server keine Datenbank besitzt. Eine Anfrage
+soll ohne verborgenes Wissen über vorherige Clientanfragen interpretierbar sein.
 
 ## Prüfungstaugliche Formulierung
 
 > Eine REST API ist eine webbasierte Programmierungsschnittstelle, die den REST-Architekturprinzipien folgt.  
 > Sie identifiziert Ressourcen mit URIs und führt Operationen mit standardisierten HTTP-Methoden aus.  
 > Kennzeichnend sind der zustandslose Betrieb, die einheitliche Schnittstelle und der häufige JSON-basierte Datenaustausch.
-
-## Häufige Prüfungsfehler
-
-- REST als Protokoll bezeichnen.
-- Behaupten, jede JSON-API sei REST.
-- Den Stateless-Betrieb nicht erwähnen.
-- Die Rolle der HTTP-Methoden auslassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -106,11 +150,18 @@ Damit es REST-artig ist, braucht man:
 
 1. Ressourcenbasierte, webnahe Architektur
 2. Verwendung von URIs und HTTP-Methoden
-3. `GET` ruft ab, `POST` erstellt
+3. `GET` liest, `POST` fordert Verarbeitung gemäß Ressourcenvertrag an, etwa das Anlegen
 4. Weil jede Anfrage eigenständig interpretierbar ist
 5. REST ist ein Stil, SOAP ein Protokoll
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Fielding: REST](https://roy.gbiv.com/pubs/dissertation/rest_arch_style.htm): REST-Bedingungen und einheitliche Schnittstelle.
+- [IETF: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html): Methoden, Idempotenz und Status.
+- [MDN: Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch): HTTP- und Verarbeitungsfehler unterscheiden.
+
 
 1. Roy Fielding - Architectural Styles and the Design of Network-based Software Architectures,  
    Chapter 5: Representational State Transfer (REST)  

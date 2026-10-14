@@ -43,6 +43,14 @@ Wenn es keine Dokumentation gibt:
 - wird die Übergabe schwieriger
 - wird die nachträgliche Fehleranalyse schwieriger
 
+## Eine Entscheidung bleibt auch nach sechs Monaten verständlich
+
+Eine Schulungsanwendung wählt ein Exportformat. Die kurze Entscheidungsnotiz enthält Datum, Verantwortliche, Ausgangslage, untersuchte Optionen und Begründung. Zwischen CSV und XLSX fällt die Wahl auf CSV, weil das Zielsystem es verarbeitet und keine Formatierung benötigt wird. Als Konsequenz werden auch Zeichencodierung und Trennzeichen festgelegt.
+
+„Wir nehmen CSV“ allein genügt nicht. Begründung und Voraussetzungen zeigen, wann die Wahl erneut geprüft werden muss. Ein Auslöser wäre beispielsweise ein neues Zielsystem, das getrennte Tabellenblätter verlangt.
+
+Die Notiz verweist auf betroffene Anforderung und Umsetzung. Eine auffindbare, versionierte Fassung ist hilfreicher als drei unabhängig weitergeführte E-Mail-Kopien.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Ziel der Projektdokumentation ist es,
@@ -53,13 +61,6 @@ Wenn es keine Dokumentation gibt:
 > die Wissenserhaltung, die Projektkontrolle
 > sowie die spätere Übergabe oder Wartung.  
 > Gute Projektdokumentation ist also keine bloße Administration, sondern ein wichtiger Teil des Projekterfolgs.
-
-## Häufige Prüfungsfehler
-
-- Dokumentation als überflüssige Administration bezeichnen.
-- Die Auffindbarkeit nicht erwähnen.
-- Die Rolle nur dem Abschluss zuordnen.
-- Nicht über die Aufzeichnung von Entscheidungen sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -78,6 +79,11 @@ Wenn es keine Dokumentation gibt:
 5. Informationen gehen verloren und Chaos nimmt zu
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Vorlagen für Projektauftrag, Arbeitsplan und Entscheidungsprotokoll.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Master project documentation template  
    https://www.atlassian.com/software/confluence/templates/master-project-documentation  

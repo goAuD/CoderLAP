@@ -128,20 +128,33 @@ Mert itt szokott előjönni:
 - a tízes és bináris prefixek közti különbség
 - a tárhelyek látszólagos eltérése
 
+## Méretezési feladat: egy hónap mentései
+
+Naponta `12 GB` új adat keletkezik, és a feladat szerint 30 napi, egymástól különálló
+adagot őrzünk. Az egyszerű adatmennyiség `12 × 30 = 360 GB = 0,36 TB`.
+Ha a **kiszámolt adatmennyiséghez képest** 25% tartalékot tervezünk,
+akkor `360 × 1,25 = 450 GB = 0,45 TB` kapacitás szükséges.
+
+Ez más feladat, mint amikor azt kérjük, hogy a tárhely 25%-a maradjon szabadon.
+Abban az esetben az adatok a teljes kapacitás 75%-át foglalhatják el:
+`360 / 0,75 = 480 GB`. A százalék alapját ezért a számítás előtt tisztázzuk.
+
+A becslésben még nincs tömörítés, deduplikáció, fájlrendszer-többlet vagy további másolat.
+Két teljesen külön mentési példány két tárhelyen külön-külön igényli a kiszámolt kapacitást.
+Valós tervezésnél a napi változást és a megőrzési szabályt mérjük fel, majd ezekből számolunk.
+
+**Gyakorlás:** `2,5 TB` hány `GB`? `2500 GB`. A decimális előtagok között
+lépésenként ezres a váltás; a byte-ban megadott mennyiség közben nem változik.
+
+Forrás: [BIPM: SI-előtagok](https://www.bipm.org/en/measurement-units/si-prefixes).
+A fenti tárolási terv saját, feltételezésekkel megadott számítási példa.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A gigabyte, terabyte, petabyte és exabyte nagy adatméretek jelölésére szolgáló, decimális byte-egységek.  
 > Ezek SI-prefixekre épülnek, ezért 1000-es lépésekben növekednek.  
 > Például 1 GB = 10^9 byte, 1 TB = 10^12 byte, 1 PB = 10^15 byte, 1 EB = 10^18 byte.  
 > Fontos, hogy ezek nem azonosak a bináris GiB, TiB, PiB és EiB egységekkel.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy `1 GB = 1024 MB`.
-- Összekeverni a `GB` és `GiB` jelentését.
-- Elfelejteni, hogy itt a `B` byte-ot jelent.
-- Azt hinni, hogy minden operációs rendszer ugyanúgy írja ki a tárhelyet.
-- Nem tudni, hogy a `giga`, `tera`, `peta`, `exa` SI-prefixek.
 
 ## Gyors önellenőrzés
 
@@ -174,7 +187,7 @@ Mert itt szokott előjönni:
    Használat: a `byte` és `B` jelölés technikai használata.
 
 4. NIST - Definitions of the SI units: The binary prefixes  
-   https://physics.nist.gov/cgi-bin/cuu/Info/Units/binary.html  
+   https://physics.nist.gov/cuu/Units/binary.html  
    Használat: a decimális és bináris adatméretek tiszta szétválasztása.
 
 Megnyitva: `2026-04-08`

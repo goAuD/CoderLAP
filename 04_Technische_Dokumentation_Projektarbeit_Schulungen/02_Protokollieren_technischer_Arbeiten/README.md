@@ -128,6 +128,21 @@ Nyomtató hálózati beállításának javítása
 - rolloutnál
 - átadásnál
 
+## Egy beavatkozás ellenőrizhető nyoma
+
+Egy tanulói webhely frissítésének jegyzőkönyvében ezt rögzíthetjük:
+
+| Mező | Kitalált példa |
+| --- | --- |
+| Változás | CHG-17, jóváhagyott hibajavítás |
+| Idő | 2026-10-14 09:15, Europe/Vienna |
+| Előtte / utána | 1.4.1 / 1.4.2, a kiadások commitazonosítójával |
+| Ellenőrzés | Főoldal, keresés és egy téma megnyílt; az eredményhez tesztjegyzőkönyv tartozik |
+| Visszaállítás | Az előző kiadás elérési helye és a kipróbált eljárás hivatkozása |
+| Lezárás | 09:25, felelős jóváhagyása; következő ellenőrzés 10:00 |
+
+A „valószínűleg hálózati hiba” feltételezés. A „09:18-kor a kérés időtúllépéssel zárult” megfigyelés. A kettőt külön írjuk le. Jelszót, teljes hozzáférési tokent és szükségtelen személyes adatot nem másolunk a jegyzőkönyvbe. A bizonyíték elérhetőségét és megőrzését is szabályozzuk, így a következő kolléga biztonságosan folytathatja a munkát.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A technikai munkák protokollálása azt jelenti, hogy a műszaki tevékenységeket visszakövethető módon dokumentáljuk.  
@@ -135,14 +150,6 @@ Nyomtató hálózati beállításának javítása
 > az érintett rendszert, a végrehajtott lépéseket, az eredményt,
 > az esetleges hibákat és a következő lépéseket.  
 > Ez fontos a hibakereséshez, az átadáshoz, az ellenőrizhetőséghez és a csapatmunkához.
-
-## Gyakori vizsgahibák
-
-- Túl rövid, semmitmondó bejegyzések.
-- Nincs dátum vagy felelős.
-- Nincs eredmény vagy lezárás.
-- Nem különül el a tény és a vélemény.
-- A protokollból nem derül ki, mi történt valójában.
 
 ## Gyors önellenőrzés
 
@@ -162,8 +169,13 @@ Nyomtató hálózati beállításának javítása
 
 ## Források
 
-1. ISTQB CTFL Syllabus v3.1.1  
-   https://istqb.org/wp-content/uploads/2024/11/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf  
+- [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)  
+  Naplózható eseményadatok és kizárandó érzékeny adatok.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
+1. ISTQB CTFL Syllabus v4.0.1  
+   https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  
    Használat: test execution logging és work products mint strukturált technikai naplózás.
 
 2. Azure DevOps Test Plans - Manage test runs  

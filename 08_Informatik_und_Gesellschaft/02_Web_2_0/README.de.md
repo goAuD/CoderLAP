@@ -58,6 +58,14 @@ Weil Web 2.0 große Veränderungen gebracht hat:
 | Internet | das Netzwerk selbst, nicht dasselbe wie das Web |
 | Social Media | ein Teil von Web 2.0, nicht der gesamte Begriff |
 
+## Ein Schulwiki als partizipatives System
+
+Eine Lehrkraft kann eine Lernseite allein bearbeiten. Reichen Lernende dagegen Korrekturen und Erklärungen ein, diskutieren Änderungen und prüfen sie gemeinsam, entsteht ein partizipativer Ansatz. Dafür braucht es Versionsgeschichte, klare Bearbeitungsrechte, Moderation und Quellenangaben.
+
+Web 2.0 ist ein historischer und dienstbezogener Begriff. Er bezeichnet weder eine HTTP-Version noch einen HTML-Standard oder ein vorgeschriebenes Technologiepaket. Ein modernes JavaScript-Framework allein erzeugt keine Beteiligung. Auch im frühen Web gab es interaktive Angebote; der Vergleich von Web 1.0 und 2.0 vereinfacht Entwicklungstendenzen, keine scharfe technische Grenze.
+
+Der Nutzen im Beispiel ist gemeinsam verbessertes Lernmaterial. Zum Betrieb gehören nachvollziehbare Urheberschaft, sachliche Diskussion und überprüfbare Inhaltskorrekturen.
+
 ## Prüfungstaugliche Formulierung
 
 > Web 2.0 bezeichnet jene Phase der Web-Entwicklung,
@@ -68,13 +76,6 @@ Weil Web 2.0 große Veränderungen gebracht hat:
 > die auf nutzergeneriertem Inhalt basieren.  
 > Der Vorteil liegt in der Zusammenarbeit und schnellen Kommunikation,
 > das Risiko kann jedoch Datenschutzprobleme, Fake News und Manipulation sein.
-
-## Häufige Prüfungsfehler
-
-- Web 2.0 nur als "neues Webdesign" zu bezeichnen.
-- User-Generated Content nicht zu erwähnen.
-- Social Media mit dem gesamten Web 2.0 gleichzusetzen.
-- Zu vergessen, dass es sich auch um einen historischen Begriff handelt.
 
 ## Schnelle Selbstkontrolle
 
@@ -93,6 +94,11 @@ Weil Web 2.0 große Veränderungen gebracht hat:
 5. Fake News oder Datenschutzproblem
 
 ## Quellen
+
+- [OECD: Participative Web and User-Created Content](https://www.oecd.org/en/publications/participative-web-and-user-created-content_9789264037472-en.html)  
+  Historischer und gesellschaftlicher Rahmen des partizipativen Webs.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. OECD - Participative Web and User-Created Content (PDF)  
    https://www.oecd.org/content/dam/oecd/en/publications/reports/2007/09/participative-web-and-user-created-content_g1gh826c/9789264037472-en.pdf  

@@ -47,9 +47,61 @@ Also:
 ## Worauf muss man achten?
 
 - Es reicht nicht, die Seite einfach zusammenzuschrumpfen.
-- Die Inhaltliche Priorität kann sich auf kleinerem Bildschirm ändern.
+- Die inhaltliche Priorität kann sich auf kleinerem Bildschirm ändern.
 - Menüs, Tabellen und Bilder erfordern besondere Aufmerksamkeit.
 - Die Leistung ist auch auf Mobilgeräten kritisch.
+
+## Durchgerechnetes Beispiel: Themenkarten in einem flexiblen Raster
+
+**Aufgabe und Umgebung:** Speichere das vollständige Beispiel als UTF-8-HTML,
+öffne es in einem modernen Browser und ändere die Fensterbreite. Alle drei
+Themen bleiben bei jeder Breite erreichbar.
+
+```html
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Themenübersicht</title>
+<style>
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1rem;
+  }
+  .topics > article { min-width: 0; border: 1px solid; padding: 1rem; }
+  .topics pre { overflow-x: auto; }
+  * { box-sizing: border-box; }
+</style>
+<main>
+  <h1>Themen</h1>
+  <div class="topics">
+    <article><h2>Schleifen</h2><p>Wiederholungen verstehen.</p></article>
+    <article><h2>Funktionen</h2><p>Aufgaben aufteilen.</p></article>
+    <article><h2>Datenbanken</h2><p>Daten verknüpfen.</p></article>
+  </div>
+</main>
+</html>
+```
+
+`auto-fit` erzeugt so viele Spalten, wie hineinpassen. Die gewünschte
+Mindestbreite ist `16rem`; `min(100%, 16rem)` verlangt bei sehr wenig Platz aber
+keine breitere Spalte als den Container. `1fr` verteilt den übrigen Platz
+gleichmäßig. Bei `16px` Wurzelschriftgröße und gemessener **innerer Breite**
+von `.topics` gilt:
+
+| Verfügbare Breite | Ergebnis | Begründung |
+|---|---|---|
+| 360px | eine Spalte | zwei Karten mit 256px und eine Lücke mit 16px passen nicht |
+| 600px | zwei Spalten | zwei Karten und eine Lücke passen, drei Karten noch nicht |
+| 1000px | drei Spalten | drei Karten und zwei Lücken passen |
+
+Dieses Raster ist auch ohne eigene Media Query responsiv. Breakpoints wählen
+wir nach dem Inhalt, nicht nach einem bestimmten Telefonnamen. Langer Code
+scrollt lokal; `min-width: 0` lässt das Rasterelement schrumpfen. Bei Bildern
+erhält `max-width: 100%; height: auto` das Seitenverhältnis, verkleinert aber
+nicht die heruntergeladene Datei. Prüfe lange deutsche Überschriften,
+vergrößerte Schrift und dass die ganze Seite nicht unnötig horizontal scrollt.
 
 ## Prüfungstaugliche Formulierung
 
@@ -58,13 +110,6 @@ Also:
 > dass dieselbe Webseite auf verschiedenen Bildschirmgrößen gut nutzbar ist.
 > Dafür verwenden wir flexibles Layout, Media Queries, Breakpoints und adaptive Inhaltsdarstellung.
 > Der Vorteil ist, dass keine separaten Mobil- und Desktop-Seiten gepflegt werden müssen.
-
-## Häufige Prüfungsfehler
-
-- Responsive Webdesign als einfaches Größenanpassen bezeichnen.
-- Es mit Mobile First verwechseln.
-- Die Rolle von Media Queries oder Breakpoints nicht erwähnen.
-- Nicht über mehrere Geräte sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -83,6 +128,12 @@ Also:
 5. Weil auf kleinem Bildschirm Platz und Aufmerksamkeit anders sind
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Responsive web design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design): Flexible Layouts, inhaltsabhängige Breakpoints und Bilder.
+- [web.dev: Macro layouts](https://web.dev/learn/design/macro-layouts): Automatisch anpassbare Grid-Layouts.
+
 
 1. MDN - Responsive design
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design

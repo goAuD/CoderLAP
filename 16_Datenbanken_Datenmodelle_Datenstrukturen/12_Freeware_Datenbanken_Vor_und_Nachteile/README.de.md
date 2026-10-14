@@ -11,11 +11,7 @@
 
 ## Was versteht man hier unter Freeware-Datenbank?
 
-Im Prüfungskontext bedeutet das in der Regel eine Datenbanklösung, die:
-
-- kostenlos nutzbar ist
-- als Community- oder Open-Source-Version verfügbar ist
-- mit niedrigeren Lizenzkosten eingeführt werden kann
+Im Prüfungstitel ist Freeware ein weiter Sammelbegriff, die Begriffe sind jedoch zu trennen. **Kostenlos nutzbar** beschreibt den Preis, **Open Source** die Lizenzrechte und **Community** den Namen einer Ausgabe. Eine Community-Ausgabe ist dadurch nicht automatisch Open Source im Sinn der OSI. Maßgeblich sind konkrete Lizenz und Ausgabe.
 
 ## Hauptvorteile
 
@@ -53,8 +49,23 @@ Im Prüfungskontext bedeutet das in der Regel eine Datenbanklösung, die:
 
 | Begriff | Bedeutung |
 |---|---|
-| Freeware / Community | frei nutzbare oder quelloffene Ausgabe |
+| Freeware / Community | Preis- oder Editionsbezeichnung; die Lizenz ist gesondert zu prüfen |
 | Enterprise | häufig kostenpflichtig, mit zusätzlichem Support und Funktionen |
+
+## Durchgearbeitete Auswahl und Lizenzprüfung
+
+| Produkt | Geprüfte Lizenzeigenschaft |
+|---|---|
+| PostgreSQL | permissive PostgreSQL License |
+| MySQL Community | unter GPL verfügbare Community-Ausgabe |
+| SQLite | ausgelieferter Code wird vom Projekt als Public Domain bereitgestellt |
+| MongoDB Community Server | SSPL; diese Lizenz wurde von der OSI nicht als Open-Source-Lizenz anerkannt |
+
+Die Tabelle beruht auf den am 2026-10-14 geprüften Produktseiten. Lies die Bedingungen für die konkrete Ausgabe und Nutzungsart. Besonders Weitergabe, Einbettung und das Anbieten eines Datenbankdienstes können unterschiedliche Pflichten auslösen.
+
+Für eine offline nutzbare Notizanwendung kann die einfache lokale Speicherung von SQLite geeignet sein. Bei einem gemeinsamen Dienst mit vielen parallelen Schreibvorgängen kann ein Client-Server-DBMS sinnvoller sein. Das ist eine anforderungsbezogene Abwägung, keine Qualitätsrangliste kostenloser Produkte.
+
+Zu den Gesamtkosten gehören Server, Sicherung, Updates, Überwachung und Facharbeit. Auch für Open-Source-DBMS gibt es bezahlten Support; kostenlose Ausgaben können produktive Geschäftssysteme betreiben. Untermauere die Auswahl mit Kompatibilitäts-, Last- und Wiederherstellungstests.
 
 ## Prüfungstaugliche Formulierung
 
@@ -63,13 +74,6 @@ Im Prüfungskontext bedeutet das in der Regel eine Datenbanklösung, die:
 > Ihr Nachteil kann sein, dass professioneller Support, bestimmte Unternehmensfunktionen oder komfortabler Betrieb  
 > eingeschränkter sein können als bei Enterprise-Lösungen.  
 > Daher hängt die Wahl der richtigen Datenbank immer von der Aufgabe, der Belastung und dem Supportbedarf ab.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass kostenlose Datenbanken nur zum Lernen taugen.
-- Die Frage des Betriebs und Supports nicht erwähnen.
-- Alle freien Datenbanken als gleich behandeln.
-- Allein auf Basis der Kosten entscheiden.
 
 ## Schnelle Selbstkontrolle
 
@@ -109,3 +113,12 @@ Hinweis: Die konkreten Vor- und Nachteile sind teilweise aus den offiziellen Pro
 praktische Schlussfolgerungen.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [PostgreSQL: License](https://www.postgresql.org/about/licence/): permissive Lizenz
+- [MySQL: Community Edition](https://www.mysql.com/products/community/): GPL-Community-Ausgabe
+- [SQLite: Copyright](https://www.sqlite.org/copyright.html): Public-Domain-Bereitstellung
+- [MongoDB: SSPL FAQ](https://www.mongodb.com/legal/licensing/server-side-public-license/faq): SSPL und Unterscheidung des OSI-Status
+
+Geprüft: `2026-10-14`.

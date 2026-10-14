@@ -60,7 +60,7 @@ Az ASCII önmagában már nem elég a modern, többnyelvű rendszerekhez, de tov
 
 - sok technikai szabvány történetileg erre épült
 - sok fájlformátum és protokoll ASCII-barát
-- az **UTF-8** első `128` karaktere pontosan megegyezik az ASCII-val
+- az `U+0000–U+007F` Unicode-kódpontokat az **UTF-8** az ASCII-val azonos, egybyte-os kóddal tárolja
 - programozásban, hálózatokban, logokban, HTTP-fejlécekben, konfigurációkban ma is gyakran előjön
 
 ## ASCII, Unicode, UTF-8: ne keverd össze
@@ -92,20 +92,51 @@ Ezért ha egy rendszer csak ASCII-t vár, akkor az ilyen karakterek:
 - hibásan jelenhetnek meg
 - kérdőjellé vagy furcsa karakterré válhatnak
 
+## Kidolgozott példa: karakterből byte
+
+Egy űrlap `Aő` szövegét UTF-8 kódolással mentjük. Az `A` az ASCII-tartományba tartozik,
+az `ő` Unicode-kódpontja `U+0151`, ezért az utóbbihoz több byte kell.
+A következő önálló JavaScript böngésző konzoljában vagy modern Node.js-ben futtatható.
+
+<!-- example:run -->
+```javascript
+const text = "Aő";
+const bytes = new TextEncoder().encode(text);
+console.log([...bytes].join(" "));
+console.log(bytes.length);
+console.log([...text].length);
+```
+
+Várt kimenet:
+
+```text
+65 197 145
+3
+2
+```
+
+Két kódpontot három byte tárol: az `A` kódja `65`, az `ő` UTF-8 byte-jai `197, 145`.
+A kódpont egy karakter azonosítója, a kódolás pedig azt adja meg, milyen byte-sorozattá alakítjuk.
+Ugyanazzal a kódolással kell visszaolvasni az adatot, amellyel kiírtuk.
+
+A JavaScript `text.length` UTF-16 kódegységeket számol. Ebben a példában ez is `2`,
+de egy emoji több kódegységet használhat. A `[...text].length` kódpontokat számol;
+egy látható betűt pedig több kódpont, például betű és külön ékezet is alkothat.
+Fájlmérethez a kódolt byte-ok száma kell, nem a látható betűké.
+
+**Alkalmazás:** 100 darab ASCII `A` UTF-8-ban 100 byte, 100 darab előre összeállított
+`ő` 200 byte. Ez megmagyarázza, miért lehet két azonos hosszúságúnak látszó mező
+eltérő méretű a hálózaton.
+
+Forrás a példához: [MDN: TextEncoder.encode](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode)
+és [W3C: karakterek és kódolás](https://www.w3.org/International/articles/definitions-characters/index.en).
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az ASCII egy 7 bites karakterkódolási szabvány, amely 128 karaktert tartalmaz.  
 > Ebben vannak vezérlőkarakterek, betűk, számok és írásjelek.  
 > Az ASCII főleg az angol nyelv alapkaraktereit támogatja, ezért a modern rendszerekben önmagában már nem elég.  
 > A mai gyakorlatban inkább Unicode-alapú kódolást, például UTF-8-at használunk, amely visszafelé kompatibilis az ASCII-val.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy az ASCII **8 bites**.
-- Azt hinni, hogy az ASCII tud magyar ékezeteket.
-- Összekeverni az ASCII-t a Unicode-dal vagy az UTF-8-cal.
-- Azt állítani, hogy minden mai szövegfájl ASCII.
-- Nem tudni példát mondani vezérlőkarakterre.
 
 ## Gyors önellenőrzés
 
@@ -121,7 +152,7 @@ Ezért ha egy rendszer csak ASCII-t vár, akkor az ilyen karakterek:
 2. **128 karakter**
 3. A vezérlőkarakter műveletet vezérel, a nyomtatható karakter megjelenik
 4. Mert az ékezetes magyar betűk nem részei az ASCII-nak
-5. A UTF-8 első 128 karaktere megegyezik az ASCII-val
+5. Az ASCII 128 karakterét az UTF-8 ugyanazokkal az egybyte-os kódokkal tárolja
 
 ## Források
 

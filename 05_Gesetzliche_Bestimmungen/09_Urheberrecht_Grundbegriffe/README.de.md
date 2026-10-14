@@ -8,7 +8,7 @@
 | Werk | rechtlich schützbares Werk |
 | Nutzung | Kopieren, Veröffentlichen, Verbreiten, Hochladen usw. |
 | Lizenz | Erlaubnis zur Nutzung |
-| Rechtsverletzung | Nutzung ohne Erlaubnis |
+| Rechtsverletzung | Nutzung ohne erforderliche Erlaubnis oder gesetzliche Gestattung |
 
 ## Was ist der Zweck des Urheberrechts?
 
@@ -85,18 +85,40 @@ Praktische Beispiele:
 | Lizenz | Nutzungserlaubnis |
 | Idee | an sich nicht in gleicher Weise geschützt wie das fertige Werk |
 
+## Lizenzen vor einer Softwareauslieferung prüfen
+
+Ein Projekt enthält eigenen Code, eine fremde Bibliothek, Symbole und eine Schrift.
+Für jeden Bestandteil suchen wir Rechteinhaber und tatsächliche Lizenz.
+„Kostenlos herunterladbar“ beschreibt den Preis, nicht alle Rechte zum Kopieren,
+Ändern und Weitergeben. Auch ein öffentliches Git-Repository erlaubt nicht automatisch jede Nutzung.
+
+**Beispiel:** Eine Apache-2.0-Bibliothek wird mit der Anwendung ausgeliefert.
+Bei der Weitergabe legen wir die Lizenz bei, erhalten vorgeschriebene rechtliche Hinweise,
+kennzeichnen geänderte Dateien und übernehmen relevante `NOTICE`-Hinweise,
+falls das Paket solche enthält, auf eine von der Lizenz zugelassene Weise.
+Die Lizenz gewährt keine allgemeine Erlaubnis zur Nutzung der Marken des Urhebers.
+Andere Lizenzen, etwa Copyleft-Lizenzen, können andere Pflichten auslösen.
+Wir lesen die Bedingungen passend zur konkreten Weitergabeform.
+
+Urheberrecht entsteht mit der schutzfähigen Schöpfung, nicht erst durch ein `©`-Zeichen.
+Neben einer Erlaubnis können gesetzliche freie Werknutzungen bestehen; deren Voraussetzungen
+sind gesondert zu prüfen. Eine Quellenangabe allein ersetzt keine Nutzungserlaubnis.
+Für Software gibt es besondere Regeln: So knüpft § 40d UrhG eine notwendige Sicherungskopie
+an eine zur Nutzung berechtigte Person und an die Erforderlichkeit für diese Nutzung.
+
+**Übergabeergebnis:** eine kurze Komponenten- und Lizenzliste mit den erforderlichen Lizenzdateien.
+Das macht spätere Auslieferungen und Projektmigrationen nachvollziehbar.
+
+Quellen: [RIS: UrhG § 40a](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001848&Paragraf=40a),
+[UrhG § 40d](https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001848&Paragraf=40d),
+[Apache License 2.0, Abschnitte 4 und 6](https://www.apache.org/licenses/LICENSE-2.0).
+Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Urheberrecht schützt individuelle geistige Schöpfungen, zum Beispiel Texte, Bilder, Musik oder Software.
 > Nicht die Idee an sich, sondern das konkrete Werk steht unter Schutz.
 > Für die Nutzung des Werks ist in der Regel die Erlaubnis des Urhebers oder eine entsprechende Lizenz erforderlich.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, alle im Internet gefundenen Inhalte seien frei nutzbar.
-- Nicht zwischen Idee und konkretem Werk zu unterscheiden.
-- Die Lizenz außer Acht zu lassen.
-- Zu vergessen, dass auch Software unter Urheberrechtsschutz stehen kann.
 
 ## Schnelle Selbstkontrolle
 

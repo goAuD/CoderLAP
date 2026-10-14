@@ -62,19 +62,24 @@ verwendet.
 | IMAP | Postfachsynchronisierung |
 | POP3 | E-Mails herunterladen |
 
+## Durchgearbeitete Einrichtung und Antwortauswertung
+
+Ein Client verwendet den dokumentierten Einlieferungsserver seines Anbieters. Auf `465` startet der TLS-Handshake sofort, auf `587` schaltet `STARTTLS` die Verbindung auf TLS um. Port `587` kann also ebenfalls verschlüsselt sein. Erfolgreiches TLS wird im Client verpflichtend eingestellt; ein stiller Rückfall auf ungeschützten Versand wird nicht erlaubt. Die Benutzeranmeldung ist ein eigener Schritt.
+
+| Beispiel einer SMTP-Antwort | Bedeutung und nächster Schritt |
+| --- | --- |
+| `250` | Befehl erfolgreich; nach Annahme der vollständigen Nachricht wird Zustellverantwortung übernommen |
+| `451` | vorübergehender Verarbeitungsfehler; späterer erneuter Versuch kann sinnvoll sein |
+| `550` | dauerhafte Ablehnung; Detailmeldung und Adressierung prüfen |
+
+Die Bedeutung von `250` hängt auch vom vorherigen Befehl ab und ist keine Lesebestätigung. Server leiten Nachrichten üblicherweise über Port `25` weiter; auch dort ist STARTTLS möglich. Kontoschutz und das Verhindern eines offenen Relays sind neben Transportverschlüsselung eigene Aufgaben.
+
 ## Prüfungstaugliche Formulierung
 
 > SMTP ist das Protokoll zum Senden und Weiterleiten von E-Mails.  
 > Für die clientseitige E-Mail-Einlieferung wird heute häufig Port `587` verwendet,
 > für verschlüsselte Submission ist auch Port `465` verbreitet.  
 > SMTP dient nicht zum Lesen von E-Mails, dafür werden typischerweise IMAP oder POP3 verwendet.
-
-## Häufige Prüfungsfehler
-
-- SMTP als Leseprotokoll bezeichnen.
-- Die Rollen der Ports `25`, `587` und `465` verwechseln.
-- Glauben, dass `SMTPS` in jedem Kontext ein eigenes Protokoll ist.
-- Vergessen, dass heute verschlüsselte Einlieferung erwartet wird.
 
 ## Schnelle Selbstkontrolle
 
@@ -111,3 +116,10 @@ verwendet.
    Verwendung: offizielles Portregister für die Ports `25`, `465` und `587`.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [RFC 5321: SMTP](https://www.rfc-editor.org/rfc/rfc5321.html): MX-Zustellung und Antwortklassen.
+- [RFC 8314: TLS for email](https://www.rfc-editor.org/rfc/rfc8314.html): implizites TLS, STARTTLS und Zertifikatsprüfung.
+
+Geprüft: `2026-10-14`.

@@ -5,7 +5,7 @@
 | Frage | Kurze Antwort |
 |---|---|
 | in jedem Unternehmen Pflicht? | nein |
-| wann Pflicht? | bei bestimmten Behörden und bei risikoreicher, umfangreicher Datenverarbeitung |
+| wann Pflicht? | nach Art. 37, etwa bei Behörden oder bestimmten umfangreichen Kerntätigkeiten |
 | kann auch extern sein? | ja |
 | wem hilft er? | der Organisation und den betroffenen Personen |
 
@@ -21,13 +21,13 @@ Der Datenschutzbeauftragte:
 
 Einfach gesagt:
 
-- er ist der interne Datenschutz-Fachverantwortliche oder -Koordinator
+- er berät und überwacht fachlich unabhängig; für die Rechtmäßigkeit bleibt der Verantwortliche beziehungsweise Auftragsverarbeiter zuständig
 
 ## Wann ist die Benennung Pflicht?
 
 Nach Art. 37 der GDPR kann die Benennung Pflicht sein, zum Beispiel wenn:
 
-- die Verarbeitung von einer Behörde oder einer Einrichtung mit öffentlichen Aufgaben durchgeführt wird
+- die Verarbeitung von einer Behörde oder öffentlichen Stelle durchgeführt wird, ausgenommen Gerichte im Rahmen ihrer justiziellen Tätigkeit
 - die Kerntätigkeit der Organisation eine umfangreiche, regelmäßige und systematische Überwachung erfordert
 - die Kerntätigkeit der Organisation
   in der umfangreichen Verarbeitung besonderer Kategorien
@@ -79,6 +79,32 @@ Der richtige Gedankengang:
 - deren Umfang
 - den Typ der verarbeiteten Daten
 
+## Rolle und Interessenkonflikte
+
+Ein Krankenhaus verarbeitet als Kerntätigkeit umfangreiche Gesundheitsdaten und
+veranschaulicht damit einen Fall verpflichtender Benennung. Die Kundenliste einer
+kleinen Werkstatt begründet dagegen für sich allein keine automatische Benennungspflicht.
+Entscheidend ist nicht bloß die Beschäftigtenzahl: Tätigkeit, Zahl der Betroffenen,
+Dauer und Datenumfang sind ebenfalls relevant.
+
+Der DPO darf zum Ergebnis seiner fachlichen Überwachung keine Weisungen erhalten
+und muss unmittelbar an die höchste Leitungsebene berichten können. Die Organisation
+stellt Ressourcen und rechtzeitigen Zugang bereit. Wer selbst Zwecke und Mittel
+festlegt und anschließend kontrolliert, kann in einen Interessenkonflikt geraten.
+Eine Verbindung mit Leitungsaufgaben ist deshalb besonders zu prüfen.
+
+**Übung:** Bei einer neuen Kundenanwendung berät der DPO zu Risiken und einer erforderlichen
+Datenschutz-Folgenabschätzung. Die Leitung entscheidet und verantwortet die Umsetzung;
+die Entwicklung arbeitet nach den freigegebenen Anforderungen. Der DPO erteilt keine
+„Datenschutzgenehmigung“.
+
+Bei der Benennung werden die beruflichen Kontaktdaten veröffentlicht und der DSB
+gemeldet; der Behörde wird zusätzlich der Name genannt. Das verlangt keine Veröffentlichung
+sämtlicher persönlicher Angaben.
+
+Quelle: [DSB: Datenschutzbeauftragte](https://dsb.gv.at/rechte-pflichten/datenschutzbeauftragter),
+Art. 37–39 DSGVO. Geprüft: 2026-10-14.
+
 ## Prüfungstaugliche Formulierung
 
 > Aufgabe des Datenschutzbeauftragten ist die Unterstützung
@@ -86,16 +112,9 @@ Der richtige Gedankengang:
 > die Beratung, die Überwachung und die Zusammenarbeit mit der Behörde.
 > Er ist nicht in jeder Organisation Pflicht,
 > aber nach der GDPR in bestimmten Fällen schon,
-> zum Beispiel bei umfangreicher Überwachung
-> oder umfangreicher Verarbeitung besonderer Daten.
+> etwa bei umfangreicher, regelmäßiger und systematischer Überwachung als Kerntätigkeit
+> oder umfangreicher Verarbeitung besonderer Daten als Kerntätigkeit.
 > Der Datenschutzbeauftragte kann eine interne oder externe Person sein.
-
-## Häufige Prüfungsfehler
-
-- Zu behaupten, jedes Unternehmen müsse einen Datenschutzbeauftragten benennen.
-- Die umfangreiche und kerntätigkeitsbezogene Datenverarbeitung nicht zu erwähnen.
-- Zu glauben, es könne nur ein interner Mitarbeiter sein.
-- Zu vergessen, dass es auch eine Meldepflicht an die DSB geben kann.
 
 ## Schnelle Selbstkontrolle
 
@@ -103,15 +122,15 @@ Der richtige Gedankengang:
 2. Ist er in jedem Unternehmen Pflicht?
 3. Nenne zwei Fälle, in denen er Pflicht sein kann.
 4. Kann er ein externer Dienstleister sein?
-5. Was muss mit den Daten des benannten DPO gemacht werden?
+5. Welche DPO-Angaben werden veröffentlicht, und was wird der DSB gemeldet?
 
 ## Kurzantworten zur Selbstkontrolle
 
 1. Unterstützung der Compliance und Koordinierung der Datenschutzaufgaben
 2. Nein
-3. Bei umfangreicher regelmäßiger Überwachung oder umfangreicher Verarbeitung besonderer Daten
+3. Bei umfangreicher, regelmäßiger und systematischer Überwachung als Kerntätigkeit oder umfangreicher Verarbeitung besonderer Daten als Kerntätigkeit
 4. Ja
-5. Sie müssen veröffentlicht und bei der DSB gemeldet werden
+5. Die beruflichen Kontaktdaten werden veröffentlicht und der DSB gemeldet; der Behörde wird zusätzlich der Name genannt.
 
 ## Quellen
 

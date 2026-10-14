@@ -125,27 +125,19 @@ Es sollte überprüft werden:
 - Fachbegriffe müssen an das Niveau des Publikums angepasst werden
 - das Wesentliche sollte vor den Details erscheinen
 
-## Typische Fehler
+## Eine fertige Funktion in fünf Minuten vorstellen
 
-- zu viel Text auf einer Folie
-- zu kleine Schrift
-- unlogische Reihenfolge
-- keine Probe
-- kein Abschluss oder keine Zusammenfassung
+Das Thema ist beispielsweise eine barrierefreie Suche. In den ersten 30 Sekunden nennen wir die Benutzeraufgabe. In anderthalb Minuten zeigen wir Tastaturbedienung und einen Fall ohne Treffer. Eine Minute erklärt anhand einer einzigen Grafik den Datenweg. Eine weitere Minute beschreibt die getesteten Geräte. Die letzte Minute bleibt für bekannte Grenzen und Fragen.
+
+Wir verwenden fiktive Daten und halten bei Netzwerkausfall eine lokale Bildschirmaufnahme bereit. Wichtige sichtbare Änderungen erklären wir auch mündlich. In Diagrammen kennzeichnen Beschriftungen zusätzlich zur Farbe den Zustand. Untertitel im Video sowie eine sinnvolle Lesereihenfolge und Bildbeschreibungen in den verteilten Folien unterstützen die Zugänglichkeit.
+
+Bei der Probe prüfen wir die Lesbarkeit auch aus der letzten Reihe. Anschließend sollen die Zuhörer sagen können, welche Aufgabe die Funktion löst und welche Nachweise ihre Funktion belegen.
 
 ## Prüfungstaugliche Formulierung
 
 > Eine gute Präsentation ist zielorientiert, an das Publikum angepasst und logisch aufgebaut.  
 > Wichtig sind eine klare Struktur, eine übersichtliche Foliengestaltung, Lesbarkeit und visuelle Konsistenz.  
 > Zur Vorbereitung einer Präsentation gehören die Gliederung, die Probe, die Zeitplanung und die technische Überprüfung.
-
-## Häufige Prüfungsfehler
-
-- Das Design wird für wichtiger gehalten als der Inhalt.
-- Die Präsentation ist nicht an das Publikum angepasst.
-- Zu viele Informationen auf einer Folie.
-- Die technische Probe wird ausgelassen.
-- Es gibt keinen klaren Abschluss.
 
 ## Schnelle Selbstkontrolle
 
@@ -164,6 +156,11 @@ Es sollte überprüft werden:
 5. Damit technische Probleme vermieden werden können
 
 ## Quellen
+
+- [W3C WAI: Making events accessible](https://www.w3.org/WAI/teach-advocate/accessible-presentations/)  
+  Zugängliche Vorträge, Folien und Multimedia.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Microsoft Support - Create a presentation in PowerPoint  
    https://support.microsoft.com/en-us/office/create-a-presentation-in-powerpoint-422250f8-5721-4cea-92cc-202fa7b89617  

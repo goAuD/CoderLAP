@@ -52,6 +52,14 @@ Célja, hogy a csapat gyorsabban és megbízhatóbban szállítson szoftvert.
 - Kultúra és felelősségmegosztás is kell hozzá.
 - Biztonság, monitoring és üzemeltethetőség is része.
 
+## A committól az ellenőrzött működésig
+
+Egy apró javítás útja lehet: kódreview, automatikus teszt, azonosítható kiadási csomag, tesztkörnyezeti próba, majd élesítés utáni állapotellenőrzés. Ugyanazt a már ellenőrzött csomagot telepítjük; a titkos konfiguráció külön, jogosultságokkal védve kerül a környezetbe.
+
+A CI a változások gyakori összeillesztését és automatikus ellenőrzését támogatja. Continuous delivery esetén a változat kiadásra kész, de az élesítéshez lehet kézi jóváhagyás. Continuous deployment esetén a sikeres ellenőrzések után a kiadás is automatikus. A „CD” rövidítést ezért érdemes feloldani.
+
+A telepítés sikere után is figyeljük a szolgáltatást: működik-e a belépés és a fő felhasználói művelet? Adatbázis-változtatásnál külön helyreállítási terv kell, mert a régi kód visszarakása nem feltétlenül állítja helyre az adatokat. A fejlesztés és az üzemeltetés együtt tanul a tapasztalatból.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A DevOps a fejlesztés és üzemeltetés együttműködésére épülő szemlélet,
@@ -61,13 +69,6 @@ Célja, hogy a csapat gyorsabban és megbízhatóbban szállítson szoftvert.
 > A DevOps fontos elemei közé tartozik például a verziókezelés,
 > a CI/CD, az infrastruktúra automatizálása,
 > a monitorozás és a folyamatos visszacsatolás.
-
-## Gyakori vizsgahibák
-
-- A DevOpsot csak `CI/CD`-nek nevezni.
-- Azt állítani, hogy ez csak fejlesztői eszközhalmaz.
-- Nem megemlíteni az üzemeltetést.
-- Kihagyni a kultúra és együttműködés szerepét.
 
 ## Gyors önellenőrzés
 
@@ -86,6 +87,14 @@ Célja, hogy a csapat gyorsabban és megbízhatóbban szállítson szoftvert.
 5. Git, CI/CD, monitoring, automatizálás
 
 ## Források
+
+- [Microsoft Learn: What is DevOps?](https://learn.microsoft.com/en-us/devops/what-is-devops)  
+  DevOps-gyakorlatok, folyamatos integráció és szállítás.
+
+- [Microsoft: Safe deployment practices](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments)  
+  Telepítés utáni ellenőrzés és megtervezett helyreállítás.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Microsoft Learn - What is DevOps?  
    https://learn.microsoft.com/en-us/devops/what-is-devops  

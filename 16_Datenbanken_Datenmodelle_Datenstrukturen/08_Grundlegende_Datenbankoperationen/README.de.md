@@ -51,19 +51,44 @@ Dient zum Löschen von Zeilen.
 | `CRUD` | allgemeines Operationsmodell |
 | `SQL` | konkrete sprachliche Umsetzung |
 
+## Durchgearbeitetes CRUD-Beispiel mit Rücknahme
+
+**MySQL 8.0 / InnoDB, leere Übungsdatenbank.** Das Beispiel legt zwei Aufgaben an, ändert und löscht innerhalb einer Transaktion und nimmt die Änderungen anschließend zurück. Das erste Ergebnis ist die eine Zeile innerhalb der Transaktion; das zweite Ergebnis sind die beiden wiederhergestellten Zeilen.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE tasks (
+  id INT PRIMARY KEY,
+  status VARCHAR(10) NOT NULL
+) ENGINE=InnoDB;
+INSERT INTO tasks VALUES (1, 'draft'), (2, 'done');
+
+START TRANSACTION;
+UPDATE tasks SET status = 'done' WHERE id = 1;
+DELETE FROM tasks WHERE id = 2;
+SELECT id, status FROM tasks ORDER BY id;
+ROLLBACK;
+SELECT id, status FROM tasks ORDER BY id;
+```
+
+```text
+1 done
+1 draft
+2 done
+```
+
+`CREATE TABLE` erstellt die Struktur und gehört zu DDL. Das „Create“ von CRUD entspricht hier `INSERT`, das einen Datensatz und keine Tabelle erzeugt. `INSERT`, `UPDATE` und `DELETE` ändern Daten; `GRANT` und `REVOKE` regeln Rechte. `SELECT` wird je nach Lehrbuch als eigene DQL-Gruppe oder als Teil der weiter gefassten DML eingeordnet.
+
+Vor einer Änderung hilft ein `SELECT` mit derselben Bedingung, die Zielmenge zu prüfen. Kontrolliere danach die Anzahl betroffener Zeilen. Bei gleichzeitigen Benutzern schützt die separate Vorabfrage allein noch nicht vor zwischenzeitlichen Änderungen; dafür braucht es eine geeignete Transaktionsstrategie.
+
+Im Beispiel liegen rücknehmbare Datenänderungen innerhalb der Transaktion. Mehrere strukturändernde MySQL-Anweisungen verursachen einen impliziten Commit. `CREATE TABLE` ist deshalb keine allgemeine „Probeaktion“, die man anschließend mit `ROLLBACK` zurücknimmt.
+
 ## Prüfungstaugliche Formulierung
 
 > Die grundlegenden Datenbankoperationen sind das Erstellen, Abfragen, Ändern und Löschen von Datensätzen.  
 > In einer relationalen Datenbank werden diese typischerweise mit den SQL-Befehlen `INSERT`, `SELECT`, `UPDATE` und  
 > `DELETE` durchgeführt.  
 > Diese Operationen bilden die Grundlage für den Betrieb der meisten datenbankbasierten Anwendungen.
-
-## Häufige Prüfungsfehler
-
-- Abfrage mit Änderung verwechseln.
-- `SELECT` als einzige wichtige Operation betrachten.
-- Die Rolle von `WHERE` nicht erwähnen.
-- Nicht erwähnen, dass diese Operationen auf Anwendungsebene dem `CRUD`-Konzept zugeordnet sind.
 
 ## Schnelle Selbstkontrolle
 
@@ -92,3 +117,10 @@ Dient zum Löschen von Zeilen.
    Verwendung: praktische, offizielle Zusammenfassung zur Verwendung grundlegender Datenbankoperationen.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [MySQL: COMMIT and ROLLBACK](https://dev.mysql.com/doc/refman/8.0/en/commit.html): Transaktion und Rücknahme von Datenänderungen
+- [MySQL: Implicit Commit](https://dev.mysql.com/doc/refman/8.0/en/implicit-commit.html): DDL und impliziter Commit
+
+Geprüft: `2026-10-14`.

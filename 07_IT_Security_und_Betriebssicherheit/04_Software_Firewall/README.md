@@ -5,7 +5,7 @@
 | Típus | Hol működik? |
 |---|---|
 | software / host firewall | egy adott gépen |
-| network / hardware firewall | hálózati határon vagy több eszköz előtt |
+| network firewall | hálózatok vagy hálózati részek közti forgalmat szűr |
 
 ## Mi az a software firewall?
 
@@ -52,8 +52,16 @@ Ilyenkor különösen fontos, hogy a gép maga is védje magát.
 | Fogalom | Mit jelent? |
 |---|---|
 | software firewall | hostszintű tűzfal a gépen |
-| hardware / network firewall | külön hálózati eszköz vagy központi védelem |
+| hálózati tűzfal | több rendszer forgalmát szűri; lehet külön készülék vagy virtuális/szoftveres megoldás |
 | antivirus | malware-felismerés, nem ugyanaz mint a tűzfal |
+
+## Kidolgozott eset: helyi webes előnézet elérése
+
+A fejlesztő gépén megnyílik a `http://127.0.0.1:8767`, a telefonon viszont nem. A `127.0.0.1` mindig az azt használó eszköz saját loopback címe. Ha a kiszolgáló csak erre figyel, egy tűzfalszabály önmagában nem teszi elérhetővé a helyi hálózaton.
+
+Az ellenőrzés sorrendje: fut-e a szolgáltatás, melyik címen és porton figyel, elérhető-e a gép LAN-címe, majd engedi-e a szükséges kapcsolatot a tűzfal. Egy indokolt helyi szabály például **bejövő TCP, 8767-es célport, privát profil és a szükséges helyi alhálózat** lehet. Ez tervezési példa, nem minden hálózatra alkalmazandó kész szabály. Nyilvános Wi-Fi-n más hozzáférési igény érvényes.
+
+Az állapottartó tűzfal követi a kapcsolatok állapotát. Egy engedélyezett, kifelé kezdeményezett kapcsolat válaszforgalmához ezért általában nem kell minden bejövő portot kinyitni. Egy port engedélyezése nem bizonyítja, hogy a rajta érkező alkalmazási adat biztonságos. A host/network a védelem helyét, a software/hardware a megvalósítását írja le.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -62,13 +70,6 @@ Ilyenkor különösen fontos, hogy a gép maga is védje magát.
 > és szabályok alapján engedi vagy tiltja a kapcsolatokat.  
 > Segít megakadályozni a jogosulatlan bejövő hozzáférést, és bizonyos esetekben a kimenő kapcsolatokat is korlátozza.  
 > Különösen fontos kliensgépeknél és nem megbízható hálózati környezetben.
-
-## Gyakori vizsgahibák
-
-- A tűzfalat összekeverni az antivírussal.
-- Azt mondani, hogy csak szerveren fontos.
-- Azt hinni, hogy ha valami blokkolódik, a legjobb megoldás a tűzfal teljes kikapcsolása.
-- Nem különbséget tenni host- és hálózati tűzfal között.
 
 ## Gyors önellenőrzés
 
@@ -101,3 +102,9 @@ Ilyenkor különösen fontos, hogy a gép maga is védje magát.
    Használat: kontextus a helyi tűzfal és a többi kliensvédelmi komponens kapcsolatáról.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Windows Firewall](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/): cím-, protokoll-, port- és profilalapú szabályok, válaszforgalom
+
+Ellenőrizve: `2026-10-14`.

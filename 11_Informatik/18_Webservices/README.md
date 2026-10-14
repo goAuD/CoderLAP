@@ -67,6 +67,31 @@ A web service lehetővé teszi, hogy:
 - újrahasznosítható funkciókat adjunk
 - szolgáltatásalapú rendszereket építsünk
 
+## Egy szolgáltatáshívás több, mint egy URL
+
+Egy tanulói alkalmazás le akarja kérni a `15` azonosítójú kurzust. Egy lehetséges
+HTTP-szerződés szerint `GET /api/courses/15` kérésre `200` és kurzusadat érkezik,
+ismeretlen azonosítóra `404`. Ezt a szerződést az interfészleírás rögzíti;
+a URL példabeli, nem működő nyilvános szolgáltatás.
+
+A hívónak több kimenetre is fel kell készülnie:
+
+| Eset | A kliens feladata |
+|---|---|
+| érvényes sikeres válasz | ellenőrzi és megjeleníti a várt szerkezetű adatot |
+| hiányzó jogosultság | érthető jelzés, nem végtelen újrapróbálkozás |
+| hálózati megszakadás vagy időtúllépés | megszakítja a várakozást és felajánlhat új próbát |
+| túlterhelés | korlátozott, késleltetett újrapróbálás az API szabályai szerint |
+
+Egy olvasási kérés ismétlése és egy rendelés létrehozásának ismétlése más
+kockázatú. Ha a létrehozás sikerült, de a válasz elveszett, a vakon ismételt
+kérés duplázhat. Ilyen művelethez megállapodott duplikációvédelem és egyedi
+kérésazonosító használható. Az időtúllépés tehát nem bizonyítja, hogy a szerver
+semmit sem végzett el.
+
+A szolgáltatás lehet belső hálózaton is. A HTTPS az adatátvitelt védi, az
+azonosítás és az erőforrásonkénti jogosultság-ellenőrzés külön feladat.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A web service olyan hálózaton keresztül elérhető szolgáltatás,
@@ -75,13 +100,6 @@ A web service lehetővé teszi, hogy:
 > A gyakorlatban tipikusan valamilyen webes protokollt
 > és strukturált üzenetformátumot használ,
 > például SOAP-ot vagy REST-alapú HTTP-kommunikációt.
-
-## Gyakori vizsgahibák
-
-- A web service-t sima weboldalnak nevezni.
-- Összekeverni az emberi felhasználói felülettel.
-- Nem megemlíteni a rendszer-rendszer kommunikációt.
-- A REST-et és SOAP-ot teljesen ugyanannak bemutatni.
 
 ## Gyors önellenőrzés
 
@@ -100,6 +118,11 @@ A web service lehetővé teszi, hogy:
 5. SOAP és REST
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [IETF: HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html): válaszállapotok, ismétlés és idempotencia.
+
 
 1. W3C - Web Services Architecture  
    https://www.w3.org/TR/ws-arch/wsa.pdf  

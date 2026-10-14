@@ -52,6 +52,44 @@ A gyakorlatban sok projekt **mindkettőt** használja, mert:
 - a black-box a viselkedést ellenőrzi
 - a white-box a belső minőséget és lefedettséget javítja
 
+## Ugyanaz a szállításidíj-szabály két nézőpontból
+
+A követelmény: a nemnegatív, egész centben megadott rendelési összegnél 50 EUR-tól ingyenes a szállítás, alatta 5 EUR. Érvénytelen összegre hiba jár. Black-box tervezésnél a szabályból választunk: 0, 4 999, 5 000 és 5 001 cent, valamint negatív és törtszám. A határ közvetlen környezetének vizsgálata határérték-elemzés.
+
+<!-- example:run -->
+```javascript
+function deliveryFee(totalCents) {
+  if (!Number.isInteger(totalCents) || totalCents < 0) {
+    throw new RangeError("invalid total");
+  }
+  return totalCents >= 5000 ? 0 : 500;
+}
+
+for (const total of [0, 4999, 5000, 5001]) {
+  console.log(total, deliveryFee(total));
+}
+for (const total of [-1, 1.5]) {
+  try {
+    deliveryFee(total);
+  } catch (error) {
+    console.log(total, error.name);
+  }
+}
+```
+
+```text
+0 500
+4999 500
+5000 0
+5001 0
+-1 RangeError
+1.5 RangeError
+```
+
+White-box nézőpontból a kód elágazásait is követjük: a bemeneti ellenőrzés elfogadó és elutasító eredményét, majd a díjválasztás két ágát. Áglefedettség és feltétellefedettség külön mérték; egy összetett feltétel minden részének vizsgálatához további esetek is szükségesek lehetnek.
+
+A 100%-os lefedettség a választott szerkezeti mérőszámról szól, nem a teljes helyesség bizonyítása. A követelmények ellenőrzése mutatja meg például, hogy valóban 50 EUR volt-e a kívánt határ.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A black-box tesztelés során a rendszer külső viselkedését vizsgáljuk
@@ -59,13 +97,6 @@ A gyakorlatban sok projekt **mindkettőt** használja, mert:
 > anélkül hogy a belső megvalósítást részletesen figyelembe vennénk.  
 > A white-box tesztelés ezzel szemben a belső szerkezetre, például elágazásokra, feltételekre és kódutakra is épít.  
 > A két megközelítés nem egymás helyett, hanem egymást kiegészítve használható.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy a black-box teszt nem is tesztelés.
-- A white-box tesztet kizárólag unit testtel azonosítani.
-- Nem megemlíteni a belső szerkezet ismeretét.
-- A két módszert teljesen egymás ellenpontjaként kezelni.
 
 ## Gyors önellenőrzés
 
@@ -84,6 +115,11 @@ A gyakorlatban sok projekt **mindkettőt** használja, mert:
 5. Mert másfajta hibákat tárnak fel
 
 ## Források
+
+- [ISTQB: CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Statikus és dinamikus tesztelés, teszttervezési technikák és lefedettség.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. ISTQB CTFL Syllabus v4.0.1  
    https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  

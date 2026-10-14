@@ -35,7 +35,7 @@ Ihre Aufgaben:
 
 ## Was ist eine Transaktion?
 
-Eine Transaktion ist eine Einheit aus mehreren Datenbankoperationen, die:
+Eine Transaktion ist eine Einheit aus einer oder mehreren Datenbankoperationen, die:
 
 - gemeinsam ausgeführt wird
 - oder gemeinsam fehlschlägt
@@ -69,17 +69,68 @@ man eine Transaktion.
 | Zugriffsschnittstelle | technische Verbindung zwischen Anwendung und DB |
 | Transaktion | logische Operationseinheit in der Datenverarbeitung |
 
-## ACID kurz zusammengefasst
+## ACID in der Praxis
 
-Bei der Prüfung kann das Extrapunkte bringen:
+| Prinzip | Bedeutung bei einer Umbuchung zwischen zwei Konten |
+|---|---|
+| Atomicity, Atomarität | Belastung und Gutschrift werden gemeinsam bestätigt oder zurückgenommen |
+| Consistency, Konsistenz | festgelegte Regeln, etwa nicht negativer Bestand, bleiben eingehalten |
+| Isolation | die gewählte Isolationsstufe regelt Wechselwirkungen paralleler Transaktionen |
+| Durability, Dauerhaftigkeit | erfolgreich bestätigte Änderungen überstehen Systemfehler entsprechend den Dauerhaftigkeitseinstellungen |
 
-- `Atomicity`
-- `Consistency`
-- `Isolation`
-- `Durability`
+Das DBMS erfindet keine Geschäftsregeln. Sie müssen durch Constraints und korrekte Anwendungslogik festgelegt werden. Dauerhaftigkeit schützt nicht vor jedem Datenträgerschaden oder versehentlicher Löschung; Backups bleiben nötig. Eine Transaktion kann auch aus einer einzigen Anweisung bestehen. Ein ORM ist eine höher liegende Abbildungsschicht, während der Treiber mit der Datenbank kommuniziert.
 
-Man muss es nicht immer ausführlich erklären, aber es ist gut zu wissen, dass dies die klassischen Qualitätsprinzipien
-von Transaktionen sind.
+## Durchgearbeitetes Beispiel: parametrisierte Umbuchung
+
+**PHP 8 + PDO-MySQL-Treiber, MySQL 8.0.16+ / InnoDB.** `$pdo` ist eine bereits hergestellte Verbindung zu einer leeren Übungsdatenbank. Verbindungsdaten stammen aus vertrauenswürdiger Konfiguration, nicht aus dem Browser. Führe das Beispiel einmal aus; es verwendet ausschließlich die beiden angelegten Testkonten.
+
+<!-- example:php-pdo-mysql -->
+```php
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+$pdo->exec('CREATE TABLE accounts (
+    id INT PRIMARY KEY,
+    balance DECIMAL(10,2) NOT NULL CHECK (balance >= 0)
+) ENGINE=InnoDB');
+$pdo->exec('INSERT INTO accounts VALUES (1, 100.00), (2, 50.00)');
+
+$amount = '20.00';
+try {
+    $pdo->beginTransaction();
+    $debit = $pdo->prepare('UPDATE accounts SET balance = balance - :amount
+        WHERE id = :id AND balance >= :minimum');
+    $debit->execute(['amount' => $amount, 'id' => 1, 'minimum' => $amount]);
+    if ($debit->rowCount() !== 1) {
+        throw new RuntimeException('Debit rejected');
+    }
+    $credit = $pdo->prepare('UPDATE accounts SET balance = balance + :amount
+        WHERE id = :id');
+    $credit->execute(['amount' => $amount, 'id' => 2]);
+    if ($credit->rowCount() !== 1) {
+        throw new RuntimeException('Credit rejected');
+    }
+    $pdo->commit();
+} catch (Throwable $error) {
+    if ($pdo->inTransaction()) {
+        $pdo->rollBack();
+    }
+    throw $error;
+}
+foreach ($pdo->query('SELECT id, balance FROM accounts ORDER BY id') as $row) {
+    echo $row['id'] . ': ' . $row['balance'] . PHP_EOL;
+}
+```
+
+```text
+1: 80.00
+2: 70.00
+```
+
+Parameterwerte werden getrennt übergeben und dadurch nicht zu SQL-Code. Parameter binden Werte, keine beliebigen Tabellen- oder Spaltennamen. Im Beispiel ist der Betrag eine feste positive Dezimalzeichenfolge. Bei externen Eingaben müssen vorher Format, Bereich und Berechtigung geprüft werden. Statt Gleitkommarechnung für Geld verwendet die Übung DECIMAL und einen Betrag als Zeichenfolge.
+
+Die Bedingung des ersten `UPDATE` prüft Deckung und belastet die Zeile in einem Schritt. Wurde nicht genau eine Zeile geändert, folgt keine Gutschrift. Fehlt das Zielkonto oder tritt ein anderer Fehler auf, wird auch die bereits erfolgte Belastung zurückgenommen. Die Gesamtsumme bleibt 150.00. Eine externe Zahlung oder versandte E-Mail wird dadurch noch nicht Teil der Datenbanktransaktion.
+
+Ohne explizite Transaktion würden die beiden Anweisungen bei Autocommit getrennt bestätigt. Fehlerbehandlung ist wichtig: Eine fehlerhafte MySQL-Anweisung rollt nicht in jedem Fall automatisch die gesamte Transaktion zurück. Bei Deadlocks muss die Anwendung außerdem auf begrenzte erneute Versuche vorbereitet sein.
 
 ## Prüfungstaugliche Formulierung
 
@@ -88,13 +139,6 @@ von Transaktionen sind.
 > Das Transaktionskonzept bedeutet, dass zusammengehörige Datenbankoperationen als Einheit behandelt werden, die  
 > entweder vollständig ausgeführt oder im Fehlerfall zurückgerollt werden können.  
 > Das ist die Grundlage einer zuverlässigen und konsistenten Datenverarbeitung.
-
-## Häufige Prüfungsfehler
-
-- Die Schnittstelle mit der Datenbank selbst gleichsetzen.
-- Die Transaktion als einfache Abfrage bezeichnen.
-- Die Rolle von `COMMIT` und `ROLLBACK` nicht erwähnen.
-- Nicht erwähnen, dass das Ziel die Wahrung der Konsistenz ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -109,7 +153,7 @@ von Transaktionen sind.
 1. Verbindungsschicht zwischen Anwendung und Datenbank
 2. Einheit zusammengehörender Datenbankoperationen
 3. Zum Festschreiben der Änderungen
-4. Zum Zurücknehmen fehlgeschlagener Operationen
+4. Zum Zurücknehmen der noch nicht bestätigten Änderungen einer Transaktion
 5. Weil so die Daten konsistent bleiben
 
 ## Quellen
@@ -127,3 +171,11 @@ von Transaktionen sind.
    Verwendung: offizieller Hintergrund zur Grundlogik von `BEGIN`, `COMMIT`, `ROLLBACK`.
 
 Abgerufen: `2026-04-09`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [PHP: Prepared Statements](https://www.php.net/manual/en/pdo.prepared-statements.php): getrennte Parameterwerte und PDO-Verwendung
+- [MySQL: COMMIT and ROLLBACK](https://dev.mysql.com/doc/refman/8.0/en/commit.html): Autocommit und explizite Transaktion
+- [MySQL: InnoDB error handling](https://dev.mysql.com/doc/refman/8.0/en/innodb-error-handling.html): Fehler auf Anweisungs- und Transaktionsebene
+
+Geprüft: `2026-10-14`.

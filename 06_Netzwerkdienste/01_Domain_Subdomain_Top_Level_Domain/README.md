@@ -73,19 +73,38 @@ Ez vizsgán tipikus alapfogalom.
 | TLD | a legfelső, utolsó rész |
 | URL | teljes webcím, nem csak a domain |
 
+## Kidolgozott példa: URL és DNS-adat
+
+A `https://api.example.org:8443/topics?id=7#answer` címben az `api.example.org` a host, a `8443` a port, a `/topics` az útvonal. A port és az útvonal nem része a domainnévnek. JavaScriptben a beépített URL-feldolgozóval megvizsgálhatjuk, hálózati kérés nélkül:
+
+<!-- example:run -->
+```javascript
+const address = new URL('https://api.example.org:8443/topics?id=7#answer');
+console.log(address.hostname);
+console.log(address.port);
+console.log(address.pathname);
+console.log(address.searchParams.get('id'));
+```
+
+Várt kimenet:
+
+```text
+api.example.org
+8443
+/topics
+7
+```
+
+DNS-ben az `A` rekord IPv4-, az `AAAA` IPv6-címet adhat, a `CNAME` másik névre mutató alias, az `MX` pedig a levelezési célkiszolgálót jelöli. Egy új DNS-rekord önmagában még nem állítja be a webszervert vagy a TLS-tanúsítványt. A TTL a gyorsítótárazás idejét szabályozza, ezért a változás nem minden kliensnél látszik azonnal.
+
+A regisztrálható domain határát nem lehet mindig az utolsó két címkéből eldönteni: például a `co.uk` több címkéből álló nyilvános névtér.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A domainnév az interneten használt hierarchikus név,
 > amely emberbarát módon azonosít egy szolgáltatást vagy erőforrást.  
 > A domain több részből állhat: a legfelső szintű rész a TLD, a domain alatt pedig további subdomainek hozhatók létre.  
-> Például a `developer.mozilla.org` névben az `org` a TLD, a `mozilla` a domain része, a `developer` pedig subdomain.
-
-## Gyakori vizsgahibák
-
-- Az URL-t és a domainnevet ugyanannak tekinteni.
-- Azt hinni, hogy a `www` mindig kötelező.
-- Nem felismerni, hogy a subdomain a domain része.
-- A TLD-t összekeverni a teljes domainnel.
+> Például a `developer.mozilla.org` névben az `org` a TLD, a `mozilla` a domain része, a `developer` az új címke, a teljes subdomainnév pedig `developer.mozilla.org`.
 
 ## Gyors önellenőrzés
 
@@ -98,7 +117,7 @@ Ez vizsgán tipikus alapfogalom.
 ## Rövid válaszok az önellenőrzéshez
 
 1. Az `at`
-2. A `developer`
+2. A `developer.mozilla.org` a `mozilla.org` subdomainje; a `developer` az új névcímke
 3. Emberbarát internetes címzésre
 4. Nem
 5. Nem
@@ -126,3 +145,10 @@ Ez vizsgán tipikus alapfogalom.
    Használat: hivatalos forrás a TLD-k és a gyökérzóna szerepéhez.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [RFC 9499: DNS Terminology](https://www.rfc-editor.org/rfc/rfc9499.html): címkék, hierarchia, DNS-gyorsítótár.
+- [MDN: URL](https://developer.mozilla.org/en-US/docs/Web/API/URL): URL-feldolgozás.
+
+Ellenőrizve: `2026-10-14`.

@@ -82,6 +82,30 @@ Ezért fontos:
 - A mobilos megjelenítés és a teljesítmény ne legyen gyenge.
 - A keresőrobotokat ne zárjuk ki véletlenül.
 
+## Egy témalap kereshetőségének ellenőrzése
+
+Egy nyilvános „JavaScript-Schleifen” oldalnál először az olvasó kérdését
+válaszoljuk meg egy világos példával. Ezután ellenőrizzük a technikai alapokat:
+
+1. Az oldal valódi, működő URL-en, sikeres HTTP-válasszal elérhető.
+2. A cím és a főcím pontosan elmondja, miről szól, a belső linkek értelmes
+   szöveggel hivatkoznak rá, például „Kopfgesteuerte Schleifen”.
+3. A tartalom mobilon és billentyűzettel is használható, a képekhez szükség
+   szerint szöveges alternatíva tartozik.
+4. Azonos tartalom több URL-je esetén a `rel="canonical"` jelöléssel
+   megadható az előnyben részesített változat. Ez jelzés a keresőnek,
+   nem hozzáférési szabály és nem feltétlenül kötelező döntés.
+
+A sitemap a címek felfedezését segíti, nem garantál indexelést vagy jobb helyezést.
+A valóban hiányzó oldal kapjon megfelelő `404` választ, ne csak „nem található”
+szöveget sikeres `200` válasz mellett. A Google nem használja a `keywords`
+metaelemet rangsorolási jelként.
+
+Egy szándékosan bejelentkezéshez kötött tanulói felületnél viszont a cél nem a
+privát anyag keresőbeli szerepeltetése. Előbb az oldal nyilvánosságáról döntünk,
+utána ehhez igazítjuk az indexelési beállításokat. Az SEO nem indok a hozzáférési
+védelem feloldására.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A SEO célja,
@@ -91,14 +115,6 @@ Ezért fontos:
 > a helyes HTML-szerkezet, az egyértelmű címek,
 > a gyors betöltés, a mobilbarát kialakítás
 > és a logikus belső linkelés.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a SEO csak kulcsszavazás.
-- Összekeverni a SEO-t a fizetett hirdetéssel.
-- A meta descriptiont rangsorolási garanciának tekinteni.
-- Nem megemlíteni a technikai oldalt.
-- A "trükközést" jó SEO-nak nevezni.
 
 ## Gyors önellenőrzés
 
@@ -117,6 +133,12 @@ Ezért fontos:
 5. Mert a tartalom minősége és a technikai kivitelezés is számít
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Google: SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide): keresőbarát tartalom és technikai alapok.
+- [Google: Special tags](https://developers.google.com/search/docs/crawling-indexing/special-tags): támogatott metaadatok és a keywords szerepe.
+
 
 1. Google Search Central - SEO Starter Guide  
    https://developers.google.com/search/docs/fundamentals/seo-starter-guide  

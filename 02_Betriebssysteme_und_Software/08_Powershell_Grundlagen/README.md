@@ -121,7 +121,7 @@ Get-Content .\jegyzet.txt
 
 ## Hasznos aliasok
 
-PowerShellben gyakori rövid aliasok:
+Windows alatt gyakori PowerShell-aliasok; más platformon az elérhetőség eltérhet:
 
 | Alias | Eredeti parancs |
 | ----- | --------------- |
@@ -142,19 +142,38 @@ Fontos:
 - szkriptek futtatása
 - szerver- és kliensgépek kezelése
 
+## Futtatható példa: objektumok szűrése és rendezése
+
+Feladat: egy kitalált tárhelylistából írjuk ki név szerint azokat a köteteket, ahol 10 GiB-nál kevesebb a szabad hely. A példa PowerShell 5.1-ben és 7-ben futtatható, csak memóriában dolgozik.
+
+```powershell
+$volumes = @(
+    [pscustomobject]@{ Name = 'DATA'; FreeGiB = 18 }
+    [pscustomobject]@{ Name = 'CACHE'; FreeGiB = 4 }
+    [pscustomobject]@{ Name = 'BACKUP'; FreeGiB = 8 }
+)
+$volumes |
+    Where-Object { $_.FreeGiB -lt 10 } |
+    Sort-Object Name |
+    ForEach-Object { '{0}: {1} GiB' -f $_.Name, $_.FreeGiB }
+```
+
+Várt kimenet:
+
+```text
+BACKUP: 8 GiB
+CACHE: 4 GiB
+```
+
+A `|` objektumokat ad tovább, a `$_` az éppen feldolgozott objektum. A szűrés számértéket hasonlít össze, a rendezés a `Name` tulajdonságot használja. Szöveg csak az utolsó lépésben készül. Külső parancssori programok kimenete viszont gyakran szöveg.
+
+A Windows PowerShell 5.1 és a több platformon elérhető PowerShell 7 külön kiadás. Az alias tényleges feloldását a `Get-Command ls` mutatja meg. Az előző fájlműveleti parancsok szemléltető részletek, meglévő fájlokat és könyvtárakat feltételeznek; módosítás előtt a támogatott parancsokon a `-WhatIf` segít áttekinteni a tervezett műveletet.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A PowerShell a Microsoft objektum-alapú parancssori shellje és automatizálási környezete.  
 > Cmdleteket használ, amelyek jellemzően ige-főnév formában vannak elnevezve, például `Get-Help` vagy `Get-ChildItem`.  
 > Használható fájlkezelésre, információlekérdezésre és adminisztrációs feladatok automatizálására.
-
-## Gyakori vizsgahibák
-
-- A PowerShellt a régi `cmd`-vel teljesen azonosnak venni.
-- Nem tudni legalább 4-5 alapparancsot.
-- Csak az aliasokat ismerni, a cmdlet-neveket nem.
-- Nem tudni, mire való a `Get-Help`.
-- Elfelejteni, hogy PowerShell objektum-alapú.
 
 ## Gyors önellenőrzés
 
@@ -205,3 +224,9 @@ Fontos:
    Használat: elemek törlése.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: about_Pipelines](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines): objektumok a pipeline-ban.
+
+Ellenőrizve: `2026-10-14`.

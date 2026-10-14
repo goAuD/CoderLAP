@@ -35,7 +35,7 @@ Mert a korai modern frontend korszakban nagy lépés volt:
 
 ## Mi a helyzet ma?
 
-`2026. április 8.` nézőpontból:
+`2026. október 14.` állapot szerint:
 
 - az AngularJS régi technológiának számít
 - hivatalos támogatása már megszűnt
@@ -60,6 +60,36 @@ Ilyenkor a feladat gyakran nem új fejlesztés, hanem:
 | AngularJS | régi, 1.x vonal, már nem támogatott |
 | Angular | újabb, aktívan támogatott framework |
 
+## Egy régi sablon felismerése
+
+A következő **olvasási példa** AngularJS 1.x szintaxist mutat. Csak már betöltött
+AngularJS-környezettel működne; ezért nem önálló HTML-demó, és nem indok új
+projektbe a már nem támogatott könyvtár telepítésére.
+
+```html
+<div ng-app>
+  <label for="legacy-name">Name</label>
+  <input id="legacy-name" ng-model="name">
+  <p>Hallo {{ name }}</p>
+</div>
+```
+
+Az `ng-app` az alkalmazás tartományát jelöli. Az `ng-model` a mező értékét
+a `name` modellértékhez köti. A `{{ name }}` kifejezést a keretrendszer értékeli
+ki. Ha a felhasználó `Anna` értéket ír be, a bekezdés `Hallo Anna` szövegre
+frissül. Ehhez nincs külön kézzel írt `textContent`-módosítás.
+
+Ez megmagyarázza az adatbinding előnyét, de a kliensoldali modell továbbra is
+a felhasználó környezetében él. A szervernek külön kell ellenőriznie a kapott
+adatot és jogosultságot.
+
+Karbantartáskor először feltárjuk az útvonalakat, űrlapokat, függőségeket és
+API-szerződéseket, majd a fontos viselkedést tesztekkel rögzítjük. Ezután lehet
+részenként kiváltani a felületet. A mai Angular eltérő, komponensalapú
+keretrendszer; az átállás nem egyszerűen az AngularJS csomagverziójának növelése.
+A katalógus miatt a régi technológiát felismerjük és elmagyarázzuk, a támogatási
+döntést viszont a gyártói életciklus alapján hozzuk meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az AngularJS egy régebbi JavaScript-alapú frontend framework,
@@ -67,13 +97,6 @@ Ilyenkor a feladat gyakran nem új fejlesztés, hanem:
 > Történetileg fontos szerepe volt a modern frontend-fejlesztés kialakulásában,
 > de hivatalos támogatása 2022 januárjában megszűnt.  
 > Ezért új projektekhez ma már nem ajánlott, inkább régi rendszerek karbantartásánál találkozhatunk vele.
-
-## Gyakori vizsgahibák
-
-- Az AngularJS-t a mai Angularral azonosnak venni.
-- Úgy beszélni róla, mintha ma is elsődleges ajánlott technológia lenne.
-- Nem megemlíteni a legacy státuszt.
-- Nem mondani, hogy főleg SPA-khoz használták.
 
 ## Gyors önellenőrzés
 
@@ -93,6 +116,12 @@ Ilyenkor a feladat gyakran nem új fejlesztés, hanem:
 
 ## Források
 
+Ellenőrizve: `2026-10-14`.
+
+- [AngularJS: official status](https://angularjs.org/): 2022 januárja óta megszűnt hivatalos támogatás, adatbinding.
+- [Angular: overview](https://angular.dev/overview): a mai Angular külön komponensalapú keretrendszer.
+
+
 1. AngularJS official site  
    https://angularjs.org/  
    Használat: hivatalos státusz és leírás az AngularJS szerepéről;
@@ -101,8 +130,6 @@ Ilyenkor a feladat gyakran nem új fejlesztés, hanem:
 
 2. Stack Overflow Developer Survey 2025 - Technology  
    https://survey.stackoverflow.co/2025/technology/  
-   Használat: aktuális technológiai körkép és usage snapshot,
-   amelyben az AngularJS már alacsonyabb jelenlétű,
-   jellemzően legacy technológiaként látszik.
+   Használat: 2025-ös történeti használati felmérés. A támogatási státusz forrása az AngularJS hivatalos oldala.
 
 Megnyitva: `2026-04-08`

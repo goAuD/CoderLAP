@@ -60,6 +60,12 @@ Weil die Beschwerden oft:
 - langsam entstehen
 - anfangs kaum merkbar sind
 
+## Bewegung durch die Arbeitsorganisation ermöglichen
+
+Ein Sitz-Steh-Tisch ermöglicht Haltungswechsel, dauerhaftes Stehen ist aber ebenfalls nicht das Ziel. Ein Team kann längere Programmierphasen durch kurze Besprechungen ohne Bildschirm unterbrechen und Unterlagen so anordnen, dass regelmäßig Gelegenheit zum Aufstehen besteht. Beim Wechsel zum Stehen werden Tisch und Monitor erneut eingestellt.
+
+Schutz wirkt auf mehreren Ebenen: passende Arbeitsmittel, abwechslungsreiche Aufgaben, realistische Belastung und Teamgewohnheiten, die Unterbrechungen erlauben. Kann wegen enger Termine niemand pausieren, löst eine Erinnerungs-App allein das Problem nicht. Beschwerden sollen gemeldet und der Arbeitsplatz gemeinsam mit der betroffenen Person erneut beurteilt werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei sitzender Tätigkeit sind die wichtigsten Schutzmaßnahmen
@@ -68,13 +74,6 @@ Weil die Beschwerden oft:
 > sowie ein gut eingestellter Monitor und Arbeitsmittel.  
 > Ziel ist die Verringerung der Überlastung von Rücken, Nacken, Schultern und Kreislauf.  
 > Es reicht nicht nur "richtig zu sitzen", regelmäßige Bewegung und Unterbrechung sind ebenso wichtig.
-
-## Häufige Prüfungsfehler
-
-- Sitzende Tätigkeit als passiv und harmlos zu betrachten.
-- Nur den Stuhl zu erwähnen, die Bewegung nicht.
-- Zu glauben, dass ein teurer Stuhl automatisch alles löst.
-- Die Rolle der Arbeitsorganisation nicht zu erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -94,6 +93,11 @@ Weil die Beschwerden oft:
 
 ## Quellen
 
+- [AUVA: Bewegungsübungen für den beruflichen Alltag](https://auva.at/praevention/medien-und-publikationen/publikationen-us/m-035-bewegungsuebungen-fuer-den-beruflichen-alltag/)  
+  Bewegung im Arbeitsalltag.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
 1. AUVA - M 035 Bewegungsübungen für den beruflichen Alltag  
    https://auva.at/praevention/medien-und-publikationen/publikationen-us/m-035-bewegungsuebungen-fuer-den-beruflichen-alltag/  
    Verwendung: offizielle AUVA-Quelle zur Rolle von Bewegung und Haltungswechsel.
@@ -103,7 +107,7 @@ Weil die Beschwerden oft:
    Verwendung: praktische ergonomische Empfehlungen für sitzende Tätigkeit.
 
 3. Arbeitsinspektion - Schnittstelle Mensch - Technik  
-   https://www.arbeitsinspektion.gv.at/Arbeitsstaetten-_Arbeitsplaetze/Ergonomie/Schnittstelle_Mensch_-_Technik.html  
+   https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsstaette_baustelle/ergonomie/schnittstelle_mensch_technik.html  
    Verwendung: offizieller ergonomischer Hintergrund
    zum an den Menschen angepassten Arbeitsplatz
    und zur Bedeutung der Körperhaltung.

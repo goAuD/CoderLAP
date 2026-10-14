@@ -146,9 +146,17 @@ Az elfogadás azt jelenti, hogy a megrendelő vagy felelős fél visszajelzi:
 
 - mindig legyen terv
 - legyen pilot vagy tesztkör
-- legyen rollback lehetőség
+- legyen kipróbált helyreállítási terv
 - adatmigration előtt legyen mentés
 - a kommunikáció és oktatás ne maradjon el
+
+## Bevezetési döntés: tovább, megállás vagy visszaállás?
+
+Egy foglalási rendszer új verzióját először öt kijelölt tesztfelhasználó kapja meg. Előre megállapodunk: a bejelentkezés és a foglalás mentése minden ellenőrző esetben sikeres legyen, adatvesztés ne jelentkezzen. A pilot után a felelős dönt a következő csoportról, a megfigyelési idő és a teszteredmények alapján.
+
+Az ellenőrzéshez a telepítés előtti mentésből már visszaállítottunk egy elkülönített próbapéldányt. Ha a pilot mentési hibát jelez, a bevezetést leállítjuk. A régi alkalmazásverzió visszakapcsolása csak akkor elegendő, ha az új adatbázisséma még kompatibilis vele. Adatmigrációnál külön kell kezelni a visszaállás óta keletkezett adatokat, különben egy régi mentés visszatöltése érvényes új foglalásokat is elveszíthet.
+
+A rollback ezért tervezett és kipróbált eljárás, nem minden változáshoz létező varázsgomb. Előfordulhat, hogy egy előkészített javító kiadás vagy biztonságos átmeneti leállítás a megfelelő helyreállítási út.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -159,14 +167,6 @@ Az elfogadás azt jelenti, hogy a megrendelő vagy felelős fél visszajelzi:
 > Fontos része a biztonsági követelmények figyelembevétele,
 > az adatmigráció, valamint a rollback lehetősége arra az esetre,
 > ha a bevezetés nem sikerül.
-
-## Gyakori vizsgahibák
-
-- A rolloutot pusztán telepítésnek tekinteni.
-- Nem említeni a rollback lehetőségét.
-- Kihagyni a felhasználói oktatást.
-- Nem gondolni adatmigrációra.
-- Az átadás és elfogadás különbségét nem felismerni.
 
 ## Gyors önellenőrzés
 
@@ -185,6 +185,11 @@ Az elfogadás azt jelenti, hogy a megrendelő vagy felelős fél visszajelzi:
 5. Mert a felhasználóknak tudniuk kell az új rendszert használni
 
 ## Források
+
+- [Microsoft: Safe deployment practices](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments)  
+  Fokozatos bevezetés, állapotellenőrzés és helyreállítás.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Planning the Deployment - Microsoft Learn  
    https://learn.microsoft.com/en-us/iis/web-hosting/installing-infrastructure-components/planning-the-deployment  

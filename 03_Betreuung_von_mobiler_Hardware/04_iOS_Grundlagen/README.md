@@ -107,6 +107,14 @@ Az iOS egyik fontos ismérve:
 | egységesebb élmény                    | változatosabb eszköz- és felületvilág |
 | szoros hardver-szoftver együttműködés | nagyobb platformszórás                |
 
+## Kidolgozott eset: egy alkalmazás hozzáférései
+
+Egy tanulói alkalmazásnak profilkép kell. Ha a rendszer által kínált képválasztóval egyetlen fotó kijelölhető, a teljes fotótárhoz való hozzáférés nem feltétlenül szükséges. A sandbox az alkalmazás saját adatainak elkülönítését szolgálja; más adatokhoz rendszer által biztosított felületeken és szabályok szerint férhet hozzá.
+
+A karbantartási próba során megnézzük az OS-frissítést, az appengedélyeket és a helyreállítható mentést. A szinkronizálás és a biztonsági mentés külön működés: a szinkron egy törlést másik eszközre is átvihet. Az App Store ellenőrzése sem helyettesíti az app céljának és adatkezelésének megértését.
+
+**Terjesztés, 2026-10-14:** az App Store fontos központi csatorna, de az EU-ban feltételekhez kötötten alternatív piactér és webes alkalmazásterjesztés is elérhető. A lehetőséget az aktuális régiós és rendszerkövetelmények alapján kell ellenőrizni.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az iOS az Apple mobil operációs rendszere az iPhone számára.  
@@ -115,14 +123,6 @@ Az iOS egyik fontos ismérve:
 > az egységesebb felhasználói élmény
 > és az erős biztonsági-adatvédelmi modell.  
 > A mai Apple platformelnevezésben az iPhone rendszere iOS, míg az iPadé iPadOS.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy az iOS sok gyártó telefonján fut.
-- Az iOS-t és az App Store-t ugyanannak tekinteni.
-- Elfelejteni, hogy az Apple ma külön iPadOS nevet használ iPadre.
-- Az iOS előnyeit úgy felsorolni, hogy a korlátozásokat teljesen kihagyják.
-- Nem említeni a biztonsági és review modellt.
 
 ## Gyors önellenőrzés
 
@@ -159,3 +159,10 @@ Az iOS egyik fontos ismérve:
    Használat: App Store review, platformkontroll, biztonsági és minőségi szabályozás.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Apple: Runtime security](https://support.apple.com/guide/security/security-of-runtime-process-sec15bfe098e/web): sandbox és szabályozott adat-hozzáférés.
+- [Apple: Alternative app distribution](https://support.apple.com/en-us/118110): EU-s alternatív terjesztési lehetőségek.
+
+Ellenőrizve: `2026-10-14`.

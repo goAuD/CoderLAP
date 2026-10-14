@@ -62,6 +62,19 @@ Például:
 - AWS = főleg infrastruktúra és platform
 - Microsoft 365 = kész szoftver szolgáltatásként
 
+## Szolgáltató helyett konkrét szolgáltatást soroljunk be
+
+| Konkrét példa | Mire használjuk? | Besorolási indok |
+| --- | --- | --- |
+| Amazon EC2 | virtuális gép futtatása | a vendég OS felett is van kontroll, tipikus IaaS |
+| Google Compute Engine | VM-erőforrások | infrastruktúra, nem kész irodai alkalmazás |
+| Azure App Service | saját webalkalmazás közzététele | kezelt futtatási platform, PaaS |
+| Gmail a Google Workspace részeként | kész levelezés használata | alkalmazásszolgáltatás, SaaS |
+
+**Kidolgozott kérdés:** „Az Azure IaaS vagy PaaS?” A válaszhoz meg kell nevezni a szolgáltatást. Egy Azure virtuális gép és az App Service eltérő felelősséget ad az ügyfélnek, bár azonos szolgáltatóhoz tartoznak.
+
+Egy márkanév több terméket, csomagot és díjazást takarhat. Vizsgán a megoldott feladatot és az ügyfélnél maradó kezelési munkát is mondjuk el. A terméklista itt példa, nem beszerzési ajánlás; az árakat, kvótákat és támogatási feltételeket mindig az adott aktuális csomag alapján ellenőrizzük.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Ismert cloud szolgáltatások például az AWS, a Microsoft Azure és a Google Cloud
@@ -69,13 +82,6 @@ Például:
 > valamint a Microsoft 365, a Google Workspace, az iCloud vagy a Dropbox
 > mint inkább SaaS vagy végfelhasználói cloud megoldások.  
 > Vizsgán fontos, hogy a szolgáltatás példáját a megfelelő cloud modellhez tudjuk kapcsolni.
-
-## Gyakori vizsgahibák
-
-- Minden cloud szolgáltatást SaaS-nak nevezni.
-- Azt hinni, hogy az AWS csak tárhely.
-- A Microsoft 365-öt infrastruktúraszolgáltatásnak mondani.
-- Nem tudni konkrét példát mondani.
 
 ## Gyors önellenőrzés
 
@@ -124,3 +130,12 @@ Például:
    Használat: hivatalos Dropbox szolgáltatási oldal.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [AWS: EC2 concepts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html): VM-infrastruktúra konkrét példája.
+- [Azure: App Service overview](https://learn.microsoft.com/en-us/azure/app-service/overview): alkalmazásfuttató PaaS.
+- [Google: Compute Engine](https://docs.cloud.google.com/compute/docs/overview): virtuális gépek.
+- [Google Workspace: Gmail](https://workspace.google.com/products/gmail/): kész levelezési szolgáltatás.
+
+Ellenőrizve: `2026-10-14`.

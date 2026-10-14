@@ -117,6 +117,19 @@ Sie sind nicht gut, wenn:
 - veraltete Teile müssen korrigiert werden
 - nach Änderungen muss auch die Dokumentation aktualisiert werden
 
+## Eine Anleitung als Benutzeraufgabe erproben
+
+Wir prüfen die Dokumentation wie eine Bedienoberfläche. Eine neue Kollegin erhält etwa die Aufgabe: „Exportiere die drei Musterbuchungen der Testumgebung als CSV.“ Sie bekommt die Anleitung, aber keine mündlichen Tipps des Autors. Wir notieren unklare Schritte und das überprüfbare Ergebnis: Die Datei existiert, enthält drei Datenzeilen und zeigt Umlaute korrekt an.
+
+| Dokumentelement | Konkrete Umsetzung |
+| --- | --- |
+| Schritt | „Öffne die Seite Buchungen und wähle Exportieren.“ |
+| Ergebnis | „Der Browser lädt eine UTF-8-kodierte CSV-Datei herunter.“ |
+| Bild | Ausschnitt des benötigten Bedienelements ohne personenbezogene Daten |
+| Barrierefreiheit | Textanweisung zusätzlich zum Bild; logische Überschriften und aussagekräftige Links |
+
+Nach der Überarbeitung wiederholen wir die Probe. Eine eindeutige Menübezeichnung mit erwartetem Ergebnis ist häufig langlebiger als ein veralteter Screenshot.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei der Aufbereitung technischer Dokumentation muss der Inhalt logisch strukturiert,
@@ -125,14 +138,6 @@ Sie sind nicht gut, wenn:
 > kurze und präzise Formulierungen sowie der angemessene Einsatz
 > von Bildern, Tabellen und Beispielen.  
 > Die Dokumentation muss auch langfristig wartbar und aktualisierbar bleiben.
-
-## Häufige Prüfungsfehler
-
-- Die Informationen sind in falscher Reihenfolge angeordnet.
-- Es gibt keine Überschriften oder logische Blöcke.
-- Das Dokument ist zu textlastig und schwer zu überblicken.
-- Es ist nicht in der Sprache der Zielgruppe geschrieben.
-- Veraltete Screenshots bleiben enthalten.
 
 ## Schnelle Selbstkontrolle
 
@@ -151,6 +156,11 @@ Sie sind nicht gut, wenn:
 5. Damit sie nachvollziehbar und wartbar bleibt
 
 ## Quellen
+
+- [Google Technical Writing: Audience](https://developers.google.com/tech-writing/one/audience)  
+  Vorwissen, Aufgaben der Leser und verständliche Sprache.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Google Technical Writing - Organizing large documents  
    https://developers.google.com/tech-writing/two/large-docs  

@@ -6,8 +6,8 @@
 |---|---|
 | webshop címadatot kér a kiszállításhoz | igen |
 | webshop kötelezően marketinghozzájárulást kér a rendeléshez | nem |
-| alkalmazás technikailag szükséges adatot kér a működéshez | igen |
-| alkalmazás külön hozzájárulás nélkül profiloz reklámcélra | általában nem |
+| alkalmazás a kért szolgáltatáshoz szükséges adatot kezel | megfelelő jogalappal és a többi alapelv betartásával |
+| weboldal előzetes hozzájárulás nélkül használ a kért szolgáltatáshoz nem szükséges reklámkövető cookie-t | nem |
 
 ## Mit jelent a Kopplungsverbot?
 
@@ -55,9 +55,10 @@ Ha a weboldal nem szükséges marketing vagy tracking cookie-khoz kér hozzájá
 
 ### Példa 3: app regisztráció
 
-Ha egy alkalmazás a működéshez nem szükséges profilozást akar végezni:
+Egy alkalmazás külön reklámkövető cookie-kat akar használni:
 
-- ehhez külön, valóban önkéntes hozzájárulás kell
+- a nem szükséges cookie-khoz előzetes, valóban önkéntes hozzájárulást kér
+- a további személyesadat-kezelés jogalapját és célját is meghatározza; nem minden profilozási művelet jogalapja automatikusan hozzájárulás
 
 ## Mi nem számít tiltott kapcsolásnak?
 
@@ -75,6 +76,27 @@ Például:
 - a hozzájárulás nem lehet kikényszerített
 - a hozzájárulást külön kell kezelni a szerződés teljesítésétől, ha nem szükséges adatkezelésről van szó
 
+## A hozzájárulás életútja egy felületen
+
+A felhasználó időpontot foglalhat anélkül, hogy hírlevelet kérne. A külön hírlevélválasztó
+alapállapotban üres; a szöveg megnevezi a küldőt és a célt. A szolgáltató azt is
+igazolni tudja, melyik tájékoztatás alapján, mikor történt az aktív hozzájárulás.
+A visszavonás legalább olyan egyszerű legyen, mint a megadás, és állítsa le az adott
+hozzájárulásra épülő jövőbeli kezelést. A korábbi, jogszerű kezelés ettől nem válik visszamenőleg jogellenessé.
+
+A szolgáltatáshoz ténylegesen szükséges adatokat megfelelő jogalapon kezeljük,
+nem kérünk rájuk látszólag szabadon visszavonható engedélyt, ha a szolgáltatás
+anélkül nem teljesíthető. Egy „elfogadom az adatvédelmi tájékoztatót” mező sem ad
+általános engedélyt minden későbbi célra.
+
+**Felületi próba:** a marketingmezőt üresen hagyva is sikerül a foglalás;
+bekapcsolva csak a közölt célra aktiválódik a feliratkozás; visszavonva megszűnik.
+Így a jogi döntést tényleges működéssel tudjuk ellenőrizni.
+
+Forrás: [EDPB: a hozzájárulás feltételei](https://www.edpb.europa.eu/sme/be-compliant/process-personal-data-lawfully_en),
+[DSB: cookie-k és hozzájárulás](https://dsb.gv.at/faqs/datenschutz-cookies), GDPR 7. cikk.
+Ellenőrizve: 2026-10-14.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Kopplungsverbot azt jelenti, hogy a hozzájárulásnak önkéntesnek kell lennie.  
@@ -82,13 +104,6 @@ Például:
 > olyan adatkezeléshez kötni,
 > amely nem szükséges a szerződés teljesítéséhez.  
 > Ha nincs valódi választási lehetőség, akkor a hozzájárulás érvényessége megkérdőjelezhető.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy bármilyen adatkezeléshez kérhető hozzájárulás, és az mindig rendben van.
-- Nem megkülönböztetni a szükséges és a nem szükséges adatkezelést.
-- Elfelejteni, hogy a hozzájárulásnak önkéntesnek kell lennie.
-- A szerződés teljesítéséhez szükséges adatkezelést összekeverni a marketinggel.
 
 ## Gyors önellenőrzés
 

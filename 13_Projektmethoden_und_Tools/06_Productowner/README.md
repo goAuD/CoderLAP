@@ -38,18 +38,19 @@ Mert ha nincs világos prioritás:
 | Product Owner | a termékérték és prioritás felelőse |
 | projektvezető | projektkoordinációs fókusz |
 
+## Két kívánság között érték alapján dönteni
+
+A tanulók témakeresést kérnek, a vezetőség látványos kezdőlapi statisztikát szeretne. A Product Owner tisztázza, melyik segíti jobban a jelenlegi Product Goalt, például a tananyag gyors megtalálását. A döntéshez használati visszajelzést és a Developers becslését kéri, majd érthetően rendezi a Product Backlogot.
+
+Egy személy viseli ezt a felelősséget, több érintett igényét képviselve. Mások segíthetnek tételeket megírni és pontosítani, de a felelősség nem kerül át egy bizottsághoz. A technikai megvalósítást és a vállalható sprintmunkát a Developers tervezi.
+
+A Product Owner nem pusztán jegykezelő: a termék értékével és céljával is foglalkozik. A Product Manager elnevezés szervezetenként mást takar; a Scrum nem ír elő ilyen külön szerepkört, ezért a kettő között nincs mindenhol azonos szervezeti határ.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Product Owner a Scrum csapat egyik kulcsszereplője, aki a termék értékének maximalizálásáért felel.  
 > Ennek része a product backlog kezelése, a prioritások meghatározása és a stakeholderigények összehangolása.  
 > A Product Owner biztosítja, hogy a csapat a legfontosabb és legnagyobb értéket teremtő elemekkel foglalkozzon.
-
-## Gyakori vizsgahibák
-
-- A Product Ownert Scrum Masterrel összekeverni.
-- Azt állítani, hogy ő vezeti technikailag a fejlesztőket.
-- Nem megemlíteni a backlog prioritását.
-- Nem különválasztani a stratégiai és végrehajtásközeli termékszerepeket.
 
 ## Gyors önellenőrzés
 
@@ -68,6 +69,11 @@ Mert ha nincs világos prioritás:
 5. Ő segíti, hogy a legértékesebb dolgok készüljenek el
 
 ## Források
+
+- [Scrum.org: What is a Product Owner?](https://www.scrum.org/resources/what-is-a-product-owner)  
+  A Scrum Guide-hoz kapcsolódó hivatalos szakmai magyarázat.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

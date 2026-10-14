@@ -6,7 +6,7 @@
 |---|---|
 | 1. Mobil | inhaltliches Wesentliches, einfaches Layout |
 | 2. Tablet | mehr Platz, Erweiterung |
-| 3. Desktop | weitere Funktionen und komplexeres Layout |
+| 3. Desktop | Layout nutzt mehr Platz, dieselben Kernaufgaben bleiben erhalten |
 
 ## Warum ist Mobile First gut?
 
@@ -50,6 +50,42 @@ Also:
 - Leistung und Navigation sind Schlüsselfragen.
 - Die Logik der schrittweisen Erweiterung muss konsequent angewendet werden.
 
+## Von der Aufgabe aus planen: ein Thema finden
+
+Eine lernende Person sucht auch am Telefon ein Thema, öffnet die Erklärung und
+kehrt zu den Treffern zurück. Diese Kernaufgabe ist am Desktop dieselbe. Zuerst
+machen wir sie gut bedienbar: sichtbare Suche, verständliche Titel, funktionierender
+Rückweg und lesbarer Inhalt. Bei mehr Platz kann später eine dauerhafte
+Seitenleiste hinzukommen. Grundlegende Funktionen bleiben auch mobil verfügbar.
+
+**CSS-Ausschnitt für den Browser:** In `.navigation` liegen normale HTML-Links.
+Das Dokument verwendet einen üblichen Viewport-Metatag.
+
+```css
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .navigation { flex-direction: row; flex-wrap: wrap; }
+}
+```
+
+Standardmäßig stehen die Links untereinander. Ab `48rem` Viewportbreite stehen
+sie nebeneinander und brechen bei Bedarf um. `48rem` ist der gewählte Breakpoint
+dieses Entwurfs, keine allgemeine Tablet-Grenze. CSS-Pixel sind auch nicht
+identisch mit den physischen Gerätepixeln; beim Zoomen kann sich die verfügbare
+CSS-Breite ändern.
+
+**Progressive Enhancement:** Ein einfacher HTML-Link kann ohne JavaScript
+navigieren; JavaScript ergänzt später schnelles Filtern oder Animationen. Davon
+getrennt ist die Entscheidung, das Layout zuerst für schmale Ansichten zu
+entwerfen. Mobile First garantiert keine gute Leistung: Wir messen auch die
+übertragenen Bild- und Codemengen. Probiere die Aufgabe mit Tastatur, 200%
+Vergrößerung und langsamer Verbindung aus.
+
 ## Prüfungstaugliche Formulierung
 
 > Mobile First ist eine Webdesign-Strategie,
@@ -59,13 +95,6 @@ Also:
 > dass die Priorität von Inhalt und Funktionalität klarer sichtbar wird
 > und die Oberfläche in der Regel einfacher,
 > schneller und auch auf Mobilgeräten besser nutzbar wird.
-
-## Häufige Prüfungsfehler
-
-- Mobile First mit Responsive Webdesign verwechseln.
-- Glauben, dass man nur für Mobilgeräte eine Seite erstellt.
-- Die Rolle der Inhaltspriorisierung nicht erwähnen.
-- Nicht über die schrittweise Erweiterung sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,6 +113,11 @@ Also:
 5. Weil der Benutzer auf Mobilgeräten besonders empfindlich darauf reagiert
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Responsive web design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design): Mobile-First-Media-Queries, Viewport und skalierbare Oberfläche.
+
 
 1. MDN - Mobile First
    https://developer.mozilla.org/en-US/docs/Glossary/Mobile_First

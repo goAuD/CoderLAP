@@ -75,6 +75,36 @@ Weil es eine häufige Prüfungsfrage ist:
 | CSS | Formatierung der HTML-Darstellung |
 | JSON | ein anderes Datenaustauschformat, keine Auszeichnungssprache |
 
+## Wohlgeformtes Dokument und gültige Daten
+
+Dies ist ein vollständiges XML-Dokument mit UTF-8-Kodierung:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<course id="15">
+  <title>Code &amp; Practice</title>
+  <lessons>20</lessons>
+</course>
+```
+
+Das einzige Wurzelelement ist `course`. Start- und Endnamen stimmen auch in
+der Großschreibung überein, die Elemente sind korrekt verschachtelt und der
+Attributwert steht in Anführungszeichen. Der verarbeitete Titel lautet
+`Code & Practice`, denn `&amp;` steht für ein `&`. Der Text von `lessons` ist `20`;
+dadurch wird er noch nicht automatisch zu einer geprüften ganzen Zahl.
+
+**Wohlgeformtheit** bedeutet, dass die XML-Strukturregeln erfüllt sind. Ein Schema
+kann zusätzlich verlangen, dass `lessons` eine nichtnegative ganze Zahl und
+`title` verpflichtend ist. Ein Dokument kann wohlgeformt sein und trotzdem das
+gewählte Schema verletzen. Geschäftsregeln, etwa die Existenz der Kurs-ID,
+können weitere Prüfungen erfordern.
+
+Bei HTML nutzt der Browser die festgelegte Bedeutung von `h1`, `p` oder `button`.
+XML bietet eine allgemeine Syntax. Die Bedeutung der Elementnamen legt die
+Anwendung oder ein XML-basiertes Format fest. SVG ist beispielsweise XML-basiert
+und beschreibt Grafiken. XML ist deshalb nicht auf den Datenaustausch zwischen
+Datenbanken beschränkt.
+
 ## Prüfungstaugliche Formulierung
 
 > HTML und XML sind beides Auszeichnungssprachen, die jedoch für unterschiedliche Zwecke eingesetzt werden.  
@@ -82,13 +112,6 @@ Weil es eine häufige Prüfungsfrage ist:
 > während XML zur Beschreibung
 > und zum Austausch strukturierter Daten verwendet wird.  
 > HTML arbeitet mit vordefinierten Elementen, XML ermöglicht eine flexiblere Datenstruktur.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, HTML sei ein Datenaustauschformat.
-- XML als Darstellungssprache betrachten.
-- CSS als Teil von HTML behandeln.
-- Nicht erwähnen, dass in XML eigene Elemente definiert werden können.
 
 ## Schnelle Selbstkontrolle
 
@@ -107,6 +130,11 @@ Weil es eine häufige Prüfungsfrage ist:
 5. Bei XML
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [W3C: XML 1.0](https://www.w3.org/TR/xml/): Wohlgeformtheit, Wurzelelement, Referenzen und Gültigkeit.
+
 
 1. MDN - HTML basics  
    https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics  

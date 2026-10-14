@@ -83,6 +83,47 @@ Wenn das Speichern und Lesen nicht mit derselben Kodierung erfolgt, wird das Erg
 - Bei älteren Systemen können Legacy-Kodierungen gemischt auftreten.
 - Beim Datenaustausch und bei Import/Export ist die korrekte Kodierung besonders wichtig.
 
+## Zeichen, Codeeinheit und Byte: drei unterschiedliche Längen
+
+**Aufgabe:** Den Text `Aő🙂` in UTF-8-Bytes kodieren und zurücklesen.
+Das Beispiel läuft in aktuellem Node.js und in der Browserkonsole:
+
+<!-- example:run -->
+
+```javascript
+const text = "Aő🙂";
+const bytes = new TextEncoder().encode(text);
+console.log(text.length, [...text].length, bytes.length);
+console.log([...bytes].map((byte) => byte.toString(16).padStart(2, "0")).join(" "));
+console.log(new TextDecoder("utf-8", { fatal: true }).decode(bytes));
+console.log("é" === "é");
+console.log("é" === "é".normalize("NFC"));
+```
+
+```text
+4 3 7
+41 c5 91 f0 9f 99 82
+Aő🙂
+false
+true
+```
+
+Der Text besteht aus drei Unicode-Codepunkten. JavaScripts `length` zählt
+jedoch UTF-16-Codeeinheiten. Das Emoji benötigt zwei, daher ist das Ergebnis `4`.
+In UTF-8 belegt `A` ein Byte, `ő` zwei und das Emoji vier, zusammen `7`.
+`TextEncoder` erzeugt UTF-8; der Decoder stellt daraus den Text wieder her.
+`fatal: true` fordert bei ungültigen Eingabebytes eine Ausnahme statt eines
+Ersatzzeichens.
+
+`é` kann aus einem Codepunkt oder aus `e` und einem kombinierenden Akzent bestehen.
+Die letzten beiden Zeilen zeigen: Rohzeichenfolgen können verschieden sein und
+nach NFC-Normalisierung übereinstimmen. Die Anzahl sichtbarer Zeichen kann sogar
+von der Codepunktanzahl abweichen, etwa bei zusammengesetzten Emojis.
+
+Die Schriftart ist eine andere Ebene. Auch bei korrekten Bytes kann ein Zeichen
+fehlen, wenn die Schrift keinen passenden Glyphen enthält. Ein Wechsel der
+Zeichenkodierung löst dieses Darstellungsproblem nicht.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Zeichenkodierung bestimmt, wie die Zeichen eines Textes in Form von Bytes repräsentiert werden.  
@@ -90,13 +131,6 @@ Wenn das Speichern und Lesen nicht mit derselben Kodierung erfolgt, wird das Erg
 > weil damit Zeichen vieler Sprachen einheitlich verarbeitet werden können
 > und fehlerhafte Zeichendarstellung vermieden wird.  
 > Die typische Folge einer falschen Kodierung ist verzerrter oder unleserlicher Text.
-
-## Häufige Prüfungsfehler
-
-- Unicode und UTF-8 als dasselbe bezeichnen.
-- Behaupten, dass ASCII für jeden Text ausreicht.
-- Nicht erwähnen, dass Kodierung eine Byte-Interpretationsregel ist.
-- Die `charset`-Angabe im Web vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -115,6 +149,13 @@ Wenn das Speichern und Lesen nicht mit derselben Kodierung erfolgt, wird das Erg
 5. `<meta charset="utf-8" />`
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder): Erzeugen von UTF-8-Bytes.
+- [WHATWG: Encoding](https://encoding.spec.whatwg.org/): Dekodierung und Fehlerbehandlung.
+- [MDN: String.normalize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize): Unicode-Normalisierung.
+
 
 1. MDN - Character encoding  
    https://developer.mozilla.org/en-US/docs/Glossary/Character_encoding  

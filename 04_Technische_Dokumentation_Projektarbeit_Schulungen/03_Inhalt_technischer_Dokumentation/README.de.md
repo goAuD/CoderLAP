@@ -142,6 +142,14 @@ Es ist wichtig, dass sichtbar ist:
 - aktuell sein
 - reproduzierbare Schritte enthalten
 
+## Ein System, drei brauchbare Dokumente
+
+Bei einer Terminbuchungsanwendung erklärt die Benutzeranleitung das Buchen und Stornieren. Die Entwicklerdokumentation beschreibt Datenmodell, API-Aufrufe und Tests. Das Betriebshandbuch enthält überprüfbare Schritte für Installation, Sicherung und Wiederherstellung.
+
+Statt „Backup erstellen“ nennt ein Sicherungskapitel die betroffenen Daten, benötigte Berechtigung, Ziel und Aufbewahrungsdauer. Die Wiederherstellung erhält ein eigenes Verfahren mit Probe: In einer leeren Testumgebung prüfen wir die Anzahl der Datensätze und das Öffnen einer Buchung. Dokumentiert werden auch die getestete Version und die verantwortliche Person.
+
+Das Erfolgskriterium ist damit konkret: Eine andere Person kann die Aufgabe anhand der Anleitung ohne mündliche Hilfe ausführen. Statt Geheimnisse einzutragen, verweist die Dokumentation auf die sichere Geheimnisverwaltung.
+
 ## Prüfungstaugliche Formulierung
 
 > Ziel einer technischen Dokumentation ist es,
@@ -150,14 +158,6 @@ Es ist wichtig, dass sichtbar ist:
 > die Systembeschreibung, die Installations- oder Nutzungsschritte,
 > die Fehlerbehebung und die Versionsinformationen.  
 > Die Dokumentation ist nur dann nützlich, wenn sie genau, zielgruppengerecht und aktuell ist.
-
-## Häufige Prüfungsfehler
-
-- Die Zielgruppe wird nicht angegeben.
-- Es fehlen Voraussetzungen oder Umgebungsbeschreibung.
-- Es gibt keine Schritt-für-Schritt-Anleitungen.
-- Der Fehlerbehebungsteil fehlt.
-- Das Dokument ist nicht versioniert oder nicht aktualisiert.
 
 ## Schnelle Selbstkontrolle
 
@@ -176,6 +176,11 @@ Es ist wichtig, dass sichtbar ist:
 5. Damit man weiß, auf welchen Stand sich das Dokument bezieht
 
 ## Quellen
+
+- [Google Technical Writing: Documents](https://developers.google.com/tech-writing/one/documents)  
+  Dokumentation nach Umfang und Zielgruppe.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Google Technical Writing - Organizing large documents  
    https://developers.google.com/tech-writing/two/large-docs  

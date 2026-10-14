@@ -45,6 +45,20 @@ Gyakran vizsgáljuk:
 
 Az ügyfél sokszor stakeholder, de nem minden stakeholder ügyfél.
 
+## Érintetti térkép egy iskolai alkalmazáshoz
+
+| Érintett | Megértendő igény | Bevonás példája |
+|---|---|---|
+| tanuló | gyors keresés mobilon | feladatmegoldás megfigyelése |
+| tanár | szakmailag helyes anyag | tartalmi ellenőrzés |
+| üzemeltető | helyreállítható szolgáltatás | mentési és átadási próba |
+| képernyőolvasót használó résztvevő | önálló hozzáférés | akadálymentességi kipróbálás |
+| döntéshozó | vállalható ráfordítás | döntési pont és költségkép |
+
+Egy résztvevő szervezeti befolyása lehet kicsi, miközben az igénye alapvető a használhatósághoz. A befolyás-érdekeltség mátrix ezért kommunikációs segítség, nem a szükségletek fontosságának automatikus rangsora.
+
+A kapcsolattartási terv legyen célhoz kötött: kitől milyen információ kell, mikor és milyen formában? Elég a szükséges szerepet és elérhetőséget nyilvántartani; személyes minősítések nem segítik a projektet.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Stakeholdernek nevezzük azokat a személyeket,
@@ -52,13 +66,6 @@ Az ügyfél sokszor stakeholder, de nem minden stakeholder ügyfél.
 > hatással vannak rá, vagy a projekt hatással van rájuk.  
 > Ide tartozhat például a megrendelő, a felhasználó, a projektcsapat, a vezetőség vagy az üzemeltetés.  
 > A stakeholder-kezelés célja az érintettek azonosítása, elvárásaik megértése és a megfelelő kommunikáció biztosítása.
-
-## Gyakori vizsgahibák
-
-- Csak az ügyfelet nevezni stakeholdernek.
-- Kihagyni a felhasználókat vagy az üzemeltetést.
-- Nem megemlíteni a kommunikáció szerepét.
-- A stakeholder fogalmát túl szűken értelmezni.
 
 ## Gyors önellenőrzés
 
@@ -77,6 +84,11 @@ Az ügyfél sokszor stakeholder, de nem minden stakeholder ügyfél.
 5. Megrendelő, felhasználó, vezetőség
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Érintetti mátrix és kommunikációtervezés.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - What is Stakeholder Mapping?  
    https://www.atlassian.com/work-management/project-collaboration/stakeholder-mapping  

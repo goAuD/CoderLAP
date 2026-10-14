@@ -46,7 +46,7 @@ Ezért vizsgán az alapelvet kell tudni, nem egy leegyszerűsítő mítoszt.
 | Szempont | Interpreter | Compiler |
 |---|---|---|
 | gyors kipróbálás | gyakran előny | változó |
-| előzetes fordítás | nem ez a fő elv | igen |
+| fordítás időpontja | értelmezéssel végrehajt | futtatás előtt (AOT) vagy közben (JIT) |
 | futási teljesítmény | változó | gyakran kedvező |
 | hibák észlelése | sokszor futás közben is | sok hiba már fordításkor kijöhet |
 
@@ -58,19 +58,30 @@ Ezért vizsgán az alapelvet kell tudni, nem egy leegyszerűsítő mítoszt.
 | interpreter | közvetlenebbül értelmez és hajt végre |
 | assembler | assembly nyelvet alakít gépközeli formára |
 
+## A fordítás és a végrehajtás külön lépés
+
+| Példa | Jellemző feldolgozás |
+|---|---|
+| C natív program | előfeldolgozás, fordítás, assembly, objektumfájl, linkelés |
+| Java | forrásból bájtkód, majd a JVM végrehajtja; JIT is használható |
+| JavaScript V8-ban | elemzés, bájtkód, interpreter és futás közbeni fordítási fokozatok |
+
+A **linker** összeállítja az objektumfájlokat és feloldja a köztük lévő
+hivatkozásokat. Egy elkészült programnak ettől még lehet szüksége futtatókörnyezetre
+vagy dinamikus könyvtárra. A **JIT compiler** valódi fordító, csak futás közben
+dolgozik; ezért a „compiler mindig előre fordít” megfogalmazás túl szűk.
+
+A fordítás sikere a nyelvi ellenőrzésekről ad információt, nem bizonyítja az
+üzleti szabály helyességét. Egy helyesen forduló program is számolhat téves
+szállítási díjat. A szintaxis ellenőrzése, a futásidejű ellenőrzés és az elvárt
+eredmény tesztelése egymást kiegészítő lépések.
+
 ## Vizsgán jól használható megfogalmazás
 
-> A compiler a forráskódot előre lefordítja egy másik formára, gyakran gépi kódra vagy köztes kódra.  
+> A compiler a kódot másik reprezentációra fordítja, például gépi kódra vagy bájtkódra; ez történhet a futtatás előtt vagy közben.  
 > Az interpreter ezzel szemben a kód végrehajtását közvetlenebb módon, az értelmezéssel együtt végzi.  
-> A modern rendszerekben a két megközelítés gyakran keveredik, de az alapvető különbség továbbra is az előre fordítás és
-> a közvetlenebb értelmezés között van.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy minden nyelv tisztán csak fordított vagy csak interpretált.
-- Az assemblert a compilerrel azonosítani.
-- Nem megemlíteni a köztes kód lehetőségét.
-- Túl leegyszerűsítően kezelni a modern futtatókörnyezeteket.
+> A modern rendszerekben a két megközelítés gyakran keveredik, de az alapvető különbség továbbra is a kód más reprezentációra alakítása és
+> a közvetlen végrehajtás között van.
 
 ## Gyors önellenőrzés
 
@@ -89,6 +100,12 @@ Ezért vizsgán az alapelvet kell tudni, nem egy leegyszerűsítő mítoszt.
 5. Szintaktikai és bizonyos szerkezeti hibák
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [V8: Ignition](https://v8.dev/docs/ignition): interpreter a modern JavaScript-motorban.
+- [V8: Sparkplug](https://v8.dev/blog/sparkplug): futás közbeni fordítási fokozat.
+
 
 1. Python Docs - Using the Python Interpreter  
    https://docs.python.org/3/tutorial/interpreter.html  

@@ -77,11 +77,32 @@ Például:
 
 ## Kapcsolatuk a gyakorlatban
 
-Ha adatfeldolgozó is részt vesz, általában kell:
+Ha a művelet adatfeldolgozásnak minősül, a GDPR 28. cikke szerint szükséges:
 
-- feldolgozói szerződés
+- adatfeldolgozási szerződés vagy azonos követelményeket teljesítő, kötelező erejű jogi aktus
 - egyértelmű utasítás
 - technikai és szervezési védelem
+
+## Ugyanaz a szolgáltató több szerepben
+
+A webshop a vásárlási adatok kezelésének célját meghatározza. A tárhelyszolgáltató
+ezeket az adatokat az üzemeltető utasításai szerint tárolhatja, ezért ennél a műveletnél
+adatfeldolgozó. A tárhelyszolgáltató saját számlázási adatainál viszont önálló adatkezelő
+lehet. A szerepet tehát **konkrét adatkezelésenként**, nem a cég neve alapján döntjük el.
+
+Ha két szervezet együtt határozza meg a célokat és a lényeges eszközöket,
+közös adatkezelés merülhet fel (26. cikk). A feladatmegosztás ilyenkor sem szünteti meg
+az érintett jogait. Az adatfeldolgozó a rábízott feladat technikai részleteiben kaphat
+mozgásteret, de nem találhat ki önálló új felhasználási célt az ügyfél adataira.
+
+**Gyakorlat:** kiszervezett hírlevélküldés előtt tisztázzuk az utasításokat,
+az adatkört, a titoktartást, a biztonsági intézkedéseket, a további feldolgozókat,
+az incidensjelzést és az adatok visszaadását vagy törlését a feladat végén.
+Az adatkezelő felelőssége a kiszervezéssel nem szűnik meg; az adatfeldolgozónak is
+vannak saját jogszabályi kötelezettségei.
+
+Forrás: [DSB: az adatfeldolgozó kötelezettségei](https://dsb.gv.at/rechte-pflichten/ihre-pflichten-als-auftragsverarbeiterin),
+GDPR 4., 26., 28. és 32. cikk. Ellenőrizve: 2026-10-14.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -89,14 +110,6 @@ Ha adatfeldolgozó is részt vesz, általában kell:
 > Az adatkezelő az, aki az adatkezelés céljáról és eszközeiről dönt.  
 > Az adatfeldolgozó ezzel szemben az adatkezelő nevében, annak utasításai alapján kezel adatot.  
 > A három fogalom elkülönítése azért fontos, mert a GDPR szerinti felelősségek ettől függnek.
-
-## Gyakori vizsgahibák
-
-- Az adatkezelőt és adatfeldolgozót azonosnak tekinteni.
-- Az érintett fogalmába céget érteni.
-- Azt mondani, hogy a hosting szolgáltató mindig adatkezelő.
-- Nem felismerni, hogy a célról döntés az adatkezelő kulcsjellemzője.
-- Nem tudni gyakorlati példát mondani.
 
 ## Gyors önellenőrzés
 

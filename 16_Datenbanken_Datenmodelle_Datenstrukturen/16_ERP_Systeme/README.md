@@ -50,19 +50,22 @@ Az `ERP` rendszerek:
 
 Az `ERP` gyakran a `BIS` egyik legfontosabb része.
 
+## Kidolgozott ERP-folyamat: beszerzéstől készletig
+
+Egy vállalkozás tíz hálózati adaptert rendel. A beszerzés rendelést hoz létre a közös szállítói és cikktörzsből. A raktár nyolc beérkezett darabot rögzít, tehát két darab még nyitott mennyiség. A beérkező számla tíz darabról szól. A rendelés, áruátvétel és számla összevetése eltérést jelez; a folyamatnak ezt kezelnie kell, nem egyszerűen minden modult ugyanarra az értékre állítani.
+
+A közös cikkazonosító összeköti a beszerzést, készletet és könyvelési folyamatot. A szerepkörök ettől még eltérnek: nem minden raktári dolgozó módosíthat szállítói bankszámlát vagy hagyhat jóvá kifizetést.
+
+Bevezetéskor tisztítani kell a duplikált törzsadatokat, megtervezni az importot, az interfészeket és az oktatást. Egy jó elfogadási próba normál rendelést, részszállítást, visszárut és hibás adat javítását is tartalmaz. Migrációnál darabszámokat és egyeztethető egyenlegeket is ellenőrizz.
+
+Az integrált ERP nem feltétlenül egyetlen fizikai adatbázis. A lényeg a következetes üzleti azonosítók és összehangolt folyamatok használata. A több rendszer közti hibákhoz egyértelmű státuszok, újrapróbálás és egyeztetés szükséges.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az `ERP` rendszer egy integrált vállalatirányítási rendszer, amely több üzleti terület, például a pénzügy,  
 > beszerzés, raktározás vagy HR folyamatait közös rendszerben kezeli.  
 > Az `ERP` célja az egységes adatkezelés, a folyamatok összehangolása és a jobb átláthatóság.  
 > Adatbázis-szempontból az `ERP` rendszerek nagy, integrált és konzisztensen kezelt adatkörnyezetre épülnek.
-
-## Gyakori vizsgahibák
-
-- Az `ERP`-t egyszerű könyvelőprogramnak nevezni.
-- Nem megemlíteni az integráltságot.
-- A `BIS`-szel teljesen azonosítani.
-- Kihagyni, hogy több vállalati területet fog össze.
 
 ## Gyors önellenőrzés
 
@@ -91,3 +94,10 @@ Az `ERP` gyakran a `BIS` egyik legfontosabb része.
    Használat: hivatalos forrás az ERP integrált vállalati szerepének gyakorlati bemutatásához.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [SAP: What is ERP?](https://www.sap.com/resources/what-is-erp): integrált üzleti területek és bevezetési szempontok
+- [Oracle: Matching Invoice Lines](https://docs.oracle.com/en/cloud/saas/financials/25d/fappp/matching-invoice-lines.html): rendelés, áruátvétel és számla egyeztetése
+
+Ellenőrizve: `2026-10-14`.

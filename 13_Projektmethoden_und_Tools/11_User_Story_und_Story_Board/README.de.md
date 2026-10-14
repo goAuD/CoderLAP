@@ -63,6 +63,18 @@ Es kann sein:
 - das Story Board sollte nicht nur hübsch, sondern auch verständlich sein
 - keines von beiden ersetzt vollständig eine detaillierte Spezifikation
 
+## Eine Story mit Akzeptanzkriterien
+
+„Als Lernender möchte ich Fragen nach Themenbereich filtern, damit ich gezielt für die nächste Unterrichtsstunde üben kann.“ Das eröffnet das Gespräch; das Verhalten muss zusätzlich geklärt werden:
+
+- Nach Auswahl eines Bereichs erscheinen nur dessen Fragen in der Übung.
+- Bei mehreren Bereichen werden deren Fragen gemeinsam verwendet.
+- Ohne Auswahl erscheint ein verständlicher Hinweis; ein leeres Quiz startet nicht.
+
+Vier Storyboard-Bilder könnten zeigen: am Handy öffnen, Themen wählen, Fragenanzahl prüfen, Übung starten. Die Geschichte erklärt Situation und Reihenfolge; Akzeptanzkriterien machen die Regeln prüfbar.
+
+User Stories sind eine verbreitete Technik, Scrum schreibt diese Textform jedoch nicht vor. Auch technische Wartungsarbeit darf ein Product-Backlog-Eintrag sein, ohne eine künstliche Benutzergeschichte zu erfinden.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine User Story ist eine kurze,
@@ -70,13 +82,6 @@ Es kann sein:
 > die beschreibt, wer was möchte und zu welchem Zweck.  
 > Ein Story Board hingegen stellt den Benutzerablauf oder ein Nutzungsszenario visuell dar.  
 > Zusammen unterstützen sie das Verständnis der Anforderungen, die Kommunikation und die Planung.
-
-## Häufige Prüfungsfehler
-
-- Die User Story als technische Aufgabenbeschreibung behandeln.
-- Das Story Board mit Programmcode oder einem Wireframe verwechseln.
-- Die Benutzerperspektive nicht erwähnen.
-- Behaupten, dass diese allein vollständige Spezifikationen sind.
 
 ## Schnelle Selbstkontrolle
 
@@ -95,6 +100,11 @@ Es kann sein:
 5. Weil sie ein gemeinsames Verständnis schaffen
 
 ## Quellen
+
+- [Agile Alliance: User Stories](https://agilealliance.org/glossary/user-stories/)  
+  Benutzerbedarf, gemeinsame Klärung und Akzeptanzkriterien.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - User stories with examples and a template  
    https://www.atlassian.com/agile/project-management/user-stories  

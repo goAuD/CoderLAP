@@ -28,13 +28,13 @@
               <div class="row g-3">
                 <div class="col-12 col-md-6">
                   <label for="vorname" class="form-label">Vorname</label>
-                  <input id="vorname" name="vorname" type="text" class="form-control" autocomplete="given-name">
+                  <input id="vorname" name="vorname" type="text" class="form-control" autocomplete="given-name" required>
                   <div class="invalid-feedback">Bitte einen Vornamen eingeben.</div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <label for="nachname" class="form-label">Nachname</label>
-                  <input id="nachname" name="nachname" type="text" class="form-control" autocomplete="family-name">
+                  <input id="nachname" name="nachname" type="text" class="form-control" autocomplete="family-name" required>
                   <div class="invalid-feedback">Bitte einen Nachnamen eingeben.</div>
                 </div>
 
@@ -46,12 +46,13 @@
                     type="text"
                     class="form-control"
                     inputmode="numeric"
+                    required
                     autocomplete="off"
                     placeholder="z. B. 4422 180599"
                     aria-describedby="svnummer-help"
                   >
                   <div id="svnummer-help" class="form-text">
-                    Format: <code>LLLL TTMMJJ</code> bzw. 10 Ziffern mit optionalem Leerzeichen nach der 4. Stelle.
+                    Format: <code>LLLP TTMMJJ</code>, 10 Ziffern mit optionalem Leerraum. Bitte nur die PDF-Testdaten verwenden.
                   </div>
                   <div class="invalid-feedback" id="svnummer-feedback">
                     Bitte eine SV-Nummer eingeben.

@@ -74,6 +74,53 @@ Also:
 - Die Queue ist nicht nur eine Warteschlange, sondern die Grundlage vieler Verarbeitungsmodelle.
 - In der Prüfung werden oft die Namen der Operationen oder zumindest ihre Funktionsweise verlangt.
 
+## Wozu dienen die Operationen? Klammerpaare prüfen
+
+**Aufgabe:** runde Klammern eines Textes sollen ausgeglichen sein. Jede öffnende
+Klammer legt ein Element ab, jede schließende nimmt eines heraus. Andere Zeichen
+ignoriert diese einfache Prüfung. Sie ist kein vollständiger JavaScript-Parser
+und wertet weder Anführungszeichen noch Kommentare aus. Ausführung: Node.js.
+
+<!-- example:run -->
+
+```javascript
+function balancedParentheses(text) {
+  const stack = [];
+  for (const character of text) {
+    if (character === "(") stack.push(character);
+    if (character === ")") {
+      if (stack.length === 0) return false;
+      stack.pop();
+    }
+  }
+  return stack.length === 0;
+}
+console.log(balancedParentheses("(a + (b))"));
+console.log(balancedParentheses(")("));
+console.log(balancedParentheses("((a)"));
+console.log(balancedParentheses(""));
+```
+
+```text
+true
+false
+false
+true
+```
+
+Im ersten Beispiel beträgt die Stapeltiefe an den Klammern `1, 2, 1, 0`.
+`)(` wird sofort abgelehnt, weil aus einem leeren Stack entnommen werden müsste.
+Bei `((a)` bleibt eine Öffnung übrig. Der leere Text enthält keine ungepaarten
+Klammern, deshalb ist das Ergebnis wahr. Die Laufzeit wächst proportional zur
+Textlänge; der Stack speichert höchstens die gleichzeitig offenen Klammern.
+
+Für eine Queue gilt ein anderer Vertrag: `peek` liest nur, `dequeue` entfernt
+ein Element. Für eine leere Struktur dokumentieren wir Rückgabewert oder
+Ausnahme. JavaScripts `shift()` liefert bei einem leeren Array `undefined`.
+Beim Entfernen am Arrayanfang müssen Indizes neu zugeordnet werden. Für stark
+beanspruchte Warteschlangen können Ringpuffer oder passende Bibliothekstypen
+geeigneter sein. Das FIFO-Prinzip allein legt die Operationskosten nicht fest.
+
 ## Prüfungstaugliche Formulierung
 
 > Stack und Queue sind grundlegende Datenstrukturmodelle.  
@@ -81,13 +128,6 @@ Also:
 > daher wird das zuletzt eingefügte Element zuerst entnommen - also LIFO.  
 > Die Queue funktioniert hingegen nach dem Schlangenprinzip,
 > daher wird das am frühesten eingefügte Element zuerst verarbeitet - also FIFO.
-
-## Häufige Prüfungsfehler
-
-- Stack und Queue nur mit Alltagsbeispielen erklären, ohne Operationen.
-- LIFO/FIFO nicht damit verknüpfen.
-- Die Begriffe `push/pop` und `enqueue/dequeue` verwechseln.
-- Behaupten, der Stack sei immer schneller oder besser.
 
 ## Schnelle Selbstkontrolle
 
@@ -106,6 +146,12 @@ Also:
 5. Der Stack funktioniert typischerweise nach dem LIFO-Prinzip
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Array.shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift): leeres Array und Neuzuordnung der Indizes.
+- [MDN: Call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack): eine konkrete Anwendung des Stacks.
+
 
 1. Oracle Java SE - `Deque` Interface  
    https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/Deque.html  

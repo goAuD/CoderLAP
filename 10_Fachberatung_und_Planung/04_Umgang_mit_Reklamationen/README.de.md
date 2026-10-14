@@ -69,6 +69,14 @@ Notiere:
 - unrealistische Versprechen
 - unsichere Kommunikation
 
+## Aus einer Beschwerde einen nachvollziehbaren Vorgang machen
+
+Laut Kunde ist nach einem Update der Wochenbericht verschwunden. Zuerst fassen wir die Auswirkung zusammen: „Damit können Sie die Wochenabrechnung gerade nicht erstellen.“ Wir erfragen Zeitraum und genaue Umstände, nennen eine Vorgangsnummer und den nächsten Rückmeldetermin. Beobachtetes Symptom und vermutete Ursache bleiben bis zur Prüfung getrennt.
+
+Als Lösung kommen ein geprüfter Umweg, eine Korrektur oder die Weitergabe an die zuständige entscheidungsbefugte Person infrage. Rückerstattung oder Vertragsänderung darf nur eine dazu befugte Person zusagen. Der Kommunikationsablauf ersetzt keine geltenden Vertrags- oder Verbraucherschutzvorschriften.
+
+Beim Abschluss prüfen wir, ob der Bericht erstellt werden konnte, und halten Verbesserungen für die Zukunft fest. Personenbezogene Daten teilen wir nur im für die Bearbeitung nötigen Umfang.
+
 ## Prüfungstaugliche Formulierung
 
 > Bei einer Reklamation muss man dem Kunden zunächst ruhig zuhören,
@@ -78,14 +86,6 @@ Notiere:
 > und die Dokumentation des Vorgangs.  
 > Eine gute Reklamationsbehandlung dient nicht nur der Problemlösung,
 > sondern liefert auch Feedback zur Verbesserung der Dienstleistung.
-
-## Häufige Prüfungsfehler
-
-- Sofortige Verteidigung oder Gegenangriff.
-- Den Kunden unterbrechen.
-- Ohne Klärung eine Lösung versprechen.
-- Den Vorgang nicht dokumentieren.
-- Zu viel erklären, anstatt sich auf die Lösung zu konzentrieren.
 
 ## Schnelle Selbstkontrolle
 
@@ -104,6 +104,11 @@ Notiere:
 5. Es hilft, die Dienstleistung zu verbessern
 
 ## Quellen
+
+- [Ombudsman: Principles of good complaint handling](https://www.ombudsman.org.uk/publications/principles-good-complaint-handling-0)  
+  Transparente, verhältnismäßige Bearbeitung; methodische, keine österreichische Rechtsquelle.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. HMRC - Handling of Complaints  
    https://www.gov.uk/hmrc-internal-manuals/shares-and-assets-valuation-manual/svm103030  

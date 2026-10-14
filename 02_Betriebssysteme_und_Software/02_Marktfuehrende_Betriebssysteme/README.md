@@ -2,36 +2,15 @@
 
 ## Gyors vizuális kép
 
-### Világszintű desktop piac
+### A piacot először szegmensekre bontjuk
 
-**StatCounter Global Stats, 2026 március** alapján:
+| Környezet | Fontos rendszercsaládok | Mit érdemes összehasonlítani? |
+| --- | --- | --- |
+| asztali gép és laptop | Windows, macOS, Linux, ChromeOS | alkalmazások, hardver, támogatás |
+| telefon | Android, iOS | eszközök, frissítések, alkalmazáskínálat |
+| szerver | Linux-disztribúciók, Windows Server | szolgáltatások, üzemeltetés, licencek |
 
-| Rendszer |    Arány |
-| -------- | -------: |
-| Windows  |  `60.8%` |
-| OS X     |  `9.52%` |
-| macOS    |  `5.24%` |
-| Linux    |  `3.16%` |
-| ChromeOS |  `1.62%` |
-| Unknown  | `19.67%` |
-
-Megjegyzés:
-
-- a StatCounter az Apple desktop rendszereit külön bontja `OS X` és `macOS` sorra
-- ezt együtt érdemes értelmezni Apple desktop családként
-
-### Világszintű összes platform
-
-**StatCounter Global Stats, 2026 február** alapján:
-
-| Rendszer |    Arány |
-| -------- | -------: |
-| Android  | `35.87%` |
-| Windows  | `31.37%` |
-| iOS      | `17.01%` |
-| OS X     |  `3.43%` |
-| macOS    |  `2.31%` |
-| Unknown  |  `7.81%` |
+A részesedés mindig méréshez kötött. A StatCounter weboldal-megtekintéseket mér a saját hálózatában, nem az összes telepített gépet számolja meg. A kliensböngészők adataiból szerveroperációs rendszerek részesedésére sem következtethetünk közvetlenül. Az aktuális grafikonok a források között érhetők el.
 
 ## Mit jelent az, hogy piacvezető?
 
@@ -115,6 +94,14 @@ Mert itt nem elég csak neveket mondani, hanem tudni kell:
 - mi a különbség desktop és mobil piac között
 - miért nem ugyanaz a „piacvezető” minden kategóriában
 
+## Kidolgozott összehasonlítás
+
+Egy iskola gépbeszerzésénél két külön kérdés merül fel: melyik rendszer elterjedt, és melyik futtatja a szükséges vizsgaszoftvert? Egy általános rangsor önmagában nem dönti el a másodikat.
+
+Először rögzítsük a kötelező alkalmazásokat, a meglévő perifériákat és a támogatás elvárt hosszát. Ezután próbáljuk ki a konkrét munkafolyamatot a jelölt rendszeren. A vizsgán így indokolható a választás: „A kijelölt alkalmazás és nyomtató támogatása miatt ezt a rendszert választjuk; a piaci elterjedtség csak kiegészítő szempont.”
+
+Ha százalékot idézünk, a forrás, az időszak, az ország vagy régió és a mért eszközcsoport is szerepeljen mellette. Két eltérő időszak vagy minta számai nem közvetlenül összehasonlíthatók.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A piacvezető operációs rendszerek kategóriától függnek.  
@@ -122,14 +109,6 @@ Mert itt nem elég csak neveket mondani, hanem tudni kell:
 > Mobil területen az Android és az iOS dominál.  
 > Szerveres környezetben a Linuxnak és a Windows Servernek van nagy jelentősége.  
 > A pontos piaci helyzet idővel változhat, ezért mindig meg kell mondani, milyen platformról és milyen időpontról beszélünk.
-
-## Gyakori vizsgahibák
-
-- Desktop és mobil piac összekeverése.
-- Azt mondani, hogy a Linux mindenütt vezető.
-- Azt mondani, hogy a macOS ugyanúgy általános, mint a Windows hardveroldalon.
-- Nem megadni, hogy a piaci helyzet időfüggő.
-- Androidot desktop operációs rendszerként említeni.
 
 ## Gyors önellenőrzés
 
@@ -151,11 +130,11 @@ Mert itt nem elég csak neveket mondani, hanem tudni kell:
 
 1. StatCounter Global Stats - Desktop Operating System Market Share Worldwide  
    https://gs.statcounter.com/os-market-share/desktop/worldwide/  
-   Használat: desktop piaci elterjedtség, `2026 március` adatok.
+   Használat: a desktop webhasználat folyamatosan frissülő adatai.
 
 2. StatCounter Global Stats - Operating System Market Share Worldwide  
    https://gs.statcounter.com/os-market-share/all/worldwide  
-   Használat: összes platformra vonatkozó, `2026 február` adatok.
+   Használat: webhasználati adatok az összes platformon.
 
 3. Microsoft - Windows help and learning  
    https://support.microsoft.com/en-us/windows  
@@ -170,3 +149,9 @@ Mert itt nem elég csak neveket mondani, hanem tudni kell:
    Használat: Linux desktop környezet modern, hivatalos példája.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [StatCounter: FAQ](https://gs.statcounter.com/faq): a webhasználat mérési módszere és korlátai.
+
+Ellenőrizve: `2026-10-14`.

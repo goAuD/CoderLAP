@@ -40,18 +40,19 @@ Inkább:
 | Scrum Master | Scrum-folyamatot segítő szerep |
 | projektvezető | projekt egészének klasszikus irányító szerepe |
 
+## Egy akadály megszüntetése a csapat helyett való irányítás nélkül
+
+A tesztkörnyezethez minden héten napokig kell hozzáférést kérni. A Scrum Master segít láthatóvá tenni a várakozást, és bevonja a jogosultságokért felelős szervezeti szereplőt egy fenntartható megoldásba. Nem feltétlenül ő végzi el a technikai javítást; elősegíti az akadály megszüntetését.
+
+A Developers továbbra is maga alakítja a munkatervét. A Scrum Master nem osztja szét napi szinten a programozói feladatokat, és nem veszi át a Product Owner termékdöntéseit. A támogatás célja, hogy a csapat egyre önállóbban, eredményesen dolgozzon.
+
+A Scrum Guide szerinti felelőssége a Scrum meghonosítása és a Scrum Team eredményességének támogatása. Ehhez szervezeti változások és a Product Owner segítése is tartozhat, nem csak az események moderálása.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Scrum Master a Scrum csapatot támogató szerepkör, amely biztosítja, hogy a Scrum keretrendszer helyesen működjön.  
 > Segíti a csapatot az önszerveződésben, támogatja a Scrum eseményeket, és közreműködik az akadályok eltávolításában.  
 > Nem klasszikus főnöki szerep, hanem facilitáló és támogató funkció.
-
-## Gyakori vizsgahibák
-
-- A Scrum Mastert projektvezetőnek vagy felettesnek nevezni.
-- Nem megemlíteni a facilitáló szerepet.
-- Azt hinni, hogy ő priorizálja a backlogot.
-- Nem beszélni az impedimentek kezeléséről.
 
 ## Gyors önellenőrzés
 
@@ -63,13 +64,18 @@ Inkább:
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. A Scrum működésének támogatása
+1. A Scrum meghonosítása és a Scrum Team eredményességének támogatása
 2. Mert inkább facilitál és támogat
 3. Olyan akadály, ami lassítja a csapatot
 4. A PO a prioritásért felel, a Scrum Master a folyamatért
 5. Mert így jobb a haladás és kevesebb a zavar
 
 ## Források
+
+- [Scrum.org: What is a Scrum Master?](https://www.scrum.org/resources/what-is-a-scrum-master)  
+  A Scrum Guide-hoz kapcsolódó hivatalos szakmai magyarázat.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Scrum Guide 2020  
    https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf  

@@ -56,6 +56,39 @@
 - Internetes alkalmazásnál szét kell választani a frontendet és a backendet.
 - Vizsgán érdemes kategóriákban gondolkodni, nem összevissza felsorolni.
 
+## Egy szolgáltatás, többféle kliens
+
+**Példa:** egy tanuló ugyanazt a témát jelöli megtanultnak Androidon, iPhone-on
+vagy weben. A felület nyelve eltérhet, az adatcsere szerződése közös lehet.
+A következő csak elképzelt API-szerződés, nem a jelenlegi oldal működése:
+
+```http
+PUT /api/me/progress/LAP-15-17 HTTP/1.1
+Content-Type: application/json
+
+{"completed":true}
+```
+
+A szerver a hitelesített munkamenetből állapítja meg, kinek a haladása változik;
+a kliens által megadott tetszőleges felhasználóazonosító nem jogosultsági
+bizonyíték. Az alkalmazásba nem építünk közvetlen adatbázis-jelszót. A mobilkliens
+és a böngésző egyaránt szerveroldali API-n keresztül dolgozhat.
+
+| Réteg | Egy lehetséges megoldás | Mit kell még megoldani? |
+|---|---|---|
+| Android-felület | Kotlin | platformnavigáció, jogosultságkérések, életciklus |
+| iPhone-felület | Swift | platformnavigáció, jogosultságkérések, életciklus |
+| közös mobilkód | Flutter/Dart vagy React Native/TypeScript | a platformonként eltérő részek és mindkét platform tesztje |
+| webes felület | HTML/CSS és JavaScript | böngésző, billentyűzet, reszponzivitás |
+| backend | például PHP vagy Java | hozzáférés, validálás, adatkezelés |
+
+A TypeScriptet a szokásos webes eszközlánc JavaScriptre fordítja; a Node.js
+futtatókörnyezet, nem külön nyelv. A cross-platform kódmegosztás mértéke
+feladattól függ. Kamera, értesítés, offline állapot és bejelentkezés esetén
+különösen fontos a tényleges eszközön végzett ellenőrzés. Egy PWA további
+webes lehetőség, amelynek képességeit az adott böngésző és operációs rendszer
+támogatása határozza meg.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Mobilappok és internetes alkalmazások fejlesztéséhez többféle programozási nyelvet használunk.  
@@ -65,13 +98,6 @@
 > Internetes alkalmazásoknál a frontend oldalon
 > főleg JavaScript és TypeScript,
 > a backend oldalon pedig például PHP, Java, C# vagy Python terjedt el.
-
-## Gyakori vizsgahibák
-
-- A frontend és backend nyelveket összemosni.
-- A natív és cross-platform megoldásokat nem elkülöníteni.
-- Minden mobilfejlesztést egyetlen nyelvhez kötni.
-- Nem megemlíteni a platform szerepét.
 
 ## Gyors önellenőrzés
 
@@ -90,6 +116,13 @@
 5. Például PHP, Java, C#, Python
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [Android Developers: Kotlin-first](https://developer.android.com/kotlin/first): Android-fejlesztési irány.
+- [Apple: Swift](https://developer.apple.com/swift/): Swift és az Apple platformok.
+- [React Native: Platform-specific code](https://reactnative.dev/docs/platform-specific-code): megosztott és platformfüggő kód elkülönítése.
+
 
 1. Android Developers - Kotlin for Android  
    https://developer.android.com/kotlin/first  

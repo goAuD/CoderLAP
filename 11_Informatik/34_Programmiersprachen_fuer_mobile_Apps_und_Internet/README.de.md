@@ -56,6 +56,40 @@
 - Bei Internetanwendungen muss man Frontend und Backend trennen.
 - In der Prüfung sollte man in Kategorien denken, nicht durcheinander aufzählen.
 
+## Ein Dienst mit mehreren Clients
+
+**Beispiel:** Eine Person markiert dasselbe Thema unter Android, auf dem iPhone
+oder im Web als gelernt. Die Sprache der Oberfläche darf unterschiedlich sein,
+der Vertrag für den Datenaustausch kann gemeinsam sein. Das folgende Beispiel
+ist nur ein gedachter API-Vertrag, keine Funktion der derzeitigen Website:
+
+```http
+PUT /api/me/progress/LAP-15-17 HTTP/1.1
+Content-Type: application/json
+
+{"completed":true}
+```
+
+Der Server ermittelt aus der authentifizierten Sitzung, wessen Fortschritt
+geändert wird. Eine beliebige vom Client gesendete Benutzer-ID belegt keine
+Berechtigung. Ein direktes Datenbankpasswort gehört nicht in die App. Mobile
+Clients und Browser können beide über eine serverseitige API arbeiten.
+
+| Schicht | Eine mögliche Lösung | Was bleibt zusätzlich zu lösen? |
+|---|---|---|
+| Android-Oberfläche | Kotlin | Plattformnavigation, Berechtigungen, Lebenszyklus |
+| iPhone-Oberfläche | Swift | Plattformnavigation, Berechtigungen, Lebenszyklus |
+| gemeinsamer Mobilcode | Flutter/Dart oder React Native/TypeScript | plattformspezifische Teile und Tests auf beiden Plattformen |
+| Weboberfläche | HTML/CSS und JavaScript | Browser, Tastatur, responsives Layout |
+| Backend | beispielsweise PHP oder Java | Zugriff, Validierung, Datenverwaltung |
+
+Übliche Web-Toolchains übersetzen TypeScript in JavaScript. Node.js ist eine
+Laufzeitumgebung, keine weitere Sprache. Wie viel Code plattformübergreifend
+teilbar ist, hängt von der Aufgabe ab. Kamera, Benachrichtigungen, Offlinezustand
+und Anmeldung erfordern besonders sorgfältige Tests auf echten Geräten.
+Eine PWA ist eine weitere Weboption; ihre Möglichkeiten hängen von der
+Unterstützung des jeweiligen Browsers und Betriebssystems ab.
+
 ## Prüfungstaugliche Formulierung
 
 > Für die Entwicklung von mobilen Apps und Internetanwendungen werden verschiedene Programmiersprachen verwendet.
@@ -65,13 +99,6 @@
 > Bei Internetanwendungen sind auf der Frontend-Seite
 > hauptsächlich JavaScript und TypeScript,
 > auf der Backend-Seite zum Beispiel PHP, Java, C# oder Python verbreitet.
-
-## Häufige Prüfungsfehler
-
-- Frontend- und Backend-Sprachen vermischen.
-- Native und Cross-Platform-Lösungen nicht unterscheiden.
-- Die gesamte Mobilentwicklung an eine einzige Sprache binden.
-- Die Rolle der Plattform nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -90,6 +117,13 @@
 5. Zum Beispiel PHP, Java, C#, Python
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [Android Developers: Kotlin-first](https://developer.android.com/kotlin/first): Entwicklungsansatz für Android.
+- [Apple: Swift](https://developer.apple.com/swift/): Swift und Apple-Plattformen.
+- [React Native: Platform-specific code](https://reactnative.dev/docs/platform-specific-code): Gemeinsamer und plattformspezifischer Code.
+
 
 1. Android Developers - Kotlin for Android
    https://developer.android.com/kotlin/first

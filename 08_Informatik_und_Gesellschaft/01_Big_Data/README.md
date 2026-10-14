@@ -58,19 +58,20 @@ Mert a jó adatelemzés segíthet:
 | adatbázis | adatok strukturált tárolási rendszere |
 | AI / Machine Learning | módszer az adatok elemzésére, nem ugyanaz mint maga a Big Data |
 
+## Kidolgozott példa: adatmennyiségből döntés
+
+Egy kitalált üzemben 1000 érzékelő másodpercenként egy 100 bájtos rekordot küld. A nyers adatforgalom `1000 × 100 = 100 000 B/s`, naponta pedig `8 640 000 000 B`, vagyis `8,64 GB`. Ebben még nincs benne az indexek, másolatok és hálózati fejlécek mérete. A szám önmagában nem teszi a feladatot Big Datává: a sebesség, a feldolgozási határidő és a különböző formátumok is számítanak.
+
+Az elemzés előtt ellenőrizzük az időbélyegeket, a mértékegységeket és a hiányzó méréseket. A hibás szenzor több millió hibás adata nem lesz megbízható attól, hogy sok van belőle. Ezt a megbízhatósági szempontot gyakran `Veracity` néven is említik. A `3V`, `4V` és `5V` különböző magyarázó modellek, nem egyetlen kötelező felsorolás.
+
+Az üzem döntése lehet például egy csapágy ellenőrzése növekvő rezgés alapján. A mintázat figyelmeztetés, az okot szakmai vizsgálattal is igazolni kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A Big Data nagy mennyiségű, gyorsan keletkező
 > és sokféle forrásból származó adatok feldolgozását és elemzését jelenti.  
 > A fogalmat gyakran a `Volume`, `Velocity` és `Variety` jellemzőkkel írják le.  
 > Előnye, hogy értékes információ nyerhető ki belőle, ugyanakkor adatvédelmi, minőségi és etikai kockázatokat is hordoz.
-
-## Gyakori vizsgahibák
-
-- Azt mondani, hogy a Big Data csak annyi, hogy "sok adat".
-- Nem megemlíteni a `3V` logikát.
-- Összekeverni a Big Data-t az AI-jal.
-- Kihagyni az adatvédelmi és minőségi kockázatokat.
 
 ## Gyors önellenőrzés
 
@@ -89,6 +90,14 @@ Mert a jó adatelemzés segíthet:
 5. Előny: jobb döntéstámogatás; kockázat: adatvédelmi probléma
 
 ## Források
+
+- [NIST: Big data](https://csrc.nist.gov/topics/technologies/big-data)  
+  Méretezhető architektúra és a Big Data jellemzői.
+
+- [NIST: The real challenge of Big Data](https://www.nist.gov/baldrige/real-challenge-big-data)  
+  Veracity és adatminőség; nincs állandó bájtküszöb.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. NIST - Big Data Interoperability Framework: Volume 1, Definitions  
    https://www.nist.gov/publications/nist-big-data-interoperability-framework-volume-1-big-data-definitions-version-2  

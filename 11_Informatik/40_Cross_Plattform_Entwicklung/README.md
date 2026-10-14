@@ -52,6 +52,40 @@
 - ha platformspecifikus UI a kulcs
 - ha a maximális teljesítmény elsődleges
 
+## Mit osztunk meg, és mit ellenőrzünk platformonként?
+
+Egy kvíz pontszámítása és a kérdések adatmodellje jól megosztható. A képernyő,
+a helyi tárolás, az értesítés és a vissza gomb viselkedése viszont platformonként
+eltérhet. Érdemes a közös szabályt a platform API-jától elválasztani:
+
+```text
+gemeinsame Quizlogik
+  -> abstrakte Speicheroperation
+     -> Web: Browser-Speicher
+     -> Android/iOS: passende lokale Speicher-API
+```
+
+Ez szemléltető rétegzés, nem kötelező új framework. Két kis, világos
+platformfüggő fájl egyszerűbb lehet, mint egy mindent feltételes ágakkal kezelő
+óriásfüggvény. React Native például `.ios` és `.android` fájlváltozatokat is
+kezel, így a hívó közös felületet használhat.
+
+| Ellenőrzés | Miért kell ugyanannál a funkciónál is? |
+|---|---|
+| fájlnév és útvonal | kis- és nagybetűk kezelése fájlrendszerenként eltérhet |
+| UTF-8 és sortörés | ékezetes export és különböző rendszerekből érkező szöveg |
+| időpont | időzóna és nyári időszámítás befolyásolja a helyi megjelenítést |
+| jogosultság megtagadása | a kamera vagy értesítés nélkül is érthető állapot kell |
+| billentyűzet és navigáció | a mobil billentyűzet, visszalépés és desktop-fókusz eltér |
+| gyenge eszköz és kapcsolat | valós teljesítményt mérünk, nem a framework nevét |
+
+Node.js-ben fájlrendszerutakhoz a `node:path` platformnak megfelelő eszközeit
+használjuk; egy HTTP-URL-t viszont nem fájlrendszerútként állítunk össze.
+A cross-platform megoldás nem szükségszerűen lassú, és a natív megoldás sem
+automatikusan gyors. A konkrét terhelés, implementáció és mérés dönt. Egy webapp
+is lehet több platformon használható; a reszponzivitás ezen belül az elrendezés
+alkalmazkodását jelenti, nem az összes platformkülönbség megoldását.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A cross-platform fejlesztés célja,
@@ -63,13 +97,6 @@
 > a natív élmény, a teljesítmény
 > vagy a platformspecifikus funkciók terén.  
 > Tipikus példák a Flutter, a React Native és a .NET MAUI.
-
-## Gyakori vizsgahibák
-
-- A cross-platformot a reszponzív weboldallal összekeverni.
-- Azt állítani, hogy mindig teljesen kiváltja a natív fejlesztést.
-- Nem megemlíteni a kompromisszumokat.
-- Nem hozni rá konkrét technológiai példát.
 
 ## Gyors önellenőrzés
 
@@ -85,9 +112,15 @@
 2. Kisebb duplikáció és gyorsabb fejlesztés
 3. Kompromisszum a natív élmény vagy funkciók terén
 4. Flutter, React Native, .NET MAUI
-5. Az egyik alkalmazásfejlesztés, a másik webes elrendezés
+5. A cross-platform több platform támogatása, a responsive ennek webes elrendezési kérdését kezeli
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [React Native: Platform-specific code](https://reactnative.dev/docs/platform-specific-code): közös és eltérő platformkód kezelése.
+- [Node.js: Path](https://nodejs.org/api/path.html): Windows- és POSIX-fájlutak eltérő kezelése.
+
 
 1. Flutter  
    https://flutter.dev/  
