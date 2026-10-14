@@ -164,6 +164,20 @@ Der Benutzer wurde angemeldet, Dashboard wurde angezeigt.
 
 `pass`
 
+## Durchgearbeitetes Beispiel: von der Anforderung zur Freigabe
+
+Laut Anforderung `K-12` muss die Suche unabhängig von Groß- und Kleinschreibung funktionieren. Die Testdaten enthalten genau drei Titel: `JavaScript`, `Java` und `SQL`.
+
+| Test | Eingabe | Vorab festgelegtes erwartetes Ergebnis |
+| --- | --- | --- |
+| T-01 | `java` | JavaScript und Java, insgesamt zwei Treffer |
+| T-02 | `JAVA` | Dieselben zwei Treffer |
+| T-03 | `python` | Keine Treffer, verständliche Meldung |
+
+Zum Testlauf erfassen wir Build-Kennung und Browser. Liefert T-02 nur einen Treffer, lautet das Ergebnis `fail` und wird mit einem Fehlerticket verknüpft. Startet die Testumgebung gar nicht, ist T-02 `blocked`: Zur Korrektheit der Suche liegt noch kein Ergebnis vor. Nach der Korrektur wiederholen wir den Test und prüfen weitere Suchfälle auf Regressionen.
+
+Ein erfolgreicher Lauf belegt das Verhalten der geprüften Fälle. Er beweist keine Fehlerfreiheit für alle möglichen Eingaben. Für die Freigabe dokumentieren wir deshalb auch abgedeckte Anforderungen, verbleibende Risiken und nicht ausgeführte Tests.
+
 ## Prüfungstaugliche Formulierung
 
 > Die Aufgabe eines Testlaufs besteht darin zu überprüfen,
@@ -173,14 +187,6 @@ Der Benutzer wurde angemeldet, Dashboard wurde angezeigt.
 > das erwartete Ergebnis, das tatsächliche Ergebnis und den Teststatus.  
 > Die Dokumentation des Testlaufs ist wichtig für die Fehlerverfolgung,
 > die Qualitätssicherung und für Entscheidungen vor der Übergabe.
-
-## Häufige Prüfungsfehler
-
-- Es gibt kein eindeutiges erwartetes Ergebnis.
-- Die Testschritte sind zu vage.
-- Die Umgebung ist nicht dokumentiert.
-- Ein Fehler wird erkannt, aber nicht genau festgehalten.
-- Die Status `blocked` und `fail` werden verwechselt.
 
 ## Schnelle Selbstkontrolle
 
@@ -200,8 +206,13 @@ Der Benutzer wurde angemeldet, Dashboard wurde angezeigt.
 
 ## Quellen
 
-1. ISTQB CTFL Syllabus v3.1.1  
-   https://istqb.org/wp-content/uploads/2024/11/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf  
+- [ISTQB CTFL 4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Testgrundsätze, Nachverfolgbarkeit und Fehlernachtest.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
+1. ISTQB CTFL Syllabus v4.0.1  
+   https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  
    Verwendung: test execution, logging, expected vs actual result, test execution work products.
 
 2. Azure DevOps Test Plans - Manage test runs  
