@@ -124,6 +124,14 @@ Wenn es um eine Linux-Systempartition geht:
 
 - ist `ext4` häufig
 
+## Durchgearbeiteter Fall: eine 6-GiB-Videodatei kopieren
+
+Auf dem USB-Stick sind 20 GiB frei, aber mit FAT32 lässt sich eine einzelne Datei von 6 GiB trotzdem nicht speichern. Die maximale FAT32-Dateigröße beträgt `2^32 - 1` Byte, also 4 GiB minus 1 Byte. Freier Gesamtspeicher und Obergrenze einer einzelnen Datei sind verschiedene Eigenschaften.
+
+Wenn beide Zielsysteme es unterstützen, kann exFAT für den Transfer großer Dateien geeignet sein. Werden Windows-Zugriffsrechte benötigt, kann NTFS besser passen. Vor einer Neuformatierung werden vorhandene Daten gesichert, da das Formatieren Datenverlust verursachen kann.
+
+Ein physischer Datenträger kann mehrere **Partitionen** besitzen. Das Dateisystem organisiert die Dateien typischerweise auf einem Volume; ein **Verzeichnis** dient darin der Ordnung. `Journaling` unterstützt die Wiederherstellung eines konsistenten Zustands nach einem Absturz. Gegen versehentliches Löschen oder den Verlust des Geräts ist eine separate Datensicherung nötig.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Dateisystem ist ein softwarebasierter Mechanismus oder ein Regelwerk,
@@ -131,14 +139,6 @@ Wenn es um eine Linux-Systempartition geht:
 > organisiert und zugegriffen werden.  
 > Das Dateisystem verwaltet die Verzeichnisstruktur, den Zugriff und häufig auch die Metadaten.  
 > Typische Beispiele sind NTFS, exFAT, ext4 oder APFS.
-
-## Häufige Prüfungsfehler
-
-- Das Dateisystem mit dem Massenspeicher verwechseln.
-- Behaupten, dass die SSD selbst das Dateisystem ist.
-- Kein Beispiel für ein konkretes Dateisystem nennen können.
-- Ordner und das gesamte Dateisystem verwechseln.
-- Die Rolle der Namensverwaltung und Organisation nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -175,3 +175,9 @@ Wenn es um eine Linux-Systempartition geht:
    Verwendung: moderne Apple-Dateisystem-Umgebung und APFS-Kontext.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Microsoft: File System Functionality Comparison](https://learn.microsoft.com/en-us/windows/win32/fileio/filesystem-functionality-comparison): Größenlimit, Zugriffsrechte und Journaling.
+
+Geprüft: `2026-10-14`.

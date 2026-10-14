@@ -107,6 +107,14 @@ Vizsgán viszont az alapelv a fontos:
 - rendszerprogram = a rendszer működéséhez kapcsolódik
 - alkalmazásprogram = felhasználói feladatot old meg
 
+## Kidolgozott eset: mi kell a nyomtatáshoz?
+
+Egy PDF-olvasóban megnyomjuk a Nyomtatás gombot. A PDF-olvasó alkalmazásprogram: a dokumentum megjelenítése és a felhasználói feladat tartozik hozzá. Az OS nyomtatási szolgáltatása a feladat sorba állítását végzi, a meghajtó pedig az adott eszközzel való együttműködést támogatja. A nyomtató saját firmware-e vezérli a készüléket.
+
+Így egy problémát szerepkör szerint szűkíthetünk: minden alkalmazásból sikertelen a nyomtatás, vagy csak egy dokumentumnál? A feladat bekerül a sorba? Elérhető az eszköz? Ez célzottabb, mint minden komponenst újratelepíteni.
+
+A rendszerprogram besorolás a **feladatot** írja le. Nem jelenti automatikusan azt, hogy a program kernel módban vagy rendszergazdai joggal fut. A shell rendszerközeli eszköz, de normál felhasználói fiókkal is használható.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A rendszerprogram a számítógép alapműködését biztosító vagy támogató
@@ -115,14 +123,6 @@ Vizsgán viszont az alapelv a fontos:
 > Az alkalmazásprogram ezzel szemben konkrét felhasználói feladatot végez,
 > például szövegszerkesztést, böngészést vagy médialejátszást.  
 > Az alkalmazásprogramok az operációs rendszer szolgáltatásait használják.
-
-## Gyakori vizsgahibák
-
-- A PowerShellt pusztán alkalmazásként kezelni, rendszerkapcsolat nélkül.
-- A drivert alkalmazásprogramnak nevezni.
-- A böngészőt rendszerprogramnak nevezni.
-- Azt állítani, hogy minden látható program alkalmazásprogram.
-- Nem tudni legalább 2-2 példát mindkét kategóriára.
 
 ## Gyors önellenőrzés
 
@@ -159,3 +159,9 @@ Vizsgán viszont az alapelv a fontos:
    Használat: rendszerfunkciók és az alkalmazások OS-függő működésének kontextusa.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: User mode and kernel mode](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode): védelmi szintek és elkülönítés.
+
+Ellenőrizve: `2026-10-14`.

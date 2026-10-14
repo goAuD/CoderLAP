@@ -130,6 +130,14 @@ Az OS teszi használhatóvá a számítógépet.
 | kezeli a hardvert              | az OS szolgáltatásait használja |
 | például Windows, macOS, Linux  | például Word, Chrome, VLC       |
 
+## Kidolgozott eset: mi történik fájlmentéskor?
+
+Egy szövegszerkesztő a saját folyamatában fut. Mentéskor az operációs rendszer szolgáltatásán keresztül kér írást. Az OS ellenőrzi a hozzáférést, a fájlrendszer kezeli a fájl helyét és metaadatait, az eszközmeghajtó pedig közvetít a tároló felé. Sikertelen kérésnél az alkalmazásnak értelmezhető hibát kell jeleznie.
+
+A **folyamat** saját erőforrásokkal és virtuális címtérrel rendelkezik; a **szál** a folyamaton belüli végrehajtási egység. A kernel védett szolgáltatásokat nyújt, az alkalmazás általában felhasználói módban fut. Ez segít elkülöníteni a programokat, de nem tesz minden programhibát lehetetlenné.
+
+**Következtetés:** a szövegszerkesztő határozza meg a dokumentum tartalmát, az OS biztosítja a szabályozott hozzáférést az erőforrásokhoz. Egy kis beágyazott eszköz futhat általános célú OS nélkül is; a fenti modell a modern általános célú számítógépekre vonatkozik.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az operációs rendszer a számítógép alapvető rendszer-szoftvere,
@@ -139,14 +147,6 @@ Az OS teszi használhatóvá a számítógépet.
 > Feladata többek között a folyamatkezelés, a memóriakezelés,
 > a fájlkezelés, az eszközkezelés
 > és a felhasználói felület biztosítása.
-
-## Gyakori vizsgahibák
-
-- Az operációs rendszert összekeverni az alkalmazásokkal.
-- Azt mondani, hogy az OS csak „ablakokat jelenít meg”.
-- Kihagyni a memória- és folyamatkezelés szerepét.
-- Nem tudni példát mondani GUI-ra és CLI-re.
-- A kernelt és az egész operációs rendszert teljesen azonosnak venni.
 
 ## Gyors önellenőrzés
 
@@ -179,3 +179,10 @@ Az OS teszi használhatóvá a számítógépet.
    Használat: közérthető, modern áttekintés a Windows operációs rendszer funkcióiról.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Processes and threads](https://learn.microsoft.com/en-us/windows/win32/procthread/about-processes-and-threads): folyamat, szál, ütemezés.
+- [Microsoft: User mode and kernel mode](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode): védelmi szintek és elkülönítés.
+
+Ellenőrizve: `2026-10-14`.

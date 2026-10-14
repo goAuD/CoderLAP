@@ -9,18 +9,9 @@
 
 ## Mi az a single-user rendszer?
 
-Olyan rendszer, amelyet tipikusan egyetlen felhasználó használ közvetlenül.
+A klasszikus single-user rendszer egy felhasználó munkájára készült, több felhasználó elkülönített, egyidejű munkamenetének támogatása nélkül. Történeti példa a személyi gépeken használt MS-DOS.
 
-Példák:
-
-- otthoni PC egyetlen aktív felhasználóval
-- egyéni laptophasználat
-- egyszerű beágyazott rendszerek bizonyos esetei
-
-Fontos:
-
-- attól még lehet több felhasználói fiók
-- a lényeg inkább az, hogy a használat modellje egy felhasználóra épül
+Külön fogalom a **single-user használat**: egy modern, több fiókot és jogosultságokat kezelő operációs rendszert is használhat éppen egyetlen ember. Ettől az OS felhasználókezelési képessége nem változik meg.
 
 ## Mi az a multi-user rendszer?
 
@@ -59,7 +50,7 @@ Nem az a fő kérdés, hogy hány ember „ül a gép előtt”, hanem hogy a re
 
 ## Példák
 
-### Single-user példák
+### Egyfelhasználós használati helyzetek modern OS-en
 
 - otthoni Windows PC
 - személyes MacBook
@@ -99,6 +90,18 @@ A multi-user rendszerekben különösen fontos:
 
 Mert több user osztozik ugyanazon a rendszeren vagy infrastruktúrán.
 
+## Kidolgozott eset: közös iskolai számítógép
+
+Anna és Béla külön fiókkal használja ugyanazt a gépet. A saját fájljaikhoz külön hozzáférési szabályok tartoznak, a karbantartáshoz külön adminisztrátori fiók van. A gépnek akkor is van többfelhasználós biztonsági modellje, ha a helyi képernyőn egyszerre csak egyikük dolgozik.
+
+Három kérdést vizsgálunk külön:
+
+1. Vannak-e elkülönített felhasználói identitások és jogosultságok?
+2. Maradhat-e több munkamenet bejelentkezve, illetve dolgozhatnak-e egyidejűleg?
+3. Milyen kiadás, szolgáltatás és licenc engedi a távoli munkameneteket?
+
+A Windows, a macOS és a Linux modern rendszerei nem írhatók le pusztán azzal, hogy „asztali gép, tehát single-user”. A többfelhasználós képesség és az egyszerre használható interaktív asztalok száma külön tulajdonság. Az egyes Windows kliens- és szerverkiadások munkamenet-korlátai eltérhetnek.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A single-user rendszer elsősorban egy felhasználó közvetlen használatára készült.  
@@ -106,14 +109,6 @@ Mert több user osztozik ugyanazon a rendszeren vagy infrastruktúrán.
 > hozzáférést, külön jogosultságokat
 > és elkülönített munkakörnyezetet biztosítani.  
 > A multi-user rendszerek tipikusan szerveres vagy vállalati környezetben fontosak.
-
-## Gyakori vizsgahibák
-
-- Összekeverni a multi-user és a multitasking fogalmát.
-- Azt hinni, hogy ha több user account van, akkor az automatikusan teljes értékű multi-user működés.
-- Azt mondani, hogy minden desktop gép csak single-user lehet.
-- Nem említeni a jogosultságkezelést.
-- Nem tudni szerverpéldát mondani.
 
 ## Gyors önellenőrzés
 
@@ -146,3 +141,9 @@ Mert több user osztozik ugyanazon a rendszeren vagy infrastruktúrán.
    Használat: modern desktop single-user használati kontextus példája.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Manage user accounts](https://support.microsoft.com/en-us/windows/security/identity-signin/manage-user-accounts-in-windows): külön fiókok és hozzáférések modern Windows alatt.
+
+Ellenőrizve: `2026-10-14`.

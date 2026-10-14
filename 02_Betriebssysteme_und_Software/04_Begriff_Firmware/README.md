@@ -72,7 +72,7 @@ Például:
 - egér
 - kamera
 
-## Firmware vs szoftver: ne keverd össze
+## Firmware és általános alkalmazásszoftver
 
 | Firmware                                | „Normál” szoftver                         |
 | --------------------------------------- | ----------------------------------------- |
@@ -85,7 +85,7 @@ Például:
 
 | Firmware                          | Driver                              |
 | --------------------------------- | ----------------------------------- |
-| az eszközön van                   | jellemzően az operációs rendszerben |
+| az eszköz működését vezérli                   | jellemzően az operációs rendszerben |
 | az eszköz belső működését vezérli | az OS és az eszköz között közvetít  |
 | hardverhez szorosan kötődik       | rendszeroldali illesztőprogram      |
 
@@ -115,20 +115,20 @@ Ezért firmware-t csak:
 
 szabad frissíteni.
 
+## Indítás és firmware-frissítés a gyakorlatban
+
+A firmware is **szoftver**. Egy router teljes firmware-csomagja akár operációs rendszert is tartalmazhat. Más eszközök vezérlőkódját a gazdarendszer illesztőprogramja tölti be indításkor, ezért a tárolási hely önmagában nem elegendő a fogalom meghatározásához.
+
+Egy UEFI-s PC egyszerű indítási lánca: firmware → bootkezelő / rendszerbetöltő → OS-kernel → szolgáltatások. A Secure Boot az indítási összetevők megbízhatóságát ellenőrzi; a háttértár tartalmának titkosítása külön feladat.
+
+**Példa:** egy laptop gyártója UEFI-frissítést ad ki. Ellenőrizzük a pontos modellt, a kiadási megjegyzést és a gyártói frissítési menetet. Gondoskodunk stabil tápellátásról, adatmentésről és titkosított lemeznél a helyreállítási kulcs elérhetőségéről. A frissítés utáni verzió és a normál rendszerindítás ellenőrzése zárja a munkát.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A firmware a hardverhez kötött, beágyazott vezérlőszoftver.  
 > Általában az eszköz saját nem felejtő memóriájában található, és az alapműködését irányítja.  
 > Tipikus példája a BIOS vagy UEFI, de routerekben, SSD-kben és perifériákban is van firmware.  
 > A firmware nem ugyanaz, mint az operációs rendszer vagy egy alkalmazás.
-
-## Gyakori vizsgahibák
-
-- A firmware-t összekeverni a driverrel.
-- A firmware-t alkalmazásnak nevezni.
-- Azt mondani, hogy firmware csak PC-ben létezik.
-- Elfelejteni, hogy routerben, SSD-ben, nyomtatóban is van firmware.
-- Nem tudni példát mondani BIOS / UEFI-re.
 
 ## Gyors önellenőrzés
 
@@ -142,7 +142,7 @@ szabad frissíteni.
 
 1. Hardverhez kötött beágyazott vezérlőszoftver
 2. Az alkalmazás felhasználói program, a firmware az eszköz alapműködését irányítja
-3. A firmware az eszközön van, a driver az OS oldalán közvetít
+3. A firmware a hardver működését vezérli, a driver az OS oldalán közvetít; egyes firmware-eket a driver tölt be
 4. BIOS / UEFI, router firmware, SSD firmware
 5. Hibajavítás, kompatibilitás, stabilitás, biztonság miatt
 
@@ -161,3 +161,10 @@ szabad frissíteni.
    Használat: modern desktop környezetben is előforduló firmware-frissítési gyakorlat kontextusa.
 
 Megnyitva: `2026-04-08`
+
+### A bővítés ellenőrzött forrásai
+
+- [Linux Kernel: Firmware API](https://docs.kernel.org/driver-api/firmware/introduction.html): a gazdarendszerből betöltött firmware.
+- [Microsoft: Secure the Windows boot process](https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process): indítási lánc és Secure Boot.
+
+Ellenőrizve: `2026-10-14`.
