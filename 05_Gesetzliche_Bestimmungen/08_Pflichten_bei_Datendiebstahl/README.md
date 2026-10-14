@@ -49,7 +49,7 @@ Gyakorlati első lépések:
 A GDPR 33. cikke szerint:
 
 - az adatkezelőnek az incidenst **indokolatlan késedelem nélkül**,
-  lehetőleg **72 órán belül** jelentenie kell a felügyeleti hatóságnak
+  lehetőleg a **tudomásszerzéstől számított 72 órán belül** jelentenie kell a felügyeleti hatóságnak
 - kivétel: ha az incidens **valószínűleg nem jár kockázattal** az érintettek jogaira és szabadságaira
 
 Ausztriában az illetékes hatóság:
@@ -79,21 +79,40 @@ Dokumentálni kell például:
 - milyen intézkedés történt
 - miért jelentették vagy miért nem jelentették
 
+## Idővonal és két külön értesítés
+
+Szerdán 09:00-kor válik ismertté, hogy ügyféladatokat tartalmazó export nyilvánosan
+hozzáférhető volt. Az adatkezelő azonnal lezárja a hozzáférést, megőrzi a szükséges
+bizonyítékokat, felméri az érintett adatokat és a személyekre jelentett kockázatot.
+A szerdai tudomásszerzéstől számított 72 óra szombat 09:00-kor telik le;
+nem három munkanapot számolunk, és nem várunk automatikusan a határidő végéig.
+
+| Feladat | Címzett és időzítés |
+|---|---|
+| adatfeldolgozó incidensjelzése | az adatkezelőnek indokolatlan késedelem nélkül |
+| bejelentendő incidens hatósági jelentése | adatkezelő → hatóság, a 33. cikk szerint |
+| várhatóan magas kockázatú incidens közlése | adatkezelő → érintettek, indokolatlan késedelem nélkül, a 34. cikk szerint |
+
+A hatósági jelentés leírja a sérülés jellegét, az adatok és érintettek kategóriáit
+és lehetőség szerint számát, a kapcsolattartót, a várható következményeket és az intézkedéseket.
+Ha még nem ismert minden részlet, a jelentés indokolatlan további késedelem nélkül
+kiegészíthető. A 72 órán túli bejelentéshez a késedelem okát is meg kell adni.
+
+Az érintettek külön értesítésénél a 34. cikk kivételeit is értékeljük, például azt,
+hogy megfelelő titkosítás valóban olvashatatlanná tette-e az adatot az illetékteleneknek.
+Egy sikeres helyreállítás önmagában nem szünteti meg egy korábbi adatkiszivárgás kockázatát.
+
+Forrás: [DSB: Data Breach eljárás](https://dsb.gv.at/ueber-die-datenschutzbehoerde/data-breach-verfahren),
+[DSB: adatfeldolgozói jelzés](https://dsb.gv.at/rechte-pflichten/ihre-pflichten-als-auftragsverarbeiterin),
+GDPR 33–34. cikk. Ellenőrizve: 2026-10-14.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Adatlopás vagy más személyesadat-sértés esetén az adatkezelőnek haladéktalanul kockázatértékelést kell végeznie.  
 > Ha a jogokra és szabadságokra nézve kockázat valószínűsíthető,
-> az incidenst a GDPR 33. cikke alapján lehetőleg 72 órán belül
+> az incidenst a GDPR 33. cikke alapján indokolatlan késedelem nélkül, lehetőleg a tudomásszerzéstől számított 72 órán belül
 > jelenteni kell a hatóságnak.  
 > Magas kockázat esetén az érintetteket is tájékoztatni kell a GDPR 34. cikke szerint.
-
-## Gyakori vizsgahibák
-
-- Azt hinni, hogy csak hackeres támadás számít incidensnek.
-- Elfelejteni a 72 órás szabályt.
-- Azt állítani, hogy mindig kötelező az érintetteket is értesíteni.
-- Nem különbséget tenni a "kockázat" és a "magas kockázat" között.
-- Kihagyni a dokumentálási kötelezettséget.
 
 ## Gyors önellenőrzés
 
@@ -106,7 +125,7 @@ Dokumentálni kell például:
 ## Rövid válaszok az önellenőrzéshez
 
 1. Olyan biztonsági sérülés, amely személyes adatot érint
-2. Lehetőleg 72 órán belül
+2. Indokolatlan késedelem nélkül, lehetőleg a tudomásszerzéstől számított 72 órán belül
 3. Ha valószínűleg nincs kockázat az érintettekre nézve
 4. Ha magas a kockázat
 5. Igen
