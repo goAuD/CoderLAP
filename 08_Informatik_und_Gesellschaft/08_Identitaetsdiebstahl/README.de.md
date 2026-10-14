@@ -49,6 +49,14 @@ Jemand nutzt deine persönlichen Daten:
 - Zugriffe wiederherstellen
 - offizielle Meldung / Hilfe anfordern
 
+## Wiederherstellung eines übernommenen E-Mail-Kontos
+
+Das E-Mail-Konto dient oft zum Zurücksetzen anderer Passwörter. Nach einer Übernahme nutzen wir auf einem vertrauenswürdigen Gerät den offiziellen Wiederherstellungsweg des Anbieters. Zusätzlich zum Passwortwechsel widerrufen wir fremde Sitzungen, prüfen Wiederherstellungsadresse, Weiterleitungsregeln und verbundene Anwendungen und sichern MFA erneut ab.
+
+Unbekannte Rechnungen, Benachrichtigungen und Zeitpunkte bleiben als Beweise erhalten. Bei finanziellem Missbrauch kontaktieren wir unverzüglich die Bank über ihren offiziellen Kanal. In Österreich kann eine Straftat bei der Polizei angezeigt werden; die amerikanische Seite IdentityTheft.gov ist eine Informationsreferenz, keine österreichische Anzeigestelle.
+
+Die Reihenfolge hängt vom Schaden ab. Bei einem gestohlenen Ausweis ist ein Passwortwechsel beispielsweise nicht die einzige oder erste sinnvolle Maßnahme. Ziel ist stets, den konkreten Missbrauch zu unterbrechen und weiteren Schaden zu begrenzen.
+
 ## Prüfungstaugliche Formulierung
 
 > Beim Identitätsdiebstahl verwendet jemand
@@ -58,13 +66,6 @@ Jemand nutzt deine persönlichen Daten:
 > Die wichtigsten Präventionsschritte sind ein starkes, einzigartiges Passwort,
 > MFA, Bewusstsein gegenüber Phishing und der Schutz sensibler Daten.  
 > Verdächtig können ungewöhnliche Transaktionen, unbekannte Konten oder unerwartete Kontoprobleme sein.
-
-## Häufige Prüfungsfehler
-
-- Identitätsdiebstahl nur auf Kreditkartenbetrug einzuschränken.
-- Die Kontoübernahme nicht zu erwähnen.
-- Die Rolle von MFA zu vergessen.
-- Nichts über die Erkennungszeichen zu sagen.
 
 ## Schnelle Selbstkontrolle
 
@@ -80,9 +81,17 @@ Jemand nutzt deine persönlichen Daten:
 2. Name, Bankkontodaten, Passwort
 3. Unbekannte Transaktion, Kontozugriffsproblem
 4. Starkes Passwort, MFA, Phishing vermeiden
-5. Passwortwechsel und Benachrichtigung der betroffenen Dienstleister
+5. Konkreten Missbrauch unterbrechen: etwa Konto sichern oder Bank informieren; Beweise erhalten und gegebenenfalls Anzeige erstatten
 
 ## Quellen
+
+- [Bundeskriminalamt: Identitätsdiebstahl](https://www.bundeskriminalamt.at/212/eigentum/betrug/identitaetsdiebstahl.html)  
+  Österreichische Präventions- und Meldemaßnahmen.
+
+- [Bundeskriminalamt: Wie erstatte ich Anzeige?](https://www.bundeskriminalamt.at/212/wie_erstatte_ich_anzeige/start.html)  
+  Offizielles Vorgehen für eine Anzeige in Österreich; das unten verlinkte US-Portal dient als Vergleich.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. FTC - What To Know About Identity Theft  
    https://consumer.ftc.gov/articles/what-know-about-identity-theft  

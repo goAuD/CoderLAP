@@ -57,19 +57,20 @@ Előnyök lehetnek:
 | IoT | általánosabban összekapcsolt eszközök világa |
 | automatizálás | csak egy része az Industrie 4.0-nak |
 
+## A szenzortól a karbantartási döntésig
+
+Egy gyártósor érzékelője növekvő rezgést mér. A helyi vezérlő továbbítja a mérést, az elemző rendszer összeveti a korábbi állapottal, majd a karbantartó munkautasítást kap. A cél a tervezett leállás, mielőtt a csapágy meghibásodik. A digitális iker ehhez a fizikai eszköz adatkapcsolattal frissített digitális modelljét adhatja; egy egyszerű 3D-rajz önmagában még nem ilyen működő kapcsolat.
+
+Az `OT` a fizikai folyamatokat felügyelő és vezérlő technológiát jelenti. Itt a rendelkezésre állás és az emberi biztonság különösen fontos. Egy vezérlő frissítését ezért összehangoljuk a termeléssel, előzetesen teszteljük, és szabályozzuk az irodai hálózatból érkező hozzáférést.
+
+Az internetkapcsolat kiesésekor is szükség lehet biztonságos helyi működésre. Az Industrie 4.0 értékét a mérhető termelési eredmény adja, például a váratlan leállások csökkenése.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az Industrie 4.0 a gyártási folyamatok digitalizálását,
 > hálózatba kapcsolását és adatvezérelt optimalizálását jelenti.  
 > Tipikus elemei a szenzorok, a gép-gép kommunikáció, a valós idejű adatok és az intelligens gyártási folyamatok.  
 > Előnye a hatékonyság és a rugalmasság, de biztonsági, integrációs és szervezeti kihívásokat is jelent.
-
-## Gyakori vizsgahibák
-
-- Az Industrie 4.0-t sima automatizálásnak nevezni.
-- Nem megemlíteni az adat- és hálózati kapcsolatot.
-- Összekeverni az IoT-val.
-- Kihagyni a kockázatokat és szervezeti következményeket.
 
 ## Gyors önellenőrzés
 
@@ -88,6 +89,14 @@ Előnyök lehetnek:
 5. Nem
 
 ## Források
+
+- [NIST SP 800-82 Rev. 3](https://csrc.nist.gov/pubs/sp/800/82/r3/final)  
+  OT, üzembiztonság és sajátos rendelkezésre állási követelmények.
+
+- [NIST: Digital Twins, Essential Elements](https://www.nist.gov/digital-twins/essential-elements)  
+  A dinamikus, valós adatokkal összekapcsolt digitális iker megkülönböztetése a statikus modelltől.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Plattform Industrie 4.0 - Industrie 4.0  
    https://www.plattform-i40.de/IP/Redaktion/EN/Dossiers/industrie40.html  
