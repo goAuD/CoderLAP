@@ -6,7 +6,7 @@
   <div class="coder-tools__items">
     {% for key, name in [('quiz', 'CoderQuiz'), ('coaster', 'CoderCoaster')] %}
     {% if key == 'quiz' and quiz_url | default('', true) %}
-    <a class="coder-tool coder-tool--available" id="{{ name | lower }}" href="{{ quiz_url }}">
+    <a class="coder-tool coder-tool--available coder-tool--featured" id="{{ name | lower }}" href="{{ quiz_url }}">
       <span class="coder-tool__name">{{ name }}</span>
       <span class="coder-tool__status">{{ ui.get('coder_quiz_open_label', 'Open quiz') }}</span>
     </a>
