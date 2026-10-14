@@ -41,6 +41,14 @@ Mert a projektvezetőnek mindig egyensúlyoznia kell:
 
 között.
 
+## Egy új kérés hatása a tervre
+
+A kiadásig 60 munkaóra áll rendelkezésre, és ennyire becsülték az elfogadott funkciókat. Az ügyfél még egy körülbelül 20 órás exportot kér. A döntéshez megmutatjuk a lehetőségeket: későbbi kiadásba kerül az export, egy hasonló ráfordítású kisebb prioritású funkció kikerül, vagy módosul az erőforrás- és határidőterv.
+
+Új ember bevonása nem tesz automatikusan 20 órányi munkát párhuzamosíthatóvá. Betanulás, függőségek és egyeztetés is szükséges lehet. A becslések feltételezéseit ezért láthatóvá tesszük.
+
+A megállapodott biztonsági és minőségi minimumot továbbra is teljesíteni kell. Például a jogosultság-ellenőrzés elhagyása nem elfogadható „gyorsítás”. A kiválasztott változatot a döntésre jogosult személy jóváhagyja, és az új terv lesz a követés alapja.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projekt feszültségterei azt jelentik,
@@ -50,13 +58,6 @@ között.
 > Ezért a projektmenedzsment egyik fontos feladata,
 > hogy ezek között az elvárások között egyensúlyt teremtsen,
 > miközben a kívánt eredmény és minőség is megmarad.
-
-## Gyakori vizsgahibák
-
-- Csak kettőt említeni a három fő korlátból.
-- Azt hinni, hogy a határidő, költség és terjedelem egymástól független.
-- Nem megemlíteni a minőség szerepét.
-- Nem hozni rá gyakorlati példát.
 
 ## Gyors önellenőrzés
 
@@ -75,6 +76,11 @@ között.
 5. Ha rossz a döntés, a minőség is romolhat
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Projektmegbízás, munkaterv és döntési napló mintái.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Project Management Skills for Life  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/pmief/skills-for-life-english.pdf  

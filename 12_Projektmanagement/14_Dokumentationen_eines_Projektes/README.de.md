@@ -43,6 +43,14 @@
 
 Weil die Projektdokumentation nicht eine einzige Datei ist, sondern ein **Dokumentensystem**.
 
+## Dokumente stellen Zusammenhänge her
+
+Der Weg einer Berechtigungsanforderung kann so aussehen: `K-07 Anforderung -> D-02 Berechtigungsentscheidung -> Umsetzung -> T-07 Test -> Abnahmevermerk`. Die Kennungen machen erkennbar, auf welcher Grundlage die Funktion entstanden ist und welche Prüfung ihre Übergabe stützt.
+
+Ein Testplan kann bereits bei der Anforderungsklärung entstehen, Testergebnisse fallen während der Entwicklung an. Auch Risiko-, Entscheidungs- und Änderungslogs werden laufend gepflegt. Der Abschluss fasst sie zusammen und ist nicht erst der Beginn der Testdokumentation.
+
+Für kleine Projekte können wenige gut gegliederte Dateien genügen. Ziel ist nicht die Anzahl der Dokumente, sondern identifizierbare, aktuelle und miteinander verknüpfte Information. Bei der Übergabe muss klar sein, welche Version gilt, wo sie liegt und wer sie pflegt.
+
 ## Prüfungstaugliche Formulierung
 
 > Zur Dokumentation eines Projekts gehören verschiedene Dokumenttypen,
@@ -52,13 +60,6 @@ Weil die Projektdokumentation nicht eine einzige Datei ist, sondern ein **Dokume
 > Zusammen stellen sie sicher,
 > dass Start, Planung, Umsetzung und Abschluss des Projekts
 > transparent und nachvollziehbar sind.
-
-## Häufige Prüfungsfehler
-
-- Die Projektdokumentation als ein einziges Abschlussdokument betrachten.
-- Start- und Abschlussdokumente nicht erwähnen.
-- Status- und Änderungsverfolgung weglassen.
-- Die Rollen der verschiedenen Dokumente nicht trennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -77,6 +78,11 @@ Weil die Projektdokumentation nicht eine einzige Datei ist, sondern ein **Dokume
 5. Weil sie Fortschritt und Probleme zeigen
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Arbeitsplan, Risikolog, Projektauftrag und Übergabedokumente.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Master project documentation template  
    https://www.atlassian.com/software/confluence/templates/master-project-documentation  

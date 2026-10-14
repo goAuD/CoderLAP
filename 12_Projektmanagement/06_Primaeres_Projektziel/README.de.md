@@ -2,88 +2,62 @@
 
 ## Schneller visueller Überblick
 
-| Element | Rolle |
+| Begriff | Beispiel |
 |---|---|
-| primäres Ziel | welches Ergebnis erreicht werden soll |
-| Einschränkungen | Zeit, Kosten, Ressourcen |
-| Qualität | auf welchem Niveau das Ergebnis erbracht werden muss |
+| Ergebnis | eingeführtes Bestellsystem |
+| erwarteter Nutzen | kürzere Bearbeitungszeit |
+| Erfolgskriterium | messbarer Nutzungserfolg, vereinbarte Qualität und Rahmenbedingungen |
 
 ## Was ist das primäre Projektziel?
 
-Das Wesentliche eines Projekts ist immer, dass ein vorab definiertes:
+Das Projektziel beschreibt das gewünschte Ergebnis oder die Veränderung, für die das Vorhaben gestartet wird. Es wird mit dem Auftraggeber geklärt und in überprüfbare Erfolgskriterien übersetzt. Eine fertige Anwendung allein beweist noch nicht, dass der geschäftliche Bedarf erfüllt ist.
 
-- Ergebnis
-- Lösung
-- Veränderung
-- geschäftlicher oder organisatorischer Wert
+## Welche Rolle spielen Zeit und Kosten?
 
-entsteht.
+Termin und Kosten sind häufig Rahmenbedingungen, können je nach Projekt aber auch vorrangige Ziele sein. Das Zutrittssystem einer Veranstaltung muss bei deren Beginn funktionieren. Bei einem Kostensenkungsprojekt kann gerade die Senkung der laufenden Ausgaben den erwarteten Nutzen bilden.
 
-Beispiele:
+Es gibt deshalb keine allgemeingültige Rangfolge, nach der ein Termin niemals vorrangig sein kann. Prioritäten und zulässige Abweichungen werden im Projektauftrag geklärt.
 
-- Einführung eines neuen Systems
-- Erstellung einer neuen Anwendung
-- Verbesserung eines Prozesses
-- Modernisierung der Infrastruktur
+## Was wird bei der Zielfestlegung vereinbart?
 
-## Warum ist die Frist nicht das primäre Ziel?
+- welches Problem für wen gelöst wird;
+- welches Ergebnis übergeben wird;
+- wie und wann der Nutzen gemessen wird;
+- wer über die Abnahme entscheidet;
+- welche Qualitäts-, Termin- und Kostenvorgaben verbindlich sind.
 
-Weil Frist, Kosten und Ressourcen zwar wichtig sind, aber sie geben an:
+## Ausgearbeitetes Ziel: kürzere Bearbeitungszeit
 
-- innerhalb welcher Rahmenbedingungen das Ziel erreicht werden muss
+„Neues Bestellsystem“ beschreibt ein Produkt. Ein messbares Ziel lautet: „Bis Ende Dezember sinkt bei fünf Pilotmitarbeitern die mediane Bearbeitungszeit einfacher Bestellungen von 10 auf höchstens 6 Minuten bei unveränderter Datengenauigkeit.“ Der Median ist der mittlere Wert der sortierten Zeiten und wird durch einzelne sehr lange Fälle weniger verzerrt.
 
-Wenn zum Beispiel alles rechtzeitig fertig wird,
-aber die Lösung nicht das kann, was gebraucht wurde,
-dann ist das Projekt in Wirklichkeit nicht erfolgreich.
-
-## Was bedeutet das in der Praxis?
-
-Bei der Projektleitung muss immer geklärt werden:
-
-- was das tatsächliche Projektziel ist
-- was als akzeptables Ergebnis gilt
-- woran man erkennt, dass es erfolgreich war
-
-## Primäres Ziel und Projektdreieck: nicht verwechseln
-
-| Begriff | Bedeutung |
-|---|---|
-| primäres Projektziel | das gewünschte Ergebnis oder der Wert |
-| Zeit / Kosten / Ressourcen | die Rahmenbedingungen der Umsetzung |
+Vorher vereinbaren wir, was eine einfache Bestellung ist und ab welchem Schritt gemessen wird. Die Ausgangsmessung wird nach dem zweiwöchigen Pilot unter gleichen Bedingungen wiederholt. Das übergebene System ist ein Ergebnis, die nachgewiesene Zeitersparnis ein Nutzen. Dieser setzt Schulung und tatsächliche Nutzung voraus und entsteht nicht automatisch mit dem fertigen Code.
 
 ## Prüfungstaugliche Formulierung
 
-> Das primäre Projektziel ist das Erreichen des definierten Ergebnisses oder Nutzens.  
-> Frist, Kosten und Ressourcen sind sehr wichtig,
-> aber sie stellen die Einschränkungen der Umsetzung dar,
-> nicht das eigentliche Wesen des Projekts.  
-> Ein Projekt kann erst dann als wirklich erfolgreich betrachtet werden,
-> wenn es das gesetzte Ziel in angemessener Qualität erfüllt.
-
-## Häufige Prüfungsfehler
-
-- Frist oder Kosten als primäres Ziel nennen.
-- Ziel und Einschränkungen nicht unterscheiden.
-- Ergebnis oder Wert nicht erwähnen.
-- Projekterfolg ausschließlich auf Zeit und Kosten beschränken.
+> Das primäre Projektziel wird anhand des Bedarfs des Auftraggebers und des angestrebten Werts bestimmt. Dem erwarteten Ergebnis werden messbare Erfolgskriterien zugeordnet. Die Rolle von Zeit, Kosten und Qualität ist projektspezifisch zu klären; auch eine feste Frist kann ein entscheidender Erfolgsfaktor sein.
 
 ## Schnelle Selbstkontrolle
 
-1. Was ist das primäre Projektziel?
-2. Warum ist die Frist nicht das Hauptziel?
-3. Was bedeuten Zeit und Kosten in dieser Logik?
-4. Wann ist ein Projekt wirklich erfolgreich?
-5. Nenne ein Beispiel für ein primäres Projektziel.
+1. Worin unterscheiden sich Projektziel und zu erstellendes Produkt?
+2. Kann ein Termin ein entscheidender Erfolgsfaktor sein?
+3. Warum ist ein messbares Ziel hilfreich?
+4. Wer klärt die Priorität der Ziele?
+5. Nenne ein Ergebnis und den damit verbundenen Nutzen.
 
 ## Kurzantworten zur Selbstkontrolle
 
-1. Das Erreichen des gewünschten Ergebnisses
-2. Weil sie nur eine Rahmenbedingung ist
-3. Die Einschränkungen der Umsetzung
-4. Wenn es das Ziel in guter Qualität erfüllt
-5. Zum Beispiel die Einführung eines neuen Systems
+1. Das Produkt ist ein Lieferergebnis; das Ziel kann auch die damit gewünschte Veränderung oder den Nutzen ausdrücken.
+2. Ja, zum Beispiel bei einem System für den Beginn einer Veranstaltung.
+3. Zielerreichung und dafür erforderliche Nachweise lassen sich feststellen.
+4. Auftraggeber und Entscheidungsbefugte in Abstimmung mit dem Projektteam.
+5. Einführung eines Bestellsystems; kürzere und nachvollziehbarere Bearbeitung.
 
 ## Quellen
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Projektziele, Verantwortlichkeiten und laufende Steuerung; das Beispiel ist ein eigener Übungsfall.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - Lexicon of Terms  
    https://www.pmi.org/standards/lexicon  

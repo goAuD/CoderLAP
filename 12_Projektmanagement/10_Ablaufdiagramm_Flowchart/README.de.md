@@ -44,6 +44,20 @@ Deshalb wird es verwendet für:
 - wenn es mehrere Entscheidungspunkte gibt
 - wenn die Funktionsweise auch dem Team oder Kunden erklärt werden muss
 
+## Zwei vollständige Wege durch eine Entscheidung
+
+In der üblichen Notation sind Start und Ende abgerundet, eine Aktion rechteckig, eine Entscheidung rautenförmig und Ein- oder Ausgabe ein Parallelogramm. Pfeile zeigen die Ausführungsrichtung. Eine Legende ist besonders hilfreich, wenn eine Organisation andere Symbole verwendet.
+
+Beispiel zur Vorzeichenprüfung einer ganzen Zahl:
+
+```text
+Start -> n einlesen -> [n >= 0?]
+                        | ja   -> "nicht negativ" ausgeben -> Ende
+                        | nein -> "negativ" ausgeben       -> Ende
+```
+
+Dies ist eine Textskizze; in der Zeichnung steht die Frage in einer Raute. Die Entscheidungskanten tragen Ja/Nein-Beschriftungen. Die Eingabe `0` folgt dem Ja-Zweig, `-3` dem Nein-Zweig. Das Beispiel setzt bereits eine gültige ganze Zahl voraus. Für ein echtes Eingabeformular müssen auch Prüfung und erneute Eingabe dargestellt werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Flowchart oder Ablaufdiagramm ist eine grafische Darstellung,
@@ -54,13 +68,6 @@ Deshalb wird es verwendet für:
 > Sein Vorteil ist, dass es leicht überschaubar
 > und sowohl im technischen als auch im nicht-technischen Umfeld
 > gut einsetzbar ist.
-
-## Häufige Prüfungsfehler
-
-- Flowchart mit dem Struktogramm verwechseln.
-- Entscheidungspunkte nicht erwähnen.
-- Nur auf die Programmierumgebung beschränken.
-- Nicht über die Rolle von Pfeilen und Symbolen sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -80,8 +87,13 @@ Deshalb wird es verwendet für:
 
 ## Quellen
 
-1. Lucidchart - Flowcharts  
-   https://www.lucidchart.com/pages/flowcharts  
+- [Lucid: Flowchart Symbols and Their Meanings](https://lucid.co/diagram/flowchart/symbols)  
+  Offizieller Leitfaden des Diagrammwerkzeugs zu üblichen Flussdiagrammsymbolen.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
+1. Lucid - Flowchart Symbols and Their Meanings  
+   https://lucid.co/diagram/flowchart/symbols  
    Verwendung: klare, moderne Zusammenfassung des Flowchart-Begriffs und -Zwecks.
 
 2. Atlassian - Flowchart template  

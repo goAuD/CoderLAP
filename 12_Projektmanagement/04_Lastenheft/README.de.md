@@ -45,18 +45,25 @@ Typischer Inhalt:
 - das erwartete Ergebnis und die Rahmenbedingungen beschreiben
 - nicht zu früh in technische Details abrutschen
 
+## Eine Anforderung überprüfbar formulieren
+
+Statt „Das System soll schnell sein“ beschreiben wir Situation und erwartetes Ergebnis. Beispiel: Bei zwanzig gleichzeitigen Benutzern, zehntausend Musterbuchungen und einer festgelegten Testumgebung erscheinen mindestens 95 % der Tageslisten innerhalb von zwei Sekunden. Messverfahren und abnehmende Person müssen ebenfalls vereinbart werden.
+
+Drei Aussagearten sind zu unterscheiden:
+
+| Art | Beispiel |
+|---|---|
+| funktionale Anforderung | Benutzer können nach Tag filtern |
+| Qualitätsanforderung | die oben messbar formulierte Antwortzeit |
+| Randbedingung | die vorhandene Unternehmensanmeldung ist zu verwenden |
+
+Das Lastenheft lässt normalerweise Raum für die Lösung, kann aber verbindliche technische oder rechtliche Randbedingungen enthalten. Pflichtanforderungen, verschiebbare Wünsche und ausdrücklich ausgeschlossene Arbeiten erleichtern den Angebotsvergleich.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Lastenheft ist ein Dokument, das die Anforderungen und Erwartungen der Auftraggeberseite enthält.  
 > Es beantwortet hauptsächlich die Frage, was gelöst werden muss und warum es benötigt wird.  
 > Es bildet die Grundlage für das spätere Pflichtenheft, das bereits die konkrete Art der Umsetzung beschreibt.
-
-## Häufige Prüfungsfehler
-
-- Das Lastenheft als technischen Umsetzungsplan beschreiben.
-- Es mit dem Pflichtenheft verwechseln.
-- Die Auftraggeberperspektive nicht hervorheben.
-- Nicht erwähnen, dass es ein Grundlagendokument für die weitere Planung ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -75,6 +82,11 @@ Typischer Inhalt:
 5. Weil es die Anforderungen klärt
 
 ## Quellen
+
+- [IREB: CPRE Glossary](https://cpre.ireb.org/en/downloads-and-resources/glossary)  
+  Anforderungsarten, Akzeptanzkriterien und Nachverfolgbarkeit.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. IHK Schleswig-Holstein - Hinweise zum Antrag und zur Dokumentation  
    https://www.ihk.de/schleswig-holstein/bildung/formulare-ausbildung/betrieblicher-auftrag-industrielle-elektroberufe-6301898  

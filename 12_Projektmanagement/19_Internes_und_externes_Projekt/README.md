@@ -50,18 +50,19 @@ Az alábbi források főleg a projektkörnyezetet,
 stakeholdereket és szervezeti kapcsolatokat írják le;
 ebből következik ez a megkülönböztetés.
 
+## A besorolás a nézőponttól függ
+
+Egy iskola saját eszköznyilvántartását fejleszti, és ehhez külső céget bíz meg. Az iskola számára ez belső fejlesztési projekt, mert a saját működését szolgálja. A beszállító számára ugyanaz a munka külső ügyfélprojekt. A külső közreműködő tehát önmagában nem változtatja minden nézőpontból „külsővé” a projektet.
+
+Mindkét oldalon szükséges a felelős, a cél és az elfogadási feltétel. A beszállítói szerződés a szolgáltatást és az átadás módját rendezi, az iskolának pedig a belső bevezetést és az üzemeltetést is meg kell szerveznie.
+
+Belső projekt esetén is valós a munkaidő és a kapacitás költsége, még akkor is, ha nem készül külső számla. Vizsgán ezért mindig mondd meg, melyik szervezet szemszögéből használod a besorolást.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Belső projektnek azt nevezzük, amely a saját szervezet számára készül, és elsődlegesen belső célokat szolgál.  
 > Külső projekt esetén a projekt eredménye egy külső ügyfél, partner vagy megrendelő számára készül.  
 > A különbség azért fontos, mert a kommunikáció, az elvárások, a jóváhagyás és sokszor a szerződéses keretek is eltérnek.
-
-## Gyakori vizsgahibák
-
-- A különbséget csak technikai oldalról magyarázni.
-- Nem megemlíteni a megrendelő vagy stakeholder nézőpontját.
-- Azt gondolni, hogy a belső projekt kevésbé „igazi” projekt.
-- Nem hozni rá konkrét példát.
 
 ## Gyors önellenőrzés
 
@@ -80,6 +81,11 @@ ebből következik ez a megkülönböztetés.
 5. Mert más a címzett, felelősség és jóváhagyás
 
 ## Források
+
+- [European Commission: PM² Project Management](https://pm2.europa.eu/pm2-methodologies/pm2-project-management_en)  
+  Felelősségek és a projekt irányításának ellenőrzési pontjai.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - PM Curriculum and Resources  
    https://www.pmi.org/-/media/pmi/documents/public/pdf/learning/ugcr-vol-one-and-vol-two.pdf  

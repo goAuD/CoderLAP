@@ -43,6 +43,14 @@ Ha nincs dokumentáció:
 - nehezebb az átadás
 - nehezebb az utólagos hibaelemzés
 
+## Egy döntés, amely fél év múlva is érthető
+
+Egy iskolai alkalmazás exportformátumot választ. A döntési feljegyzés röviden tartalmazza: dátum, felelős, helyzet, megvizsgált lehetőségek és indok. Például CSV és XLSX közül CSV-t választanak, mert az átvevő rendszer ezt kezeli és nincs szükség formázásra. Következményként rögzítik a kódolási és elválasztójel-szabályt is.
+
+A „CSV mellett döntöttünk” önmagában kevés. Az indok és a feltétel segít eldönteni, mikor kell újravizsgálni a választást. Ilyen jel lehet, ha az új átvevő rendszer már külön munkalapokat követel.
+
+A feljegyzés hivatkozzon az érintett követelményre és a megvalósításra. Egyetlen, könnyen megtalálható és verziózott példány értékesebb, mint három, e-mailben külön élő másolat.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projektdokumentáció célja,
@@ -52,13 +60,6 @@ Ha nincs dokumentáció:
 > a tudásmegőrzést, a projektellenőrzést
 > és a későbbi átadást vagy karbantartást is.  
 > A jó projektdokumentáció tehát nem puszta adminisztráció, hanem a projekt sikerének fontos része.
-
-## Gyakori vizsgahibák
-
-- A dokumentációt felesleges adminisztrációnak nevezni.
-- Nem megemlíteni a visszakereshetőséget.
-- Csak a lezáráshoz kötni a szerepét.
-- Nem beszélni a döntések rögzítéséről.
 
 ## Gyors önellenőrzés
 
@@ -77,6 +78,11 @@ Ha nincs dokumentáció:
 5. Elvész az információ és nő a káosz
 
 ## Források
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Projektmegbízás, munkaterv és döntési napló mintái.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Master project documentation template  
    https://www.atlassian.com/software/confluence/templates/master-project-documentation  

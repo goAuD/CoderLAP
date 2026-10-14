@@ -49,19 +49,20 @@ Typischerweise:
 - die Auftraggeberanforderungen abdecken
 - abgestimmt und überprüfbar sein
 
+## Von der Anforderung zur Umsetzungsspezifikation
+
+Die Anforderung K-03 im Lastenheft lautet: Berechtigte Sachbearbeiter können Buchungen eines ausgewählten Tages herunterladen. Das Pflichtenheft beschreibt dazu beispielsweise Datumsauswahl, serverseitige Berechtigungsprüfung und CSV-Spalten: Buchungskennung und Uhrzeit. Die Datei verwendet UTF-8; nicht benötigte personenbezogene Daten entfallen.
+
+Für die Abnahme werden an einem vorbereiteten Tag drei Buchungen angelegt. Die Ausgabe muss genau diese drei Zeilen enthalten, ohne Buchungen anderer Tage. Auch eine direkte Anfrage eines unberechtigten Benutzers darf keinen Export liefern. Anforderung, Lösung und Prüfung sind über dieselbe Kennung verbunden.
+
+Die freigegebene Version muss erkennbar sein. Bei einer zusätzlichen Spalte prüft man Auswirkungen auf Datenschutz, Tests und Termin und aktualisiert anschließend die vereinbarte Beschreibung. Der Detaillierungsgrad hängt vom Projekt ab; nicht jede Entwicklung benötigt ein einziges, im Voraus vollständig abgeschlossenes Großdokument.
+
 ## Prüfungstaugliche Formulierung
 
 > Das Pflichtenheft ist die detaillierte Beschreibung der Umsetzung,
 > die festhält, wie die vom Auftraggeber vorgegebenen Anforderungen erfüllt werden.  
 > Typischerweise wird es von der Auftragnehmer- bzw. Entwicklerseite auf Basis des Lastenhefts erarbeitet.  
 > Seine wichtige Rolle besteht darin, eine technisch eindeutige Grundlage für Entwicklung, Test und spätere Abnahme zu bieten.
-
-## Häufige Prüfungsfehler
-
-- Das Pflichtenheft mit der Auftraggeberanforderungsliste gleichsetzen.
-- Den Aspekt des „Wie" nicht erwähnen.
-- Es mit dem Lastenheft verwechseln.
-- Nicht hervorheben, dass es ein detaillierteres und technischeres Dokument ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -80,6 +81,11 @@ Typischerweise:
 5. Weil es eine technische Grundlage für die Arbeit bietet
 
 ## Quellen
+
+- [IREB: CPRE Glossary](https://cpre.ireb.org/en/downloads-and-resources/glossary)  
+  Anforderungsarten, Akzeptanzkriterien und Nachverfolgbarkeit.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. IHK Frankfurt am Main - Software-Erstellungsvertrag  
    https://www.frankfurt-main.ihk.de/recht/mustervertraege/software-erstellungsvertrag-5199364  

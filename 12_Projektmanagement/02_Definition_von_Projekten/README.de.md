@@ -51,6 +51,14 @@ als bei einer täglichen Routineaufgabe.
 | Projekt | einmalig, zielgerichtet, zeitlich begrenzt |
 | Prozess / Betrieb | wiederkehrend, laufender Betrieb |
 
+## Dasselbe System, zwei Arten von Arbeit
+
+Ein Unternehmen führt ein Ticketsystem ein: Lösung auswählen, Daten übernehmen, Beschäftigte schulen und an den Betrieb übergeben. Diese Arbeit hat Grenzen und ein zu erreichendes Ergebnis und ist daher ein Projekt. Die anschließende tägliche Bearbeitung eingehender Tickets ist laufender Betrieb.
+
+Wird das System ein Jahr später an einem weiteren Standort eingeführt, kann auch diese Einführung ein Projekt sein. Die Software bleibt gleich, aber Personen, Daten und örtliche Bedingungen unterscheiden sich. Einzigartigkeit bedeutet nicht, dass weltweit noch niemand etwas Ähnliches gemacht hat.
+
+Die zeitliche Begrenzung betrifft das Projekt, nicht die Lebensdauer des Produkts: Nach Projektabschluss kann das System noch Jahre genutzt werden. Zum Abschluss gehören auch Betriebsverantwortung, Dokumentation und die Übergabe offener Aufgaben.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein Projekt ist eine zeitlich begrenzte, auf ein einzigartiges Ziel
@@ -59,13 +67,6 @@ als bei einer täglichen Routineaufgabe.
 > ein Ende, einen eigenen Ressourcenbedarf
 > und ein einzigartiges Ergebnis hat.  
 > Deshalb muss ein Projekt separat geplant, organisiert und gesteuert werden.
-
-## Häufige Prüfungsfehler
-
-- Jede Aufgabe als Projekt bezeichnen.
-- Die zeitliche Begrenzung nicht erwähnen.
-- Das einzigartige Ziel oder Ergebnis nicht hervorheben.
-- Das Projekt mit dem laufenden Betrieb verwechseln.
 
 ## Schnelle Selbstkontrolle
 
@@ -84,6 +85,11 @@ als bei einer täglichen Routineaufgabe.
 5. Webshop-Start, Systemeinführung
 
 ## Quellen
+
+- [PMI: Project Management Skills for Life](https://www.pmi.org/-/media/pmi/documents/public/pdf/pmief/skills-for-life-english.pdf)  
+  Zeitlich begrenzte Projekte vom laufenden Betrieb unterscheiden.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. PMI - Lexicon of Terms  
    https://www.pmi.org/standards/lexicon  

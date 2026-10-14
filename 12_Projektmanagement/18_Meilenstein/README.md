@@ -35,18 +35,19 @@
 | munkacsomag | munkavégzési egység |
 | mérföldkő | fontos állapot vagy teljesítési pont |
 
+## Mérföldkő: az átvételi feltételek teljesültek
+
+A „pilot indítható” mérföldkőhöz három bizonyíték tartozik: sikeres belépési és jogosultsági próba, ellenőrzött adatimport, valamint átadott felhasználói leírás. Megnevezzük, ki dönt az indulásról. A dátum a tervezett döntési pontot jelzi, nem teszi automatikusan készre az eredményt.
+
+Az ütemtervben a mérföldkő időtartama nulla. Az előkészítés és az ellenőrző megbeszélés viszont tényleges, időt igénylő feladat, ezért külön kell tervezni. A mérföldkő csak ezek megfelelő eredménye után teljesül.
+
+Ha valamely feltétel hiányzik, a döntés lehet halasztás vagy a felhatalmazott személy által jóváhagyott, pontosan dokumentált korlátozás. A fennmaradó kockázatoknak és a következő lépésnek látszaniuk kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A mérföldkő a projekt egy fontos állomása, amely egy jelentős eredmény vagy állapot elérését jelzi.  
 > Nem egy hosszabb munkafolyamatot, hanem inkább egy ellenőrzési vagy kommunikációs pontot jelent.  
 > A mérföldkövek segítenek a projekt előrehaladásának nyomon követésében és a stakeholder-kommunikációban.
-
-## Gyakori vizsgahibák
-
-- A mérföldkövet feladatnak nevezni.
-- Nem megemlíteni, hogy állapotot vagy eredményt jelez.
-- Összekeverni a munkacsomaggal.
-- Nem hozni rá konkrét példát.
 
 ## Gyors önellenőrzés
 
@@ -65,6 +66,11 @@
 5. A munkacsomag munkaegység, a mérföldkő állapotjelző
 
 ## Források
+
+- [PMI: Practice Standard for Scheduling](https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/practice-standard-scheduling.pdf)  
+  Tevékenységek függősége, időtartam, mérföldkövek és kritikus út.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. Atlassian - Project milestone template  
    https://www.atlassian.com/software/confluence/templates/project-milestone  

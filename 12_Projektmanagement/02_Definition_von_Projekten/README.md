@@ -51,19 +51,20 @@ tartozik, mint egy napi rutinfeladathoz.
 | projekt | egyszeri, célirányos, időben korlátozott |
 | folyamat / üzemeltetés | ismétlődő, folyamatos működés |
 
+## Ugyanaz a rendszer, kétféle munka
+
+Egy cég új hibajegykezelőt vezet be: kiválasztja a megoldást, áthozza az adatokat, betanítja a dolgozókat és átadja az üzemeltetésnek. Ennek határa és elérendő eredménye van, ezért projekt. A beérkező jegyek napi feldolgozása utána rendszeres üzemeltetési tevékenység.
+
+Ha egy évvel később másik telephelyre is bevezetik, az új bevezetés ismét lehet projekt. A használt szoftver azonos, de az emberek, az adatok és a helyi feltételek mások. Az egyediség nem azt jelenti, hogy a világon még senki nem csinált hasonlót.
+
+A projekt időbeli korlátja nem a termék rövid élettartamát jelenti: a projekt lezárulhat, miközben a rendszer évekig működik. A lezáráshoz szükséges az üzemeltetési felelős, a dokumentáció és a nyitott teendők átadása is.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A projekt egy időben korlátozott, egyedi célra irányuló feladat
 > vagy kezdeményezés, amely meghatározott eredményt kíván elérni.  
 > Eltér a folyamatos rutinszerű működéstől, mert van kezdete, vége, külön erőforrásigénye és egyedi kimenetele.  
 > Ezért a projektet külön tervezni, szervezni és irányítani kell.
-
-## Gyakori vizsgahibák
-
-- Minden feladatot projektnek nevezni.
-- Nem megemlíteni az időbeli korlátozottságot.
-- Nem kiemelni az egyedi célt vagy eredményt.
-- A projektet összekeverni az üzemeltetéssel.
 
 ## Gyors önellenőrzés
 
@@ -82,6 +83,11 @@ tartozik, mint egy napi rutinfeladathoz.
 5. Webshop indítás, rendszerbevezetés
 
 ## Források
+
+- [PMI: Project Management Skills for Life](https://www.pmi.org/-/media/pmi/documents/public/pdf/pmief/skills-for-life-english.pdf)  
+  Az időben behatárolt projekt és a folyamatos működés megkülönböztetése.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
 
 1. PMI - Lexicon of Terms  
    https://www.pmi.org/standards/lexicon  

@@ -35,6 +35,14 @@ In vielen Projektmanagement-Sprachen ist das nahe Äquivalent der **Project Char
 | Projektauftrag | offizielles Startdokument |
 | Projektplan | detaillierter Umsetzungsplan |
 
+## Ein kurzer, aber entscheidungsfähiger Projektauftrag
+
+Beispiel: Die Geräteverwaltung einer Lehrwerkstatt wird innerhalb von vier Wochen in ein gemeinsames System überführt. Sponsor ist die Werkstattleitung, die Koordination übernimmt eine benannte Person. Freigegeben sind höchstens 120 Arbeitsstunden. Der erste Umfang umfasst 300 Geräte eines Standorts und fünf berechtigte Benutzer; ein Beschaffungssystem gehört nicht dazu.
+
+Für die Abnahme müssen die abgestimmten Daten aller 300 Geräte übernommen, die Berechtigungsprüfung bestanden und die Betriebsanleitung übergeben sein. Der Auftrag legt außerdem fest, wer Umfang oder Budget ändern darf und welche Abweichungen eskaliert werden müssen.
+
+Der Auftrag schafft damit Befugnis und eine gemeinsame Ausgangsbasis. Er benötigt noch keine Detailplanung sämtlicher Felder und Bildschirmmasken; diese entsteht in der Anforderungs- und Entwurfsarbeit.
+
 ## Prüfungstaugliche Formulierung
 
 > Der Projektauftrag ist das offizielle Startdokument des Projekts,
@@ -42,13 +50,6 @@ In vielen Projektmanagement-Sprachen ist das nahe Äquivalent der **Project Char
 > und die wichtigsten Beteiligten festhält.  
 > Seine Aufgabe ist es, eine gemeinsame Grundlage für den Projektstart und die weitere Planung zu bieten.  
 > Inhaltlich steht er dem nahe, was im englischsprachigen Projektumfeld als Project Charter bezeichnet wird.
-
-## Häufige Prüfungsfehler
-
-- Den Projektauftrag als vollständigen Projektplan bezeichnen.
-- Die startende und offizielle Rolle nicht erwähnen.
-- Ihn mit dem Anforderungsdokument verwechseln.
-- Nicht über die Festlegung von Ziel und Rahmen sprechen.
 
 ## Schnelle Selbstkontrolle
 
@@ -67,6 +68,11 @@ In vielen Projektmanagement-Sprachen ist das nahe Äquivalent der **Project Char
 5. Project Charter
 
 ## Quellen
+
+- [European Commission: PM² Artefacts](https://pm2.europa.eu/pm2-artefacts_en)  
+  Arbeitsplan, Risikolog, Projektauftrag und Übergabedokumente.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
 
 1. Atlassian - Project charter template  
    https://www.atlassian.com/software/confluence/templates/project-charter  
