@@ -1,92 +1,54 @@
 # Erste drei Normalformen
 
-## Gyors vizuális kép
+## A normalizálás célja
 
-| Normálforma | Lényege |
-|---|---|
-| `1NF` | nincs ismétlődő csoport, egy cellában egy érték |
-| `2NF` | nincs részleges függés összetett kulcs esetén |
-| `3NF` | nincs tranzitív függés nem kulcsmezők között |
+A normalizálás a táblák felosztása az adatok közti függések alapján. Célja a felesleges ismétlődés és a beszúrási, módosítási, törlési anomáliák csökkentése. A függés üzleti szabály, nem két véletlenül azonos mintaértékből levont következtetés.
 
-## Miért van szükség normalizálásra?
+A `X -> Y` jelölés azt mondja: ugyanahhoz az X értékhez mindig ugyanaz az Y tartozik. Egy **kulcsjelölt** minimális olyan oszlophalmaz, amely egyértelműen azonosítja a sort. Ezek közül választjuk az elsődleges kulcsot. A normalizálásnál a többi kulcsjelöltet is figyelembe vesszük.
 
-Mert segít:
+## 1NF: egy érték a választott tartományból
 
-- csökkenteni a redundanciát
-- elkerülni az adatinkonzisztenciát
-- könnyebbé tenni a karbantartást
+Nincsenek ismétlődő oszlopcsoportok, például `product1`, `product2`, `product3`, és egy terméklista sem kerül vesszőkkel összefűzve egy cellába. Egy rendelési tétel egy sor. Az „atomi” az adatmodell használatától függ: egy dátum maradhat egyetlen DATE érték attól, hogy évre és hónapra bontható.
 
-## `1NF` - első normálforma
+## 2NF: teljes függés minden kulcsjelölttől
 
-Egy mezőben csak **egyetlen atomi érték** legyen.
+Az 1NF mellett minden olyan attribútum, amely egyetlen kulcsjelöltnek sem része, teljesen függ minden kulcsjelölttől, nem csak annak egy részétől. Ez összetett kulcsnál jelent külön ellenőrzést. Ha minden kulcsjelölt egyetlen oszlopból áll, nincs ilyen részleges függés.
 
-Nem jó például:
+## 3NF: a tranzitív függések kezelése
 
-- egy mezőben több telefonszám vesszővel elválasztva
+Az egyszerű, egyértelmű kulcsú esetekben a nem kulcsadat ne egy másik nem kulcsadaton keresztül függjön a kulcstól. Például `customer_id -> customer_name`, ezért az ügyfél nevét nem minden rendelésben, hanem az ügyfélnél tároljuk.
 
-## `2NF` - második normálforma
+Pontosabb szabály: minden nem triviális `X -> A` függésnél X szuperkulcs, vagy A valamely kulcsjelölt része. A szuperkulcs egyedileg azonosít, de a minimális kulcsjelölttel ellentétben tartalmazhat felesleges oszlopot is. Ez a megfogalmazás a több kulcsjelöltes eseteket is lefedi.
 
-A tábla legyen `1NF`-ben, és minden nem kulcsmező a **teljes kulcstól** függjön.
+## Kidolgozott felbontás: rendelési tételek
 
-Ez főleg összetett kulcs esetén fontos.
+Induljunk ebből: `order_id, product_id, order_date, customer_id, customer_name, product_name, quantity`. A példa szabálya szerint egy termék rendelésenként egyszer szerepel; a kulcsjelölt `(order_id, product_id)`.
 
-Ha egy mező csak a kulcs egyik részétől függ, azt külön táblába kell tenni.
+1. **1NF:** minden termék saját sorban van. A mennyiség egyetlen szám.
+2. **2NF:** a rendelés dátuma és ügyfele csak `order_id`-től, a termék neve csak `product_id`-től függ. Külön `orders` és `products` táblába kerülnek. Az `order_items(order_id, product_id, quantity)` a teljes párhoz tartozó mennyiséget őrzi.
+3. **3NF:** az `orders` táblában `order_id -> customer_id -> customer_name` lánc lenne. A nevet átvisszük a `customers(customer_id, customer_name)` táblába; a rendelésben az ügyfél idegen kulcsa marad.
 
-## `3NF` - harmadik normálforma
-
-A tábla legyen `2NF`-ben, és a nem kulcsmezők **ne függjenek más nem kulcsmezőktől**.
-
-Vagyis:
-
-- a nem kulcsmezők a kulcstól függjenek
-- ne egymástól
-
-## Egyszerű példa
-
-Ha egy `Products` táblában van:
-
-- `ProductID`
-- `SRP`
-- `Discount`
-
-és a `Discount` az `SRP`-től függ, nem közvetlenül a kulcstól, akkor ez `3NF`-sértés lehet.
-
-## Mire kell figyelni vizsgán?
-
-- ne csak definíciót mondd, hanem a célt is
-- a `2NF`-nél fontos az összetett kulcs
-- a `3NF`-nél a tranzitív függés a kulcsszó
+Az összesítés így négy tábla: `customers`, `orders`, `products`, `order_items`. Kulcsokkal és kapcsolásokkal ugyanaz a rendelés összeállítható, miközben egy aktuális ügyfélnév csak egy helyen változik. A rendeléskori ár vagy szállítási cím külön történeti adat lehet; a jelentését előbb tisztázni kell, nem automatikusan eltávolítani.
 
 ## Vizsgán jól használható megfogalmazás
 
-> Az első három normálforma a relációs adatbázistervezés alapelvei közé tartozik.  
-> Az első normálforma szerint egy mezőben csak egy érték szerepelhet, a második normálforma kizárja a részleges  
-> függéseket összetett kulcs esetén, a harmadik normálforma pedig megtiltja, hogy nem kulcsmezők más nem kulcsmezőktől  
-> függjenek.  
-> Ezek a szabályok csökkentik a redundanciát és javítják az adatkonzisztenciát.
-
-## Gyakori vizsgahibák
-
-- A `1NF`-et csak “rendezett táblának” nevezni.
-- A `2NF` lényegéből kihagyni az összetett kulcsot.
-- A `3NF`-et összekeverni a `2NF`-fel.
-- Nem megemlíteni a tranzitív függést.
+> Az 1NF megszünteti az ismétlődő csoportokat. A 2NF a kulcsjelöltek részeitől való függést vizsgálja. A 3NF a nem megfelelő tranzitív függéseket is megszünteti. A cél olyan felosztás, amelyben ugyanazt az üzleti tényt következetesen kezeljük, és a szükséges adatok kapcsolással visszanyerhetők.
 
 ## Gyors önellenőrzés
 
-1. Mi az `1NF` lényege?
-2. Mikor fontos különösen a `2NF`?
-3. Mit tilt a `3NF`?
-4. Miért jó a normalizálás?
-5. Mi az a tranzitív függés röviden?
+1. Miért külön sor a rendelés két terméke?
+2. Mit jelent a részleges függés?
+3. Miért kerülhet külön táblába az ügyfél neve?
+4. Megoldja-e önmagában egy új `id` oszlop az összes normalizálási problémát?
+5. Honnan tudjuk a funkcionális függéseket?
 
 ## Rövid válaszok az önellenőrzéshez
 
-1. Egy mezőben egy érték
-2. Összetett kulcs esetén
-3. Nem kulcsmezők egymástól való függését
-4. Mert csökkenti a redundanciát és hibákat
-5. Amikor egy nem kulcsmező más nem kulcsmezőtől függ
+1. Így nincs egy mezőbe csomagolt ismétlődő terméklista.
+2. Egy nem kulcsattribútum az összetett kulcsjelöltnek csak egy részétől függ.
+3. Az ügyfélazonosító határozza meg, nem a rendelés saját ténye.
+4. Nem. Az üzleti kulcsok és függések ettől megmaradnak.
+5. A követelményekből és üzleti szabályokból, megfelelő ellenőrzéssel.
 
 ## Források
 
@@ -99,3 +61,10 @@ Ha egy `Products` táblában van:
    Használat: hivatalos háttér a normalizálás céljához és a `1NF`, `2NF`, `3NF` gyakorlati értelmezéséhez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [Microsoft: Database normalization](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/microsoft-365/microsoft-365-apps/access/database-normalization-description): normalizálás és táblafelbontás alapelvei
+- [Microsoft: Database design basics](https://support.microsoft.com/en-us/access/database-design-basics): függések, kulcsok és kapcsolatok tervezése
+
+Ellenőrizve: `2026-10-14`.

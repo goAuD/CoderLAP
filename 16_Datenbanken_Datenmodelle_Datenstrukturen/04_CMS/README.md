@@ -62,19 +62,22 @@ Egy `CMS` gyakran használ egy `DBMS`-t a háttérben.
 - `Drupal`
 - `Joomla`
 
+## Kidolgozott munkafolyamat: egy tananyag publikálása
+
+Egy szerkesztő új cikket készít a CMS adminfelületén. A piszkozatot előnézetben ellenőrzi, egy megfelelő jogosultságú személy jóváhagyja, majd publikálják. A látogató a frontendben a közzétett változatot látja. Egy korábbi verzió visszaállítása és az automatikus publikálási idő olyan funkció, amelynek támogatását a konkrét CMS-ben kell ellenőrizni.
+
+A **TYPO3** szintén CMS. A backend a szerkesztési és adminisztrációs felület, a frontend a látogatók által használt webhely. A témasablon a megjelenést, a bővítmény külön funkciót ad; egyik sem azonos magával a tárolt tartalommal.
+
+Üzemeltetési példában az adatbázis-dump mellé szükség lehet a feltöltött képekre, konfigurációra és a kompatibilis kód/bővítményverziókra is. Egy adatbázis sikeres visszatöltése még nem bizonyítja, hogy a cikk képei és az egész oldal működnek. Átadáskor egy tartalom létrehozását, jogosultságát, publikálását és visszaállítását is próbáld végig.
+
+Léteznek fájlalapú és statikus kimenetet készítő CMS-ek is. A CMS-fogalomhoz tehát nem kötelező külön adatbázis-kiszolgáló.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A `CMS`, vagyis Content Management System olyan alkalmazásrendszer, amely digitális tartalmak létrehozását,  
 > szerkesztését, tárolását és közzétételét támogatja.  
 > A háttérben sok esetben adatbázist használ a tartalom, felhasználók, jogosultságok és beállítások kezelésére.  
 > Ezért a `CMS` jó példa arra, hogyan használ egy alkalmazás adatbázist strukturált információk kezelésére.
-
-## Gyakori vizsgahibák
-
-- A `CMS`-t adatbáziskezelőnek nevezni.
-- Elfelejteni, hogy a háttérben általában adatbázis van.
-- A `CMS`-t csak blogmotorként bemutatni.
-- Nem megemlíteni a jogosultság- és tartalomkezelést.
 
 ## Gyors önellenőrzés
 
@@ -107,3 +110,10 @@ Egy `CMS` gyakran használ egy `DBMS`-t a háttérben.
    Használat: gyakorlati magyarázat a CMS fő részeihez és működéséhez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [TYPO3: Concepts](https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Concepts/Index.html): backend/frontend és a CMS szerkezete
+- [MDN: CMS](https://developer.mozilla.org/en-US/docs/Glossary/CMS): a tartalomkezelés fogalma
+
+Ellenőrizve: `2026-10-14`.

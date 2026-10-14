@@ -11,11 +11,7 @@
 
 ## Mit értünk itt freeware adatbázison?
 
-Vizsgakörnyezetben ez általában olyan adatbázis-megoldást jelent, amely:
-
-- ingyenesen használható
-- közösségi vagy nyílt forrású változatban elérhető
-- alacsonyabb licencköltséggel vezethető be
+A vizsgatéma címében a freeware tág gyűjtőnév, de a fogalmakat külön kell választani. Az **ingyenesen használható** az árra, a **nyílt forrású** a licencjogokra, a **Community** pedig egy kiadás nevére utal. Egy Community termék nem ettől lesz automatikusan OSI által elfogadott nyílt forrású szoftver. A konkrét licencet és kiadást kell ellenőrizni.
 
 ## Fő előnyök
 
@@ -53,8 +49,23 @@ Vizsgakörnyezetben ez általában olyan adatbázis-megoldást jelent, amely:
 
 | Fogalom | Jelentés |
 |---|---|
-| freeware / community | szabadon használható vagy nyílt kiadás |
+| freeware / community | árra vagy kiadásra utaló jelölés; a licenc külön vizsgálandó |
 | enterprise | gyakran fizetős, extra támogatással és funkciókkal |
+
+## Kidolgozott választás és licencellenőrzés
+
+| Termék | A vizsgált licencjellemző |
+|---|---|
+| PostgreSQL | megengedő PostgreSQL License |
+| MySQL Community | GPL alatt elérhető közösségi kiadás |
+| SQLite | a projekt a szállított kódot public domainként adja közre |
+| MongoDB Community Server | SSPL; ezt a licencet az OSI nem fogadta el open-source licencként |
+
+A táblázat a 2026-10-14-én ellenőrzött termékoldalakra épül; kiadás és felhasználási mód szerint olvasd el a feltételeket. Különösen a továbbadás, beépítés és adatbázis-szolgáltatás nyújtása jelenthet eltérő kötelezettséget.
+
+Egy offline jegyzetelő alkalmazásnál az SQLite egyszerű helyi tárolása jó jelölt lehet. Sok párhuzamos írást végző közös szolgáltatásnál egy kliens-szerver DBMS lehet célszerűbb. Ez követelményalapú mérlegelés, nem az ingyenes termékek minőségi rangsora.
+
+A teljes költségbe a szerver, mentés, frissítés, felügyelet és a hozzáértő munka is beleszámít. Nyílt forrású DBMS-hez is kapható fizetős támogatás, és egy ingyenes kiadás is működhet éles üzleti rendszerben. A döntést kompatibilitási, terhelési és visszaállítási próbával támaszd alá.
 
 ## Vizsgán jól használható megfogalmazás
 
@@ -63,13 +74,6 @@ Vizsgakörnyezetben ez általában olyan adatbázis-megoldást jelent, amely:
 > Hátrányuk lehet, hogy a professzionális támogatás, bizonyos vállalati funkciók vagy a kényelmes üzemeltetés  
 > korlátozottabb lehet, mint enterprise megoldásoknál.  
 > Ezért a megfelelő adatbázis kiválasztása mindig a feladattól, terheléstől és támogatási igénytől függ.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy az ingyenes adatbázisok csak tanulásra jók.
-- Nem megemlíteni az üzemeltetés és támogatás kérdését.
-- Minden szabad adatbázist ugyanolyannak tekinteni.
-- A költség alapján egyedül dönteni.
 
 ## Gyors önellenőrzés
 
@@ -108,3 +112,12 @@ Vizsgakörnyezetben ez általában olyan adatbázis-megoldást jelent, amely:
 Megjegyzés: a konkrét előnyök és hátrányok egy része a hivatalos termékleírásokból levont gyakorlati következtetés.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [PostgreSQL: License](https://www.postgresql.org/about/licence/): megengedő licenc
+- [MySQL: Community Edition](https://www.mysql.com/products/community/): GPL közösségi kiadás
+- [SQLite: Copyright](https://www.sqlite.org/copyright.html): public-domain közreadás
+- [MongoDB: SSPL FAQ](https://www.mongodb.com/legal/licensing/server-side-public-license/faq): SSPL és OSI státusz elkülönítése
+
+Ellenőrizve: `2026-10-14`.

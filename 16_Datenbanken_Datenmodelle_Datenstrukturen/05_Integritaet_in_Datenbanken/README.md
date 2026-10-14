@@ -5,7 +5,7 @@
 | Integritástípus | Példa |
 |---|---|
 | entitásintegritás | az elsődleges kulcs nem lehet `NULL` |
-| referenciális integritás | idegen kulcs csak létező rekordra mutathat |
+| referenciális integritás | a megadott, nem NULL idegenkulcsértékhez létező hivatkozott kulcs tartozik |
 | tartományintegritás | az adat csak megengedett érték lehet |
 
 ## Mit jelent az integritás?
@@ -20,11 +20,11 @@ Az integritás azt biztosítja, hogy az adatbázis:
 
 ### `NOT NULL`
 
-Kötelező mező nem maradhat üres.
+Az érték nem lehet `NULL`. Üres szöveget (`''`) önmagában nem tilt.
 
 ### `UNIQUE`
 
-Egy érték csak egyszer fordulhat elő.
+A megadott oszlopok értékkombinációja egyedi; a `NULL` kezelése DBMS-függő.
 
 ### `PRIMARY KEY`
 
@@ -32,7 +32,7 @@ Azonosítja a rekordot.
 
 ### `FOREIGN KEY`
 
-Kapcsolatot biztosít másik táblával.
+Hivatkozási szabályt biztosít ugyanannak vagy egy másik táblának a megfelelő kulcsára.
 
 ### `CHECK`
 
@@ -54,19 +54,38 @@ Kapcsolatot biztosít másik táblával.
 
 A kettő együtt a legerősebb.
 
+## Kidolgozott megszorítások
+
+**MySQL 8.0.16+ / InnoDB, üres gyakorló adatbázis.** Ebben a verziótartományban a `CHECK` feltételt a szerver ténylegesen ellenőrzi.
+
+<!-- example:mysql -->
+```sql
+CREATE TABLE products (
+  id INT PRIMARY KEY,
+  sku VARCHAR(20) NOT NULL UNIQUE,
+  price DECIMAL(8,2) NOT NULL CHECK (price >= 0),
+  note VARCHAR(40) NULL
+) ENGINE=InnoDB;
+INSERT INTO products VALUES (1, 'BOOK-1', 12.50, '');
+SELECT id, price, note IS NULL AS note_is_null,
+       CHAR_LENGTH(note) AS note_length
+FROM products ORDER BY id;
+```
+
+```text
+1 12.50 0 0
+```
+
+Az üres `note` hosszúsága nulla, de nem `NULL`. A `price = -1` értékkel próbált beszúrást a `CHECK`, az ismételt `BOOK-1` cikkszámot a `UNIQUE`, a `NULL` árat a `NOT NULL` tiltja. A `CHECK (price >= 0)` önmagában megengedné a `NULL`-ból eredő ismeretlen logikai értéket, ezért együtt használjuk a `NOT NULL` szabállyal.
+
+MySQL-ben egy nullable `UNIQUE` oszlop több `NULL`-t is megenged. Ha az érték kötelező és egyedi, mindkét követelményt írd elő. A megszorítások a tárolt szabályokat kényszerítik ki: azt nem tudják maguktól, hogy egy valós termék árát helyesen írtuk-e be. Ehhez üzleti ellenőrzés is kell.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az integritás az adatbázisban tárolt adatok helyességét és következetességét jelenti.  
 > Ezt a `DBMS` különböző szabályokkal biztosíthatja, például `PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `UNIQUE` és  
 > `CHECK` megszorításokkal.  
 > Az integritás célja, hogy az adatbázis ne kerülhessen hibás vagy ellentmondásos állapotba.
-
-## Gyakori vizsgahibák
-
-- Az integritást csak “biztonságnak” nevezni.
-- Nem megemlíteni a kulcsok szerepét.
-- A referenciális integritást összekeverni az adatmentéssel.
-- Kihagyni, hogy az integritás szabályokkal kikényszeríthető.
 
 ## Gyors önellenőrzés
 
@@ -95,3 +114,10 @@ A kettő együtt a legerősebb.
    Használat: kiegészítő háttér a relációs adatmodell és integritási elvek megértéséhez.
 
 Megnyitva: `2026-04-09`
+
+### A bővítés ellenőrzött forrásai
+
+- [MySQL: CHECK constraints](https://dev.mysql.com/doc/refman/8.0/en/create-table-check-constraints.html): CHECK, TRUE/UNKNOWN és verzióhatár
+- [MySQL: CREATE TABLE](https://dev.mysql.com/doc/refman/8.0/en/create-table.html): NOT NULL, UNIQUE és kulcsok
+
+Ellenőrizve: `2026-10-14`.
