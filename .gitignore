@@ -50,9 +50,10 @@ coverage/
 .cache/
 .envrc
 
-# Local-only docs scratch space
-docs/_local/
-docs/tmp/
+# Only release notes and public images belong in repository documentation.
+/docs/*
+!/docs/releases/
+!/docs/assets/
 /themenkatalog-applikationsentwicklung-coding-v2-2024.pdf
 
 # Local agent state
@@ -60,9 +61,3 @@ docs/tmp/
 /.codex/
 /.sam/
 /AGENTS.md
-docs/superpowers/
-
-# Keep local notes and agent settings out of Git.
-/docs/*
-!/docs/releases/
-!/docs/assets/

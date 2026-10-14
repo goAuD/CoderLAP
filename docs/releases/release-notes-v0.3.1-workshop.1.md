@@ -36,4 +36,4 @@ The pre-release production commit is
 `c30a30119fdd0f31ea17d21489b3845dc6f8d08d`.
 Use a reviewed recovery/revert PR into `main` and the normal deployment pipeline;
 manual dispatch from a temporary recovery branch is now intentionally blocked.
-See the [backup and restore playbook](../project/backup-restore-playbook.md).
+Verify the selected backup before restoring it.

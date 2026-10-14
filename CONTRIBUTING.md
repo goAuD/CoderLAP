@@ -12,7 +12,7 @@ The repository is primarily:
 
 ## Before you change anything
 
-1. Read [AGENTS.md](./AGENTS.md).
+1. Read the project overview and build instructions in [README.md](./README.md).
 2. Keep the numbered German folder structure intact.
 3. Treat the topic `README.md` files as the canonical content layer.
 4. Treat `LAP_CONTENT_REGISTRY.json` and `LAP_CONTENT_REGISTRY.csv` as generated metadata outputs.
