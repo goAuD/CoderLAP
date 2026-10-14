@@ -1,6 +1,6 @@
 # CoderLAP Deploy Strategy
 
-Last updated: `2026-09-11`
+Last updated: `2026-10-14`
 
 ## Current State
 
@@ -98,7 +98,7 @@ Runner expectation:
 
 Current deploy behavior:
 
-- CI runs on `push` to `dev` and `main`, plus PRs into `main`
+- CI runs on `push` to `dev` and `main`, plus PRs into both branches
 - deploy runs only on `push` to `main` or a manual `workflow_dispatch` started
   from the `main` ref
 - deploy promotes a staged release from `dist.incoming/` to `dist/`

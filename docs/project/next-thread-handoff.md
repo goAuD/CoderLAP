@@ -7,7 +7,7 @@ Last updated: `2026-10-14`
 - Local path: machine-specific; use the active clone's repository root
 - GitHub repo: `https://github.com/goAuD/CoderLAP`
 - Stable branch: `main`
-- Integration branch: `dev`; content review branch: `content/exam-review-2026-10`
+- Integration branch: `dev`
 
 ## Current Project State
 
@@ -41,7 +41,18 @@ Last updated: `2026-10-14`
 - `robots.txt` currently blocks indexing
 - `.well-known/security.txt` is shipped from the repo
 
-## Latest Delivery: 2026-10-14
+## Latest Milestone: 2026-10-14
+
+- All 235 topics in HU/DE were reviewed and expanded through
+  [PR #42](https://github.com/goAuD/CoderLAP/pull/42), now merged into `dev`.
+- Milestone: [v0.4.0-reviewed-content](../releases/release-notes-v0.4.0-reviewed-content.md).
+  Its [GitHub Release](https://github.com/goAuD/CoderLAP/releases/tag/v0.4.0-reviewed-content)
+  records the final deployed `main` commit and Actions verification. Verify that
+  live record before treating a local branch or prepared release note as deployed.
+- Content-PR CI passed 87 Python tests, 122 Node tests and the bilingual build.
+  The milestone notes record the additional local checks and their limits.
+
+## Previous Maintenance Delivery: 2026-10-14
 
 - Markdown is updated to 3.11.1 through [PR #40](https://github.com/goAuD/CoderLAP/pull/40).
   Dependabot #39 was closed as superseded. [PR #41](https://github.com/goAuD/CoderLAP/pull/41)
@@ -49,14 +60,14 @@ Last updated: `2026-10-14`
 - Production commit: `ae3f957a364d2c714323ff21362db9d917575a5d`.
   [Build and deployment](https://github.com/goAuD/CoderLAP/actions/runs/38526462950)
   succeeded with 83 Python and 35 Node tests and the bilingual build.
-- The larger October content update is a separate review branch. Do not
-  mistake the maintenance deployment for deployment of the expanded curriculum.
+- This maintenance deployment preceded the larger October content milestone.
+  Its commit and run above describe maintenance only.
 - CoderQuiz documentation PR #14 and CoderCoaster documentation PR #5 were
   already merged. Their inspected local branches matched their remotes.
 
 ## Content Review: 2026-10-14
 
-The active task covers all 235 topics in Hungarian and German, including
+The completed content review covers all 235 topics in Hungarian and German, including
 factual corrections, worked examples, self-check answers and primary sources.
 The authoritative coverage and validation record is
 [the content review](../plans/2026-10-14-content-review.md).

@@ -1,7 +1,9 @@
 # Teljes tartalmi felülvizsgálat
 
-Állapot: a 235 téma bővítése kész, a helyi integráció zöld; PR-ellenőrzésre
-előkészítve. Felülvizsgálat: 2026-10-14.
+Állapot: a 235 téma bővítése kész, a helyi és GitHub-ellenőrzések zöldek;
+a [#42 PR](https://github.com/goAuD/CoderLAP/pull/42) a dev ágba összevonva.
+Kiadási mérföldkő: [v0.4.0-reviewed-content](../releases/release-notes-v0.4.0-reviewed-content.md).
+Felülvizsgálat: 2026-10-14.
 
 ## Cél és keret
 
@@ -169,7 +171,8 @@ a reklámkövetés és a képernyős szünet rövid válaszai is pontosítva let
 
 ## Következő lépés
 
-A tartalmi ág áttekintése után jöhet a szokásos dev/main kiadási folyamat,
-majd a következő CoderQuiz-kérdéscsomag a javított tananyagra támaszkodva.
+A kiadás a szokásos dev/main folyamatot követi; a végleges deploy commitot és
+az ellenőrzési futásokat a GitHub Release rögzíti. Ezután a következő
+CoderQuiz-kérdéscsomag a javított tananyagra támaszkodhat.
 SkillDisplay a tanári válaszig szünetel. A DNS, meghívásos belépés és
 haladásszinkron terve a közös roadmapben marad.
