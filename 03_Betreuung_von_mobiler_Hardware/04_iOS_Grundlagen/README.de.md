@@ -107,6 +107,14 @@ Eines der wichtigen Kennzeichen von iOS:
 | einheitlicheres Erlebnis              | vielfältigere Geräte- und Oberflächen-Landschaft |
 | enge Hardware-Software-Zusammenarbeit | größere Plattformstreuung                        |
 
+## Durchgearbeiteter Fall: Zugriffe einer Anwendung
+
+Eine Lernanwendung benötigt ein Profilbild. Kann über die Bildauswahl des Systems ein einzelnes Foto ausgewählt werden, ist nicht unbedingt der Zugriff auf die ganze Mediathek erforderlich. Die Sandbox trennt die eigenen App-Daten; auf andere Daten wird über bereitgestellte Systemfunktionen und deren Regeln zugegriffen.
+
+Beim Wartungstest werden OS-Updates, App-Berechtigungen und eine wiederherstellbare Sicherung geprüft. Synchronisation und Backup sind unterschiedliche Funktionen: Die Synchronisation kann eine Löschung auch auf andere Geräte übertragen. Die Prüfung im App Store ersetzt ebenfalls nicht das Verständnis des App-Zwecks und der Datenverarbeitung.
+
+**Vertrieb, Stand 2026-10-14:** Der App Store ist ein wichtiger zentraler Kanal. In der EU sind unter bestimmten Voraussetzungen aber auch alternative Marktplätze und Webvertrieb verfügbar. Die konkreten Möglichkeiten werden anhand der aktuellen Regions- und Systemanforderungen geprüft.
+
 ## Prüfungstaugliche Formulierung
 
 > iOS ist das mobile Betriebssystem von Apple für das iPhone.  
@@ -115,14 +123,6 @@ Eines der wichtigen Kennzeichen von iOS:
 > das einheitlichere Benutzererlebnis
 > und das starke Sicherheits- und Datenschutzmodell.  
 > In der heutigen Apple-Plattformbenennung heißt das System des iPhone iOS, während das des iPad iPadOS heißt.
-
-## Häufige Prüfungsfehler
-
-- Sagen, dass iOS auf Telefonen vieler Hersteller läuft.
-- iOS und den App Store als dasselbe betrachten.
-- Vergessen, dass Apple heute für das iPad den eigenen Namen iPadOS verwendet.
-- Die Vorteile von iOS aufzählen und dabei die Einschränkungen vollständig weglassen.
-- Das Sicherheits- und Review-Modell nicht erwähnen.
 
 ## Schnelle Selbstkontrolle
 
@@ -159,3 +159,10 @@ Eines der wichtigen Kennzeichen von iOS:
    Verwendung: App Store Review, Plattformkontrolle, Sicherheits- und Qualitätsregulierung.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Apple: Runtime security](https://support.apple.com/guide/security/security-of-runtime-process-sec15bfe098e/web): Sandbox und geregelter Datenzugriff.
+- [Apple: Alternative app distribution](https://support.apple.com/en-us/118110): alternative Vertriebswege in der EU.
+
+Geprüft: `2026-10-14`.

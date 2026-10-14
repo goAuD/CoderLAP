@@ -136,6 +136,14 @@ Man muss verstehen:
 - warum Einschränkungen nachteilig sein können
 - dass zwischen Sicherheit und Freiheit häufig ein Kompromiss besteht
 
+## Durchgearbeitete Entscheidung: eine Lern-App verteilen
+
+Zuerst werden die benötigten Fähigkeiten beschrieben: Offline-Inhalte, Kamera, Benachrichtigungen, Käufe oder nur eine Browseroberfläche? Eine Webanwendung kann mehrere Plattformen bedienen; eine native App kann andere Systemfunktionen und ein eigenes Vertriebsverfahren anbieten. Entscheidend sind praktisch geprüfte Anforderungen.
+
+**Review**, **Codesignatur** und **Sandbox** sind getrennte Schutzebenen. Das Review prüft die eingereichte App und die Einhaltung von Regeln. Die Signatur unterstützt die Prüfung von Herkunft und Unverändertheit des Codes. Die Sandbox begrenzt Zugriffe während der Ausführung. Keine einzelne Ebene garantiert Fehlerfreiheit.
+
+Geschlossenheit ist keine reine Ja-Nein-Eigenschaft: Quellcode, Installation und Hardwareunterstützung lassen sich getrennt beurteilen. In der EU bestehen auch auf Apple-Plattformen bedingte alternative Vertriebswege. Bei der Auswahl müssen Updates, Support, exportierbare Daten und die Folgen einer Diensteinstellung geklärt werden.
+
 ## Prüfungstaugliche Formulierung
 
 > Ein geschlossenes System ist ein Ökosystem,
@@ -143,14 +151,6 @@ Man muss verstehen:
 > Betriebssystem und App-Vertrieb stark reguliert.  
 > Der Vorteil kann ein einheitlicherer Betrieb, eine bessere Integration und eine strengere Qualitätskontrolle sein.  
 > Der Nachteil kann geringere Freiheit, Herstellerabhängigkeit und eingeschränktere App-Vertriebsmöglichkeiten sein.
-
-## Häufige Prüfungsfehler
-
-- Behaupten, dass ein geschlossenes System nur nachteilig ist.
-- Behaupten, dass ein geschlossenes System nur vorteilhaft ist.
-- Kein Beispiel für ein geschlossenes und ein offeneres Modell nennen können.
-- Die Rolle des App Store weglassen.
-- Das Problem des Platform Lock-in nicht erkennen.
 
 ## Schnelle Selbstkontrolle
 
@@ -191,3 +191,10 @@ Man muss verstehen:
    Verwendung: Sicherheitskontrollen und Plattformschutz als Vergleichsbasis.
 
 Abgerufen: `2026-04-08`
+
+### Geprüfte Quellen zur Ergänzung
+
+- [Apple: Alternative app distribution](https://support.apple.com/en-us/118110): aktuelle Vertriebskanäle und Bedingungen.
+- [Apple: Runtime security](https://support.apple.com/guide/security/security-of-runtime-process-sec15bfe098e/web): Trennung zur Laufzeit als eigene Schutzebene.
+
+Geprüft: `2026-10-14`.
