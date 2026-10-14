@@ -143,6 +143,26 @@ Egyetlen kereséshez a lineáris bejárás gyakran egyszerűbb; sok keresésnél
 a rendezettség fenntartása megtérülhet. A bináris keresés itt indexhatárokat mozgat
 egy tömbön; a bináris fa önálló, csomópontokból álló adatszerkezet.
 
+## Találat nélküli keresés levezetése
+
+Keressük a `8`-at a már ismert `[5, 11, 19, 42, 70]` tömbben:
+
+| Lépés | Tartomány | Középérték | Következő tartomány |
+|---|---|---|---|
+| 1. | index `0..4` | `19` | `0..1`, mert a 8 kisebb |
+| 2. | index `0..1` | `5` | `1..1`, mert a 8 nagyobb |
+| 3. | index `1..1` | `11` | `1..0`, tehát üres |
+
+Az üres tartományból következik a `-1`, nem egy külön „hiányzó elem” a tömbben.
+Hívóként `index >= 0` alapján döntünk találatról: a `0` is érvényes index.
+
+Az időbecslés adatszerkezetet is feltételez. Egy tömb közepét index alapján
+közvetlenül elérjük; egy láncolt listában előbb oda kell lépkedni. A bináris
+keresés logaritmikus összehasonlításszáma ezért nem jelent automatikusan
+logaritmikus teljes futásidőt minden tárolási módnál. Rendezéskor és kereséskor
+ugyanazt az összehasonlítási szabályt használjuk, például mindkettőnél numerikus
+növekvő sorrendet.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A szekvenciális keresés az elemeket sorban vizsgálja meg, amíg meg nem találja a keresett értéket vagy a lista  
@@ -168,6 +188,11 @@ egy tömbön; a bináris fa önálló, csomópontokból álló adatszerkezet.
 5. A teljes munka a rendezést és a kereséseket együtt tartalmazza; egy kereséshez a lineáris bejárás kedvezőbb is lehet.
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [NIST DADS: binary search](https://xlinux.nist.gov/dads/HTML/binarySearch.html): tömb és láncolt lista elérési költsége.
+
 
 1. NIST DADS - linear search  
    https://xlinux.nist.gov/dads/HTML/linearSearch.html  

@@ -55,19 +55,45 @@ Ez vizsgán plusz pontot érhet, ha jól fogalmazod meg.
 | szerep | futás közben változó adatok | fix értékek vagy rögzített kötés |
 | olvashatóság | általános | szándékot tisztáz |
 
+## Kötés és objektumállapot külön követhető
+
+Feladat: egy próbálkozást számolunk, és egy teljesített témát írunk egy profilba.
+A Node.js-példában a `let` új értéket enged, a `const` a név kötését rögzíti.
+
+<!-- example:run -->
+
+```javascript
+let attempts = 0;
+attempts += 1;
+const profile = { name: "Ada", completed: 0 };
+profile.completed += 1;
+console.log(attempts, profile.completed);
+const settings = Object.freeze({ maxAttempts: 3 });
+console.log(settings.maxAttempts, Object.isFrozen(settings));
+```
+
+```text
+1 1
+3 true
+```
+
+A `profile` továbbra is ugyanarra az objektumra mutat, miközben annak
+`completed` tulajdonsága változik. A `const` tehát itt nem teszi változtathatatlanná
+az objektumot. Új objektum hozzárendelése ugyanahhoz a `profile` kötéshez viszont
+nem megengedett. Ha két változó ugyanarra az objektumra hivatkozik, mindkettőből
+látható a tulajdonság módosítása.
+
+Az `Object.freeze` a megadott objektum saját tulajdonságait fagyasztja be.
+Ez **sekély** művelet: a benne hivatkozott további objektumokat külön kell kezelni.
+A forráskódban lévő konstans sem titkos: a böngészőbe kiküldött API-kulcsot
+semmilyen `const` deklaráció nem védi meg a látogatótól.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A változó olyan programozási elem, amelynek értéke a program futása során megváltozhat.  
 > A konstans ezzel szemben olyan elem, amelynek értékét vagy kötését nem kívánjuk módosítani.  
 > A konstansok használata növeli a kód olvashatóságát és csökkenti a véletlen hibák kockázatát, bár a pontos viselkedés
 > nyelvenként eltérhet.
-
-## Gyakori vizsgahibák
-
-- Azt állítani, hogy a konstans mindig teljesen megváltoztathatatlan objektumot jelent.
-- Nem megemlíteni, hogy nyelvenként eltérhet a viselkedés.
-- A változó és adattípus fogalmát összemosni.
-- Nem tudni példát mondani fix értékekre.
 
 ## Gyors önellenőrzés
 
@@ -86,6 +112,11 @@ Ez vizsgán plusz pontot érhet, ha jól fogalmazod meg.
 5. Fix konfigurációs vagy állandó értékekhez
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze): sekély változtathatatlanság.
+
 
 1. MDN - const  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const  

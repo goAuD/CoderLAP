@@ -58,7 +58,7 @@ Dies ist eine wichtige Unterscheidung bei der Prüfung.
 | Begriff | Einfache Bedeutung |
 |---|---|
 | Deklaration | wir geben den Namen / die Existenz der Variable an |
-| Definition | tatsächliche Erstellung oder Zuordnung |
+| Definition | tatsächliche Festlegung der Entität; genaue Bedeutung ist sprachabhängig |
 | Initialisierung | Vergabe eines Anfangswerts |
 
 Anmerkung:
@@ -72,6 +72,47 @@ Anmerkung:
 - bestimmt die Operationen
 - kann den Speicherverbrauch und das Verhalten beeinflussen
 
+## Präzisierung am JavaScript-Beispiel
+
+`let count;` erzeugt die Bindung; nach Ausführung der Deklaration hat sie den
+Wert `undefined`. Das folgende `count = 3` ist eine Zuweisung. Bei
+`const enabled = true` erfolgen Deklaration und Initialisierung gemeinsam.
+Die genaue Bedeutung von „Definition“ hängt von der Sprache ab; der Begriff ist
+kein allgemeines Synonym für Zuweisung.
+
+<!-- example:run -->
+
+```javascript
+let count;
+console.log(typeof count);
+count = 3;
+const enabled = true;
+const label = "3";
+console.log(typeof count, typeof enabled, typeof label);
+console.log(count === Number(label));
+console.log(Number.isFinite(Number("unknown")));
+```
+
+```text
+undefined
+number boolean string
+true
+false
+```
+
+Das Beispiel läuft in Node.js. In JavaScript sind `3` und `3.14` beide `number`;
+es gibt keinen separaten allgemeinen `int`-Typ. `bigint`, etwa `3n`, ist ein
+eigener Ganzzahltyp. Gemeinsames Rechnen mit `number` erfordert bewusste
+Konvertierung. Text ist `string`, wahr/falsch ist `boolean`. `null` kann einen
+bewusst gewählten leeren Wert ausdrücken, `undefined` beispielsweise einen
+fehlenden Wert.
+
+Bei dynamischer Typisierung kann eine Variable später einen Wert anderen Typs
+erhalten; die Werte besitzen trotzdem Typen. `Number("unknown")` ergibt `NaN`,
+daher folgt auf Konvertierung eine Prüfung. `Number.isFinite` akzeptiert weder
+Unendlichkeit noch `NaN`. Für Geldbeträge eignen sich ganze Cent oder ein
+geeignetes Dezimalverfahren besser als binäre Gleitkommarechnung ohne festgelegte Rundung.
+
 ## Prüfungstaugliche Formulierung
 
 > Eine Variable ist ein mit einem Namen versehenes Programmierelement, das einen Wert oder einen darauf zeigenden  
@@ -79,13 +120,6 @@ Anmerkung:
 > Der Datentyp bestimmt, welche Art von Daten wir verarbeiten und welche Operationen darauf ausgeführt werden können.  
 > In der Programmierung ist es wichtig, Deklaration, Definition und Initialisierung zu unterscheiden, auch wenn deren
 > genaue Bedeutung je nach Sprache unterschiedlich sein kann.
-
-## Häufige Prüfungsfehler
-
-- Die Variable mit dem Datentyp zu verwechseln.
-- Zu behaupten, dass Deklaration in jeder Sprache dasselbe bedeutet.
-- Keine Beispiele für grundlegende Datentypen nennen zu können.
-- Die Initialisierung auszulassen.
 
 ## Schnelle Selbstkontrolle
 
@@ -104,6 +138,11 @@ Anmerkung:
 5. Weil die Sprachen sie unterschiedlich definieren
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: JavaScript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures): sprachspezifische Typen und Konvertierung.
+
 
 1. MDN - Grammar and types  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types  

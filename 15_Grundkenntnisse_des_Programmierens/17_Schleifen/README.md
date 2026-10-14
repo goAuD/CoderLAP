@@ -142,6 +142,25 @@ változik. Üres tömbnél a ciklusmag 0 alkalommal fut, az összeg 0 marad.
 | ciklus | ismétlés vezérlési szerkezettel |
 | rekurzió | ismétlés önhívó függvénnyel |
 
+## Kilépés, továbblépés és munkamennyiség
+
+| Utasítás | Hatás |
+|---|---|
+| `break` | befejezi a legbelső érintett ciklust vagy `switch`-et |
+| `continue` | az aktuális cikluskör hátralévő részét kihagyja |
+| `return` | az egész aktuális függvényből tér vissza |
+
+Egy `for` ciklusban a `continue` után a léptetés, majd a feltételvizsgálat
+következik. `while` esetén közvetlenül a feltételhez jutunk, ezért a haladást
+biztosító állapotváltozást tudatosan helyezzük el. A bejáráskor a `for...of`
+értékeket ad; a `for...in` objektumok felsorolható tulajdonságneveit járja be,
+ezért egy szokásos tömb elemeinek feldolgozásához a `for...of` az érthetőbb választás.
+
+Két egymás utáni, egyenként `n` elemű bejárás `2n` munkája `O(n)`. Ha viszont
+minden elemhez újra az összes elemet bejárjuk, `n * n` műveletből `O(n²)` lesz.
+Például 10 sor és soronként 5 oszlop bejárása 50 belső végrehajtás. A kód
+rövidsége önmagában nem mondja meg a futás költségét.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A ciklus olyan vezérlési szerkezet, amely egy utasítást vagy utasításblokkot többször végrehajt.  
@@ -165,6 +184,12 @@ változik. Üres tömbnél a ciklusmag 0 alkalommal fut, az összeg 0 marad.
 5. A függvény önhívása; ciklusnál a vezérlési szerkezet ismétli a ciklusmagot.
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: continue](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/continue): a következő végrehajtási pont ciklustípusonként.
+- [MDN: break](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break): a kilépés hatóköre.
+
 
 1. MDN - Loops and iteration  
    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration  

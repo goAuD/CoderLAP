@@ -56,19 +56,46 @@ Die meisten modernen Systeme verwenden heute Unicode, aber die Grundlagen von AS
 - zeigt gut die Grundlogik der Zeichencodes
 - in der Programmierung begegnen wir häufig ASCII-kompatiblen Begriffen
 
+## Zeichencode und Zahlenwert in der Praxis
+
+Ausführbares Node.js-Beispiel: `"7"` ist Text aus einer Ziffer. Wir betrachten
+den Code und nutzen danach den zusammenhängenden ASCII-Ziffernbereich für den Zahlenwert.
+
+<!-- example:run -->
+
+```javascript
+const digit = "7";
+const code = digit.codePointAt(0);
+console.log(code);
+console.log(code - "0".codePointAt(0));
+console.log(String.fromCodePoint(65));
+console.log("\n".codePointAt(0));
+```
+
+```text
+55
+7
+A
+10
+```
+
+`55` ist der Code des Zeichens `7`, während `7` dessen Zahlenwert ist. Die
+Subtraktion liefert nur für ein zuvor geprüftes Zeichen aus `"0".."9"` einen
+sinnvollen Ziffernwert. Für allgemeine Textumwandlung verwenden wir geeignete
+Konvertierungsfunktionen zusammen mit Eingabeprüfung.
+
+LF (`10`, hex `0A`) und CR (`13`, hex `0D`) sind verschiedene Steuerzeichen.
+Das bei Windows-Textdateien häufige CRLF besteht aus zwei Zeichen. `codePointAt`
+liefert einen Unicode-Codepunkt; im Bereich `0..127` stimmt dieser mit ASCII
+überein. `ő` und Emoji gehören nicht zu ASCII. Zur Interpretation der Bytes einer
+Textdatei müssen wir zusätzlich deren Zeichenkodierung kennen.
+
 ## Prüfungstaugliche Formulierung
 
 > Die ASCII-Tabelle zeigt die numerischen Codes, die den Zeichen des ASCII-Zeichensatzes zugeordnet sind.  
 > ASCII ist eine 7-Bit-Zeichenkodierung, die 128 Zeichen umfasst, darunter Steuerzeichen und druckbare Zeichen.  
 > Obwohl heute hauptsächlich Unicode-basierte Systeme verwendet werden, bleibt ASCII von grundlegender Bedeutung für das
 > Verständnis der Zeichenkodierung.
-
-## Häufige Prüfungsfehler
-
-- ASCII als Unicode zu bezeichnen.
-- Zu behaupten, dass jeder moderne Text ASCII ist.
-- Die Steuerzeichen nicht zu erwähnen.
-- Die 7-Bit-Grundlage zu vergessen.
 
 ## Schnelle Selbstkontrolle
 
@@ -87,6 +114,12 @@ Die meisten modernen Systeme verwenden heute Unicode, aber die Grundlagen von AS
 5. Weil viele Grundbegriffe darauf aufbauen
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: String.codePointAt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt): Unicode-Codepunkte abfragen.
+- [IETF RFC 20](https://www.ietf.org/rfc/rfc20.txt): ASCII-Codewerte, LF und CR.
+
 
 1. MDN - ASCII  
    https://developer.mozilla.org/en-US/docs/Glossary/ASCII  

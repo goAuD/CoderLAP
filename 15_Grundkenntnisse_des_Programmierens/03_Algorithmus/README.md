@@ -67,18 +67,48 @@ Nemcsak az számít, hogy működik-e, hanem az is, hogy:
 
 Ezért beszélünk algoritmusok összehasonlításáról is.
 
+## Bemeneti feltétel, nyomkövetés és eredmény
+
+Az előbbi összegzést most JavaScriptben valósítjuk meg. A feladat szerződése:
+`n` egész, `0..1000` közötti szám; az eredmény az `1..n` számok összege. A korlát
+ebben a tanulópéldában egyszerű futásidőt és pontos egész eredményt biztosít.
+
+<!-- example:run -->
+
+```javascript
+function sumTo(n) {
+  if (!Number.isInteger(n) || n < 0 || n > 1000) {
+    throw new RangeError("n must be an integer from 0 to 1000");
+  }
+  let sum = 0;
+  for (let i = 1; i <= n; i++) sum += i;
+  return sum;
+}
+console.log(sumTo(4));
+console.log(sumTo(0));
+```
+
+```text
+10
+0
+```
+
+`n = 4` esetén az összeg rendre `1`, `3`, `6`, `10`. A ciklus előtt nulla,
+minden kör után pedig az addig feldolgozott számok összege. Ez az állítás segít
+indokolni a helyességet. `n = 0` esetén nincs cikluskör, az eredmény a helyesen
+definiált üres összeg, nulla. A ciklusváltozó növekszik és a felső korlát véges,
+ezért az érvényes bemeneteknél a végrehajtás befejeződik.
+
+A ciklus `n` összeadást végez, időigénye `O(n)`, segédmemóriája `O(1)`. Ugyanitt
+az `n * (n + 1) / 2` képlet rögzített számú művelettel számolható. Ez a konkrét
+összegre használható matematikai tulajdonság, nem minden ciklus helyettesíthető
+hasonló képlettel.
+
 ## Vizsgán jól használható megfogalmazás
 
 > Az algoritmus egy egyértelmű, véges lépéssorozat, amely egy adott probléma megoldására szolgál.  
 > Bemeneteket feldolgoz, és eredményt ad vissza.  
 > A programozásban az algoritmus a megoldás logikája, amelyet később egy konkrét programozási nyelven valósítunk meg.
-
-## Gyakori vizsgahibák
-
-- Az algoritmust azonnal kóddal azonosítani.
-- Nem megemlíteni a végességet.
-- Túl homályosan fogalmazni a lépéseket.
-- Kihagyni a bemenet és kimenet szerepét.
 
 ## Gyors önellenőrzés
 
@@ -97,6 +127,11 @@ Ezért beszélünk algoritmusok összehasonlításáról is.
 5. Mert eltérhet a hatékonyságuk
 
 ## Források
+
+Ellenőrizve: `2026-10-14`.
+
+- [MDN: Algorithm](https://developer.mozilla.org/en-US/docs/Glossary/Algorithm): algoritmus fogalma; saját összegzési példa.
+
 
 1. MDN - Algorithm  
    https://developer.mozilla.org/en-US/docs/Glossary/Algorithm  

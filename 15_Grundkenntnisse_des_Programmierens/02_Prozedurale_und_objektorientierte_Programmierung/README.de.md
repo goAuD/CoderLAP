@@ -7,7 +7,7 @@
 | Haupteinheit | Prozedur / Funktion | Klasse / Objekt |
 | Fokus | Was macht das Programm? | Welche Dinge gibt es im System? |
 | Daten | werden oft separat behandelt | werden dem Objekt zugeordnet |
-| Gute Wahl | kleinere, linearere Aufgaben | größere, komplexere Systeme |
+| Organisationskriterium | klar getrennte Operationen | zusammengehöriger Zustand und Verhalten |
 
 ## Was ist prozedurale Programmierung?
 
@@ -69,13 +69,49 @@ Mitarbeiter
   - berechneGehalt()
 ```
 
-## Nicht verwechseln
+## Den Ansatz auswählen
 
-| Irrtum | Warum falsch? |
-|---|---|
-| OOP ist immer besser | nicht immer, hängt von der Aufgabe ab |
-| prozedurale Programmierung ist veraltet | ist auch heute noch vielerorts nützlich |
-| OOP = nur das Schlüsselwort class | die OOP-Denkweise umfasst mehr |
+Die Organisation soll zu Daten, Operationen und erwarteten Änderungen passen. Ein Programm kann mehrere Paradigmen verwenden.
+
+## Dieselbe Punktzahl auf zwei Arten organisieren
+
+Aufgabe: Zu einer Punktzahl mit Startwert null kommen zunächst 3 und dann 2
+Punkte. Das Beispiel setzt geprüfte, nichtnegative ganze Eingaben voraus und
+läuft mit Node.js.
+
+<!-- example:run -->
+
+```javascript
+function addPoints(score, points) {
+  return score + points;
+}
+class Score {
+  #value = 0;
+  add(points) { this.#value += points; }
+  get value() { return this.#value; }
+}
+let total = addPoints(0, 3);
+total = addPoints(total, 2);
+const score = new Score();
+score.add(3);
+score.add(2);
+console.log(total, score.value);
+```
+
+```text
+5 5
+```
+
+Die Funktion erhält den bisherigen Wert und gibt einen neuen zurück. Die
+Klasseninstanz speichert ihren eigenen Zustand; `add` verändert ihn. `#value`
+ist ein privates Feld. Der von außen lesbare Getter `value` erlaubt nur eine
+Abfrage. Zwei `Score`-Instanzen hätten getrennte Punktzahlen. Für eine einfache
+Berechnung genügt oft die Funktion; zusammengehöriger Zustand mit Operationen
+kann für ein Objekt sprechen.
+
+Die Auswahl folgt nicht allein aus der Programmgröße. Auch große Systeme können
+aus modularen Funktionen bestehen. JavaScript erlaubt außerdem Objekte ohne
+Klasse, etwa Objektliterale. Objekt und Klasse sind daher keine Synonyme.
 
 ## Prüfungstaugliche Formulierung
 
@@ -84,13 +120,6 @@ Mitarbeiter
 > Der prozedurale Ansatz konzentriert sich hauptsächlich auf die auszuführenden Schritte, der objektorientierte Ansatz  
 > hingegen auf die Einheit von Daten und zugehörigen Operationen.  
 > Beide Paradigmen sind nützlich, und die Wahl hängt von der Aufgabe ab.
-
-## Häufige Prüfungsfehler
-
-- OOP automatisch als in jeder Situation fortschrittlicher zu bezeichnen.
-- Den prozeduralen Ansatz nur als "alten Stil" darzustellen.
-- Die Beziehung zwischen Daten und Operationen nicht zu erwähnen.
-- OOP nur auf Vererbung zu reduzieren.
 
 ## Schnelle Selbstkontrolle
 
@@ -109,6 +138,11 @@ Mitarbeiter
 5. Weil die Aufgabe bestimmt, welches vorteilhafter ist
 
 ## Quellen
+
+Geprüft: `2026-10-14`.
+
+- [MDN: Using classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes): private Felder, Getter und Instanzzustand.
+
 
 1. Oracle Java Tutorials - Object-Oriented Programming Concepts  
    https://docs.oracle.com/javase/tutorial/java/concepts  
