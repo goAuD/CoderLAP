@@ -128,6 +128,21 @@ Reparatur der Netzwerkeinstellungen des Druckers
 - beim Rollout
 - bei der Übergabe
 
+## Ein überprüfbarer Nachweis eines Eingriffs
+
+Das Protokoll einer Aktualisierung einer Lernwebsite kann Folgendes enthalten:
+
+| Feld | Fiktives Beispiel |
+| --- | --- |
+| Änderung | CHG-17, freigegebene Fehlerkorrektur |
+| Zeitpunkt | 2026-10-14 09:15, Europe/Vienna |
+| Vorher / nachher | 1.4.1 / 1.4.2 mit den Commit-Kennungen der Releases |
+| Prüfung | Startseite, Suche und ein Thema geöffnet; Verweis auf das Testprotokoll |
+| Rückführung | Speicherort des vorigen Releases und Verweis auf das erprobte Verfahren |
+| Abschluss | 09:25, Bestätigung der verantwortlichen Person; nächste Kontrolle um 10:00 |
+
+„Vermutlich ein Netzwerkproblem“ ist eine Hypothese. „Um 09:18 endete die Anfrage mit einer Zeitüberschreitung“ ist eine Beobachtung. Wir halten beides getrennt fest. Passwörter, vollständige Zugriffstoken und unnötige personenbezogene Daten gehören nicht in das Protokoll. Zugriff und Aufbewahrung der Nachweise werden ebenfalls geregelt, damit die nächste Person sicher weiterarbeiten kann.
+
 ## Prüfungstaugliche Formulierung
 
 > Technische Arbeiten zu protokollieren bedeutet, die technischen Tätigkeiten nachvollziehbar zu dokumentieren.  
@@ -135,14 +150,6 @@ Reparatur der Netzwerkeinstellungen des Druckers
 > das betroffene System, die durchgeführten Schritte, das Ergebnis,
 > eventuelle Fehler und die nächsten Schritte.  
 > Das ist wichtig für die Fehlersuche, die Übergabe, die Überprüfbarkeit und die Teamarbeit.
-
-## Häufige Prüfungsfehler
-
-- Zu kurze, nichtssagende Einträge.
-- Kein Datum oder kein Verantwortlicher.
-- Kein Ergebnis oder kein Abschluss.
-- Tatsachen und Meinungen werden nicht getrennt.
-- Aus dem Protokoll geht nicht hervor, was tatsächlich passiert ist.
 
 ## Schnelle Selbstkontrolle
 
@@ -162,8 +169,13 @@ Reparatur der Netzwerkeinstellungen des Druckers
 
 ## Quellen
 
-1. ISTQB CTFL Syllabus v3.1.1  
-   https://istqb.org/wp-content/uploads/2024/11/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf  
+- [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)  
+  Ereignisdaten und auszuschließende sensible Daten.
+
+Quellen der Ergänzung geprüft: `2026-10-14`.
+
+1. ISTQB CTFL Syllabus v4.0.1  
+   https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  
    Verwendung: test execution logging und work products als strukturierte technische Protokollierung.
 
 2. Azure DevOps Test Plans - Manage test runs  

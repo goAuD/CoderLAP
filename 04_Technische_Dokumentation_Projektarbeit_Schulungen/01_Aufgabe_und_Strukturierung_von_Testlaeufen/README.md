@@ -164,6 +164,20 @@ A felhasználó belépett, dashboard megjelent.
 
 `pass`
 
+## Kidolgozott példa: követelménytől a kiadási döntésig
+
+A `K-12` követelmény szerint a keresés kis- és nagybetűtől függetlenül találja meg a témákat. A tesztadatbázisban pontosan három cím van: `JavaScript`, `Java` és `SQL`.
+
+| Teszt | Bemenet | Előre rögzített elvárt eredmény |
+| --- | --- | --- |
+| T-01 | `java` | JavaScript és Java, összesen két találat |
+| T-02 | `JAVA` | Ugyanaz a két találat |
+| T-03 | `python` | Nulla találat, érthető üzenet |
+
+A tesztfutáshoz rögzítjük a build azonosítóját és a böngészőt. A T-02 egy találatot ad: ez `fail`, és hibajegyet kap. Ha a tesztkörnyezet el sem indul, a T-02 `blocked`, a keresés helyességéről még nincs eredmény. Javítás után ugyanazt a tesztet újra futtatjuk, majd a többi keresési esetet is ellenőrizzük regresszióra.
+
+A sikeres futás a vizsgált esetekre ad bizonyítékot. Az összes lehetséges bemenet hibamentességét nem bizonyítja. A kiadási döntésben ezért a lefedett követelményeket, a fennmaradó kockázatokat és a nem végrehajtott teszteket is feltüntetjük.
+
 ## Vizsgán jól használható megfogalmazás
 
 > A tesztfutás feladata annak ellenőrzése,
@@ -172,14 +186,6 @@ A felhasználó belépett, dashboard megjelent.
 > a tesztkörnyezetet, a tesztadatokat, a tesztlépéseket,
 > a várt eredményt, a tényleges eredményt és a teszt státuszát.  
 > A tesztfutás dokumentálása fontos a hibák követéséhez, a minőségbiztosításhoz és az átadás előtti döntésekhez.
-
-## Gyakori vizsgahibák
-
-- Nincs egyértelmű várt eredmény.
-- A tesztlépések túl homályosak.
-- Nincs dokumentálva a környezet.
-- Hibát észlelnek, de nem rögzítik pontosan.
-- A `blocked` és `fail` státuszt összekeverik.
 
 ## Gyors önellenőrzés
 
@@ -199,8 +205,13 @@ A felhasználó belépett, dashboard megjelent.
 
 ## Források
 
-1. ISTQB CTFL Syllabus v3.1.1  
-   https://istqb.org/wp-content/uploads/2024/11/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf  
+- [ISTQB CTFL 4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)  
+  Tesztelési alapelvek, visszakövethetőség és megerősítő teszt.
+
+A bővítés forrásai ellenőrizve: `2026-10-14`.
+
+1. ISTQB CTFL Syllabus v4.0.1  
+   https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf  
    Használat: test execution, logging, expected vs actual result, test execution work products.
 
 2. Azure DevOps Test Plans - Manage test runs  
